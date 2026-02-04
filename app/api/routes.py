@@ -1,0 +1,178 @@
+"""OpenAI-compatible API endpoints for Open WebUI integration."""
+
+import asyncio
+import json
+import time
+from typing import AsyncGenerator
+
+import structlog
+from fastapi import APIRouter, HTTPException
+from fastapi.responses import StreamingResponse
+
+from app.agents.graph import run_agent
+from app.models.schemas import (
+    ChatCompletionChoice,
+    ChatCompletionRequest,
+    ChatCompletionResponse,
+    ChatCompletionStreamChoice,
+    ChatCompletionStreamDelta,
+    ChatCompletionStreamResponse,
+    ChatMessage,
+    ModelInfo,
+    ModelListResponse,
+    UsageInfo,
+)
+
+logger = structlog.get_logger(__name__)
+
+router = APIRouter()
+
+
+@router.post("/v1/chat/completions")
+async def chat_completions(request: ChatCompletionRequest):
+    """OpenAI-compatible chat completions endpoint.
+
+    Supports both streaming and non-streaming responses.
+    """
+    logger.info(
+        "chat_completion_request",
+        model=request.model,
+        message_count=len(request.messages),
+        stream=request.stream,
+    )
+
+    # Extract the last user message as the query
+    user_messages = [m for m in request.messages if m.role == "user"]
+    if not user_messages:
+        raise HTTPException(status_code=400, detail="메시지에 사용자 질문이 없습니다.")
+
+    query = user_messages[-1].content
+
+    if request.stream:
+        return StreamingResponse(
+            _stream_response(query, request),
+            media_type="text/event-stream",
+        )
+
+    # Non-streaming response
+    try:
+        answer = await run_agent(query)
+    except Exception as e:
+        logger.error("agent_failed", error=str(e))
+        raise HTTPException(status_code=500, detail=f"에이전트 실행 실패: {str(e)}")
+
+    response = ChatCompletionResponse(
+        model=request.model,
+        choices=[
+            ChatCompletionChoice(
+                index=0,
+                message=ChatMessage(role="assistant", content=answer),
+                finish_reason="stop",
+            )
+        ],
+        usage=UsageInfo(
+            prompt_tokens=len(query),
+            completion_tokens=len(answer),
+            total_tokens=len(query) + len(answer),
+        ),
+    )
+
+    return response
+
+
+async def _stream_response(
+    query: str,
+    request: ChatCompletionRequest,
+) -> AsyncGenerator[str, None]:
+    """Stream response chunks in SSE format.
+
+    Args:
+        query: User query.
+        request: Original request.
+
+    Yields:
+        SSE-formatted response chunks.
+    """
+    response_id = f"chatcmpl-{int(time.time())}"
+    created = int(time.time())
+
+    # Send initial chunk with role
+    initial_chunk = ChatCompletionStreamResponse(
+        id=response_id,
+        created=created,
+        model=request.model,
+        choices=[
+            ChatCompletionStreamChoice(
+                delta=ChatCompletionStreamDelta(role="assistant"),
+            )
+        ],
+    )
+    yield f"data: {initial_chunk.model_dump_json()}\n\n"
+
+    # Generate the full answer
+    try:
+        answer = await run_agent(query)
+    except Exception as e:
+        error_msg = f"오류가 발생했습니다: {str(e)}"
+        error_chunk = ChatCompletionStreamResponse(
+            id=response_id,
+            created=created,
+            model=request.model,
+            choices=[
+                ChatCompletionStreamChoice(
+                    delta=ChatCompletionStreamDelta(content=error_msg),
+                )
+            ],
+        )
+        yield f"data: {error_chunk.model_dump_json()}\n\n"
+        answer = ""
+
+    # Stream the answer in chunks
+    chunk_size = 20  # characters per chunk
+    for i in range(0, len(answer), chunk_size):
+        text_chunk = answer[i : i + chunk_size]
+        stream_chunk = ChatCompletionStreamResponse(
+            id=response_id,
+            created=created,
+            model=request.model,
+            choices=[
+                ChatCompletionStreamChoice(
+                    delta=ChatCompletionStreamDelta(content=text_chunk),
+                )
+            ],
+        )
+        yield f"data: {stream_chunk.model_dump_json()}\n\n"
+        await asyncio.sleep(0.01)  # Small delay for streaming effect
+
+    # Send final chunk
+    final_chunk = ChatCompletionStreamResponse(
+        id=response_id,
+        created=created,
+        model=request.model,
+        choices=[
+            ChatCompletionStreamChoice(
+                delta=ChatCompletionStreamDelta(),
+                finish_reason="stop",
+            )
+        ],
+    )
+    yield f"data: {final_chunk.model_dump_json()}\n\n"
+    yield "data: [DONE]\n\n"
+
+
+@router.get("/v1/models")
+async def list_models():
+    """List available models (OpenAI-compatible)."""
+    return ModelListResponse(
+        data=[
+            ModelInfo(id="skin1004-ai", owned_by="skin1004"),
+            ModelInfo(id="skin1004-sql", owned_by="skin1004"),
+            ModelInfo(id="skin1004-rag", owned_by="skin1004"),
+        ]
+    )
+
+
+@router.get("/health")
+async def health_check():
+    """Health check endpoint."""
+    return {"status": "ok", "service": "SKIN1004 AI Agent"}

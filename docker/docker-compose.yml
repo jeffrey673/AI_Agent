@@ -1,0 +1,43 @@
+version: "3.8"
+
+services:
+  # SKIN1004 AI Agent API Server
+  ai-agent:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: skin1004-ai-agent
+    ports:
+      - "8100:8100"
+    env_file:
+      - ../.env
+    volumes:
+      - ${GOOGLE_APPLICATION_CREDENTIALS:-./credentials.json}:/app/credentials.json:ro
+    environment:
+      - GOOGLE_APPLICATION_CREDENTIALS=/app/credentials.json
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import httpx; r = httpx.get('http://localhost:8100/health'); r.raise_for_status()"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Open WebUI Frontend
+  open-webui:
+    image: ghcr.io/open-webui/open-webui:main
+    container_name: skin1004-open-webui
+    ports:
+      - "3000:8080"
+    environment:
+      - OPENAI_API_BASE_URL=http://ai-agent:8100/v1
+      - OPENAI_API_KEY=sk-skin1004
+      - WEBUI_AUTH=false
+    volumes:
+      - open-webui-data:/app/backend/data
+    depends_on:
+      ai-agent:
+        condition: service_healthy
+    restart: unless-stopped
+
+volumes:
+  open-webui-data:
