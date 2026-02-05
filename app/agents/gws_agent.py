@@ -6,7 +6,7 @@ Uses Sonnet 4 for cost efficiency.
 """
 
 from langchain_anthropic import ChatAnthropic
-from langchain.agents import create_react_agent
+from langgraph.prebuilt import create_react_agent
 
 from app.models.agent_models import AgentModel
 from app.mcp.gws_mcp import get_gws_mcp_tools
