@@ -1,7 +1,6 @@
 """OpenAI-compatible API endpoints for Open WebUI integration."""
 
 import asyncio
-import json
 import time
 from typing import AsyncGenerator
 
@@ -9,7 +8,7 @@ import structlog
 from fastapi import APIRouter, HTTPException
 from fastapi.responses import StreamingResponse
 
-from app.agents.graph import run_agent
+from app.agents.orchestrator import OrchestratorAgent
 from app.models.schemas import (
     ChatCompletionChoice,
     ChatCompletionRequest,
@@ -24,6 +23,9 @@ from app.models.schemas import (
 )
 
 logger = structlog.get_logger(__name__)
+
+# v3.0 Orchestrator singleton
+_orchestrator = OrchestratorAgent()
 
 router = APIRouter()
 
@@ -54,9 +56,10 @@ async def chat_completions(request: ChatCompletionRequest):
             media_type="text/event-stream",
         )
 
-    # Non-streaming response
+    # Non-streaming response (v3.0: Orchestrator)
     try:
-        answer = await run_agent(query)
+        result = await _orchestrator.route_and_execute(query)
+        answer = result.get("answer", "")
     except Exception as e:
         logger.error("agent_failed", error=str(e))
         raise HTTPException(status_code=500, detail=f"에이전트 실행 실패: {str(e)}")
@@ -109,9 +112,10 @@ async def _stream_response(
     )
     yield f"data: {initial_chunk.model_dump_json()}\n\n"
 
-    # Generate the full answer
+    # Generate the full answer (v3.0: Orchestrator)
     try:
-        answer = await run_agent(query)
+        result = await _orchestrator.route_and_execute(query)
+        answer = result.get("answer", "")
     except Exception as e:
         error_msg = f"오류가 발생했습니다: {str(e)}"
         error_chunk = ChatCompletionStreamResponse(

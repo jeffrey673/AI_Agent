@@ -37,6 +37,12 @@ class Settings(BaseSettings):
     embedding_model: str = "BAAI/bge-m3"
     embedding_dim: int = 768
 
+    # Anthropic (v3.0)
+    anthropic_api_key: str = ""
+
+    # Notion MCP (v3.0)
+    notion_mcp_token: str = ""
+
     # Tavily
     tavily_api_key: str = ""
 

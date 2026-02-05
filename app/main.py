@@ -45,7 +45,7 @@ def create_app() -> FastAPI:
     app = FastAPI(
         title="SKIN1004 Enterprise AI",
         description="Text-to-SQL + Agentic RAG Hybrid AI System",
-        version="1.0.0",
+        version="3.0.0",
         docs_url="/docs",
         redoc_url="/redoc",
         lifespan=lifespan,
