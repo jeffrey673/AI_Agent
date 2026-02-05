@@ -205,20 +205,24 @@ def _try_generate_chart(llm, query: str, sql: str, result_preview: str, results:
     try:
         config_prompt = get_chart_config_prompt(query, sql, result_preview, len(results))
         config_json = llm.generate_json(config_prompt)
+        logger.info("chart_config_raw", config_json=config_json[:500])
         config = json.loads(config_json)
 
         if not config.get("needs_chart"):
+            logger.info("chart_not_needed", config=config)
             return ""
 
-        logger.info("chart_requested", chart_type=config.get("chart_type"))
+        logger.info("chart_requested", chart_type=config.get("chart_type"), group_column=config.get("group_column"))
         filename = generate_chart(config, results)
         if filename:
             settings = get_settings()
             chart_url = f"{settings.chart_base_url}/static/charts/{filename}"
+            logger.info("chart_url_generated", url=chart_url)
             return f"![chart]({chart_url})"
+        logger.warning("chart_generate_returned_none")
         return ""
     except Exception as e:
-        logger.warning("chart_generation_skipped", error=str(e))
+        logger.error("chart_generation_skipped", error=str(e), error_type=type(e).__name__)
         return ""
 
 

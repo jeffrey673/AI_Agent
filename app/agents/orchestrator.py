@@ -32,15 +32,45 @@ class OrchestratorAgent:
     """
 
     def __init__(self):
-        self.llm = ChatAnthropic(
-            model=AgentModel.ORCHESTRATOR.value,
-            temperature=0,
-            max_tokens=1024,
-        )
-        # v3.0 new agents
-        self.query_verifier = QueryVerifierAgent()
-        self.notion_agent = NotionAgent()
-        self.gws_agent = GWSAgent()
+        # LLM for classification: use Anthropic if key is available, else None (keyword fallback)
+        self.llm = None
+        try:
+            from app.config import get_settings
+            settings = get_settings()
+            if settings.anthropic_api_key and not settings.anthropic_api_key.startswith("your-"):
+                self.llm = ChatAnthropic(
+                    model=AgentModel.ORCHESTRATOR.value,
+                    temperature=0,
+                    max_tokens=1024,
+                )
+                logger.info("orchestrator_llm_ready", model=AgentModel.ORCHESTRATOR.value)
+            else:
+                logger.warning("orchestrator_no_anthropic_key", fallback="keyword_routing")
+        except Exception as e:
+            logger.warning("orchestrator_llm_init_failed", error=str(e), fallback="keyword_routing")
+
+        # v3.0 new agents (lazy init — only created when actually needed)
+        self._query_verifier = None
+        self._notion_agent = None
+        self._gws_agent = None
+
+    @property
+    def query_verifier(self):
+        if self._query_verifier is None:
+            self._query_verifier = QueryVerifierAgent()
+        return self._query_verifier
+
+    @property
+    def notion_agent(self):
+        if self._notion_agent is None:
+            self._notion_agent = NotionAgent()
+        return self._notion_agent
+
+    @property
+    def gws_agent(self):
+        if self._gws_agent is None:
+            self._gws_agent = GWSAgent()
+        return self._gws_agent
 
     async def route_and_execute(self, query: str) -> dict:
         """Main entry point: analyze query -> delegate to Sub Agent -> return result.
@@ -66,8 +96,15 @@ class OrchestratorAgent:
         return await handler(query)
 
     async def _classify_query(self, query: str) -> str:
-        """Orchestrator determines query type."""
-        prompt = f"""사용자 질문을 분석하여 적절한 처리 경로를 결정하세요.
+        """Orchestrator determines query type.
+
+        Uses LLM classification if Anthropic key is available,
+        otherwise falls back to keyword-based routing.
+        """
+        # Try LLM classification first
+        if self.llm:
+            try:
+                prompt = f"""사용자 질문을 분석하여 적절한 처리 경로를 결정하세요.
 
 경로 옵션:
 - bigquery: 매출, 수량, 주문, 재고, 데이터 조회/분석/집계 관련
@@ -80,25 +117,33 @@ class OrchestratorAgent:
 
 경로 하나만 답변 (bigquery/notion/gws/multi/direct):"""
 
-        response = await self.llm.ainvoke(prompt)
-        route = response.content.strip().lower()
+                response = await self.llm.ainvoke(prompt)
+                route = response.content.strip().lower()
 
-        valid_routes = {"bigquery", "notion", "gws", "multi", "direct"}
-        if route not in valid_routes:
-            # Keyword-based fallback
-            q = query.lower()
-            if any(kw in q for kw in [
-                "매출", "수량", "주문", "sales", "revenue",
-                "쇼피", "아마존", "틱톡", "국가별", "월별",
-            ]):
-                return "bigquery"
-            elif any(kw in q for kw in ["정책", "매뉴얼", "프로세스", "가이드", "반품"]):
-                return "notion"
-            elif any(kw in q for kw in ["드라이브", "메일", "캘린더", "회의록", "일정"]):
-                return "gws"
-            return "direct"
+                valid_routes = {"bigquery", "notion", "gws", "multi", "direct"}
+                if route in valid_routes:
+                    return route
+            except Exception as e:
+                logger.warning("llm_classify_failed", error=str(e))
 
-        return route
+        # Keyword-based fallback
+        return self._keyword_classify(query)
+
+    def _keyword_classify(self, query: str) -> str:
+        """Keyword-based query classification fallback."""
+        q = query.lower()
+        if any(kw in q for kw in [
+            "매출", "수량", "주문", "sales", "revenue",
+            "쇼피", "아마존", "틱톡", "국가별", "월별",
+            "대륙별", "플랫폼별", "연도별", "분기별",
+            "라인", "차트", "그래프", "그려",
+        ]):
+            return "bigquery"
+        elif any(kw in q for kw in ["정책", "매뉴얼", "프로세스", "가이드", "반품"]):
+            return "notion"
+        elif any(kw in q for kw in ["드라이브", "메일", "캘린더", "회의록", "일정"]):
+            return "gws"
+        return "direct"
 
     async def _handle_bigquery(self, query: str) -> dict:
         """BigQuery Agent: reuses existing run_sql_agent().
@@ -150,14 +195,34 @@ class OrchestratorAgent:
 
 종합 답변:"""
 
-        response = await self.llm.ainvoke(summary_prompt)
+        try:
+            if self.llm:
+                response = await self.llm.ainvoke(summary_prompt)
+                answer = response.content
+            else:
+                from app.core.llm import get_gemini_client
+                answer = get_gemini_client().generate(summary_prompt, temperature=0.3)
+        except Exception as e:
+            logger.warning("multi_synthesize_failed", error=str(e))
+            answer = json.dumps(results, ensure_ascii=False, default=str)
+
         return {
             "source": "multi",
-            "answer": response.content,
+            "answer": answer,
             "sub_results": results,
         }
 
     async def _handle_direct(self, query: str) -> dict:
         """General question: direct LLM answer."""
-        response = await self.llm.ainvoke(query)
-        return {"source": "direct", "answer": response.content}
+        if self.llm:
+            try:
+                response = await self.llm.ainvoke(query)
+                return {"source": "direct", "answer": response.content}
+            except Exception as e:
+                logger.warning("direct_llm_failed", error=str(e))
+
+        # Fallback to Gemini
+        from app.core.llm import get_gemini_client
+        llm = get_gemini_client()
+        answer = llm.generate(query, temperature=0.3)
+        return {"source": "direct", "answer": answer}

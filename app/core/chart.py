@@ -99,6 +99,47 @@ CHARTS_DIR = Path(__file__).resolve().parent.parent / "static" / "charts"
 CHARTS_DIR.mkdir(parents=True, exist_ok=True)
 
 
+def _pivot_grouped_data(
+    data: List[Dict], x_col: str, y_col: str, group_col: str
+) -> tuple:
+    """Pivot long-format grouped data into wide format for multi-series charts.
+
+    Input:  [{continent: "CIS", month: "01", sales: 100}, {continent: "US", month: "01", sales: 200}, ...]
+    Output: [{month: "01", CIS: 100, US: 200}, ...], ["CIS", "US"]
+
+    Returns:
+        (pivoted_data, y_columns_list) or ([], []) on failure.
+    """
+    from collections import OrderedDict
+
+    try:
+        # Collect unique x values (preserving order) and group names
+        x_order = list(OrderedDict.fromkeys(str(row.get(x_col, "")) for row in data))
+        groups = list(OrderedDict.fromkeys(str(row.get(group_col, "")) for row in data))
+
+        # Build pivot dict: {x_val: {group: y_val}}
+        pivot = {x: {} for x in x_order}
+        for row in data:
+            x = str(row.get(x_col, ""))
+            g = str(row.get(group_col, ""))
+            v = float(row.get(y_col, 0) or 0)
+            pivot[x][g] = v
+
+        # Convert to wide-format rows
+        wide_data = []
+        for x in x_order:
+            row = {x_col: x}
+            for g in groups:
+                row[g] = pivot[x].get(g, 0)
+            wide_data.append(row)
+
+        logger.info("pivot_grouped_data", x_count=len(x_order), groups=len(groups), group_names=groups[:5])
+        return wide_data, groups
+    except Exception as e:
+        logger.error("pivot_failed", error=str(e))
+        return [], []
+
+
 def generate_chart(
     chart_config: Dict[str, Any],
     data: List[Dict[str, Any]],
@@ -116,14 +157,23 @@ def generate_chart(
         x_label = chart_config.get("x_label", "")
         y_label = chart_config.get("y_label", "")
 
+        group_col = chart_config.get("group_column")
+
         if not data or not x_col or not y_col:
             return None
+
+        # Pivot long-format grouped data into wide format for multi-series charts
+        if group_col and isinstance(y_col, str):
+            data, y_col = _pivot_grouped_data(data, x_col, y_col, group_col)
+            if not data:
+                return None
 
         # Readability guard: skip chart if too many categories
         max_items = {"bar": 15, "horizontal_bar": 20, "pie": 10, "line": 36}
         limit = max_items.get(chart_type, 20)
-        if len(data) > limit:
-            logger.info("chart_skipped_too_many_items", chart_type=chart_type, items=len(data), limit=limit)
+        check_count = len(data)
+        if check_count > limit:
+            logger.info("chart_skipped_too_many_items", chart_type=chart_type, items=check_count, limit=limit)
             return None
 
         x_values = [str(row.get(x_col, "")) for row in data]
@@ -356,12 +406,12 @@ def get_chart_config_prompt(query: str, sql: str, results_preview: str, row_coun
 - bar \ucc28\ud2b8: \uce74\ud14c\uace0\ub9ac\uac00 15\uac1c \ucd08\uacfc \u2192 \uc77d\uae30 \uc5b4\ub824\uc6c0
 - horizontal_bar: \ud56d\ubaa9\uc774 20\uac1c \ucd08\uacfc
 - pie/donut: \ud56d\ubaa9\uc774 10\uac1c \ucd08\uacfc
-- line: \ub370\uc774\ud130 \ud3ec\uc778\ud2b8 36\uac1c \ucd08\uacfc (3\ub144\uce58 \uc6d4\ubcc4 \uc774\uc0c1)
+- line: x\ucd95 \uace0\uc720\uac12 36\uac1c \ucd08\uacfc (3\ub144\uce58 \uc6d4\ubcc4 \uc774\uc0c1). \ub2e8, group_column\uc774 \uc788\uc73c\uba74 x\ucd95 \uace0\uc720\uac12 \uae30\uc900\uc73c\ub85c \ud310\ub2e8 (\uc608: 10\ub300\ub959 x 12\uac1c\uc6d4 = 120\ud589\uc774\uc9c0\ub9cc x\ucd95\uc740 12\uac1c\ub85c OK)
 - \ub77c\ubca8\uc774 \ub9e4\uc6b0 \uae38\uc5b4\uc11c(30\uc790+) \uacb9\uce60 \uacbd\uc6b0
 - \uc0ac\ub78c\uc774 \ud55c\ub208\uc5d0 \ud30c\uc545\ud558\uae30 \uc5b4\ub824\uc6b4 \ubcf5\uc7a1\ud55c \ub370\uc774\ud130\ub294 \ucc28\ud2b8\ub97c \uc0dd\uc131\ud558\uc9c0 \ub9c8\uc138\uc694
 
 ## \ucc28\ud2b8 \ud0c0\uc785 \uc120\ud0dd (\uc911\uc694!)
-- **line**: \uc6d4\ubcc4/\uc77c\ubcc4 \ub9e4\ucd9c \ucd94\uc774, \uc2dc\uacc4\uc5f4 \ub370\uc774\ud130. \ud2b9\ud788 "\uc6d4\ubcc4 \ub9e4\ucd9c", "\ucd94\uc774", "\ud2b8\ub80c\ub4dc", "\ubcc0\ud654" \uc694\uccad \uc2dc \ubc18\ub4dc\uc2dc line \uc0ac\uc6a9. x\ucd95=\uc6d4(\ub610\ub294 \uc77c\uc790), y\ucd95=\ub9e4\ucd9c\uc561
+- **line**: \uc6d4\ubcc4/\uc77c\ubcc4 \ub9e4\ucd9c \ucd94\uc774, \uc2dc\uacc4\uc5f4 \ub370\uc774\ud130. "\ucd94\uc774", "\ud2b8\ub80c\ub4dc", "\ubcc0\ud654" \uc694\uccad \uc2dc \ubc18\ub4dc\uc2dc line. \ub300\ub959\ubcc4/\uad6d\uac00\ubcc4 \ub4f1 \uadf8\ub8f9\uc774 \uc788\uc73c\uba74 group_column\uc744 \uc9c0\uc815\ud558\uc138\uc694 (\uac01 \uadf8\ub8f9\uc774 \ubcc4\ub3c4 \ub77c\uc778\uc73c\ub85c \ud45c\uc2dc\ub428)
 - bar: \uce74\ud14c\uace0\ub9ac\ubcc4 \ube44\uad50 (\uad6d\uac00\ubcc4, \ud50c\ub7ab\ud3fc\ubcc4 \ub9e4\ucd9c \ub4f1)
 - horizontal_bar: \ud56d\ubaa9\uc774 \ub9ce\uc744 \ub54c (7\uac1c \uc774\uc0c1) \ub610\ub294 \uc774\ub984\uc774 \uae34 \uce74\ud14c\uace0\ub9ac
 - pie: \ube44\uc728/\uad6c\uc131 (\uc804\uccb4 \ub300\ube44 \ube44\uc911) - \ub3c4\ub11b \uc2a4\ud0c0\uc77c\ub85c \ub80c\ub354\ub428
@@ -374,6 +424,7 @@ def get_chart_config_prompt(query: str, sql: str, results_preview: str, row_coun
   "chart_type": "bar|horizontal_bar|line|pie|grouped_bar|stacked_bar",
   "x_column": "\uacb0\uacfc \ucef4\ub7fc\uba85",
   "y_column": "\uacb0\uacfc \ucef4\ub7fc\uba85" \ub610\ub294 ["\ucef4\ub7fc1", "\ucef4\ub7fc2"],
+  "group_column": "\uadf8\ub8f9 \ucef4\ub7fc\uba85 (\ub300\ub959\ubcc4/\uad6d\uac00\ubcc4 \ub4f1 long format\uc77c \ub54c, \uc5c6\uc73c\uba74 null)",
   "title": "\ucc28\ud2b8 \uc81c\ubaa9 (\ud55c\uad6d\uc5b4)",
   "x_label": "X\ucd95 \ub77c\ubca8",
   "y_label": "Y\ucd95 \ub77c\ubca8"

@@ -24,8 +24,15 @@ from app.models.schemas import (
 
 logger = structlog.get_logger(__name__)
 
-# v3.0 Orchestrator singleton
-_orchestrator = OrchestratorAgent()
+# v3.0 Orchestrator singleton (lazy init)
+_orchestrator = None
+
+
+def _get_orchestrator():
+    global _orchestrator
+    if _orchestrator is None:
+        _orchestrator = OrchestratorAgent()
+    return _orchestrator
 
 router = APIRouter()
 
@@ -58,7 +65,7 @@ async def chat_completions(request: ChatCompletionRequest):
 
     # Non-streaming response (v3.0: Orchestrator)
     try:
-        result = await _orchestrator.route_and_execute(query)
+        result = await _get_orchestrator().route_and_execute(query)
         answer = result.get("answer", "")
     except Exception as e:
         logger.error("agent_failed", error=str(e))
@@ -114,7 +121,7 @@ async def _stream_response(
 
     # Generate the full answer (v3.0: Orchestrator)
     try:
-        result = await _orchestrator.route_and_execute(query)
+        result = await _get_orchestrator().route_and_execute(query)
         answer = result.get("answer", "")
     except Exception as e:
         error_msg = f"오류가 발생했습니다: {str(e)}"
