@@ -218,8 +218,11 @@ def _try_generate_chart(llm, query: str, sql: str, result_preview: str, results:
             settings = get_settings()
             chart_url = f"{settings.chart_base_url}/static/charts/{filename}"
             logger.info("chart_url_generated", url=chart_url)
-            # Return iframe for interactive HTML chart
-            return f'<iframe src="{chart_url}" width="100%" height="500" frameborder="0"></iframe>'
+            # Return markdown image for PNG, iframe for HTML
+            if filename.endswith(".png"):
+                return f"![chart]({chart_url})"
+            else:
+                return f'<iframe src="{chart_url}" width="100%" height="500" frameborder="0"></iframe>'
         logger.warning("chart_generate_returned_none")
         return ""
     except Exception as e:

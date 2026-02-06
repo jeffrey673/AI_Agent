@@ -292,25 +292,38 @@ def generate_chart(
 
         fig.update_layout(**layout)
 
-        # Save as HTML
-        filename = f"{uuid.uuid4().hex}.html"
+        # Save as PNG image (for Open WebUI compatibility)
+        filename = f"{uuid.uuid4().hex}.png"
         filepath = CHARTS_DIR / filename
 
-        # Write interactive HTML with embedded plotly.js
-        fig.write_html(
-            str(filepath),
-            include_plotlyjs="cdn",
-            full_html=True,
-            config={
-                "displayModeBar": True,
-                "modeBarButtonsToRemove": ["lasso2d", "select2d"],
-                "displaylogo": False,
-                "responsive": True,
-            },
-        )
-
-        logger.info("chart_generated", chart_type=chart_type, data_points=len(data), file=filename)
-        return filename
+        try:
+            fig.write_image(
+                str(filepath),
+                format="png",
+                width=1200,
+                height=600,
+                scale=2,
+            )
+            logger.info("chart_generated", chart_type=chart_type, data_points=len(data), file=filename)
+            return filename
+        except Exception as img_error:
+            logger.warning("chart_png_failed", error=str(img_error))
+            # Fallback to HTML if PNG fails
+            html_filename = f"{uuid.uuid4().hex}.html"
+            html_filepath = CHARTS_DIR / html_filename
+            fig.write_html(
+                str(html_filepath),
+                include_plotlyjs="cdn",
+                full_html=True,
+                config={
+                    "displayModeBar": True,
+                    "modeBarButtonsToRemove": ["lasso2d", "select2d"],
+                    "displaylogo": False,
+                    "responsive": True,
+                },
+            )
+            logger.info("chart_generated_html_fallback", file=html_filename)
+            return html_filename
 
     except Exception as e:
         logger.error("chart_generation_failed", error=str(e))
