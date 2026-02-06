@@ -40,25 +40,25 @@ CHARTS_DIR.mkdir(parents=True, exist_ok=True)
 
 
 def _format_number(val: float) -> str:
-    """Format large numbers with Korean units."""
+    """Format large numbers with Korean units (no decimals)."""
     if abs(val) >= 1e8:
-        return f"{val / 1e8:,.1f}억"
+        return f"{int(val / 1e8):,}억"
     elif abs(val) >= 1e4:
-        return f"{val / 1e4:,.0f}만"
+        return f"{int(val / 1e4):,}만"
     else:
-        return f"{val:,.0f}"
+        return f"{int(val):,}"
 
 
 def _format_short(val: float) -> str:
-    """Short format for data labels on chart."""
+    """Short format for data labels on chart (no decimals)."""
     if abs(val) >= 1e9:
-        return f"{val / 1e9:.1f}B"
+        return f"{int(val / 1e9)}B"
     elif abs(val) >= 1e6:
-        return f"{val / 1e6:.1f}M"
+        return f"{int(val / 1e6)}M"
     elif abs(val) >= 1e3:
-        return f"{val / 1e3:.0f}K"
+        return f"{int(val / 1e3)}K"
     else:
-        return f"{val:,.0f}"
+        return f"{int(val):,}"
 
 
 def _pivot_grouped_data(
@@ -214,7 +214,8 @@ def generate_chart(
                 textinfo="label+percent",
                 textposition="outside",
                 textfont=dict(size=11, color=TEXT_COLOR),
-                hovertemplate="%{label}<br>%{value:,.0f} (%{percent})<extra></extra>",
+                texttemplate="%{label}<br>%{percent:.1%}",
+                hovertemplate="%{label}<br>%{value:,} (%{percent:.1%})<extra></extra>",
                 pull=[0.02] * len(pie_values),
             ))
             legend_count = len(pie_values)
