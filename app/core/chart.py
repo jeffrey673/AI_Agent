@@ -271,14 +271,25 @@ def generate_chart(
             fig.update_layout(barmode="group")
 
         # --- LAYOUT ---
-        # Calculate margins based on content
+        # Calculate margins and image size based on legend count
         top_margin = 80
-        if legend_count > 5:
-            top_margin = 120  # More space for legend
-
         bottom_margin = 80
+        right_margin = 40
+        img_width = 1000
+        img_height = 600
+
         if len(x_values) > 8 or any(len(str(x)) > 10 for x in x_values):
             bottom_margin = 100  # More space for rotated labels
+
+        # Adjust for many legend items
+        if legend_count > 10:
+            # Large legend - use wider image with legend on right
+            right_margin = 200
+            img_width = 1300
+            img_height = 700
+        elif legend_count > 5:
+            right_margin = 180
+            img_width = 1200
 
         layout = dict(
             title=dict(
@@ -286,45 +297,46 @@ def generate_chart(
                 font=dict(size=18, color=TITLE_COLOR, family="Arial"),
                 x=0.5,
                 xanchor="center",
-                y=0.95,
+                y=0.98,
                 yanchor="top",
             ),
             paper_bgcolor=BG_COLOR,
             plot_bgcolor=PLOT_BG,
             font=dict(color=TEXT_COLOR, family="Arial"),
-            margin=dict(l=80, r=40, t=top_margin, b=bottom_margin),
+            margin=dict(l=80, r=right_margin, t=top_margin, b=bottom_margin),
             showlegend=legend_count > 1,
         )
 
         # Legend positioning - always outside chart area
         if legend_count > 1:
-            if legend_count <= 5:
-                # Horizontal legend above chart
+            if legend_count <= 4:
+                # Horizontal legend above chart (only for few items)
                 layout["legend"] = dict(
                     orientation="h",
                     yanchor="bottom",
                     y=1.02,
                     xanchor="center",
                     x=0.5,
-                    bgcolor="rgba(255,255,255,0.9)",
+                    bgcolor="rgba(255,255,255,0.95)",
                     bordercolor=GRID_COLOR,
                     borderwidth=1,
                     font=dict(size=11, color=TEXT_COLOR),
                 )
+                layout["margin"]["t"] = 100
             else:
-                # Vertical legend to the right
+                # Vertical legend to the right (for many items)
                 layout["legend"] = dict(
                     orientation="v",
-                    yanchor="middle",
-                    y=0.5,
+                    yanchor="top",
+                    y=1,
                     xanchor="left",
                     x=1.02,
-                    bgcolor="rgba(255,255,255,0.9)",
+                    bgcolor="rgba(255,255,255,0.95)",
                     bordercolor=GRID_COLOR,
                     borderwidth=1,
                     font=dict(size=10, color=TEXT_COLOR),
+                    tracegroupgap=3,  # Reduce gap between items
                 )
-                layout["margin"]["r"] = 150  # More right margin for legend
 
         # Axis styling
         if chart_type != "pie":
@@ -363,7 +375,7 @@ def generate_chart(
                 range=[0, max(y_values) * 1.15] if not isinstance(y_col, list) else None
             )
 
-        # Save as PNG
+        # Save as PNG with dynamic size
         filename = f"{uuid.uuid4().hex}.png"
         filepath = CHARTS_DIR / filename
 
@@ -371,8 +383,8 @@ def generate_chart(
             fig.write_image(
                 str(filepath),
                 format="png",
-                width=1000,
-                height=600,
+                width=img_width,
+                height=img_height,
                 scale=2,
             )
             logger.info("chart_generated", chart_type=chart_type, data_points=len(data), file=filename)
