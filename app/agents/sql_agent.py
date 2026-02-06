@@ -198,7 +198,7 @@ def format_answer(state: AgentState) -> Dict[str, Any]:
 def _try_generate_chart(llm, query: str, sql: str, result_preview: str, results: list) -> str:
     """Attempt to generate a chart for the SQL results.
 
-    Returns markdown string with chart image URL, or empty string.
+    Returns markdown/HTML string with interactive chart, or empty string.
     """
     from app.core.chart import generate_chart, get_chart_config_prompt
 
@@ -218,7 +218,8 @@ def _try_generate_chart(llm, query: str, sql: str, result_preview: str, results:
             settings = get_settings()
             chart_url = f"{settings.chart_base_url}/static/charts/{filename}"
             logger.info("chart_url_generated", url=chart_url)
-            return f"![chart]({chart_url})"
+            # Return iframe for interactive HTML chart
+            return f'<iframe src="{chart_url}" width="100%" height="500" frameborder="0"></iframe>'
         logger.warning("chart_generate_returned_none")
         return ""
     except Exception as e:
