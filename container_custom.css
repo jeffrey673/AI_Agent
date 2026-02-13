@@ -1,0 +1,742 @@
+/* ============================================================
+   SKIN1004 AI — Craver Corp Clone Login Design
+   Exact replica of https://cravercorp.com/ animations
+   - "WHAT / DO YOU / CRAVE?" slide-in text (contents01)
+   - 3-row marquee with images + Korean subtitles (contents03)
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;0,900;1,700;1,900&display=swap');
+
+:root {
+  --accent: #e89200;
+  --accent-hover: #f0a020;
+}
+
+/* ============================================================
+   A. CRAVER BACKGROUND LAYER
+   ============================================================ */
+
+#craver-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  overflow: hidden;
+  background: #000;
+}
+
+/* ---------- Big CRAVE text (center) ---------- */
+.craver-crave {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+  z-index: 1;
+}
+
+.craver-line {
+  font-size: clamp(60px, 14vw, 220px);
+  font-weight: 900;
+  font-style: italic;
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+  line-height: 0.95;
+  margin: 0;
+  opacity: 1;
+  /* match original transition */
+  transition: all ease-out 0.2s, left cubic-bezier(0.42, 0, 0.2, 1.02) 0.6s, color 0.6s ease;
+}
+
+/* Initial positions (before animation) — matches original .text01/.text02/.text03 */
+.craver-l1 { left: -12%; color: #111; }
+.craver-l2 { left: 8%;   color: #333; }
+.craver-l3 { left: -12%; color: #fff; opacity: 0.1; }
+
+/* Animated "active" state — slide in with stagger */
+.craver-l1 {
+  animation: craver-slide-r 0.8s cubic-bezier(0.42, 0, 0.2, 1.02) 0.4s both;
+}
+.craver-l2 {
+  animation: craver-slide-l 0.8s cubic-bezier(0.42, 0, 0.2, 1.02) 0.7s both;
+}
+.craver-l3 {
+  animation: craver-slide-r 0.8s cubic-bezier(0.42, 0, 0.2, 1.02) 1.0s both;
+}
+
+@keyframes craver-slide-r {
+  from { left: -12%; color: #111; opacity: 0.1; }
+  to   { left: 8%;   color: #fff; opacity: 1; }
+}
+@keyframes craver-slide-l {
+  from { left: 8%;   color: #333; opacity: 0.1; }
+  to   { left: -12%; color: #fff; opacity: 1; }
+}
+
+/* ---------- Marquee container ---------- */
+.craver-marquees {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 4% 0;
+  z-index: 0;
+}
+
+/* ---------- Each marquee row ---------- */
+.craver-row {
+  white-space: nowrap;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.craver-row2 {
+  padding: 0;
+}
+
+/* ---------- Marquee track (flex strip that scrolls) ---------- */
+.craver-track {
+  display: inline-flex;
+  align-items: center;
+  font-size: clamp(40px, 10vw, 160px);
+  font-weight: 700;
+  font-style: italic;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1;
+  will-change: transform;
+}
+
+.craver-track-left {
+  animation: craver-mq-left 25s linear infinite;
+}
+
+.craver-track-right {
+  animation: craver-mq-right 25s linear infinite;
+}
+
+@keyframes craver-mq-left {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@keyframes craver-mq-right {
+  from { transform: translateX(-50%); }
+  to   { transform: translateX(0); }
+}
+
+/* ---------- Outline text (text-stroke, transparent fill) ---------- */
+.craver-outline {
+  display: inline-block;
+  padding: 0 20px;
+  -webkit-text-stroke-width: 0.8px;
+  -webkit-text-stroke-color: rgba(255, 255, 255, 0.12);
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* ---------- Solid (filled) text ---------- */
+.craver-solid {
+  display: inline-block;
+  padding: 0 20px;
+  color: rgba(255, 255, 255, 0.2);
+  position: relative;
+}
+
+.craver-solid em {
+  font-style: italic;
+}
+
+/* Korean subtitle above solid text */
+.craver-solid small {
+  position: absolute;
+  top: -22px;
+  left: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  color: rgba(255, 255, 255, 0.15);
+  font-family: 'AppleSDGothic', 'Pretendard', 'Malgun Gothic', sans-serif;
+  white-space: nowrap;
+}
+
+/* ---------- Marquee images ---------- */
+.craver-track img {
+  display: inline-block;
+  height: auto;
+  width: clamp(100px, 14vw, 250px);
+  object-fit: contain;
+  margin: -10px 20px 0;
+  opacity: 0.2;
+  flex-shrink: 0;
+}
+
+
+/* ============================================================
+   B. LOGIN CARD (glassmorphism over Craver bg)
+   ============================================================ */
+
+/* Outer wrapper — let Craver bg show through */
+.w-full.h-screen.max-h-\[100dvh\] {
+  position: relative;
+  overflow: hidden !important;
+}
+
+/* Hide Open WebUI default background — Craver bg replaces it */
+html.dark .w-full.h-full.absolute.top-0.left-0.bg-white.dark\:bg-black {
+  background: transparent !important;
+}
+
+/* Login card */
+html.dark .sm\:max-w-md {
+  background: rgba(10, 10, 10, 0.72) !important;
+  backdrop-filter: blur(40px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(40px) saturate(180%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.04) !important;
+  border-radius: 24px !important;
+  padding: 2.8rem 2.4rem !important;
+  z-index: 10;
+  position: relative;
+  box-shadow:
+    0 32px 64px rgba(0, 0, 0, 0.55),
+    inset 0 1px 0 rgba(255, 255, 255, 0.03) !important;
+  animation: card-enter 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
+}
+
+@keyframes card-enter {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Card heading */
+html.dark .sm\:max-w-md h1,
+html.dark .sm\:max-w-md h2,
+html.dark .sm\:max-w-md .text-2xl,
+html.dark .sm\:max-w-md .text-3xl {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 900 !important;
+  font-style: italic !important;
+  letter-spacing: -0.5px !important;
+  color: #fff !important;
+}
+
+/* Form inputs — underline style like Craver contact form */
+html.dark .sm\:max-w-md input[type="email"],
+html.dark .sm\:max-w-md input[type="password"],
+html.dark .sm\:max-w-md input[type="text"],
+html.dark .sm\:max-w-md input:not([type="checkbox"]):not([type="submit"]) {
+  background: transparent !important;
+  border: none !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.10) !important;
+  border-radius: 0 !important;
+  color: #fff !important;
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: 15px !important;
+  padding: 14px 0 !important;
+  transition: border-color 0.4s ease, box-shadow 0.4s ease !important;
+  outline: none !important;
+}
+
+html.dark .sm\:max-w-md input:focus {
+  border-bottom-color: var(--accent) !important;
+  box-shadow: 0 2px 0 0 var(--accent) !important;
+  outline: none !important;
+}
+
+html.dark .sm\:max-w-md input::placeholder {
+  color: rgba(255, 255, 255, 0.22) !important;
+  font-weight: 300 !important;
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+/* Remove default gray backgrounds on input wrappers */
+html.dark .sm\:max-w-md .bg-gray-50,
+html.dark .sm\:max-w-md [class*="bg-gray-5"] {
+  background: transparent !important;
+}
+
+/* Labels */
+html.dark .sm\:max-w-md label {
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: 11px !important;
+  letter-spacing: 1.5px !important;
+  text-transform: uppercase !important;
+  color: rgba(255, 255, 255, 0.35) !important;
+  font-weight: 500 !important;
+}
+
+/* Submit button — orange pill like Craver CTA */
+html.dark .sm\:max-w-md button[type="submit"],
+html.dark .sm\:max-w-md form button.w-full {
+  background: var(--accent) !important;
+  color: #000 !important;
+  font-weight: 800 !important;
+  font-family: 'Montserrat', sans-serif !important;
+  border-radius: 999px !important;
+  border: none !important;
+  padding: 15px 0 !important;
+  font-size: 13px !important;
+  letter-spacing: 2.5px !important;
+  text-transform: uppercase !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  cursor: pointer !important;
+}
+
+html.dark .sm\:max-w-md button[type="submit"]:hover,
+html.dark .sm\:max-w-md form button.w-full:hover {
+  background: var(--accent-hover) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 12px 32px rgba(232, 146, 0, 0.25) !important;
+}
+
+html.dark .sm\:max-w-md button[type="submit"]:active,
+html.dark .sm\:max-w-md form button.w-full:active {
+  transform: translateY(0) !important;
+  box-shadow: 0 4px 12px rgba(232, 146, 0, 0.2) !important;
+}
+
+/* Links */
+html.dark .sm\:max-w-md a {
+  color: rgba(255, 255, 255, 0.4) !important;
+  transition: color 0.3s ease !important;
+  text-decoration: none !important;
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: 13px !important;
+}
+
+html.dark .sm\:max-w-md a:hover {
+  color: var(--accent) !important;
+}
+
+/* Checkbox */
+html.dark input[type="checkbox"] {
+  accent-color: var(--accent) !important;
+}
+
+/* Dividers */
+html.dark .sm\:max-w-md hr {
+  border-color: rgba(255, 255, 255, 0.06) !important;
+}
+
+
+/* ============================================================
+   B-2. LIGHT MODE — CRAVER BACKGROUND
+   ============================================================ */
+
+html.light #craver-bg {
+  background: #fff;
+}
+
+/* CRAVE text — slide to black */
+html.light .craver-l1 { animation-name: craver-slide-r-light; }
+html.light .craver-l2 { animation-name: craver-slide-l-light; }
+html.light .craver-l3 { animation-name: craver-slide-r-light; }
+
+@keyframes craver-slide-r-light {
+  from { left: -12%; color: #eee; opacity: 0.1; }
+  to   { left: 8%;   color: #000; opacity: 1; }
+}
+@keyframes craver-slide-l-light {
+  from { left: 8%;   color: #ccc; opacity: 0.1; }
+  to   { left: -12%; color: #000; opacity: 1; }
+}
+
+/* Marquee outline — black stroke */
+html.light .craver-outline {
+  -webkit-text-stroke-color: rgba(0, 0, 0, 0.12);
+}
+
+/* Marquee solid text — black */
+html.light .craver-solid {
+  color: rgba(0, 0, 0, 0.2);
+}
+
+/* Korean subtitle — black */
+html.light .craver-solid small {
+  color: rgba(0, 0, 0, 0.15);
+}
+
+/* Images — visible in light mode (original Craver pattern) */
+html.light .craver-track img {
+  opacity: 1;
+}
+
+/* ============================================================
+   B-3. LIGHT MODE — LOGIN CARD
+   ============================================================ */
+
+/* Hide default background */
+html.light .w-full.h-full.absolute.top-0.left-0.bg-white.dark\:bg-black {
+  background: transparent !important;
+}
+
+/* Login card — light glassmorphism */
+html.light .sm\:max-w-md {
+  background: rgba(255, 255, 255, 0.78) !important;
+  backdrop-filter: blur(40px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(40px) saturate(180%) !important;
+  border: 1px solid rgba(0, 0, 0, 0.06) !important;
+  border-radius: 24px !important;
+  padding: 2.8rem 2.4rem !important;
+  z-index: 10;
+  position: relative;
+  box-shadow:
+    0 32px 64px rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6) !important;
+  animation: card-enter 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
+}
+
+/* Card heading */
+html.light .sm\:max-w-md h1,
+html.light .sm\:max-w-md h2,
+html.light .sm\:max-w-md .text-2xl,
+html.light .sm\:max-w-md .text-3xl {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 900 !important;
+  font-style: italic !important;
+  letter-spacing: -0.5px !important;
+  color: #000 !important;
+}
+
+/* Form inputs */
+html.light .sm\:max-w-md input[type="email"],
+html.light .sm\:max-w-md input[type="password"],
+html.light .sm\:max-w-md input[type="text"],
+html.light .sm\:max-w-md input:not([type="checkbox"]):not([type="submit"]) {
+  background: transparent !important;
+  border: none !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12) !important;
+  border-radius: 0 !important;
+  color: #000 !important;
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: 15px !important;
+  padding: 14px 0 !important;
+  transition: border-color 0.4s ease, box-shadow 0.4s ease !important;
+  outline: none !important;
+}
+
+html.light .sm\:max-w-md input:focus {
+  border-bottom-color: var(--accent) !important;
+  box-shadow: 0 2px 0 0 var(--accent) !important;
+  outline: none !important;
+}
+
+html.light .sm\:max-w-md input::placeholder {
+  color: rgba(0, 0, 0, 0.28) !important;
+  font-weight: 300 !important;
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+/* Remove default gray backgrounds */
+html.light .sm\:max-w-md .bg-gray-50,
+html.light .sm\:max-w-md [class*="bg-gray-5"] {
+  background: transparent !important;
+}
+
+/* Labels */
+html.light .sm\:max-w-md label {
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: 11px !important;
+  letter-spacing: 1.5px !important;
+  text-transform: uppercase !important;
+  color: rgba(0, 0, 0, 0.45) !important;
+  font-weight: 500 !important;
+}
+
+/* Submit button — same orange accent */
+html.light .sm\:max-w-md button[type="submit"],
+html.light .sm\:max-w-md form button.w-full {
+  background: var(--accent) !important;
+  color: #000 !important;
+  font-weight: 800 !important;
+  font-family: 'Montserrat', sans-serif !important;
+  border-radius: 999px !important;
+  border: none !important;
+  padding: 15px 0 !important;
+  font-size: 13px !important;
+  letter-spacing: 2.5px !important;
+  text-transform: uppercase !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  cursor: pointer !important;
+}
+
+html.light .sm\:max-w-md button[type="submit"]:hover,
+html.light .sm\:max-w-md form button.w-full:hover {
+  background: var(--accent-hover) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 12px 32px rgba(232, 146, 0, 0.3) !important;
+}
+
+html.light .sm\:max-w-md button[type="submit"]:active,
+html.light .sm\:max-w-md form button.w-full:active {
+  transform: translateY(0) !important;
+  box-shadow: 0 4px 12px rgba(232, 146, 0, 0.2) !important;
+}
+
+/* Links */
+html.light .sm\:max-w-md a {
+  color: rgba(0, 0, 0, 0.45) !important;
+  transition: color 0.3s ease !important;
+  text-decoration: none !important;
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: 13px !important;
+}
+
+html.light .sm\:max-w-md a:hover {
+  color: var(--accent) !important;
+}
+
+/* Checkbox */
+html.light input[type="checkbox"] {
+  accent-color: var(--accent) !important;
+}
+
+/* Dividers */
+html.light .sm\:max-w-md hr {
+  border-color: rgba(0, 0, 0, 0.08) !important;
+}
+
+
+
+/* ============================================================
+   C. HIDE "Open WebUI" EVERYWHERE
+   ============================================================ */
+
+a[href*="openwebui.com"],
+a[href*="github.com/open-webui"],
+[class*="text-gray-"] a[href*="openwebui"],
+.text-xs a[href*="openwebui"] {
+  display: none !important;
+}
+
+
+/* ============================================================
+   D. SCROLLBAR
+   ============================================================ */
+
+html.dark ::-webkit-scrollbar { width: 3px; }
+html.dark ::-webkit-scrollbar-track { background: transparent; }
+html.dark ::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.08); border-radius: 2px; }
+
+html.light ::-webkit-scrollbar { width: 3px; }
+html.light ::-webkit-scrollbar-track { background: transparent; }
+html.light ::-webkit-scrollbar-thumb { background: rgba(0, 0, 0, 0.12); border-radius: 2px; }
+
+
+/* ============================================================
+   E. RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 1680px) {
+  .craver-line { font-size: clamp(60px, 12vw, 190px); }
+}
+
+@media (max-width: 1280px) {
+  .craver-line { font-size: clamp(60px, 11vw, 160px); }
+  .craver-track { font-size: clamp(40px, 9vw, 140px); }
+}
+
+@media (max-width: 1024px) {
+  .craver-line { font-size: clamp(50px, 10vw, 140px); }
+  .craver-track { font-size: clamp(36px, 8vw, 120px); }
+  .craver-track img { width: clamp(80px, 12vw, 210px); }
+  .craver-solid small { font-size: 12px; top: -18px; }
+}
+
+@media (max-width: 768px) {
+  .craver-line { font-size: clamp(46px, 10vw, 120px); }
+  .craver-track { font-size: clamp(32px, 8vw, 100px); }
+  .craver-track img { width: clamp(70px, 12vw, 170px); }
+  .craver-solid small { font-size: 10px; top: -15px; }
+
+  html.dark .sm\:max-w-md,
+  html.light .sm\:max-w-md {
+    margin: 0 16px !important;
+    padding: 2rem 1.5rem !important;
+    border-radius: 18px !important;
+  }
+}
+
+@media (max-width: 570px) {
+  .craver-line { font-size: clamp(40px, 14vw, 100px); }
+  .craver-track { font-size: clamp(28px, 10vw, 80px); }
+  .craver-track img { width: clamp(60px, 16vw, 130px); }
+  .craver-solid small { font-size: 9px; top: -13px; }
+}
+
+@media (max-width: 480px) {
+  .craver-line { font-size: 18vw; line-height: 1.1; }
+  html.dark .craver-l1 { animation-name: craver-slide-r-m; }
+  html.dark .craver-l2 { animation-name: craver-slide-l-m; }
+  html.dark .craver-l3 { animation-name: craver-slide-r-m; }
+  html.light .craver-l1 { animation-name: craver-slide-r-m-light; }
+  html.light .craver-l2 { animation-name: craver-slide-l-m-light; }
+  html.light .craver-l3 { animation-name: craver-slide-r-m-light; }
+
+  .craver-track { font-size: 14vw; }
+  .craver-track img { width: 25vw; }
+  .craver-outline { padding: 0 10px; }
+  .craver-solid { padding: 0 10px; }
+  .craver-solid small { display: none; }
+}
+
+@keyframes craver-slide-r-m {
+  from { left: -8%; color: #111; opacity: 0.1; }
+  to   { left: 5%;  color: #fff; opacity: 1; }
+}
+
+@keyframes craver-slide-l-m {
+  from { left: 5%;  color: #333; opacity: 0.1; }
+  to   { left: -8%; color: #fff; opacity: 1; }
+}
+
+/* Light mode mobile keyframes */
+@keyframes craver-slide-r-m-light {
+  from { left: -8%; color: #eee; opacity: 0.1; }
+  to   { left: 5%;  color: #000; opacity: 1; }
+}
+
+@keyframes craver-slide-l-m-light {
+  from { left: 5%;  color: #ccc; opacity: 0.1; }
+  to   { left: -8%; color: #000; opacity: 1; }
+}
+
+
+/* ============================================================
+   F. THEME TOGGLE BUTTON (bottom-right)
+   ============================================================ */
+
+#skin-theme-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: auto;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Dark mode: dark button with white icon */
+html.dark #skin-theme-toggle {
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+html.dark #skin-theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.18);
+  color: #fff;
+  transform: scale(1.08);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Light mode: light button with dark icon */
+html.light #skin-theme-toggle {
+  background: rgba(0, 0, 0, 0.06);
+  color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+html.light #skin-theme-toggle:hover {
+  background: rgba(0, 0, 0, 0.12);
+  color: #000;
+  transform: scale(1.08);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15);
+}
+
+#skin-theme-toggle:active {
+  transform: scale(0.95) !important;
+}
+
+#skin-theme-toggle svg {
+  pointer-events: none;
+}
+
+
+/* ============================================================
+   G. CHAT PAGE MARQUEE (craver-chat-mode)
+   Same 3-row marquee as login, but subtle background overlay
+   ============================================================ */
+
+#craver-bg.craver-chat-mode {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* Dark mode: very subtle on dark background */
+html.dark #craver-bg.craver-chat-mode {
+  background: transparent;
+  opacity: 0.4;
+}
+
+/* Light mode: very subtle on light background */
+html.light #craver-bg.craver-chat-mode {
+  background: transparent;
+  opacity: 0.3;
+}
+
+/* Chat mode: rows fill entire height evenly */
+#craver-bg.craver-chat-mode .craver-marquees {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0;
+}
+
+/* Slightly smaller text for chat background */
+#craver-bg.craver-chat-mode .craver-track {
+  font-size: clamp(30px, 6vw, 100px);
+}
+
+#craver-bg.craver-chat-mode .craver-track img {
+  width: clamp(60px, 8vw, 140px);
+  opacity: 0.15;
+}
+
+#craver-bg.craver-chat-mode .craver-solid small {
+  font-size: 10px;
+  top: -14px;
+}
+
+
+/* ============================================================
+   H. DARK MODE LOGO — CSS filter approach
+   splash.png IS the dark version (black bg + white "C.").
+   - Dark mode: cancel Tailwind's dark:invert → show dark logo as-is
+   - Light mode: apply invert(1) → flip to white bg + black "C."
+   ============================================================ */
+
+/* Dark mode: cancel Tailwind's filter: invert(1) from dark:invert class */
+html.dark img[alt="logo"] {
+  filter: none !important;
+  -webkit-filter: none !important;
+}
+
+/* Light mode: invert the dark logo to get light version */
+html.light img[alt="logo"] {
+  filter: invert(1) !important;
+  -webkit-filter: invert(1) !important;
+}
+
+/* Smooth transition between modes */
+img[alt="logo"] {
+  transition: filter 0.2s ease !important;
+}

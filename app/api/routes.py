@@ -6,7 +6,7 @@ from typing import AsyncGenerator
 
 import structlog
 from fastapi import APIRouter, HTTPException, Request
-from fastapi.responses import StreamingResponse
+from fastapi.responses import FileResponse, StreamingResponse
 
 from app.agents.orchestrator import OrchestratorAgent
 from app.config import get_settings
@@ -37,6 +37,12 @@ def _get_orchestrator():
     return _orchestrator
 
 router = APIRouter()
+
+
+@router.get("/dashboard")
+async def dashboard():
+    """Serve the Dashboard Hub page."""
+    return FileResponse("app/static/dashboard.html", media_type="text/html")
 
 
 @router.post("/v1/chat/completions")
