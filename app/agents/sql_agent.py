@@ -161,19 +161,93 @@ def format_answer(state: AgentState) -> Dict[str, Any]:
         }
 
     if not results:
+        # Build context hints for valid column values referenced in SQL
+        _value_hints = []
+        sql_upper = (sql or "").upper()
+        if "TEAM_NEW" in sql_upper:
+            _value_hints.append(
+                "Team_NEW 유효 값: GM_EAST1, GM_EAST2, GM_Ecomm, GM_MKT, CBT, JBT, KBT, BCM, B2B1, B2B2, DD_DT1, DD_DT2, OP, 기타 (⚠️ GM_WEST는 존재하지 않음!)"
+            )
+        if "COUNTRY" in sql_upper:
+            _value_hints.append(
+                "Country는 한국어 값: 미국, 인도네시아, 말레이시아, 필리핀, 일본, 중국, 한국, 태국, 베트남, 싱가포르, 호주, 독일 등"
+            )
+        _hints_text = "\n".join(_value_hints)
+
+        # Try Flash LLM for helpful empty-result message, else template fallback
+        try:
+            empty_llm = get_flash_client()
+            empty_prompt = f"""사용자가 "{query}"라고 질문했고, 다음 SQL을 실행했지만 결과가 0행이었습니다:
+
+```sql
+{sql}
+```
+
+{f"## 참고: 유효한 컬럼 값{chr(10)}{_hints_text}" if _hints_text else ""}
+
+다음 규칙으로 답변하세요:
+1. 해당 조건의 데이터가 없다고 간결하게 안내 (1문장). SQL에 사용된 값이 유효 값 목록에 없으면 **"해당 값은 존재하지 않습니다"**라고 명확히 안내
+2. SQL에서 사용된 필터 조건(국가, 채널, 날짜, 제품명, 팀 등)을 확인하고, 어떤 조건이 문제인지 설명. 유효 값 목록이 있으면 가장 유사한 값을 추천
+3. 비슷한 데이터를 조회할 수 있는 대안 질문 2-3개 제시
+4. 한국어로 답변하세요."""
+            answer = empty_llm.generate(empty_prompt, temperature=0.3)
+            if answer and len(answer) > 30:
+                return {"answer": answer}
+        except Exception:
+            pass
+        # Template fallback — more helpful than a single line
         return {
-            "answer": "조회 결과가 없습니다. 검색 조건을 확인해 주세요."
+            "answer": (
+                "해당 조건의 데이터가 조회되지 않았습니다.\n\n"
+                "**확인 사항:**\n"
+                "- 국가명이나 채널명(쇼피/아마존/틱톡/라자다 등)이 정확한지 확인\n"
+                "- 해당 국가에 해당 채널이 존재하는지 확인 (예: 일본 아마존은 데이터 없음)\n"
+                "- 조회 기간을 넓혀서 다시 질문\n\n"
+                "**예시 질문:**\n"
+                "- \"2024년 미국 아마존 월별 매출 알려줘\"\n"
+                "- \"베트남 쇼피 2025년 매출 알려줘\"\n"
+                "- \"태국 라자다 분기별 매출 추이\""
+            )
         }
 
     # Use Flash for answer formatting (faster, 3-5s vs 15-25s with Pro)
     llm = get_flash_client()
 
-    # Limit result preview for prompt
-    result_preview = json.dumps(results[:20], ensure_ascii=False, indent=2, default=str)
+    # Limit result preview for prompt — smart strategy based on result size
+    _ts_keywords = ("월별", "주차별", "주별", "일별", "분기별", "추이", "트렌드", "변동")
+    _is_timeseries = any(kw in query for kw in _ts_keywords)
+
+    if len(results) > 100:
+        try:
+            result_preview = _build_smart_preview(results, query)
+        except Exception as e:
+            logger.warning("smart_preview_failed_fallback", error=str(e))
+            result_preview = json.dumps(results[:20], ensure_ascii=False, indent=2, default=str)
+    elif _is_timeseries and len(results) <= 100:
+        # Time-series: send ALL rows so LLM can show full table & chart
+        result_preview = json.dumps(results, ensure_ascii=False, indent=2, default=str)
+    else:
+        result_preview = json.dumps(results[:20], ensure_ascii=False, indent=2, default=str)
 
     today = datetime.now().strftime("%Y-%m-%d")
+    today_kr = datetime.now().strftime("%Y년 %m월 %d일")
+
+    # Detect data date range from results for scope verification
+    _date_cols = [k for k in (results[0].keys() if results else [])
+                  if any(d in k.lower() for d in ("date", "month", "year", "날짜", "연도", "월"))]
+    _date_vals = set()
+    for row in results[:100]:
+        for dc in _date_cols:
+            v = row.get(dc)
+            if v is not None:
+                _date_vals.add(str(v))
+    data_range_hint = f"데이터에 포함된 날짜/기간 값: {sorted(_date_vals)[:20]}" if _date_vals else ""
+
     prompt = f"""다음은 사용자의 질문과 BigQuery 실행 결과입니다.
 결과를 바탕으로 사용자에게 **구조화된 분석 보고서** 형태로 한국어 답변을 작성하세요.
+
+## 오늘 날짜
+{today_kr} (오늘 기준)
 
 ## 사용자 질문
 {query}
@@ -183,10 +257,13 @@ def format_answer(state: AgentState) -> Dict[str, Any]:
 {sql}
 ```
 
-## 실행 결과 (총 {len(results)}행)
+## 실행 결과 (총 {len(results)}행{f', 아래는 상위 {min(20, len(results))}건 프리뷰' if len(results) > 20 else ''})
 ```json
 {result_preview}
 ```
+{f"⚠️ 위 JSON은 전체 {len(results)}행 중 상위 프리뷰입니다. 나머지 데이터도 존재하므로 '20일까지만 존재' 등 프리뷰 기반으로 데이터 범위를 단정하지 마세요." if len(results) > 20 else ""}
+{f"⚠️ 결과가 {len(results)}행으로 LIMIT에 도달했습니다. 전체 데이터 중 매출 상위 일부만 포함되어 있습니다. 답변에 이 사실을 반영하세요." if len(results) >= 1000 else ""}
+{data_range_hint}
 
 ## 답변 형식 (반드시 아래 섹션 구조를 따르세요)
 
@@ -209,9 +286,22 @@ def format_answer(state: AgentState) -> Dict[str, Any]:
 2. 핵심 수치는 **굵게** 표시하세요.
 3. 금액 표기: 1억 이상은 "약 OO.O억원", 1억 미만은 천 단위 쉼표 (예: 5,312만원).
 4. 3행 이상 비교 데이터는 반드시 마크다운 표(`| 컬럼 | ... |`)로 정리하세요.
-5. 결과가 20행 초과 시 상위 항목만 표로 보여주고 나머지는 요약하세요.
-6. ⚠️ **제품명(SET/product 컬럼)은 영어 원본 그대로** 표시 (한국어 번역 금지).
+5. 시계열 데이터(월별, 주차별, 일별, 분기별 추이)는 **전체 행을 마크다운 표로** 보여주세요 (절대 생략 금지). 시계열이 아닌 랭킹/비교 데이터가 20행 초과 시에만 상위 항목 표 + 나머지 요약.
+6. **제품명(SET/product 컬럼)은 영어 원본 그대로** 표시 (한국어 번역 금지).
 7. 단순 수치 1개만 반환되는 경우(합계 등)에는 "상세 데이터" 섹션을 생략하고 요약만 작성하세요.
+
+## ⚠️ 질문-데이터 정합성 검증 (최우선 규칙)
+**답변 전에 반드시 아래를 확인하세요:**
+8. 사용자가 묻는 **기간 범위**와 실제 데이터의 기간을 비교하세요.
+   - "2026년 매출"을 물었는데 데이터가 1~2월뿐이면: 요약 첫 줄에 "⚠️ 2026년은 현재 1~2월 데이터만 존재합니다 (오늘: {today_kr})" 반드시 명시
+   - "연간 매출"을 물었는데 일부 월만 있으면: 어떤 월까지 데이터가 있는지 명시
+   - 미래 날짜 질문이면: "해당 기간은 아직 데이터가 없습니다" 안내
+9. 사용자가 묻는 **범위**(국가, 채널, 제품 등)와 실제 데이터 범위를 비교하세요.
+   - "전체 국가"를 물었는데 3개국만 있으면: 포함된 국가를 명시
+   - "아마존 매출"을 물었는데 아마존 데이터가 없으면: 데이터 없음을 명시
+10. **절대 질문과 다른 범위의 데이터를 질문에 대한 답인 것처럼 제시하지 마세요.**
+    - 사용자가 "2026년 매출"을 물었으면 "2월 매출"이라고 제목 바꿔 답하지 마세요.
+    - 반드시 원래 질문을 존중하고, 데이터가 부족하면 부족하다고 명시하세요.
 """
 
     try:
@@ -246,6 +336,74 @@ def format_answer(state: AgentState) -> Dict[str, Any]:
         return {
             "answer": f"SQL 실행 결과 ({len(results)}행):\n```json\n{result_preview}\n```"
         }
+
+
+def _build_smart_preview(results: list, query: str) -> str:
+    """Build a smart preview for large result sets (>100 rows).
+
+    Instead of blindly sending the first 20 rows (which may be alphabetically
+    biased), this produces an aggregate summary + top-20-by-revenue sample
+    so the LLM can write a meaningful answer.
+    """
+    if not results:
+        return "[]"
+
+    keys = list(results[0].keys())
+
+    # Auto-detect revenue/quantity columns by name AND by checking actual data types
+    _rev_keywords = ("revenue", "sales", "매출", "amount", "금액")
+    _qty_keywords = ("qty", "quantity", "수량")
+    # Use exact word boundaries to avoid "Country" matching "count"
+    rev_cols = [k for k in keys if any(w == k.lower() or k.lower().startswith(w) or k.lower().endswith(w) or f"_{w}" in k.lower() or f"{w}_" in k.lower() for w in _rev_keywords)]
+    qty_cols = [k for k in keys if any(w == k.lower() or k.lower().startswith(w) or k.lower().endswith(w) or f"_{w}" in k.lower() or f"{w}_" in k.lower() for w in _qty_keywords)]
+
+    # Validate detected columns are actually numeric by sampling first row
+    def _is_numeric_col(col_name: str) -> bool:
+        for row in results[:5]:
+            v = row.get(col_name)
+            if v is not None:
+                try:
+                    float(v)
+                    return True
+                except (ValueError, TypeError):
+                    return False
+        return False
+
+    rev_cols = [c for c in rev_cols if _is_numeric_col(c)]
+    qty_cols = [c for c in qty_cols if _is_numeric_col(c)]
+
+    # Detect dimension columns (everything that's not a metric)
+    metric_cols = set(rev_cols + qty_cols)
+    dim_cols = [k for k in keys if k not in metric_cols]
+
+    # Aggregate summary
+    summary_parts = [f"총 행수: {len(results)}"]
+    for dc in dim_cols:
+        unique_vals = set(str(row.get(dc, "")) for row in results if row.get(dc) is not None)
+        summary_parts.append(f"고유 {dc} 수: {len(unique_vals)}")
+        if len(unique_vals) <= 15:
+            summary_parts.append(f"  값: {sorted(unique_vals)}")
+
+    for rc in rev_cols:
+        total = sum(float(row.get(rc) or 0) for row in results)
+        summary_parts.append(f"총 {rc}: {total:,.0f}")
+    for qc in qty_cols:
+        total = sum(float(row.get(qc) or 0) for row in results)
+        summary_parts.append(f"총 {qc}: {total:,.0f}")
+
+    # Sort by first revenue column DESC and take top 20
+    sort_col = rev_cols[0] if rev_cols else (qty_cols[0] if qty_cols else None)
+    if sort_col:
+        sorted_rows = sorted(results, key=lambda r: float(r.get(sort_col) or 0), reverse=True)
+    else:
+        sorted_rows = results
+    top_rows = sorted_rows[:20]
+
+    preview = {
+        "summary": "\n".join(summary_parts),
+        "top_20_by_revenue": top_rows,
+    }
+    return json.dumps(preview, ensure_ascii=False, indent=2, default=str)
 
 
 def _try_generate_chart(llm, query: str, sql: str, result_preview: str, results: list) -> str:

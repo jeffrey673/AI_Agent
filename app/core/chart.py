@@ -166,18 +166,32 @@ def generate_chart(
             try:
                 float(sample_val if sample_val is not None else 0)
             except (ValueError, TypeError):
-                # y_col contains strings — try to find a numeric column instead
+                # y_col contains strings — LLM likely swapped axes
                 logger.warning("chart_y_col_not_numeric", y_col=y_col, sample=str(sample_val)[:50])
-                fixed = _find_numeric_column(data, exclude=[x_col, y_col])
-                if fixed:
-                    # Swap: old y_col might be the label, use it as x_col
-                    logger.info("chart_y_col_auto_fixed", old_y=y_col, new_y=fixed)
-                    if x_col == fixed:
-                        x_col = y_col
-                    y_col = fixed
+
+                # Check if x_col is already numeric (simple axis swap)
+                sample_x = data[0].get(x_col)
+                x_is_numeric = False
+                try:
+                    float(sample_x if sample_x is not None else "")
+                    x_is_numeric = True
+                except (ValueError, TypeError):
+                    pass
+
+                if x_is_numeric:
+                    # Just swap — x_col was numeric, y_col was the label
+                    logger.info("chart_y_col_auto_fixed", old_x=x_col, old_y=y_col, action="swap")
+                    x_col, y_col = y_col, x_col
                 else:
-                    logger.warning("chart_no_numeric_column_found")
-                    return None
+                    # Both non-numeric — look for a 3rd numeric column
+                    fixed = _find_numeric_column(data, exclude=[x_col, y_col])
+                    if fixed:
+                        logger.info("chart_y_col_auto_fixed", old_x=x_col, old_y=y_col, new_y=fixed)
+                        x_col = y_col
+                        y_col = fixed
+                    else:
+                        logger.warning("chart_no_numeric_column_found")
+                        return None
 
         # Pivot grouped data
         if group_col and isinstance(y_col, str):
@@ -192,12 +206,41 @@ def generate_chart(
             logger.info("chart_skipped_too_many_items", chart_type=chart_type, items=len(data))
             return None
 
-        x_values = [str(row.get(x_col, "")) for row in data]
+        x_values_raw = [str(row.get(x_col, "")) for row in data]
+
+        # Truncate long x-axis labels for readability (keep hover full)
+        def _truncate_label(label: str, max_len: int = 25) -> str:
+            return label[:max_len] + "…" if len(label) > max_len else label
+
+        has_long_labels = any(len(x) > 25 for x in x_values_raw)
+        x_values = [_truncate_label(x) for x in x_values_raw] if has_long_labels else x_values_raw
 
         if isinstance(y_col, list):
             y_series = {col: [float(row.get(col, 0) or 0) for row in data] for col in y_col}
         else:
             y_values = [float(row.get(y_col, 0) or 0) for row in data]
+
+        # --- Common flags for sorting and orientation ---
+        _TIME_HINTS = {"월", "년", "분기", "주차", "week", "month", "quarter",
+                       "q1", "q2", "q3", "q4", "jan", "feb", "mar", "apr",
+                       "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec",
+                       "1월", "2월", "3월", "4월", "5월", "6월", "7월",
+                       "8월", "9월", "10월", "11월", "12월"}
+        is_time_series = any(
+            any(h in str(x).lower() for h in _TIME_HINTS) for x in x_values
+        )
+
+        # Auto-switch single-series bar → horizontal_bar for long labels
+        if chart_type == "bar" and has_long_labels and not is_time_series:
+            logger.info("chart_auto_switch_horizontal", reason="long_labels")
+            chart_type = "horizontal_bar"
+
+        # Multi-series: use horizontal orientation for long labels
+        use_horizontal = has_long_labels and not is_time_series
+
+        # Re-truncate with longer limit for horizontal orientation
+        if use_horizontal:
+            x_values = [_truncate_label(x, max_len=40) for x in x_values_raw]
 
         fig = go.Figure()
 
@@ -238,6 +281,12 @@ def generate_chart(
 
         # --- BAR CHART ---
         elif chart_type == "bar":
+            # Sort by value descending for categorical data (skip time-series)
+            if not is_time_series:
+                sorted_pairs = sorted(zip(x_values, y_values), key=lambda p: p[1], reverse=True)
+                x_values, y_values = zip(*sorted_pairs) if sorted_pairs else ([], [])
+                x_values, y_values = list(x_values), list(y_values)
+
             fig.add_trace(go.Bar(
                 x=x_values,
                 y=y_values,
@@ -250,8 +299,8 @@ def generate_chart(
 
         # --- HORIZONTAL BAR ---
         elif chart_type == "horizontal_bar":
-            # Sort by value for better readability
-            sorted_pairs = sorted(zip(x_values, y_values), key=lambda x: x[1], reverse=True)
+            # Sort ascending so biggest bar appears at top in Plotly horizontal layout
+            sorted_pairs = sorted(zip(x_values, y_values), key=lambda p: p[1])
             x_values, y_values = zip(*sorted_pairs) if sorted_pairs else ([], [])
 
             fig.add_trace(go.Bar(
@@ -288,32 +337,82 @@ def generate_chart(
 
         # --- STACKED BAR ---
         elif chart_type == "stacked_bar" and isinstance(y_col, list):
-            for i, col in enumerate(y_col):
-                fig.add_trace(go.Bar(
-                    x=x_values,
-                    y=y_series[col],
-                    name=col,
-                    marker_color=COLORS[i % len(COLORS)],
-                    text=[_format_short(v) if v > 0 else "" for v in y_series[col]],
-                    textposition="inside",
-                    textfont=dict(size=9, color="white"),
-                    hovertemplate=f"<b>{col}</b><br>%{{x}}: %{{y:,.0f}}<extra></extra>",
-                ))
+            # Sort by total descending (skip time-series)
+            if not is_time_series:
+                totals = [sum(y_series[c][i] for c in y_col) for i in range(len(x_values))]
+                idx = sorted(range(len(x_values)), key=lambda i: totals[i], reverse=True)
+                x_values = [x_values[i] for i in idx]
+                for c in y_col:
+                    y_series[c] = [y_series[c][i] for i in idx]
+
+            if use_horizontal:
+                # Horizontal stacked — reverse for biggest-at-top in Plotly
+                x_values_h = list(reversed(x_values))
+                y_series_h = {c: list(reversed(y_series[c])) for c in y_col}
+                for i, col in enumerate(y_col):
+                    fig.add_trace(go.Bar(
+                        x=y_series_h[col],
+                        y=x_values_h,
+                        orientation="h",
+                        name=col,
+                        marker_color=COLORS[i % len(COLORS)],
+                        text=[_format_short(v) if v > 0 else "" for v in y_series_h[col]],
+                        textposition="inside",
+                        textfont=dict(size=9, color="white"),
+                        hovertemplate=f"<b>{col}</b><br>%{{y}}: %{{x:,.0f}}<extra></extra>",
+                    ))
+            else:
+                for i, col in enumerate(y_col):
+                    fig.add_trace(go.Bar(
+                        x=x_values,
+                        y=y_series[col],
+                        name=col,
+                        marker_color=COLORS[i % len(COLORS)],
+                        text=[_format_short(v) if v > 0 else "" for v in y_series[col]],
+                        textposition="inside",
+                        textfont=dict(size=9, color="white"),
+                        hovertemplate=f"<b>{col}</b><br>%{{x}}: %{{y:,.0f}}<extra></extra>",
+                    ))
             fig.update_layout(barmode="stack")
 
         # --- GROUPED BAR ---
         elif chart_type == "grouped_bar" and isinstance(y_col, list):
-            for i, col in enumerate(y_col):
-                fig.add_trace(go.Bar(
-                    x=x_values,
-                    y=y_series[col],
-                    name=col,
-                    marker_color=COLORS[i % len(COLORS)],
-                    text=[_format_short(v) for v in y_series[col]],
-                    textposition="outside",
-                    textfont=dict(size=9, color=TEXT_COLOR),
-                    hovertemplate=f"<b>{col}</b><br>%{{x}}: %{{y:,.0f}}<extra></extra>",
-                ))
+            # Sort by total descending (skip time-series)
+            if not is_time_series:
+                totals = [sum(y_series[c][i] for c in y_col) for i in range(len(x_values))]
+                idx = sorted(range(len(x_values)), key=lambda i: totals[i], reverse=True)
+                x_values = [x_values[i] for i in idx]
+                for c in y_col:
+                    y_series[c] = [y_series[c][i] for i in idx]
+
+            if use_horizontal:
+                # Horizontal grouped — reverse for biggest-at-top in Plotly
+                x_values_h = list(reversed(x_values))
+                y_series_h = {c: list(reversed(y_series[c])) for c in y_col}
+                for i, col in enumerate(y_col):
+                    fig.add_trace(go.Bar(
+                        x=y_series_h[col],
+                        y=x_values_h,
+                        orientation="h",
+                        name=col,
+                        marker_color=COLORS[i % len(COLORS)],
+                        text=[_format_short(v) for v in y_series_h[col]],
+                        textposition="outside",
+                        textfont=dict(size=9, color=TEXT_COLOR),
+                        hovertemplate=f"<b>{col}</b><br>%{{y}}: %{{x:,.0f}}<extra></extra>",
+                    ))
+            else:
+                for i, col in enumerate(y_col):
+                    fig.add_trace(go.Bar(
+                        x=x_values,
+                        y=y_series[col],
+                        name=col,
+                        marker_color=COLORS[i % len(COLORS)],
+                        text=[_format_short(v) for v in y_series[col]],
+                        textposition="outside",
+                        textfont=dict(size=9, color=TEXT_COLOR),
+                        hovertemplate=f"<b>{col}</b><br>%{{x}}: %{{y:,.0f}}<extra></extra>",
+                    ))
             fig.update_layout(barmode="group")
 
         # --- LAYOUT ---
@@ -405,13 +504,22 @@ def generate_chart(
                 tickformat=",",
             )
 
-        # Horizontal bar adjustments
-        if chart_type == "horizontal_bar":
+        # Horizontal bar adjustments (single-series and multi-series)
+        is_horizontal = chart_type == "horizontal_bar" or (
+            use_horizontal and chart_type in ("grouped_bar", "stacked_bar")
+        )
+        if is_horizontal:
             layout["xaxis"]["title"]["text"] = y_label
             layout["yaxis"]["title"]["text"] = x_label
             layout["yaxis"]["tickangle"] = 0
             layout["xaxis"]["tickangle"] = 0
-            layout["margin"]["l"] = 150  # More space for y-axis labels
+            layout["margin"]["l"] = 180  # More space for y-axis labels
+            # Taller image for many horizontal categories
+            n_cats = len(x_values)
+            if n_cats > 8:
+                img_height = max(img_height, 50 * n_cats + 200)
+            elif n_cats > 5:
+                img_height = max(img_height, 650)
 
         fig.update_layout(**layout)
 
@@ -476,11 +584,11 @@ def get_chart_config_prompt(query: str, sql: str, results_preview: str, row_coun
 
 ## 차트 타입 선택
 - **line**: 월별/일별 추이, 시계열. 대륙별/국가별 그룹이 있으면 group_column 지정
-- bar: 카테고리별 비교 (국가별, 플랫폼별 등)
-- horizontal_bar: 항목이 많을 때 (7개 이상) 또는 긴 이름
-- pie: 비율/구성 (전체 대비 비중)
-- grouped_bar: 여러 지표를 카테고리별로 비교
-- stacked_bar: 누적 비교
+- bar: 카테고리별 비교 — **카테고리 5개 이하 + 이름이 짧을 때만** (국가 약어, 플랫폼명 등)
+- **horizontal_bar**: 제품명, 브랜드명, SKU명 등 긴 텍스트 라벨이 있으면 **반드시 사용**. 항목 5개 이상도 horizontal_bar 권장
+- pie: 비율/구성 (전체 대비 비중). 항목 6개 이하
+- grouped_bar: 여러 지표를 카테고리별로 비교 (제품별 판매+매출 등)
+- stacked_bar: 누적 비교 (국가별 플랫폼 구성 등)
 
 ## 반환 JSON 형식
 {{

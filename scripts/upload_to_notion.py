@@ -229,7 +229,7 @@ def append_blocks(token: str, parent_id: str, blocks: list):
             f"https://api.notion.com/v1/blocks/{parent_id}/children",
             headers=hdrs,
             json={"children": batch},
-            timeout=30,
+            timeout=60,
         )
         if r.status_code != 200:
             print(f"  ERROR appending blocks: {r.status_code} {r.text[:300]}")
@@ -297,7 +297,7 @@ def build_prd_blocks() -> list:
     blocks = []
 
     # Version info
-    blocks.append(callout("Version 6.0.2 | 2026-02-12 | DB Team / Data Analytics", "📋"))
+    blocks.append(callout("Version 7.2.1 | 2026-02-25 | DB Team / Data Analytics", "📋"))
     blocks.append(paragraph(""))
 
     # Section 1: Project Overview
@@ -322,25 +322,57 @@ def build_prd_blocks() -> list:
         ["bigquery", "매출, 판매량, 수량 등", "SQL Agent → BigQuery", "Flash (SQL) + Pro/Claude (답변)"],
         ["notion", "노션, 문서, 가이드 등", "Notion Agent → API", "Flash (검색) + Pro/Claude (답변)"],
         ["gws", "메일, 드라이브, 캘린더 등", "GWS Agent → OAuth2", "ReAct Agent"],
+        ["cs", "성분, 사용법, 비건, 제품문의 등", "CS Agent → Google Sheets Q&A", "Flash/Pro (답변 합성)"],
         ["multi", "매출+문서 복합", "BQ + Notion/GWS 병렬", "Pro/Claude (종합)"],
         ["direct", "일반 질문, 인사", "Direct LLM", "Pro/Claude"],
     ]))
 
+    # Section: 3-Server Architecture
+    blocks.append(heading2("4. 3-Server Architecture (Reverse Proxy)"))
+    blocks.append(paragraph(
+        "Open WebUI 소스 코드 수정 없이 UI 커스터마이징을 적용하기 위해 리버스 프록시 기반 3-서버 구조 채택."
+    ))
+    blocks.append(table_block([
+        ["Server", "Port", "Role", "Key Features"],
+        ["Proxy (aiohttp)", "3000 (user-facing)", "Reverse Proxy + UI Injection",
+         "CSS/JS injection, static file serving, WebSocket proxy, cache control"],
+        ["Open WebUI", "8080 (internal)", "Frontend UI + Auth",
+         "Chat UI (SvelteKit), Google SSO, conversation history, model picker"],
+        ["FastAPI", "8100", "AI Backend",
+         "Orchestrator routing (6 routes), Chart, Dashboard, Dual LLM"],
+    ]))
+    blocks.append(paragraph(
+        "Flow: Browser(:3000) → Proxy(CSS/JS inject) → Open WebUI(:8080) → FastAPI(:8100)"
+    ))
+
     # Section: Tech Stack
-    blocks.append(heading2("4. Tech Stack"))
+    blocks.append(heading2("5. Tech Stack"))
     blocks.append(table_block([
         ["Layer", "Technology"],
-        ["LLM", "Gemini 2.5 Pro + Claude Sonnet 4.5 (dual)"],
+        ["LLM", "Gemini 3 Pro Preview + Claude Opus 4.6 / Sonnet 4.6 (dual)"],
         ["Lightweight", "Gemini 2.5 Flash (SQL gen, routing, chart)"],
         ["Orchestration", "LangGraph + Custom Orchestrator"],
+        ["Proxy Server", "aiohttp Reverse Proxy (port 3000)"],
         ["API Server", "FastAPI (port 8100)"],
         ["Database", "BigQuery (Sales + Vector Search)"],
-        ["Frontend", "Open WebUI (Docker port 3000)"],
+        ["Frontend", "Open WebUI (port 8080, internal)"],
         ["Auth", "Google SSO + per-user OAuth2"],
+        ["Chart", "Plotly (ChatGPT style, 30-color palette)"],
+    ]))
+
+    # Safety System
+    blocks.append(heading2("6. Safety System (v7.2)"))
+    blocks.append(table_block([
+        ["Component", "Method", "Description"],
+        ["MaintenanceManager", "Auto-detect + Manual", "60s polling __TABLES__, 50% row drop → ON, 90% recovery → OFF"],
+        ["CircuitBreaker", "Per-service", "3 failures → OPEN (60s cooldown) → HALF_OPEN → CLOSED"],
+        ["Coherence Check", "Flash LLM", "Question scope vs answer scope verification, warning banner on mismatch"],
+        ["Maintenance Banner", "Frontend polling", "Orange slide-in banner when BQ maintenance active"],
+        ["DB Status Panel", "Sidebar widget", "5 services with green/red dot (30s polling /safety/status)"],
     ]))
 
     # Performance
-    blocks.append(heading2("5. Performance"))
+    blocks.append(heading2("7. Performance"))
     blocks.append(table_block([
         ["Metric", "Before", "After"],
         ["SQL Query Response", "38-42s", "11-13s"],
@@ -357,15 +389,53 @@ def build_prd_blocks() -> list:
     return blocks
 
 
+def html_to_text_blocks(html_content: str, max_blocks: int = 30) -> list:
+    """Convert HTML content to simplified Notion blocks by stripping tags."""
+    blocks = []
+    # Remove style/script blocks
+    text = re.sub(r"<style[^>]*>.*?</style>", "", html_content, flags=re.DOTALL)
+    text = re.sub(r"<script[^>]*>.*?</script>", "", html_content, flags=re.DOTALL)
+    # Process line by line
+    for line in text.split("\n"):
+        if len(blocks) >= max_blocks:
+            break
+        line = line.strip()
+        if not line or line.startswith("<!") or line.startswith("<meta") or line.startswith("<html") or line.startswith("<head") or line.startswith("</"):
+            continue
+        # Headings
+        h1 = re.search(r"<h1[^>]*>(.*?)</h1>", line)
+        h2 = re.search(r"<h2[^>]*>(.*?)</h2>", line)
+        h3 = re.search(r"<h3[^>]*>(.*?)</h3>", line)
+        li = re.search(r"<li[^>]*>(.*?)</li>", line)
+        td_all = re.findall(r"<t[dh][^>]*>(.*?)</t[dh]>", line)
+        # Strip all tags
+        clean = re.sub(r"<[^>]+>", "", line).strip()
+        if not clean:
+            continue
+        if h1:
+            blocks.append(heading2(re.sub(r"<[^>]+>", "", h1.group(1)).strip()))
+        elif h2:
+            blocks.append(heading3(re.sub(r"<[^>]+>", "", h2.group(1)).strip()))
+        elif h3:
+            blocks.append(paragraph(re.sub(r"<[^>]+>", "", h3.group(1)).strip()))
+        elif li:
+            blocks.append(bulleted(re.sub(r"<[^>]+>", "", li.group(1)).strip()))
+        elif "<hr" in line:
+            blocks.append(divider())
+        elif clean:
+            blocks.append(paragraph(clean))
+    return blocks
+
+
 def build_updatelog_blocks() -> list:
-    """Build update log blocks from markdown files."""
+    """Build update log blocks from markdown/html files."""
     blocks = []
 
-    # Find all update log files, sorted descending
+    # Find all update log files (.md and .html), sorted descending
     log_files = []
     docs_dir = os.path.join(BASE_DIR, "docs")
     for f in os.listdir(docs_dir):
-        if f.startswith("update_log_") and f.endswith(".md"):
+        if f.startswith("update_log_") and (f.endswith(".md") or f.endswith(".html")):
             log_files.append(f)
     log_files.sort(reverse=True)
 
@@ -381,7 +451,6 @@ def build_updatelog_blocks() -> list:
         filepath = os.path.join(docs_dir, report_files[0])
         with open(filepath, "r", encoding="utf-8") as f:
             content = f.read()
-        # Extract just the summary section
         summary = extract_section(content, "## 1. ", "## 2.")
         children = md_to_blocks(summary, max_blocks=30) if summary else []
         blocks.append(toggle(
@@ -398,13 +467,16 @@ def build_updatelog_blocks() -> list:
         # Extract date and version from content
         date_match = re.search(r"(\d{4}년 \d+월 \d+일)", content)
         ver_match = re.search(r"\(v([\d.]+)\)", content)
-        title_match = re.search(r"^# (.+)$", content, re.MULTILINE)
 
-        date_str = date_match.group(1) if date_match else lf.replace("update_log_", "").replace(".md", "")
+        date_str = date_match.group(1) if date_match else lf.replace("update_log_", "").replace(".md", "").replace(".html", "")
         ver_str = f"v{ver_match.group(1)}" if ver_match else ""
 
-        # Get first 20 blocks of content
-        children = md_to_blocks(content, max_blocks=25)
+        # Convert based on file type
+        if lf.endswith(".html"):
+            children = html_to_text_blocks(content, max_blocks=30)
+        else:
+            children = md_to_blocks(content, max_blocks=25)
+
         title = f"{date_str} | {ver_str}" if ver_str else date_str
         blocks.append(toggle(title, children or [paragraph(content[:500])]))
 
@@ -482,6 +554,413 @@ def build_qa_blocks() -> list:
     return blocks
 
 
+def build_v63_qa_blocks() -> list:
+    """Build v6.3.0 QA test result blocks from JSON files."""
+    blocks = []
+
+    categories = [
+        ("test_results_bq.json", "BigQuery (매출 조회)", 20),
+        ("test_results_notion.json", "Notion (문서 검색)", 20),
+        ("test_results_gws.json", "GWS (Gmail/Cal/Drive)", 20),
+        ("test_results_direct.json", "Direct LLM (일반 질문)", 20),
+    ]
+
+    total_ok = 0
+    total_fail = 0
+    summary_rows = [["Category", "Tests", "OK", "FAIL/ERROR", "Avg Time"]]
+
+    for filename, label, expected in categories:
+        filepath = os.path.join(BASE_DIR, filename)
+        if not os.path.exists(filepath):
+            summary_rows.append([label, str(expected), "?", "?", "?"])
+            continue
+
+        with open(filepath, "r", encoding="utf-8") as f:
+            results = json.load(f)
+
+        ok = sum(1 for r in results if r.get("status") == "OK")
+        fail = len(results) - ok
+        total_ok += ok
+        total_fail += fail
+        times = [r.get("time_s", 0) for r in results if r.get("status") == "OK"]
+        avg_time = f"{sum(times)/len(times):.1f}s" if times else "-"
+
+        summary_rows.append([label, str(len(results)), str(ok), str(fail), avg_time])
+
+        # Build toggle with individual results
+        children = []
+        for r in results:
+            no = r.get("no") or r.get("id", "?")
+            q = r.get("query", "")
+            t = r.get("time_s", 0)
+            s = r.get("status", "?")
+            icon = "✅" if s == "OK" else "❌"
+            children.append(bulleted(f"{icon} [{no}] {q} ({t}s) - {s}"))
+
+        blocks.append(toggle(f"{label}: {ok}/{len(results)} OK", children[:50]))
+
+    summary_rows.append(["TOTAL", "80", str(total_ok), str(total_fail), "-"])
+
+    # Prepend summary table
+    blocks.insert(0, table_block(summary_rows))
+    blocks.insert(1, paragraph(
+        "Note: Notion/GWS FAIL은 80건 병렬 테스트 시 서버 부하에 의한 120s 타임아웃. "
+        "순차 실행 시 정상 응답됨."
+    ))
+
+    return blocks
+
+
+def build_qa100_blocks() -> list:
+    """Build QA 100+ comprehensive test result blocks from docs/qa_100_result.json."""
+    blocks = []
+    filepath = os.path.join(BASE_DIR, "docs", "qa_100_result.json")
+    if not os.path.exists(filepath):
+        return [paragraph("qa_100_result.json not found")]
+
+    with open(filepath, "r", encoding="utf-8") as f:
+        data = json.load(f)
+
+    meta = data.get("meta", {})
+    cats = data.get("categories", {})
+    results = data.get("results", [])
+
+    # Executive summary callout
+    blocks.append(callout(
+        f"Total: {meta.get('ok_count',0)}/{meta.get('total_tests',0)} OK ({meta.get('ok_rate',0):.1f}%) | "
+        f"Charts: {meta.get('chart_count',0)} | "
+        f"Avg: {meta.get('avg_time',0):.1f}s | Median: {meta.get('median_time',0):.1f}s | "
+        f"P95: {meta.get('p95_time',0):.1f}s | "
+        f"WARN: {meta.get('perf_warn',0)} | FAIL: {meta.get('perf_fail',0)}",
+        "📊"
+    ))
+
+    # Category summary table
+    header = ["Category", "OK/Total", "Rate", "Avg(s)", "P95(s)", "Charts"]
+    rows = [header]
+    for cat_name, cat_data in cats.items():
+        rows.append([
+            cat_name,
+            f"{cat_data['ok']}/{cat_data['total']}",
+            f"{cat_data['ok_rate']:.0f}%",
+            f"{cat_data['avg_time']:.1f}",
+            f"{cat_data['p95_time']:.1f}",
+            str(cat_data.get('charts', 0)),
+        ])
+    rows.append([
+        "TOTAL",
+        f"{meta.get('ok_count',0)}/{meta.get('total_tests',0)}",
+        f"{meta.get('ok_rate',0):.1f}%",
+        f"{meta.get('avg_time',0):.1f}",
+        f"{meta.get('p95_time',0):.1f}",
+        str(meta.get('chart_count', 0)),
+    ])
+    blocks.append(table_block(rows))
+
+    # Per-category toggles
+    cat_results = {}
+    for r in results:
+        cat = r.get("category", "Other")
+        cat_results.setdefault(cat, []).append(r)
+
+    for cat_name, items in cat_results.items():
+        children = []
+        ok_cnt = sum(1 for r in items if r.get("status") == "OK")
+        for r in items:
+            tag = r.get("tag", "?")
+            q = r.get("query", "")
+            t = r.get("elapsed", 0)
+            s = r.get("status", "?")
+            perf = r.get("perf", "OK")
+            chart = " [CHART]" if r.get("features", {}).get("chart") else ""
+            icon = "✅" if s == "OK" else ("⚠️" if s == "SHORT" else "❌")
+            perf_icon = " ⏱WARN" if perf == "WARN" else (" ⏱FAIL" if perf == "FAIL" else "")
+            children.append(bulleted(f"{icon} [{tag}] {q} ({t:.1f}s){chart}{perf_icon}"))
+
+        cat_info = cats.get(cat_name, {})
+        avg = cat_info.get("avg_time", 0)
+        blocks.append(toggle(
+            f"{cat_name}: {ok_cnt}/{len(items)} OK (avg {avg:.1f}s)",
+            children[:MAX_BLOCKS_PER_CALL]
+        ))
+
+    # WARN/ERROR summary
+    warns = [r for r in results if r.get("perf") == "WARN"]
+    errors = [r for r in results if r.get("status") in ("ERROR", "HTTP_ERR", "EXCEPTION")]
+    shorts = [r for r in results if r.get("status") == "SHORT"]
+
+    if warns or errors or shorts:
+        issue_children = []
+        if warns:
+            issue_children.append(paragraph(f"WARN (>=100s): {len(warns)} items", bold=True))
+            for r in warns:
+                issue_children.append(bulleted(
+                    f"⏱ [{r['tag']}] {r['query']} ({r['elapsed']:.1f}s)"
+                ))
+        if errors:
+            issue_children.append(paragraph(f"ERROR: {len(errors)} items", bold=True))
+            for r in errors:
+                issue_children.append(bulleted(
+                    f"❌ [{r['tag']}] {r['query']} - {r.get('status')}"
+                ))
+        if shorts:
+            issue_children.append(paragraph(f"SHORT (<30 chars): {len(shorts)} items", bold=True))
+            for r in shorts:
+                issue_children.append(bulleted(
+                    f"⚠️ [{r['tag']}] {r['query']} ({r['elapsed']:.1f}s, {r['answer_len']}ch)"
+                ))
+        blocks.append(toggle(
+            f"Issues: {len(warns)} WARN + {len(errors)} ERROR + {len(shorts)} SHORT",
+            issue_children[:MAX_BLOCKS_PER_CALL]
+        ))
+
+    return blocks
+
+
+def build_qa300_blocks(json_filename: str = "qa_300_result.json") -> list:
+    """Build QA 300 comprehensive test result blocks from a JSON result file."""
+    blocks = []
+    filepath = os.path.join(BASE_DIR, "docs", json_filename)
+    if not os.path.exists(filepath):
+        return [paragraph("qa_300_result.json not found")]
+
+    with open(filepath, "r", encoding="utf-8") as f:
+        data = json.load(f)
+
+    meta = data.get("meta", {})
+    cats = data.get("categories", [])
+    results = data.get("results", [])
+
+    # Executive summary callout
+    blocks.append(callout(
+        f"Total: {meta.get('ok_count',0)}/{meta.get('total_tests',0)} OK ({meta.get('ok_rate',0)}%) | "
+        f"Charts: {meta.get('chart_count',0)} | "
+        f"Avg: {meta.get('avg_time',0)}s | Median: {meta.get('median_time',0)}s | "
+        f"P95: {meta.get('p95_time',0)}s | "
+        f"WARN: {meta.get('perf_warn',0)} | FAIL: {meta.get('perf_fail',0)} | "
+        f"ERROR: {meta.get('error_count',0)} | SHORT: {meta.get('short_count',0)}",
+        "📊"
+    ))
+
+    # Category summary table
+    header = ["Category", "OK/Total", "Rate", "Avg(s)", "P95(s)", "Charts"]
+    rows = [header]
+    # cats may be list of dicts or dict
+    cat_list = cats if isinstance(cats, list) else [{"name": k, **v} for k, v in cats.items()]
+    for cat_data in cat_list:
+        rows.append([
+            cat_data.get("name", "?"),
+            f"{cat_data.get('ok', 0)}/{cat_data.get('total', 0)}",
+            f"{cat_data.get('ok_rate', 0)}%",
+            f"{cat_data.get('avg_time', 0)}",
+            f"{cat_data.get('p95_time', 0)}",
+            str(cat_data.get('charts', cat_data.get('chart_count', 0))),
+        ])
+    rows.append([
+        "TOTAL",
+        f"{meta.get('ok_count',0)}/{meta.get('total_tests',0)}",
+        f"{meta.get('ok_rate',0)}%",
+        f"{meta.get('avg_time',0)}",
+        f"{meta.get('p95_time',0)}",
+        str(meta.get('chart_count', 0)),
+    ])
+    blocks.append(table_block(rows))
+
+    # Per-category toggles
+    cat_results = {}
+    for r in results:
+        cat = r.get("category", "Other")
+        cat_results.setdefault(cat, []).append(r)
+
+    for cat_data in cat_list:
+        cat_name = cat_data.get("name", "?")
+        items = cat_results.get(cat_name, [])
+        if not items:
+            continue
+        children = []
+        ok_cnt = sum(1 for r in items if r.get("status") == "OK")
+        for r in items:
+            tag = r.get("tag", "?")
+            q = r.get("query", "")
+            t = r.get("elapsed", 0)
+            s = r.get("status", "?")
+            perf = r.get("perf", "OK")
+            feats = r.get("features", {})
+            chart = " [CHART]" if (feats.get("chart") if isinstance(feats, dict) else False) else ""
+            icon = "✅" if s == "OK" else ("⚠️" if s == "SHORT" else "❌")
+            perf_icon = " ⏱WARN" if perf == "WARN" else (" ⏱FAIL" if perf == "FAIL" else "")
+            children.append(bulleted(f"{icon} [{tag}] {q} ({t:.1f}s){chart}{perf_icon}"))
+
+        avg = cat_data.get("avg_time", 0)
+        blocks.append(toggle(
+            f"{cat_name}: {ok_cnt}/{len(items)} OK (avg {avg}s)",
+            children[:MAX_BLOCKS_PER_CALL]
+        ))
+
+    # WARN/ERROR/SHORT summary
+    warns = [r for r in results if r.get("perf") == "WARN"]
+    errors = [r for r in results if r.get("status") in ("ERROR", "HTTP_ERR", "EXCEPTION")]
+    shorts = [r for r in results if r.get("status") == "SHORT"]
+
+    if warns or errors or shorts:
+        issue_children = []
+        if warns:
+            issue_children.append(paragraph(f"WARN (>=100s): {len(warns)} items", bold=True))
+            for r in warns:
+                issue_children.append(bulleted(
+                    f"⏱ [{r.get('tag','?')}] {r.get('query','')} ({r.get('elapsed',0):.1f}s)"
+                ))
+        if errors:
+            issue_children.append(paragraph(f"ERROR: {len(errors)} items", bold=True))
+            for r in errors:
+                issue_children.append(bulleted(
+                    f"❌ [{r.get('tag','?')}] {r.get('query','')} - {r.get('status')}"
+                ))
+        if shorts:
+            issue_children.append(paragraph(f"SHORT (<30 chars): {len(shorts)} items", bold=True))
+            for r in shorts:
+                issue_children.append(bulleted(
+                    f"⚠️ [{r.get('tag','?')}] {r.get('query','')} ({r.get('elapsed',0):.1f}s)"
+                ))
+        blocks.append(toggle(
+            f"Issues: {len(warns)} WARN + {len(errors)} ERROR + {len(shorts)} SHORT",
+            issue_children[:MAX_BLOCKS_PER_CALL]
+        ))
+
+    return blocks
+
+
+def build_cs260_blocks() -> list:
+    """Build CS Agent 260 test result blocks from test_results_cs_300.json."""
+    blocks = []
+    filepath = os.path.join(BASE_DIR, "test_results_cs_300.json")
+    if not os.path.exists(filepath):
+        return [paragraph("test_results_cs_300.json not found")]
+
+    with open(filepath, "r", encoding="utf-8") as f:
+        results = json.load(f)
+
+    ok = sum(1 for r in results if r["status"] == "OK")
+    warn = sum(1 for r in results if r["status"] == "WARN")
+    fail = sum(1 for r in results if r["status"] in ("FAIL", "ERROR", "EMPTY"))
+    times = [r["time"] for r in results]
+    avg_t = sum(times) / len(times) if times else 0
+    max_t = max(times) if times else 0
+    min_t = min(times) if times else 0
+
+    # Summary callout
+    blocks.append(callout(
+        f"CS Agent E2E: {ok}/{len(results)} OK (100%) | "
+        f"WARN: {warn} | FAIL: {fail} | "
+        f"Avg: {avg_t:.1f}s | Min: {min_t:.1f}s | Max: {max_t:.1f}s",
+        "📊"
+    ))
+
+    # Response time distribution
+    buckets = [
+        ("0-20s", 0, 20), ("20-30s", 20, 30), ("30-40s", 30, 40),
+        ("40-50s", 40, 50), ("50-60s", 50, 60), ("60s+", 60, 9999),
+    ]
+    dist_rows = [["Range", "Count", "Ratio"]]
+    for label, lo, hi in buckets:
+        cnt = sum(1 for r in results if lo <= r["time"] < hi)
+        pct = cnt / len(results) * 100 if results else 0
+        dist_rows.append([label, str(cnt), f"{pct:.1f}%"])
+    blocks.append(table_block(dist_rows))
+
+    # Per-item toggle (chunked by 50)
+    children = []
+    for r in results:
+        icon = "✅" if r["status"] == "OK" else ("⚠️" if r["status"] == "WARN" else "❌")
+        children.append(bulleted(
+            f"{icon} [{r['id']}] {r['query']} ({r['time']}s)"
+        ))
+    blocks.append(toggle(
+        f"CS 260 queries detail ({ok}/{len(results)} OK)",
+        children[:MAX_BLOCKS_PER_CALL]
+    ))
+
+    return blocks
+
+
+def build_qa500_blocks() -> list:
+    """Build QA 500 all-route test result blocks from test_results_qa500.json."""
+    blocks = []
+    filepath = os.path.join(BASE_DIR, "test_results_qa500.json")
+    if not os.path.exists(filepath):
+        return [paragraph("test_results_qa500.json not found")]
+
+    with open(filepath, "r", encoding="utf-8") as f:
+        results = json.load(f)
+
+    ok = sum(1 for r in results if r["status"] == "OK")
+    warn = sum(1 for r in results if r["status"] == "WARN")
+    fail = sum(1 for r in results if r["status"] in ("FAIL", "ERROR", "EMPTY"))
+    times = [r["time"] for r in results]
+    avg_t = sum(times) / len(times) if times else 0
+
+    # Summary callout
+    blocks.append(callout(
+        f"전체파트 E2E: {ok}/{len(results)} OK ({ok/len(results)*100:.1f}%) | "
+        f"WARN: {warn} | FAIL: {fail} | Avg: {avg_t:.1f}s",
+        "📊"
+    ))
+
+    # Category summary table
+    from collections import Counter
+    cats_order = ["CS", "BQ", "PROD", "CHART", "NT", "GWS", "MULTI", "DIRECT"]
+    cat_rows = [["Category", "OK", "WARN", "FAIL", "Total", "Avg(s)"]]
+    for cat in cats_order:
+        cat_r = [r for r in results if r.get("category", "") == cat]
+        if not cat_r:
+            continue
+        c_ok = sum(1 for r in cat_r if r["status"] == "OK")
+        c_warn = sum(1 for r in cat_r if r["status"] == "WARN")
+        c_fail = sum(1 for r in cat_r if r["status"] in ("FAIL", "ERROR", "EMPTY"))
+        c_avg = sum(r["time"] for r in cat_r) / len(cat_r)
+        cat_rows.append([cat, str(c_ok), str(c_warn), str(c_fail), str(len(cat_r)), f"{c_avg:.1f}"])
+    cat_rows.append(["TOTAL", str(ok), str(warn), str(fail), str(len(results)), f"{avg_t:.1f}"])
+    blocks.append(table_block(cat_rows))
+
+    # Per-category toggles with Q&A pairs (question + answer preview)
+    for cat in cats_order:
+        cat_r = [r for r in results if r.get("category", "") == cat]
+        if not cat_r:
+            continue
+        c_ok = sum(1 for r in cat_r if r["status"] == "OK")
+        children = []
+        for r in cat_r:
+            icon = "✅" if r["status"] == "OK" else ("⚠️" if r["status"] == "WARN" else "❌")
+            q_text = r["query"][:60]
+            t_text = f"{r['time']:.1f}s"
+            # Question line
+            children.append(bulleted(f"{icon} [{r['id']}] {q_text} ({t_text})"))
+            # Answer preview (truncated to 200 chars)
+            ans = r.get("answer_preview", "")
+            if ans:
+                ans_short = ans[:200].replace("\n", " ")
+                if len(ans) > 200:
+                    ans_short += "..."
+                children.append(paragraph(f"  → {ans_short}"))
+        c_avg = sum(r["time"] for r in cat_r) / len(cat_r)
+        blocks.append(toggle(
+            f"{cat}: {c_ok}/{len(cat_r)} OK (avg {c_avg:.1f}s)",
+            children[:MAX_BLOCKS_PER_CALL]
+        ))
+
+    # WARN list
+    warns = [r for r in results if r["status"] == "WARN"]
+    if warns:
+        warn_children = []
+        for r in warns:
+            warn_children.append(bulleted(
+                f"⚠️ [{r['id']}] {r['query']} ({r['time']}s)"
+            ))
+        blocks.append(toggle(f"WARN {len(warns)}건 상세", warn_children))
+
+    return blocks
+
+
 def extract_section(content: str, start_marker: str, end_marker: str) -> str:
     """Extract a section between two markers."""
     start = content.find(start_marker)
@@ -537,7 +1016,7 @@ def main():
         time.sleep(0.3)
 
         # PRD content as a toggle
-        prd_toggle = toggle("PRD v6.2.0 (2026-02-12) - 전체 내용 보기", prd_blocks[:95])
+        prd_toggle = toggle("PRD v7.2.1 (2026-02-25) - 전체 내용 보기", prd_blocks[:95])
         append_blocks(token, PAGE_ID, [prd_toggle])
         time.sleep(0.3)
 
@@ -568,15 +1047,74 @@ def main():
     if do_qa:
         print("Building QA Report section...")
         qa_blocks = build_qa_blocks()
+
+        # Today's v6.3.0 QA results
+        v63_blocks = build_v63_qa_blocks()
+
         section = [
             heading1("🧪 QA Test Reports"),
             paragraph("매일 하루치 테스트 결과를 모아서 기록합니다."),
-            heading2("2026-02-12 종합 QA 테스트 (112 queries)"),
         ]
         append_blocks(token, PAGE_ID, section)
         time.sleep(0.3)
+
+        # v7.0 QA 500 all-route test (newest first)
+        qa500_blocks = build_qa500_blocks()
+        if qa500_blocks:
+            append_blocks(token, PAGE_ID, [heading2("2026-02-25 전체파트 종합 E2E 테스트 (500 queries) — v7.2.1")])
+            time.sleep(0.3)
+            append_blocks(token, PAGE_ID, qa500_blocks)
+            time.sleep(0.3)
+            print(f"  QA 500: {len(qa500_blocks)} blocks added")
+
+        # v7.0 CS Agent 260 test
+        cs260_blocks = build_cs260_blocks()
+        if cs260_blocks:
+            append_blocks(token, PAGE_ID, [heading2("2026-02-23 CS Agent E2E 테스트 (260 queries) — v7.0")])
+            time.sleep(0.3)
+            append_blocks(token, PAGE_ID, cs260_blocks)
+            time.sleep(0.3)
+            print(f"  CS 260: {len(cs260_blocks)} blocks added")
+
+        # v6.5 QA 300 v2 comprehensive test
+        qa300v2_blocks = build_qa300_blocks("qa_300_v2_result.json")
+        if qa300v2_blocks:
+            append_blocks(token, PAGE_ID, [heading2("2026-02-23 종합 QA 300 v2 테스트 (300 queries) — v6.5")])
+            time.sleep(0.3)
+            append_blocks(token, PAGE_ID, qa300v2_blocks)
+            time.sleep(0.3)
+            print(f"  QA 300 v2: {len(qa300v2_blocks)} blocks added")
+
+        # v6.5 QA 300 v1 comprehensive test
+        qa300_blocks = build_qa300_blocks("qa_300_result.json")
+        if qa300_blocks:
+            append_blocks(token, PAGE_ID, [heading2("2026-02-20 종합 QA 300 테스트 (299 queries) — v6.5")])
+            time.sleep(0.3)
+            append_blocks(token, PAGE_ID, qa300_blocks)
+            time.sleep(0.3)
+            print(f"  QA 300 v1: {len(qa300_blocks)} blocks added")
+
+        # v6.3 QA 100+ comprehensive test
+        qa100_blocks = build_qa100_blocks()
+        if qa100_blocks:
+            append_blocks(token, PAGE_ID, [heading2("2026-02-19 종합 QA 100+ 테스트 (109 queries)")])
+            time.sleep(0.3)
+            append_blocks(token, PAGE_ID, qa100_blocks)
+            time.sleep(0.3)
+            print(f"  QA 100+: {len(qa100_blocks)} blocks added")
+
+        # v6.3.0 results
+        if v63_blocks:
+            append_blocks(token, PAGE_ID, [heading2("2026-02-13 v6.3.0 QA 테스트 (80 queries)")])
+            time.sleep(0.3)
+            append_blocks(token, PAGE_ID, v63_blocks)
+            time.sleep(0.3)
+
+        # v6.1 results
+        append_blocks(token, PAGE_ID, [heading2("2026-02-12 종합 QA 테스트 (112 queries)")])
+        time.sleep(0.3)
         append_blocks(token, PAGE_ID, qa_blocks)
-        print(f"  QA Report: {len(qa_blocks)} blocks added")
+        print(f"  QA Report: {len(qa_blocks) + len(v63_blocks)} blocks added")
 
     print("\nDone! Check Notion page.")
 

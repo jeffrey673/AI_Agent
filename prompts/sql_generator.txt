@@ -79,7 +79,22 @@
 - Continent2 (STRING): 대륙 상세 — '동남아시아', '동아시아', '서유럽', '북유럽', '북미', '남아메리카', '동남유럽', '중동', '오세아니아' 등
 
 #### 조직/관리
-- Team_NEW (STRING): **팀** — 'B2B1', 'B2B2', 'BCM', 'CBT', 'DD_DT1', 'DD_DT2', 'GM_EAST1', 'GM_EAST2', 'GM_Ecomm', 'GM_MKT', 'JBT', 'KBT'
+- Team_NEW (STRING): **팀** — 실제 값 목록 (⚠️ 이 외의 팀명은 존재하지 않음!):
+  - 'GM_EAST1' (글로벌마케팅 동남아1팀 — 인도네시아/필리핀/싱가포르 등)
+  - 'GM_EAST2' (글로벌마케팅 동남아2팀 — 말레이시아/베트남/태국 등)
+  - 'GM_Ecomm' (글로벌마케팅 이커머스팀 — 미국 아마존/틱톡 등 글로벌 이커머스)
+  - 'GM_MKT' (글로벌마케팅팀)
+  - 'CBT' (중국사업팀 — 티몰/징동/샤오홍슈 등)
+  - 'JBT' (일본사업팀 — 일본 아마존/라쿠텐/큐텐)
+  - 'KBT' (한국사업팀)
+  - 'BCM' (브랜드커머스팀 — 국내 온라인)
+  - 'B2B1' (B2B 1팀 — 해외 도매)
+  - 'B2B2' (B2B 2팀 — 해외 도매)
+  - 'DD_DT1' (DD/UM 브랜드 팀1)
+  - 'DD_DT2' (DD/UM 브랜드 팀2)
+  - 'OP' (운영)
+  - '기타'
+  - ⚠️ 'GM_WEST'는 존재하지 않음! 사용자가 "GM WEST" 또는 "서쪽팀"을 말하면 해당 팀이 없다고 안내
 - Manager_NEW (STRING): 담당자
 - ID (STRING): 아이디
 
@@ -114,6 +129,12 @@
    - ❌ 잘못된 SQL: `SELECT SUM(Sales1_R) FROM ... WHERE SET LIKE '%Ampoule%'` (총합만, 제품 미표시)
    - ✅ 올바른 SQL: `SELECT \`SET\` AS product_name, SUM(Sales1_R) FROM ... WHERE ... AND \`SET\` NOT LIKE '% + %' GROUP BY \`SET\``
 15. ⚠️ **1900년대 데이터 제외** — 모든 쿼리에 `Date >= '2000-01-01'` 조건을 반드시 추가하세요. 1900년대 데이터는 목표/플래너 데이터이므로 실제 매출 분석에서 제외해야 합니다.
+15-1. ⚠️ **기간 미지정 시 전체 기간 조회 (매우 중요!)**:
+   - 사용자가 특정 연도/기간을 언급하지 않으면 (예: "베트남 vs 태국 매출 비교", "센텔라 앰플 매출"), **연도 필터를 추가하지 마세요!**
+   - `Date >= '2000-01-01'` 조건만 유지하고 전체 기간 데이터를 조회하세요.
+   - ❌ 잘못: 기간 언급 없는데 `EXTRACT(YEAR FROM Date) = 2026` 임의 추가
+   - ✅ 올바름: `WHERE Date >= '2000-01-01'` 만 사용 (전체 기간)
+   - "올해", "2025년", "지난달" 등 **명시적 기간 표현이 있을 때만** 날짜 필터 추가
 16. ⚠️ **시각화/차트/그래프 요청 시 반드시 GROUP BY로 집계**:
    - 사용자가 "시각화", "차트", "그래프", "추이", "비교", "보여줘" 등을 요청하면, 반드시 SUM/COUNT 등의 집계 함수와 GROUP BY를 사용해서 요약된 결과를 반환하세요.
    - 결과가 차트로 표현 가능하도록 행 수를 적절히 제한하세요 (보통 5~30행).
@@ -121,6 +142,21 @@
    - 국가별 비교: `Country` + `GROUP BY Country ORDER BY total_revenue DESC`
    - 절대 집계 없이 raw 행 데이터를 반환하지 마세요!
    - ⚠️ Date 필터 시 반드시 `Date >= '2000-01-01'` 포함!
+17. ⚠️ **광범위 쿼리 처리 (매우 중요!)**:
+   - 사용자가 3개 이상 차원(국가 + 업체 + 제품 + 월 등)을 동시에 요청하면, 결과가 수만 행이 될 수 있습니다.
+   - 이런 경우 **반드시 ORDER BY total_revenue DESC** (또는 해당 집계 컬럼 DESC)로 매출 높은 순서대로 정렬하세요.
+   - LIMIT은 1000을 유지하되, 가장 중요한 데이터가 먼저 나오도록 ORDER BY DESC 필수!
+   - 예시: "국가별 제품 업체 월별 매출" →
+     SELECT Country, Company_Name, `SET` AS product_name,
+            FORMAT_DATETIME('%Y-%m', Date) AS month,
+            SUM(Sales1_R) AS total_revenue, SUM(Total_Qty) AS total_quantity
+     FROM ...
+     WHERE Date >= '2024-01-01' AND Date < '2026-02-01'
+     GROUP BY Country, Company_Name, `SET`, month
+     ORDER BY total_revenue DESC
+     LIMIT 1000
+   - ❌ 잘못: ORDER BY Country, month (알파벳순 → "가나"만 반환)
+   - ✅ 올바름: ORDER BY total_revenue DESC (매출 높은 순 → 핵심 데이터 우선)
 
 ## 한국어-플랫폼 매핑
 

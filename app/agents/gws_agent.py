@@ -59,24 +59,40 @@ class GWSAgent:
         # No user_email → can't authenticate
         if not user_email:
             return (
-                "Google Workspace 기능을 사용하려면 사용자 이메일이 필요합니다.\n"
-                "Open WebUI 설정에서 이메일이 올바르게 설정되어 있는지 확인해주세요."
+                "Google Workspace 기능을 사용하려면 로그인이 필요합니다.\n"
+                "로그아웃 후 다시 로그인해주세요."
             )
 
         auth_manager = _get_auth_manager()
         creds = auth_manager.get_credentials(user_email)
 
-        # No valid token → guide user to re-login
+        # No valid token → guide user to connect Google account
         if creds is None:
+            auth_url = auth_manager.get_auth_url(user_email)
             return (
-                "Google Workspace에 접근하려면 Google 계정 재로그인이 필요합니다.\n\n"
-                "Open WebUI에서 **로그아웃 후 다시 Google 로그인**해주세요.\n"
-                "새로운 로그인 시 Gmail, Calendar, Drive 접근 권한이 함께 부여됩니다.\n\n"
-                "로그인 후 같은 질문을 다시 해주세요."
+                "Google Workspace에 접근하려면 Google 계정 연결이 필요합니다.\n\n"
+                "**사이드바 하단의 Google 계정 연결 버튼**을 클릭하거나, "
+                f"[여기를 클릭]({auth_url})하여 Google 계정을 연결해주세요.\n\n"
+                "연결 후 같은 질문을 다시 해주세요."
             )
 
         # Build tools with user's credentials bound via closure
-        tools = self._build_tools(creds)
+        all_tools = self._build_tools(creds)
+
+        # Pre-classify query to restrict tools and reduce ReAct iterations
+        tool_type = self._classify_tool(query)
+        if tool_type == "calendar":
+            tools = [t for t in all_tools if t.name == "calendar_search"]
+        elif tool_type == "gmail":
+            tools = [t for t in all_tools if t.name == "gmail_search"]
+        elif tool_type == "drive":
+            tools = [t for t in all_tools if t.name == "drive_search"]
+        else:
+            tools = all_tools
+
+        tool_hint = ""
+        if tool_type != "all":
+            tool_hint = f"\n7. 이 질문은 {tool_type} 관련입니다. {tools[0].name} 도구만 사용하세요. 다른 도구는 호출하지 마세요."
 
         try:
             agent = create_react_agent(self.llm, tools)
@@ -96,7 +112,8 @@ class GWSAgent:
                 "3. 검색 결과가 없으면 '검색 결과가 없습니다'라고 간결하게 답변하세요.\n"
                 "4. 날짜/시간은 한국어 형식으로 (예: 2026년 2월 12일 오후 3시)\n"
                 "5. 핵심 항목은 **굵게** 강조하세요.\n"
-                "6. 도구 호출은 최소화하세요. 한 번의 검색으로 결과를 얻을 수 있으면 반복하지 마세요."
+                "6. 도구는 **1번만** 호출하세요. 결과가 없어도 다른 도구로 재시도하지 마세요. 바로 '검색 결과가 없습니다'로 답하세요."
+                + tool_hint
             )
             result = await asyncio.wait_for(
                 agent.ainvoke(
@@ -106,7 +123,7 @@ class GWSAgent:
                             {"role": "user", "content": query},
                         ]
                     },
-                    config={"recursion_limit": 10},
+                    config={"recursion_limit": 6},
                 ),
                 timeout=120.0,
             )
@@ -130,6 +147,35 @@ class GWSAgent:
         except Exception as e:
             logger.error("gws_agent_failed", error=str(e), user_email=user_email)
             return f"Google Workspace 검색 중 오류 발생: {str(e)}"
+
+    @staticmethod
+    def _classify_tool(query: str) -> str:
+        """Pre-classify query to select the appropriate GWS tool.
+
+        Returns: "calendar", "gmail", "drive", or "all".
+        """
+        q = query.lower()
+        cal_kw = ["캘린더", "calendar", "일정", "schedule", "내일", "오늘",
+                   "이번주", "다음주", "모레", "스케줄", "회의", "미팅",
+                   "약속", "일주일", "이번달 일정", "며칠"]
+        mail_kw = ["메일", "mail", "gmail", "편지", "이메일", "받은",
+                   "보낸", "inbox", "발송", "수신", "발신", "invoice",
+                   "shipping", "메시지"]
+        drive_kw = ["드라이브", "drive", "파일", "file", "폴더", "문서",
+                    "시트", "sheet", "용량"]
+
+        cal = any(k in q for k in cal_kw)
+        mail = any(k in q for k in mail_kw)
+        drive = any(k in q for k in drive_kw)
+
+        # Single tool detected
+        if cal and not mail and not drive:
+            return "calendar"
+        if mail and not cal and not drive:
+            return "gmail"
+        if drive and not cal and not mail:
+            return "drive"
+        return "all"
 
     def _build_tools(self, creds) -> List:
         """Build LangChain tools with user credentials bound.

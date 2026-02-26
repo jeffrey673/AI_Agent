@@ -1,16 +1,26 @@
-"""SKIN1004 Enterprise AI - FastAPI application entry point."""
+"""SKIN1004 Enterprise AI - FastAPI application entry point.
+
+Single server on port 3000: AI backend + custom frontend.
+"""
 
 import asyncio
 from contextlib import asynccontextmanager
+from pathlib import Path
 
 import structlog
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
+from fastapi.responses import FileResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
 
+from app.api.admin_api import admin_router
+from app.api.auth_api import auth_api_router
+from app.api.auth_middleware import get_optional_user
 from app.api.auth_routes import auth_router
+from app.api.conversation_api import conversation_router
 from app.api.middleware import setup_middleware
 from app.api.routes import router
 from app.config import get_settings
+from app.db.database import init_db
 
 # Configure structured logging
 structlog.configure(
@@ -28,6 +38,11 @@ structlog.configure(
 
 logger = structlog.get_logger(__name__)
 
+# Directories
+_BASE_DIR = Path(__file__).parent
+_FRONTEND_DIR = _BASE_DIR / "frontend"
+_STATIC_DIR = _BASE_DIR / "static"
+
 
 def create_app() -> FastAPI:
     """Create and configure the FastAPI application."""
@@ -35,22 +50,30 @@ def create_app() -> FastAPI:
 
     @asynccontextmanager
     async def lifespan(app: FastAPI):
+        # Initialize SQLite DB
+        init_db()
+        _ensure_admin()
+        logger.info("sqlite_db_initialized", path=settings.sqlite_db_path)
+
         logger.info(
             "application_started",
             host=settings.host,
             port=settings.port,
             project=settings.gcp_project_id,
         )
-        # Pre-fetch Notion titles and BQ schema in parallel at startup
+        # Pre-fetch Notion titles, BQ schema, and CS DB in parallel at startup
         asyncio.create_task(_warmup_notion_titles())
         asyncio.create_task(_warmup_bq_schema())
+        asyncio.create_task(_warmup_cs_db())
+        # Safety: auto-detect table updates via __TABLES__ metadata polling
+        asyncio.create_task(_start_maintenance_monitor())
         yield
         logger.info("application_shutdown")
 
     app = FastAPI(
         title="SKIN1004 Enterprise AI",
         description="Text-to-SQL + Agentic RAG Hybrid AI System",
-        version="3.0.0",
+        version="4.0.0",
         docs_url="/docs",
         redoc_url="/redoc",
         lifespan=lifespan,
@@ -59,14 +82,57 @@ def create_app() -> FastAPI:
     # Setup middleware (CORS, logging)
     setup_middleware(app)
 
-    # Include API routes (before static mount to avoid path conflicts)
-    app.include_router(router)
-    app.include_router(auth_router)
+    # --- API routes ---
+    app.include_router(router)           # /v1/chat/completions, /dashboard, /health, etc.
+    app.include_router(auth_router)      # /auth/google/*
+    app.include_router(auth_api_router)  # /api/auth/*
+    app.include_router(conversation_router)  # /api/conversations/*
+    app.include_router(admin_router)         # /api/admin/*
 
-    # Serve static files (charts, etc.)
-    app.mount("/static", StaticFiles(directory="app/static"), name="static")
+    # --- Frontend routes ---
+    @app.get("/login")
+    async def login_page():
+        return FileResponse(str(_FRONTEND_DIR / "login.html"), media_type="text/html")
+
+    @app.get("/")
+    async def index(request: Request):
+        # Check if user is authenticated
+        token = request.cookies.get("token")
+        if not token:
+            return RedirectResponse(url="/login", status_code=302)
+        return FileResponse(str(_FRONTEND_DIR / "chat.html"), media_type="text/html")
+
+    # Serve static files
+    app.mount("/frontend", StaticFiles(directory=str(_FRONTEND_DIR)), name="frontend")
+    app.mount("/static", StaticFiles(directory=str(_STATIC_DIR)), name="static")
 
     return app
+
+
+def _ensure_admin():
+    """Ensure jeffrey@skin1004korea.com is admin with all models."""
+    try:
+        from app.db.database import get_session_factory
+        from app.db.models import User
+        Session = get_session_factory()
+        db = Session()
+        try:
+            user = db.query(User).filter(User.email == "jeffrey@skin1004korea.com").first()
+            if user:
+                changed = False
+                if user.role != "admin":
+                    user.role = "admin"
+                    changed = True
+                if not user.allowed_models or "skin1004-Analysis" not in (user.allowed_models or ""):
+                    user.allowed_models = "skin1004-Analysis,skin1004-Search"
+                    changed = True
+                if changed:
+                    db.commit()
+                    logger.info("admin_ensured", email=user.email)
+        finally:
+            db.close()
+    except Exception as e:
+        logger.warning("ensure_admin_failed", error=str(e))
 
 
 async def _warmup_notion_titles():
@@ -100,6 +166,25 @@ async def _warmup_bq_schema():
             logger.info("bq_schema_warmup_done", columns=len(schema))
     except Exception as e:
         logger.warning("bq_schema_warmup_failed", error=str(e))
+
+
+async def _warmup_cs_db():
+    """Pre-load CS Q&A data from Google Spreadsheet at startup."""
+    try:
+        from app.agents.cs_agent import warmup
+        count = await warmup()
+        logger.info("cs_db_warmup_done", qa_count=count)
+    except Exception as e:
+        logger.warning("cs_db_warmup_failed", error=str(e))
+
+
+async def _start_maintenance_monitor():
+    """Start the auto-detect maintenance loop (polls __TABLES__ every 60s)."""
+    try:
+        from app.core.safety import maintenance_auto_detect_loop
+        await maintenance_auto_detect_loop(interval=60.0)
+    except Exception as e:
+        logger.warning("maintenance_monitor_failed", error=str(e))
 
 
 app = create_app()

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ko" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#171717">
+  <title>SKIN1004 AI</title>
+  <link rel="stylesheet" href="/static/style.css?v=13">
+  <!-- Markdown + Code highlighting -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/github-dark.min.css" id="hljs-theme">
+  <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    if (localStorage.theme === "light") {
+      document.documentElement.classList.replace("dark", "light");
+    }
+  </script>
+</head>
+<body>
+  <div class="chat-app">
+    <!-- Mobile overlay -->
+    <div class="mobile-overlay" id="mobile-overlay"></div>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <!-- Header: logo (clickable → home), brand, new-chat + collapse -->
+      <div class="sidebar-header">
+        <a href="#" class="sidebar-home-link" id="sidebar-home-link" title="홈으로">
+          <img class="logo" id="sidebar-logo" src="/static/splash-dark-new.png" alt="SKIN1004">
+          <span class="brand-gradient">SKIN1004 AI</span>
+        </a>
+        <div class="sidebar-header-actions">
+          <button class="sidebar-icon-btn" id="btn-new-chat" title="새 대화">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+          </button>
+          <button class="sidebar-icon-btn" id="btn-collapse-sidebar" title="사이드바 접기">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="9" y1="3" x2="9" y2="21"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Search -->
+      <div class="sidebar-search">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" id="convo-search" placeholder="대화 검색...">
+      </div>
+
+      <!-- Conversation list (grouped by date) -->
+      <div class="sidebar-conversations" id="convo-list"></div>
+
+      <!-- Dashboard button -->
+      <div class="sidebar-dashboard sidebar-bottom-btn">
+        <button class="sidebar-dashboard-btn" id="btn-dashboard">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+          <span>Dashboard</span>
+        </button>
+      </div>
+
+      <!-- System Status button (opens drawer) + inline indicator -->
+      <div class="sidebar-dashboard sidebar-bottom-btn sidebar-status-wrap">
+        <button class="sidebar-dashboard-btn" id="btn-system-status">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          <span>System Status</span>
+          <div class="sidebar-status-inline" id="sidebar-status-inline"></div>
+        </button>
+      </div>
+
+      <!-- Admin button (visible to admin only) -->
+      <div class="sidebar-dashboard sidebar-bottom-btn" id="admin-btn-wrap" style="display:none">
+        <button class="sidebar-dashboard-btn sidebar-admin-btn" id="btn-admin">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <span>Admin</span>
+        </button>
+      </div>
+
+      <!-- User footer -->
+      <div class="sidebar-footer">
+        <div class="user-avatar" id="user-avatar">A</div>
+        <span class="user-name" id="user-name"></span>
+        <button class="sidebar-icon-btn" id="btn-logout" title="로그아웃">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+        </button>
+      </div>
+    </aside>
+
+    <!-- Collapsed sidebar expand button -->
+    <button class="sidebar-expand-btn" id="btn-expand-sidebar" style="display:none" title="사이드바 열기">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="9" y1="3" x2="9" y2="21"/></svg>
+    </button>
+
+    <!-- Main chat area -->
+    <main class="chat-main">
+      <!-- Top bar -->
+      <div class="chat-topbar">
+        <button class="menu-toggle" id="btn-menu" aria-label="Menu">&#9776;</button>
+        <select class="model-select" id="model-select">
+          <option value="skin1004-Analysis">Claude (Analysis)</option>
+          <option value="skin1004-Search">Gemini (Search)</option>
+        </select>
+        <div class="topbar-spacer"></div>
+        <button class="topbar-gws-btn" id="btn-gws-connect" title="Google 계정 연결">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+          <span id="gws-connect-label">Google 연결</span>
+        </button>
+      </div>
+
+      <!-- Chat marquee background (subtle) -->
+      <div id="craver-bg" class="craver-chat-mode">
+        <div class="craver-marquees">
+          <div class="craver-row">
+            <div class="craver-track craver-track-left">
+              <span class="craver-outline">WHAT YOU NEED. WE</span>
+              <span class="craver-solid"><em>WONDER</em><small>무엇이 필요합니까?</small></span>
+              <img src="/static/craver_wonder.png" alt="">
+              <span class="craver-outline">WHAT YOU NEED.</span>
+              <span class="craver-outline">WHAT YOU NEED. WE</span>
+              <span class="craver-solid"><em>WONDER</em><small>무엇이 필요합니까?</small></span>
+              <img src="/static/craver_wonder.png" alt="">
+              <span class="craver-outline">WHAT YOU NEED.</span>
+            </div>
+          </div>
+          <div class="craver-row">
+            <div class="craver-track craver-track-left">
+              <span class="craver-outline">WHAT DO WE</span>
+              <span class="craver-solid"><em>WORK</em><small>무엇을 위해 일합니까?</small></span>
+              <img src="/static/craver_work.png" alt="">
+              <span class="craver-outline">FOR TODAY? WHAT</span>
+              <span class="craver-outline">WHAT DO WE</span>
+              <span class="craver-solid"><em>WORK</em><small>무엇을 위해 일합니까?</small></span>
+              <img src="/static/craver_work.png" alt="">
+              <span class="craver-outline">FOR TODAY? WHAT</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Messages / Welcome -->
+      <div class="chat-messages" id="chat-messages">
+        <div class="chat-welcome" id="chat-welcome">
+          <div class="welcome-greeting">
+            <div class="welcome-first-line">
+              <img class="welcome-logo" id="welcome-logo" src="/static/splash-dark-new.png" alt="">
+              <h1 class="welcome-hello"><span id="welcome-user-name"></span>님,</h1>
+            </div>
+            <h1 class="welcome-sub">참 좋은날입니다 ⛅☁️</h1>
+          </div>
+          <div class="suggestions" id="welcome-suggestions">
+            <button class="suggestion-chip" data-q="쇼피 인도네시아 이번 달 매출 알려줘">쇼피 인도네시아 매출</button>
+            <button class="suggestion-chip" data-q="아마존 미국 이번 달 Top 10 제품 알려줘">아마존 미국 Top 10</button>
+            <button class="suggestion-chip" data-q="틱톡샵 인도네시아 매출 현황 알려줘">틱톡 인도네시아 매출</button>
+            <button class="suggestion-chip" data-q="일본 Q10 최근 3개월 매출 추이 보여줘">일본 Q10 매출 추이</button>
+            <button class="suggestion-chip" data-q="필리핀 전체 플랫폼 매출 비교해줘">필리핀 플랫폼별 매출</button>
+            <button class="suggestion-chip" data-q="국가별 매출 순위 Top 10 알려줘">국가별 매출 순위</button>
+            <button class="suggestion-chip" data-q="지난달 대비 매출 증감율 비교해줘">전월 매출 증감 비교</button>
+            <button class="suggestion-chip" data-q="SKIN1004 반품 절차 알려줘">반품/교환 절차 안내</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Input area -->
+      <div class="chat-input-area">
+        <!-- Follow-up suggestions (shown after AI response) -->
+        <div class="followup-suggestions" id="followup-suggestions" style="display:none"></div>
+        <div class="chat-input-wrapper">
+          <textarea id="chat-input" rows="1" placeholder="메시지를 입력하세요..." autofocus></textarea>
+          <button class="btn-send" id="btn-send" disabled aria-label="Send">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="22" y1="2" x2="11" y2="13"></line>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Dashboard Drawer -->
+  <div id="skin-dashboard-overlay" class="closed"></div>
+  <div id="skin-dashboard-drawer" class="closed">
+    <div class="drawer-header">
+      <button class="drawer-close" id="drawer-close">&times;</button>
+    </div>
+    <iframe id="dashboard-iframe"></iframe>
+  </div>
+
+  <!-- System Status Drawer -->
+  <div id="skin-status-overlay" class="closed"></div>
+  <div id="skin-status-drawer" class="closed">
+    <div class="drawer-header">
+      <span class="drawer-title">SYSTEM STATUS</span>
+      <button class="drawer-close" id="status-drawer-close">&times;</button>
+    </div>
+    <div class="status-drawer-body" id="status-items"></div>
+  </div>
+
+  <!-- Admin Drawer -->
+  <div id="skin-admin-overlay" class="closed"></div>
+  <div id="skin-admin-drawer" class="closed">
+    <div class="drawer-header">
+      <span class="drawer-title">USER MANAGEMENT</span>
+      <button class="drawer-close" id="admin-drawer-close">&times;</button>
+    </div>
+    <div class="admin-drawer-body" id="admin-user-list"></div>
+  </div>
+
+  <!-- Theme Toggle -->
+  <button id="skin-theme-toggle" aria-label="Toggle theme"></button>
+
+  <script src="/frontend/chat.js?v=13"></script>
+</body>
+</html>

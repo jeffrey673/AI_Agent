@@ -3,57 +3,70 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SKIN1004 Dashboard Hub</title>
+<title>Skin1004AI</title>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+<script>
+  // Inherit theme: query param > parent window > localStorage
+  (function() {
+    var theme = "dark";
+    var params = new URLSearchParams(window.location.search);
+    if (params.get("theme")) {
+      theme = params.get("theme");
+    } else {
+      try {
+        theme = window.parent.document.documentElement.classList.contains("light") ? "light" : "dark";
+      } catch(e) {
+        if (window.localStorage && localStorage.theme === "light") theme = "light";
+      }
+    }
+    if (theme === "light") document.documentElement.classList.add("light");
+  })();
+</script>
 <style>
+:root {
+  --db-bg: #0a0a0a;
+  --db-surface: #0e0e0e;
+  --db-surface2: #121212;
+  --db-surface3: #151515;
+  --db-border: #1a1a1a;
+  --db-text: #e0e0e0;
+  --db-text-title: #ccc;
+  --db-text-dim: #555;
+  --db-text-dimmer: #444;
+  --db-text-dimmest: #333;
+  --db-text-bright: #fff;
+  --db-preview-bg: #111;
+  --db-scroll-thumb: #222;
+  --db-active-bg: #141410;
+}
+html.light {
+  --db-bg: #ffffff;
+  --db-surface: #f7f7f7;
+  --db-surface2: #f0f0f0;
+  --db-surface3: #eaeaea;
+  --db-border: #e0e0e0;
+  --db-text: #333333;
+  --db-text-title: #444;
+  --db-text-dim: #888;
+  --db-text-dimmer: #999;
+  --db-text-dimmest: #bbb;
+  --db-text-bright: #111;
+  --db-preview-bg: #fafafa;
+  --db-scroll-thumb: #ccc;
+  --db-active-bg: #fff8ec;
+}
+
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
   font-family: 'Montserrat', -apple-system, sans-serif;
-  background: #0a0a0a;
-  color: #e0e0e0;
+  background: var(--db-bg);
+  color: var(--db-text);
   height: 100vh;
   overflow: hidden;
   display: flex;
   flex-direction: column;
 }
-
-/* ===== Top Bar ===== */
-.topbar {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 14px 20px;
-  background: #0e0e0e;
-  border-bottom: 1px solid #1a1a1a;
-  flex-shrink: 0;
-}
-.topbar h1 {
-  font-size: 16px;
-  font-weight: 900;
-  letter-spacing: -0.3px;
-  color: #fff;
-}
-.topbar .sub {
-  font-size: 11px;
-  color: #555;
-  font-weight: 400;
-}
-.topbar .back {
-  margin-left: auto;
-  padding: 6px 14px;
-  background: #1a1a1a;
-  color: #999;
-  font-size: 11px;
-  font-weight: 600;
-  font-family: inherit;
-  border: 1px solid #252525;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.2s;
-  text-decoration: none;
-}
-.topbar .back:hover { background: #252525; color: #fff; }
 
 /* ===== Layout ===== */
 .layout {
@@ -66,8 +79,8 @@ body {
 .sidebar {
   width: 520px;
   min-width: 520px;
-  background: #0e0e0e;
-  border-right: 1px solid #1a1a1a;
+  background: var(--db-surface);
+  border-right: 1px solid var(--db-border);
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -77,16 +90,15 @@ body {
 .cat-tabs {
   display: flex;
   gap: 0;
-  border-bottom: 1px solid #1a1a1a;
+  border-bottom: 1px solid var(--db-border);
   flex-shrink: 0;
-  overflow-x: auto;
 }
 .cat-tab {
   flex: 1;
-  padding: 14px 16px;
-  font-size: 15px;
+  padding: 14px 4px;
+  font-size: 13px;
   font-weight: 700;
-  color: #555;
+  color: var(--db-text-dim);
   text-align: center;
   cursor: pointer;
   border: none;
@@ -95,13 +107,12 @@ body {
   font-family: inherit;
   white-space: nowrap;
   transition: all 0.15s;
-  min-width: 0;
 }
-.cat-tab:hover { color: #999; }
+.cat-tab:hover { color: var(--db-text-dimmer); }
 .cat-tab.active {
   color: #e89200;
   border-bottom-color: #e89200;
-  background: #121212;
+  background: var(--db-surface2);
 }
 
 /* Items list */
@@ -112,7 +123,7 @@ body {
 }
 .items-list::-webkit-scrollbar { width: 4px; }
 .items-list::-webkit-scrollbar-track { background: transparent; }
-.items-list::-webkit-scrollbar-thumb { background: #222; border-radius: 4px; }
+.items-list::-webkit-scrollbar-thumb { background: var(--db-scroll-thumb); border-radius: 4px; }
 
 /* Section header in sidebar */
 .sec-header {
@@ -121,7 +132,7 @@ body {
   font-weight: 700;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  color: #444;
+  color: var(--db-text-dimmer);
 }
 
 /* Item row */
@@ -137,10 +148,10 @@ body {
   color: inherit;
 }
 .item:hover {
-  background: #151515;
+  background: var(--db-surface3);
 }
 .item.active {
-  background: #141410;
+  background: var(--db-active-bg);
   border-left-color: #e89200;
 }
 .item-icon {
@@ -160,7 +171,7 @@ body {
 .item-title {
   font-size: 14px;
   font-weight: 600;
-  color: #ccc;
+  color: var(--db-text-title);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -169,7 +180,7 @@ body {
 .item.active .item-title { color: #e89200; }
 .item-desc {
   font-size: 11px;
-  color: #444;
+  color: var(--db-text-dimmer);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -200,7 +211,7 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
-  background: #0a0a0a;
+  background: var(--db-bg);
   overflow: hidden;
 }
 
@@ -210,15 +221,15 @@ body {
   align-items: center;
   gap: 12px;
   padding: 10px 20px;
-  background: #0e0e0e;
-  border-bottom: 1px solid #1a1a1a;
+  background: var(--db-surface);
+  border-bottom: 1px solid var(--db-border);
   flex-shrink: 0;
   min-height: 46px;
 }
 .preview-title {
   font-size: 13px;
   font-weight: 600;
-  color: #fff;
+  color: var(--db-text-bright);
   flex: 1;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -246,7 +257,7 @@ body {
   flex: 1;
   border: none;
   width: 100%;
-  background: #111;
+  background: var(--db-preview-bg);
 }
 
 /* Empty state */
@@ -257,18 +268,18 @@ body {
   align-items: center;
   justify-content: center;
   gap: 12px;
-  color: #333;
+  color: var(--db-text-dimmest);
 }
 .preview-empty-icon { font-size: 48px; opacity: 0.4; }
 .preview-empty-text { font-size: 13px; font-weight: 500; }
-.preview-empty-sub { font-size: 11px; color: #2a2a2a; }
+.preview-empty-sub { font-size: 11px; color: var(--db-text-dimmest); }
 
 /* Item count */
 .item-count {
   padding: 10px 16px;
   font-size: 10px;
-  color: #333;
-  border-top: 1px solid #1a1a1a;
+  color: var(--db-text-dimmest);
+  border-top: 1px solid var(--db-border);
   flex-shrink: 0;
   text-align: center;
 }
@@ -279,19 +290,14 @@ body {
 }
 @media (max-width: 700px) {
   .layout { flex-direction: column; }
-  .sidebar { width: 100%; min-width: 100%; height: 45vh; border-right: none; border-bottom: 1px solid #1a1a1a; }
+  .sidebar { width: 100%; min-width: 100%; height: 45vh; border-right: none; border-bottom: 1px solid var(--db-border); }
   .preview { height: 55vh; }
 }
 </style>
 </head>
 <body>
 
-<!-- Top Bar -->
-<div class="topbar">
-  <h1>Dashboard Hub</h1>
-  <span class="sub">SKIN1004 Data & Analytics</span>
-  <a class="back" href="http://localhost:3000">&#8592; AI Chat</a>
-</div>
+<!-- Top Bar removed: content starts directly with layout -->
 
 <!-- Layout -->
 <div class="layout">
@@ -532,7 +538,17 @@ function selectItem(key, item) {
 
   document.getElementById("previewTitle").textContent = item.icon + "  " + item.t;
   document.getElementById("btnNewTab").dataset.url = item.u;
-  previewFrame.src = item.u;
+  previewFrame.src = toEmbedUrl(item.u);
+}
+
+// Convert Looker Studio URLs to embed format for iframe
+function toEmbedUrl(url) {
+  // https://lookerstudio.google.com/reporting/... → .../embed/reporting/...
+  // https://lookerstudio.google.com/u/0/reporting/... → .../embed/reporting/...
+  return url.replace(
+    /^(https:\/\/lookerstudio\.google\.com)(?:\/u\/\d+)?\/(reporting\/)/,
+    "$1/embed/$2"
+  );
 }
 
 // ===== Init =====
@@ -553,7 +569,7 @@ if (firstItem) {
   document.getElementById("previewEmpty").style.display = "none";
   document.getElementById("previewTitle").textContent = firstItem.icon + "  " + firstItem.t;
   document.getElementById("btnNewTab").dataset.url = firstItem.u;
-  document.getElementById("previewFrame").src = firstItem.u;
+  document.getElementById("previewFrame").src = toEmbedUrl(firstItem.u);
 }
 </script>
 </body>

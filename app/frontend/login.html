@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#171717">
+  <title>SKIN1004 AI</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <script>
+    // Apply saved theme before paint
+    if (localStorage.theme === "light") {
+      document.documentElement.classList.replace("dark", "light");
+    }
+  </script>
+</head>
+<body>
+  <!-- Craver Background -->
+  <div id="craver-bg">
+    <div class="craver-crave">
+      <p class="craver-line craver-l1">WHAT</p>
+      <p class="craver-line craver-l2">DO YOU</p>
+      <p class="craver-line craver-l3">CRAVE?</p>
+    </div>
+    <div class="craver-marquees">
+      <!-- Row 1 — scrolls left -->
+      <div class="craver-row">
+        <div class="craver-track craver-track-left">
+          <span class="craver-outline">WHAT YOU NEED. WE</span>
+          <span class="craver-solid"><em>WONDER</em><small>무엇이 필요합니까?</small></span>
+          <img src="/static/craver_wonder.png" alt="">
+          <span class="craver-outline">WHAT YOU NEED.</span>
+          <span class="craver-outline">WHAT YOU NEED. WE</span>
+          <span class="craver-solid"><em>WONDER</em><small>무엇이 필요합니까?</small></span>
+          <img src="/static/craver_wonder.png" alt="">
+          <span class="craver-outline">WHAT YOU NEED.</span>
+        </div>
+      </div>
+      <!-- Row 2 — scrolls right -->
+      <div class="craver-row">
+        <div class="craver-track craver-track-right">
+          <span class="craver-outline">WE UNDERSTAND THE</span>
+          <img src="/static/craver_needs.png" alt="">
+          <span class="craver-solid"><em>NEEDS.</em><small>다양한 욕구를 이해합니다</small></span>
+          <span class="craver-outline">WE UNDERSTAND THE</span>
+          <img src="/static/craver_needs.png" alt="">
+          <span class="craver-solid"><em>NEEDS.</em><small>다양한 욕구를 이해합니다</small></span>
+        </div>
+      </div>
+      <!-- Row 3 — scrolls left -->
+      <div class="craver-row">
+        <div class="craver-track craver-track-left">
+          <span class="craver-outline">WHAT DO WE</span>
+          <span class="craver-solid"><em>WORK</em><small>무엇을 위해 일합니까?</small></span>
+          <img src="/static/craver_work.png" alt="">
+          <span class="craver-outline">FOR TODAY? WHAT</span>
+          <span class="craver-outline">WHAT DO WE</span>
+          <span class="craver-solid"><em>WORK</em><small>무엇을 위해 일합니까?</small></span>
+          <img src="/static/craver_work.png" alt="">
+          <span class="craver-outline">FOR TODAY? WHAT</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Login Card -->
+  <div class="login-wrapper">
+    <div class="login-card">
+      <img class="logo" id="login-logo" src="/static/splash-dark-new.png" alt="SKIN1004">
+      <h1 id="form-title">Welcome Back</h1>
+      <p class="subtitle">SKIN1004 Enterprise AI</p>
+
+      <form id="auth-form" autocomplete="on">
+        <div id="name-group" style="display:none">
+          <label for="input-name">NAME</label>
+          <input type="text" id="input-name" placeholder="Your name" autocomplete="name">
+        </div>
+
+        <label for="input-email">EMAIL</label>
+        <input type="email" id="input-email" placeholder="you@skin1004.com" autocomplete="email" required>
+
+        <label for="input-password">PASSWORD</label>
+        <input type="password" id="input-password" placeholder="Password" autocomplete="current-password" required>
+
+        <button type="submit" class="btn-primary" id="btn-submit">SIGN IN</button>
+      </form>
+
+      <div class="error-msg" id="error-msg"></div>
+      <div class="toggle-link" id="toggle-link">Need an account? Sign up</div>
+    </div>
+  </div>
+
+  <!-- Theme Toggle -->
+  <button id="skin-theme-toggle" aria-label="Toggle theme"></button>
+
+  <script>
+    // Theme toggle
+    (function () {
+      var SUN = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>';
+      var MOON = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+
+      var btn = document.getElementById("skin-theme-toggle");
+
+      function update() {
+        var isDark = document.documentElement.classList.contains("dark");
+        btn.innerHTML = isDark ? SUN : MOON;
+        btn.title = isDark ? "Light Mode" : "Dark Mode";
+        // Swap logo
+        var logo = document.getElementById("login-logo");
+        if (logo) logo.src = isDark ? "/static/splash-dark-new.png" : "/static/splash.png";
+      }
+
+      btn.addEventListener("click", function () {
+        var html = document.documentElement;
+        if (html.classList.contains("dark")) {
+          html.classList.replace("dark", "light");
+          localStorage.theme = "light";
+        } else {
+          html.classList.replace("light", "dark");
+          localStorage.theme = "dark";
+        }
+        update();
+      });
+
+      update();
+    })();
+  </script>
+  <script src="/frontend/auth.js"></script>
+  <!-- Redirect if already logged in -->
+  <script>
+    fetch("/api/auth/me").then(function(r) {
+      if (r.ok) window.location.href = "/";
+    }).catch(function(){});
+  </script>
+</body>
+</html>

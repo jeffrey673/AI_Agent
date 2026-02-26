@@ -1,10 +1,10 @@
-"""Dual LLM client: Gemini 3 Pro + Claude (Opus 4.6 / Sonnet 4.5).
+"""Dual LLM client: Gemini 3 Pro + Claude (Opus 4.6 / Sonnet 4.6).
 
 Provides a unified interface for both models.
 Open WebUI model selection determines which LLM is used.
 
 Gemini side:  3 Pro (conversation) / 3 Flash (internal tasks)
-Claude side:  Opus 4.6 (complex reasoning) / Sonnet 4.5 (light tasks)
+Claude side:  Opus 4.6 (complex reasoning) / Sonnet 4.6 (light tasks)
 """
 
 import re

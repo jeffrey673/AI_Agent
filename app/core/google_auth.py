@@ -71,6 +71,24 @@ class GoogleAuthManager:
             }
         }
 
+    def has_credentials(self, user_email: str) -> bool:
+        """Quick check if user has stored credentials (no refresh, no API call)."""
+        token_path = self._token_path(user_email)
+        if token_path.exists():
+            return True
+        return False
+
+    def get_stored_google_email(self, user_email: str) -> str:
+        """Read google_email from token file (no API call)."""
+        token_path = self._token_path(user_email)
+        if not token_path.exists():
+            return ""
+        try:
+            data = json.loads(token_path.read_text(encoding="utf-8"))
+            return data.get("google_email", "")
+        except Exception:
+            return ""
+
     def get_credentials(self, user_email: str) -> Optional[Credentials]:
         """Load credentials for a user, trying local file first, then Open WebUI DB.
 
@@ -100,12 +118,18 @@ class GoogleAuthManager:
 
         try:
             creds = Credentials.from_authorized_user_file(str(token_path), SCOPES)
-            if creds.valid:
-                return creds
-            if creds.expired and creds.refresh_token:
+            # Token file doesn't store expiry, so always proactively refresh
+            # to ensure the access token is fresh (they expire after ~1 hour)
+            if creds.refresh_token:
                 creds.refresh(Request())
-                self._save_credentials(user_email, creds)
+                # Preserve google_email from existing file
+                google_email = self.get_stored_google_email(user_email)
+                self._save_credentials(
+                    user_email, creds, google_email=google_email
+                )
                 logger.info("token_refreshed", user_email=user_email, source="file")
+                return creds
+            if creds.valid:
                 return creds
             return None
         except Exception as e:
@@ -260,8 +284,23 @@ except:
         )
         flow.fetch_token(code=code)
         creds = flow.credentials
-        self._save_credentials(user_email, creds)
-        logger.info("token_saved", user_email=user_email)
+
+        # Fetch Google account email via Gmail API
+        google_email = ""
+        try:
+            import httpx
+            resp = httpx.get(
+                "https://gmail.googleapis.com/gmail/v1/users/me/profile",
+                headers={"Authorization": f"Bearer {creds.token}"},
+                timeout=5,
+            )
+            if resp.status_code == 200:
+                google_email = resp.json().get("emailAddress", "")
+        except Exception:
+            pass
+
+        self._save_credentials(user_email, creds, google_email=google_email)
+        logger.info("token_saved", user_email=user_email, google_email=google_email)
         return creds
 
     def revoke_credentials(self, user_email: str) -> bool:
@@ -280,7 +319,9 @@ except:
             return True
         return False
 
-    def _save_credentials(self, user_email: str, creds: Credentials) -> None:
+    def _save_credentials(
+        self, user_email: str, creds: Credentials, *, google_email: str = ""
+    ) -> None:
         """Save credentials to JSON file."""
         token_path = self._token_path(user_email)
         token_data = {
@@ -291,4 +332,6 @@ except:
             "client_secret": creds.client_secret,
             "scopes": list(creds.scopes) if creds.scopes else SCOPES,
         }
+        if google_email:
+            token_data["google_email"] = google_email
         token_path.write_text(json.dumps(token_data), encoding="utf-8")

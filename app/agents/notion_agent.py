@@ -170,9 +170,13 @@ class NotionAgent:
             # Step 1: Search for relevant pages in allowlist
             pages = await self._search_pages(query)
             if not pages:
+                # Extract clean search term for helpful message
+                clean_term = self._extract_search_term(query)
                 return (
-                    "노션에서 관련 페이지를 찾을 수 없습니다. "
-                    "검색어를 바꿔서 다시 시도해주세요."
+                    f"**'{clean_term}'** 관련 내용을 Notion 문서에서 찾을 수 없습니다.\n\n"
+                    "현재 접근 가능한 Notion 문서 목록:\n"
+                    + "\n".join(f"- {e['description']}" for e in _ALLOWED_PAGES)
+                    + "\n\n위 문서에서 검색할 수 있는 키워드로 다시 질문해주세요."
                 )
 
             # Step 2: Read content from top pages (max 3) — IN PARALLEL
@@ -405,12 +409,22 @@ class NotionAgent:
         partial = []
         word_match = []
 
-        # Strip punctuation from each word for better matching
-        search_words = [
-            re.sub(r'[^\w가-힣a-zA-Z0-9]', '', w)
-            for w in term_lower.split()
-        ]
-        search_words = [w for w in search_words if len(w) >= 2]
+        # Strip punctuation and Korean particles from each word for better matching
+        _KR_PARTICLES = (
+            "부터", "까지", "에서", "으로", "에게", "이랑", "하고",
+            "은", "는", "이", "가", "을", "를", "의", "와", "과",
+            "도", "만", "에", "로", "라", "랑",
+        )
+        search_words = []
+        for w in term_lower.split():
+            w = re.sub(r'[^\w가-힣a-zA-Z0-9]', '', w)
+            # Strip trailing Korean particles (longest first)
+            for p in sorted(_KR_PARTICLES, key=len, reverse=True):
+                if w.endswith(p) and len(w) > len(p) + 1:
+                    w = w[:-len(p)]
+                    break
+            if len(w) >= 2:
+                search_words.append(w)
 
         for entry in _page_titles.values():
             title_lower = entry["title"].lower()
@@ -481,12 +495,20 @@ class NotionAgent:
 
 이 질문과 가장 관련 있을 것 같은 페이지 번호를 최대 3개 골라주세요.
 제품 정보, SKU, 번들 등은 '대시보드'나 '제품 마스터' 관련 페이지에 있을 수 있습니다.
-반드시 숫자만 쉼표로 구분하여 답하세요. 예: 1,3,7"""
+
+⚠️ 중요: 목록에 질문과 관련된 페이지가 전혀 없다면, 반드시 숫자 0만 답하세요.
+관련 없는 페이지를 억지로 선택하지 마세요!
+
+반드시 숫자만 쉼표로 구분하여 답하세요. 예: 1,3,7 또는 관련 없으면: 0"""
 
         try:
             flash = get_flash_client()
             response = flash.generate(prompt, temperature=0.0)
             nums = [int(n.strip()) for n in response.strip().split(",") if n.strip().isdigit()]
+            # If LLM says "0" — no relevant pages found
+            if nums == [0]:
+                logger.info("notion_llm_select_no_match", query=query[:50])
+                return []
             selected = [accessible[n - 1] for n in nums if 1 <= n <= len(accessible)]
             return selected or accessible[:3]
         except Exception as e:
@@ -981,13 +1003,17 @@ class NotionAgent:
     async def _generate_answer(
         self, query: str, content: str, model_type: str
     ) -> str:
-        """Generate answer from Notion content using the selected LLM."""
+        """Generate answer from Notion content using Flash for speed.
+
+        Answer formatting is a lightweight task — Flash handles it well.
+        Switched from Pro/Claude (80-100s) to Flash (10-20s) in v6.3.
+        """
         # Truncate content if too large (prevent token limit issues)
         max_content = 12000
         if len(content) > max_content:
             content = content[:max_content] + "\n\n... (내용이 길어 일부 생략)"
 
-        llm = get_llm_client(model_type)
+        llm = get_flash_client()
         prompt = f"""다음은 Notion 워크스페이스에서 검색한 문서 내용입니다.
 이 내용을 바탕으로 사용자의 질문에 **구조화된 형태**로 답변하세요.
 
@@ -1020,6 +1046,12 @@ class NotionAgent:
 2. 질문과 정확히 일치하지 않더라도 관련 내용이 있으면 포함하세요.
 3. 핵심 키워드와 중요 수치는 **굵게** 표시하세요.
 4. 한국어로 답변하세요.
-5. 내용이 간단한 경우(1-2줄)에는 "관련 세부 사항" 섹션을 생략하세요."""
+5. 내용이 간단한 경우(1-2줄)에는 "관련 세부 사항" 섹션을 생략하세요.
+
+## ⚠️ 질문-답변 정합성 (최우선 — 반드시 준수!)
+6. **사용자의 원래 질문에 정확히 답변하세요.** 질문을 임의로 재해석하거나 다른 주제로 답변하지 마세요.
+7. **문서 내용이 질문 주제와 관련이 없으면, 절대 그 내용으로 답변하지 마세요.** 대신 "해당 내용은 현재 Notion 문서에서 찾을 수 없습니다."라고 솔직히 답하세요. 관련 없는 문서 내용을 억지로 제시하는 것은 금지!
+8. 문서 내용이 질문과 부분적으로만 관련될 경우, 관련 부분만 답하고 나머지는 "해당 정보는 문서에 없습니다"로 명시하세요.
+9. 예시: 사용자가 "반품 프로세스"를 물었는데 문서에 "틱톡샵 접속 방법"만 있다면 → "반품 프로세스 관련 내용은 Notion 문서에서 찾을 수 없습니다." (틱톡샵 접속 방법을 답변으로 제시하면 안 됨!)"""
 
         return llm.generate(prompt, temperature=0.2)

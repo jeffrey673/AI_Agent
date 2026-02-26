@@ -45,6 +45,12 @@ class BigQueryClient:
         """
         logger.info("executing_query", sql=sql[:200])
 
+        # Circuit breaker: block calls if BigQuery service is in OPEN state
+        from app.core.safety import get_circuit
+        cb = get_circuit("bigquery")
+        if not cb.is_available():
+            raise RuntimeError("BigQuery circuit breaker OPEN \u2014 \uc77c\uc2dc\uc801\uc73c\ub85c \uc694\uccad\uc774 \ucc28\ub2e8\ub418\uc5c8\uc2b5\ub2c8\ub2e4.")
+
         job_config = QueryJobConfig()
         job_config.maximum_bytes_billed = 10 * 1024 * 1024 * 1024  # 10 GB limit
 
@@ -59,10 +65,12 @@ class BigQueryClient:
                 rows.append(dict(row))
 
             logger.info("query_completed", row_count=len(rows))
+            cb.record_success()
             return rows
 
         except Exception as e:
             logger.error("query_failed", error=str(e), sql=sql[:200])
+            cb.record_failure()
             raise
 
     def get_table_schema(self, table_id: str) -> List[Dict[str, str]]:

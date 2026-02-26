@@ -56,7 +56,7 @@ async def google_callback(
         logger.error("oauth_callback_failed", user_email=user_email, error=str(e))
         raise HTTPException(status_code=500, detail=f"토큰 교환 실패: {str(e)}")
 
-    # Return a simple HTML success page
+    # Return success page that auto-closes
     html = f"""
     <!DOCTYPE html>
     <html>
@@ -65,27 +65,43 @@ async def google_callback(
         <title>인증 완료</title>
         <style>
             body {{
-                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+                font-family: 'Montserrat', -apple-system, sans-serif;
                 display: flex; justify-content: center; align-items: center;
-                min-height: 100vh; margin: 0; background: #f0f2f5;
+                min-height: 100vh; margin: 0; background: #0a0a0a; color: #e8e8e8;
             }}
             .card {{
-                background: white; border-radius: 12px; padding: 40px;
-                box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-align: center;
-                max-width: 400px;
+                background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+                border-radius: 24px; padding: 48px; text-align: center; max-width: 400px;
+                backdrop-filter: blur(20px);
             }}
-            .check {{ font-size: 48px; margin-bottom: 16px; }}
-            h1 {{ font-size: 20px; color: #1a1a1a; margin-bottom: 8px; }}
-            p {{ color: #666; font-size: 14px; line-height: 1.5; }}
+            .check {{
+                width: 56px; height: 56px; border-radius: 50%;
+                background: #34A853; color: #fff; display: flex;
+                align-items: center; justify-content: center;
+                font-size: 28px; margin: 0 auto 20px;
+            }}
+            h1 {{ font-size: 18px; font-weight: 700; margin-bottom: 8px; }}
+            p {{ color: rgba(255,255,255,0.5); font-size: 14px; line-height: 1.5; }}
+            .email {{ color: #e89200; font-weight: 600; }}
+            .countdown {{ color: rgba(255,255,255,0.3); font-size: 12px; margin-top: 16px; }}
         </style>
     </head>
     <body>
         <div class="card">
             <div class="check">&#10003;</div>
             <h1>Google 인증 완료</h1>
-            <p><strong>{user_email}</strong> 계정이 연결되었습니다.</p>
-            <p>이 창을 닫고 Open WebUI에서 다시 질문해주세요.</p>
+            <p><span class="email">{user_email}</span></p>
+            <p>Gmail, Drive, Calendar 접근이 연결되었습니다.</p>
+            <p class="countdown" id="cd">3초 후 자동으로 닫힙니다...</p>
         </div>
+        <script>
+            var s = 3;
+            var t = setInterval(function() {{
+                s--;
+                if (s <= 0) {{ clearInterval(t); window.close(); }}
+                else {{ document.getElementById('cd').textContent = s + '초 후 자동으로 닫힙니다...'; }}
+            }}, 1000);
+        </script>
     </body>
     </html>
     """
@@ -96,19 +112,20 @@ async def google_callback(
 async def google_auth_status(user_email: str = Query(..., description="사용자 이메일")):
     """Check if user has valid Google OAuth credentials.
 
-    Args:
-        user_email: User's email address.
+    Returns authenticated status and the connected Google account email.
     """
     if not user_email:
         raise HTTPException(status_code=400, detail="user_email 파라미터가 필요합니다.")
 
-    creds = _get_auth_manager().get_credentials(user_email)
-    authenticated = creds is not None
+    mgr = _get_auth_manager()
+    # Fast check: file exists? (no token refresh, instant)
+    authenticated = mgr.has_credentials(user_email)
+    google_email = mgr.get_stored_google_email(user_email) if authenticated else ""
 
     return {
         "user_email": user_email,
         "authenticated": authenticated,
-        "scopes": list(creds.scopes) if authenticated and creds.scopes else [],
+        "google_email": google_email,
     }
 
 

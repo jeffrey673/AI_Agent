@@ -42,7 +42,7 @@ class Settings(BaseSettings):
     # Anthropic (v3.0) — Opus (complex) + Sonnet (light)
     anthropic_api_key: str = ""
     anthropic_opus_model: str = "claude-opus-4-6"
-    anthropic_sonnet_model: str = "claude-sonnet-4-5-20250929"
+    anthropic_sonnet_model: str = "claude-sonnet-4-6"
 
     # Notion MCP (v3.0)
     notion_mcp_token: str = ""
@@ -50,22 +50,29 @@ class Settings(BaseSettings):
     # Google OAuth (GWS per-user auth)
     google_oauth_client_id: str = ""
     google_oauth_client_secret: str = ""
-    google_oauth_redirect_uri: str = "http://localhost:8100/auth/google/callback"
+    google_oauth_redirect_uri: str = "http://localhost:3000/auth/google/callback"
     gws_default_email: str = ""
 
     # Open WebUI integration (read OAuth tokens from its DB)
     openwebui_db_path: str = ""
     openwebui_secret_key: str = ""
 
+    # CS DB (Google Spreadsheet with Q&A data)
+    cs_spreadsheet_id: str = ""
+
     # Tavily
     tavily_api_key: str = ""
 
     # Server
     host: str = "0.0.0.0"
-    port: int = 8000
+    port: int = 3000
 
     # Chart
-    chart_base_url: str = "http://localhost:8100"
+    chart_base_url: str = "http://localhost:3000"
+
+    # Auth (custom frontend)
+    jwt_secret_key: str = "skin1004-ai-secret-change-me"
+    sqlite_db_path: str = "C:/Users/DB_PC/.open-webui/data/skin1004_chat.db"
 
     @property
     def sales_table_full_path(self) -> str:

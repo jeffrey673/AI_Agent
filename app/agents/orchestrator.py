@@ -5,8 +5,10 @@ v3.0: Orchestrator -> specialized Sub Agent delegation
 v3.1: Conversation context continuity (messages passthrough)
 v3.2: Dual model support (Gemini 2.5 Pro / Sonnet 4.5)
 v3.3: Google Search grounding + multi-source analysis (internal + external)
+v3.4: CS DB route — customer service Q&A from Google Spreadsheet
 """
 
+import asyncio
 import json
 from datetime import datetime
 from typing import Dict, List, Optional
@@ -124,7 +126,8 @@ class OrchestratorAgent:
         # Step 1: Classify query intent
         # Fast path: keyword match first, LLM fallback only when ambiguous
         route = self._keyword_classify(query)
-        if route == "direct" and conversation_context:
+        is_system_task = query.strip().startswith("### Task:")
+        if route == "direct" and conversation_context and not is_system_task:
             # Ambiguous query with context — use Flash for fast classification
             flash = get_flash_client()
             route = await self._classify_with_llm(query, conversation_context, flash)
@@ -141,12 +144,18 @@ class OrchestratorAgent:
             "bigquery": self._handle_bigquery,
             "notion": self._handle_notion,
             "gws": self._handle_gws,
+            "cs": self._handle_cs,
             "multi": self._handle_multi,
         }
         handler = handlers.get(route, self._handle_direct)
         result = await handler(query, messages, conversation_context, model_type, user_email)
 
-        # Step 3: Post-process response for consistent markdown formatting
+        # Step 3: Coherence check — verify answer actually addresses the question
+        # Skip for: direct (no data), multi (synthesis prompt already validates scope)
+        if "answer" in result and route not in ("direct", "multi"):
+            result["answer"] = await self._verify_coherence(query, result["answer"], route)
+
+        # Step 4: Post-process response for consistent markdown formatting
         if "answer" in result:
             result["answer"] = ensure_formatting(result["answer"], domain=route)
 
@@ -170,26 +179,28 @@ class OrchestratorAgent:
 
 경로 옵션:
 - bigquery: 순수 데이터 조회 (매출, 수량, 주문, 재고 등 숫자 조회/집계만 필요)
-- notion: 사내 문서, 정책, 매뉴얼, 제품 정보, 프로세스 관련
+- notion: 사내 문서, 정책, 매뉴얼, 프로세스 관련
 - gws: Google Drive 파일, Gmail 메일, Calendar 일정 관련
+- cs: 제품 CS 상담 (성분, 사용법, 비건인증, 피부 관련 질문, 제품 문의)
 - multi: 내부 데이터 + 외부 정보가 모두 필요한 복합 분석 질문
   예시: "날씨가 매출에 영향?", "매출 하락 원인", "시장 트렌드와 매출 비교", "인도네시아 경제 상황이 판매에 미치는 영향"
 - direct: 일반 지식, 용어 설명, 간단한 질문, 실시간 정보 (날씨, 뉴스 등)
 
 판단 기준:
 - 데이터 조회만 → bigquery
+- 제품 성분/사용법/CS 문의 → cs
 - 데이터 + 외부맥락(날씨/시장/경쟁/원인/영향/트렌드) → multi
 - 외부 정보만 → direct
 - 이전 대화 맥락을 참고하여 "그거", "아까", "다시" 같은 참조를 이해하세요.
 {context_section}현재 질문: {query}
 
-경로 하나만 답변 (bigquery/notion/gws/multi/direct):"""
+경로 하나만 답변 (bigquery/notion/gws/cs/multi/direct):"""
 
         try:
             response = llm.generate(prompt, temperature=0.0)
             route = response.strip().lower().split()[0] if response.strip() else "direct"
 
-            valid_routes = {"bigquery", "notion", "gws", "multi", "direct"}
+            valid_routes = {"bigquery", "notion", "gws", "cs", "multi", "direct"}
             if route in valid_routes:
                 return route
         except Exception as e:
@@ -246,11 +257,41 @@ class OrchestratorAgent:
         "사내 문서", "위키", "제품 정보",
     ]
 
+    _CS_KEYWORDS = [
+        "cs", "고객 상담", "고객상담", "faq",
+        "성분", "비건", "peta", "동물실험",
+        "사용법", "사용 방법", "사용방법", "루틴", "스킨케어",
+        "제품 문의", "제품문의",
+        "센텔라", "히알루", "톤브라이트닝", "포어마이징",
+        "티트리카", "프로바이오", "랩인네이처",
+        "commonlabs", "zombie beauty", "좀비뷰티", "커먼랩스",
+        "자극", "알레르기", "보관", "유통기한", "개봉 후", "개봉후",
+        "임산부", "수유", "아토피", "민감", "트러블",
+        "피부 타입", "피부타입", "건성", "지성", "복합성",
+        "사용 순서", "사용순서", "바르는 순서",
+        "세럼", "앰플", "토너", "클렌저", "선크림", "크림", "마스크",
+        "레티놀", "pha", "bha", "aha",
+        "영유아", "어린이", "아이", "아기",
+        "붉어", "따가", "가려", "피부 반응",
+        "예민", "홍조", "건조", "좁쌀", "뾰루지",
+        "불량", "교환", "환불", "이물질",
+        "피부과", "시술", "직사광선",
+        "병풀", "패치 테스트", "패치테스트",
+        "skin1004", "스킨1004",
+        "방부제", "향료", "인공색소", "파라벤", "sls", "글루텐",
+        "직구", "매장",
+        "기름지", "피부 관리", "피부관리",
+    ]
+
     def _keyword_classify(self, query: str) -> str:
         """Keyword-based query classification.
 
-        Priority: Notion (explicit) > GWS > Data > External > Direct
+        Priority: System tasks > Notion (explicit) > GWS > CS > Data > External > Direct
         """
+        # Open WebUI system tasks (title/tag/follow-up) → direct, skip BQ false routing
+        if query.strip().startswith("### Task:"):
+            return "direct"
+
         q = query.lower()
 
         # Notion check — "노션" explicitly mentioned → always Notion
@@ -262,10 +303,32 @@ class OrchestratorAgent:
             return "gws"
 
         has_data = any(kw in q for kw in self._DATA_KEYWORDS)
+
+        # CS check — product Q&A, ingredients, usage, skincare
+        # When both CS + DATA keywords present, only prefer BQ for strong analytics keywords
+        # (매출, 수량, 주문 etc.), not ambiguous ones like "라인", "제품 목록"
+        _STRONG_DATA = [
+            "매출", "수량", "주문", "sales", "revenue",
+            "국가별", "월별", "분기별", "대륙별", "플랫폼별", "연도별", "채널별",
+            "재고", "집계", "합계", "통계", "데이터", "조회",
+            "차트", "그래프", "그려",
+            "top", "순위", "랭킹", "성장률", "증감", "추이",
+        ]
+        has_strong_data = any(kw in q for kw in _STRONG_DATA)
+        if any(kw in q for kw in self._CS_KEYWORDS) and not has_strong_data:
+            return "cs"
         has_external = any(kw in q for kw in self._EXTERNAL_KEYWORDS)
 
         # Both data + external context needed → multi-source analysis
         if has_data and has_external:
+            # "매출 트렌드" = pure data trend, not multi-source
+            # Only override when the ONLY external keyword is "트렌드"
+            # and it's adjacent to a data word (매출/판매/실적)
+            external_hits = [kw for kw in self._EXTERNAL_KEYWORDS if kw in q]
+            if external_hits == ["트렌드"]:
+                data_trend = ["매출 트렌드", "매출트렌드", "판매 트렌드", "실적 트렌드", "주문 트렌드"]
+                if any(p in q for p in data_trend):
+                    return "bigquery"
             return "multi"
 
         if has_data:
@@ -285,6 +348,20 @@ class OrchestratorAgent:
         Falls back to a helpful data-error message if SQL generation fails,
         preserving context that this was a SKIN1004 internal data query.
         """
+        # Maintenance guard: block BQ queries during table update
+        from app.core.safety import get_maintenance_manager
+        mm = get_maintenance_manager()
+        if mm.active:
+            return {
+                "source": "bigquery",
+                "answer": (
+                    "**\ub370\uc774\ud130 \uc810\uac80 \uc911\uc785\ub2c8\ub2e4** \u2014 "
+                    "\ub9e4\ucd9c \ub370\uc774\ud130 \ud14c\uc774\ube14\uc774 \uc5c5\ub370\uc774\ud2b8 \uc911\uc774\uc5b4\uc11c "
+                    "\uc870\ud68c\uac00 \uc77c\uc2dc \uc911\ub2e8\ub418\uc5c8\uc2b5\ub2c8\ub2e4. "
+                    "\uc7a0\uc2dc \ud6c4 \ub2e4\uc2dc \uc2dc\ub3c4\ud574 \uc8fc\uc138\uc694.\n\n"
+                    f"*\uc0ac\uc720: {mm.reason}*"
+                ),
+            }
         try:
             answer = await run_sql_agent(
                 query,
@@ -328,7 +405,8 @@ class OrchestratorAgent:
 2. 질문을 좀 더 구체적으로 바꿔보라고 제안하세요 (예: 기간, 국가, 채널, 제품명 등을 명시).
 3. 가능한 질문 예시를 2-3개 제시하세요.
 4. 일반적인 인터넷 정보로 답변하지 마세요. 이것은 SKIN1004 내부 데이터 질문입니다.
-5. 한국어로 답변하세요."""
+5. 한국어로 답변하세요.
+6. "오류가 발생" 같은 표현 대신 "데이터를 조회하지 못했습니다" 등 부드러운 표현을 쓰세요."""
 
         try:
             answer = llm.generate(fallback_prompt, temperature=0.3)
@@ -374,6 +452,27 @@ class OrchestratorAgent:
         result = await self.gws_agent.run(contextualized_query, user_email=user_email)
         return {"source": "gws", "answer": result}
 
+    async def _handle_cs(
+        self,
+        query: str,
+        messages: List[Dict[str, str]],
+        conversation_context: str,
+        model_type: str,
+        user_email: str = "",
+    ) -> dict:
+        """CS DB Sub Agent execution — customer service Q&A lookup."""
+        from app.agents.cs_agent import run as run_cs_agent
+
+        contextualized_query = query
+        if conversation_context:
+            contextualized_query = f"[이전 대화]\n{conversation_context}\n\n[현재 질문]\n{query}"
+        try:
+            result = await run_cs_agent(contextualized_query, model_type=model_type)
+            return {"source": "cs", "answer": result}
+        except Exception as e:
+            logger.error("orchestrator_cs_failed", error=str(e))
+            return {"source": "cs", "answer": f"CS 데이터 조회 중 오류가 발생했습니다: {str(e)}"}
+
     async def _handle_multi(
         self,
         query: str,
@@ -382,45 +481,21 @@ class OrchestratorAgent:
         model_type: str,
         user_email: str = "",
     ) -> dict:
-        """Multi-source analysis: combines internal data (BigQuery) + external info (Google Search).
+        """Multi-source analysis: internal data (BigQuery) + external info (Google Search).
 
-        Steps:
-          1. Google Search — gather external context (market, weather, news, etc.)
-          2. BigQuery — query internal sales/data
-          3. Synthesize — combine both with LLM (with search grounding for Gemini)
+        v6.4: Steps 1+2 run in parallel via asyncio.to_thread, synthesis uses Flash.
         """
         today = datetime.now().strftime("%Y-%m-%d")
         sub_results = {}
 
-        # --- Step 1: Google Search for external context (always via Gemini) ---
-        web_context = ""
-        try:
-            gemini = get_llm_client(MODEL_GEMINI)
-            search_prompt = f"""다음 질문과 관련된 최신 외부 정보를 검색하여 정리하세요.
-내부 매출/주문 데이터는 제외하고, 다음과 같은 외부 맥락만 수집하세요:
-- 해당 국가/지역의 현재 상황 (날씨, 경제, 정책 등)
-- 시장 동향, 소비자 트렌드
-- 관련 뉴스, 이벤트
-- 경쟁 환경, 업계 동향
-
-오늘 날짜: {today}
+        # --- Prepare prompts ---
+        search_prompt = f"""질문과 관련된 최신 외부 정보를 검색하여 핵심만 간결히 정리하세요.
+내부 매출 데이터는 제외. 시장 동향, 뉴스, 경쟁 환경 위주.
+오늘: {today}
 질문: {query}
+항목별로 간결하게 정리:"""
 
-관련 외부 정보를 항목별로 정리하세요:"""
-            web_context = gemini.generate_with_search(search_prompt, temperature=0.2)
-            sub_results["web_search"] = {"answer": web_context}
-            logger.info("multi_web_search_done", length=len(web_context))
-        except Exception as e:
-            logger.warning("multi_web_search_failed", error=str(e))
-            sub_results["web_search"] = {"error": str(e)}
-
-        # --- Step 2: BigQuery for internal data ---
-        # Rewrite the query to focus on data extraction only
-        # (the original query may be too broad for SQL generation)
-        bq_answer = ""
-        try:
-            flash = get_flash_client()
-            data_query_prompt = f"""사용자의 복합 질문에서 BigQuery 매출/주문 데이터 조회에 필요한 부분만 추출하세요.
+        data_query_prompt = f"""사용자의 복합 질문에서 BigQuery 매출/주문 데이터 조회에 필요한 부분만 추출하세요.
 외부 분석(날씨, 시장, 원인 등)은 제외하고, 순수 데이터 조회 질문으로 변환하세요.
 
 원래 질문: {query}
@@ -431,28 +506,74 @@ class OrchestratorAgent:
 - "환율 변동으로 베트남 매출 하락 원인" → "베트남 최근 월별 매출 추이"
 
 데이터 조회 질문만 한 줄로 작성:"""
+
+        # --- Steps 1+2: Google Search + BigQuery in parallel (v6.4) ---
+        # v6.5: Use Flash for search (was Pro — 60-80s → 30-40s)
+        def _web_search_sync():
+            flash = get_flash_client()
+            return flash.generate_with_search(search_prompt, temperature=0.2, max_output_tokens=4096)
+
+        def _bq_query_sync():
+            # Maintenance guard: skip BQ in multi route during table update
+            from app.core.safety import get_maintenance_manager
+            mm = get_maintenance_manager()
+            if mm.active:
+                return "", "\ub370\uc774\ud130 \uc810\uac80 \uc911\uc73c\ub85c \ub9e4\ucd9c \ub370\uc774\ud130 \uc870\ud68c\uac00 \uc77c\uc2dc \uc911\ub2e8\ub418\uc5c8\uc2b5\ub2c8\ub2e4."
+
+            flash = get_flash_client()
             data_query = flash.generate(data_query_prompt, temperature=0.0).strip()
             logger.info("multi_data_query_rewritten", original=query[:100], rewritten=data_query[:100])
+            from app.agents.sql_agent import sql_agent as _graph
+            state = {
+                "query": data_query,
+                "route_type": "text_to_sql",
+                "generated_sql": None, "sql_valid": None, "sql_result": None,
+                "retrieved_docs": None, "doc_relevance": None, "web_search_results": None,
+                "answer": "", "needs_retry": False, "retry_count": 0, "error": None,
+                "messages": None,
+                "conversation_context": conversation_context,
+                "model_type": model_type,
+            }
+            result = _graph.invoke(state)
+            return data_query, result.get("answer", "")
 
-            bq_answer = await run_sql_agent(
-                data_query,
-                conversation_context=conversation_context,
-                model_type=model_type,
+        web_context = ""
+        bq_answer = ""
+
+        try:
+            gathered = await asyncio.gather(
+                asyncio.to_thread(_web_search_sync),
+                asyncio.to_thread(_bq_query_sync),
+                return_exceptions=True,
             )
-            # Check if bq_answer contains an error message
-            if "오류" in bq_answer and "SQL" in bq_answer:
-                logger.warning("multi_bigquery_sql_failed", answer=bq_answer[:100])
-                bq_answer = ""
-                sub_results["bigquery"] = {"error": "데이터 조회 실패"}
-            else:
-                sub_results["bigquery"] = {"answer": bq_answer}
-                logger.info("multi_bigquery_done", length=len(bq_answer))
-        except Exception as e:
-            logger.warning("multi_bigquery_failed", error=str(e))
-            sub_results["bigquery"] = {"error": str(e)}
 
-        # --- Step 3: Synthesize internal + external ---
-        llm = get_llm_client(model_type)
+            # Web search result
+            if isinstance(gathered[0], Exception):
+                logger.warning("multi_web_search_failed", error=str(gathered[0]))
+                sub_results["web_search"] = {"error": str(gathered[0])}
+            else:
+                web_context = gathered[0] or ""
+                sub_results["web_search"] = {"answer": web_context}
+                logger.info("multi_web_search_done", length=len(web_context))
+
+            # BQ result
+            if isinstance(gathered[1], Exception):
+                logger.warning("multi_bigquery_failed", error=str(gathered[1]))
+                sub_results["bigquery"] = {"error": str(gathered[1])}
+            else:
+                _, bq_answer = gathered[1]
+                if "오류" in bq_answer and "SQL" in bq_answer:
+                    logger.warning("multi_bigquery_sql_failed", answer=bq_answer[:100])
+                    bq_answer = ""
+                    sub_results["bigquery"] = {"error": "데이터 조회 실패"}
+                else:
+                    sub_results["bigquery"] = {"answer": bq_answer}
+                    logger.info("multi_bigquery_done", length=len(bq_answer))
+        except Exception as e:
+            logger.error("multi_parallel_failed", error=str(e))
+
+        # --- Step 3: Synthesize with Flash for speed (v6.4) ---
+        flash = get_flash_client()
 
         synthesis_prompt = f"""당신은 SKIN1004의 데이터 분석 전문 AI입니다.
 내부 데이터와 외부 정보를 종합하여 **분석 보고서 형식**으로 답변하세요.
@@ -496,11 +617,7 @@ class OrchestratorAgent:
 """
 
         try:
-            # Gemini: use search grounding for even richer synthesis
-            if model_type == MODEL_GEMINI:
-                answer = llm.generate_with_search(synthesis_prompt, temperature=0.3)
-            else:
-                answer = llm.generate(synthesis_prompt, temperature=0.3)
+            answer = flash.generate(synthesis_prompt, temperature=0.3)
         except Exception as e:
             logger.warning("multi_synthesize_failed", error=str(e))
             # Fallback: just concatenate the parts
@@ -517,6 +634,99 @@ class OrchestratorAgent:
             "sub_results": sub_results,
         }
 
+    async def _handle_system_task(
+        self,
+        query: str,
+        messages: List[Dict[str, str]],
+    ) -> dict:
+        """Handle Open WebUI system tasks (title/tag/follow-up) with Flash.
+
+        These are auto-generated requests from Open WebUI, not user queries.
+        Using Flash for speed since these are lightweight formatting tasks.
+        """
+        flash = get_flash_client()
+        q_start = query[:200].lower()
+
+        # Follow-up suggestion — custom prompt for quality
+        if "follow" in q_start or "suggest" in q_start:
+            return await self._handle_followup_task(messages, flash)
+
+        # Title / Tag generation — include conversation context
+        try:
+            # Build conversation snippet for title/tag context
+            conv_parts = []
+            for msg in messages:
+                content = msg.get("content", "")
+                if msg.get("role") == "user" and not content.strip().startswith("### Task:"):
+                    conv_parts.append(f"사용자: {content[:200]}")
+                elif msg.get("role") == "assistant":
+                    conv_parts.append(f"AI: {content[:200]}")
+            conv_snippet = "\n".join(conv_parts[-6:])  # Last 3 turns
+
+            prompt_with_context = f"""{query}
+
+### Chat History:
+{conv_snippet}"""
+            answer = flash.generate(prompt_with_context, temperature=0.3)
+            return {"source": "direct", "answer": answer}
+        except Exception as e:
+            logger.warning("system_task_failed", error=str(e))
+            return {"source": "direct", "answer": ""}
+
+    async def _handle_followup_task(
+        self,
+        messages: List[Dict[str, str]],
+        flash,
+    ) -> dict:
+        """Generate high-quality follow-up suggestions for Open WebUI chips.
+
+        Only suggests questions that our system can clearly answer:
+        - BigQuery data queries (specific country/period/product)
+        - CS product questions (ingredients, usage, certifications)
+        - Notion document queries
+        """
+        # Extract previous user question and assistant answer
+        prev_user = ""
+        prev_assistant = ""
+        for msg in reversed(messages):
+            content = msg.get("content", "")
+            if msg.get("role") == "assistant" and not prev_assistant:
+                prev_assistant = content[:800]
+            elif msg.get("role") == "user" and not prev_user:
+                if not content.strip().startswith("### Task:"):
+                    prev_user = content
+            if prev_user and prev_assistant:
+                break
+
+        if not prev_user:
+            return {"source": "direct", "answer": '{"follow_ups": []}'}
+
+        prompt = f"""이전 대화를 기반으로, 사용자가 바로 물어볼 수 있는 후속 질문 3개를 JSON으로 생성하세요.
+
+이전 질문: {prev_user}
+이전 답변: {prev_assistant[:500]}
+
+## 필수 규칙
+1. 우리 시스템이 **명확하게 답변할 수 있는** 질문만 제안
+   - ✅ 매출/판매 데이터 조회 (국가, 기간, 제품 지정): "2024년 미국 아마존 월별 매출 보여줘"
+   - ✅ 제품 성분/사용법/CS 질문: "센텔라 앰플 사용법 알려줘"
+   - ✅ 제품 비교/순위: "태국 쇼피 top5 제품 비교해줘"
+   - ❌ 모호한 질문: "~일까요?", "~궁금해요", "~있을까?"
+   - ❌ 예측/의견: "~할 것 같아?", "~전망은?"
+2. 구체적 조건 포함 (국가명, 기간, 제품명, 플랫폼 등)
+3. "~알려줘", "~보여줘", "~비교해줘" 형태의 직접적인 요청문
+4. 이전 답변의 데이터를 확장하는 방향 (다른 기간, 다른 국가, 상세 분석)
+
+JSON만 반환:
+{{"follow_ups": ["질문1", "질문2", "질문3"]}}"""
+
+        try:
+            answer = flash.generate(prompt, temperature=0.3)
+            return {"source": "direct", "answer": answer}
+        except Exception as e:
+            logger.warning("followup_generation_failed", error=str(e))
+            return {"source": "direct", "answer": '{"follow_ups": []}'}
+
     async def _handle_direct(
         self,
         query: str,
@@ -531,6 +741,10 @@ class OrchestratorAgent:
         - Gemini: native Google Search grounding
         - Claude: Gemini Search gathers info → passed to Claude for final answer
         """
+        # Handle Open WebUI system tasks (follow-up/title/tag generation)
+        if query.strip().startswith("### Task:"):
+            return await self._handle_system_task(query, messages)
+
         llm = get_llm_client(model_type)
         today = datetime.now().strftime("%Y년 %m월 %d일 (%A)")
 
@@ -553,7 +767,8 @@ class OrchestratorAgent:
 ## 답변 형식
 - 복잡한 주제는 구조화하세요: 개념 설명(정의 → 핵심 포인트 → 예시), 비교(표 활용), 목록(번호 목록).
 - 핵심 용어나 수치는 **굵게** 표시하세요.
-- 간단한 인사나 한두 줄 답변에는 불필요한 구조를 넣지 마세요.
+- 간단한 인사에는 인사 + "SKIN1004 매출 조회, 사내 문서 검색, 일정·메일 확인 등을 도와드릴 수 있습니다." 한 줄을 포함하세요.
+- 의미 없는 입력(특수문자, 숫자, 자음/모음, 이모지만)에는 "입력하신 내용을 이해하기 어렵습니다. 매출 조회, 사내 문서 검색, 일정 확인 등 궁금한 점을 문장으로 질문해 주세요." 라고 안내하세요.
 - 실시간 검색 정보를 포함할 때는 출처를 간략히 명시하세요."""
 
         try:
@@ -597,6 +812,82 @@ class OrchestratorAgent:
         except Exception as e:
             logger.error("direct_llm_failed", error=str(e))
             return {"source": "direct", "answer": f"답변 생성 중 오류가 발생했습니다: {str(e)}"}
+
+    async def _verify_coherence(self, query: str, answer: str, route: str) -> str:
+        """Verify the answer actually addresses the user's question.
+
+        Uses Flash for a lightweight check. Only flags CRITICAL mismatches:
+        - Asked about product A, answered about product B
+        - Asked about country X, answered about country Y
+        - Asked about 2026 full year, answered only 1 month WITHOUT acknowledging it
+
+        Does NOT flag (these are normal):
+        - Partial data (agent already explains limitations)
+        - CS DB not having specific info (expected behavior)
+        - SKIN1004-specific answers (this IS a SKIN1004 system)
+        - Answer already contains its own caveats/warnings
+
+        Skips: direct route, multi route, short answers, answers with existing warnings.
+        """
+        if len(answer) < 30:
+            return answer
+
+        # Skip if answer already acknowledges limitations
+        limitation_phrases = [
+            "데이터가 없", "조회되지 않", "찾을 수 없", "찾지 못했",
+            "정보가 없", "제공하지 못", "확인되지 않",
+            "부분적", "일부만", "까지의 데이터",
+            "⚠️", "⚠",
+        ]
+        answer_start = answer[:500]
+        if any(phrase in answer_start for phrase in limitation_phrases):
+            return answer
+
+        # Skip for CS route — CS DB has inherent limitations, agent handles "not found" gracefully
+        if route == "cs":
+            return answer
+
+        try:
+            flash = get_flash_client()
+            today = datetime.now().strftime("%Y년 %m월 %d일")
+            check_prompt = f"""이것은 SKIN1004 화장품 회사의 내부 AI 시스템입니다.
+모든 답변은 SKIN1004 자체 데이터(매출, 제품, 문서)에 기반합니다.
+오늘: {today}
+
+사용자 질문: {query}
+AI 답변 (앞부분): {answer[:600]}
+
+## 판단 기준
+다음 경우에만 scope_match=false로 판단하세요:
+1. 질문한 제품과 완전히 다른 제품을 답변함 (예: 센텔라를 물었는데 히알루 답변)
+2. 질문한 국가/채널과 완전히 다른 국가/채널을 답변함 (예: 미국을 물었는데 일본 답변)
+
+## 이것은 정상이므로 scope_match=true로 판단하세요:
+- 데이터가 부분적이어서 일부 기간/항목만 답변한 경우 (정상 — 있는 데이터만 답변)
+- "정보가 없습니다", "찾을 수 없습니다" 등 솔직한 답변 (정상 — 올바른 대응)
+- SKIN1004 자사 제품/매출로 답변한 경우 (정상 — 이 시스템의 목적)
+- 답변이 질문 주제를 다루지만 완전하지 않은 경우 (정상 — 데이터 한계)
+
+JSON만 반환:
+{{"scope_match": true/false, "issue": "불일치 설명 또는 빈문자열"}}"""
+
+            result = flash.generate(check_prompt, temperature=0.0)
+            import json as _json
+            clean = result.strip()
+            if clean.startswith("```"):
+                clean = clean.split("\n", 1)[-1].rsplit("```", 1)[0].strip()
+            parsed = _json.loads(clean)
+
+            if not parsed.get("scope_match", True) and parsed.get("issue"):
+                issue = parsed["issue"]
+                logger.warning("coherence_issue_detected", query=query[:80], issue=issue)
+                warning = f"> ⚠️ **참고**: {issue} (오늘 기준: {today})\n\n"
+                return warning + answer
+
+        except Exception as e:
+            logger.debug("coherence_check_skipped", error=str(e))
+
+        return answer
 
     def _gather_search_context(self, query: str) -> str:
         """Gather real-time info via Gemini Search for non-Gemini models.

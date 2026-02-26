@@ -152,6 +152,7 @@ async def _stream_response(
     yield f"data: {initial_chunk.model_dump_json()}\n\n"
 
     # Generate the full answer (v3.0: Orchestrator)
+    result = None
     try:
         result = await _get_orchestrator().route_and_execute(
             query, messages, model_type, user_email=user_email
@@ -171,6 +172,20 @@ async def _stream_response(
         )
         yield f"data: {error_chunk.model_dump_json()}\n\n"
         answer = ""
+
+    # Send source label before answer content
+    source = result.get("source", "direct") if result else "direct"
+    source_chunk = ChatCompletionStreamResponse(
+        id=response_id,
+        created=created,
+        model=request.model,
+        choices=[
+            ChatCompletionStreamChoice(
+                delta=ChatCompletionStreamDelta(content=f"<!-- source:{source} -->"),
+            )
+        ],
+    )
+    yield f"data: {source_chunk.model_dump_json()}\n\n"
 
     # Stream the answer in chunks
     chunk_size = 20  # characters per chunk
@@ -216,9 +231,86 @@ async def list_models():
     )
 
 
+# ---------------------------------------------------------------------------
+# Safety & Maintenance endpoints
+# ---------------------------------------------------------------------------
+
+@router.post("/admin/maintenance")
+async def toggle_maintenance(action: str = "on", reason: str = ""):
+    """Toggle maintenance mode manually.
+
+    Args:
+        action: "on" or "off".
+        reason: Reason text (only used when action=on).
+    """
+    from app.core.safety import get_maintenance_manager
+    mm = get_maintenance_manager()
+
+    if action == "on":
+        mm.activate(reason or "\uc218\ub3d9 \uc810\uac80\ubaa8\ub4dc")
+        return {"ok": True, "maintenance": mm.status}
+    elif action == "off":
+        mm.deactivate()
+        return {"ok": True, "maintenance": mm.status}
+    else:
+        raise HTTPException(status_code=400, detail="action must be 'on' or 'off'")
+
+
+@router.get("/admin/maintenance/status")
+async def maintenance_status():
+    """Return current maintenance state (polled by frontend banner)."""
+    from app.core.safety import get_maintenance_manager
+    mm = get_maintenance_manager()
+    return mm.status
+
+
+@router.get("/safety/status")
+async def safety_status():
+    """Full safety dashboard: maintenance + services + circuit breakers."""
+    from app.core.safety import get_safety_status
+    return get_safety_status()
+
+
 @router.get("/health")
 async def health_check():
-    """Health check endpoint."""
+    """Health check endpoint (liveness)."""
     return {"status": "ok", "service": "SKIN1004 AI Agent"}
+
+
+@router.get("/health/ready")
+async def readiness_check():
+    """Readiness check — reports warmup status of all subsystems."""
+    import app.agents.sql_agent as sql_mod
+
+    # Notion warmup
+    try:
+        from app.agents.notion_agent import _page_titles
+        notion_ready = len(_page_titles) > 0
+        notion_count = len(_page_titles)
+    except Exception:
+        notion_ready = False
+        notion_count = 0
+
+    # BigQuery schema cache
+    bq_ready = bool(sql_mod._schema_cache)
+
+    # CS Q&A database
+    try:
+        from app.agents.cs_agent import _qa_cache, _cache_loaded
+        cs_ready = _cache_loaded
+        cs_count = len(_qa_cache)
+    except Exception:
+        cs_ready = False
+        cs_count = 0
+
+    all_ready = notion_ready and bq_ready and cs_ready
+    return {
+        "status": "ready" if all_ready else "warming_up",
+        "notion_warmup": notion_ready,
+        "notion_pages": notion_count,
+        "bq_schema": bq_ready,
+        "cs_loaded": cs_ready,
+        "cs_db_count": cs_count,
+    }
 
 
