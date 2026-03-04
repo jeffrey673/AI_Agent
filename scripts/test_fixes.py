@@ -49,7 +49,7 @@ for i, (tag, model, q, expected) in enumerate(tests, 1):
         is_short = answer_len < 30
         is_error = any(kw in answer[:200] for kw in ["오류가 발생", "SQL 실행 실패", "ConnectError"])
 
-        perf = "FAIL" if elapsed >= 200 else ("WARN" if elapsed >= 100 else "OK")
+        perf = "FAIL" if elapsed >= 90 else ("WARN" if elapsed >= 60 else "OK")
         status = "ERROR" if is_error else ("SHORT" if is_short else "OK")
 
         chart_tag = " [CHART]" if has_chart else ""

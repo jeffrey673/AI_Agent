@@ -1,5 +1,7 @@
 """Pydantic request/response models for OpenAI-compatible API."""
 
+import base64
+import re
 import time
 import uuid
 from typing import Any, Dict, List, Literal, Optional, Union
@@ -7,13 +9,77 @@ from typing import Any, Dict, List, Literal, Optional, Union
 from pydantic import BaseModel, Field
 
 
+# --- Multimodal Content Parts (OpenAI Vision API format) ---
+
+class ImageUrl(BaseModel):
+    """Image URL (data URI or HTTP URL)."""
+    url: str
+
+class ContentPartText(BaseModel):
+    """Text content part."""
+    type: Literal["text"] = "text"
+    text: str
+
+class ContentPartImage(BaseModel):
+    """Image content part (data URI)."""
+    type: Literal["image_url"] = "image_url"
+    image_url: ImageUrl
+
+ContentPart = Union[ContentPartText, ContentPartImage]
+
+
+def extract_text(content: Union[str, List[Any]]) -> str:
+    """Extract plain text from a message content field.
+
+    Works for both plain string and multimodal list content.
+    """
+    if isinstance(content, str):
+        return content
+    if isinstance(content, list):
+        parts = []
+        for part in content:
+            if isinstance(part, dict):
+                if part.get("type") == "text":
+                    parts.append(part.get("text", ""))
+            elif isinstance(part, ContentPartText):
+                parts.append(part.text)
+        return " ".join(parts).strip()
+    return str(content)
+
+
+def extract_images(content: Union[str, List[Any]]) -> List[Dict[str, Any]]:
+    """Extract images from multimodal content.
+
+    Returns list of {"data": bytes, "mime_type": str} dicts.
+    """
+    if isinstance(content, str) or not isinstance(content, list):
+        return []
+
+    images = []
+    for part in content:
+        url = None
+        if isinstance(part, dict) and part.get("type") == "image_url":
+            url = part.get("image_url", {}).get("url", "")
+        elif isinstance(part, ContentPartImage):
+            url = part.image_url.url
+
+        if url and url.startswith("data:"):
+            # Parse data URI: data:<mime>;base64,<data>
+            match = re.match(r"data:(image/\w+);base64,(.+)", url, re.DOTALL)
+            if match:
+                mime_type = match.group(1)
+                raw_data = base64.b64decode(match.group(2))
+                images.append({"data": raw_data, "mime_type": mime_type})
+    return images
+
+
 # --- OpenAI-compatible Request Models ---
 
 class ChatMessage(BaseModel):
-    """A single chat message."""
+    """A single chat message (supports text or multimodal content)."""
 
     role: Literal["system", "user", "assistant"]
-    content: str
+    content: Union[str, List[ContentPart]]
 
 
 class ChatCompletionRequest(BaseModel):

@@ -29,6 +29,19 @@ from app.agents.gws_agent import GWSAgent
 logger = structlog.get_logger(__name__)
 
 
+def _content_to_text(content) -> str:
+    """Extract plain text from content (str or multimodal list)."""
+    if isinstance(content, str):
+        return content
+    if isinstance(content, list):
+        parts = []
+        for part in content:
+            if isinstance(part, dict) and part.get("type") == "text":
+                parts.append(part.get("text", ""))
+        return " ".join(parts).strip()
+    return str(content)
+
+
 def _build_conversation_context(messages: List[Dict[str, str]], max_turns: int = 5) -> str:
     """Build a conversation context string from recent messages.
 
@@ -57,7 +70,7 @@ def _build_conversation_context(messages: List[Dict[str, str]], max_turns: int =
     lines = []
     for msg in history:
         role = msg.get("role", "user")
-        content = msg.get("content", "")
+        content = _content_to_text(msg.get("content", ""))
         if role == "user":
             lines.append(f"사용자: {content}")
         elif role in ("assistant", "model"):
@@ -108,6 +121,7 @@ class OrchestratorAgent:
         messages: Optional[List[Dict[str, str]]] = None,
         model_type: str = MODEL_GEMINI,
         user_email: str = "",
+        images: Optional[List[dict]] = None,
     ) -> dict:
         """Main entry point: analyze query -> delegate to Sub Agent -> return result.
 
@@ -116,12 +130,24 @@ class OrchestratorAgent:
             messages: Full conversation history for context continuity.
             model_type: "gemini" or "claude" — which LLM to use.
             user_email: User's email for GWS OAuth authentication.
+            images: Extracted images [{"data": bytes, "mime_type": str}].
 
         Returns:
             {"source": str, "answer": str, ...}
         """
         messages = messages or []
+        images = images or []
         conversation_context = _build_conversation_context(messages)
+
+        # Image present → force direct route (vision LLM)
+        if images:
+            logger.info("orchestrator_image_route_forced", image_count=len(images), query=query[:100])
+            result = await self._handle_direct(
+                query, messages, conversation_context, model_type, user_email, images=images
+            )
+            if "answer" in result:
+                result["answer"] = ensure_formatting(result["answer"], domain="direct")
+            return result
 
         # Step 1: Classify query intent
         # Fast path: keyword match first, LLM fallback only when ambiguous
@@ -224,6 +250,27 @@ class OrchestratorAgent:
         "제품 리스트", "제품 목록", "제품 종류", "전체 제품",
         "어떤 제품", "제품이 뭐", "제품 수", "몇 개 제품",
         "제품 현황", "제품 카테고리",
+        # Marketing / Advertising (마케팅 테이블)
+        "광고", "광고비", "광고 비용", "마케팅", "마케팅비", "마케팅 비용",
+        "ROAS", "roas", "ROI", "roi", "CTR", "ctr",
+        "노출", "노출수", "impression", "클릭", "클릭수", "click",
+        "전환", "전환율", "conversion", "구매전환",
+        "페이스북", "facebook", "메타", "meta",
+        "구글 광고", "google ads", "네이버 광고", "네이버 검색광고",
+        "카카오모먼츠", "kakao",
+        "GMV", "gmv",
+        # Influencer (인플루언서 테이블)
+        "인플루언서", "influencer", "팔로워", "좋아요",
+        "조회수", "공유수", "댓글수", "저장수",
+        "콘텐츠", "캠페인", "에이전시", "티어",
+        # Review (리뷰 테이블)
+        "리뷰", "review", "평점", "별점",
+        "리뷰 분석", "고객 리뷰", "제품 리뷰",
+        "스마트스토어 리뷰", "아마존 리뷰", "쇼피 리뷰", "큐텐 리뷰",
+        # Shopify
+        "shopify", "쇼피파이", "자사몰 매출",
+        # Platform metrics
+        "플랫폼 순위", "제품 순위", "랭킹 데이터", "할인가",
     ]
 
     # External-only keywords (triggers web search when combined with data keywords → multi)
@@ -286,13 +333,17 @@ class OrchestratorAgent:
     def _keyword_classify(self, query: str) -> str:
         """Keyword-based query classification.
 
-        Priority: System tasks > Notion (explicit) > GWS > CS > Data > External > Direct
+        Priority: System tasks > Full data request > Notion (explicit) > GWS > CS > Data > External > Direct
         """
         # Open WebUI system tasks (title/tag/follow-up) → direct, skip BQ false routing
         if query.strip().startswith("### Task:"):
             return "direct"
 
         q = query.lower()
+
+        # Full data request → always bigquery (handled by _handle_bigquery → _handle_fulldata_request)
+        if any(kw in q for kw in self._FULLDATA_KEYWORDS):
+            return "bigquery"
 
         # Notion check — "노션" explicitly mentioned → always Notion
         if any(kw in q for kw in self._NOTION_KEYWORDS):
@@ -313,6 +364,10 @@ class OrchestratorAgent:
             "재고", "집계", "합계", "통계", "데이터", "조회",
             "차트", "그래프", "그려",
             "top", "순위", "랭킹", "성장률", "증감", "추이",
+            # Marketing strong data keywords
+            "광고비", "광고 비용", "마케팅비", "ROAS", "CTR",
+            "노출수", "클릭수", "전환율", "전환수",
+            "인플루언서", "리뷰", "GMV",
         ]
         has_strong_data = any(kw in q for kw in _STRONG_DATA)
         if any(kw in q for kw in self._CS_KEYWORDS) and not has_strong_data:
@@ -335,6 +390,24 @@ class OrchestratorAgent:
             return "bigquery"
         return "direct"
 
+    # Keywords that indicate user wants full/unlimited data from previous query
+    _FULLDATA_KEYWORDS = [
+        "전체 데이터 줘", "전체 데이터", "전체데이터", "다 줘", "다줘",
+        "전부 줘", "전부줘", "전부 다 줘", "전부다줘",
+        "제한 없이", "제한없이", "리밋 없이", "리밋없이",
+        "가져가겠", "가져갈게", "그래도 줘", "그래도줘",
+        "전체 보여", "전체보여", "다 보여", "다보여",
+        "전부 가져", "전부가져", "모두 줘", "모두줘",
+        "full data", "no limit", "all data",
+    ]
+
+    def _is_fulldata_request(self, query: str, conversation_context: str) -> bool:
+        """Check if user is requesting full data after a truncation warning."""
+        q = query.lower().strip()
+        has_keyword = any(kw in q for kw in self._FULLDATA_KEYWORDS)
+        has_truncation_context = "10,000행 제한" in conversation_context or "LIMIT에 도달" in conversation_context
+        return has_keyword and has_truncation_context
+
     async def _handle_bigquery(
         self,
         query: str,
@@ -348,6 +421,10 @@ class OrchestratorAgent:
         Falls back to a helpful data-error message if SQL generation fails,
         preserving context that this was a SKIN1004 internal data query.
         """
+        # Check for "full data" follow-up request
+        if self._is_fulldata_request(query, conversation_context):
+            return await self._handle_fulldata_request(query, messages, conversation_context, model_type)
+
         # Maintenance guard: block BQ queries during table update
         from app.core.safety import get_maintenance_manager
         mm = get_maintenance_manager()
@@ -355,11 +432,11 @@ class OrchestratorAgent:
             return {
                 "source": "bigquery",
                 "answer": (
-                    "**\ub370\uc774\ud130 \uc810\uac80 \uc911\uc785\ub2c8\ub2e4** \u2014 "
-                    "\ub9e4\ucd9c \ub370\uc774\ud130 \ud14c\uc774\ube14\uc774 \uc5c5\ub370\uc774\ud2b8 \uc911\uc774\uc5b4\uc11c "
-                    "\uc870\ud68c\uac00 \uc77c\uc2dc \uc911\ub2e8\ub418\uc5c8\uc2b5\ub2c8\ub2e4. "
-                    "\uc7a0\uc2dc \ud6c4 \ub2e4\uc2dc \uc2dc\ub3c4\ud574 \uc8fc\uc138\uc694.\n\n"
-                    f"*\uc0ac\uc720: {mm.reason}*"
+                    "**데이터 점검 중입니다** — "
+                    "매출 데이터 테이블이 업데이트 중이어서 "
+                    "조회가 일시 중단되었습니다. "
+                    "잠시 후 다시 시도해 주세요.\n\n"
+                    f"*사유: {mm.reason}*"
                 ),
             }
         try:
@@ -420,6 +497,60 @@ class OrchestratorAgent:
                 "- \"2024년 미국 아마존 월별 매출 알려줘\"\n"
                 "- \"2024년 미국 채널별 매출 top5 비교해줘\"\n"
                 "- \"센텔라 앰플 120ml 미국 매출 추이 알려줘\"",
+            }
+
+    async def _handle_fulldata_request(
+        self,
+        query: str,
+        messages: List[Dict[str, str]],
+        conversation_context: str,
+        model_type: str,
+    ) -> dict:
+        """Re-run previous BigQuery SQL without LIMIT when user requests full data."""
+        from app.agents.sql_agent import _extract_previous_sql, run_sql_agent_unlimited
+
+        # Extract previous SQL from conversation history
+        previous_sql = ""
+        for msg in reversed(messages):
+            content = msg.get("content", "")
+            if msg.get("role") == "assistant" and "```sql" in content:
+                previous_sql = _extract_previous_sql(content)
+                break
+
+        if not previous_sql:
+            # Try extracting from conversation context
+            previous_sql = _extract_previous_sql(conversation_context)
+
+        if not previous_sql:
+            return {
+                "source": "bigquery",
+                "answer": "이전 쿼리를 찾을 수 없습니다. 원래 질문을 다시 해주세요.",
+            }
+
+        # Find the original question for context
+        original_query = query
+        for msg in reversed(messages):
+            content = msg.get("content", "")
+            if msg.get("role") == "user" and content != query:
+                # This was the previous user question (the actual data query)
+                if any(kw in content.lower() for kw in ["매출", "수량", "데이터", "조회"]):
+                    original_query = content
+                    break
+
+        logger.info("fulldata_request", original_query=original_query[:100], sql=previous_sql[:200])
+
+        try:
+            answer = await run_sql_agent_unlimited(
+                previous_sql=previous_sql,
+                query=original_query,
+                model_type=model_type,
+            )
+            return {"source": "bigquery", "answer": answer}
+        except Exception as e:
+            logger.error("fulldata_request_failed", error=str(e))
+            return {
+                "source": "bigquery",
+                "answer": f"전체 데이터 조회 중 오류가 발생했습니다: {str(e)}",
             }
 
     async def _handle_notion(
@@ -734,17 +865,20 @@ JSON만 반환:
         conversation_context: str,
         model_type: str,
         user_email: str = "",
+        images: Optional[List[dict]] = None,
     ) -> dict:
         """General question: uses full conversation history for natural dialogue.
 
         Both Gemini and Claude get real-time info via Google Search.
         - Gemini: native Google Search grounding
         - Claude: Gemini Search gathers info → passed to Claude for final answer
+        When images are provided, uses vision LLM directly.
         """
         # Handle Open WebUI system tasks (follow-up/title/tag generation)
         if query.strip().startswith("### Task:"):
             return await self._handle_system_task(query, messages)
 
+        images = images or []
         llm = get_llm_client(model_type)
         today = datetime.now().strftime("%Y년 %m월 %d일 (%A)")
 
@@ -772,6 +906,17 @@ JSON만 반환:
 - 실시간 검색 정보를 포함할 때는 출처를 간략히 명시하세요."""
 
         try:
+            # Vision mode: images present → use generate_with_images
+            if images:
+                vision_text = query or "이 이미지에 대해 설명해주세요."
+                answer = llm.generate_with_images(
+                    vision_text,
+                    images,
+                    system_instruction=system,
+                    temperature=0.5,
+                )
+                return {"source": "direct", "answer": answer}
+
             if model_type == MODEL_GEMINI:
                 # Gemini: native Google Search grounding
                 if messages and len(messages) > 1:

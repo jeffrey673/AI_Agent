@@ -16,6 +16,7 @@ from app.core.bigquery import get_bigquery_client
 import concurrent.futures
 
 from app.core.llm import MODEL_GEMINI, get_flash_client, get_llm_client
+from app.agents.query_verifier import QueryVerifierAgent
 from app.core.security import sanitize_sql, validate_sql
 from app.models.state import AgentState
 
@@ -26,6 +27,21 @@ PROMPTS_DIR = Path(__file__).resolve().parent.parent.parent / "prompts"
 
 # Schema cache (fetched once, reused)
 _schema_cache: str = ""
+
+# Marketing / review / ad tables to include in schema context
+MARKETING_TABLES = [
+    ("skin1004-319714.marketing_analysis.integrated_advertising_data", "통합 광고 데이터"),
+    ("skin1004-319714.marketing_analysis.Integrated_marketing_cost", "통합 마케팅 비용"),
+    ("skin1004-319714.marketing_analysis.shopify_analysis_sales", "Shopify 판매 데이터"),
+    ("skin1004-319714.Platform_Data.raw_data", "플랫폼 메트릭스"),
+    ("skin1004-319714.marketing_analysis.influencer_input_ALL_TEAMS", "인플루언서 마케팅"),
+    ("skin1004-319714.marketing_analysis.amazon_search_analytics_catalog_performance", "아마존 검색 분석"),
+    ("skin1004-319714.Review_Data.Amazon_Review", "아마존 리뷰"),
+    ("skin1004-319714.Review_Data.Qoo10_Review", "큐텐 리뷰"),
+    ("skin1004-319714.Review_Data.Shopee_Review", "쇼피 리뷰"),
+    ("skin1004-319714.Review_Data.Smartstore_Review", "스마트스토어 리뷰"),
+    ("skin1004-319714.ad_data.meta data_test", "메타 광고 라이브러리"),
+]
 
 
 def _load_prompt(filename: str) -> str:
@@ -57,19 +73,37 @@ def generate_sql(state: AgentState) -> Dict[str, Any]:
     global _schema_cache
     schema_context = _schema_cache
     if not schema_context:
+        bq = get_bigquery_client()
+        settings = get_settings()
+
+        # 1) Primary sales table
         try:
-            bq = get_bigquery_client()
-            settings = get_settings()
             schema = bq.get_table_schema(settings.sales_table_full_path)
             schema_lines = [
                 f"  - {col['name']} ({col['type']}): {col['description']}"
                 for col in schema
             ]
-            schema_context = "\n\n### 실제 테이블 스키마\n" + "\n".join(schema_lines)
-            _schema_cache = schema_context
-            logger.info("schema_cached")
+            table_short = settings.sales_table_full_path.rsplit(".", 1)[-1]
+            schema_context = f"\n\n### 실제 테이블 스키마 ({table_short})\n" + "\n".join(schema_lines)
         except Exception as e:
-            logger.warning("schema_fetch_failed", error=str(e))
+            logger.warning("schema_fetch_failed", table="SALES_ALL_Backup", error=str(e))
+
+        # 2) Marketing / review / ad tables
+        for table_path, label in MARKETING_TABLES:
+            try:
+                tbl_schema = bq.get_table_schema(table_path)
+                tbl_lines = [
+                    f"  - {col['name']} ({col['type']}): {col['description']}"
+                    for col in tbl_schema
+                ]
+                table_short = table_path.rsplit(".", 1)[-1]
+                schema_context += f"\n\n### {label} ({table_short})\n" + "\n".join(tbl_lines)
+            except Exception as e:
+                logger.warning("schema_fetch_failed", table=table_path, error=str(e))
+
+        if schema_context:
+            _schema_cache = schema_context
+            logger.info("schema_cached", tables=1 + len(MARKETING_TABLES))
 
     today = datetime.now().strftime("%Y-%m-%d")
     date_context = f"\n\n## 오늘 날짜\n{today} (사용자가 '이번 달', '지난 달', '올해' 등 상대적 날짜를 사용하면 이 날짜를 기준으로 계산하세요)"
@@ -112,6 +146,51 @@ def validate_sql_node(state: AgentState) -> Dict[str, Any]:
         return {"sql_valid": False, "error": f"SQL 검증 실패: {error_msg}"}
 
     logger.info("sql_validation_passed", sql=sql[:200])
+
+    # QueryVerifier: additional LLM-based verification (best-effort, non-blocking)
+    try:
+        import asyncio
+
+        verifier = QueryVerifierAgent()
+        schema_info = _schema_cache or ""
+        loop = asyncio.get_event_loop()
+        if loop.is_running():
+            import concurrent.futures
+            with concurrent.futures.ThreadPoolExecutor(max_workers=1) as pool:
+                verify_result = pool.submit(
+                    asyncio.run, verifier.verify(sql, schema_info)
+                ).result(timeout=15)
+        else:
+            verify_result = loop.run_until_complete(verifier.verify(sql, schema_info))
+
+        if isinstance(verify_result, dict):
+            if not verify_result.get("valid", True) and verify_result.get("corrected_sql"):
+                corrected = verify_result["corrected_sql"]
+                # Re-validate corrected SQL through security checks
+                corrected_valid, corrected_err = validate_sql(corrected)
+                if corrected_valid:
+                    logger.info(
+                        "query_verifier_corrected",
+                        original_sql=sql[:200],
+                        corrected_sql=corrected[:200],
+                        errors=verify_result.get("errors", []),
+                    )
+                    return {"generated_sql": corrected, "sql_valid": True, "error": None}
+                else:
+                    logger.warning(
+                        "query_verifier_corrected_sql_failed_security",
+                        corrected_err=corrected_err,
+                    )
+            elif verify_result.get("valid", True):
+                logger.info("query_verifier_passed")
+            else:
+                logger.info(
+                    "query_verifier_invalid_no_correction",
+                    errors=verify_result.get("errors", []),
+                )
+    except Exception as e:
+        logger.warning("query_verifier_skipped", error=str(e))
+
     return {"sql_valid": True, "error": None}
 
 
@@ -243,6 +322,25 @@ def format_answer(state: AgentState) -> Dict[str, Any]:
                 _date_vals.add(str(v))
     data_range_hint = f"데이터에 포함된 날짜/기간 값: {sorted(_date_vals)[:20]}" if _date_vals else ""
 
+    # Pre-build conditional warnings (avoid backslash in f-string)
+    _preview_warning = ""
+    if len(results) > 20:
+        _preview_warning = f"⚠️ 위 JSON은 전체 {len(results)}행 중 상위 프리뷰입니다. 나머지 데이터도 존재하므로 '20일까지만 존재' 등 프리뷰 기반으로 데이터 범위를 단정하지 마세요."
+
+    _limit_warning = ""
+    if len(results) >= 10000:
+        _limit_warning = (
+            f"⚠️ 결과가 {len(results)}행으로 LIMIT 10,000에 도달했습니다. "
+            "전체 데이터 중 일부만 포함되어 있습니다. "
+            '답변 마지막에 반드시 다음 경고를 추가하세요: '
+            '\'> ⚠️ 조회 결과가 10,000행 제한에 도달하여 일부 데이터만 표시되었습니다. '
+            '전체 데이터가 필요하시면 **"전체 데이터 줘"**라고 말씀해주세요.\''
+        )
+
+    _result_header = f"총 {len(results)}행"
+    if len(results) > 20:
+        _result_header += f", 아래는 상위 {min(20, len(results))}건 프리뷰"
+
     prompt = f"""다음은 사용자의 질문과 BigQuery 실행 결과입니다.
 결과를 바탕으로 사용자에게 **구조화된 분석 보고서** 형태로 한국어 답변을 작성하세요.
 
@@ -257,12 +355,12 @@ def format_answer(state: AgentState) -> Dict[str, Any]:
 {sql}
 ```
 
-## 실행 결과 (총 {len(results)}행{f', 아래는 상위 {min(20, len(results))}건 프리뷰' if len(results) > 20 else ''})
+## 실행 결과 ({_result_header})
 ```json
 {result_preview}
 ```
-{f"⚠️ 위 JSON은 전체 {len(results)}행 중 상위 프리뷰입니다. 나머지 데이터도 존재하므로 '20일까지만 존재' 등 프리뷰 기반으로 데이터 범위를 단정하지 마세요." if len(results) > 20 else ""}
-{f"⚠️ 결과가 {len(results)}행으로 LIMIT에 도달했습니다. 전체 데이터 중 매출 상위 일부만 포함되어 있습니다. 답변에 이 사실을 반영하세요." if len(results) >= 1000 else ""}
+{_preview_warning}
+{_limit_warning}
 {data_range_hint}
 
 ## 답변 형식 (반드시 아래 섹션 구조를 따르세요)
@@ -328,6 +426,10 @@ def format_answer(state: AgentState) -> Dict[str, Any]:
                     break
             if not inserted:
                 answer = answer + f"\n\n#### 시각화\n{chart_markdown}"
+
+        # Embed SQL reference for full-data re-execution (hidden in details tag)
+        if len(results) >= 10000:
+            answer += f"\n\n<details><summary>실행된 쿼리</summary>\n\n```sql\n{sql}\n```\n</details>"
 
         return {"answer": answer}
     except Exception as e:
@@ -507,6 +609,101 @@ def build_sql_agent_graph() -> StateGraph:
 
 # Module-level compiled graph
 sql_agent = build_sql_agent_graph()
+
+
+def _extract_previous_sql(conversation_context: str) -> str:
+    """Extract the last executed SQL from conversation context.
+
+    Looks for SQL blocks in previous assistant messages.
+    """
+    import re as _re
+    # Match SQL in code blocks
+    matches = _re.findall(r'```sql\s*\n(.*?)\n```', conversation_context, _re.DOTALL)
+    if matches:
+        return matches[-1].strip()
+    # Match SELECT statements directly
+    select_matches = _re.findall(
+        r'(SELECT\s+[\s\S]*?LIMIT\s+\d+)',
+        conversation_context,
+        _re.IGNORECASE,
+    )
+    if select_matches:
+        return select_matches[-1].strip()
+    return ""
+
+
+async def run_sql_agent_unlimited(
+    previous_sql: str,
+    query: str,
+    model_type: str = MODEL_GEMINI,
+) -> str:
+    """Re-run a previous SQL query without the LIMIT restriction.
+
+    Used when user confirms they want full data after a 10000-row truncation warning.
+
+    Args:
+        previous_sql: The SQL from the previous query to re-run.
+        query: Original user query for context.
+        model_type: LLM model type.
+
+    Returns:
+        Formatted answer with full data.
+    """
+    import re as _re
+
+    if not previous_sql:
+        return "이전 쿼리를 찾을 수 없습니다. 원래 질문을 다시 해주세요."
+
+    # Remove LIMIT clause from SQL
+    unlimited_sql = _re.sub(r'\s*LIMIT\s+\d+\s*$', '', previous_sql, flags=_re.IGNORECASE).strip()
+
+    logger.info("sql_agent_unlimited_rerun", sql=unlimited_sql[:200])
+
+    # Validate
+    is_valid, error_msg = validate_sql(unlimited_sql)
+    if not is_valid:
+        return f"SQL 검증 실패: {error_msg}"
+
+    try:
+        bq = get_bigquery_client()
+        results = bq.execute_query(unlimited_sql, timeout=60.0, max_rows=100000)
+        total_rows = len(results)
+        logger.info("sql_unlimited_executed", row_count=total_rows)
+
+        if not results:
+            return "조회 결과가 없습니다."
+
+        # Format with Flash
+        llm = get_flash_client()
+        # For very large results, provide summary only
+        if total_rows > 500:
+            preview = _build_smart_preview(results, query)
+        else:
+            preview = json.dumps(results[:50], ensure_ascii=False, indent=2, default=str)
+
+        prompt = f"""사용자가 전체 데이터를 요청했습니다. LIMIT 없이 재실행한 결과입니다.
+
+## 사용자 질문
+{query}
+
+## 실행 결과 (총 {total_rows}행)
+```json
+{preview}
+```
+
+## 답변 규칙
+1. 총 {total_rows}행의 전체 데이터를 조회했다고 안내하세요.
+2. 핵심 요약 (상위 항목, 합계 등)을 마크다운 표로 보여주세요.
+3. 데이터가 너무 많아 전부 표시할 수 없는 경우 상위 항목 요약 + 전체 통계를 제공하세요.
+4. 한국어로 답변하세요.
+5. 금액: 1억 이상은 "약 OO.O억원", 1억 미만은 천 단위 쉼표."""
+
+        answer = llm.generate(prompt, temperature=0.3)
+        return answer
+
+    except Exception as e:
+        logger.error("sql_unlimited_failed", error=str(e))
+        return f"전체 데이터 조회 중 오류가 발생했습니다: {str(e)}"
 
 
 async def run_sql_agent(

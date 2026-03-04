@@ -15,7 +15,7 @@ logger = structlog.get_logger(__name__)
 
 admin_router = APIRouter(prefix="/api/admin", tags=["admin"])
 
-_ALL_MODELS = "skin1004-Analysis,skin1004-Search"
+_ALL_MODELS = "skin1004-Analysis"
 
 
 def _require_admin(user: User = Depends(get_current_user)) -> User:
@@ -55,7 +55,7 @@ async def list_users(
             raw = getattr(u, "allowed_models", "") or ""
             models = [m.strip() for m in raw.split(",") if m.strip()]
             if not models:
-                models = ["skin1004-Search"]
+                models = ["skin1004-Analysis"]
         result.append(UserListItem(
             id=u.id, email=u.email, name=u.name,
             role=u.role, allowed_models=models,

@@ -1,9 +1,9 @@
 """Re-test the slowest queries (100s+) on v6.2 to measure improvement.
 
 Criteria:
-- >= 200s = FAILURE (red)
-- >= 100s = WARNING (yellow)
-- < 100s  = OK (green)
+- >= 90s = FAILURE (red)
+- >= 60s = WARNING (yellow)
+- < 60s  = OK (green)
 """
 import json
 import time
@@ -49,9 +49,9 @@ def send_query(query: str) -> tuple[str, float]:
 
 
 def classify(seconds: float) -> str:
-    if seconds >= 200:
+    if seconds >= 90:
         return "FAIL"
-    elif seconds >= 100:
+    elif seconds >= 60:
         return "WARN"
     return "OK"
 
@@ -59,7 +59,7 @@ def classify(seconds: float) -> str:
 def main():
     print("=" * 75)
     print("  Slow Query Re-test on v6.2")
-    print("  Criteria: >= 200s = FAIL, >= 100s = WARN, < 100s = OK")
+    print("  Criteria: >= 90s = FAIL, >= 60s = WARN, < 60s = OK")
     print("=" * 75)
     print()
 
@@ -111,7 +111,7 @@ def main():
     # Save
     with open("test_slow_queries_result.txt", "w", encoding="utf-8") as f:
         f.write("Slow Query Re-test on v6.2\n")
-        f.write(f"Criteria: >= 200s = FAIL, >= 100s = WARN, < 100s = OK\n")
+        f.write(f"Criteria: >= 90s = FAIL, >= 60s = WARN, < 60s = OK\n")
         f.write("=" * 75 + "\n\n")
         for r in results:
             f.write(f"[{r['id']}] {r['domain']}: {r['query']}\n")

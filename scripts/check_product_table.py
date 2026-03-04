@@ -23,7 +23,7 @@ queries = [
     ("Row count", """
         SELECT COUNT(*) as cnt
         FROM `skin1004-319714.Sales_Integration.Product`
-        WHERE Date >= '2000-01-01'
+        WHERE Date >= '2019-01-01'
     """),
     ("Product distinct values (top 30)", """
         SELECT DISTINCT Product, COUNT(*) as cnt

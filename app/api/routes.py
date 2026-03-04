@@ -22,6 +22,8 @@ from app.models.schemas import (
     ModelInfo,
     ModelListResponse,
     UsageInfo,
+    extract_images,
+    extract_text,
 )
 
 logger = structlog.get_logger(__name__)
@@ -71,26 +73,51 @@ async def chat_completions(http_request: Request, request: ChatCompletionRequest
     if not user_messages:
         raise HTTPException(status_code=400, detail="메시지에 사용자 질문이 없습니다.")
 
-    query = user_messages[-1].content
+    last_content = user_messages[-1].content
+    query = extract_text(last_content)
+    images = extract_images(last_content)
+
+    if images:
+        logger.info("multimodal_request", image_count=len(images), text_length=len(query))
 
     # Resolve which LLM to use based on model selection
     model_type = resolve_model_type(request.model)
 
     # Build conversation history for context continuity
-    messages_for_context = [
-        {"role": m.role, "content": m.content} for m in request.messages
-    ]
+    # Strip images from older messages to keep payload small
+    messages_for_context = []
+    for idx, m in enumerate(request.messages):
+        content = m.content
+        if isinstance(content, list):
+            # Keep images only on the last user message
+            is_last_user = (m.role == "user" and m == user_messages[-1])
+            if is_last_user:
+                # Convert Pydantic models to plain dicts
+                parts = []
+                for part in content:
+                    if hasattr(part, "model_dump"):
+                        parts.append(part.model_dump())
+                    elif isinstance(part, dict):
+                        parts.append(part)
+                    else:
+                        parts.append({"type": "text", "text": str(part)})
+                messages_for_context.append({"role": m.role, "content": parts})
+            else:
+                # Older messages: strip images, keep text only
+                messages_for_context.append({"role": m.role, "content": extract_text(content)})
+        else:
+            messages_for_context.append({"role": m.role, "content": content})
 
     if request.stream:
         return StreamingResponse(
-            _stream_response(query, messages_for_context, model_type, request, user_email),
+            _stream_response(query, messages_for_context, model_type, request, user_email, images=images),
             media_type="text/event-stream",
         )
 
     # Non-streaming response (v3.0: Orchestrator)
     try:
         result = await _get_orchestrator().route_and_execute(
-            query, messages_for_context, model_type, user_email=user_email
+            query, messages_for_context, model_type, user_email=user_email, images=images
         )
         answer = result.get("answer", "")
     except Exception as e:
@@ -122,6 +149,7 @@ async def _stream_response(
     model_type: str,
     request: ChatCompletionRequest,
     user_email: str = "",
+    images: list = None,
 ) -> AsyncGenerator[str, None]:
     """Stream response chunks in SSE format.
 
@@ -131,6 +159,7 @@ async def _stream_response(
         model_type: "gemini" or "claude".
         request: Original request.
         user_email: User's email for GWS auth.
+        images: Extracted images (list of {"data": bytes, "mime_type": str}).
 
     Yields:
         SSE-formatted response chunks.
@@ -155,7 +184,7 @@ async def _stream_response(
     result = None
     try:
         result = await _get_orchestrator().route_and_execute(
-            query, messages, model_type, user_email=user_email
+            query, messages, model_type, user_email=user_email, images=images or []
         )
         answer = result.get("answer", "")
     except Exception as e:
@@ -225,7 +254,6 @@ async def list_models():
     """List available models (OpenAI-compatible)."""
     return ModelListResponse(
         data=[
-            ModelInfo(id="skin1004-Search", owned_by="skin1004"),
             ModelInfo(id="skin1004-Analysis", owned_by="skin1004"),
         ]
     )

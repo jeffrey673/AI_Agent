@@ -464,7 +464,7 @@ def phase3_api():
             alen = len(answer)
 
             # Classify
-            if elapsed >= 100:
+            if elapsed >= 90:
                 status = "FAIL"
             elif alen < 20:
                 status = "EMPTY"

@@ -50,7 +50,7 @@ for i, (tag, model, q, expected) in enumerate(tests, 1):
         # Fixed error detection: only check first 200 chars
         is_error = any(kw in answer[:200] for kw in ERROR_KEYWORDS)
         is_short = answer_len < 30
-        perf = "FAIL" if elapsed >= 200 else ("WARN" if elapsed >= 100 else "OK")
+        perf = "FAIL" if elapsed >= 90 else ("WARN" if elapsed >= 60 else "OK")
         status = "ERROR" if is_error else ("SHORT" if is_short else "OK")
 
         preview = answer[:150].replace('\n', ' ')

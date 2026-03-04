@@ -61,5 +61,5 @@ def _migrate(engine):
         if "allowed_models" not in cols:
             with engine.begin() as conn:
                 conn.execute(text(
-                    "ALTER TABLE users ADD COLUMN allowed_models TEXT DEFAULT 'skin1004-Search'"
+                    "ALTER TABLE users ADD COLUMN allowed_models TEXT DEFAULT 'skin1004-Analysis'"
                 ))

@@ -25,7 +25,7 @@ class User(Base):
     name: Mapped[str] = mapped_column(String(255), nullable=False)
     password: Mapped[str] = mapped_column(String(255), nullable=False)
     role: Mapped[str] = mapped_column(String(20), default="user")
-    allowed_models: Mapped[str] = mapped_column(String(500), default="skin1004-Search")
+    allowed_models: Mapped[str] = mapped_column(String(500), default="skin1004-Analysis")
     created_at: Mapped[datetime] = mapped_column(DateTime, default=_utcnow)
 
     conversations: Mapped[list["Conversation"]] = relationship(

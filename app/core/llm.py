@@ -8,13 +8,64 @@ Claude side:  Opus 4.6 (complex reasoning) / Sonnet 4.6 (light tasks)
 """
 
 import re
-from typing import Any, Dict, List, Optional, Protocol
+import time
+from typing import Any, Dict, List, Optional, Protocol, Union
 
 import structlog
 
 from app.config import get_settings
 
 logger = structlog.get_logger(__name__)
+
+
+# --- Retry Helper ---
+
+_MAX_RETRIES = 3
+_RETRY_DELAYS = [1, 2, 4]  # seconds (exponential backoff)
+
+
+def _is_retryable(error: Exception) -> bool:
+    """Check if error is retryable (rate limit, server error, network)."""
+    if isinstance(error, (ConnectionError, TimeoutError, OSError)):
+        return True
+    error_str = str(error).lower()
+    if "429" in error_str or "rate" in error_str:
+        return True
+    if "503" in error_str or "500" in error_str:
+        return True
+    if "timeout" in error_str:
+        return True
+    if "server" in error_str and ("error" in error_str or "unavailable" in error_str):
+        return True
+    return False
+
+
+def _retry_call(func, *args, **kwargs):
+    """Execute func with retry on transient failures.
+
+    Retries up to _MAX_RETRIES times with exponential backoff
+    for retryable errors (429, 500, 503, network, timeout).
+    Client errors (400, 401, 403) are raised immediately.
+    """
+    last_error = None
+    for attempt in range(_MAX_RETRIES):
+        try:
+            return func(*args, **kwargs)
+        except Exception as e:
+            last_error = e
+            if attempt < _MAX_RETRIES - 1 and _is_retryable(e):
+                delay = _RETRY_DELAYS[attempt]
+                logger.warning(
+                    "llm_retry",
+                    attempt=attempt + 1,
+                    max_retries=_MAX_RETRIES,
+                    delay=delay,
+                    error=str(e)[:200],
+                )
+                time.sleep(delay)
+            else:
+                raise
+    raise last_error
 
 
 # --- Common Interface ---
@@ -80,7 +131,8 @@ class GeminiClient:
             config.system_instruction = system_instruction
 
         try:
-            response = self.client.models.generate_content(
+            response = _retry_call(
+                self.client.models.generate_content,
                 model=self.model,
                 contents=prompt,
                 config=config,
@@ -92,9 +144,53 @@ class GeminiClient:
             logger.error("gemini_generation_failed", error=str(e))
             raise
 
+    def generate_with_images(
+        self,
+        text: str,
+        images: List[Dict[str, Any]],
+        system_instruction: Optional[str] = None,
+        temperature: float = 0.3,
+        max_output_tokens: int = 8192,
+    ) -> str:
+        """Generate a response from text + images (vision).
+
+        Args:
+            text: User's text prompt.
+            images: List of {"data": bytes, "mime_type": str}.
+        """
+        from google.genai import types
+
+        logger.info("gemini_generating_with_images", image_count=len(images))
+
+        parts = []
+        for img in images:
+            parts.append(types.Part.from_bytes(data=img["data"], mime_type=img["mime_type"]))
+        parts.append(types.Part.from_text(text=text))
+
+        config = types.GenerateContentConfig(
+            temperature=temperature,
+            max_output_tokens=max_output_tokens,
+        )
+        if system_instruction:
+            config.system_instruction = system_instruction
+
+        try:
+            response = _retry_call(
+                self.client.models.generate_content,
+                model=self.model,
+                contents=types.Content(role="user", parts=parts),
+                config=config,
+            )
+            result = response.text or ""
+            logger.info("gemini_vision_response_generated", response_length=len(result))
+            return result
+        except Exception as e:
+            logger.error("gemini_vision_failed", error=str(e))
+            raise
+
     def generate_with_history(
         self,
-        messages: List[Dict[str, str]],
+        messages: List[Dict[str, Any]],
         system_instruction: Optional[str] = None,
         temperature: float = 0.1,
         max_output_tokens: int = 8192,
@@ -109,12 +205,15 @@ class GeminiClient:
                 role = "model"
             if role == "system":
                 continue
-            contents.append(
-                types.Content(
-                    role=role,
-                    parts=[types.Part.from_text(text=msg["content"])],
-                )
-            )
+
+            content = msg.get("content", "")
+            # Multimodal content (list of parts)
+            if isinstance(content, list):
+                parts = self._build_gemini_parts(content)
+            else:
+                parts = [types.Part.from_text(text=str(content))]
+
+            contents.append(types.Content(role=role, parts=parts))
 
         config = types.GenerateContentConfig(
             temperature=temperature,
@@ -124,7 +223,8 @@ class GeminiClient:
             config.system_instruction = system_instruction
 
         try:
-            response = self.client.models.generate_content(
+            response = _retry_call(
+                self.client.models.generate_content,
                 model=self.model,
                 contents=contents,
                 config=config,
@@ -152,7 +252,8 @@ class GeminiClient:
             config.system_instruction = system_instruction
 
         try:
-            response = self.client.models.generate_content(
+            response = _retry_call(
+                self.client.models.generate_content,
                 model=self.model,
                 contents=prompt,
                 config=config,
@@ -183,7 +284,8 @@ class GeminiClient:
             config.system_instruction = system_instruction
 
         try:
-            response = self.client.models.generate_content(
+            response = _retry_call(
+                self.client.models.generate_content,
                 model=self.model,
                 contents=prompt,
                 config=config,
@@ -195,9 +297,34 @@ class GeminiClient:
             logger.error("gemini_search_failed", error=str(e))
             raise
 
+    def _build_gemini_parts(self, content_list: list) -> list:
+        """Convert multimodal content list to Gemini Part objects."""
+        from google.genai import types
+        import base64
+        import re
+
+        parts = []
+        for item in content_list:
+            if isinstance(item, dict):
+                if item.get("type") == "text":
+                    parts.append(types.Part.from_text(text=item.get("text", "")))
+                elif item.get("type") == "image_url":
+                    url = item.get("image_url", {}).get("url", "")
+                    if url.startswith("data:"):
+                        match = re.match(r"data:(image/\w+);base64,(.+)", url, re.DOTALL)
+                        if match:
+                            mime = match.group(1)
+                            raw = base64.b64decode(match.group(2))
+                            parts.append(types.Part.from_bytes(data=raw, mime_type=mime))
+            else:
+                parts.append(types.Part.from_text(text=str(item)))
+        if not parts:
+            parts.append(types.Part.from_text(text=""))
+        return parts
+
     def generate_with_history_and_search(
         self,
-        messages: List[Dict[str, str]],
+        messages: List[Dict[str, Any]],
         system_instruction: Optional[str] = None,
         temperature: float = 0.3,
         max_output_tokens: int = 8192,
@@ -212,12 +339,14 @@ class GeminiClient:
                 role = "model"
             if role == "system":
                 continue
-            contents.append(
-                types.Content(
-                    role=role,
-                    parts=[types.Part.from_text(text=msg["content"])],
-                )
-            )
+
+            content = msg.get("content", "")
+            if isinstance(content, list):
+                parts = self._build_gemini_parts(content)
+            else:
+                parts = [types.Part.from_text(text=str(content))]
+
+            contents.append(types.Content(role=role, parts=parts))
 
         config = types.GenerateContentConfig(
             temperature=temperature,
@@ -228,7 +357,8 @@ class GeminiClient:
             config.system_instruction = system_instruction
 
         try:
-            response = self.client.models.generate_content(
+            response = _retry_call(
+                self.client.models.generate_content,
                 model=self.model,
                 contents=contents,
                 config=config,
@@ -264,7 +394,10 @@ class ClaudeClient:
     def __init__(self, model: Optional[str] = None) -> None:
         from anthropic import Anthropic
         self.settings = get_settings()
-        self.client = Anthropic(api_key=self.settings.anthropic_api_key)
+        self.client = Anthropic(
+            api_key=self.settings.anthropic_api_key,
+            timeout=60.0,
+        )
         self.model = model or self.settings.anthropic_opus_model
         logger.info("claude_client_initialized", model=self.model)
 
@@ -288,7 +421,7 @@ class ClaudeClient:
             kwargs["system"] = system_instruction
 
         try:
-            response = self.client.messages.create(**kwargs)
+            response = _retry_call(self.client.messages.create, **kwargs)
             text = response.content[0].text if response.content else ""
             logger.info("claude_response_generated", response_length=len(text))
             return text
@@ -296,9 +429,57 @@ class ClaudeClient:
             logger.error("claude_generation_failed", error=str(e))
             raise
 
+    def generate_with_images(
+        self,
+        text: str,
+        images: List[Dict[str, Any]],
+        system_instruction: Optional[str] = None,
+        temperature: float = 0.3,
+        max_output_tokens: int = 8192,
+    ) -> str:
+        """Generate a response from text + images (vision).
+
+        Args:
+            text: User's text prompt.
+            images: List of {"data": bytes, "mime_type": str}.
+        """
+        import base64
+
+        logger.info("claude_generating_with_images", model=self.model, image_count=len(images))
+
+        content_blocks = []
+        for img in images:
+            content_blocks.append({
+                "type": "image",
+                "source": {
+                    "type": "base64",
+                    "media_type": img["mime_type"],
+                    "data": base64.b64encode(img["data"]).decode("utf-8"),
+                },
+            })
+        content_blocks.append({"type": "text", "text": text})
+
+        kwargs: Dict[str, Any] = {
+            "model": self.model,
+            "max_tokens": max_output_tokens,
+            "temperature": temperature,
+            "messages": [{"role": "user", "content": content_blocks}],
+        }
+        if system_instruction:
+            kwargs["system"] = system_instruction
+
+        try:
+            response = _retry_call(self.client.messages.create, **kwargs)
+            result = response.content[0].text if response.content else ""
+            logger.info("claude_vision_response_generated", response_length=len(result))
+            return result
+        except Exception as e:
+            logger.error("claude_vision_failed", error=str(e))
+            raise
+
     def generate_with_history(
         self,
-        messages: List[Dict[str, str]],
+        messages: List[Dict[str, Any]],
         system_instruction: Optional[str] = None,
         temperature: float = 0.1,
         max_output_tokens: int = 8192,
@@ -311,17 +492,33 @@ class ClaudeClient:
                 role = "assistant"
             if role == "system":
                 continue
-            api_messages.append({"role": role, "content": msg["content"]})
+
+            content = msg.get("content", "")
+            # Multimodal content → Claude native format
+            if isinstance(content, list):
+                claude_content = self._build_claude_content(content)
+                api_messages.append({"role": role, "content": claude_content})
+            else:
+                api_messages.append({"role": role, "content": str(content)})
 
         # Ensure starts with user
         if not api_messages or api_messages[0]["role"] != "user":
             api_messages.insert(0, {"role": "user", "content": "안녕하세요."})
 
-        # Merge consecutive same-role messages
+        # Merge consecutive same-role messages (handle both str and list content)
         merged = []
         for msg in api_messages:
             if merged and merged[-1]["role"] == msg["role"]:
-                merged[-1]["content"] += "\n" + msg["content"]
+                prev_c = merged[-1]["content"]
+                curr_c = msg["content"]
+                # Both strings → simple concatenation
+                if isinstance(prev_c, str) and isinstance(curr_c, str):
+                    merged[-1]["content"] = prev_c + "\n" + curr_c
+                else:
+                    # Convert to text-only string for merging (drop images from old messages)
+                    prev_text = prev_c if isinstance(prev_c, str) else self._content_to_text(prev_c)
+                    curr_text = curr_c if isinstance(curr_c, str) else self._content_to_text(curr_c)
+                    merged[-1]["content"] = prev_text + "\n" + curr_text
             else:
                 merged.append(dict(msg))
         api_messages = merged
@@ -340,7 +537,7 @@ class ClaudeClient:
             kwargs["system"] = system_instruction
 
         try:
-            response = self.client.messages.create(**kwargs)
+            response = _retry_call(self.client.messages.create, **kwargs)
             return response.content[0].text if response.content else ""
         except Exception as e:
             logger.error("claude_history_failed", error=str(e))
@@ -364,7 +561,7 @@ class ClaudeClient:
         }
 
         try:
-            response = self.client.messages.create(**kwargs)
+            response = _retry_call(self.client.messages.create, **kwargs)
             text = response.content[0].text if response.content else "{}"
             if "```" in text:
                 match = re.search(r'```(?:json)?\s*\n?(.*?)\n?\s*```', text, re.DOTALL)
@@ -374,6 +571,43 @@ class ClaudeClient:
         except Exception as e:
             logger.error("claude_json_failed", error=str(e))
             raise
+
+    @staticmethod
+    def _build_claude_content(content_list: list) -> list:
+        """Convert OpenAI-format multimodal content list to Claude native format."""
+        import base64 as _b64
+        import re as _re
+
+        blocks = []
+        for item in content_list:
+            if isinstance(item, dict):
+                if item.get("type") == "text":
+                    blocks.append({"type": "text", "text": item.get("text", "")})
+                elif item.get("type") == "image_url":
+                    url = item.get("image_url", {}).get("url", "")
+                    if url.startswith("data:"):
+                        match = _re.match(r"data:(image/\w+);base64,(.+)", url, _re.DOTALL)
+                        if match:
+                            blocks.append({
+                                "type": "image",
+                                "source": {
+                                    "type": "base64",
+                                    "media_type": match.group(1),
+                                    "data": match.group(2),
+                                },
+                            })
+            else:
+                blocks.append({"type": "text", "text": str(item)})
+        return blocks or [{"type": "text", "text": ""}]
+
+    @staticmethod
+    def _content_to_text(content_list: list) -> str:
+        """Extract text from Claude-format content blocks."""
+        parts = []
+        for block in content_list:
+            if isinstance(block, dict) and block.get("type") == "text":
+                parts.append(block.get("text", ""))
+        return " ".join(parts).strip()
 
     def test_connection(self) -> bool:
         """Test Claude API connection."""
@@ -456,10 +690,8 @@ def resolve_model_type(model_id: str) -> str:
     Returns:
         MODEL_GEMINI or MODEL_CLAUDE.
     """
-    model_id_lower = model_id.lower()
-    if "analysis" in model_id_lower or "claude" in model_id_lower or "sonnet" in model_id_lower or "opus" in model_id_lower:
-        return MODEL_CLAUDE
-    return MODEL_GEMINI
+    # All models now route to Claude (Gemini Search model removed)
+    return MODEL_CLAUDE
 
 
 # Backward compatibility

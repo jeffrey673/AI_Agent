@@ -33,7 +33,7 @@ def test_single(t):
         answer = data.get("choices", [{}])[0].get("message", {}).get("content", "")
         alen = len(answer)
 
-        if elapsed >= 100:
+        if elapsed >= 90:
             status = "FAIL"
         elif alen < 20:
             status = "EMPTY"

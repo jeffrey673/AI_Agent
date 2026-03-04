@@ -74,6 +74,11 @@ class Settings(BaseSettings):
     jwt_secret_key: str = "skin1004-ai-secret-change-me"
     sqlite_db_path: str = "C:/Users/DB_PC/.open-webui/data/skin1004_chat.db"
 
+    # CORS
+    cors_origins: str = "http://localhost:3000,http://localhost:8000"
+    # Cookie
+    cookie_secure: bool = False
+
     @property
     def sales_table_full_path(self) -> str:
         """Full BigQuery path for the sales table."""
@@ -103,8 +108,23 @@ class Settings(BaseSettings):
     def allowed_tables(self) -> List[str]:
         """Tables allowed for Text-to-SQL queries."""
         return [
+            # Sales
             self.sales_table_full_path,
             self.product_table_full_path,
+            # Marketing / Advertising
+            "skin1004-319714.marketing_analysis.integrated_advertising_data",
+            "skin1004-319714.marketing_analysis.Integrated_marketing_cost",
+            "skin1004-319714.marketing_analysis.shopify_analysis_sales",
+            "skin1004-319714.Platform_Data.raw_data",
+            "skin1004-319714.marketing_analysis.influencer_input_ALL_TEAMS",
+            "skin1004-319714.marketing_analysis.amazon_search_analytics_catalog_performance",
+            # Reviews
+            "skin1004-319714.Review_Data.Amazon_Review",
+            "skin1004-319714.Review_Data.Qoo10_Review",
+            "skin1004-319714.Review_Data.Shopee_Review",
+            "skin1004-319714.Review_Data.Smartstore_Review",
+            # Ad data
+            "skin1004-319714.ad_data.meta data_test",
         ]
 
 

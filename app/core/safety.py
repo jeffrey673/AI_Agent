@@ -193,6 +193,28 @@ def get_safety_status() -> dict:
     else:
         services["BigQuery \uc81c\ud488"] = {"status": "ok", "detail": "Product"}
 
+    # Marketing DB tables (share bigquery circuit)
+    _marketing_tables = {
+        "BQ \uad11\uace0\ub370\uc774\ud130": ("marketing_analysis", "integrated_advertising_data"),
+        "BQ \ub9c8\ucf00\ud305\ube44\uc6a9": ("marketing_analysis", "Integrated_marketing_cost"),
+        "BQ Shopify": ("marketing_analysis", "shopify_analysis_sales"),
+        "BQ \ud50c\ub7ab\ud3fc": ("Platform_Data", "raw_data"),
+        "BQ \uc778\ud50c\ub8e8\uc5b8\uc11c": ("marketing_analysis", "influencer_input_ALL_TEAMS"),
+        "BQ \uc544\ub9c8\uc874\uac80\uc0c9": ("marketing_analysis", "amazon_search_analytics_catalog_performance"),
+        "BQ \uc544\ub9c8\uc874\ub9ac\ubdf0": ("Review_Data", "Amazon_Review"),
+        "BQ \ud050\ud150\ub9ac\ubdf0": ("Review_Data", "Qoo10_Review"),
+        "BQ \uc1fc\ud53c\ub9ac\ubdf0": ("Review_Data", "Shopee_Review"),
+        "BQ \uc2a4\ub9c8\ud2b8\uc2a4\ud1a0\uc5b4": ("Review_Data", "Smartstore_Review"),
+        "BQ \uba54\ud0c0\uad11\uace0": ("ad_data", "meta data_test"),
+    }
+    for label, (dataset, table) in _marketing_tables.items():
+        if bq_circuit.state != CBState.CLOSED:
+            services[label] = {"status": "error", "detail": bq_circuit.state.value}
+        elif mm.active:
+            services[label] = {"status": "updating", "detail": mm.reason}
+        else:
+            services[label] = {"status": "ok", "detail": f"{dataset}.{table}"}
+
     # Notion
     notion_circuit = get_circuit("notion")
     try:

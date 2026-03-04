@@ -5,7 +5,7 @@ Focus:
 - Notion: different search patterns, cross-page, ambiguous queries
 - GWS: different search terms, date ranges, file types
 
-Criteria: >= 200s = FAIL, >= 100s = WARN, < 100s = OK
+Criteria: >= 90s = FAIL, >= 60s = WARN, < 60s = OK
 """
 import json
 import time
@@ -408,9 +408,9 @@ def send_query(query: str, timeout: int = 320) -> tuple:
 
 
 def classify(seconds: float) -> str:
-    if seconds >= 200:
+    if seconds >= 90:
         return "FAIL"
-    elif seconds >= 100:
+    elif seconds >= 60:
         return "WARN"
     return "OK"
 
@@ -421,7 +421,7 @@ def main():
 
     total = len(ALL_QUERIES)
     print(f"Round 4 Diverse QA Test — {total} queries")
-    print(f"Criteria: >= 200s = FAIL, >= 100s = WARN, < 100s = OK")
+    print(f"Criteria: >= 90s = FAIL, >= 60s = WARN, < 60s = OK")
     print("=" * 75)
 
     results = []
@@ -514,7 +514,7 @@ def main():
     with open(out_file, "w", encoding="utf-8") as f:
         f.write(f"Round 4 Diverse QA Test — {total} queries\n")
         f.write(f"Date: {datetime.now().strftime('%Y-%m-%d %H:%M')}\n")
-        f.write(f"Criteria: >= 200s = FAIL, >= 100s = WARN, < 100s = OK\n")
+        f.write(f"Criteria: >= 90s = FAIL, >= 60s = WARN, < 60s = OK\n")
         f.write("=" * 75 + "\n\n")
 
         current_domain = ""

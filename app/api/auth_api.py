@@ -33,7 +33,7 @@ class SigninRequest(BaseModel):
     password: str
 
 
-_ALL_MODELS = "skin1004-Analysis,skin1004-Search"
+_ALL_MODELS = "skin1004-Analysis"
 
 
 class UserResponse(BaseModel):
@@ -52,7 +52,7 @@ def _user_response(user: User) -> UserResponse:
         raw = getattr(user, "allowed_models", "") or ""
         models = [m.strip() for m in raw.split(",") if m.strip()]
         if not models:
-            models = ["skin1004-Search"]
+            models = ["skin1004-Analysis"]
     return UserResponse(
         id=user.id, email=user.email, name=user.name,
         role=user.role, allowed_models=models,
@@ -70,10 +70,12 @@ def _create_token(user_id: str, email: str = "") -> str:
 
 
 def _set_cookie(response: Response, token: str):
+    settings = get_settings()
     response.set_cookie(
         key="token",
         value=token,
         httponly=True,
+        secure=settings.cookie_secure,
         samesite="lax",
         max_age=_TOKEN_EXPIRE_DAYS * 86400,
         path="/",

@@ -14,6 +14,11 @@
   var isStreaming = false;
   var lastUserQuery = "";
 
+  // ===== Image Upload State =====
+  var pendingImages = [];  // Array of { file: File, dataUrl: string }
+  var MAX_IMAGE_SIZE = 10 * 1024 * 1024;  // 10MB
+  var ALLOWED_IMAGE_TYPES = ["image/png", "image/jpeg", "image/gif", "image/webp"];
+
   // ===== Follow-up suggestion pools (based on actual BigQuery data) =====
   var FOLLOWUP_POOLS = {
     sales: [
@@ -76,6 +81,10 @@
   var mobileOverlay = document.getElementById("mobile-overlay");
   var convoSearch = document.getElementById("convo-search");
   var followupContainer = document.getElementById("followup-suggestions");
+  var imagePreviewStrip = document.getElementById("image-preview-strip");
+  var btnAttach = document.getElementById("btn-attach");
+  var fileInput = document.getElementById("file-input");
+  var chatInputArea = document.getElementById("chat-input-area");
 
   // ===== Init =====
   init();
@@ -117,7 +126,52 @@
     chatInput.addEventListener("input", function () {
       this.style.height = "auto";
       this.style.height = Math.min(this.scrollHeight, 150) + "px";
-      btnSend.disabled = !this.value.trim();
+      updateSendButton();
+    });
+
+    // Image attach button → trigger file input
+    btnAttach.addEventListener("click", function () {
+      fileInput.click();
+    });
+
+    // File input change → process selected files
+    fileInput.addEventListener("change", function () {
+      if (this.files) addImageFiles(this.files);
+      this.value = "";  // Reset so same file can be re-selected
+    });
+
+    // Paste image from clipboard
+    chatInput.addEventListener("paste", function (e) {
+      var items = e.clipboardData && e.clipboardData.items;
+      if (!items) return;
+      for (var i = 0; i < items.length; i++) {
+        if (items[i].type.indexOf("image/") === 0) {
+          e.preventDefault();
+          var file = items[i].getAsFile();
+          if (file) addImageFiles([file]);
+          return;
+        }
+      }
+    });
+
+    // Drag and drop images
+    chatInputArea.addEventListener("dragover", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      this.classList.add("drag-over");
+    });
+    chatInputArea.addEventListener("dragleave", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      this.classList.remove("drag-over");
+    });
+    chatInputArea.addEventListener("drop", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      this.classList.remove("drag-over");
+      if (e.dataTransfer && e.dataTransfer.files) {
+        addImageFiles(e.dataTransfer.files);
+      }
     });
 
     // New chat
@@ -127,6 +181,7 @@
       showWelcome();
       highlightActiveConvo();
       hideFollowups();
+      clearPendingImages();
       closeMobileSidebar();
     });
 
@@ -138,6 +193,7 @@
       showWelcome();
       highlightActiveConvo();
       hideFollowups();
+      clearPendingImages();
       closeMobileSidebar();
     });
 
@@ -439,12 +495,80 @@
     }
   }
 
+  // ===== Image Helpers =====
+  function updateSendButton() {
+    btnSend.disabled = !(chatInput.value.trim() || pendingImages.length > 0);
+  }
+
+  function addImageFiles(fileList) {
+    for (var i = 0; i < fileList.length; i++) {
+      var file = fileList[i];
+      if (ALLOWED_IMAGE_TYPES.indexOf(file.type) === -1) {
+        alert("지원되지 않는 이미지 형식입니다: " + file.name + "\nPNG, JPEG, GIF, WebP만 가능합니다.");
+        continue;
+      }
+      if (file.size > MAX_IMAGE_SIZE) {
+        alert("이미지가 너무 큽니다: " + file.name + "\n최대 10MB까지 가능합니다.");
+        continue;
+      }
+      // Read as data URL
+      (function (f) {
+        var reader = new FileReader();
+        reader.onload = function (e) {
+          pendingImages.push({ file: f, dataUrl: e.target.result });
+          renderImagePreviews();
+          updateSendButton();
+        };
+        reader.readAsDataURL(f);
+      })(file);
+    }
+  }
+
+  function renderImagePreviews() {
+    if (pendingImages.length === 0) {
+      imagePreviewStrip.style.display = "none";
+      imagePreviewStrip.innerHTML = "";
+      return;
+    }
+    imagePreviewStrip.style.display = "flex";
+    imagePreviewStrip.innerHTML = "";
+    pendingImages.forEach(function (img, idx) {
+      var item = document.createElement("div");
+      item.className = "image-preview-item";
+
+      var thumb = document.createElement("img");
+      thumb.src = img.dataUrl;
+      thumb.alt = "Preview";
+      item.appendChild(thumb);
+
+      var removeBtn = document.createElement("button");
+      removeBtn.className = "image-preview-remove";
+      removeBtn.innerHTML = "&times;";
+      removeBtn.title = "제거";
+      removeBtn.addEventListener("click", function () {
+        pendingImages.splice(idx, 1);
+        renderImagePreviews();
+        updateSendButton();
+      });
+      item.appendChild(removeBtn);
+
+      imagePreviewStrip.appendChild(item);
+    });
+  }
+
+  function clearPendingImages() {
+    pendingImages = [];
+    renderImagePreviews();
+  }
+
   // ===== Send Message =====
   async function sendMessage() {
     var text = chatInput.value.trim();
-    if (!text || isStreaming) return;
+    var hasImages = pendingImages.length > 0;
+    if ((!text && !hasImages) || isStreaming) return;
 
     lastUserQuery = text;
+    var imagesToSend = pendingImages.slice();  // snapshot
     hideFollowups();
 
     if (!currentConvoId) {
@@ -454,14 +578,34 @@
     }
 
     chatWelcome.style.display = "none";
-    appendMessage("user", text, false);
+    // Render user message with images in chat bubble
+    appendUserMessage(text, imagesToSend);
     chatInput.value = "";
     chatInput.style.height = "auto";
+    clearPendingImages();
     btnSend.disabled = true;
 
+    // Build content for API (multimodal if images present)
+    var apiContent;
+    if (imagesToSend.length > 0) {
+      apiContent = [];
+      imagesToSend.forEach(function (img) {
+        apiContent.push({
+          type: "image_url",
+          image_url: { url: img.dataUrl }
+        });
+      });
+      if (text) {
+        apiContent.push({ type: "text", text: text });
+      }
+    } else {
+      apiContent = text;
+    }
+
     // Add user message to in-memory history
-    currentMessages.push({ role: "user", content: text });
-    await saveMessage("user", text);
+    currentMessages.push({ role: "user", content: apiContent });
+    // Save only text to DB (no images in SQLite)
+    await saveMessage("user", text || "[Image]");
     scrollToBottom();
 
     // Use in-memory messages for API (reliable, no DOM parsing)
@@ -637,25 +781,57 @@
   }
 
   // ===== Message Rendering =====
+  function appendUserMessage(text, images) {
+    var div = document.createElement("div");
+    div.className = "message message-user";
+
+    var bubble = document.createElement("div");
+    bubble.className = "message-content";
+    bubble.dataset.raw = text || "[Image]";
+
+    // Render images in chat bubble
+    if (images && images.length > 0) {
+      var grid = document.createElement("div");
+      grid.className = "user-image-grid" + (images.length === 1 ? " single" : "");
+      images.forEach(function (img) {
+        var imgEl = document.createElement("img");
+        imgEl.className = "user-uploaded-image";
+        imgEl.src = img.dataUrl;
+        imgEl.alt = "Uploaded image";
+        grid.appendChild(imgEl);
+      });
+      bubble.appendChild(grid);
+    }
+
+    if (text) {
+      var textEl = document.createElement("div");
+      textEl.textContent = text;
+      bubble.appendChild(textEl);
+    }
+
+    div.appendChild(bubble);
+    chatMessages.appendChild(div);
+    return div;
+  }
+
   function appendMessage(role, content, streaming) {
+    if (role === "user") {
+      return appendUserMessage(content, null);
+    }
+
     var div = document.createElement("div");
     div.className = "message message-" + role;
 
     var bubble = document.createElement("div");
     bubble.className = "message-content";
 
-    if (role === "user") {
-      bubble.textContent = content;
-      bubble.dataset.raw = content;
+    if (streaming) {
+      bubble.innerHTML = '<div class="typing-indicator"><span></span><span></span><span></span></div>';
     } else {
-      if (streaming) {
-        bubble.innerHTML = '<div class="typing-indicator"><span></span><span></span><span></span></div>';
-      } else {
-        bubble.dataset.raw = content;
-        renderMarkdown(bubble, content);
-        detectAndRenderCharts(bubble, content);
-        highlightCodeBlocks(bubble);
-      }
+      bubble.dataset.raw = content;
+      renderMarkdown(bubble, content);
+      detectAndRenderCharts(bubble, content);
+      highlightCodeBlocks(bubble);
     }
 
     div.appendChild(bubble);
@@ -790,6 +966,51 @@
     "BigQuery 제품": {
       label: "BQ 제품",
       svg: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>'
+    },
+    // Marketing DB tables
+    "BQ 광고데이터": {
+        label: "광고",
+        svg: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>'
+    },
+    "BQ 마케팅비용": {
+        label: "마케팅",
+        svg: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>'
+    },
+    "BQ Shopify": {
+        label: "Shopify",
+        svg: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>'
+    },
+    "BQ 플랫폼": {
+        label: "플랫폼",
+        svg: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>'
+    },
+    "BQ 인플루언서": {
+        label: "인플루언서",
+        svg: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>'
+    },
+    "BQ 아마존검색": {
+        label: "AZ검색",
+        svg: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>'
+    },
+    "BQ 아마존리뷰": {
+        label: "AZ리뷰",
+        svg: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>'
+    },
+    "BQ 큐텐리뷰": {
+        label: "큐텐리뷰",
+        svg: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>'
+    },
+    "BQ 쇼피리뷰": {
+        label: "쇼피리뷰",
+        svg: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>'
+    },
+    "BQ 스마트스토어": {
+        label: "스마트스토어",
+        svg: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>'
+    },
+    "BQ 메타광고": {
+        label: "메타광고",
+        svg: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>'
     },
     "Notion 문서": {
       label: "Notion",
@@ -956,7 +1177,6 @@
   // ===== Model Access Control =====
   var MODEL_LABELS = {
     "skin1004-Analysis": "Claude (Analysis)",
-    "skin1004-Search": "Gemini (Search)",
   };
 
   function filterModelSelector() {

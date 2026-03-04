@@ -1,8 +1,15 @@
 # SKIN1004 AI System - Security & Authentication Architecture
 
-> **문서 버전**: v1.0 | **작성일**: 2026-03-04
+> **문서 버전**: v2.0 | **작성일**: 2026-03-04 | **최종 수정**: 2026-03-04
 > **대상 독자**: IT팀, 보안 담당자, 시스템 관리자
 > **목적**: 시스템의 인증, 권한, 데이터 보호, 네트워크 보안 구조를 상세히 설명
+>
+> **v2.0 변경사항**:
+> - Gemini(skin1004-Search) 모델 제거 → Claude 단일 모델 운영
+> - CORS 와일드카드(`*`) 제거 → 설정 기반 도메인 제한
+> - Cookie `secure` 플래그 설정 기반 적용
+> - LLM API 재시도/타임아웃 로직 추가
+> - QueryVerifier를 SQL 파이프라인에 실제 통합
 
 ---
 
@@ -132,7 +139,7 @@
 | **만료 시간** | 7일 (604,800초) | `_TOKEN_EXPIRE_DAYS = 7` |
 | **저장 위치** | httpOnly Cookie | JavaScript 접근 불가 (XSS 방어) |
 | **SameSite** | Lax | CSRF 기본 방어 |
-| **Secure 플래그** | 미설정 (개발환경) | **프로덕션에서는 `secure=True` 필요** |
+| **Secure 플래그** | `settings.cookie_secure` (.env) | 개발: `False`, 프로덕션: `COOKIE_SECURE=true` |
 | **Path** | `/` | 전체 도메인에서 유효 |
 
 #### 파일 위치 및 함수
@@ -346,7 +353,7 @@ data/gws_tokens/
 │           │       │                                  │
 │    ┌──────▼──┐  ┌─▼─────────────────────┐           │
 │    │ 전체    │  │ allowed_models 확인   │           │
-│    │ 허용    │  │ DB: "skin1004-Search" │           │
+│    │ 허용    │  │ DB: "skin1004-Analysis"│          │
 │    └─────────┘  └──────┬────────────────┘           │
 │                         │                            │
 │              ┌──────────▼──────────┐                 │
@@ -366,15 +373,18 @@ data/gws_tokens/
 
 | 모델 ID | 내부 LLM | 용도 |
 |---------|---------|------|
-| `skin1004-Analysis` | Gemini 3 Pro | 복합 분석, 고품질 응답 |
-| `skin1004-Search` | Claude Sonnet | 검색, 기본 질문 |
+| `skin1004-Analysis` | Claude Opus 4.6 | 전체 대화, 분석, 응답 |
+
+> **v2.0 변경**: `skin1004-Search` (Gemini) 모델이 보안 강화를 위해 제거되었습니다.
+> 모든 사용자 대화는 Claude API를 통해 처리됩니다.
+> Gemini Flash는 내부 경량 작업(SQL 생성, 라우팅, 차트)에만 사용됩니다.
 
 #### DB 스키마
 
 ```sql
 -- users 테이블의 모델 접근 제어 컬럼
-allowed_models TEXT DEFAULT 'skin1004-Search'
--- 예: "skin1004-Analysis,skin1004-Search" (콤마 구분)
+allowed_models TEXT DEFAULT 'skin1004-Analysis'
+-- 단일 모델 운영 (v2.0부터)
 ```
 
 ### 3.3 Admin 자동 승격
@@ -389,7 +399,7 @@ def _ensure_admin():
     ).first()
     if user:
         user.role = "admin"
-        user.allowed_models = "skin1004-Analysis,skin1004-Search"
+        user.allowed_models = "skin1004-Analysis"
 ```
 
 | 파일 | 함수 | 역할 |
@@ -402,7 +412,7 @@ def _ensure_admin():
 
 ## 4. SQL 보안 (SQL Injection Prevention)
 
-Text-to-SQL Agent가 생성하는 SQL은 실행 전 **2단계 검증**을 거칩니다.
+Text-to-SQL Agent가 생성하는 SQL은 실행 전 **5단계 보안 파이프라인**을 거칩니다. (v2.0: QueryVerifier 실제 통합 완료)
 
 ### 4.1 검증 파이프라인
 
@@ -444,13 +454,17 @@ Text-to-SQL Agent가 생성하는 SQL은 실행 전 **2단계 검증**을 거칩
 │                   │                                                │
 │       ┌───────────▼───────────┐                                   │
 │       │  Stage 4: QueryVerifier  │  ← app/agents/query_verifier.py│
-│       │  (Claude Sonnet LLM)      │                                │
+│       │  (Claude Sonnet LLM)      │  ★ v2.0: 파이프라인 실제 통합  │
 │       │                           │                                │
 │       │  - BigQuery 문법 검증      │                                │
 │       │  - 스키마 일관성 검증      │                                │
 │       │  - 컬럼 매핑 규칙 검증     │                                │
 │       │  - 날짜 필터 검증          │                                │
 │       │  - SQL 자동 수정 (필요시)  │                                │
+│       │                           │                                │
+│       │  ※ Non-blocking (15s TO)  │                                │
+│       │  ※ 실패 시 원본 SQL 유지  │                                │
+│       │  ※ 수정 SQL도 보안 재검증 │                                │
 │       └───────────┬───────────┘                                   │
 │                   │                                                │
 │       ┌───────────▼───────────┐                                   │
@@ -596,17 +610,25 @@ INJECTION_PATTERNS = [
 ### 6.1 CORS 설정
 
 ```python
-# app/api/middleware.py
+# app/api/middleware.py (v2.0 업데이트)
+settings = get_settings()
+origins = [o.strip() for o in settings.cors_origins.split(",") if o.strip()]
 CORSMiddleware(
-    allow_origins=["*"],        # ⚠ 모든 오리진 허용 (개발용)
+    allow_origins=origins,      # ✅ 설정 기반 도메인 제한 (v2.0)
     allow_credentials=True,     # 쿠키 포함 허용
     allow_methods=["*"],        # 모든 HTTP 메서드 허용
     allow_headers=["*"],        # 모든 헤더 허용
 )
 ```
 
-> **프로덕션 권장**: `allow_origins`를 특정 도메인으로 제한
-> 예: `["https://ai.skin1004.com"]`
+```python
+# app/config.py (v2.0 추가)
+cors_origins: str = "http://localhost:3000,http://localhost:8000"  # 개발 기본값
+cookie_secure: bool = False  # 프로덕션: COOKIE_SECURE=true
+```
+
+> **프로덕션**: `.env`에서 `CORS_ORIGINS=https://ai.skin1004.com` 설정
+> **개발**: localhost 기본 허용 (변경 불필요)
 
 ### 6.2 네트워크 다이어그램
 
@@ -765,7 +787,68 @@ BigQuery 테이블 업데이트를 자동으로 감지하고 쿼리를 차단합
 └──────────────────────────────────────────────────────────────┘
 ```
 
-### 7.3 Safety Status API
+### 7.3 LLM API 장애 복원력 (v2.0 추가)
+
+외부 LLM API 호출 시 일시적 장애(Rate Limit, 서버 오류, 네트워크)에 대한 자동 재시도 로직입니다.
+
+```
+┌──────────────────────────────────────────────────────────────┐
+│              LLM API Retry & Timeout Architecture              │
+│                                                                │
+│   LLM API 호출                                                │
+│   (Gemini Flash / Claude Opus / Claude Sonnet)                 │
+│        │                                                       │
+│        ▼                                                       │
+│   ┌──────────────────────────────────────┐                    │
+│   │  _retry_call(func, *args, **kwargs)  │ ← app/core/llm.py │
+│   │                                      │                    │
+│   │  시도 1: 즉시 실행                    │                    │
+│   │     ├─ 성공 → 결과 반환               │                    │
+│   │     └─ 실패 → _is_retryable() 확인   │                    │
+│   │                                      │                    │
+│   │  ┌─── 재시도 가능 에러? ───┐         │                    │
+│   │  │ • 429 Rate Limit       │         │                    │
+│   │  │ • 500 Server Error     │         │                    │
+│   │  │ • 503 Unavailable      │         │                    │
+│   │  │ • ConnectionError      │         │                    │
+│   │  │ • TimeoutError         │         │                    │
+│   │  └────────────────────────┘         │                    │
+│   │     │ Yes              │ No          │                    │
+│   │     ▼                  ▼             │                    │
+│   │  시도 2 (1초 대기)   즉시 에러 발생   │                    │
+│   │     ├─ 성공 → 반환                   │                    │
+│   │     └─ 실패 →                        │                    │
+│   │  시도 3 (2초 대기)                   │                    │
+│   │     ├─ 성공 → 반환                   │                    │
+│   │     └─ 실패 → 최종 에러 발생         │                    │
+│   └──────────────────────────────────────┘                    │
+│                                                                │
+│   적용 범위 (총 10개 API 호출):                                │
+│   ┌─────────────────────────────────────────────────────┐     │
+│   │ GeminiClient (6개):                                  │     │
+│   │  • generate()                                        │     │
+│   │  • generate_with_images()                            │     │
+│   │  • generate_with_history()                           │     │
+│   │  • generate_json()                                   │     │
+│   │  • generate_with_search()                            │     │
+│   │  • generate_with_history_and_search()                │     │
+│   │                                                      │     │
+│   │ ClaudeClient (4개):                                  │     │
+│   │  • generate()                                        │     │
+│   │  • generate_with_images()                            │     │
+│   │  • generate_with_history()                           │     │
+│   │  • generate_json()                                   │     │
+│   └─────────────────────────────────────────────────────┘     │
+│                                                                │
+│   설정값:                                                      │
+│   - max_retries: 3                                             │
+│   - backoff_delays: [1s, 2s, 4s] (지수 백오프)                │
+│   - Claude HTTP timeout: 60초                                  │
+│   - 비재시도 에러: 400, 401, 403 (클라이언트 오류)             │
+└──────────────────────────────────────────────────────────────┘
+```
+
+### 7.4 Safety Status API
 
 ```
 GET /safety/status → 전체 시스템 상태 반환
@@ -925,9 +1008,9 @@ GET /safety/status → 전체 시스템 상태 반환
 │                                                                    │
 │  ⬛⬛⬛ HIGH                                                      │
 │  ┌──────────────────────────────────────────────────────┐        │
-│  │ 1. CORS allow_origins=["*"]                           │        │
-│  │    → 모든 오리진에서 API 호출 가능                     │        │
-│  │    → 프로덕션: 특정 도메인으로 제한 필수              │        │
+│  │ 1. ✅ CORS allow_origins 제한 (v2.0 해결)            │        │
+│  │    → 설정 기반 도메인 제한 적용 완료                  │        │
+│  │    → .env CORS_ORIGINS로 프로덕션 도메인 설정 가능    │        │
 │  │                                                       │        │
 │  │ 2. JWT Secret Key 기본값 노출                         │        │
 │  │    → config.py: "skin1004-ai-secret-change-me"        │        │
@@ -937,8 +1020,8 @@ GET /safety/status → 전체 시스템 상태 반환
 │  │    → client_secret 포함, 암호화 없음                  │        │
 │  │    → Fernet 암호화 또는 Secret Manager 사용           │        │
 │  │                                                       │        │
-│  │ 4. Cookie secure=False (HTTP 전송 허용)               │        │
-│  │    → HTTPS 환경에서 secure=True 필수                  │        │
+│  │ 4. ✅ Cookie secure 플래그 설정 기반 적용 (v2.0 해결) │        │
+│  │    → .env COOKIE_SECURE=true로 프로덕션 전환 가능     │        │
 │  └──────────────────────────────────────────────────────┘        │
 │                                                                    │
 │  ⬛⬛ MEDIUM                                                       │
@@ -976,21 +1059,24 @@ GET /safety/status → 전체 시스템 상태 반환
 ### 10.2 프로덕션 체크리스트
 
 ```
-□ CORS allow_origins를 실제 도메인으로 제한
-□ JWT_SECRET_KEY를 32바이트 이상 랜덤 키로 변경
-□ Cookie에 secure=True 추가 (HTTPS 필수)
-□ Swagger UI 비활성화 (docs_url=None, redoc_url=None)
-□ GCP Service Account Key → Secret Manager 이전
-□ GWS 토큰 파일 암호화 (Fernet)
-□ 비밀번호 정책 강화 (8자+, 특수문자, 대소문자)
-□ Rate Limiting 적용 (로그인 엔드포인트 필수)
-□ HTTPS/TLS 적용 (nginx reverse proxy 또는 Cloud Run)
-□ /safety/status 접근 제한 (내부 네트워크 only)
-□ 로그에 민감 정보 마스킹 (이메일, 토큰)
-□ SQLite → PostgreSQL 마이그레이션 (사용자 증가 시)
-□ Admin 이메일 환경변수 관리
-□ CSP (Content-Security-Policy) 헤더 추가
-□ HSTS 헤더 추가
+✅ CORS allow_origins를 설정 기반 도메인 제한 (v2.0 완료)
+□  JWT_SECRET_KEY를 32바이트 이상 랜덤 키로 변경
+✅ Cookie에 secure 플래그 설정 기반 적용 (v2.0 완료, .env에서 전환)
+□  Swagger UI 비활성화 (docs_url=None, redoc_url=None)
+□  GCP Service Account Key → Secret Manager 이전
+□  GWS 토큰 파일 암호화 (Fernet)
+□  비밀번호 정책 강화 (8자+, 특수문자, 대소문자)
+□  Rate Limiting 적용 (로그인 엔드포인트 필수)
+□  HTTPS/TLS 적용 (nginx reverse proxy 또는 Cloud Run)
+□  /safety/status 접근 제한 (내부 네트워크 only)
+□  로그에 민감 정보 마스킹 (이메일, 토큰)
+□  SQLite → PostgreSQL 마이그레이션 (사용자 증가 시)
+□  Admin 이메일 환경변수 관리
+□  CSP (Content-Security-Policy) 헤더 추가
+□  HSTS 헤더 추가
+✅ LLM API 재시도/타임아웃 적용 (v2.0 완료)
+✅ QueryVerifier SQL 파이프라인 통합 (v2.0 완료)
+✅ Gemini Search 모델 제거 → Claude 단일 운영 (v2.0 완료)
 ```
 
 ---
@@ -1010,7 +1096,7 @@ GET /safety/status → 전체 시스템 상태 반환
 │                                              │                            │
 │   FastAPI Server (:3000)                     │                            │
 │   ┌──────────────────────────────────────────▼──────────────────┐        │
-│   │  ④ CORS Middleware        — 오리진 제어 (현재: *)           │        │
+│   │  ④ CORS Middleware        — 설정 기반 도메인 제한 (v2.0)   │        │
 │   │  ⑤ Request Logging       — JSON 구조화 로그 + Request ID   │        │
 │   │  ⑥ JWT Validation        — HS256, 7일 만료                 │        │
 │   │  ⑦ RBAC                  — admin / user 역할               │        │
@@ -1065,4 +1151,4 @@ GET /safety/status → 전체 시스템 상태 반환
 
 ---
 
-> **문서 끝** | SKIN1004 Enterprise AI Security Architecture v1.0
+> **문서 끝** | SKIN1004 Enterprise AI Security Architecture v2.0

@@ -93,11 +93,11 @@ def test_single(t):
         answer = data.get("choices", [{}])[0].get("message", {}).get("content", "")
         alen = len(answer)
 
-        if elapsed >= 200:
+        if elapsed >= 90:
             status = "FAIL"
         elif alen < 20:
             status = "EMPTY"
-        elif elapsed >= 100:
+        elif elapsed >= 60:
             status = "WARN"
         else:
             status = "OK"
@@ -262,8 +262,8 @@ def print_summary():
     print(f"\n  {'Latency':12s}  avg={avg:.1f}s  p50={p50:.1f}s  p95={p95:.1f}s  min={min_t:.1f}s  max={max_t:.1f}s", flush=True)
 
     # Distribution histogram
-    buckets = [(0, 10), (10, 20), (20, 30), (30, 50), (50, 100), (100, 200), (200, 9999)]
-    labels = ["<10s", "10-20", "20-30", "30-50", "50-100", "100-200", "200s+"]
+    buckets = [(0, 10), (10, 20), (20, 30), (30, 45), (45, 60), (60, 90), (90, 9999)]
+    labels = ["<10s", "10-20", "20-30", "30-45", "45-60", "60-90", "90s+"]
     counts = []
     for lo, hi in buckets:
         c = sum(1 for t in times if lo <= t < hi)

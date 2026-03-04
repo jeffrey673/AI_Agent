@@ -9,6 +9,7 @@ import json
 
 from langchain_anthropic import ChatAnthropic
 
+from app.config import get_settings
 from app.models.agent_models import AgentModel
 
 
@@ -18,6 +19,7 @@ class QueryVerifierAgent:
             model=AgentModel.QUERY_VERIFIER.value,
             temperature=0,
             max_tokens=2048,
+            api_key=get_settings().anthropic_api_key,
         )
 
     async def verify(self, sql: str, schema_info: str) -> dict:
@@ -43,7 +45,7 @@ class QueryVerifierAgent:
    - 제품명: `SET` (Product_Name 금지, 백틱 필수)
    - 대륙: Continent1 우선
    - 팀: Team_NEW (Team 금지)
-5. Date >= '2000-01-01' 필터 포함 여부
+5. Date >= '2019-01-01' 필터 포함 여부 (데이터 시작일: 2019-01-01)
 6. SET 컬럼 백틱 이스케이프 여부
 
 스키마 정보:

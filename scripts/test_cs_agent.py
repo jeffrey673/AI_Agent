@@ -118,7 +118,7 @@ def test_cs_api():
             is_generic = "죄송" in answer and "찾지 못" in answer and answer_len < 100
             has_content = answer_len >= 50
 
-            if elapsed >= 100:
+            if elapsed >= 90:
                 status = "FAIL"
             elif is_empty:
                 status = "EMPTY"

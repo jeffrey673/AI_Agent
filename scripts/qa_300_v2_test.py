@@ -39,8 +39,8 @@ ANALYSIS_MODEL = "skin1004-Analysis"
 TIMEOUT = 180  # seconds
 
 # Performance thresholds
-PERF_OK = 100       # < 100s = OK
-PERF_WARN = 200     # 100~200s = WARN, >= 200s = FAIL
+PERF_OK = 60        # < 60s = OK
+PERF_WARN = 90      # 60~89s = WARN, >= 90s = FAIL
 
 # Error detection keywords
 ERROR_KEYWORDS = [

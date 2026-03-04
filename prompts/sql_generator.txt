@@ -3,7 +3,7 @@
 
 ## ⚠️ 테이블 선택 규칙 (매우 중요!)
 
-2개 테이블 중 질문에 맞는 테이블을 선택하세요:
+13개 테이블 중 질문에 맞는 테이블을 선택하세요:
 
 | 질문 유형 | 사용 테이블 | 이유 |
 |-----------|-----------|------|
@@ -11,6 +11,14 @@
 | **매출** (얼마, 매출액, 금액, 매출, revenue) | `SALES_ALL_Backup` | 매출 데이터 보유 |
 | **매출 + 수량** 동시 | `SALES_ALL_Backup` | Total_Qty도 있으므로 한 테이블에서 해결 |
 | **제품 리스트** (어떤 제품 있어?, 제품 목록) | `Product` | 개별 제품 단위로 정확 |
+| **광고 데이터** (광고비, ROAS, CTR, 노출, 클릭, 전환) | `integrated_advertising_data` | 플랫폼별 광고 성과 통합 |
+| **마케팅 비용** (광고+인플루언서 비용 통합) | `Integrated_marketing_cost` | 광고+인플루언서 비용 통합 |
+| **인플루언서** (팔로워, 좋아요, 조회수, 인플루언서 비용) | `influencer_input_ALL_TEAMS` | 팀별 인플루언서 마케팅 데이터 |
+| **Shopify 자사몰 판매** (자사몰, shopify) | `shopify_analysis_sales` | 글로벌 Shopify 판매 데이터 |
+| **플랫폼 순위/가격** (랭킹, 가격, 할인가) | `Platform_Data.raw_data` | 플랫폼별 제품 순위/가격 |
+| **아마존 검색 성과** (아마존 CTR, 전환율, 장바구니) | `amazon_search_analytics_catalog_performance` | 아마존 검색 카탈로그 성과 |
+| **리뷰** (아마존/큐텐/쇼피/스마트스토어 리뷰) | `Review_Data.*` | 플랫폼별 리뷰 데이터 |
+| **메타 광고 라이브러리** (페이스북/인스타 광고) | `` `ad_data.meta data_test` `` | 메타 광고 라이브러리 데이터 |
 
 - Product 테이블: 매출 없음! 수량만! (`SUM(Quantity + Event_Qty) AS Total_Qty` 로 계산)
 - SALES_ALL_Backup: SET 컬럼은 세트 묶음 포함. 매출+수량 모두 있음
@@ -106,7 +114,7 @@
    - 안전 나눗셈: `SAFE_DIVIDE(a, b)`
    - 문자열: `LOWER()`, `UPPER()`, `CONTAINS_SUBSTR()`
 3. **테이블명은 반드시 백틱(`)으로 감싸기**: `skin1004-319714.Sales_Integration.SALES_ALL_Backup`
-4. **결과는 1000행 이내로 LIMIT 추가**
+4. **결과는 10000행 이내로 LIMIT 추가**
 5. ⚠️ **Country 값은 한국어** — 영어 아님! 변환 불필요
 6. ⚠️ **Date는 DATETIME** — DATE 함수로 감싸거나 EXTRACT 사용
 7. ⚠️ **매출 조회 시 Sales1_R 사용** (원화 환산 매출). Sales2_R은 Sales1_R이 없을 때만 보조
@@ -124,16 +132,16 @@
      ```sql
      SELECT `SET` AS product_name, SUM(Sales1_R) AS total_revenue
      FROM ... WHERE ... AND `SET` LIKE '%Ampoule_100ml%' AND `SET` NOT LIKE '% + %'
-     GROUP BY `SET` ORDER BY total_revenue DESC LIMIT 1000
+     GROUP BY `SET` ORDER BY total_revenue DESC LIMIT 10000
      ```
    - ❌ 잘못된 SQL: `SELECT SUM(Sales1_R) FROM ... WHERE SET LIKE '%Ampoule%'` (총합만, 제품 미표시)
    - ✅ 올바른 SQL: `SELECT \`SET\` AS product_name, SUM(Sales1_R) FROM ... WHERE ... AND \`SET\` NOT LIKE '% + %' GROUP BY \`SET\``
-15. ⚠️ **1900년대 데이터 제외** — 모든 쿼리에 `Date >= '2000-01-01'` 조건을 반드시 추가하세요. 1900년대 데이터는 목표/플래너 데이터이므로 실제 매출 분석에서 제외해야 합니다.
+15. ⚠️ **데이터 시작일: 2019-01-01** — 매출/제품 데이터는 2019년 1월 1일부터 존재합니다. 모든 쿼리에 `Date >= '2019-01-01'` 조건을 반드시 추가하세요. 2019년 이전 데이터는 목표/플래너 데이터이므로 실제 매출 분석에서 제외해야 합니다.
 15-1. ⚠️ **기간 미지정 시 전체 기간 조회 (매우 중요!)**:
    - 사용자가 특정 연도/기간을 언급하지 않으면 (예: "베트남 vs 태국 매출 비교", "센텔라 앰플 매출"), **연도 필터를 추가하지 마세요!**
-   - `Date >= '2000-01-01'` 조건만 유지하고 전체 기간 데이터를 조회하세요.
+   - `Date >= '2019-01-01'` 조건만 유지하고 전체 기간 데이터를 조회하세요.
    - ❌ 잘못: 기간 언급 없는데 `EXTRACT(YEAR FROM Date) = 2026` 임의 추가
-   - ✅ 올바름: `WHERE Date >= '2000-01-01'` 만 사용 (전체 기간)
+   - ✅ 올바름: `WHERE Date >= '2019-01-01'` 만 사용 (전체 기간)
    - "올해", "2025년", "지난달" 등 **명시적 기간 표현이 있을 때만** 날짜 필터 추가
 16. ⚠️ **시각화/차트/그래프 요청 시 반드시 GROUP BY로 집계**:
    - 사용자가 "시각화", "차트", "그래프", "추이", "비교", "보여줘" 등을 요청하면, 반드시 SUM/COUNT 등의 집계 함수와 GROUP BY를 사용해서 요약된 결과를 반환하세요.
@@ -141,11 +149,11 @@
    - 월별 추이: `FORMAT_DATETIME('%Y-%m', Date) AS month` + `GROUP BY month ORDER BY month`
    - 국가별 비교: `Country` + `GROUP BY Country ORDER BY total_revenue DESC`
    - 절대 집계 없이 raw 행 데이터를 반환하지 마세요!
-   - ⚠️ Date 필터 시 반드시 `Date >= '2000-01-01'` 포함!
+   - ⚠️ Date 필터 시 반드시 `Date >= '2019-01-01'` 포함!
 17. ⚠️ **광범위 쿼리 처리 (매우 중요!)**:
    - 사용자가 3개 이상 차원(국가 + 업체 + 제품 + 월 등)을 동시에 요청하면, 결과가 수만 행이 될 수 있습니다.
    - 이런 경우 **반드시 ORDER BY total_revenue DESC** (또는 해당 집계 컬럼 DESC)로 매출 높은 순서대로 정렬하세요.
-   - LIMIT은 1000을 유지하되, 가장 중요한 데이터가 먼저 나오도록 ORDER BY DESC 필수!
+   - LIMIT은 10000을 유지하되, 가장 중요한 데이터가 먼저 나오도록 ORDER BY DESC 필수!
    - 예시: "국가별 제품 업체 월별 매출" →
      SELECT Country, Company_Name, `SET` AS product_name,
             FORMAT_DATETIME('%Y-%m', Date) AS month,
@@ -154,7 +162,7 @@
      WHERE Date >= '2024-01-01' AND Date < '2026-02-01'
      GROUP BY Country, Company_Name, `SET`, month
      ORDER BY total_revenue DESC
-     LIMIT 1000
+     LIMIT 10000
    - ❌ 잘못: ORDER BY Country, month (알파벳순 → "가나"만 반환)
    - ✅ 올바름: ORDER BY total_revenue DESC (매출 높은 순 → 핵심 데이터 우선)
 
@@ -406,12 +414,12 @@ SELECT
   FORMAT_DATETIME('%Y-%m', Date) AS month,
   SUM(Sales1_R) AS total_revenue
 FROM `skin1004-319714.Sales_Integration.SALES_ALL_Backup`
-WHERE Date >= '2000-01-01'
+WHERE Date >= '2019-01-01'
   AND EXTRACT(YEAR FROM Date) = 2024
   AND Country = '미국'
 GROUP BY month
 ORDER BY total_revenue DESC
-LIMIT 1000
+LIMIT 10000
 ```
 
 ```sql
@@ -420,12 +428,12 @@ SELECT
   FORMAT_DATETIME('%Y-%m', Date) AS month,
   SUM(Sales1_R) AS total_revenue
 FROM `skin1004-319714.Sales_Integration.SALES_ALL_Backup`
-WHERE Date >= '2000-01-01'
+WHERE Date >= '2019-01-01'
   AND ((EXTRACT(YEAR FROM Date) = 2026 AND EXTRACT(MONTH FROM Date) = 2)
     OR (EXTRACT(YEAR FROM Date) = 2026 AND EXTRACT(MONTH FROM Date) = 1))
 GROUP BY month
 ORDER BY month
-LIMIT 1000
+LIMIT 10000
 ```
 
 ---
@@ -438,10 +446,10 @@ LIMIT 1000
 SELECT
   SUM(Sales1_R) AS total_revenue
 FROM `skin1004-319714.Sales_Integration.SALES_ALL_Backup`
-WHERE Date >= '2000-01-01'
+WHERE Date >= '2019-01-01'
   AND EXTRACT(YEAR FROM Date) = 2024
   AND EXTRACT(MONTH FROM Date) = 1
-LIMIT 1000
+LIMIT 10000
 ```
 
 ### 2. 국가+플랫폼 기간 매출
@@ -457,7 +465,7 @@ WHERE Country = '인도네시아'
   AND Date >= '2024-01-01' AND Date < '2024-07-01'
 GROUP BY month
 ORDER BY month
-LIMIT 1000
+LIMIT 10000
 ```
 
 ### 3. 국가별 비교
@@ -468,12 +476,12 @@ SELECT
   SUM(Sales1_R) AS total_revenue,
   SUM(Quantity + Event_Qty) AS total_qty
 FROM `skin1004-319714.Sales_Integration.SALES_ALL_Backup`
-WHERE Date >= '2000-01-01'
+WHERE Date >= '2019-01-01'
   AND Country IN ('태국', '베트남', '필리핀', '말레이시아', '인도네시아', '싱가포르')
   AND EXTRACT(YEAR FROM Date) = 2024
 GROUP BY Country
 ORDER BY total_revenue DESC
-LIMIT 1000
+LIMIT 10000
 ```
 
 ### 4. 제품 순위
@@ -484,7 +492,7 @@ SELECT
   SUM(Total_Qty) AS total_quantity,
   SUM(Sales1_R) AS total_revenue
 FROM `skin1004-319714.Sales_Integration.SALES_ALL_Backup`
-WHERE Date >= '2000-01-01'
+WHERE Date >= '2019-01-01'
   AND Country = '인도네시아'
   AND EXTRACT(YEAR FROM Date) = 2024
   AND `SET` IS NOT NULL AND `SET` != ''
@@ -500,12 +508,12 @@ SELECT
   FORMAT_DATETIME('%Y-%m', Date) AS month,
   SUM(Sales1_R) AS monthly_revenue
 FROM `skin1004-319714.Sales_Integration.SALES_ALL_Backup`
-WHERE Date >= '2000-01-01'
+WHERE Date >= '2019-01-01'
   AND Line = 'Centella'
   AND EXTRACT(YEAR FROM Date) = 2024
 GROUP BY month
 ORDER BY month
-LIMIT 1000
+LIMIT 10000
 ```
 
 ### 6. 팀별 매출 비교
@@ -516,12 +524,12 @@ SELECT
   SUM(Sales1_R) AS total_revenue,
   SUM(Order_Count) AS total_orders
 FROM `skin1004-319714.Sales_Integration.SALES_ALL_Backup`
-WHERE Date >= '2000-01-01'
+WHERE Date >= '2019-01-01'
   AND EXTRACT(YEAR FROM Date) = 2025
   AND Team_NEW IS NOT NULL AND Team_NEW != ''
 GROUP BY Team_NEW
 ORDER BY total_revenue DESC
-LIMIT 1000
+LIMIT 10000
 ```
 
 ### 7. 플랫폼별 비교
@@ -532,13 +540,13 @@ SELECT
   SUM(Sales1_R) AS total_revenue,
   SUM(Quantity + Event_Qty) AS total_qty
 FROM `skin1004-319714.Sales_Integration.SALES_ALL_Backup`
-WHERE Date >= '2000-01-01'
+WHERE Date >= '2019-01-01'
   AND Country = '인도네시아'
   AND (Mall_Classification LIKE '%Shopee%' OR Mall_Classification LIKE '%Tiktok%')
   AND EXTRACT(YEAR FROM Date) = 2024
 GROUP BY Mall_Classification
 ORDER BY total_revenue DESC
-LIMIT 1000
+LIMIT 10000
 ```
 
 ### 8. B2B vs B2C 비교
@@ -549,10 +557,10 @@ SELECT
   SUM(Sales1_R) AS total_revenue,
   COUNT(DISTINCT Order_Number) AS order_count
 FROM `skin1004-319714.Sales_Integration.SALES_ALL_Backup`
-WHERE Date >= '2000-01-01'
+WHERE Date >= '2019-01-01'
   AND EXTRACT(YEAR FROM Date) = 2025
 GROUP BY Sales_Type
-LIMIT 1000
+LIMIT 10000
 ```
 
 ### 8-2. 해외B2B 제품별 TOP 업체 (중요!)
@@ -563,7 +571,7 @@ SELECT
   SUM(Sales1_R) AS total_revenue,
   SUM(Quantity + Event_Qty) AS total_qty
 FROM `skin1004-319714.Sales_Integration.SALES_ALL_Backup`
-WHERE Date >= '2000-01-01'
+WHERE Date >= '2019-01-01'
   AND Sales_Type = 'B2B'
   AND Mall_Classification LIKE '%Overseas%'
   AND `SET` LIKE '%Ampoule_100ml%'
@@ -579,12 +587,12 @@ SELECT
   Continent1 AS continent,
   SUM(Sales1_R) AS total_revenue
 FROM `skin1004-319714.Sales_Integration.SALES_ALL_Backup`
-WHERE Date >= '2000-01-01'
+WHERE Date >= '2019-01-01'
   AND EXTRACT(YEAR FROM Date) = 2025
   AND Continent1 IS NOT NULL AND Continent1 != ''
 GROUP BY Continent1
 ORDER BY total_revenue DESC
-LIMIT 1000
+LIMIT 10000
 ```
 
 ---
@@ -631,13 +639,13 @@ SELECT
   Product AS product_name,
   SUM(Quantity + Event_Qty) AS total_qty
 FROM `skin1004-319714.Sales_Integration.Product`
-WHERE Date >= '2000-01-01'
+WHERE Date >= '2019-01-01'
   AND Product LIKE '%Centella%Ampoule%'
   AND EXTRACT(YEAR FROM Date) = 2026
   AND EXTRACT(MONTH FROM Date) = 2
 GROUP BY Product
 ORDER BY total_qty DESC
-LIMIT 1000
+LIMIT 10000
 ```
 
 #### P2. 국가별 제품 수량
@@ -647,7 +655,7 @@ SELECT
   Product AS product_name,
   SUM(Quantity + Event_Qty) AS total_qty
 FROM `skin1004-319714.Sales_Integration.Product`
-WHERE Date >= '2000-01-01'
+WHERE Date >= '2019-01-01'
   AND Country = '인도네시아'
   AND EXTRACT(YEAR FROM Date) = 2025
   AND Product IS NOT NULL AND Product != '' AND Product != 'Others'
@@ -664,7 +672,7 @@ SELECT
   Product AS product_name,
   SUM(Quantity + Event_Qty) AS total_qty
 FROM `skin1004-319714.Sales_Integration.Product`
-WHERE Date >= '2000-01-01'
+WHERE Date >= '2019-01-01'
   AND Sales_Type = 'B2B'
   AND Mall_Classification LIKE '%Overseas%'
   AND Product LIKE '%Ampoule_100ml%'
@@ -677,6 +685,620 @@ LIMIT 20
 - Product 테이블의 `Product` 컬럼도 **영어**임. 한국어-영어 매핑은 위 SALES_ALL 섹션과 동일하게 적용
 - `Product` 컬럼 = SALES_ALL의 `SET`을 unpivot한 것이므로 같은 제품명 사용
 - ⚠️ Product 테이블에는 세트 조합(` + `)이 이미 분리되어 있으므로 `NOT LIKE '% + %'` 조건 불필요
+
+---
+
+## 테이블 3: integrated_advertising_data (통합 광고 데이터)
+
+테이블: `skin1004-319714.marketing_analysis.integrated_advertising_data`
+
+**특징**: TikTok, Facebook, Shopee, Google, Naver, KakaoMoments, SingleONE, AmazonAds 광고 데이터 통합. 플랫폼별 광고비, 노출, 클릭, 전환, 매출 성과를 한 테이블에서 조회 가능.
+
+### 유효 컬럼 스키마
+
+#### 기본 정보
+- Date (DATE): 광고 데이터 날짜
+- Country (STRING): 광고 집행 국가
+
+#### TikTok 광고
+- TikTok_Advertiser_name (STRING): 틱톡 광고주명
+- TikTok_Cost (FLOAT): 틱톡 광고비
+- TikTok_Impressions (INTEGER): 틱톡 노출수
+- TikTok_Clicks (INTEGER): 틱톡 클릭수
+- TikTok_Complete_payment_events (INTEGER): 틱톡 결제 완료 이벤트 수
+- TikTok_Total_complete_payment_value (FLOAT): 틱톡 결제 완료 총 금액
+
+#### Facebook 광고
+- Facebook_Account_name (STRING): 페이스북 광고 계정명
+- Facebook_Cost (FLOAT): 페이스북 광고비
+- Facebook_Impressions (INTEGER): 페이스북 노출수
+- Facebook_Link_clicks (INTEGER): 페이스북 링크 클릭수
+- Facebook_Omni_purchase_conversion_value_shared_item (FLOAT): 페이스북 구매전환 금액 (공유 귀속)
+- Facebook_Website_purchases (INTEGER): 페이스북 웹사이트 구매수
+- Facebook_Omni_purchase_shared_item (INTEGER): 페이스북 구매수 (공유 귀속)
+- Facebook_Website_purchases_conversion_value (FLOAT): 페이스북 웹사이트 구매 전환금액
+
+#### Shopee 광고
+- Shopee_Shop_name (STRING): 쇼피 샵명
+- Shopee_Expense_KRW (FLOAT): 쇼피 광고비 (원화)
+- Shopee_Clicks (INTEGER): 쇼피 클릭수
+- Shopee_Impressions (INTEGER): 쇼피 노출수
+- Shopee_Conversions (INTEGER): 쇼피 전환수
+- Shopee_GMV_KRW (FLOAT): 쇼피 GMV (원화)
+
+#### Google 광고
+- Google_Account (STRING): 구글 광고 계정명
+- Google_Cost (FLOAT): 구글 광고비
+- Google_Impressions (INTEGER): 구글 노출수
+- Google_Clicks (INTEGER): 구글 클릭수
+- Google_Conversions (INTEGER): 구글 전환수
+- Google_Total_conversion_value (FLOAT): 구글 총 전환금액
+
+#### Naver 검색광고
+- NaverSearch_Account_name (STRING): 네이버 검색광고 계정명
+- NaverSearch_Cost (FLOAT): 네이버 검색광고 비용
+- NaverSearch_Clicks (INTEGER): 네이버 검색광고 클릭수
+- NaverSearch_Impressions (INTEGER): 네이버 검색광고 노출수
+- NaverSearch_Conversions (INTEGER): 네이버 검색광고 전환수
+- NaverSearch_Conversion_value (FLOAT): 네이버 검색광고 전환금액
+
+#### Naver GFA
+- NaverGFA_Account_name (STRING): 네이버 GFA 계정명
+- NaverGFA_Cost (FLOAT): 네이버 GFA 비용
+- NaverGFA_Clicks (INTEGER): 네이버 GFA 클릭수
+- NaverGFA_Impressions (INTEGER): 네이버 GFA 노출수
+- NaverGFA_Purchases (INTEGER): 네이버 GFA 구매수
+- NaverGFA_Purchases_conversion_sales (FLOAT): 네이버 GFA 구매전환 매출
+
+#### SingleONE 광고
+- SingleONE_Account_name (STRING): SingleONE 계정명
+- SingleONE_Cost_KRW (FLOAT): SingleONE 광고비 (원화)
+- SingleONE_Clicks (INTEGER): SingleONE 클릭수
+- SingleONE_Impressions (INTEGER): SingleONE 노출수
+- SingleONE_Conversions (INTEGER): SingleONE 전환수
+- SingleONE_Sales_KRW (FLOAT): SingleONE 매출 (원화)
+
+#### KakaoMoments 광고
+- KakaoMoments_Account_name (STRING): 카카오모먼츠 계정명
+- KakaoMoments_Cost (FLOAT): 카카오모먼츠 광고비
+- KakaoMoments_Clicks (INTEGER): 카카오모먼츠 클릭수
+- KakaoMoments_Impressions (INTEGER): 카카오모먼츠 노출수
+- KakaoMoments_Purchases (INTEGER): 카카오모먼츠 구매수
+- KakaoMoments_Purchases_amount (FLOAT): 카카오모먼츠 구매금액
+
+#### AmazonAds 광고
+- AmazonAds_Account_name (STRING): 아마존 광고 계정명
+- AmazonAds_Cost (FLOAT): 아마존 광고비
+- AmazonAds_Clicks (INTEGER): 아마존 광고 클릭수
+- AmazonAds_Impressions (INTEGER): 아마존 광고 노출수
+- AmazonAds_Purchases (INTEGER): 아마존 광고 구매수
+- AmazonAds_Purchases_amount (FLOAT): 아마존 광고 구매금액
+
+### 예시 쿼리
+
+#### A1. 플랫폼별 월간 광고비 추이
+```sql
+-- "2025년 틱톡 광고비 월별 추이"
+SELECT
+  FORMAT_DATE('%Y-%m', Date) AS month,
+  SUM(TikTok_Cost) AS tiktok_cost,
+  SUM(TikTok_Impressions) AS tiktok_impressions,
+  SUM(TikTok_Clicks) AS tiktok_clicks
+FROM `skin1004-319714.marketing_analysis.integrated_advertising_data`
+WHERE EXTRACT(YEAR FROM Date) = 2025
+GROUP BY month
+ORDER BY month
+LIMIT 10000
+```
+
+#### A2. 국가별 광고 ROAS
+```sql
+-- "인도네시아 쇼피 광고 ROAS (2025)"
+SELECT
+  Country,
+  SUM(Shopee_Expense_KRW) AS total_cost,
+  SUM(Shopee_GMV_KRW) AS total_gmv,
+  SAFE_DIVIDE(SUM(Shopee_GMV_KRW), SUM(Shopee_Expense_KRW)) AS roas
+FROM `skin1004-319714.marketing_analysis.integrated_advertising_data`
+WHERE EXTRACT(YEAR FROM Date) = 2025
+  AND Country = 'Indonesia'
+GROUP BY Country
+LIMIT 10000
+```
+
+#### A3. 전체 플랫폼 광고비 비교
+```sql
+-- "2025년 1월 플랫폼별 총 광고비"
+SELECT
+  SUM(TikTok_Cost) AS tiktok_cost,
+  SUM(Facebook_Cost) AS facebook_cost,
+  SUM(Shopee_Expense_KRW) AS shopee_cost,
+  SUM(Google_Cost) AS google_cost,
+  SUM(NaverSearch_Cost) AS naver_search_cost,
+  SUM(NaverGFA_Cost) AS naver_gfa_cost,
+  SUM(SingleONE_Cost_KRW) AS singleone_cost,
+  SUM(KakaoMoments_Cost) AS kakao_cost,
+  SUM(AmazonAds_Cost) AS amazon_cost
+FROM `skin1004-319714.marketing_analysis.integrated_advertising_data`
+WHERE EXTRACT(YEAR FROM Date) = 2025
+  AND EXTRACT(MONTH FROM Date) = 1
+LIMIT 10000
+```
+
+---
+
+## 테이블 4: Integrated_marketing_cost (통합 마케팅 비용)
+
+테이블: `skin1004-319714.marketing_analysis.Integrated_marketing_cost`
+
+**특징**: 광고 + 인플루언서 마케팅 비용 통합. 매체별, 팀별, 국가별 마케팅 비용과 성과를 한 테이블에서 조회 가능.
+
+### 유효 컬럼 스키마
+
+- Date (DATE): 마케팅 활동 날짜
+- Team (STRING): 담당 마케팅팀
+- Media (STRING): 마케팅 매체
+- Field (STRING): 마케팅 활동 분야/카테고리
+- Cost (FLOAT): 비용
+- Country (STRING): 국가
+- Revenue (FLOAT): 매출
+- Impressions (INTEGER): 노출수
+- Clicks (INTEGER): 클릭수
+- Purchases (INTEGER): 구매수
+
+### 예시 쿼리
+
+#### M1. 매체별 마케팅 비용 비교
+```sql
+-- "2025년 매체별 마케팅 비용"
+SELECT
+  Media,
+  SUM(Cost) AS total_cost,
+  SUM(Revenue) AS total_revenue,
+  SAFE_DIVIDE(SUM(Revenue), SUM(Cost)) AS roas
+FROM `skin1004-319714.marketing_analysis.Integrated_marketing_cost`
+WHERE EXTRACT(YEAR FROM Date) = 2025
+GROUP BY Media
+ORDER BY total_cost DESC
+LIMIT 10000
+```
+
+#### M2. 팀별 마케팅 비용 추이
+```sql
+-- "2025년 팀별 월간 마케팅 비용"
+SELECT
+  Team,
+  FORMAT_DATE('%Y-%m', Date) AS month,
+  SUM(Cost) AS total_cost
+FROM `skin1004-319714.marketing_analysis.Integrated_marketing_cost`
+WHERE EXTRACT(YEAR FROM Date) = 2025
+GROUP BY Team, month
+ORDER BY Team, month
+LIMIT 10000
+```
+
+#### M3. 국가별 마케팅 ROI
+```sql
+-- "국가별 마케팅 비용 대비 매출 (2025)"
+SELECT
+  Country,
+  SUM(Cost) AS total_cost,
+  SUM(Revenue) AS total_revenue,
+  SAFE_DIVIDE(SUM(Revenue), SUM(Cost)) AS roi
+FROM `skin1004-319714.marketing_analysis.Integrated_marketing_cost`
+WHERE EXTRACT(YEAR FROM Date) = 2025
+GROUP BY Country
+ORDER BY total_cost DESC
+LIMIT 10000
+```
+
+---
+
+## 테이블 5: shopify_analysis_sales (Shopify 판매 데이터)
+
+테이블: `skin1004-319714.marketing_analysis.shopify_analysis_sales`
+
+**특징**: 글로벌 자사몰(Shopify) 판매 데이터. 국가별 제품별 판매금액, 주문수량, 반품 금액 조회 가능.
+
+### 유효 컬럼 스키마
+
+- Date (DATE): 판매 일자
+- Country (STRING): 판매 국가
+- Country_code (STRING): 국가 코드
+- Product_ID (STRING): 제품 고유 ID
+- Product_title (STRING): 제품명
+- Type (STRING): 제품 유형/카테고리
+- Returns (FLOAT): 반품 금액
+- Total_sales (FLOAT): 최종 판매금액
+- Ordered_quantity (INTEGER): 주문 수량
+
+### 예시 쿼리
+
+#### S1. 국가별 Shopify 매출
+```sql
+-- "2025년 Shopify 국가별 매출"
+SELECT
+  Country,
+  SUM(Total_sales) AS total_sales,
+  SUM(Ordered_quantity) AS total_qty,
+  SUM(Returns) AS total_returns
+FROM `skin1004-319714.marketing_analysis.shopify_analysis_sales`
+WHERE EXTRACT(YEAR FROM Date) = 2025
+GROUP BY Country
+ORDER BY total_sales DESC
+LIMIT 10000
+```
+
+#### S2. 제품별 Shopify 판매 순위
+```sql
+-- "2025년 Shopify 제품별 판매 TOP 10"
+SELECT
+  Product_title,
+  SUM(Total_sales) AS total_sales,
+  SUM(Ordered_quantity) AS total_qty
+FROM `skin1004-319714.marketing_analysis.shopify_analysis_sales`
+WHERE EXTRACT(YEAR FROM Date) = 2025
+GROUP BY Product_title
+ORDER BY total_sales DESC
+LIMIT 10
+```
+
+#### S3. Shopify 월별 매출 추이
+```sql
+-- "2025년 Shopify 월별 매출 추이"
+SELECT
+  FORMAT_DATE('%Y-%m', Date) AS month,
+  SUM(Total_sales) AS total_sales,
+  SUM(Ordered_quantity) AS total_qty
+FROM `skin1004-319714.marketing_analysis.shopify_analysis_sales`
+WHERE EXTRACT(YEAR FROM Date) = 2025
+GROUP BY month
+ORDER BY month
+LIMIT 10000
+```
+
+---
+
+## 테이블 6: raw_data (플랫폼 메트릭스)
+
+테이블: `skin1004-319714.Platform_Data.raw_data`
+
+**특징**: 플랫폼별 제품 랭킹/가격 데이터. 경쟁사 가격 비교, 제품 순위 추적에 활용.
+
+### 유효 컬럼 스키마
+
+- Channel (STRING): 플랫폼/채널명
+- Brand_Name (STRING): 브랜드명
+- Product_Name (STRING): 제품명
+- Rank (INTEGER): 제품 순위
+- Price (FLOAT): 가격
+- Discount_Price (FLOAT): 할인가
+- Currency (STRING): 통화
+
+### 예시 쿼리
+
+#### R1. 채널별 제품 순위
+```sql
+-- "SKIN1004 제품 채널별 순위"
+SELECT
+  Channel,
+  Product_Name,
+  Rank,
+  Price,
+  Discount_Price,
+  Currency
+FROM `skin1004-319714.Platform_Data.raw_data`
+WHERE Brand_Name LIKE '%SKIN1004%'
+ORDER BY Channel, Rank
+LIMIT 10000
+```
+
+#### R2. 채널별 가격 비교
+```sql
+-- "채널별 SKIN1004 평균 가격"
+SELECT
+  Channel,
+  AVG(Price) AS avg_price,
+  AVG(Discount_Price) AS avg_discount_price,
+  COUNT(*) AS product_count
+FROM `skin1004-319714.Platform_Data.raw_data`
+WHERE Brand_Name LIKE '%SKIN1004%'
+GROUP BY Channel
+ORDER BY avg_price DESC
+LIMIT 10000
+```
+
+---
+
+## 테이블 7: influencer_input_ALL_TEAMS (통합 인플루언서 마케팅)
+
+테이블: `skin1004-319714.marketing_analysis.influencer_input_ALL_TEAMS`
+
+**특징**: 팀별 인플루언서 마케팅 데이터 통합. 인플루언서별 팔로워수, 콘텐츠 성과(좋아요, 조회수, 댓글 등), 비용 분석 가능.
+
+### 유효 컬럼 스키마
+
+#### 인플루언서 정보
+- Influencer_ID (STRING): 인플루언서 ID
+- Influencer_name (STRING): 인플루언서 이름
+- Influencer_nickname (STRING): 인플루언서 닉네임/핸들
+- Influencer_tier (STRING): 인플루언서 티어 (micro, macro 등)
+- Influencer_language (STRING): 인플루언서 주 언어
+- Num_influencer_followers (INTEGER): 팔로워수
+
+#### 캠페인/컨텐츠 정보
+- Campaign (STRING): 캠페인명
+- Brand (STRING): 브랜드
+- Content_type (STRING): 콘텐츠 유형 (비디오, 이미지, 블로그 등)
+- Content_code (STRING): 콘텐츠 코드
+- Content_url (STRING): 콘텐츠 URL
+- Content_upload_date (DATE): 콘텐츠 업로드 날짜
+- Contact_date (DATE): 인플루언서 컨택 날짜
+- Contact_type (STRING): 컨택 방법
+- Ad_execution (STRING): 광고 실행 형태
+- Text (STRING): 콘텐츠 텍스트/캡션
+
+#### 성과 지표
+- Num_views (INTEGER): 조회수
+- Num_likes (INTEGER): 좋아요수
+- Num_comments (INTEGER): 댓글수
+- Num_saves (INTEGER): 저장수
+- Num_shares (INTEGER): 공유수
+- Measurement_date (DATE): 성과 측정 날짜
+
+#### 비용
+- Cost (FLOAT): 비용
+- Cost_krw (FLOAT): 비용 (원화)
+- Cost_usd (FLOAT): 비용 (달러)
+
+#### 조직/지역
+- Team (STRING): 담당팀
+- Agency_name (STRING): 에이전시명
+- Media (STRING): 미디어 플랫폼 (Instagram, YouTube 등)
+- Media_main (STRING): 주요 미디어 플랫폼
+- Region (STRING): 타겟 지역
+- Target_country (STRING): 타겟 국가
+
+### 예시 쿼리
+
+#### I1. 팀별 인플루언서 비용/성과
+```sql
+-- "2025년 팀별 인플루언서 마케팅 비용 및 조회수"
+SELECT
+  Team,
+  COUNT(DISTINCT Influencer_ID) AS influencer_count,
+  SUM(Cost_krw) AS total_cost_krw,
+  SUM(Num_views) AS total_views,
+  SUM(Num_likes) AS total_likes
+FROM `skin1004-319714.marketing_analysis.influencer_input_ALL_TEAMS`
+WHERE EXTRACT(YEAR FROM Content_upload_date) = 2025
+GROUP BY Team
+ORDER BY total_cost_krw DESC
+LIMIT 10000
+```
+
+#### I2. 인플루언서 티어별 성과
+```sql
+-- "인플루언서 티어별 평균 조회수/좋아요"
+SELECT
+  Influencer_tier,
+  COUNT(DISTINCT Influencer_ID) AS influencer_count,
+  AVG(Num_views) AS avg_views,
+  AVG(Num_likes) AS avg_likes,
+  AVG(Num_comments) AS avg_comments
+FROM `skin1004-319714.marketing_analysis.influencer_input_ALL_TEAMS`
+WHERE EXTRACT(YEAR FROM Content_upload_date) = 2025
+GROUP BY Influencer_tier
+ORDER BY avg_views DESC
+LIMIT 10000
+```
+
+#### I3. 국가별 인플루언서 성과
+```sql
+-- "국가별 인플루언서 마케팅 성과 (2025)"
+SELECT
+  Target_country,
+  COUNT(DISTINCT Influencer_ID) AS influencer_count,
+  SUM(Cost_krw) AS total_cost_krw,
+  SUM(Num_views) AS total_views,
+  SUM(Num_likes) AS total_likes,
+  SUM(Num_shares) AS total_shares
+FROM `skin1004-319714.marketing_analysis.influencer_input_ALL_TEAMS`
+WHERE EXTRACT(YEAR FROM Content_upload_date) = 2025
+GROUP BY Target_country
+ORDER BY total_cost_krw DESC
+LIMIT 10000
+```
+
+---
+
+## 테이블 8: amazon_search_analytics_catalog_performance (아마존 검색 분석)
+
+테이블: `skin1004-319714.marketing_analysis.amazon_search_analytics_catalog_performance`
+
+**특징**: 아마존 검색 카탈로그 성과 데이터. 노출 → 클릭 → 장바구니 → 구매 퍼널 분석 가능.
+
+### 유효 컬럼 스키마
+
+- Country (STRING): 아마존 마켓플레이스 국가
+- Impressions_Impressions (INTEGER): 노출수
+- Clicks_Clicks (INTEGER): 클릭수
+- Clicks_Click_Rate_CTR (FLOAT): 클릭률 (CTR)
+- Cart_Adds_Cart_Adds (INTEGER): 장바구니 추가수
+- Purchases_Purchases (INTEGER): 구매수
+- Purchases_Conversion_Rate (FLOAT): 전환율
+
+### 예시 쿼리
+
+#### AZ1. 국가별 아마존 퍼널 성과
+```sql
+-- "아마존 국가별 검색 성과"
+SELECT
+  Country,
+  SUM(Impressions_Impressions) AS total_impressions,
+  SUM(Clicks_Clicks) AS total_clicks,
+  AVG(Clicks_Click_Rate_CTR) AS avg_ctr,
+  SUM(Cart_Adds_Cart_Adds) AS total_cart_adds,
+  SUM(Purchases_Purchases) AS total_purchases,
+  AVG(Purchases_Conversion_Rate) AS avg_conversion_rate
+FROM `skin1004-319714.marketing_analysis.amazon_search_analytics_catalog_performance`
+GROUP BY Country
+ORDER BY total_impressions DESC
+LIMIT 10000
+```
+
+#### AZ2. 아마존 전환율 분석
+```sql
+-- "아마존 국가별 전환율 비교"
+SELECT
+  Country,
+  AVG(Clicks_Click_Rate_CTR) AS avg_ctr,
+  AVG(Purchases_Conversion_Rate) AS avg_conversion_rate,
+  SAFE_DIVIDE(SUM(Purchases_Purchases), SUM(Clicks_Clicks)) AS click_to_purchase_rate
+FROM `skin1004-319714.marketing_analysis.amazon_search_analytics_catalog_performance`
+GROUP BY Country
+ORDER BY avg_conversion_rate DESC
+LIMIT 10000
+```
+
+---
+
+## 테이블 9~12: 리뷰 데이터 (Review Tables)
+
+4개 리뷰 테이블이 있으며, 유사한 스키마를 공유합니다.
+
+### 테이블 목록
+
+| 테이블명 | Full Path | 설명 |
+|----------|-----------|------|
+| Amazon_Review | `skin1004-319714.Review_Data.Amazon_Review` | 아마존 리뷰 |
+| Qoo10_Review | `skin1004-319714.Review_Data.Qoo10_Review` | 큐텐 리뷰 |
+| Shopee_Review | `skin1004-319714.Review_Data.Shopee_Review` | 쇼피 리뷰 |
+| Smartstore_Review | `skin1004-319714.Review_Data.Smartstore_Review` | 스마트스토어 리뷰 |
+
+### 공통 컬럼 스키마
+
+- collect_date / collected_date (STRING or DATE): 수집 날짜
+- channel (STRING): 수집 플랫폼
+- brand (STRING): 브랜드
+- review_date (STRING or DATE): 리뷰 작성 날짜
+- product_name (STRING): 제품명
+- review_original (STRING): 원본 리뷰
+- review_ko (STRING): 한국어 번역 리뷰
+- skin_concern (STRING): 피부 고민 (Smartstore_Review only)
+
+### 예시 쿼리
+
+#### RV1. 아마존 제품별 리뷰 수
+```sql
+-- "아마존 제품별 리뷰 수"
+SELECT
+  product_name,
+  COUNT(*) AS review_count
+FROM `skin1004-319714.Review_Data.Amazon_Review`
+WHERE brand LIKE '%SKIN1004%'
+GROUP BY product_name
+ORDER BY review_count DESC
+LIMIT 10000
+```
+
+#### RV2. 쇼피 최근 리뷰
+```sql
+-- "쇼피 최근 리뷰 50건"
+SELECT
+  product_name,
+  review_date,
+  review_original,
+  review_ko
+FROM `skin1004-319714.Review_Data.Shopee_Review`
+WHERE brand LIKE '%SKIN1004%'
+ORDER BY review_date DESC
+LIMIT 50
+```
+
+#### RV3. 스마트스토어 피부고민별 리뷰 분석
+```sql
+-- "스마트스토어 피부고민별 리뷰 수"
+SELECT
+  skin_concern,
+  COUNT(*) AS review_count
+FROM `skin1004-319714.Review_Data.Smartstore_Review`
+WHERE skin_concern IS NOT NULL AND skin_concern != ''
+GROUP BY skin_concern
+ORDER BY review_count DESC
+LIMIT 10000
+```
+
+---
+
+## 테이블 13: meta data_test (메타 광고 라이브러리)
+
+테이블: `skin1004-319714.ad_data.meta data_test`
+
+⚠️ **테이블명에 공백이 있습니다!** 반드시 백틱으로 감싸서 사용: `` `skin1004-319714.ad_data.meta data_test` ``
+
+**특징**: 메타(Facebook/Instagram) 광고 라이브러리 데이터. 광고 유형, 활성 여부, 게시 플랫폼 등 광고 크리에이티브 분석 가능.
+
+### 유효 컬럼 스키마
+
+- collect_date (DATE): 수집 날짜
+- country_code (STRING): 국가 코드
+- country_name (STRING): 국가명
+- brand (STRING): 브랜드
+- page_name (STRING): 페이지명
+- ad_type (STRING): 광고 유형 (공식계정/파트너십)
+- ad_archive_id (INTEGER): 광고 아카이브 ID
+- snapshot (STRING): 광고 상세 정보 (JSON)
+- is_active (BOOLEAN): 활성 여부
+- end_date (FLOAT): 종료일
+- publisher_platform (STRING): 게시 플랫폼
+- start_date (FLOAT): 시작일
+- url (STRING): 광고 URL
+
+### 예시 쿼리
+
+#### MT1. 브랜드별 활성 광고 수
+```sql
+-- "브랜드별 활성 메타 광고 수"
+SELECT
+  brand,
+  COUNT(*) AS active_ad_count
+FROM `skin1004-319714.ad_data.meta data_test`
+WHERE is_active = TRUE
+GROUP BY brand
+ORDER BY active_ad_count DESC
+LIMIT 10000
+```
+
+#### MT2. 국가별 광고 분포
+```sql
+-- "국가별 메타 광고 수"
+SELECT
+  country_name,
+  COUNT(*) AS ad_count,
+  SUM(CASE WHEN is_active = TRUE THEN 1 ELSE 0 END) AS active_count
+FROM `skin1004-319714.ad_data.meta data_test`
+WHERE brand LIKE '%SKIN1004%'
+GROUP BY country_name
+ORDER BY ad_count DESC
+LIMIT 10000
+```
+
+#### MT3. 광고 유형별 분석
+```sql
+-- "SKIN1004 광고 유형별 분포"
+SELECT
+  ad_type,
+  publisher_platform,
+  COUNT(*) AS ad_count
+FROM `skin1004-319714.ad_data.meta data_test`
+WHERE brand LIKE '%SKIN1004%'
+GROUP BY ad_type, publisher_platform
+ORDER BY ad_count DESC
+LIMIT 10000
+```
+
+---
 
 ## 출력 형식
 

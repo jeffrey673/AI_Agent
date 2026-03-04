@@ -203,8 +203,27 @@ def generate_chart(
         max_items = {"bar": 15, "horizontal_bar": 20, "pie": 10, "line": 36}
         limit = max_items.get(chart_type, 20)
         if len(data) > limit:
-            logger.info("chart_skipped_too_many_items", chart_type=chart_type, items=len(data))
-            return None
+            if chart_type == "pie":
+                # Pie/donut: aggregate into Top 9 + "기타" instead of skipping
+                _pie_y = y_col if isinstance(y_col, str) else y_col[0]
+                data_sorted = sorted(
+                    data,
+                    key=lambda r: float(r.get(_pie_y, 0) or 0),
+                    reverse=True,
+                )
+                top_items = data_sorted[:9]
+                others_val = sum(float(r.get(_pie_y, 0) or 0) for r in data_sorted[9:])
+                others_row = {x_col: "기타", _pie_y: others_val}
+                data = top_items + [others_row]
+                logger.info(
+                    "chart_pie_aggregated",
+                    original=len(data_sorted),
+                    others_count=len(data_sorted) - 9,
+                    others_value=others_val,
+                )
+            else:
+                logger.info("chart_skipped_too_many_items", chart_type=chart_type, items=len(data))
+                return None
 
         x_values_raw = [str(row.get(x_col, "")) for row in data]
 
@@ -579,7 +598,7 @@ def get_chart_config_prompt(query: str, sql: str, results_preview: str, row_coun
 ## ⚠️ 가독성 판단 — 아래 경우 needs_chart: false
 - bar 차트: 카테고리가 15개 초과
 - horizontal_bar: 항목이 20개 초과
-- pie/donut: 항목이 10개 초과
+- pie/donut: 항목이 많아도 OK (시스템이 자동으로 Top 9 + 기타로 집계)
 - line: x축 고유값 36개 초과. 단, group_column이 있으면 x축 고유값 기준으로 판단
 
 ## 차트 타입 선택

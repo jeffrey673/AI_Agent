@@ -297,7 +297,7 @@ def build_prd_blocks() -> list:
     blocks = []
 
     # Version info
-    blocks.append(callout("Version 7.2.1 | 2026-02-25 | DB Team / Data Analytics", "📋"))
+    blocks.append(callout("Version 7.2.2 | 2026-02-26 | DB Team / Data Analytics", "📋"))
     blocks.append(paragraph(""))
 
     # Section 1: Project Overview
@@ -428,47 +428,37 @@ def html_to_text_blocks(html_content: str, max_blocks: int = 30) -> list:
 
 
 def build_updatelog_blocks() -> list:
-    """Build update log blocks from markdown/html files."""
-    blocks = []
+    """Build update log blocks from markdown/html files.
 
-    # Find all update log files (.md and .html), sorted descending
-    log_files = []
+    Date format: YYYY-MM-DD (from filename). Sorted descending (newest first).
+    """
+    blocks = []
     docs_dir = os.path.join(BASE_DIR, "docs")
+
+    # Collect all update log files with extracted date keys
+    entries = []  # (date_key, filename)
     for f in os.listdir(docs_dir):
         if f.startswith("update_log_") and (f.endswith(".md") or f.endswith(".html")):
-            log_files.append(f)
-    log_files.sort(reverse=True)
+            # Extract date from filename: update_log_2026-02-26.md → 2026-02-26
+            date_key = f.replace("update_log_", "").replace(".md", "").replace(".html", "")
+            # Normalize: remove suffixes like "_cs" → keep date part only for sorting
+            date_sort = re.sub(r"_[a-zA-Z]+$", "", date_key)
+            entries.append((date_sort, date_key, f))
 
-    # Also check for test reports
-    report_files = []
-    for f in os.listdir(docs_dir):
-        if f.startswith("test_report") and f.endswith(".md"):
-            report_files.append(f)
-    report_files.sort(reverse=True)
+    # Sort descending by date
+    entries.sort(key=lambda e: e[0], reverse=True)
 
-    # Latest comprehensive test report
-    if report_files:
-        filepath = os.path.join(docs_dir, report_files[0])
-        with open(filepath, "r", encoding="utf-8") as f:
-            content = f.read()
-        summary = extract_section(content, "## 1. ", "## 2.")
-        children = md_to_blocks(summary, max_blocks=30) if summary else []
-        blocks.append(toggle(
-            f"2026-02-12 | v6.1 종합 QA 테스트 (112개 질문, 92% 성공률)",
-            children or [paragraph("See test_report_comprehensive_2026-02-12.md")]
-        ))
-
-    # Update logs
-    for lf in log_files:
+    for date_sort, date_key, lf in entries:
         filepath = os.path.join(docs_dir, lf)
-        with open(filepath, "r", encoding="utf-8") as f:
-            content = f.read()
+        try:
+            with open(filepath, "r", encoding="utf-8") as f:
+                content = f.read()
+        except UnicodeDecodeError:
+            with open(filepath, "r", encoding="cp949") as f:
+                content = f.read()
 
-        # Extract date and version from content
-        date_match = re.search(r"(\d{4}년 \d+월 \d+일)", content)
-        ver_match = re.search(r"\(v([\d.]+)\)", content)
-
-        date_str = date_match.group(1) if date_match else lf.replace("update_log_", "").replace(".md", "").replace(".html", "")
+        # Extract version from content
+        ver_match = re.search(r"\(v([\d.]+)", content)
         ver_str = f"v{ver_match.group(1)}" if ver_match else ""
 
         # Convert based on file type
@@ -477,7 +467,8 @@ def build_updatelog_blocks() -> list:
         else:
             children = md_to_blocks(content, max_blocks=25)
 
-        title = f"{date_str} | {ver_str}" if ver_str else date_str
+        # Unified title: "2026-02-26 | v7.2.2"
+        title = f"{date_key} | {ver_str}" if ver_str else date_key
         blocks.append(toggle(title, children or [paragraph(content[:500])]))
 
     return blocks
@@ -978,7 +969,6 @@ def main():
     token = get_token()
     args = sys.argv[1:]
     do_all = not args
-    do_prd = "--prd" in args or do_all
     do_log = "--updatelog" in args or do_all
     do_qa = "--qa" in args or do_all
 
@@ -995,7 +985,7 @@ def main():
     # Page description
     all_blocks.append(callout(
         "SKIN1004 AI Agent 개발 리포트 아카이브\n"
-        "PRD: 내용 수정 시 덮어쓰기 | Update Log: 증분 누적 | QA Report: 매일 하루치 모음",
+        "Update Log: 증분 누적 | QA Report: 매일 하루치 모음",
         "🤖"
     ))
     all_blocks.append(paragraph(""))
@@ -1004,29 +994,6 @@ def main():
     print("Adding page header...")
     append_blocks(token, PAGE_ID, all_blocks)
     time.sleep(0.3)
-
-    # ── PRD Section ──
-    if do_prd:
-        print("Building PRD section...")
-        prd_blocks = build_prd_blocks()
-        section = [
-            heading1("📋 PRD (Product Requirements Document)"),
-        ]
-        append_blocks(token, PAGE_ID, section)
-        time.sleep(0.3)
-
-        # PRD content as a toggle
-        prd_toggle = toggle("PRD v7.2.1 (2026-02-25) - 전체 내용 보기", prd_blocks[:95])
-        append_blocks(token, PAGE_ID, [prd_toggle])
-        time.sleep(0.3)
-
-        # If more blocks, add as additional toggle children
-        if len(prd_blocks) > 95:
-            remaining = prd_blocks[95:]
-            append_blocks(token, PAGE_ID, remaining)
-
-        append_blocks(token, PAGE_ID, [divider()])
-        print(f"  PRD: {len(prd_blocks)} blocks added")
 
     # ── Update Log Section ──
     if do_log:
@@ -1061,7 +1028,7 @@ def main():
         # v7.0 QA 500 all-route test (newest first)
         qa500_blocks = build_qa500_blocks()
         if qa500_blocks:
-            append_blocks(token, PAGE_ID, [heading2("2026-02-25 전체파트 종합 E2E 테스트 (500 queries) — v7.2.1")])
+            append_blocks(token, PAGE_ID, [heading2("2026-02-26 전체파트 종합 E2E 테스트 (500 queries) — v7.2.2")])
             time.sleep(0.3)
             append_blocks(token, PAGE_ID, qa500_blocks)
             time.sleep(0.3)

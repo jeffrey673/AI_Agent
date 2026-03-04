@@ -124,7 +124,7 @@ def _ensure_admin():
                     user.role = "admin"
                     changed = True
                 if not user.allowed_models or "skin1004-Analysis" not in (user.allowed_models or ""):
-                    user.allowed_models = "skin1004-Analysis,skin1004-Search"
+                    user.allowed_models = "skin1004-Analysis"
                     changed = True
                 if changed:
                     db.commit()
@@ -148,13 +148,15 @@ async def _warmup_notion_titles():
 
 
 async def _warmup_bq_schema():
-    """Pre-load BigQuery schema at startup so first SQL query skips schema fetch."""
+    """Pre-load BigQuery schemas (sales + marketing tables) at startup."""
     try:
         import app.agents.sql_agent as sql_mod
         if not sql_mod._schema_cache:
             from app.core.bigquery import get_bigquery_client
             settings = get_settings()
             bq = get_bigquery_client()
+
+            # 1) Primary sales table
             schema = await asyncio.to_thread(
                 bq.get_table_schema, settings.sales_table_full_path
             )
@@ -162,8 +164,29 @@ async def _warmup_bq_schema():
                 f"  - {col['name']} ({col['type']}): {col['description']}"
                 for col in schema
             ]
-            sql_mod._schema_cache = "\n\n### 실제 테이블 스키마\n" + "\n".join(schema_lines)
-            logger.info("bq_schema_warmup_done", columns=len(schema))
+            table_short = settings.sales_table_full_path.rsplit(".", 1)[-1]
+            cache = f"\n\n### 실제 테이블 스키마 ({table_short})\n" + "\n".join(schema_lines)
+            logger.info("bq_schema_warmup_sales_done", columns=len(schema))
+
+            # 2) Marketing / review / ad tables
+            loaded = 0
+            for table_path, label in sql_mod.MARKETING_TABLES:
+                try:
+                    tbl_schema = await asyncio.to_thread(
+                        bq.get_table_schema, table_path
+                    )
+                    tbl_lines = [
+                        f"  - {col['name']} ({col['type']}): {col['description']}"
+                        for col in tbl_schema
+                    ]
+                    tbl_short = table_path.rsplit(".", 1)[-1]
+                    cache += f"\n\n### {label} ({tbl_short})\n" + "\n".join(tbl_lines)
+                    loaded += 1
+                except Exception as e:
+                    logger.warning("bq_schema_warmup_table_failed", table=table_path, error=str(e))
+
+            sql_mod._schema_cache = cache
+            logger.info("bq_schema_warmup_done", marketing_tables_loaded=loaded)
     except Exception as e:
         logger.warning("bq_schema_warmup_failed", error=str(e))
 
@@ -198,4 +221,6 @@ if __name__ == "__main__":
         host=settings.host,
         port=settings.port,
         reload=True,
+        # Allow large request bodies for base64 image uploads (~50MB)
+        h11_max_incomplete_event_size=50 * 1024 * 1024,
     )
