@@ -276,7 +276,7 @@ class OrchestratorAgent:
         "리뷰 분석", "고객 리뷰", "제품 리뷰",
         "스마트스토어 리뷰", "아마존 리뷰", "쇼피 리뷰", "큐텐 리뷰",
         # Shopify
-        "shopify", "쇼피파이", "자사몰 매출",
+        "shopify", "쇼피파이", "자사몰 매출", "반품", "환불",
         # Platform metrics
         "플랫폼 순위", "제품 순위", "랭킹 데이터", "할인가",
     ]
@@ -308,7 +308,7 @@ class OrchestratorAgent:
 
     _NOTION_KEYWORDS = [
         "노션", "notion",
-        "정책", "매뉴얼", "프로세스", "가이드", "반품",
+        "정책", "매뉴얼", "프로세스", "가이드", "반품 정책", "반품정책",
         "사내 문서", "위키", "제품 정보",
     ]
 
@@ -353,9 +353,11 @@ class OrchestratorAgent:
         if any(kw in q for kw in self._FULLDATA_KEYWORDS):
             return "bigquery"
 
-        # Notion check — "노션" explicitly mentioned → always Notion
+        # Notion check — but defer to bigquery when strong data keywords present
         if any(kw in q for kw in self._NOTION_KEYWORDS):
-            return "notion"
+            # Don't steal data queries: "Shopify 반품 추이" → bigquery, not notion
+            if not any(kw in q for kw in self._DATA_KEYWORDS):
+                return "notion"
 
         # GWS check — highest priority for personal workspace queries
         if any(kw in q for kw in self._GWS_KEYWORDS):
