@@ -86,6 +86,12 @@
 - Continent1 (STRING): **대륙 (우선)** — 대륙 조회 시 이 컬럼 사용 ⭐
 - Continent2 (STRING): 대륙 상세 — '동남아시아', '동아시아', '서유럽', '북유럽', '북미', '남아메리카', '동남유럽', '중동', '오세아니아' 등
 
+#### 카테고리 ⭐
+- Category (STRING): **제품 카테고리** — 카테고리별 매출/수량 분석 시 이 컬럼 사용!
+  - 실제 값: 'Ampoule'(앰플), 'Suncare'(선케어/선크림), 'SET'(세트상품), 'Cream'(크림), 'Pack'(팩/마스크팩), 'Cleanser'(클렌저/클렌징), 'Oil'(오일/클렌징오일), 'Toner'(토너), 'Others'(기타)
+  - ⚠️ 카테고리 질문 시 이 컬럼으로 GROUP BY! (예: "카테고리별 매출" → `GROUP BY Category`)
+  - 한국어 매핑: 앰플/세럼 → 'Ampoule', 선크림/자외선차단 → 'Suncare', 크림 → 'Cream', 팩/마스크 → 'Pack', 클렌저/클렌징/세안 → 'Cleanser', 오일 → 'Oil', 토너 → 'Toner', 세트 → 'SET'
+
 #### 조직/관리
 - Team_NEW (STRING): **팀** — 실제 값 목록 (⚠️ 이 외의 팀명은 존재하지 않음!):
   - 'GM_EAST1' (글로벌마케팅 동남아1팀 — 인도네시아/필리핀/싱가포르 등)
@@ -652,8 +658,11 @@ LIMIT 10000
 - Manager_NEW (STRING): 담당자 (동일)
 - Continent1 (STRING): 대륙1 (우선 사용) — 대륙 조회 시 이 컬럼 사용 ⭐
 - Continent2 (STRING): 대륙2 (상세) — 대륙1이 우선순위
+- Category (STRING): **제품 카테고리** — 카테고리별 수량 분석 시 이 컬럼 사용! ⭐
+  - 실제 값: 'Ampoule'(앰플), 'Suncare'(선케어), 'SET'(세트), 'Cream'(크림), 'Pack'(팩), 'Cleanser'(클렌저), 'Oil'(오일), 'Toner'(토너), 'Others'(기타)
+  - Total_Qty (FLOAT): **전체수량** — Product 테이블에서도 수량 조회 가능 ⭐
 
-⚠️ Product 테이블 사용 금지 컬럼: Product_Name_Base, Qty_NameBase, Event_Qty_NameBase, Team, Manager, Type_of_Company, Type_of_Company_ENG, Category, Country_ENG, Continent1_ENG, Continent2_ENG, Line_ENG, Channel, In_out_bound, Product_Type, TIER, foc2, Total_Qty(컬럼 자체는 NULL임—계산으로 구함), Type_of_Item, Product_ENG (모두 X 표시됨)
+⚠️ Product 테이블 사용 금지 컬럼: Product_Name_Base, Qty_NameBase, Event_Qty_NameBase, Team, Manager, Type_of_Company, Type_of_Company_ENG, Country_ENG, Continent1_ENG, Continent2_ENG, Line_ENG, Channel, In_out_bound, Product_Type, TIER, foc2, Type_of_Item, Product_ENG (모두 X 표시됨)
 ⚠️ Product 테이블에는 Sales1_R, Sales2_R, Order_Count 등 **매출 관련 컬럼이 없음!**
 
 ### Product 테이블 예시 쿼리
