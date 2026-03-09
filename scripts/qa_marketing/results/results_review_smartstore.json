@@ -1,0 +1,3002 @@
+[
+  {
+    "id": "RT-001",
+    "query": "스마트스토어 제품별 리뷰 수 알려줘",
+    "table": "review_smartstore",
+    "category": "review_count",
+    "status": "OK",
+    "time": 32.7,
+    "answer_len": 1467,
+    "answer_preview": "### 📊 스마트스토어 제품별 리뷰 수 현황  #### 요약  2026년 3월 6일 기준으로 스마트스토어 제품별 리뷰 수를 분석한 결과, '센텔라 앰플'이 **7,555**개로 가장 많은 리뷰를 기록했습니다. 이는 전체 35개 제품 중 압도적인 수치로, 해당 제품의 높은 인기를 보여줍니다. 상위 10개 제품이 전체 리뷰의 상당 부분을 차지하며, 특히 '센텔"
+  },
+  {
+    "id": "RT-002",
+    "query": "스마트스토어 리뷰 가장 많은 제품은?",
+    "table": "review_smartstore",
+    "category": "top_reviewed",
+    "status": "OK",
+    "time": 35.2,
+    "answer_len": 1082,
+    "answer_preview": "### 📊 스마트스토어 리뷰 최다 제품 현황  #### 요약  스마트스토어에서 가장 많은 리뷰를 보유한 제품은 **센텔라 앰플**로, 총 **7,555개**의 리뷰를 기록했습니다. 이는 2위 제품인 센텔라 앰플 폼(2,648개)보다 약 2.8배 많은 수치로, 압도적인 고객 참여도를 보이고 있습니다.  #### 상세 데이터 | 제품명 | 리뷰 수 | |:--"
+  },
+  {
+    "id": "RT-003",
+    "query": "스마트스토어 최근 리뷰 보여줘",
+    "table": "review_smartstore",
+    "category": "recent_reviews",
+    "status": "WARN",
+    "time": 68.6,
+    "answer_len": 2955,
+    "answer_preview": "### 📊 SKIN1004 스마트스토어 최근 리뷰 분석  #### 요약  SKIN1004 스마트스토어의 최근 리뷰 **총 50건**이 조회되었으며, 가장 최신 리뷰는 **2026년 03월 04일**에 작성되었습니다. 전반적으로 제품의 촉촉함, 순함, 부드러운 발림성 등 사용감에 대한 긍정적인 평가가 많았으나, 일부 제품에서는 사은품 구성이나 향에 대한 개선"
+  },
+  {
+    "id": "RT-004",
+    "query": "스마트스토어 Madagascar Centella Ampoule 리뷰 수",
+    "table": "review_smartstore",
+    "category": "product_review",
+    "status": "OK",
+    "time": 45.4,
+    "answer_len": 460,
+    "answer_preview": "요청하신 조건에 해당하는 데이터가 없습니다.  SQL에서 `product_name LIKE '%Centella%Ampoule%'` 필터 조건이 문제일 수 있습니다. 스마트스토어 리뷰 데이터의 제품명은 주로 한국어로 되어 있을 가능성이 높으므로, 'Centella Ampoule' 대신 '센텔라 앰플' 또는 '마다가스카르 센텔라 앰플'과 같은 한국어 제품명으로"
+  },
+  {
+    "id": "RT-005",
+    "query": "스마트스토어 SKIN1004 전체 리뷰 수",
+    "table": "review_smartstore",
+    "category": "total_count",
+    "status": "OK",
+    "time": 26.3,
+    "answer_len": 580,
+    "answer_preview": "### 📊 스마트스토어 SKIN1004 전체 리뷰 현황  #### 요약  스마트스토어에서 SKIN1004 브랜드의 전체 리뷰 수는 총 **26,724**건으로 집계되었습니다. 이는 고객들의 활발한 참여와 제품에 대한 높은 관심을 보여줍니다.  #### 상세 데이터  (단일 수치이므로 상세 데이터 섹션은 생략합니다.)  #### 분석 및 인사이트  *   *"
+  },
+  {
+    "id": "RT-006",
+    "query": "스마트스토어 월별 리뷰 수 추이 알려줘",
+    "table": "review_smartstore",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 40.7,
+    "answer_len": 1472,
+    "answer_preview": "### 📊 스마트스토어 월별 리뷰 수 추이 분석  #### 요약  스마트스토어의 월별 리뷰 수는 **2015년 1월부터 2025년 12월까지 총 132개월**의 데이터를 기반으로 분석되었습니다. 초기 2015년 1월에는 **3개**의 리뷰로 시작했으나, 제공된 프리뷰 데이터(2015년 1월 ~ 2016년 8월)에서는 전반적으로 꾸준히 증가하는 추세를 보였습"
+  },
+  {
+    "id": "RT-007",
+    "query": "스마트스토어 최근 10건 리뷰",
+    "table": "review_smartstore",
+    "category": "recent_n",
+    "status": "WARN",
+    "time": 82.0,
+    "answer_len": 115403,
+    "answer_preview": "### 📊 스마트스토어 최근 10건 리뷰 분석  #### 요약  스마트스토어의 **최근 10건 리뷰**는 2026년 03월 03일부터 2026년 03월 04일까지의 데이터입니다. 이 기간 동안 **'센텔라 앰플'**이 3건으로 가장 많은 리뷰를 받았으며, 전반적으로 제품의 **촉촉함, 뽀송함, 순함**에 대한 긍정적인 평가가 두드러집니다.  #### 상세 "
+  },
+  {
+    "id": "RT-008",
+    "query": "스마트스토어 2025년 1월 리뷰",
+    "table": "review_smartstore",
+    "category": "date_range",
+    "status": "OK",
+    "time": 59.3,
+    "answer_len": 390,
+    "answer_preview": "# 데이터 조회 안내  안녕하세요. 요청하신 **스마트스토어 2025년 1월 리뷰** 데이터를 조회하지 못했습니다.  좀 더 구체적인 조건을 포함하여 다시 질문해 주시면 정확한 데이터를 찾는 데 도움이 됩니다.  ---  ### 💡 이렇게 질문해 보세요  1. **\"스마트스토어 2025년 1월 마다가스카르 센텔라 앰플 리뷰 건수는?\"** 2. **\"스마트스"
+  },
+  {
+    "id": "RT-009",
+    "query": "스마트스토어 Centella Ampoule 최신 리뷰 내용",
+    "table": "review_smartstore",
+    "category": "review_content",
+    "status": "OK",
+    "time": 49.5,
+    "answer_len": 530,
+    "answer_preview": "해당 조건의 데이터가 없습니다.  SQL에서 `product_name` 필터 조건인 `LIKE '%Centella%Ampoule%'`이 문제로 보입니다. 데이터베이스에 제품명이 '마다가스카르 센텔라 앰플'과 같이 한국어로 저장되어 있거나, 'Madagascar Centella Ampoule'처럼 정확한 영문 전체 이름으로 저장되어 있을 가능성이 높습니다. "
+  },
+  {
+    "id": "RT-010",
+    "query": "스마트스토어 브랜드별 리뷰 수 비교",
+    "table": "review_smartstore",
+    "category": "brand_review",
+    "status": "OK",
+    "time": 41.7,
+    "answer_len": 534,
+    "answer_preview": "### 📊 스마트스토어 브랜드별 리뷰 현황  #### 요약  2026년 03월 07일 기준, 스마트스토어에서 **SKIN1004** 브랜드는 총 **26,724개**의 리뷰를 보유하고 있습니다. 현재 데이터에는 SKIN1004 브랜드 정보만 포함되어 있어, 다른 브랜드와의 직접적인 리뷰 수 비교 분석은 어렵습니다.  #### 분석 및 인사이트  *   SK"
+  },
+  {
+    "id": "RT-011",
+    "query": "스마트스토어에서 Tone Brightening Capsule Serum 리뷰 몇 개야?",
+    "table": "review_smartstore",
+    "category": "product_review",
+    "status": "OK",
+    "time": 35.8,
+    "answer_len": 664,
+    "answer_preview": "### 📊 스마트스토어 Tone Brightening Capsule Serum 리뷰 현황  #### 요약  ⚠️ 현재 조회된 데이터에 따르면, 스마트스토어에서 'Tone Brightening Capsule **Ampoule**' 제품에 대한 리뷰는 **0개**입니다. 사용자 질문은 'Tone Brightening Capsule **Serum**' 제품에 대"
+  },
+  {
+    "id": "RT-012",
+    "query": "스마트스토어 리뷰 최근 30일 추이",
+    "table": "review_smartstore",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 52.8,
+    "answer_len": 1665,
+    "answer_preview": "### 📊 SKIN1004 스마트스토어 최근 30일 리뷰 추이 분석  #### 요약  ⚠️ 요청하신 최근 30일(2026-02-05 ~ 2026-03-06) 데이터 중, 2026-03-05 및 2026-03-06 데이터는 현재 존재하지 않습니다. 제공된 2026년 2월 5일부터 3월 4일까지의 SKIN1004 스마트스토어 리뷰는 총 **925건**으로, 일"
+  },
+  {
+    "id": "RT-013",
+    "query": "스마트스토어 Centella Soothing Cream 리뷰 보여줘",
+    "table": "review_smartstore",
+    "category": "product_review",
+    "status": "OK",
+    "time": 34.3,
+    "answer_len": 523,
+    "answer_preview": "요청하신 조건에 해당하는 데이터가 없습니다.  SQL 쿼리에서 사용된 필터 조건 중 `product_name` 조건이 문제일 가능성이 높습니다. 제품명은 정확한 스펠링, 띄어쓰기, 한글/영문 표기에 따라 검색 결과가 달라질 수 있습니다. 특히 `Centella%Soothing_Cream`에서 `_` (언더바)가 실제 제품명에 포함되어 있지 않거나, 'Soo"
+  },
+  {
+    "id": "RT-014",
+    "query": "스마트스토어에서 가장 최근에 등록된 리뷰는?",
+    "table": "review_smartstore",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 30.7,
+    "answer_len": 646,
+    "answer_preview": "### 📊 SKIN1004 스마트스토어 최신 리뷰 분석  #### 요약  SKIN1004 스마트스토어에서 가장 최근에 등록된 리뷰는 **2026년 3월 4일**에 작성된 '센텔라 라이트 클렌징 오일' 제품에 대한 것입니다. 해당 리뷰는 제품 자체에 대한 높은 만족도를 보였으나, 사은품 구성에 대한 아쉬움을 표명했습니다.  #### 분석 및 인사이트  *  "
+  },
+  {
+    "id": "RT-015",
+    "query": "스마트스토어 리뷰 수 월별 변화 차트",
+    "table": "review_smartstore",
+    "category": "monthly_trend",
+    "status": "WARN",
+    "time": 68.5,
+    "answer_len": 1459,
+    "answer_preview": "### 📊 스마트스토어 월별 리뷰 수 변화 분석  #### 요약  스마트스토어 리뷰 수 데이터는 **2015년 1월부터 2016년 8월까지**의 월별 변화를 보여줍니다. 이 기간 동안 월별 리뷰 수는 **최소 2개(2015년 8월)**에서 **최대 29개(2016년 4월)**를 기록하며 전반적으로 증가하는 추세를 보였습니다. 특히 2016년에는 2015년 "
+  },
+  {
+    "id": "RT-016",
+    "query": "스마트스토어 SKIN1004 리뷰 총 몇 건이야?",
+    "table": "review_smartstore",
+    "category": "total_count",
+    "status": "OK",
+    "time": 29.8,
+    "answer_len": 441,
+    "answer_preview": "### 📊 스마트스토어 SKIN1004 총 리뷰 현황  #### 요약  2026년 03월 07일 기준으로 스마트스토어 SKIN1004의 총 리뷰 수는 **26,724건**입니다. 이는 고객들의 활발한 제품 사용 및 피드백 참여를 보여주는 중요한 지표입니다.  #### 분석 및 인사이트  *   **높은 고객 참여도:** 2만 6천 건이 넘는 리뷰 수는 SK"
+  },
+  {
+    "id": "RT-017",
+    "query": "스마트스토어 Centella Cleansing Oil 리뷰 수",
+    "table": "review_smartstore",
+    "category": "product_review",
+    "status": "OK",
+    "time": 29.3,
+    "answer_len": 433,
+    "answer_preview": "요청하신 조건에 해당하는 데이터가 없습니다.  SQL 쿼리의 `product_name` 필터 조건인 `'%Centella%Cleansing_Oil%'`이 문제일 수 있습니다. 데이터베이스에 제품명이 'Centella Cleansing Oil' (띄어쓰기) 또는 '센텔라 클렌징 오일' (한글)과 같이 다른 형태로 저장되어 있을 가능성이 있습니다. 현재 SQL"
+  },
+  {
+    "id": "RT-018",
+    "query": "스마트스토어 최근 5건 리뷰 내용 보여줘",
+    "table": "review_smartstore",
+    "category": "recent_n",
+    "status": "OK",
+    "time": 29.6,
+    "answer_len": 1439,
+    "answer_preview": "### 📊 스마트스토어 최신 리뷰 5건 현황  #### 요약  2026년 3월 3일부터 3월 4일까지 SKIN1004 스마트스토어에서 작성된 **최근 리뷰 5건**을 분석한 결과, 대부분의 고객들이 제품의 사용감(촉촉함, 뽀송함, 발림성)에 대해 긍정적인 평가를 남겼습니다. 다만, 한 건의 리뷰에서는 제품 자체는 만족하나 프로모션 사은품에 대한 아쉬움을 표"
+  },
+  {
+    "id": "RT-019",
+    "query": "스마트스토어 2025년 리뷰 수 총합",
+    "table": "review_smartstore",
+    "category": "date_range",
+    "status": "OK",
+    "time": 36.6,
+    "answer_len": 490,
+    "answer_preview": "# 데이터 조회 안내  안녕하세요. 요청하신 **스마트스토어 2025년 리뷰 수 총합** 데이터를 조회하지 못했습니다.  좀 더 정확한 결과를 위해 **조건을 구체적으로 지정**해 주시면 다시 조회를 시도해 볼 수 있습니다.  ---  ## 💡 이렇게 질문을 바꿔 보세요  | 구체화 요소 | 예시 | |------------|------| | **기간** "
+  },
+  {
+    "id": "RT-020",
+    "query": "스마트스토어 제품별 리뷰 순위",
+    "table": "review_smartstore",
+    "category": "review_count",
+    "status": "OK",
+    "time": 32.9,
+    "answer_len": 1768,
+    "answer_preview": "### 📊 SKIN1004 스마트스토어 제품별 리뷰 순위 분석  #### 요약  SKIN1004 스마트스토어에서 가장 많은 리뷰를 기록한 제품은 '센텔라 앰플'로, 총 **7,555개**의 압도적인 리뷰 수를 보였습니다. 이어서 '센텔라 앰플 폼'이 2,648개, '센텔라 라이트 클렌징 오일'이 1,737개로 뒤를 이으며, 상위 제품들이 고객들의 높은 관심"
+  },
+  {
+    "id": "RT-021",
+    "query": "스마트스토어 피부고민별 리뷰 분석",
+    "table": "review_smartstore",
+    "category": "skin_concern",
+    "status": "OK",
+    "time": 57.5,
+    "answer_len": 1758,
+    "answer_preview": "### 📊 스마트스토어 피부고민별 리뷰 현황 분석  #### 요약  스마트스토어 리뷰 데이터를 분석한 결과, 고객들은 **복합적인 피부 고민**을 가장 많이 언급하는 것으로 나타났습니다. 특히 **'복합성, 트러블'** 관련 리뷰가 **145건**으로 가장 많았으며, 단일 고민으로는 **'복합성'**이 **132건**으로 가장 높은 비중을 차지했습니다. 전"
+  },
+  {
+    "id": "RT-022",
+    "query": "스마트스토어 skin_concern 별 리뷰 수",
+    "table": "review_smartstore",
+    "category": "skin_concern",
+    "status": "OK",
+    "time": 35.5,
+    "answer_len": 2149,
+    "answer_preview": "### 📊 스마트스토어 스킨 고민별 리뷰 현황 분석  #### 요약  스마트스토어 리뷰 데이터를 분석한 결과, 고객들은 **복합성 피부**에 대한 고민을 가장 많이 가지고 있으며, 특히 **복합성, 트러블** 조합이 **145건**으로 가장 많은 리뷰 수를 기록했습니다. 이어서 **복합성** 단독 고민이 **132건**, **복합성, 민감성** 조합이 **"
+  },
+  {
+    "id": "RT-023",
+    "query": "스마트스토어 피부고민 중 가장 많이 언급된 것은?",
+    "table": "review_smartstore",
+    "category": "skin_concern",
+    "status": "OK",
+    "time": 18.2,
+    "answer_len": 460,
+    "answer_preview": "스마트스토어에서 가장 많이 언급된 피부 고민은 **'민감성'**입니다.  고운세상코스메틱의 AI 피부 분석 서비스 'Ai 옵티미'가 약 **47만 건**의 피부 빅데이터를 분석한 결과, 전체 이용자의 **87%**가 계절과 성별에 관계없이 민감성 피부를 가장 큰 고민으로 꼽았습니다.  이어서 순위는 다음과 같습니다:  | 순위 | 피부 고민 | 비율 | |"
+  },
+  {
+    "id": "RT-024",
+    "query": "스마트스토어 리뷰에서 피부 트러블 관련 리뷰",
+    "table": "review_smartstore",
+    "category": "skin_concern",
+    "status": "OK",
+    "time": 59.3,
+    "answer_len": 3022,
+    "answer_preview": "### 📊 SKIN1004 스마트스토어 트러블 관련 리뷰 현황  #### 요약  SKIN1004 스마트스토어에서 **총 1,906건**의 피부 트러블 관련 리뷰가 확인되었습니다. 이 리뷰들은 2026년 2월 12일부터 2026년 3월 4일까지 **35개**의 다양한 제품에 걸쳐 작성되었으며, 특히 '히알루시카 워터핏 선 세럼', '센텔라 앰플', '프로바이"
+  },
+  {
+    "id": "RT-025",
+    "query": "스마트스토어 피부고민별 제품 리뷰 교차 분석",
+    "table": "review_smartstore",
+    "category": "skin_concern",
+    "status": "OK",
+    "time": 43.5,
+    "answer_len": 2461,
+    "answer_preview": "### 📊 스마트스토어 피부고민별 제품 리뷰 교차 분석 보고서  #### 요약  SKIN1004 스마트스토어 리뷰 데이터를 분석한 결과, **'센텔라 앰플'**이 다양한 피부 고민 카테고리에서 가장 많은 리뷰를 기록하며 압도적인 인기를 보였습니다. 특히 **'복합성'** 피부 고민을 가진 사용자들에게서 가장 많은 리뷰(단일 카테고리 기준 **40건**)를 "
+  },
+  {
+    "id": "RT-026",
+    "query": "스마트스토어 리뷰 가장 적은 제품은?",
+    "table": "review_smartstore",
+    "category": "review_count",
+    "status": "OK",
+    "time": 39.1,
+    "answer_len": 1177,
+    "answer_preview": "### 📊 스마트스토어 리뷰 수가 가장 적은 제품 분석  #### 요약  SKIN1004 스마트스토어에서 현재까지 리뷰 수가 가장 적은 제품은 **'티트리카 B5 크림'**으로, 총 **110개**의 리뷰를 기록했습니다. 이어서 '프로바이오시카 에센스 토너'와 '포어마이징 딥 클렌징 폼'이 각각 134개의 리뷰로 두 번째로 적은 리뷰 수를 보였습니다.  #"
+  },
+  {
+    "id": "RT-027",
+    "query": "스마트스토어 2024년 12월 리뷰 보여줘",
+    "table": "review_smartstore",
+    "category": "date_range",
+    "status": "OK",
+    "time": 36.0,
+    "answer_len": 380,
+    "answer_preview": "# 데이터 조회 안내  안녕하세요. 요청하신 **스마트스토어 2024년 12월 리뷰 데이터**를 조회하지 못했습니다.  좀 더 구체적인 조건을 추가해 주시면 정확한 데이터를 찾는 데 도움이 됩니다.  ---  ## 💡 이렇게 질문을 바꿔보세요  > **예시 1)** \"스마트스토어 2024년 12월 **마다가스카르 센텔라 앰플** 리뷰 보여줘\"  > > **"
+  },
+  {
+    "id": "RT-028",
+    "query": "스마트스토어 최근 20건 리뷰 조회",
+    "table": "review_smartstore",
+    "category": "recent_n",
+    "status": "OK",
+    "time": 54.1,
+    "answer_len": 88653,
+    "answer_preview": "### 📊 SKIN1004 스마트스토어 최근 20건 리뷰 현황  #### 요약  SKIN1004 스마트스토어의 **최근 20건 리뷰**는 **2026년 3월 3일과 3월 4일**에 작성되었습니다. 가장 많은 리뷰를 받은 제품은 **히알루시카 워터핏 선 세럼 (6건)**이며, **센텔라 라이트 클렌징 오일 (4건)**과 **센텔라 앰플 (4건)**이 그 뒤를"
+  },
+  {
+    "id": "RT-029",
+    "query": "스마트스토어 Madagascar Centella Ampoule 최신 리뷰",
+    "table": "review_smartstore",
+    "category": "review_content",
+    "status": "OK",
+    "time": 50.0,
+    "answer_len": 457,
+    "answer_preview": "해당 조건의 데이터가 존재하지 않습니다.  SQL에서 사용된 필터 조건 중 `product_name LIKE '%Madagascar Centella Ampoule%'` 조건이 문제일 가능성이 높습니다. 데이터베이스에 저장된 제품명이 정확히 일치하지 않거나, 다른 형태로 저장되어 있을 수 있습니다. 예를 들어, 제품명이 한글로 \"마다가스카르 센텔라 앰플\"로 "
+  },
+  {
+    "id": "RT-030",
+    "query": "스마트스토어 채널별 리뷰 수",
+    "table": "review_smartstore",
+    "category": "review_count",
+    "status": "OK",
+    "time": 41.8,
+    "answer_len": 524,
+    "answer_preview": "### 📊 SKIN1004 스마트스토어 채널별 리뷰 현황  #### 요약  SKIN1004 브랜드의 스마트스토어 채널 총 리뷰 수는 **26,724**건으로 집계되었습니다. 현재 조회된 데이터는 스마트스토어 채널에 대한 리뷰만 포함하고 있습니다.  #### 분석 및 인사이트  *   **단일 채널 집중:** 현재 데이터는 'Smartstore' 채널에 대한"
+  },
+  {
+    "id": "RT-031",
+    "query": "스마트스토어 2025년 2월 리뷰 몇 건이야?",
+    "table": "review_smartstore",
+    "category": "date_range",
+    "status": "OK",
+    "time": 52.2,
+    "answer_len": 387,
+    "answer_preview": "### 📊 2025년 2월 스마트스토어 SKIN1004 리뷰 현황  #### 요약  2025년 2월 한 달간 스마트스토어에서 발생한 SKIN1004 브랜드의 리뷰는 총 **491건**입니다.  #### 분석 및 인사이트  *   2025년 2월 스마트스토어에서 SKIN1004 브랜드에 대한 리뷰가 **491건** 기록되었습니다. *   해당 기간 동안 고객"
+  },
+  {
+    "id": "RT-032",
+    "query": "스마트스토어 리뷰 데이터 전체 건수 알려줘",
+    "table": "review_smartstore",
+    "category": "total_count",
+    "status": "OK",
+    "time": 35.5,
+    "answer_len": 413,
+    "answer_preview": "### 📊 스마트스토어 리뷰 데이터 전체 건수  #### 요약  현재까지 축적된 스마트스토어 리뷰 데이터의 전체 건수는 **26,724건**입니다.  #### 분석 및 인사이트  *   스마트스토어에 총 26,724건의 리뷰 데이터가 축적되어 있어, 이는 고객 피드백을 분석하고 제품 및 서비스 개선에 활용할 수 있는 중요한 자산입니다. *   이 방대한 리"
+  },
+  {
+    "id": "RT-033",
+    "query": "스마트스토어 Centella Ampoule 리뷰 월별 추이",
+    "table": "review_smartstore",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 32.3,
+    "answer_len": 383,
+    "answer_preview": "해당 조건에 맞는 스마트스토어 Centella Ampoule 리뷰 데이터가 존재하지 않습니다.  가장 가능성이 높은 원인은 `brand` 필터 조건(`SKIN1004`) 또는 `product_name` 필터 조건(`Centella Ampoule`)이 데이터와 정확히 일치하지 않기 때문입니다. 또는 해당 제품의 스마트스토어 리뷰 데이터가 2019년 1월 1일"
+  },
+  {
+    "id": "RT-034",
+    "query": "스마트스토어에서 리뷰 최근 50건",
+    "table": "review_smartstore",
+    "category": "recent_n",
+    "status": "OK",
+    "time": 56.0,
+    "answer_len": 1320,
+    "answer_preview": "### 📊 스마트스토어 최근 리뷰 50건 분석  #### 요약  2026년 3월 2일부터 3월 4일까지 스마트스토어에 등록된 **총 50건**의 최신 리뷰를 분석한 결과, '센텔라 라이트 클렌징 오일'이 **10건**으로 가장 많은 리뷰를 받았으며, 전반적으로 제품의 '촉촉함', '순함', '발림성'에 대한 긍정적인 평가가 주를 이루었습니다. 일부 리뷰에서"
+  },
+  {
+    "id": "RT-035",
+    "query": "스마트스토어 리뷰 제품명별 분류",
+    "table": "review_smartstore",
+    "category": "review_count",
+    "status": "OK",
+    "time": 53.0,
+    "answer_len": 1684,
+    "answer_preview": "### 📊 SKIN1004 스마트스토어 제품별 리뷰 현황  #### 요약  SKIN1004 스마트스토어 리뷰 데이터를 제품명별로 분류한 결과, 총 35개 제품에 대한 리뷰가 확인되었습니다. 이 중 **'센텔라 앰플'**이 **7,555건**으로 압도적인 리뷰 수를 기록하며 가장 인기가 많은 제품으로 나타났습니다. 이어서 '센텔라 앰플 폼'이 2,648건, "
+  },
+  {
+    "id": "RT-036",
+    "query": "스마트스토어 Tone Brightening Capsule Serum 최신 리뷰 내용",
+    "table": "review_smartstore",
+    "category": "review_content",
+    "status": "OK",
+    "time": 47.6,
+    "answer_len": 456,
+    "answer_preview": "요청하신 '스마트스토어 Tone Brightening Capsule Serum'에 대한 리뷰 데이터는 현재 조회되지 않습니다.  SQL 쿼리에서 `product_name` 필터 조건이 문제였습니다. 사용자는 'Tone Brightening Capsule **Serum**'에 대한 리뷰를 요청했지만, SQL 쿼리에서는 'Tone Brightening Caps"
+  },
+  {
+    "id": "RT-037",
+    "query": "스마트스토어 전체 리뷰 중 최근 7일 리뷰",
+    "table": "review_smartstore",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 37.6,
+    "answer_len": 387,
+    "answer_preview": "# 데이터 조회 안내  안녕하세요. 요청하신 **스마트스토어 최근 7일 리뷰** 데이터를 조회하지 못했습니다.  좀 더 구체적인 조건을 추가해 주시면 정확한 데이터를 찾는 데 도움이 됩니다.  ---  ## 💡 이렇게 질문해 보시면 좋아요  1. **\"스마트스토어에서 마다가스카르 센텔라 앰플의 최근 7일 리뷰를 보여줘\"**    → 특정 제품명을 지정  2"
+  },
+  {
+    "id": "RT-038",
+    "query": "스마트스토어 리뷰 수집 날짜 기준 최신순 정렬",
+    "table": "review_smartstore",
+    "category": "recent_reviews",
+    "status": "WARN",
+    "time": 67.3,
+    "answer_len": 2563,
+    "answer_preview": "## 📊 SKIN1004 스마트스토어 최신 리뷰 분석  #### 요약  SKIN1004 브랜드의 스마트스토어 리뷰를 수집 날짜 기준 최신순으로 정렬하여 분석했습니다. 가장 최근 수집된 리뷰는 **2026년 03월 04일** 데이터이며, 총 **10,000건**의 리뷰가 조회되었습니다. 조회된 데이터는 2026년 01월 26일부터 2026년 03월 04일까지"
+  },
+  {
+    "id": "RT-039",
+    "query": "스마트스토어 2025년 3월 리뷰 있어?",
+    "table": "review_smartstore",
+    "category": "date_range",
+    "status": "OK",
+    "time": 40.2,
+    "answer_len": 340,
+    "answer_preview": "안녕하세요! 요청하신 **스마트스토어 2025년 3월 리뷰 데이터**를 조회하지 못했습니다.  좀 더 구체적으로 질문해 주시면 정확한 데이터를 찾는 데 도움이 됩니다. 예를 들어 **특정 제품명, 리뷰 유형(텍스트/포토), 평점 범위** 등을 함께 알려주세요.  **질문 예시:** 1. \"스마트스토어에서 2025년 3월 **마다가스카르 센텔라 앰플**의 리"
+  },
+  {
+    "id": "RT-040",
+    "query": "스마트스토어 리뷰 브랜드 SKIN1004만 필터링",
+    "table": "review_smartstore",
+    "category": "brand_review",
+    "status": "OK",
+    "time": 52.9,
+    "answer_len": 1330,
+    "answer_preview": "### 📊 SKIN1004 스마트스토어 리뷰 현황  #### 요약  사용자님의 요청에 따라 스마트스토어에서 수집된 **SKIN1004 브랜드의 리뷰 10,000건**을 필터링하여 분석했습니다. 해당 데이터는 2025년 12월 10일부터 2026년 3월 3일까지 수집되었으며, 총 **35가지의 고유 제품**에 대한 리뷰와 **870가지의 다양한 피부 고민**"
+  },
+  {
+    "id": "RT-041",
+    "query": "스마트스토어 최근 100건 리뷰 데이터",
+    "table": "review_smartstore",
+    "category": "recent_n",
+    "status": "OK",
+    "time": 50.7,
+    "answer_len": 1757,
+    "answer_preview": "### 📊 스마트스토어 SKIN1004 최근 100건 리뷰 분석 보고서  #### 요약  SKIN1004 스마트스토어의 **최근 100건** 리뷰 데이터를 분석한 결과, **2026년 03월 01일부터 2026년 03월 04일까지**의 리뷰가 조회되었습니다. 전반적으로 제품의 **촉촉함, 순함, 자극 없는 사용감**에 대한 긍정적인 피드백이 많았으며, 특히"
+  },
+  {
+    "id": "RT-042",
+    "query": "스마트스토어 Centella Soothing Cream 리뷰 내용 보여줘",
+    "table": "review_smartstore",
+    "category": "review_content",
+    "status": "OK",
+    "time": 59.6,
+    "answer_len": 394,
+    "answer_preview": "해당 조건의 데이터가 없습니다.  SQL에서 사용된 `product_name` 필터 조건(`product_name LIKE '%Centella Soothing Cream%'`)이 문제일 가능성이 높습니다. 데이터베이스에 저장된 제품명이 영어 \"Centella Soothing Cream\"과 정확히 일치하지 않거나, 한국어로 저장되어 있을 수 있습니다.  유사"
+  },
+  {
+    "id": "RT-043",
+    "query": "스마트스토어 월별 리뷰 건수 통계",
+    "table": "review_smartstore",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 35.7,
+    "answer_len": 566,
+    "answer_preview": "# 📊 데이터 조회 안내  안녕하세요. 요청하신 **스마트스토어 월별 리뷰 건수 통계**를 현재 데이터베이스에서 조회하지 못했습니다.  ---  ## 💡 더 정확한 결과를 위해 질문을 구체화해 주세요  아래 항목을 포함하여 다시 질문해 주시면 원하시는 데이터를 찾는 데 도움이 됩니다.  | 구체화 항목 | 예시 | |------------|------| |"
+  },
+  {
+    "id": "RT-044",
+    "query": "스마트스토어 리뷰 제품별 비율",
+    "table": "review_smartstore",
+    "category": "review_count",
+    "status": "OK",
+    "time": 24.7,
+    "answer_len": 1441,
+    "answer_preview": "### 📊 SKIN1004 스마트스토어 제품별 리뷰 비율 분석  #### 요약  SKIN1004 스마트스토어의 전체 **35개 제품**에 대한 총 리뷰 수는 **26,725건**으로 집계되었습니다. 이 중 '센텔라 앰플'이 **7,555건**의 리뷰를 기록하며 전체의 **28.27%**를 차지하여 압도적인 1위를 차지했습니다. 상위 10개 제품이 전체 리뷰"
+  },
+  {
+    "id": "RT-045",
+    "query": "스마트스토어 2024년 리뷰 수",
+    "table": "review_smartstore",
+    "category": "date_range",
+    "status": "OK",
+    "time": 30.8,
+    "answer_len": 377,
+    "answer_preview": "# 데이터 조회 안내  안녕하세요. 요청하신 **스마트스토어 2024년 리뷰 수** 데이터를 조회하지 못했습니다.  좀 더 구체적인 조건을 추가해 주시면 정확한 데이터를 찾는 데 도움이 됩니다. 아래 예시를 참고해 주세요.  ---  ### 💡 질문 예시  1. **\"스마트스토어에서 2024년 1월~6월 마다가스카르 센텔라 앰플의 리뷰 수는?\"** 2. *"
+  },
+  {
+    "id": "RT-046",
+    "query": "스마트스토어 리뷰 원문과 한국어 번역 같이 보여줘",
+    "table": "review_smartstore",
+    "category": "review_content",
+    "status": "WARN",
+    "time": 72.5,
+    "answer_len": 102042,
+    "answer_preview": "📊 스마트스토어 리뷰 원문 및 한국어 번역  #### 요약  사용자님의 요청에 따라 스마트스토어 리뷰 원문과 한국어 번역 데이터를 제공합니다. 총 **10,000건**의 최신 리뷰가 조회되었으며, 가장 최근 리뷰는 **2026년 3월 4일**에 작성되었습니다. 조회된 대부분의 리뷰 원문은 이미 한국어로 작성되어 있어 번역문과 동일하게 표시됩니다.  ####"
+  },
+  {
+    "id": "RT-047",
+    "query": "스마트스토어 Centella Cleansing Oil 최신 리뷰",
+    "table": "review_smartstore",
+    "category": "review_content",
+    "status": "OK",
+    "time": 33.7,
+    "answer_len": 583,
+    "answer_preview": "해당 조건의 데이터가 존재하지 않습니다.  SQL에서 사용된 필터 조건 중 `product_name` 조건이 문제일 수 있습니다. `product_name LIKE '%Centella%Cleansing_Oil%'`에서 'Cleansing_Oil' 부분에 언더바(`_`)가 포함되어 있어 실제 제품명과 일치하지 않을 가능성이 높습니다. 데이터베이스에 저장된 실"
+  },
+  {
+    "id": "RT-048",
+    "query": "스마트스토어 리뷰 최근 한 달 몇 건?",
+    "table": "review_smartstore",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 35.4,
+    "answer_len": 492,
+    "answer_preview": "### 📊 스마트스토어 최근 한 달(2026년 2월) 리뷰 현황  #### 요약  2026년 2월 한 달간 스마트스토어 리뷰는 총 **899건**이 작성되었습니다. 이는 고객들의 활발한 피드백 활동을 보여줍니다.  #### 분석 및 인사이트  *   2026년 2월 한 달 동안 스마트스토어에서 **899건**의 리뷰가 발생했습니다. 이는 해당 기간 동안 고"
+  },
+  {
+    "id": "RT-049",
+    "query": "스마트스토어 제품별 리뷰 수 TOP 5",
+    "table": "review_smartstore",
+    "category": "top_reviewed",
+    "status": "OK",
+    "time": 36.9,
+    "answer_len": 1044,
+    "answer_preview": "### 📊 스마트스토어 제품별 리뷰 수 TOP 5  #### 요약  2026년 03월 07일 기준 스마트스토어에서 가장 많은 리뷰를 받은 제품은 **센텔라 앰플**로, 총 **7,555개**의 압도적인 리뷰 수를 기록했습니다. 이어서 센텔라 앰플 폼이 2,648개, 센텔라 라이트 클렌징 오일이 1,737개로 뒤를 이으며 상위권을 차지했습니다.  #### 상"
+  },
+  {
+    "id": "RT-050",
+    "query": "스마트스토어 리뷰 날짜별 분포",
+    "table": "review_smartstore",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 57.1,
+    "answer_len": 1865,
+    "answer_preview": "### 📊 스마트스토어 리뷰 날짜별 분포 분석 보고서  #### 요약  스마트스토어 리뷰 데이터는 **2015년 1월 23일**부터 시작하여 총 **2,530개**의 고유한 날짜에 걸쳐 분포되어 있습니다. 초기에는 하루에 1건의 리뷰가 주로 발생했으나, 점차 2~3건의 리뷰가 발생하는 날도 나타나며 리뷰 활동이 증가하는 추세를 보입니다. 제공된 데이터는 2"
+  },
+  {
+    "id": "RT-051",
+    "query": "스마트스토어 피부고민 건성 관련 리뷰",
+    "table": "review_smartstore",
+    "category": "skin_concern",
+    "status": "OK",
+    "time": 48.4,
+    "answer_len": 1481,
+    "answer_preview": "### 📊 SKIN1004 스마트스토어 건성 피부고민 관련 리뷰 분석  #### 요약  SKIN1004 스마트스토어에서 **총 109건**의 건성 피부고민 관련 리뷰가 분석되었습니다. 이 리뷰들은 **2023년 12월 29일부터 2024년 11월 03일**까지의 기간에 걸쳐 **22가지** 고유 제품에 대해 작성되었습니다. 주요 제품으로는 '센텔라 앰플'이"
+  },
+  {
+    "id": "RT-052",
+    "query": "스마트스토어 피부고민별 리뷰 추이",
+    "table": "review_smartstore",
+    "category": "skin_concern",
+    "status": "OK",
+    "time": 33.7,
+    "answer_len": 441,
+    "answer_preview": "## 데이터 조회 안내  안녕하세요. 요청하신 **스마트스토어 피부고민별 리뷰 추이** 데이터를 조회하지 못했습니다.  좀 더 구체적인 조건을 포함하여 질문해 주시면 정확한 데이터를 찾는 데 도움이 됩니다.  ---  ### 💡 이렇게 질문해 보세요  1. **\"2024년 하반기 스마트스토어에서 마다가스카르 센텔라 앰플의 피부고민별(모공/트러블/보습 등) "
+  },
+  {
+    "id": "RT-053",
+    "query": "스마트스토어 피부고민 민감성 리뷰 몇 건?",
+    "table": "review_smartstore",
+    "category": "skin_concern",
+    "status": "OK",
+    "time": 20.3,
+    "answer_len": 368,
+    "answer_preview": "### 📊 스마트스토어 민감성 피부고민 리뷰 현황  #### 요약  스마트스토어에서 '민감성' 피부고민으로 작성된 리뷰는 총 **20건**입니다.  #### 분석 및 인사이트  *   스마트스토어 채널에서 '민감성' 피부고민을 언급한 리뷰는 현재 20건으로 집계되었습니다. *   `> 이 수치는 민감성 피부를 가진 고객들의 제품 경험과 피드백을 파악하는 데"
+  },
+  {
+    "id": "RT-054",
+    "query": "스마트스토어 skin_concern 목록 보여줘",
+    "table": "review_smartstore",
+    "category": "skin_concern",
+    "status": "WARN",
+    "time": 60.3,
+    "answer_len": 597,
+    "answer_preview": "# 스마트스토어 피부 고민(skin_concern) 유형 목록  네이버 스마트스토어에서 상품 등록 시 사용되는 주요 피부 고민 항목은 다음과 같습니다.  | # | 피부 고민 유형 | 설명 | |---|---|---| | 1 | **수분/보습** | 건조하고 당기는 피부 관련 고민 | | 2 | **주름/탄력** | 피부 탄력 저하 및 주름 관련 고민 | "
+  },
+  {
+    "id": "RT-055",
+    "query": "스마트스토어 피부고민별 제품 추천 리뷰",
+    "table": "review_smartstore",
+    "category": "skin_concern",
+    "status": "WARN",
+    "time": 80.6,
+    "answer_len": 377,
+    "answer_preview": "### 📊 스마트스토어 피부고민별 제품 추천 리뷰 분석  #### 요약  스마트스토어에서 수집된 **5,988건**의 리뷰 데이터를 분석한 결과, 고객들은 **1,393가지**의 다양한 피부 고민을 언급하며 **35가지**의 제품에 대한 추천 및 사용 경험을 공유하고 있습니다. 이 데이터는 특정 피부 고민에 대한 제품의 효능과 고객 반응을 직접적으로 파악하"
+  },
+  {
+    "id": "RT-056",
+    "query": "스마트스토어 2025년 1분기 리뷰 수",
+    "table": "review_smartstore",
+    "category": "date_range",
+    "status": "OK",
+    "time": 37.2,
+    "answer_len": 394,
+    "answer_preview": "# 데이터 조회 안내  안녕하세요. 요청하신 **스마트스토어 2025년 1분기 리뷰 수** 데이터를 현재 조회하지 못했습니다.  좀 더 구체적인 조건을 추가해 주시면 정확한 데이터를 찾는 데 도움이 됩니다.  ---  ## 💡 이렇게 질문을 바꿔보시면 좋아요  1. **\"스마트스토어에서 2025년 1월~3월 마다가스카르 센텔라 라인 제품별 리뷰 수를 알려줘"
+  },
+  {
+    "id": "RT-057",
+    "query": "스마트스토어 최근 리뷰 3건만 보여줘",
+    "table": "review_smartstore",
+    "category": "recent_n",
+    "status": "WARN",
+    "time": 86.3,
+    "answer_len": 2845,
+    "answer_preview": "## 📊 스마트스토어 최근 리뷰 3건  #### 요약  SKIN1004 스마트스토어의 **가장 최근 리뷰 3건은 2026년 3월 4일에 작성**되었습니다. 이 리뷰들은 \"센텔라 수딩 크림\", \"히알루시카 워터핏 선 세럼\", \"센텔라 라이트 클렌징 오일\" 제품에 대한 것으로, 전반적으로 제품 자체에 대한 긍정적인 평가가 주를 이루었으나, 한 건의 리뷰에서는 "
+  },
+  {
+    "id": "RT-058",
+    "query": "스마트스토어 Madagascar Centella Ampoule 리뷰 몇 개 있어?",
+    "table": "review_smartstore",
+    "category": "product_review",
+    "status": "OK",
+    "time": 21.2,
+    "answer_len": 351,
+    "answer_preview": "해당 조건의 데이터가 없습니다.  SQL에서 사용된 필터 조건 중 `product_name LIKE '%Madagascar Centella Ampoule%'`이 문제일 가능성이 높습니다. 데이터베이스에 저장된 제품명이 정확히 일치하지 않거나, 다른 표기법(예: 한글 제품명, 용량 포함 등)으로 되어 있을 수 있습니다.  비슷한 데이터를 조회할 수 있는 대안"
+  },
+  {
+    "id": "RT-059",
+    "query": "스마트스토어 리뷰 수집일 기준 정렬",
+    "table": "review_smartstore",
+    "category": "recent_reviews",
+    "status": "WARN",
+    "time": 77.9,
+    "answer_len": 238,
+    "answer_preview": "<details><summary>실행된 쿼리</summary>  ```sql SELECT   collected_date,   product_name,   review_date,   review_original,   review_ko FROM `skin1004-319714.Review_Data.Smartstore_Review` ORDER BY collecte"
+  },
+  {
+    "id": "RT-060",
+    "query": "스마트스토어 전체 리뷰 데이터 수",
+    "table": "review_smartstore",
+    "category": "total_count",
+    "status": "OK",
+    "time": 30.9,
+    "answer_len": 379,
+    "answer_preview": "### 📊 스마트스토어 전체 리뷰 데이터 현황  #### 요약  스마트스토어에 축적된 전체 리뷰 수는 총 **26,724**건입니다.  #### 분석 및 인사이트  *   현재까지 스마트스토어를 통해 수집된 총 리뷰 수를 명확하게 파악할 수 있습니다. *   이 수치는 스마트스토어 고객들의 제품에 대한 관심과 참여도를 나타내는 중요한 지표로 활용될 수 있습"
+  },
+  {
+    "id": "RT-061",
+    "query": "스마트스토어에서 리뷰 가장 많이 달린 제품 TOP 3",
+    "table": "review_smartstore",
+    "category": "top_reviewed",
+    "status": "OK",
+    "time": 30.8,
+    "answer_len": 799,
+    "answer_preview": "### 📊 스마트스토어 SKIN1004 제품별 리뷰 TOP 3  #### 요약  SKIN1004 스마트스토어에서 가장 많은 리뷰를 받은 제품은 **센텔라 앰플**로, 총 **7,555**개의 리뷰를 기록했습니다. 이어서 **센텔라 앰플 폼**이 **2,648**개, **센텔라 라이트 클렌징 오일**이 **1,737**개의 리뷰로 뒤를 이으며 TOP 3를 형"
+  },
+  {
+    "id": "RT-062",
+    "query": "스마트스토어 2025년 리뷰 월별 건수",
+    "table": "review_smartstore",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 34.8,
+    "answer_len": 483,
+    "answer_preview": "# 데이터 조회 안내  안녕하세요. 요청하신 **스마트스토어 2025년 리뷰 월별 건수** 데이터를 조회하지 못했습니다.  좀 더 정확한 결과를 위해 **조건을 구체적으로 지정**해 주시면 다시 조회를 시도해 보겠습니다.  ---  ## 💡 이렇게 질문해 보세요  1. **\"스마트스토어에서 2025년 1월~5월 마다가스카르 센텔라 앰플의 월별 리뷰 건수 알"
+  },
+  {
+    "id": "RT-063",
+    "query": "스마트스토어 Centella Ampoule 리뷰 한국어 번역 보여줘",
+    "table": "review_smartstore",
+    "category": "review_content",
+    "status": "OK",
+    "time": 31.7,
+    "answer_len": 426,
+    "answer_preview": "안녕하세요! 요청하신 **스마트스토어 Centella Ampoule 리뷰 한국어 번역** 데이터를 현재 조회하지 못했습니다.  좀 더 구체적인 조건을 추가해 주시면 정확한 데이터를 찾는 데 도움이 됩니다. 아래 예시를 참고해 주세요:  ---  **💡 질문 예시**  1. **\"2024년 1월~3월 스마트스토어 Centella Ampoule 리뷰 중 별점 "
+  },
+  {
+    "id": "RT-064",
+    "query": "스마트스토어 리뷰 제품명에 Centella 포함된 것만",
+    "table": "review_smartstore",
+    "category": "product_review",
+    "status": "OK",
+    "time": 34.4,
+    "answer_len": 641,
+    "answer_preview": "해당 조건(브랜드 'SKIN1004' 및 제품명에 'Centella' 포함)에 맞는 데이터는 현재 조회되지 않습니다.  제공된 SQL 쿼리에서 `brand LIKE '%SKIN1004%'` 조건과 `product_name LIKE '%Centella%'` 조건이 문제일 수 있습니다.  *   **`product_name LIKE '%Centella%'`**"
+  },
+  {
+    "id": "RT-065",
+    "query": "스마트스토어 2024년 11월 리뷰 데이터",
+    "table": "review_smartstore",
+    "category": "date_range",
+    "status": "OK",
+    "time": 43.0,
+    "answer_len": 419,
+    "answer_preview": "# 데이터 조회 안내  안녕하세요. 요청하신 **스마트스토어 2024년 11월 리뷰 데이터**를 현재 조회하지 못했습니다.  좀 더 구체적인 조건을 추가해 주시면 정확한 데이터를 찾는 데 도움이 됩니다.  ---  ## 💡 이렇게 질문을 바꿔보시면 좋아요  > **예시 1)** \"스마트스토어 2024년 11월 **마다가스카르 센텔라 라인** 리뷰 건수와 평"
+  },
+  {
+    "id": "RT-066",
+    "query": "스마트스토어 리뷰 수 상위 10개 제품",
+    "table": "review_smartstore",
+    "category": "top_reviewed",
+    "status": "OK",
+    "time": 45.0,
+    "answer_len": 1320,
+    "answer_preview": "### 📊 스마트스토어 리뷰 수 상위 10개 제품 현황  #### 요약  스마트스토어에서 가장 많은 리뷰를 받은 제품은 **센텔라 앰플**로, 총 **7,555개**의 리뷰를 기록했습니다. 상위 10개 제품 중 7개가 '센텔라' 라인 제품으로, 해당 라인에 대한 고객들의 높은 관심과 참여도를 확인할 수 있습니다.  #### 상세 데이터 | product_n"
+  },
+  {
+    "id": "RT-067",
+    "query": "스마트스토어 최근 리뷰 15건 내용",
+    "table": "review_smartstore",
+    "category": "recent_n",
+    "status": "OK",
+    "time": 50.9,
+    "answer_len": 105384,
+    "answer_preview": "### 📊 스마트스토어 최근 리뷰 15건 분석 보고서  #### 요약  2026년 3월 3일부터 3월 4일까지 스마트스토어에 등록된 **총 15건**의 최신 리뷰를 분석한 결과, **센텔라 앰플**이 5건으로 가장 많은 리뷰를 받았으며, **센텔라 라이트 클렌징 오일**이 4건으로 뒤를 이었습니다. 전반적으로 제품의 '촉촉함', '순함', '자극 없음'에 "
+  },
+  {
+    "id": "RT-068",
+    "query": "스마트스토어 리뷰 한국어 번역 최근 것",
+    "table": "review_smartstore",
+    "category": "review_content",
+    "status": "OK",
+    "time": 41.1,
+    "answer_len": 1689,
+    "answer_preview": "### 📊 SKIN1004 스마트스토어 최근 리뷰 분석 보고서  #### 요약  본 보고서는 SKIN1004 스마트스토어에서 작성된 **가장 최근 리뷰 50건**을 분석한 결과입니다. 가장 최근 리뷰는 **2026년 03월 04일**까지의 데이터이며, 주로 제품의 **촉촉함, 순함, 발림성**에 대한 긍정적인 평가가 많았습니다. 특히 '센텔라 라이트 클렌징"
+  },
+  {
+    "id": "RT-069",
+    "query": "스마트스토어 제품 리뷰 분석해줘",
+    "table": "review_smartstore",
+    "category": "review_count",
+    "status": "OK",
+    "time": 38.0,
+    "answer_len": 1370,
+    "answer_preview": "### 📊 스마트스토어 제품 리뷰 피부 고민별 분석 보고서  #### 요약  SKIN1004 스마트스토어 제품 리뷰를 분석한 결과, 고객들은 다양한 피부 고민을 가지고 있는 것으로 나타났습니다. 가장 많은 리뷰를 기록한 피부 고민은 **복합성, 트러블**로 **145건**이었으며, 단일 고민으로는 **복합성(132건)**이 가장 많았습니다. 전체 리뷰에서 "
+  },
+  {
+    "id": "RT-070",
+    "query": "스마트스토어 SKIN1004 브랜드 리뷰 전체 보여줘",
+    "table": "review_smartstore",
+    "category": "brand_review",
+    "status": "OK",
+    "time": 56.1,
+    "answer_len": 607,
+    "answer_preview": "### 📊 스마트스토어 SKIN1004 브랜드 리뷰 현황  #### 요약  ⚠️ 2026년 3월 4일까지의 데이터가 조회되었으며, 총 **10,000건**의 SKIN1004 브랜드 리뷰가 확인되었습니다. 이는 조회 제한에 도달한 결과로, 전체 리뷰 중 최신 순으로 일부만 포함되어 있습니다. 총 **35개**의 고유 제품에 대한 리뷰가 포함되어 있으며, 최근"
+  },
+  {
+    "id": "RT-071",
+    "query": "스마트스토어 리뷰 2025년 상반기 데이터",
+    "table": "review_smartstore",
+    "category": "date_range",
+    "status": "OK",
+    "time": 43.1,
+    "answer_len": 1155,
+    "answer_preview": "### 📊 스마트스토어 2025년 상반기 리뷰 분석 보고서  #### 요약  2025년 상반기(1월 1일 ~ 6월 30일) 동안 스마트스토어에서 **총 2,775건**의 리뷰가 수집되었습니다. 이 기간 동안 **35개**의 고유한 제품에 대한 리뷰가 작성되었으며, **181일**에 걸쳐 고객 피드백이 꾸준히 발생했습니다. 고객들은 제품 사용 후 다양한 피부"
+  },
+  {
+    "id": "RT-072",
+    "query": "스마트스토어 리뷰 건수 추이 그래프",
+    "table": "review_smartstore",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 37.5,
+    "answer_len": 1617,
+    "answer_preview": "### 📊 스마트스토어 SKIN1004 리뷰 건수 월별 추이  #### 요약  SKIN1004 스마트스토어의 리뷰 건수 추이를 분석한 결과, 2015년 1월부터 2025년 12월까지 **총 132개월**간의 데이터가 확인되었습니다. 제공된 프리뷰 데이터(2015년 1월 ~ 2016년 8월)에 따르면, 초기에는 월별 리뷰 건수가 한 자릿수에서 시작하여 점차 "
+  },
+  {
+    "id": "RT-073",
+    "query": "스마트스토어 최근 리뷰 원문 보여줘",
+    "table": "review_smartstore",
+    "category": "review_content",
+    "status": "WARN",
+    "time": 70.6,
+    "answer_len": 85411,
+    "answer_preview": "### 📊 SKIN1004 스마트스토어 최근 리뷰 원문 분석  #### 요약  SKIN1004 스마트스토어에서 **2026년 03월 02일부터 2026년 03월 04일까지** 작성된 **총 50건**의 최신 리뷰 원문을 분석했습니다. 전반적으로 제품 자체에 대한 만족도가 높으며, 특히 '센텔라' 라인의 **순하고 자극 없는 사용감**과 '선크림' 제품군의 "
+  },
+  {
+    "id": "RT-074",
+    "query": "스마트스토어 Tone Brightening Capsule Serum 리뷰 수 추이",
+    "table": "review_smartstore",
+    "category": "product_review",
+    "status": "OK",
+    "time": 35.8,
+    "answer_len": 543,
+    "answer_preview": "안녕하세요. 요청하신 **스마트스토어 Tone Brightening Capsule Serum 리뷰 수 추이** 데이터를 현재 조회하지 못했습니다.  좀 더 정확한 결과를 위해 아래와 같이 **조건을 구체적으로 지정**해 주시면 다시 조회해 드리겠습니다.  ---  **📌 질문 예시**  1. **\"2024년 1월~12월 스마트스토어 Tone Brighten"
+  },
+  {
+    "id": "RT-075",
+    "query": "스마트스토어 리뷰 수집일 최신 데이터",
+    "table": "review_smartstore",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 35.9,
+    "answer_len": 397,
+    "answer_preview": "# 데이터 조회 안내  안녕하세요. 요청하신 **스마트스토어 리뷰 수집일 최신 데이터**를 현재 조회하지 못했습니다.  좀 더 구체적인 조건을 포함하여 질문해 주시면 정확한 데이터를 찾는 데 도움이 됩니다.  ---  ## 💡 이렇게 질문해 보세요  1. **\"스마트스토어에서 가장 최근에 리뷰가 수집된 날짜는 언제인가요?\"** 2. **\"스마트스토어 마다가"
+  },
+  {
+    "id": "RT-076",
+    "query": "스마트스토어 2025년 2월 리뷰 내용",
+    "table": "review_smartstore",
+    "category": "date_range",
+    "status": "OK",
+    "time": 29.5,
+    "answer_len": 432,
+    "answer_preview": "# 데이터 조회 안내  안녕하세요. 요청하신 **스마트스토어 2025년 2월 리뷰 내용**에 대한 데이터를 조회하지 못했습니다.  좀 더 구체적인 조건을 추가해 주시면 정확한 데이터를 찾는 데 도움이 됩니다. 아래 예시를 참고하여 질문을 다시 작성해 보시겠어요?  ---  ### 💡 질문 예시  1. **\"스마트스토어 2025년 2월 마다가스카르 센텔라 앰"
+  },
+  {
+    "id": "RT-077",
+    "query": "스마트스토어 전체 리뷰 건수 합계",
+    "table": "review_smartstore",
+    "category": "total_count",
+    "status": "OK",
+    "time": 23.3,
+    "answer_len": 389,
+    "answer_preview": "## 데이터 조회 안내  안녕하세요. 요청하신 **스마트스토어 전체 리뷰 건수 합계** 데이터를 조회하지 못했습니다.  좀 더 구체적인 조건을 포함하여 질문해 주시면 정확한 데이터를 찾는 데 도움이 됩니다.  ---  ### 💡 이렇게 질문해 보시면 좋아요  1. **\"2024년 스마트스토어 전체 리뷰 건수 합계를 알려줘\"**    — 조회 기간을 특정  "
+  },
+  {
+    "id": "RT-078",
+    "query": "스마트스토어 제품별 최근 리뷰 1건씩",
+    "table": "review_smartstore",
+    "category": "review_content",
+    "status": "OK",
+    "time": 49.6,
+    "answer_len": 2641,
+    "answer_preview": "### 📊 스마트스토어 제품별 최근 리뷰 현황  #### 요약  SKIN1004 스마트스토어의 **총 35개** 제품에 대한 최근 리뷰를 분석한 결과, 대부분의 리뷰는 2026년 2월 중순부터 3월 초(2026-02-16 ~ 2026-03-04)에 작성된 것으로 확인되었습니다. 전반적으로 제품의 사용감, 발림성, 순함에 대한 긍정적인 평가가 많았으나, 일부"
+  },
+  {
+    "id": "RT-079",
+    "query": "스마트스토어 리뷰 날짜 범위 알려줘",
+    "table": "review_smartstore",
+    "category": "date_range",
+    "status": "OK",
+    "time": 25.0,
+    "answer_len": 440,
+    "answer_preview": "### 📊 스마트스토어 리뷰 데이터 날짜 범위  #### 요약  스마트스토어 리뷰 데이터는 **2015년 01월 23일**부터 **2026년 03월 04일**까지의 기록을 포함하고 있습니다.  #### 분석 및 인사이트  *   **장기간 데이터 확보:** 약 11년에 걸친 방대한 리뷰 데이터를 통해 스마트스토어 운영의 장기적인 변화 추이와 고객 반응을 분"
+  },
+  {
+    "id": "RT-080",
+    "query": "스마트스토어 리뷰 수 가장 적은 제품은?",
+    "table": "review_smartstore",
+    "category": "review_count",
+    "status": "OK",
+    "time": 31.8,
+    "answer_len": 496,
+    "answer_preview": "### 📊 SKIN1004 스마트스토어 리뷰 수가 가장 적은 제품  #### 요약  SKIN1004 스마트스토어 제품 중 리뷰 수가 가장 적은 제품은 **티트리카 B5 크림**으로, 총 **110개**의 리뷰를 기록했습니다.  #### 분석 및 인사이트  *   SKIN1004 브랜드의 스마트스토어 제품 중 '티트리카 B5 크림'이 현재까지 가장 적은 리뷰"
+  },
+  {
+    "id": "RT-081",
+    "query": "스마트스토어 피부고민 지성 리뷰 수",
+    "table": "review_smartstore",
+    "category": "skin_concern",
+    "status": "OK",
+    "time": 57.9,
+    "answer_len": 419,
+    "answer_preview": "### 📊 스마트스토어 피부고민 '지성' 리뷰 수 현황  #### 요약  스마트스토어에서 '지성' 피부고민으로 분류된 리뷰는 총 **66건**입니다.  #### 분석 및 인사이트  *   스마트스토어 리뷰 중 피부고민이 '지성'으로 분류된 리뷰는 현재 66건으로 집계되었습니다. *   > 이는 지성 피부를 가진 고객들의 제품 사용 경험 및 의견을 파악하기 "
+  },
+  {
+    "id": "RT-082",
+    "query": "스마트스토어 피부고민별 월별 추이",
+    "table": "review_smartstore",
+    "category": "skin_concern",
+    "status": "OK",
+    "time": 44.7,
+    "answer_len": 415,
+    "answer_preview": "# 데이터 조회 안내  안녕하세요. 요청하신 **스마트스토어 피부고민별 월별 추이** 데이터를 조회하지 못했습니다.  좀 더 구체적인 조건을 포함하여 질문해 주시면 정확한 데이터를 찾는 데 도움이 됩니다.  ---  ## 💡 이렇게 질문을 바꿔보시면 좋아요  > **1.** \"2024년 1월~12월 스마트스토어에서 **민감/진정** 고민 카테고리 월별 매출"
+  },
+  {
+    "id": "RT-083",
+    "query": "스마트스토어 피부고민 모공 관련 리뷰",
+    "table": "review_smartstore",
+    "category": "skin_concern",
+    "status": "OK",
+    "time": 43.3,
+    "answer_len": 1934,
+    "answer_preview": "### 📊 스마트스토어 모공 관련 피부 고민 리뷰 분석 보고서  #### 요약  스마트스토어 리뷰 데이터 분석 결과, '모공'과 관련된 피부 고민은 총 **392가지** 조합으로 나타났습니다. 이 중 가장 많은 리뷰 수를 기록한 피부 고민 조합은 **'복합성, 트러블, 민감성, 모공'**으로 **60건**이었으며, 그 다음으로는 **'복합성, 모공'**이 "
+  },
+  {
+    "id": "RT-084",
+    "query": "스마트스토어 피부고민 TOP 5",
+    "table": "review_smartstore",
+    "category": "skin_concern",
+    "status": "OK",
+    "time": 23.4,
+    "answer_len": 945,
+    "answer_preview": "### 📊 스마트스토어 피부고민 TOP 5 분석 보고서  #### 요약  스마트스토어 고객들의 피부고민 TOP 5를 분석한 결과, '복합성, 트러블'이 **145건**으로 가장 높은 비중을 차지했습니다. 이어서 '복합성'이 **132건**, '복합성, 민감성'이 **119건**으로 나타나, 복합성 피부와 관련된 고민이 주를 이루는 것으로 확인되었습니다.  "
+  },
+  {
+    "id": "RT-085",
+    "query": "스마트스토어 피부고민 여드름 리뷰 내용",
+    "table": "review_smartstore",
+    "category": "skin_concern",
+    "status": "OK",
+    "time": 30.7,
+    "answer_len": 1064,
+    "answer_preview": "### 📊 SKIN1004 스마트스토어 여드름 피부고민 리뷰 분석  #### 요약  2025년 5월부터 2026년 1월까지 SKIN1004 스마트스토어에서 '여드름' 피부고민으로 분류된 리뷰는 총 **3건**이 확인되었습니다. 이 중 '센텔라 앰플'에 대한 리뷰가 2건으로 가장 많았으며, 한 리뷰에서는 트러블 케어 효과에 대한 불확실성을 언급했습니다.  #"
+  },
+  {
+    "id": "RT-086",
+    "query": "스마트스토어 Centella Cleansing Oil 리뷰 몇 건?",
+    "table": "review_smartstore",
+    "category": "product_review",
+    "status": "OK",
+    "time": 27.3,
+    "answer_len": 500,
+    "answer_preview": "### 📊 스마트스토어 Centella Cleansing Oil 리뷰 현황  #### 요약  스마트스토어에서 'Centella Cleansing Oil' 제품에 대한 리뷰는 현재 **0건**으로 확인됩니다.  #### 분석 및 인사이트  *   현재 스마트스토어에 'Centella Cleansing Oil' 제품에 대한 리뷰가 존재하지 않습니다. *   `"
+  },
+  {
+    "id": "RT-087",
+    "query": "스마트스토어 최근 한 주간 리뷰",
+    "table": "review_smartstore",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 49.5,
+    "answer_len": 347,
+    "answer_preview": "안녕하세요! 요청하신 **스마트스토어 최근 한 주간 리뷰** 데이터를 조회하지 못했습니다.  좀 더 구체적인 조건을 포함하여 질문해 주시면 정확한 데이터를 찾는 데 도움이 됩니다. 아래 예시를 참고해 주세요.  **질문 예시:** 1. *\"스마트스토어에서 최근 7일간 **마다가스카르 센텔라 앰플**에 달린 리뷰 내용과 평점을 알려줘\"* 2. *\"스마트스토어"
+  },
+  {
+    "id": "RT-088",
+    "query": "스마트스토어 리뷰 월별 증감 추이",
+    "table": "review_smartstore",
+    "category": "monthly_trend",
+    "status": "WARN",
+    "time": 79.6,
+    "answer_len": 1241,
+    "answer_preview": "### 📊 스마트스토어 월별 리뷰 증감 추이 분석  #### 요약  2015년 1월부터 2025년 12월까지 **총 132개월**에 걸친 스마트스토어 리뷰 데이터 분석 결과, 월별 리뷰 수는 전반적으로 꾸준히 증가하는 추세를 보였습니다. 초기에는 한 자릿수 또는 두 자릿수에 머물렀던 리뷰 수가 점차 늘어나 후반기에는 월별 수백 건 이상의 리뷰가 발생했을 것"
+  },
+  {
+    "id": "RT-089",
+    "query": "스마트스토어 2024년 10월 리뷰 수",
+    "table": "review_smartstore",
+    "category": "date_range",
+    "status": "OK",
+    "time": 32.1,
+    "answer_len": 403,
+    "answer_preview": "### 📊 2024년 10월 스마트스토어 리뷰 현황  #### 요약  2024년 10월 한 달 동안 스마트스토어 채널에서 총 **231개**의 리뷰가 작성되었습니다. 이는 해당 기간 동안 스마트스토어 고객들의 활발한 피드백 활동을 나타냅니다.  #### 분석 및 인사이트  *   2024년 10월 스마트스토어 채널에서 발생한 총 리뷰 수는 **231개**입"
+  },
+  {
+    "id": "RT-090",
+    "query": "스마트스토어 제품 리뷰 순위 알려줘",
+    "table": "review_smartstore",
+    "category": "top_reviewed",
+    "status": "OK",
+    "time": 49.6,
+    "answer_len": 1803,
+    "answer_preview": "### 📊 스마트스토어 SKIN1004 제품 리뷰 순위  #### 요약  2026년 3월 7일 기준으로 SKIN1004 스마트스토어 제품 중 **센텔라 앰플**이 총 **7,555개**의 리뷰를 기록하며 가장 많은 리뷰를 보유하고 있습니다. 이는 2위인 센텔라 앰플 폼(2,648개)보다 약 2.8배 높은 수치로, 센텔라 앰플이 압도적인 고객 참여도를 보이고"
+  },
+  {
+    "id": "RT-091",
+    "query": "스마트스토어 Madagascar Centella Ampoule 리뷰 원문",
+    "table": "review_smartstore",
+    "category": "review_content",
+    "status": "OK",
+    "time": 33.0,
+    "answer_len": 490,
+    "answer_preview": "해당 조건에 맞는 스마트스토어 리뷰 데이터가 없습니다.  SQL에서 사용된 `product_name` 필터 조건(`product_name LIKE '%Centella%Ampoule%'`)이 문제일 수 있습니다. 데이터베이스에 제품명이 한글로 저장되어 있거나, 정확한 제품명과 일치하지 않아 검색되지 않았을 가능성이 있습니다.  가장 유사한 제품명으로는 '마다"
+  },
+  {
+    "id": "RT-092",
+    "query": "스마트스토어 최근 리뷰 25건",
+    "table": "review_smartstore",
+    "category": "recent_n",
+    "status": "OK",
+    "time": 56.7,
+    "answer_len": 77250,
+    "answer_preview": "### 📊 SKIN1004 스마트스토어 최근 리뷰 25건 분석  #### 요약  SKIN1004 스마트스토어의 최근 리뷰 **25건**을 분석한 결과, 2026년 3월 3일부터 3월 4일까지의 리뷰가 확인되었습니다. 가장 많은 리뷰가 달린 제품은 **히알루시카 워터핏 선 세럼**으로, 제공된 프리뷰 20건 중 **6건**을 차지했습니다. 전반적으로 제품의 "
+  },
+  {
+    "id": "RT-093",
+    "query": "스마트스토어 리뷰 데이터 채널 정보",
+    "table": "review_smartstore",
+    "category": "review_count",
+    "status": "OK",
+    "time": 49.0,
+    "answer_len": 574,
+    "answer_preview": "### 📊 스마트스토어 리뷰 데이터 채널 정보  #### 요약  스마트스토어 리뷰 데이터에는 현재 **Smartstore** 단일 채널만 존재하는 것으로 확인되었습니다. 이는 현재 데이터셋이 스마트스토어 플랫폼에서 발생한 리뷰만을 포함하고 있음을 의미합니다.  #### 분석 및 인사이트  *   **단일 채널 구성:** 현재 조회된 스마트스토어 리뷰 데이터"
+  },
+  {
+    "id": "RT-094",
+    "query": "스마트스토어 2025년 전체 리뷰 수",
+    "table": "review_smartstore",
+    "category": "date_range",
+    "status": "OK",
+    "time": 27.3,
+    "answer_len": 471,
+    "answer_preview": "# 데이터 조회 안내  안녕하세요. 요청하신 **스마트스토어 2025년 전체 리뷰 수** 데이터를 조회하지 못했습니다.  좀 더 구체적인 조건을 추가해 주시면 정확한 데이터를 찾는 데 도움이 됩니다.  ---  ## 💡 이렇게 질문을 바꿔보시면 좋아요  1. **\"스마트스토어에서 2025년 1월~3월 마다가스카르 센텔라 라인 리뷰 수 알려줘\"**    → "
+  },
+  {
+    "id": "RT-095",
+    "query": "스마트스토어 Centella Soothing Cream 리뷰 수 변화",
+    "table": "review_smartstore",
+    "category": "product_review",
+    "status": "OK",
+    "time": 30.7,
+    "answer_len": 554,
+    "answer_preview": "## 데이터 조회 안내  안녕하세요. 요청하신 **스마트스토어 Centella Soothing Cream 리뷰 수 변화** 데이터를 현재 조회하지 못했습니다.  좀 더 구체적인 조건을 추가해 주시면 정확한 데이터를 찾는 데 도움이 됩니다.  ---  ### 💡 이렇게 질문을 바꿔보시면 좋습니다  1. **\"2024년 1월~12월 스마트스토어 Madagasc"
+  },
+  {
+    "id": "RT-096",
+    "query": "스마트스토어 리뷰 원문과 번역문 비교",
+    "table": "review_smartstore",
+    "category": "review_content",
+    "status": "OK",
+    "time": 40.8,
+    "answer_len": 2090,
+    "answer_preview": "### 📊 스마트스토어 리뷰 원문 및 번역문 비교 보고서  #### 요약  사용자님의 요청에 따라 스마트스토어 리뷰 원문과 번역문을 비교한 결과, 총 **10,000건**의 리뷰 데이터가 조회되었습니다. 조회된 리뷰는 2026년 3월 1일부터 2026년 3월 4일까지의 데이터이며, **35개**의 고유 제품에 대한 리뷰를 포함합니다. 분석 결과, 조회된 모"
+  },
+  {
+    "id": "RT-097",
+    "query": "스마트스토어 제품별 리뷰 비율 차트",
+    "table": "review_smartstore",
+    "category": "review_count",
+    "status": "OK",
+    "time": 41.1,
+    "answer_len": 1321,
+    "answer_preview": "### 📊 SKIN1004 스마트스토어 제품별 리뷰 비율 분석  #### 요약  SKIN1004 스마트스토어 제품 중 '센텔라 앰플'이 전체 리뷰의 **28.27%**를 차지하며 가장 높은 리뷰 비율을 보였습니다. 상위 3개 제품인 '센텔라 앰플', '센텔라 앰플 폼', '센텔라 라이트 클렌징 오일'이 전체 리뷰의 약 **44.68%**를 차지하며 리뷰가 "
+  },
+  {
+    "id": "RT-098",
+    "query": "스마트스토어 리뷰 최근 2주간 데이터",
+    "table": "review_smartstore",
+    "category": "recent_reviews",
+    "status": "WARN",
+    "time": 65.2,
+    "answer_len": 531,
+    "answer_preview": "### 📊 스마트스토어 최근 2주간 SKIN1004 리뷰 분석 보고서  #### 요약  2026년 2월 20일부터 2026년 3월 4일까지의 스마트스토어 SKIN1004 브랜드 리뷰 데이터 분석 결과, 총 **410건**의 리뷰가 수집되었습니다. 이 기간 동안 **34개**의 고유 제품에 대한 리뷰가 작성되었으며, **151개**의 다양한 피부 고민이 언급"
+  },
+  {
+    "id": "RT-099",
+    "query": "스마트스토어 리뷰 총 건수와 제품 수",
+    "table": "review_smartstore",
+    "category": "total_count",
+    "status": "OK",
+    "time": 37.1,
+    "answer_len": 637,
+    "answer_preview": "### 📊 스마트스토어 리뷰 및 제품 현황 분석  #### 요약  현재 스마트스토어에는 총 **26,724건**의 리뷰와 **35개**의 제품이 등록되어 있습니다. 이는 활발한 고객 참여와 특정 제품군에 대한 집중적인 리뷰 활동을 시사합니다.  #### 상세 데이터 | 항목 | 수치 | |:---|---:| | 총 리뷰 건수 | 26,724 | | 총 제품"
+  },
+  {
+    "id": "RT-100",
+    "query": "스마트스토어 2024년 하반기 리뷰",
+    "table": "review_smartstore",
+    "category": "date_range",
+    "status": "OK",
+    "time": 25.4,
+    "answer_len": 1266,
+    "answer_preview": "### 📊 2024년 하반기 스마트스토어 SKIN1004 리뷰 분석 보고서  #### 요약  2024년 하반기(7월 1일 ~ 12월 31일) 동안 SKIN1004 스마트스토어에서는 총 **1,480건**의 리뷰가 수집되었습니다. 이 리뷰들은 **32개**의 고유한 제품에 대해 작성되었으며, 고객들의 제품에 대한 높은 관심과 활발한 소통을 보여줍니다. 특히 "
+  },
+  {
+    "id": "RT-101",
+    "query": "스마트스토어 리뷰 수 기준 제품 순위표",
+    "table": "review_smartstore",
+    "category": "top_reviewed",
+    "status": "OK",
+    "time": 35.5,
+    "answer_len": 1421,
+    "answer_preview": "### 📊 SKIN1004 스마트스토어 제품별 리뷰 수 순위  #### 요약  SKIN1004 스마트스토어에서 가장 많은 리뷰를 받은 제품은 **센텔라 앰플**로, 총 **7,555개**의 압도적인 리뷰 수를 기록했습니다. 이어서 센텔라 앰플 폼(2,648개), 센텔라 라이트 클렌징 오일(1,737개)이 상위권을 차지하며, 특히 '센텔라' 라인 제품들이 고"
+  },
+  {
+    "id": "RT-102",
+    "query": "스마트스토어 최근 리뷰 내용 요약해줘",
+    "table": "review_smartstore",
+    "category": "review_content",
+    "status": "OK",
+    "time": 40.9,
+    "answer_len": 1431,
+    "answer_preview": "### 📊 스마트스토어 최근 리뷰 분석  #### 요약  SKIN1004 스마트스토어의 최근 50개 리뷰를 분석한 결과, 전반적으로 **매우 긍정적인 고객 피드백**이 지배적입니다. 특히 **수분 공급, 순한 사용감, 피부 진정 효과, 그리고 우수한 발림성**에 대한 만족도가 높게 나타났습니다. '센텔라 라이트 클렌징 오일'을 포함한 센텔라 라인 제품들이 "
+  },
+  {
+    "id": "RT-103",
+    "query": "스마트스토어 월별 리뷰 수 평균",
+    "table": "review_smartstore",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 34.4,
+    "answer_len": 438,
+    "answer_preview": "## 데이터 조회 안내  안녕하세요. 요청하신 **스마트스토어 월별 리뷰 수 평균** 데이터를 조회하지 못했습니다.  좀 더 구체적인 조건을 포함하여 질문해 주시면 정확한 데이터를 찾는 데 도움이 됩니다.  ---  ### 💡 이렇게 질문해 보시면 좋아요  1. **\"2024년 스마트스토어에서 마다가스카르 센텔라 토너의 월별 리뷰 수를 알려줘\"**    →"
+  },
+  {
+    "id": "RT-104",
+    "query": "스마트스토어 리뷰 제품명 목록",
+    "table": "review_smartstore",
+    "category": "review_count",
+    "status": "OK",
+    "time": 53.7,
+    "answer_len": 930,
+    "answer_preview": "### 📊 스마트스토어 리뷰 제품명 목록  #### 요약  스마트스토어 리뷰에 등록된 제품은 총 **35개**입니다. 이 중 상위 20개 제품 목록은 아래와 같습니다.  #### 상세 데이터  스마트스토어 리뷰에 등록된 제품명 목록 (총 35개 중 상위 20개)  | 제품명 | |:---| | 센텔라 앰플 | | 센텔라 앰플 폼 | | 센텔라 라이트 클렌징"
+  },
+  {
+    "id": "RT-105",
+    "query": "스마트스토어 2025년 1월 리뷰 내용 보여줘",
+    "table": "review_smartstore",
+    "category": "review_content",
+    "status": "OK",
+    "time": 46.6,
+    "answer_len": 2730,
+    "answer_preview": "### 📊 스마트스토어 2025년 1월 리뷰 분석  #### 요약  ⚠️ 2025년 1월 전체 리뷰를 요청하셨으나, 현재 데이터는 **2025년 1월 23일부터 1월 31일까지**의 리뷰만 포함되어 있습니다. 해당 기간 동안 스마트스토어에서 총 **432건**의 리뷰가 수집되었으며, 이는 **30개**의 고유한 제품에 대한 것입니다. 리뷰 내용은 주로 제품"
+  },
+  {
+    "id": "RT-106",
+    "query": "스마트스토어에서 Centella 제품 리뷰 전체",
+    "table": "review_smartstore",
+    "category": "product_review",
+    "status": "OK",
+    "time": 31.4,
+    "answer_len": 685,
+    "answer_preview": "해당 조건의 데이터가 없습니다.  SQL에서 사용된 필터 조건 중 `brand LIKE '%SKIN1004%'` 또는 `product_name LIKE '%Centella%'` 조건이 현재 `Smartstore_Review` 테이블의 데이터와 일치하지 않아 결과가 0행으로 조회되었습니다.  *   **`brand` 조건 문제 가능성:** `Smartstor"
+  },
+  {
+    "id": "RT-107",
+    "query": "스마트스토어 리뷰 최신 데이터 날짜가 언제야?",
+    "table": "review_smartstore",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 26.7,
+    "answer_len": 407,
+    "answer_preview": "### 📊 스마트스토어 리뷰 최신 데이터 날짜 확인  #### 요약  스마트스토어 리뷰 데이터의 최신 날짜는 **2026년 03월 04일**입니다. 오늘(2026년 03월 07일) 기준으로 3일 전 데이터까지 반영되어 있습니다.  #### 분석 및 인사이트  *   스마트스토어 리뷰 데이터는 2026년 03월 04일까지의 정보를 포함하고 있습니다. *   "
+  },
+  {
+    "id": "RT-108",
+    "query": "스마트스토어 2024년 9월 리뷰 건수",
+    "table": "review_smartstore",
+    "category": "date_range",
+    "status": "OK",
+    "time": 34.1,
+    "answer_len": 451,
+    "answer_preview": "# 데이터 조회 안내  안녕하세요. 요청하신 **스마트스토어 2024년 9월 리뷰 건수** 데이터를 조회하지 못했습니다.  좀 더 구체적인 조건을 추가해 주시면 정확한 데이터를 찾는 데 도움이 됩니다.  ---  ### 💡 이렇게 질문을 바꿔보시면 좋습니다  1. **\"스마트스토어에서 2024년 9월 마다가스카르 센텔라 라인 제품의 리뷰 건수는?\"**   "
+  },
+  {
+    "id": "RT-109",
+    "query": "스마트스토어 리뷰 주간 트렌드",
+    "table": "review_smartstore",
+    "category": "monthly_trend",
+    "status": "WARN",
+    "time": 80.9,
+    "answer_len": 3035,
+    "answer_preview": "### 📈 스마트스토어 리뷰 주간 트렌드 분석  #### 요약  SKIN1004 스마트스토어는 2019년 1주차부터 2026년 8주차까지 **약 56.98억원의 총 매출**을 기록했으며, 특히 **2026년 5주차에 약 2.15억원의 최고 주간 매출**을 달성하며 높은 판매 활동을 보였습니다. 외부 환경 분석 결과, 2026년 3월 현재 스마트스토어 리뷰 "
+  },
+  {
+    "id": "RT-110",
+    "query": "스마트스토어 SKIN1004 리뷰만 보여줘",
+    "table": "review_smartstore",
+    "category": "brand_review",
+    "status": "WARN",
+    "time": 61.1,
+    "answer_len": 605,
+    "answer_preview": "### 📊 SKIN1004 스마트스토어 최신 리뷰 현황  #### 요약  SKIN1004 스마트스토어에서 총 **10,000건**의 리뷰가 조회되었습니다. 이 리뷰들은 **35개**의 고유 제품에 대한 것이며, 가장 최신 리뷰는 **2026년 3월 4일**에 작성되었습니다. 조회된 리뷰들은 주로 제품의 보습력, 진정 효과, 순한 사용감에 대한 긍정적인 평가"
+  },
+  {
+    "id": "RT-111",
+    "query": "스마트스토어 피부고민 건조 관련 리뷰 보여줘",
+    "table": "review_smartstore",
+    "category": "skin_concern",
+    "status": "OK",
+    "time": 48.6,
+    "answer_len": 3122,
+    "answer_preview": "### 📊 스마트스토어 피부고민 '건조' 관련 리뷰 분석  #### 요약  스마트스토어에서 '건조' 관련 피부 고민을 언급한 리뷰는 총 **206건**이 조회되었습니다. 이 리뷰들은 2025년 8월 27일부터 2026년 3월 3일까지 작성되었으며, 다양한 제품에서 건조 관련 피드백을 확인할 수 있습니다.  #### 상세 데이터  다음은 '건조' 관련 리뷰 "
+  },
+  {
+    "id": "RT-112",
+    "query": "스마트스토어 피부고민별 제품별 리뷰 수",
+    "table": "review_smartstore",
+    "category": "skin_concern",
+    "status": "OK",
+    "time": 32.7,
+    "answer_len": 2300,
+    "answer_preview": "### 📊 SKIN1004 스마트스토어 피부고민별 제품 리뷰 현황  #### 요약  SKIN1004 스마트스토어 리뷰 데이터 분석 결과, '센텔라 앰플'이 다양한 피부 고민에서 가장 많은 리뷰를 기록하며, 특히 '복합성' 피부 고민에서 **40건**으로 가장 높은 리뷰 수를 보였습니다. 전체적으로 **35개**의 고유 제품과 **1,393개**의 고유 피부"
+  },
+  {
+    "id": "RT-113",
+    "query": "스마트스토어 피부고민 색소침착 리뷰",
+    "table": "review_smartstore",
+    "category": "skin_concern",
+    "status": "OK",
+    "time": 35.0,
+    "answer_len": 333,
+    "answer_preview": "해당 조건에 맞는 데이터가 존재하지 않습니다. SQL에서 사용된 `skin_concern` 필터 값 '색소침착'은 유효 값 목록에 없습니다.  문제는 `skin_concern` 필터 조건입니다. '색소침착'은 현재 데이터베이스의 `skin_concern` 유효 값 목록에 포함되어 있지 않습니다. 가장 유사한 유효 값은 '미백/잡티'입니다.  비슷한 데이터를"
+  },
+  {
+    "id": "RT-114",
+    "query": "스마트스토어 skin_concern 데이터 분석",
+    "table": "review_smartstore",
+    "category": "skin_concern",
+    "status": "WARN",
+    "time": 63.5,
+    "answer_len": 2333,
+    "answer_preview": "### 📊 스마트스토어 고객 피부 고민(skin_concern) 분석 보고서  #### 요약  스마트스토어 고객 리뷰 데이터 분석 결과, 총 **1,393가지**의 다양한 피부 고민 조합이 확인되었습니다. 이 중 '복합성, 트러블'이 **145건**으로 가장 많은 리뷰에서 언급되었으며, '복합성' 단독 고민이 **132건**, '복합성, 민감성'이 **11"
+  },
+  {
+    "id": "RT-115",
+    "query": "스마트스토어 피부고민 주름 관련 리뷰 수",
+    "table": "review_smartstore",
+    "category": "skin_concern",
+    "status": "OK",
+    "time": 44.6,
+    "answer_len": 659,
+    "answer_preview": "### 📊 스마트스토어 피부고민 '주름' 관련 리뷰 현황  #### 요약  현재 스마트스토어에서 '주름'을 피부고민으로 명시한 리뷰는 **0건**으로 확인됩니다. 이는 해당 조건에 부합하는 리뷰가 없음을 의미합니다.  #### 분석 및 인사이트  *   **'주름' 관련 리뷰 부재:** 실행된 쿼리 결과, `skin_concern` 필드에서 '주름'으로 명"
+  },
+  {
+    "id": "RT-116",
+    "query": "스마트스토어 최근 리뷰 7건 한국어로",
+    "table": "review_smartstore",
+    "category": "recent_n",
+    "status": "OK",
+    "time": 31.3,
+    "answer_len": 1559,
+    "answer_preview": "### 📊 스마트스토어 최근 리뷰 7건 분석  #### 요약  스마트스토어에서 **총 7건**의 최근 리뷰가 확인되었습니다. 이 리뷰들은 **2026년 3월 3일부터 3월 4일**까지 작성되었으며, 선케어, 보습, 클렌징 등 다양한 제품에 대한 사용자들의 솔직한 경험을 담고 있습니다. 대부분의 리뷰에서 제품의 사용감에 대한 긍정적인 평가가 주를 이루었으나,"
+  },
+  {
+    "id": "RT-117",
+    "query": "스마트스토어 Tone Brightening Capsule Serum 리뷰 원문",
+    "table": "review_smartstore",
+    "category": "review_content",
+    "status": "OK",
+    "time": 31.2,
+    "answer_len": 492,
+    "answer_preview": "해당 조건에 맞는 데이터가 존재하지 않습니다.  SQL에서 사용된 `product_name` 필터 조건(`product_name LIKE '%Tone_Brightening%Capsule_Ampoule%'`)이 문제의 원인으로 보입니다. 사용자가 요청한 제품명은 \"Tone Brightening Capsule **Serum**\"인데, SQL 쿼리에서는 \"Ton"
+  },
+  {
+    "id": "RT-118",
+    "query": "스마트스토어 리뷰 제품별 최신 날짜",
+    "table": "review_smartstore",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 39.1,
+    "answer_len": 1929,
+    "answer_preview": "### 📊 스마트스토어 제품별 최신 리뷰 날짜 분석  #### 요약  스마트스토어에 등록된 총 **35개** 제품의 리뷰 데이터를 분석한 결과, 가장 최신 리뷰는 **2026년 03월 04일**에 작성되었습니다. '센텔라 라이트 클렌징 오일', '센텔라 수딩 크림', '히알루시카 워터핏 선 세럼', '히알루시카 실키핏 선 스틱' 4개 제품이 3월 4일자로 "
+  },
+  {
+    "id": "RT-119",
+    "query": "스마트스토어 리뷰 분기별 추이",
+    "table": "review_smartstore",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 35.4,
+    "answer_len": 2264,
+    "answer_preview": "### 📊 SKIN1004 스마트스토어 리뷰 분기별 추이 분석  #### 요약  SKIN1004 스마트스토어 리뷰 수는 2015년 1분기부터 꾸준히 기록되었으며, 특히 **2021년 3분기부터 폭발적인 성장세**를 보였습니다. 2022년 1분기에 **2,739건**으로 역대 최고치를 기록한 후 일시적으로 감소했으나, 2025년부터 다시 증가세로 전환되어 2"
+  },
+  {
+    "id": "RT-120",
+    "query": "스마트스토어 전체 리뷰 중 2025년 비율",
+    "table": "review_smartstore",
+    "category": "date_range",
+    "status": "OK",
+    "time": 54.8,
+    "answer_len": 470,
+    "answer_preview": "### 📊 스마트스토어 전체 리뷰 중 2025년 리뷰 비율 분석  #### 요약  2025년 스마트스토어 전체 리뷰 중 **25.18%**를 차지했습니다. 이는 전체 리뷰의 약 4분의 1에 해당하는 비중입니다.  #### 분석 및 인사이트  *   2025년에 작성된 리뷰가 스마트스토어 전체 리뷰에서 상당한 비중(25.18%)을 차지하고 있음을 알 수 있습"
+  },
+  {
+    "id": "RT-121",
+    "query": "스마트스토어 리뷰 어떤 제품이 있어?",
+    "table": "review_smartstore",
+    "category": "review_count",
+    "status": "OK",
+    "time": 53.2,
+    "answer_len": 1158,
+    "answer_preview": "### 📊 SKIN1004 스마트스토어 리뷰 제품 목록  #### 요약  SKIN1004 브랜드의 스마트스토어 리뷰가 존재하는 제품은 총 **35개**입니다. 이 제품들은 주로 센텔라, 부스팅 샷, 톤브라이트닝, 티트리카 등 다양한 라인업에 걸쳐 분포되어 있으며, 고객들의 활발한 리뷰 활동을 통해 제품 인지도를 확보하고 있습니다.  #### 상세 데이터  "
+  },
+  {
+    "id": "RT-122",
+    "query": "스마트스토어 리뷰 수집 현황 알려줘",
+    "table": "review_smartstore",
+    "category": "total_count",
+    "status": "OK",
+    "time": 37.8,
+    "answer_len": 1230,
+    "answer_preview": "### 📊 스마트스토어 리뷰 수집 현황 (2025년 12월 10일 ~ 2026년 3월 4일)  #### 요약  2025년 12월 10일부터 2026년 3월 4일까지 스마트스토어에서 총 **26,724건**의 리뷰가 수집되었습니다. 특히 **2026년 1월 26일**에 **19,718건**으로 가장 많은 리뷰가 수집되었으며, 최근 2월 말부터 3월 초까지는 "
+  },
+  {
+    "id": "RT-123",
+    "query": "스마트스토어 최근 리뷰 중 Centella Ampoule 관련",
+    "table": "review_smartstore",
+    "category": "product_review",
+    "status": "OK",
+    "time": 15.3,
+    "answer_len": 440,
+    "answer_preview": "요청하신 조건에 해당하는 데이터가 없습니다.  SQL 쿼리에서 `product_name` 필터 조건(`product_name LIKE '%Centella%Ampoule%'`)이 문제일 수 있습니다. 'Centella Ampoule'이라는 정확한 이름으로 제품이 등록되어 있지 않거나, 이름에 오타가 있을 수 있습니다. `brand` 필터 조건(`brand L"
+  },
+  {
+    "id": "RT-124",
+    "query": "스마트스토어 2025년 1월~2월 리뷰",
+    "table": "review_smartstore",
+    "category": "date_range",
+    "status": "WARN",
+    "time": 73.6,
+    "answer_len": 62157,
+    "answer_preview": "### 📊 스마트스토어 2025년 1월~2월 SKIN1004 리뷰 분석  #### 요약  2025년 1월 1일부터 2월 28일까지 스마트스토어에서 **총 923건**의 SKIN1004 제품 리뷰가 수집되었습니다. 해당 기간 동안 **31개**의 고유한 제품에 대한 리뷰가 작성되었으며, **59일**에 걸쳐 리뷰가 등록되었습니다. 주로 제품의 보습, 진정, "
+  },
+  {
+    "id": "RT-125",
+    "query": "스마트스토어 리뷰 수 증가율",
+    "table": "review_smartstore",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 56.0,
+    "answer_len": 1601,
+    "answer_preview": "### 📊 SKIN1004 스마트스토어 리뷰 수 월별 증가율 분석 (2015년 1월 ~ 2016년 8월)  #### 요약  SKIN1004 스마트스토어 리뷰 수는 2015년 1월부터 2016년 8월까지 **총 20개월간** 분석되었습니다. 이 기간 동안 월별 리뷰 수는 전반적으로 증가하는 추세를 보였으며, 특히 **2015년 10월에 전월 대비 275.00"
+  },
+  {
+    "id": "RT-126",
+    "query": "스마트스토어 제품별 최신 리뷰 내용 정리",
+    "table": "review_smartstore",
+    "category": "review_content",
+    "status": "OK",
+    "time": 55.0,
+    "answer_len": 1582,
+    "answer_preview": "## 📊 스마트스토어 제품별 최신 리뷰 요약 (2026년 3월 2일 ~ 3월 4일)  #### 요약  사용자님께서 요청하신 스마트스토어 제품별 최신 리뷰를 정리했습니다. 2026년 3월 2일부터 3월 4일까지 작성된 총 **50건**의 리뷰 중, 주요 제품들의 최신 리뷰 내용을 분석했습니다. 전반적으로 제품의 '순함', '촉촉함', '자극 없음'에 대한 긍"
+  },
+  {
+    "id": "RT-127",
+    "query": "스마트스토어 리뷰 데이터에서 브랜드 종류",
+    "table": "review_smartstore",
+    "category": "brand_review",
+    "status": "OK",
+    "time": 29.5,
+    "answer_len": 409,
+    "answer_preview": "### 📊 스마트스토어 리뷰 데이터 내 브랜드 종류  #### 요약  스마트스토어 리뷰 데이터에서 확인된 브랜드는 **SKIN1004** 한 종류입니다.  #### 분석 및 인사이트  *   **단일 브랜드 확인**: 현재 조회된 스마트스토어 리뷰 데이터에서는 **SKIN1004** 브랜드만 확인되었습니다. *   **데이터 범위 추정**:     > 해당"
+  },
+  {
+    "id": "RT-128",
+    "query": "스마트스토어 최근 리뷰 40건 보여줘",
+    "table": "review_smartstore",
+    "category": "recent_n",
+    "status": "OK",
+    "time": 52.9,
+    "answer_len": 1296,
+    "answer_preview": "### 📊 스마트스토어 최근 리뷰 40건 분석  #### 요약  SKIN1004 스마트스토어의 최근 리뷰 **40건**을 분석한 결과, 2026년 3월 3일부터 3월 4일까지의 리뷰가 확인되었습니다. 대부분의 리뷰는 제품의 **촉촉함, 순함, 자극 없는 사용감, 좋은 발림성**에 대한 긍정적인 평가를 담고 있으며, 특히 선케어 및 진정/보습 제품군에 대한 "
+  },
+  {
+    "id": "RT-129",
+    "query": "스마트스토어 Madagascar Centella Ampoule 월별 리뷰 수",
+    "table": "review_smartstore",
+    "category": "product_review",
+    "status": "OK",
+    "time": 32.4,
+    "answer_len": 479,
+    "answer_preview": "안녕하세요. 요청하신 **스마트스토어 Madagascar Centella Ampoule 월별 리뷰 수** 데이터를 조회하지 못했습니다.  좀 더 정확한 결과를 위해 **조건을 구체적으로 지정**해 주시면 다시 조회해 드리겠습니다. 아래 예시를 참고해 주세요.  ---  **질문 예시**  1. **\"2024년 1월~12월 스마트스토어 마다가스카르 센텔라 앰"
+  },
+  {
+    "id": "RT-130",
+    "query": "스마트스토어 리뷰 최다 제품 TOP 7",
+    "table": "review_smartstore",
+    "category": "top_reviewed",
+    "status": "OK",
+    "time": 31.3,
+    "answer_len": 431,
+    "answer_preview": "# 데이터 조회 안내  안녕하세요. 요청하신 **스마트스토어 리뷰 최다 제품 TOP 7** 데이터를 조회하지 못했습니다.  좀 더 정확한 결과를 위해 **조건을 구체적으로 지정**해 주시면 다시 조회를 시도해 보겠습니다.  ---  ## 💡 이렇게 질문해 보세요  1. **\"2024년 스마트스토어에서 리뷰 수가 가장 많은 제품 TOP 7 알려줘\"**    "
+  },
+  {
+    "id": "RT-131",
+    "query": "스마트스토어 2024년 리뷰 총 건수",
+    "table": "review_smartstore",
+    "category": "date_range",
+    "status": "OK",
+    "time": 28.3,
+    "answer_len": 508,
+    "answer_preview": "# 데이터 조회 안내  안녕하세요. 요청하신 **스마트스토어 2024년 리뷰 총 건수** 데이터를 현재 조회하지 못했습니다.  좀 더 정확한 결과를 위해 **조건을 구체적으로 지정**해 주시면 다시 조회를 시도해 볼 수 있습니다.  ---  ## 💡 이렇게 질문을 바꿔 보시면 좋습니다  | 구체화 요소 | 예시 | |------------|------| |"
+  },
+  {
+    "id": "RT-132",
+    "query": "스마트스토어 리뷰 번역 데이터 최근 것",
+    "table": "review_smartstore",
+    "category": "review_content",
+    "status": "OK",
+    "time": 45.3,
+    "answer_len": 1975,
+    "answer_preview": "### 📊 SKIN1004 스마트스토어 최신 리뷰 번역 데이터 분석  #### 요약  SKIN1004 스마트스토어의 **가장 최근 50개 리뷰** 데이터가 조회되었습니다. 조회된 리뷰는 **2026년 3월 2일부터 2026년 3월 4일까지**의 데이터를 포함하며, 오늘(2026년 3월 7일) 기준 매우 최신 정보입니다. 제공된 데이터에서 `review_or"
+  },
+  {
+    "id": "RT-133",
+    "query": "스마트스토어 Centella Soothing Cream 리뷰 원문 보여줘",
+    "table": "review_smartstore",
+    "category": "review_content",
+    "status": "OK",
+    "time": 33.0,
+    "answer_len": 414,
+    "answer_preview": "해당 조건의 데이터가 없습니다.  SQL에서 사용된 필터 조건 중 `product_name LIKE '%Centella%Soothing_Cream%'`이 문제로 보입니다. `Soothing_Cream`에 사용된 언더스코어(`_`)가 실제 제품명과 일치하지 않을 수 있으며, 데이터베이스에는 제품명이 한글로 저장되어 있을 가능성이 높습니다. SKIN1004의 "
+  },
+  {
+    "id": "RT-134",
+    "query": "스마트스토어 리뷰 수 제품별 내림차순",
+    "table": "review_smartstore",
+    "category": "review_count",
+    "status": "OK",
+    "time": 35.5,
+    "answer_len": 1501,
+    "answer_preview": "### 📊 스마트스토어 제품별 리뷰 수 현황  #### 요약  스마트스토어에서 가장 많은 리뷰를 받은 제품은 **센텔라 앰플**로, 총 **7,555**개의 리뷰를 기록했습니다. 그 뒤를 이어 센텔라 앰플 폼이 2,648개, 센텔라 라이트 클렌징 오일이 1,737개의 리뷰를 받으며 상위권을 차지했습니다. 전체 35개의 고유 제품이 리뷰 데이터를 가지고 있으"
+  },
+  {
+    "id": "RT-135",
+    "query": "스마트스토어 최근 리뷰 날짜 확인",
+    "table": "review_smartstore",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 54.9,
+    "answer_len": 248,
+    "answer_preview": "## 📊 스마트스토어 최신 리뷰 현황  #### 요약  스마트스토어의 최신 리뷰는 **2026년 03월 04일**에 작성된 것으로 확인되었습니다. 이는 오늘(2026년 03월 07일) 기준으로 **3일 전**의 리뷰이며, 해당 날짜에 최소 4건의 리뷰가 접수되었습니다.  #### 상세 데이터  가장 최근인 2026년 03월 04일에 작성된 리뷰 4건은 다음"
+  },
+  {
+    "id": "RT-136",
+    "query": "스마트스토어 2024년 8월 리뷰",
+    "table": "review_smartstore",
+    "category": "date_range",
+    "status": "OK",
+    "time": 45.7,
+    "answer_len": 395,
+    "answer_preview": "# 데이터 조회 안내  안녕하세요. 요청하신 **스마트스토어 2024년 8월 리뷰** 관련 데이터를 조회하지 못했습니다.  좀 더 구체적인 조건을 포함하여 질문해 주시면 정확한 데이터를 찾는 데 도움이 됩니다.  ---  ## 💡 이렇게 질문해 보세요  1. **\"스마트스토어에서 2024년 8월 마다가스카르 센텔라 라인 제품의 리뷰 건수는 몇 건인가요?\"*"
+  },
+  {
+    "id": "RT-137",
+    "query": "스마트스토어 리뷰 총합 몇 건이야?",
+    "table": "review_smartstore",
+    "category": "total_count",
+    "status": "OK",
+    "time": 29.3,
+    "answer_len": 379,
+    "answer_preview": "### 📊 스마트스토어 총 리뷰 현황  #### 요약  스마트스토어의 총 리뷰 수는 **26,724건**입니다.  #### 분석 및 인사이트  *   스마트스토어에 등록된 총 리뷰 수가 2만 6천 건 이상으로, 고객들의 활발한 제품 구매 및 리뷰 참여를 확인할 수 있습니다. *   `> 이는 고객들이 제품에 대한 높은 관심과 만족도를 적극적으로 표현하고 있"
+  },
+  {
+    "id": "RT-138",
+    "query": "스마트스토어 Centella Cleansing Oil 리뷰 내용",
+    "table": "review_smartstore",
+    "category": "review_content",
+    "status": "OK",
+    "time": 49.0,
+    "answer_len": 497,
+    "answer_preview": "해당 조건에 맞는 스마트스토어 리뷰 데이터가 존재하지 않습니다.  SQL에서 사용된 `product_name LIKE '%Centella%Cleansing_Oil%'` 필터 조건이 문제일 가능성이 높습니다. 데이터베이스에 제품명이 한글로 저장되어 있거나, 정확한 제품명과 일치하지 않아 검색되지 않았을 수 있습니다. 특히 'Centella' 대신 '센텔라' "
+  },
+  {
+    "id": "RT-139",
+    "query": "스마트스토어 리뷰 제품 수 몇 개야?",
+    "table": "review_smartstore",
+    "category": "review_count",
+    "status": "OK",
+    "time": 32.3,
+    "answer_len": 385,
+    "answer_preview": "### 📊 스마트스토어 리뷰 제품 현황  #### 요약  오늘(2026년 03월 07일) 기준으로 스마트스토어에 리뷰가 등록된 제품은 총 **35개**입니다.  #### 분석 및 인사이트  *   스마트스토어에서 고객 리뷰가 작성된 제품의 종류가 총 35개임을 확인했습니다. *   이는 스마트스토어에서 판매되는 전체 제품 수 대비 리뷰가 존재하는 제품의 다"
+  },
+  {
+    "id": "RT-140",
+    "query": "스마트스토어 월별 리뷰 추이 분석",
+    "table": "review_smartstore",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 30.9,
+    "answer_len": 419,
+    "answer_preview": "# 데이터 조회 안내  안녕하세요. 요청하신 **스마트스토어 월별 리뷰 추이** 데이터를 현재 조회하지 못했습니다.  좀 더 정확한 결과를 위해 **조건을 구체적으로 지정**해 주시면 다시 조회를 시도해 볼 수 있습니다.  ---  ## 💡 이렇게 질문해 보세요  > **1.** \"2024년 1월~12월 스마트스토어 **마다가스카르 센텔라 라인** 월별 리"
+  },
+  {
+    "id": "RT-141",
+    "query": "스마트스토어 피부고민 홍조 리뷰 수",
+    "table": "review_smartstore",
+    "category": "skin_concern",
+    "status": "OK",
+    "time": 34.7,
+    "answer_len": 429,
+    "answer_preview": "### 📊 스마트스토어 홍조 피부고민 리뷰 현황  #### 요약  스마트스토어에서 피부고민 '홍조'와 관련된 리뷰는 총 **2건**으로 집계되었습니다.  #### 분석 및 인사이트  *   스마트스토어 내 '홍조' 피부고민으로 분류된 리뷰 수는 현재 **2건**으로 매우 적은 수준입니다. *   이는 전체 리뷰 중 홍조를 직접적인 피부고민으로 언급하는 사용"
+  },
+  {
+    "id": "RT-142",
+    "query": "스마트스토어 피부고민별 비율 차트",
+    "table": "review_smartstore",
+    "category": "skin_concern",
+    "status": "OK",
+    "time": 44.5,
+    "answer_len": 1542,
+    "answer_preview": "### 📊 스마트스토어 피부고민별 리뷰 현황  #### 요약  스마트스토어 리뷰 데이터를 분석한 결과, 총 **1,393가지**의 다양한 피부고민 조합이 확인되었습니다. 이 중 '복합성, 트러블'이 **145건**으로 가장 많은 리뷰를 차지했으며, '복합성' 단독 고민이 **132건**, '복합성, 민감성'이 **119건**으로 그 뒤를 이어 복합성 피부 "
+  },
+  {
+    "id": "RT-143",
+    "query": "스마트스토어 피부고민 아토피 관련 리뷰",
+    "table": "review_smartstore",
+    "category": "skin_concern",
+    "status": "OK",
+    "time": 40.6,
+    "answer_len": 4695,
+    "answer_preview": "### 📊 SKIN1004 스마트스토어 아토피 관련 고객 리뷰 분석  #### 요약  SKIN1004 스마트스토어에서 '아토피'를 피부 고민으로 언급한 총 **130건**의 고객 리뷰가 확인되었습니다. 이 리뷰들은 **26개**의 고유 제품에 걸쳐 있으며, 가장 많은 언급이 있는 제품은 **센텔라 앰플**입니다. 리뷰는 2024년 4월 23일부터 2026년"
+  },
+  {
+    "id": "RT-144",
+    "query": "스마트스토어 피부고민 각질 리뷰 내용 보여줘",
+    "table": "review_smartstore",
+    "category": "skin_concern",
+    "status": "WARN",
+    "time": 60.1,
+    "answer_len": 370,
+    "answer_preview": "요청하신 조건에 해당하는 스마트스토어 리뷰 데이터가 없습니다.  문제는 `skin_concern` 필터 조건입니다. 현재 `skin_concern` 필드에 '각질'이라는 값은 존재하지 않습니다. 대신, '피부결', '보습', '건조함'과 같은 유사한 피부 고민 카테고리를 확인해 보시거나, 리뷰 내용(`review_ko`)에서 '각질' 키워드를 검색해 볼 수"
+  },
+  {
+    "id": "RT-145",
+    "query": "스마트스토어 피부고민별 제품 선호도",
+    "table": "review_smartstore",
+    "category": "skin_concern",
+    "status": "WARN",
+    "time": 64.1,
+    "answer_len": 697,
+    "answer_preview": "# 스마트스토어 피부고민별 제품 선호도 (2025년)  2025년 스마트스토어 뷰티 카테고리에서는 **저자극·고효능 더마 코스메틱**과 **특정 고민 해결에 특화된 기능성 제품**이 강세를 보이고 있습니다.  ---  ## 피부 고민별 인기 제품  | 피부 고민 | 선호 성분 | 인기 제품 유형 | |---|---|---| | **여드름·트러블** | 어성"
+  },
+  {
+    "id": "RT-146",
+    "query": "스마트스토어 리뷰에서 가장 오래된 리뷰는?",
+    "table": "review_smartstore",
+    "category": "date_range",
+    "status": "OK",
+    "time": 51.7,
+    "answer_len": 3399,
+    "answer_preview": "## 📊 스마트스토어에서 가장 오래된 SKIN1004 리뷰  #### 요약  SKIN1004 스마트스토어에서 가장 오래된 리뷰는 **2015년 01월 23일**에 작성된 '센텔라 앰플' 제품 리뷰입니다. 이 리뷰는 제품의 피부 진정 및 트러블 완화 효과에 대한 긍정적인 내용을 담고 있으며, 브랜드의 초기 고객 만족도를 보여주는 중요한 기록입니다.  ####"
+  },
+  {
+    "id": "RT-147",
+    "query": "스마트스토어 리뷰 최근 60건 데이터",
+    "table": "review_smartstore",
+    "category": "recent_n",
+    "status": "OK",
+    "time": 49.7,
+    "answer_len": 90412,
+    "answer_preview": "### 📊 스마트스토어 SKIN1004 최근 60건 리뷰 분석 보고서  #### 요약  SKIN1004 스마트스토어의 최근 60건 리뷰 데이터를 분석한 결과, **2026년 3월 2일부터 3월 4일까지**의 리뷰가 조회되었습니다. 고객들은 제품의 **촉촉함, 순함, 발림성, 그리고 피부 진정 효과**에 대해 높은 만족도를 보였습니다. 특히 '센텔라 앰플',"
+  },
+  {
+    "id": "RT-148",
+    "query": "스마트스토어 Centella Ampoule 리뷰 건수 월별",
+    "table": "review_smartstore",
+    "category": "product_review",
+    "status": "WARN",
+    "time": 62.5,
+    "answer_len": 623,
+    "answer_preview": "해당 조건에 맞는 데이터가 존재하지 않습니다.  SQL에서 사용된 필터 조건 중 `product_name LIKE '%Centella%Ampoule%'`이 문제인 것으로 보입니다. SKIN1004 브랜드의 스마트스토어 리뷰 데이터 중 'Centella'와 'Ampoule'을 모두 포함하는 제품명이 없거나, 제품명이 다르게 표기되어 있을 수 있습니다.  예를"
+  },
+  {
+    "id": "RT-149",
+    "query": "스마트스토어 리뷰 최근 3개월 추이",
+    "table": "review_smartstore",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 31.1,
+    "answer_len": 851,
+    "answer_preview": "### 📊 스마트스토어 최근 3개월 리뷰 추이 분석 (2025년 12월 ~ 2026년 3월 7일)  #### 요약  최근 3개월간(2025년 12월 ~ 2026년 3월 7일) 스마트스토어 리뷰는 총 **2,494건**이 발생했습니다. 월별로는 2026년 1월에 **1,037건**으로 가장 많은 리뷰가 기록되었으며, 2026년 3월은 현재까지 **113건**"
+  },
+  {
+    "id": "RT-150",
+    "query": "스마트스토어 리뷰 데이터 전체 현황",
+    "table": "review_smartstore",
+    "category": "total_count",
+    "status": "OK",
+    "time": 33.5,
+    "answer_len": 822,
+    "answer_preview": "### 📊 스마트스토어 리뷰 데이터 전체 현황  #### 요약  스마트스토어 리뷰 데이터는 **총 26,724개**의 리뷰를 포함하고 있으며, 이는 **35개**의 고유 제품에 대한 리뷰입니다. 모든 리뷰는 단일 브랜드에서 발생했으며, 가장 오래된 리뷰는 2015년 1월 23일, 가장 최신 리뷰는 2026년 3월 4일로 약 11년간의 리뷰 데이터를 축적하고"
+  },
+  {
+    "id": "RT-151",
+    "query": "스마트스토어 SKIN1004 브랜드 리뷰 수 추이",
+    "table": "review_smartstore",
+    "category": "brand_review",
+    "status": "OK",
+    "time": 37.3,
+    "answer_len": 450,
+    "answer_preview": "# 데이터 조회 안내  안녕하세요. 요청하신 **스마트스토어 SKIN1004 브랜드 리뷰 수 추이** 데이터를 조회하지 못했습니다.  좀 더 구체적인 조건을 포함하여 질문해 주시면 정확한 데이터를 찾는 데 도움이 됩니다.  ---  ## 💡 이렇게 질문을 바꿔보세요  > **기간, 제품명, 세부 지표** 등을 명시해 주시면 좋습니다.  | 예시 질문 | |"
+  },
+  {
+    "id": "RT-152",
+    "query": "스마트스토어 리뷰 중 최근 것부터 정렬해서 보여줘",
+    "table": "review_smartstore",
+    "category": "recent_reviews",
+    "status": "WARN",
+    "time": 61.8,
+    "answer_len": 95794,
+    "answer_preview": "### 📊 SKIN1004 스마트스토어 최신 리뷰 목록  #### 요약  2026년 03월 07일 기준으로, SKIN1004 스마트스토어에서 수집된 총 **50건**의 최신 리뷰를 최근 날짜 순으로 정렬하여 분석했습니다. 가장 최근 리뷰는 **2026년 03월 04일**에 작성되었으며, 전체 리뷰는 2026년 03월 02일부터 03월 04일까지의 데이터를 "
+  },
+  {
+    "id": "RT-153",
+    "query": "스마트스토어 2024년 7월 리뷰 데이터",
+    "table": "review_smartstore",
+    "category": "date_range",
+    "status": "OK",
+    "time": 46.2,
+    "answer_len": 562,
+    "answer_preview": "# 데이터 조회 안내  안녕하세요. 요청하신 **스마트스토어 2024년 7월 리뷰 데이터**를 현재 조회하지 못했습니다.  좀 더 구체적인 조건을 추가해 주시면 정확한 데이터를 찾는 데 도움이 됩니다.  ---  ## 💡 이렇게 질문을 바꿔보시면 좋아요  > **예시 1)** \"스마트스토어 2024년 7월 **마다가스카르 센텔라 앰플** 리뷰 건수와 평균 "
+  },
+  {
+    "id": "RT-154",
+    "query": "스마트스토어 제품별 리뷰 수 표로 보여줘",
+    "table": "review_smartstore",
+    "category": "review_count",
+    "status": "OK",
+    "time": 33.7,
+    "answer_len": 1439,
+    "answer_preview": "### 📊 SKIN1004 스마트스토어 제품별 리뷰 현황  #### 요약  SKIN1004 스마트스토어에서 가장 많은 리뷰를 받은 제품은 **센텔라 앰플**로, 총 **7,555개**의 리뷰를 기록했습니다. 이는 2위 제품인 센텔라 앰플 폼(2,648개)보다 약 2.8배 많은 수치이며, 전체 35개 제품 중 압도적인 리뷰 수를 보여줍니다.  #### 상세 "
+  },
+  {
+    "id": "RT-155",
+    "query": "스마트스토어 리뷰 원문 언어별 분포",
+    "table": "review_smartstore",
+    "category": "review_content",
+    "status": "OK",
+    "time": 54.1,
+    "answer_len": 395,
+    "answer_preview": "안녕하세요. 요청하신 **스마트스토어 리뷰 원문 언어별 분포** 데이터를 현재 조회하지 못했습니다.  좀 더 구체적인 조건을 추가해 주시면 정확한 데이터를 찾는 데 도움이 됩니다. 아래 예시를 참고해 주세요.  ---  **질문 예시**  1. **\"2024년 하반기 스마트스토어 리뷰 중 원문 언어별(한국어/영어/중국어 등) 건수 분포를 알려줘\"** — 기"
+  },
+  {
+    "id": "RT-156",
+    "query": "스마트스토어 최근 리뷰 요약",
+    "table": "review_smartstore",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 42.8,
+    "answer_len": 368,
+    "answer_preview": "# 데이터 조회 안내  안녕하세요. 요청하신 **스마트스토어 최근 리뷰** 관련 데이터를 조회하지 못했습니다.  좀 더 구체적인 조건을 포함하여 질문해 주시면 정확한 데이터를 찾는 데 도움이 됩니다.  ---  ## 💡 이렇게 질문해 보세요  1. **\"스마트스토어에서 최근 1개월간 마다가스카르 센텔라 토너의 리뷰를 요약해 줘\"** 2. **\"스마트스토어 "
+  },
+  {
+    "id": "RT-157",
+    "query": "스마트스토어 Tone Brightening Capsule Serum 리뷰 있어?",
+    "table": "review_smartstore",
+    "category": "product_review",
+    "status": "OK",
+    "time": 36.6,
+    "answer_len": 468,
+    "answer_preview": "요청하신 조건에 해당하는 스마트스토어 리뷰 데이터는 현재 조회되지 않습니다.  SQL 쿼리의 `product_name` 필터 조건(`%Tone_Brightening%Ampoule%`)이 사용자님께서 요청하신 'Tone Brightening Capsule Serum'과 일치하지 않아 데이터가 조회되지 않았습니다. 사용자님께서는 'Serum'을 언급하셨으나, "
+  },
+  {
+    "id": "RT-158",
+    "query": "스마트스토어 리뷰 2025년 3월 데이터 있어?",
+    "table": "review_smartstore",
+    "category": "date_range",
+    "status": "OK",
+    "time": 44.2,
+    "answer_len": 400,
+    "answer_preview": "### 📊 2025년 3월 스마트스토어 리뷰 데이터 현황  #### 요약  2025년 3월 스마트스토어 리뷰 데이터는 총 **448건** 존재합니다. 해당 기간 동안 스마트스토어에서 발생한 리뷰 수를 성공적으로 조회했습니다.  #### 분석 및 인사이트  *   2025년 3월 스마트스토어 리뷰 데이터가 성공적으로 조회되었습니다. *   총 **448건**"
+  },
+  {
+    "id": "RT-159",
+    "query": "스마트스토어 리뷰 수 TOP 제품 비율",
+    "table": "review_smartstore",
+    "category": "top_reviewed",
+    "status": "OK",
+    "time": 39.4,
+    "answer_len": 1735,
+    "answer_preview": "### 📊 스마트스토어 리뷰 수 TOP 제품 비율 분석  #### 요약  SKIN1004 스마트스토어의 전체 리뷰 **26,725건** 중, '센텔라 앰플'이 **7,555건**의 리뷰로 전체의 **28.27%**를 차지하며 압도적인 1위를 기록했습니다. 상위 3개 제품(센텔라 앰플, 센텔라 앰플 폼, 센텔라 라이트 클렌징 오일)이 전체 리뷰의 **44.6"
+  },
+  {
+    "id": "RT-160",
+    "query": "스마트스토어 제품 리뷰 수 비교 차트",
+    "table": "review_smartstore",
+    "category": "review_count",
+    "status": "OK",
+    "time": 36.6,
+    "answer_len": 1247,
+    "answer_preview": "### 📊 스마트스토어 제품별 리뷰 수 비교  #### 요약  SKIN1004 스마트스토어 제품 중 **'센텔라 앰플'**이 **7,555개**의 리뷰를 기록하며 압도적인 1위를 차지했습니다. 총 35개 제품의 리뷰 수를 분석한 결과, 상위 제품들이 전체 리뷰 수를 견인하는 경향을 보였습니다.  #### 상세 데이터  총 35개 제품 중 상위 20개 제품의"
+  },
+  {
+    "id": "RT-161",
+    "query": "스마트스토어 최근 리뷰 12건",
+    "table": "review_smartstore",
+    "category": "recent_n",
+    "status": "WARN",
+    "time": 70.8,
+    "answer_len": 3040,
+    "answer_preview": "## 📊 스마트스토어 SKIN1004 최근 리뷰 12건 분석  #### 요약  2026년 3월 3일부터 3월 4일까지 스마트스토어에 작성된 SKIN1004 제품 리뷰 **12건**을 분석한 결과, 고객들은 제품의 **촉촉함, 순함, 뽀송함, 그리고 진정 효과**에 대해 높은 만족도를 보였습니다. 특히 **센텔라 앰플**이 4건으로 가장 많은 리뷰를 받았으며"
+  },
+  {
+    "id": "RT-162",
+    "query": "스마트스토어 리뷰 수집일과 리뷰 작성일 차이",
+    "table": "review_smartstore",
+    "category": "date_range",
+    "status": "OK",
+    "time": 35.7,
+    "answer_len": 1867,
+    "answer_preview": "### 📊 스마트스토어 리뷰 수집일과 작성일 차이 분석  #### 요약  총 **10,000건**의 SKIN1004 스마트스토어 리뷰 데이터를 분석한 결과, 리뷰 수집일과 작성일 간의 차이는 **최소 0일**부터 **다양한 범위**로 나타났습니다. 프리뷰 데이터에서는 작성 당일 수집(0일 차이)되거나 1~2일 후 수집되는 경우가 많았으나, 전체 데이터에서는"
+  },
+  {
+    "id": "RT-163",
+    "query": "스마트스토어 Madagascar Centella Ampoule 한국어 리뷰",
+    "table": "review_smartstore",
+    "category": "review_content",
+    "status": "OK",
+    "time": 43.2,
+    "answer_len": 549,
+    "answer_preview": "해당 조건에 맞는 스마트스토어 마다가스카르 센텔라 앰플 한국어 리뷰 데이터는 현재 조회되지 않습니다.  SQL 쿼리에서 사용된 필터 조건 중 `product_name LIKE '%Centella%Ampoule%'`이 문제일 가능성이 높습니다. 데이터베이스에 저장된 제품명이 'Madagascar Centella Ampoule' 또는 '센텔라 앰플'과 정확히 "
+  },
+  {
+    "id": "RT-164",
+    "query": "스마트스토어 리뷰 주별 통계",
+    "table": "review_smartstore",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 55.6,
+    "answer_len": 1546,
+    "answer_preview": "### 📊 스마트스토어 주별 리뷰 통계 보고서  #### 요약  스마트스토어의 주별 리뷰 통계 분석 결과, **2015년 3주차부터 현재(2026년 3월 7일)까지 약 10년간 총 525주**에 걸친 리뷰 데이터를 확인할 수 있습니다. 제공된 데이터 프리뷰에 따르면, 2015년 초반에는 주당 리뷰 수가 **1개에서 6개** 사이로 비교적 적게 기록되었습니다"
+  },
+  {
+    "id": "RT-165",
+    "query": "스마트스토어 리뷰 데이터 날짜 범위",
+    "table": "review_smartstore",
+    "category": "date_range",
+    "status": "OK",
+    "time": 39.1,
+    "answer_len": 594,
+    "answer_preview": "### 📊 스마트스토어 리뷰 데이터 날짜 범위 분석  #### 요약  스마트스토어 리뷰 데이터는 **2015년 01월 23일**부터 **2026년 03월 04일**까지의 기록을 포함하고 있습니다. 이는 약 **11년 2개월**에 걸친 방대한 기간의 리뷰 데이터를 의미하며, 현재(2026년 03월 07일) 기준 최신 데이터까지 반영되어 있습니다.  #### "
+  },
+  {
+    "id": "RT-166",
+    "query": "스마트스토어 최다 리뷰 제품 알려줘",
+    "table": "review_smartstore",
+    "category": "top_reviewed",
+    "status": "OK",
+    "time": 36.4,
+    "answer_len": 1255,
+    "answer_preview": "### 📊 스마트스토어 최다 리뷰 제품 현황  #### 요약  스마트스토어에서 가장 많은 리뷰를 받은 제품은 **센텔라 앰플**로, 총 **7,555개**의 리뷰를 기록했습니다. 이는 2위 제품인 센텔라 앰플 폼(2,648개)보다 약 2.8배 많은 수치로, 압도적인 인기를 보여주고 있습니다.  #### 상세 데이터  총 35개 제품 중 상위 20개 제품의 "
+  },
+  {
+    "id": "RT-167",
+    "query": "스마트스토어 리뷰 전체 목록",
+    "table": "review_smartstore",
+    "category": "total_count",
+    "status": "OK",
+    "time": 41.7,
+    "answer_len": 1812,
+    "answer_preview": "### 📊 스마트스토어 리뷰 전체 목록 (최신순)  #### 요약  사용자님께서 요청하신 스마트스토어 리뷰 전체 목록 중 최신순으로 정렬된 **10,000건**의 데이터가 조회되었습니다. 해당 데이터는 **2026년 3월 1일부터 2026년 3월 4일**까지의 리뷰를 포함하며, **SKIN1004** 브랜드의 **35가지** 고유 제품에 대한 스마트스토어 "
+  },
+  {
+    "id": "RT-168",
+    "query": "스마트스토어 Centella Ampoule 리뷰 최근 5건",
+    "table": "review_smartstore",
+    "category": "recent_n",
+    "status": "OK",
+    "time": 36.4,
+    "answer_len": 430,
+    "answer_preview": "해당 조건에 맞는 데이터가 존재하지 않습니다.  SQL 쿼리의 `product_name` 필터 조건(`product_name LIKE '%Centella%Ampoule%'`)이 문제일 수 있습니다. 'Centella Ampoule'이라는 정확한 문구를 포함하는 제품명이 데이터베이스에 없을 가능성이 높습니다. SKIN1004의 센텔라 앰플은 주로 '마다가스카"
+  },
+  {
+    "id": "RT-169",
+    "query": "스마트스토어 2025년 월별 리뷰 건수 비교",
+    "table": "review_smartstore",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 36.7,
+    "answer_len": 557,
+    "answer_preview": "# 데이터 조회 안내  안녕하세요. 요청하신 **스마트스토어 2025년 월별 리뷰 건수** 데이터를 현재 조회하지 못했습니다.  ---  ## 💡 더 정확한 조회를 위한 제안  질문을 조금 더 구체적으로 작성해 주시면 데이터를 찾는 데 도움이 됩니다. 아래 항목들을 포함해 보세요:  | 구체화 항목 | 예시 | |------------|------| | *"
+  },
+  {
+    "id": "RT-170",
+    "query": "스마트스토어 리뷰에서 Soothing Cream 검색",
+    "table": "review_smartstore",
+    "category": "product_review",
+    "status": "OK",
+    "time": 34.6,
+    "answer_len": 365,
+    "answer_preview": "해당 조건에 맞는 데이터가 존재하지 않습니다.  SQL에서 사용된 필터 조건 중 `product_name LIKE '%Soothing Cream%'`이 문제일 가능성이 높습니다. 'Soothing Cream'이라는 정확한 제품명 또는 해당 문구가 포함된 제품명이 스마트스토어 리뷰 데이터에 없을 수 있습니다.  비슷한 데이터를 조회할 수 있는 대안 질문은 다"
+  },
+  {
+    "id": "RT-171",
+    "query": "스마트스토어 피부고민 복합성 피부 리뷰",
+    "table": "review_smartstore",
+    "category": "skin_concern",
+    "status": "OK",
+    "time": 29.2,
+    "answer_len": 301,
+    "answer_preview": "해당 조건에 맞는 데이터가 존재하지 않습니다.  SQL에서 사용된 필터 조건 중 `skin_concern = '복합성 피부'`가 문제의 원인입니다. `skin_concern` 필드에는 '복합성 피부'라는 정확한 값이 존재하지 않는 것으로 보입니다. 일반적으로 피부 타입은 '건성', '지성', '복합성', '민감성' 등으로 분류되므로, '복합성'으로 검색해 "
+  },
+  {
+    "id": "RT-172",
+    "query": "스마트스토어 피부고민 자극 관련 리뷰 수",
+    "table": "review_smartstore",
+    "category": "skin_concern",
+    "status": "OK",
+    "time": 31.8,
+    "answer_len": 496,
+    "answer_preview": "해당 조건의 데이터가 없습니다.  SQL에서 `skin_concern LIKE '%자극%'` 필터 조건이 문제인 것으로 보입니다. `Smartstore_Review` 테이블의 `skin_concern` 컬럼에 '자극'이라는 단어를 포함하는 데이터가 없는 것으로 판단됩니다.  `skin_concern` 컬럼에 '자극'이라는 직접적인 표현 대신 다음과 같은 유"
+  },
+  {
+    "id": "RT-173",
+    "query": "스마트스토어 피부고민별 최근 리뷰",
+    "table": "review_smartstore",
+    "category": "skin_concern",
+    "status": "OK",
+    "time": 48.7,
+    "answer_len": 1356,
+    "answer_preview": "### 📊 SKIN1004 스마트스토어 최근 3개월 피부고민별 리뷰 현황  #### 요약  최근 3개월간(2025년 12월 7일 ~ 2026년 3월 7일) SKIN1004 스마트스토어 리뷰에서 가장 많이 언급된 피부고민은 **복합성**으로 **36건**을 기록했습니다. 뒤이어 **복합성, 트러블**이 **35건**으로 2위를 차지하는 등, 복합적인 피부고민"
+  },
+  {
+    "id": "RT-174",
+    "query": "스마트스토어 skin_concern 종류별 건수 표",
+    "table": "review_smartstore",
+    "category": "skin_concern",
+    "status": "OK",
+    "time": 49.0,
+    "answer_len": 758,
+    "answer_preview": "네이버 스마트스토어에서 **'피부고민(skin_concern)' 유형별 등록 상품 건수**에 대한 공식 통계는 현재 제공되지 않습니다.  ## 현황 요약  | 항목 | 내용 | |------|------| | **공식 집계 여부** | ❌ 미제공 | | **표준화 항목 여부** | 네이버가 필수 표준 항목으로 제공하지 않음 | | **분류 방식** | 개별"
+  },
+  {
+    "id": "RT-175",
+    "query": "스마트스토어 피부고민 블랙헤드 리뷰",
+    "table": "review_smartstore",
+    "category": "skin_concern",
+    "status": "OK",
+    "time": 30.1,
+    "answer_len": 355,
+    "answer_preview": "요청하신 `skin_concern` 필터 조건 '블랙헤드'에 해당하는 값은 존재하지 않습니다.  SQL에서 사용된 `skin_concern` 필터 조건인 '블랙헤드'가 문제의 원인입니다. `skin_concern` 필드에는 '블랙헤드'라는 정확한 값이 존재하지 않습니다. '블랙헤드'는 주로 '모공' 또는 '피지'와 관련된 피부 고민으로 분류됩니다. 유효한 "
+  },
+  {
+    "id": "RT-176",
+    "query": "스마트스토어 리뷰 최근 한 달 건수",
+    "table": "review_smartstore",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 42.8,
+    "answer_len": 371,
+    "answer_preview": "### 📊 스마트스토어 최근 한 달 리뷰 현황  #### 요약  2026년 02월 07일부터 2026년 03월 06일까지 최근 한 달간 스마트스토어에 작성된 리뷰는 총 **873건**입니다.  #### 분석 및 인사이트  *   최근 한 달간 스마트스토어에서 총 873개의 리뷰가 발생하여 고객들의 활발한 피드백 활동을 확인할 수 있습니다. *   이는 고객"
+  },
+  {
+    "id": "RT-177",
+    "query": "스마트스토어 리뷰 번역 품질 확인",
+    "table": "review_smartstore",
+    "category": "review_content",
+    "status": "OK",
+    "time": 29.2,
+    "answer_len": 1503,
+    "answer_preview": "### 📊 스마트스토어 리뷰 번역 품질 확인 보고서  #### 요약  제공된 스마트스토어 리뷰 데이터는 **모든 `review_original` 필드가 한국어로 작성**되어 있으며, `review_ko` 필드는 `review_original`과 **동일한 내용**을 담고 있습니다. 따라서 이 데이터셋에서는 **실제 번역이 이루어진 사례가 없어 번역 품질을 "
+  },
+  {
+    "id": "RT-178",
+    "query": "스마트스토어 리뷰 수 연도별 비교",
+    "table": "review_smartstore",
+    "category": "date_range",
+    "status": "WARN",
+    "time": 62.0,
+    "answer_len": 1350,
+    "answer_preview": "### 📊 스마트스토어 리뷰 수 연도별 비교  #### 요약  ⚠️ 2026년은 현재 3월 7일까지의 데이터만 존재합니다. 스마트스토어 리뷰 수는 2015년부터 2026년 3월 7일까지 총 12년간 집계되었으며, 특히 **2022년**에 **7,517건**으로 가장 많은 리뷰가 기록되었습니다. 2025년에도 **6,730건**으로 높은 리뷰 수를 기록하며 "
+  },
+  {
+    "id": "RT-179",
+    "query": "스마트스토어 제품별 리뷰 트렌드",
+    "table": "review_smartstore",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 32.3,
+    "answer_len": 2376,
+    "answer_preview": "### 📈 스마트스토어 제품별 리뷰 트렌드 분석  #### 요약  스마트스토어 제품별 리뷰는 고객 신뢰도 및 구매 전환율에 결정적인 영향을 미치며, **90% 이상**의 고객이 구매 전 리뷰를 참고하는 것으로 나타났습니다. 특히 숏폼 영상 리뷰의 부상과 AI 기반 리뷰 관리 및 분석 도입은 리뷰 트렌드의 핵심 변화로, 단순한 리뷰 수 확보를 넘어 질적 향상"
+  },
+  {
+    "id": "RT-180",
+    "query": "스마트스토어 전체 리뷰 수 현황",
+    "table": "review_smartstore",
+    "category": "total_count",
+    "status": "OK",
+    "time": 47.4,
+    "answer_len": 425,
+    "answer_preview": "### 📊 스마트스토어 전체 리뷰 현황  #### 요약  스마트스토어의 현재까지 누적된 전체 리뷰 수는 총 **26,724개**입니다. 이 수치는 고객들의 활발한 참여와 제품에 대한 높은 관심을 보여줍니다.  #### 분석 및 인사이트  *   총 **26,724개**의 리뷰는 스마트스토어의 제품에 대한 고객들의 높은 관심과 활발한 피드백 활동을 나타냅니다"
+  },
+  {
+    "id": "RT-181",
+    "query": "스마트스토어 리뷰 중 Cleansing Oil 관련",
+    "table": "review_smartstore",
+    "category": "product_review",
+    "status": "OK",
+    "time": 33.7,
+    "answer_len": 755,
+    "answer_preview": "해당 조건의 데이터가 없습니다.  SQL에서 사용된 필터 조건 중 `product_name LIKE '%Cleansing_Oil%'` 부분에 문제가 있을 가능성이 높습니다. 1.  **`product_name` 조건**: `Cleansing_Oil`에서 언더스코어(`_`)는 SQL `LIKE` 연산자에서 한 글자를 의미하는 와일드카드입니다. 따라서 정확히 "
+  },
+  {
+    "id": "RT-182",
+    "query": "스마트스토어 최근 리뷰 30건 한국어 번역",
+    "table": "review_smartstore",
+    "category": "recent_n",
+    "status": "OK",
+    "time": 52.7,
+    "answer_len": 3114,
+    "answer_preview": "### 📊 SKIN1004 스마트스토어 최근 리뷰 30건 분석  #### 요약  SKIN1004 스마트스토어의 최근 **30건** 리뷰를 분석한 결과, 전반적으로 제품 자체에 대한 높은 만족도를 보였습니다. 특히 **촉촉함, 순함, 뛰어난 발림성** 등 사용감에 대한 긍정적인 평가가 주를 이루었으며, 재구매 의사를 밝힌 고객도 다수였습니다. 리뷰는 2026"
+  },
+  {
+    "id": "RT-183",
+    "query": "스마트스토어 리뷰 데이터 수집 주기는?",
+    "table": "review_smartstore",
+    "category": "total_count",
+    "status": "OK",
+    "time": 40.7,
+    "answer_len": 526,
+    "answer_preview": "### 📊 스마트스토어 리뷰 데이터 수집 주기 분석  #### 요약  스마트스토어 리뷰 데이터는 평균적으로 **6일** 주기로 수집되고 있습니다. 이는 약 일주일에 한 번꼴로 리뷰 데이터가 업데이트됨을 의미합니다.  #### 분석 및 인사이트  *   **정기적인 데이터 수집:** 스마트스토어 리뷰 데이터는 평균 6일 간격으로 정기적으로 수집되고 있어, 비"
+  },
+  {
+    "id": "RT-184",
+    "query": "스마트스토어 2024년 4분기 리뷰 수",
+    "table": "review_smartstore",
+    "category": "date_range",
+    "status": "OK",
+    "time": 23.7,
+    "answer_len": 356,
+    "answer_preview": "안녕하세요. 요청하신 **스마트스토어 2024년 4분기 리뷰 수** 데이터를 조회하지 못했습니다.  좀 더 구체적인 조건을 포함하여 질문해 주시면 정확한 데이터를 찾는 데 도움이 됩니다. 아래 예시를 참고해 주세요.  ---  **질문 예시**  1. **\"스마트스토어에서 2024년 10월~12월 마다가스카르 센텔라 라인 제품별 리뷰 수를 알려줘\"** 2."
+  },
+  {
+    "id": "RT-185",
+    "query": "스마트스토어 리뷰 제품명 중복 제거 목록",
+    "table": "review_smartstore",
+    "category": "review_count",
+    "status": "OK",
+    "time": 52.0,
+    "answer_len": 930,
+    "answer_preview": "### 📊 스마트스토어 리뷰 제품 목록 (중복 제거)  #### 요약  스마트스토어 리뷰 데이터에서 중복을 제거한 결과, 총 **35개**의 고유한 제품명이 확인되었습니다. 이 목록은 현재 스마트스토어에 리뷰가 등록된 모든 제품을 나타냅니다.  #### 상세 데이터  다음은 스마트스토어 리뷰에 등록된 제품명 중 중복을 제거한 목록입니다. 전체 **35개**"
+  },
+  {
+    "id": "RT-186",
+    "query": "스마트스토어 리뷰 월별 평균 건수",
+    "table": "review_smartstore",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 41.5,
+    "answer_len": 613,
+    "answer_preview": "### 📊 스마트스토어 월별 평균 리뷰 건수  #### 요약  스마트스토어의 전체 운영 기간 동안 월별 평균 리뷰 건수는 **202.45건**으로 집계되었습니다. 이는 스마트스토어에서 한 달 평균 약 200개 이상의 리뷰가 꾸준히 생성되고 있음을 의미합니다.  #### 상세 데이터  (단일 수치이므로 생략)  #### 분석 및 인사이트  *   **꾸준한 "
+  },
+  {
+    "id": "RT-187",
+    "query": "스마트스토어 최근 수집된 리뷰 보여줘",
+    "table": "review_smartstore",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 44.4,
+    "answer_len": 2869,
+    "answer_preview": "### 📊 스마트스토어 SKIN1004 최근 리뷰 현황  #### 요약  2026년 03월 07일 기준으로, SKIN1004 스마트스토어에서 **총 50건**의 최근 리뷰가 조회되었습니다. 가장 최신 리뷰는 **2026년 03월 04일**에 작성되었으며, 전반적으로 제품 자체의 보습력, 발림성, 순함 등에 대한 만족도가 높게 나타났습니다. 다만, 일부 사은"
+  },
+  {
+    "id": "RT-188",
+    "query": "스마트스토어 Centella Ampoule 리뷰 원문 10건",
+    "table": "review_smartstore",
+    "category": "review_content",
+    "status": "OK",
+    "time": 27.3,
+    "answer_len": 462,
+    "answer_preview": "해당 조건의 데이터가 없습니다.  SQL에서 사용된 `product_name` 필터 조건(`%Centella%Ampoule%`)에 해당하는 스마트스토어 리뷰 데이터가 없거나, 해당 제품이 스마트스토어 채널에 등록되어 있지 않을 수 있습니다. `Centella Ampoule`이라는 정확한 제품명 대신 다른 이름으로 등록되어 있을 가능성이 있습니다.  유효한 "
+  },
+  {
+    "id": "RT-189",
+    "query": "스마트스토어 리뷰 수 가장 많은 달은?",
+    "table": "review_smartstore",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 36.2,
+    "answer_len": 884,
+    "answer_preview": "### 📊 SKIN1004 스마트스토어 월별 리뷰 수 분석  #### 요약  SKIN1004 스마트스토어에서 가장 많은 리뷰가 발생한 달은 **2022년 5월**로, 총 **1,093건**의 리뷰가 기록되었습니다. 이는 전체 데이터 기간 중 가장 높은 월별 리뷰 수치입니다.  #### 상세 데이터  SKIN1004 스마트스토어에서 리뷰 수가 가장 많았던 상"
+  },
+  {
+    "id": "RT-190",
+    "query": "스마트스토어 리뷰 2024년 전체 요약",
+    "table": "review_smartstore",
+    "category": "date_range",
+    "status": "OK",
+    "time": 47.3,
+    "answer_len": 1423,
+    "answer_preview": "### 📊 2024년 스마트스토어 SKIN1004 리뷰 피부 고민 유형별 요약  #### 요약  2024년 한 해 동안 스마트스토어 SKIN1004 브랜드 리뷰에서 **총 371가지**의 고유한 피부 고민 유형이 확인되었습니다. 가장 많은 리뷰를 기록한 피부 고민 유형은 **'중성, 잡티, 주름, 각질'**로, **49건**의 리뷰가 집계되었습니다. 그 다"
+  },
+  {
+    "id": "RT-191",
+    "query": "스마트스토어에서 SKIN1004 리뷰 제일 많은 제품",
+    "table": "review_smartstore",
+    "category": "top_reviewed",
+    "status": "OK",
+    "time": 27.7,
+    "answer_len": 618,
+    "answer_preview": "### 📊 SKIN1004 스마트스토어 최다 리뷰 제품 분석  #### 요약  SKIN1004 스마트스토어에서 현재까지 가장 많은 리뷰를 받은 제품은 **센텔라 앰플**입니다. 이 제품은 총 **7,555개**의 리뷰를 기록하며 압도적인 고객 관심을 받고 있습니다.  #### 상세 데이터 | product_name | review_count | | :---"
+  },
+  {
+    "id": "RT-192",
+    "query": "스마트스토어 리뷰 최신 데이터 확인해줘",
+    "table": "review_smartstore",
+    "category": "recent_reviews",
+    "status": "WARN",
+    "time": 73.8,
+    "answer_len": 2360,
+    "answer_preview": "## 📊 SKIN1004 스마트스토어 최신 리뷰 현황 (2026년 3월 2일 ~ 3월 4일)  #### 요약  SKIN1004 브랜드의 스마트스토어 최신 리뷰 **50건**을 확인했습니다. 가장 최근 리뷰는 **2026년 3월 4일**에 작성되었으며, '센텔라 라이트 클렌징 오일'을 포함한 다양한 제품에 대한 긍정적인 평가가 주를 이루었습니다. (⚠️ 현재"
+  },
+  {
+    "id": "RT-193",
+    "query": "스마트스토어 리뷰 collected_date 기준 최근 데이터",
+    "table": "review_smartstore",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 50.0,
+    "answer_len": 2002,
+    "answer_preview": "### 📊 스마트스토어 최신 리뷰 분석 보고서  #### 요약  스마트스토어에서 수집일(collected_date) 기준 **2026년 03월 04일**까지의 최신 리뷰 **총 50건**이 조회되었습니다. 이 리뷰들은 2026년 03월 02일부터 03월 04일까지 수집된 데이터로, 오늘(2026년 03월 07일) 기준 매우 최근의 고객 피드백을 담고 있습니"
+  },
+  {
+    "id": "RT-194",
+    "query": "스마트스토어 제품별 리뷰 건수와 비중",
+    "table": "review_smartstore",
+    "category": "review_count",
+    "status": "OK",
+    "time": 34.1,
+    "answer_len": 1703,
+    "answer_preview": "### 📊 SKIN1004 스마트스토어 제품별 리뷰 현황 분석  #### 요약  2026년 3월 7일 기준으로 SKIN1004 스마트스토어의 총 리뷰는 **26,725건**이며, 이 중 **'센텔라 앰플'**이 **7,555건**으로 전체 리뷰의 **28.27%**를 차지하며 압도적인 비중을 보였습니다. 상위 3개 제품('센텔라 앰플', '센텔라 앰플 폼'"
+  },
+  {
+    "id": "RT-195",
+    "query": "스마트스토어 2025년 신규 리뷰 수",
+    "table": "review_smartstore",
+    "category": "date_range",
+    "status": "OK",
+    "time": 36.2,
+    "answer_len": 441,
+    "answer_preview": "안녕하세요. 요청하신 **스마트스토어 2025년 신규 리뷰 수** 데이터를 조회하지 못했습니다.  좀 더 정확한 결과를 위해 **조건을 구체적으로** 지정해 주시면 다시 조회해 드리겠습니다.  ---  **💡 이렇게 질문해 보시면 좋습니다**  1. **\"스마트스토어에서 2025년 1월~3월 마다가스카르 센텔라 라인 신규 리뷰 수 알려줘\"**    *(기간"
+  },
+  {
+    "id": "RT-196",
+    "query": "스마트스토어 리뷰 데이터 컬럼 정보",
+    "table": "review_smartstore",
+    "category": "total_count",
+    "status": "OK",
+    "time": 38.6,
+    "answer_len": 375,
+    "answer_preview": "제공된 SQL 쿼리는 `WHERE FALSE` 조건으로 인해 항상 0행을 반환합니다. 이 조건은 어떤 데이터도 선택하지 않도록 설정되어 있습니다.  SQL 쿼리의 `WHERE FALSE` 조건이 문제이며, 이 조건은 논리적으로 항상 거짓이므로 어떤 데이터도 조회되지 않습니다. 따라서 특정 필터 조건에 대한 유효 값 목록을 확인할 필요가 없습니다.  비슷한 "
+  },
+  {
+    "id": "RT-197",
+    "query": "스마트스토어 Madagascar Centella Ampoule 리뷰 추이",
+    "table": "review_smartstore",
+    "category": "product_review",
+    "status": "OK",
+    "time": 37.7,
+    "answer_len": 401,
+    "answer_preview": "요청하신 조건에 해당하는 데이터가 없습니다. 특히, 'Madagascar Centella Ampoule' 제품명은 존재하지 않습니다.  SQL에서 사용된 필터 조건 중 `product_name LIKE '%Madagascar Centella Ampoule%'`이 문제로 보입니다. 데이터베이스에는 해당 제품명이 '마다가스카르 센텔라 앰플' 또는 '센텔라 앰플"
+  },
+  {
+    "id": "RT-198",
+    "query": "스마트스토어 최근 리뷰 8건",
+    "table": "review_smartstore",
+    "category": "recent_n",
+    "status": "WARN",
+    "time": 83.4,
+    "answer_len": 110014,
+    "answer_preview": "### 📊 스마트스토어 최근 리뷰 8건 분석  #### 요약  스마트스토어의 최근 리뷰 **8건**은 2026년 3월 3일과 3월 4일에 작성되었으며, 다양한 제품에 대한 긍정적인 사용 경험이 주를 이룹니다. 특히 '센텔라 앰플' 제품은 **3건**의 리뷰로 가장 많은 관심을 받았으며, 전반적으로 촉촉함, 뽀송함, 빠른 흡수력, 저자극 등의 키워드가 자주 "
+  },
+  {
+    "id": "RT-199",
+    "query": "스마트스토어 리뷰 작성일 기준 최신순",
+    "table": "review_smartstore",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 42.2,
+    "answer_len": 2920,
+    "answer_preview": "### 📊 스마트스토어 최신 리뷰 현황 (SKIN1004)  #### 요약  SKIN1004 브랜드의 스마트스토어 최신 리뷰를 작성일 기준으로 조회했습니다. 현재 데이터는 **2026년 03월 04일**까지의 리뷰를 포함하고 있으며, 총 **10,000건**의 리뷰가 조회되었습니다. 이는 쿼리 제한에 도달한 결과이며, 총 **35개**의 고유 제품에 대한 "
+  },
+  {
+    "id": "RT-200",
+    "query": "스마트스토어 리뷰 제품별 월별 교차 분석",
+    "table": "review_smartstore",
+    "category": "monthly_trend",
+    "status": "WARN",
+    "time": 60.0,
+    "answer_len": 1957,
+    "answer_preview": "### 📊 스마트스토어 제품별 월별 리뷰 교차 분석 (2015년 1월 ~ 2016년 8월)  #### 요약  ⚠️ 본 분석은 2015년 1월부터 2016년 8월까지의 스마트스토어 리뷰 데이터를 기반으로 합니다. 현재 날짜(2026년 03월 07일) 기준 최신 데이터가 반영되지 않았습니다. 조회된 기간 동안 **총 35개**의 고유 제품에 대해 **132개 "
+  },
+  {
+    "id": "RT-201",
+    "query": "스마트스토어 피부고민 탄력 관련 리뷰",
+    "table": "review_smartstore",
+    "category": "skin_concern",
+    "status": "WARN",
+    "time": 64.2,
+    "answer_len": 2163,
+    "answer_preview": "## 📊 스마트스토어 '탄력' 관련 피부 고민 리뷰 분석  #### 요약  2026년 1월 23일부터 2026년 3월 3일까지 스마트스토어에서 '탄력'을 피부 고민으로 언급한 리뷰는 총 **927건**이 수집되었습니다. 이 리뷰들은 **35개**의 고유한 제품에 걸쳐 작성되었으며, 특히 최근(2026년 3월 초)에는 \"센텔라 라이트 클렌징 오일\", \"프로바"
+  },
+  {
+    "id": "RT-202",
+    "query": "스마트스토어 피부고민별 제품 리뷰 분포",
+    "table": "review_smartstore",
+    "category": "skin_concern",
+    "status": "OK",
+    "time": 40.8,
+    "answer_len": 1246,
+    "answer_preview": "### 📊 스마트스토어 피부고민별 제품 리뷰 분포 분석  #### 요약  스마트스토어의 피부고민별 제품 리뷰를 분석한 결과, **'센텔라 앰플'**이 다양한 피부고민 카테고리에서 가장 많은 리뷰를 확보하며 압도적인 인기를 보였습니다. 특히 **'복합성' 피부고민에서 센텔라 앰플이 40건으로 가장 많은 리뷰**를 기록했으며, 복합성 및 트러블성 피부고민을 가"
+  },
+  {
+    "id": "RT-203",
+    "query": "스마트스토어 피부고민 미백 관련 리뷰 수",
+    "table": "review_smartstore",
+    "category": "skin_concern",
+    "status": "OK",
+    "time": 54.8,
+    "answer_len": 530,
+    "answer_preview": "### 📊 스마트스토어 피부고민 '미백' 관련 리뷰 현황  #### 요약  스마트스토어에서 피부고민으로 '미백'이 언급된 리뷰는 총 **1,112건**으로 집계되었습니다. 이는 미백 관련 제품에 대한 고객들의 높은 관심과 해당 효능에 대한 리뷰 작성이 활발함을 보여줍니다.  #### 분석 및 인사이트  *   **미백 관련 고객 관심도 확인**: 총 **1"
+  },
+  {
+    "id": "RT-204",
+    "query": "스마트스토어 skin_concern 데이터 전체 보여줘",
+    "table": "review_smartstore",
+    "category": "skin_concern",
+    "status": "OK",
+    "time": 29.5,
+    "answer_len": 1265,
+    "answer_preview": "### 📊 스마트스토어 피부 고민 유형별 리뷰 현황  #### 요약  스마트스토어 리뷰 데이터 분석 결과, 총 **1,393가지**의 고유한 피부 고민 유형이 확인되었습니다. 이 중 가장 많은 리뷰 수를 기록한 피부 고민은 **145건**의 '복합성, 트러블'이었으며, '복합성' 단독 유형이 **132건**으로 그 뒤를 이었습니다. 전반적으로 '복합성'과 "
+  },
+  {
+    "id": "RT-205",
+    "query": "스마트스토어 피부고민 트러블 리뷰 내용",
+    "table": "review_smartstore",
+    "category": "skin_concern",
+    "status": "WARN",
+    "time": 65.0,
+    "answer_len": 402,
+    "answer_preview": "**📊 SKIN1004 스마트스토어 트러블 피부고민 리뷰 분석 (2024.05.07 ~ 2026.02.24)**  #### 요약  ⚠️ 2026년 3월 7일 현재, 2026년 2월 24일까지의 데이터가 분석되었습니다. SKIN1004 스마트스토어에서 '트러블' 피부고민으로 작성된 **총 16건**의 리뷰가 확인되었습니다. 주요 제품으로는 센텔라 앰플, 센텔"
+  },
+  {
+    "id": "RT-206",
+    "query": "스마트스토어 2025년 2월 리뷰 내용 전부",
+    "table": "review_smartstore",
+    "category": "date_range",
+    "status": "OK",
+    "time": 29.5,
+    "answer_len": 420,
+    "answer_preview": "# 데이터 조회 안내  안녕하세요. 요청하신 **스마트스토어 2025년 2월 리뷰 내용**을 데이터베이스에서 조회하지 못했습니다.  ---  ## 💡 더 구체적으로 질문해 보시겠어요?  리뷰 데이터의 범위가 넓을 수 있으므로, 아래와 같은 조건을 추가해 주시면 조회 가능성이 높아집니다.  > **특정 제품명, 평점 범위, 키워드** 등을 함께 지정해 주세요"
+  },
+  {
+    "id": "RT-207",
+    "query": "스마트스토어 리뷰 Centella 키워드 검색",
+    "table": "review_smartstore",
+    "category": "product_review",
+    "status": "OK",
+    "time": 57.9,
+    "answer_len": 1760,
+    "answer_preview": "### 📊 SKIN1004 스마트스토어 센텔라 키워드 리뷰 분석  #### 요약  SKIN1004 스마트스토어에서 'Centella' 또는 '센텔라' 키워드를 포함하는 리뷰는 총 **1,058건**이 검색되었습니다. 이 리뷰들은 **35개**의 고유한 제품에 대해 작성되었으며, 가장 최근 리뷰는 **2026년 03월 03일**에 작성되었습니다. 주요 리뷰 "
+  },
+  {
+    "id": "RT-208",
+    "query": "스마트스토어 리뷰 한국어 번역본만 보여줘",
+    "table": "review_smartstore",
+    "category": "review_content",
+    "status": "OK",
+    "time": 46.7,
+    "answer_len": 2811,
+    "answer_preview": "### 📊 SKIN1004 스마트스토어 한국어 리뷰 현황  #### 요약  2026년 3월 1일부터 2026년 3월 4일까지의 SKIN1004 스마트스토어 한국어 리뷰 총 **10,000건**이 조회되었습니다. 이 리뷰들은 **35개**의 고유 제품에 대한 것이며, 가장 최근 리뷰는 2026년 3월 4일에 작성되었습니다.  #### 상세 데이터  최근 작성"
+  },
+  {
+    "id": "RT-209",
+    "query": "스마트스토어 제품별 최근 리뷰 날짜",
+    "table": "review_smartstore",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 54.2,
+    "answer_len": 3191,
+    "answer_preview": "## 📊 SKIN1004 스마트스토어 제품별 최근 리뷰 날짜 현황  #### 요약  SKIN1004 스마트스토어 제품 중 가장 최근 리뷰는 **2026년 3월 4일**에 작성되었으며, 총 **4개 제품**이 해당 날짜에 리뷰를 받았습니다. 전체 **35개 제품**의 최근 리뷰 날짜를 분석한 결과, 대부분의 제품이 2026년 3월 초까지 활발하게 리뷰가 작성"
+  },
+  {
+    "id": "RT-210",
+    "query": "스마트스토어 리뷰 수 월 평균은?",
+    "table": "review_smartstore",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 45.8,
+    "answer_len": 632,
+    "answer_preview": "### 📊 스마트스토어 월 평균 리뷰 수 분석  #### 요약  2019년 1월부터 현재(2026년 3월 7일)까지의 스마트스토어 리뷰 데이터를 분석한 결과, 월 평균 리뷰 수는 **291.5개**로 집계되었습니다. 이는 해당 기간 동안 매월 약 292개의 리뷰가 꾸준히 발생했음을 의미합니다.  #### 분석 및 인사이트  *   **안정적인 리뷰 발생**"
+  },
+  {
+    "id": "RT-211",
+    "query": "스마트스토어 전체 리뷰 건수 추이 차트",
+    "table": "review_smartstore",
+    "category": "total_count",
+    "status": "OK",
+    "time": 41.1,
+    "answer_len": 4861,
+    "answer_preview": "### 📊 스마트스토어 SKIN1004 리뷰 건수 월별 추이  #### 요약  ⚠️ 2026년 3월 데이터는 현재 7일까지의 데이터만 포함되어 있습니다 (오늘: 2026년 03월 07일). 스마트스토어 SKIN1004 브랜드의 리뷰 건수는 2019년 1월부터 2026년 3월까지 총 **25,361건**을 기록했습니다. 특히 2021년 하반기부터 리뷰 수가 "
+  },
+  {
+    "id": "RT-212",
+    "query": "스마트스토어 Soothing Cream 리뷰 최근 3건",
+    "table": "review_smartstore",
+    "category": "recent_n",
+    "status": "OK",
+    "time": 46.5,
+    "answer_len": 390,
+    "answer_preview": "해당 조건에 맞는 데이터가 존재하지 않습니다.  SQL에서 사용된 `product_name LIKE '%Soothing_Cream%'` 필터 조건이 문제일 가능성이 높습니다. 제품명은 정확한 명칭으로 입력해야 조회되며, 'Soothing Cream'과 같이 띄어쓰기가 있거나 한글 명칭('수딩 크림')으로 등록되어 있을 수 있습니다. 현재 데이터베이스에 'S"
+  },
+  {
+    "id": "RT-213",
+    "query": "스마트스토어 2024년 6월 리뷰 데이터 있어?",
+    "table": "review_smartstore",
+    "category": "date_range",
+    "status": "OK",
+    "time": 24.7,
+    "answer_len": 390,
+    "answer_preview": "안녕하세요! 😊  요청하신 **스마트스토어 2024년 6월 리뷰 데이터**를 현재 조회하지 못했습니다.  좀 더 구체적인 조건을 포함하여 다시 질문해 주시면, 정확한 데이터를 찾는 데 도움이 될 수 있습니다.  ---  **💡 이렇게 질문해 보시면 어떨까요?**  1. **\"스마트스토어에서 2024년 6월 마다가스카르 센텔라 라인 제품의 리뷰 건수와 평점 "
+  },
+  {
+    "id": "RT-214",
+    "query": "스마트스토어 리뷰 제품별 통계 요약",
+    "table": "review_smartstore",
+    "category": "review_count",
+    "status": "OK",
+    "time": 48.6,
+    "answer_len": 1415,
+    "answer_preview": "### 📊 SKIN1004 스마트스토어 제품별 리뷰 통계 요약  #### 요약  SKIN1004 스마트스토어의 총 35개 제품에 대한 리뷰를 분석한 결과, '센텔라 앰플'이 **7,555**건의 리뷰를 기록하며 압도적인 1위를 차지했습니다. 이는 2위인 '센텔라 앰플 폼'(2,648건)보다 약 2.8배 높은 수치로, 센텔라 앰플이 브랜드의 핵심 제품임을 보"
+  },
+  {
+    "id": "RT-215",
+    "query": "스마트스토어 리뷰 가장 최근 작성된 것",
+    "table": "review_smartstore",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 43.8,
+    "answer_len": 1538,
+    "answer_preview": "### 📊 스마트스토어 최신 리뷰 현황  #### 요약  가장 최근 작성된 스마트스토어 리뷰는 **2026년 03월 04일**에 4건, **2026년 03월 03일**에 6건이 확인되었습니다. 이 중 '히알루시카 워터핏 선 세럼', '히알루시카 실키핏 선 스틱', '센텔라 수딩 크림', '센텔라 라이트 클렌징 오일' 제품에 대한 리뷰가 3월 4일에 작성되었"
+  },
+  {
+    "id": "RT-216",
+    "query": "스마트스토어 Centella Ampoule 리뷰 번역 보여줘",
+    "table": "review_smartstore",
+    "category": "review_content",
+    "status": "OK",
+    "time": 21.2,
+    "answer_len": 361,
+    "answer_preview": "요청하신 조건에 해당하는 스마트스토어 센텔라 앰플 리뷰 데이터는 현재 조회되지 않습니다.  SQL 쿼리에서 `product_name LIKE '%Centella%Ampoule%'` 조건이 데이터베이스 내 실제 제품명과 정확히 일치하지 않아 결과가 없는 것으로 보입니다. 제품명이 '마다가스카르 센텔라 앰플' 또는 '센텔라 앰플' 등 다른 형태로 저장되어 있을"
+  },
+  {
+    "id": "RT-217",
+    "query": "스마트스토어 리뷰 데이터 연도별 건수",
+    "table": "review_smartstore",
+    "category": "date_range",
+    "status": "OK",
+    "time": 27.4,
+    "answer_len": 980,
+    "answer_preview": "### 📊 스마트스토어 연도별 리뷰 현황  #### 요약  2015년부터 2026년까지 스마트스토어 리뷰 데이터를 분석한 결과, 총 **30,954건**의 리뷰가 확인되었습니다. 특히 **2022년**에 **7,517건**으로 가장 많은 리뷰가 발생했으며, 2026년은 현재 **2,049건**으로 3월 7일 기준 데이터입니다.  #### 상세 데이터  스마"
+  },
+  {
+    "id": "RT-218",
+    "query": "스마트스토어 리뷰 TOP 5 제품 리스트",
+    "table": "review_smartstore",
+    "category": "top_reviewed",
+    "status": "OK",
+    "time": 48.4,
+    "answer_len": 1006,
+    "answer_preview": "### 📊 스마트스토어 리뷰 TOP 5 제품 리스트  #### 요약  스마트스토어에서 가장 많은 리뷰를 받은 제품은 **센텔라 앰플**로, 총 **7,555**개의 리뷰를 기록하며 압도적인 1위를 차지했습니다. TOP 5 제품 중 4개가 '센텔라' 라인 제품으로, 해당 라인의 높은 고객 참여도를 확인할 수 있습니다.  #### 상세 데이터 | 제품명 | 리"
+  },
+  {
+    "id": "RT-219",
+    "query": "스마트스토어 최근 2개월 리뷰 건수",
+    "table": "review_smartstore",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 36.2,
+    "answer_len": 343,
+    "answer_preview": "안녕하세요. 요청하신 **스마트스토어 최근 2개월 리뷰 건수** 데이터를 조회하지 못했습니다.  좀 더 구체적인 조건을 포함하여 다시 질문해 주시면 정확한 데이터를 찾는 데 도움이 됩니다. 아래 예시를 참고해 주세요.  ---  **질문 예시:**  1. **\"2025년 4월~5월 스마트스토어에서 마다가스카르 센텔라 토너의 리뷰 건수는?\"** 2. **\"최"
+  },
+  {
+    "id": "RT-220",
+    "query": "스마트스토어 리뷰 원문으로 된 것만 보여줘",
+    "table": "review_smartstore",
+    "category": "review_content",
+    "status": "OK",
+    "time": 36.8,
+    "answer_len": 1706,
+    "answer_preview": "### 📊 스마트스토어 리뷰 원문 조회 결과  #### 요약  사용자 질문에 따라 스마트스토어에 작성된 리뷰 중 원문 내용이 존재하는 리뷰가 총 **10,000건** 조회되었습니다. 이 리뷰들은 **35개**의 고유 제품에 대해 **2,026개**의 고유 날짜에 걸쳐 작성되었습니다.  #### 상세 데이터  조회된 10,000건의 리뷰 중 상위 10건의 예"
+  },
+  {
+    "id": "RT-221",
+    "query": "스마트스토어 2024년 3분기 리뷰",
+    "table": "review_smartstore",
+    "category": "date_range",
+    "status": "OK",
+    "time": 36.9,
+    "answer_len": 1164,
+    "answer_preview": "### 📊 스마트스토어 2024년 3분기 SKIN1004 리뷰 분석 보고서  #### 요약  2024년 3분기(7월 1일 ~ 9월 30일) 동안 SKIN1004 스마트스토어에서는 총 **584건**의 리뷰가 접수되었으며, 이는 **30개**의 고유 제품에 대한 것입니다. 리뷰 내용은 주로 제품의 보습력, 진정 효과, 빠른 배송 등에 대한 긍정적인 피드백이 "
+  },
+  {
+    "id": "RT-222",
+    "query": "스마트스토어 리뷰 제품 카테고리별 분류",
+    "table": "review_smartstore",
+    "category": "review_count",
+    "status": "OK",
+    "time": 31.4,
+    "answer_len": 1626,
+    "answer_preview": "### 📊 SKIN1004 스마트스토어 리뷰 피부 고민별 분류 현황  #### 요약  사용자 질문은 '제품 카테고리별 분류'였으나, 제공된 데이터는 '피부 고민(skin_concern)'을 기준으로 분류되었습니다. SKIN1004 스마트스토어 리뷰 데이터 분석 결과, 총 **1,393**개의 고유한 피부 고민 조합이 확인되었으며, 이 중 가장 많은 리뷰 수"
+  },
+  {
+    "id": "RT-223",
+    "query": "스마트스토어 리뷰 최근 90건",
+    "table": "review_smartstore",
+    "category": "recent_n",
+    "status": "OK",
+    "time": 44.7,
+    "answer_len": 1122,
+    "answer_preview": "### 📊 스마트스토어 최근 90건 리뷰 분석 보고서  #### 요약  최근 조회된 스마트스토어 리뷰 **90건**은 2026년 3월 1일부터 3월 4일까지 작성되었습니다. 이 기간 동안 '센텔라 라이트 클렌징 오일'이 **12건**으로 가장 많은 리뷰를 기록했으며, 전반적으로 제품의 '촉촉함', '순함', '자극 없음' 등 보습 및 저자극 특성에 대한 긍"
+  },
+  {
+    "id": "RT-224",
+    "query": "스마트스토어 리뷰 브랜드 필터링 후 건수",
+    "table": "review_smartstore",
+    "category": "brand_review",
+    "status": "OK",
+    "time": 38.8,
+    "answer_len": 425,
+    "answer_preview": "### 📊 스마트스토어 SKIN1004 브랜드 리뷰 현황  #### 요약  SKIN1004 브랜드의 스마트스토어 리뷰는 총 **26,724건**으로 집계되었습니다. 이는 스마트스토어 채널에서 SKIN1004 브랜드에 대한 고객들의 활발한 관심과 피드백을 보여줍니다.  #### 분석 및 인사이트  *   스마트스토어에서 SKIN1004 브랜드에 대한 고객들의"
+  },
+  {
+    "id": "RT-225",
+    "query": "스마트스토어 Centella Cleansing Oil 월별 리뷰",
+    "table": "review_smartstore",
+    "category": "product_review",
+    "status": "OK",
+    "time": 37.0,
+    "answer_len": 843,
+    "answer_preview": "해당 조건의 데이터가 없습니다.  SQL에서 사용된 필터 조건 중 `product_name LIKE '%Centella%Cleansing_Oil%'`이 문제일 가능성이 높습니다. SQL의 `LIKE` 연산자에서 `_`는 **단일 문자 와일드카드**로 사용됩니다. 따라서 이 패턴은 'Cleansing'과 'Oil' 사이에 정확히 한 글자가 있는 경우에만 일치"
+  },
+  {
+    "id": "RT-226",
+    "query": "스마트스토어 리뷰 review_date 기준 분석",
+    "table": "review_smartstore",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 46.6,
+    "answer_len": 1539,
+    "answer_preview": "### 📊 스마트스토어 리뷰 일별 현황 (2015년 1월 23일 이후)  #### 요약  스마트스토어 리뷰 데이터는 **2015년 1월 23일부터 시작하여 총 2,530일**에 걸쳐 기록되었습니다. 각 날짜별 리뷰 수는 다양하게 분포하며, **59가지의 다른 일별 리뷰 수**가 관측되었습니다 (예: 1개, 2개, 3개 등). 현재 제공된 상세 데이터는 전체"
+  },
+  {
+    "id": "RT-227",
+    "query": "스마트스토어 전체 데이터 행 수 알려줘",
+    "table": "review_smartstore",
+    "category": "total_count",
+    "status": "OK",
+    "time": 32.2,
+    "answer_len": 361,
+    "answer_preview": "### 📊 스마트스토어 전체 데이터 행 수  #### 요약  스마트스토어의 전체 데이터 행 수는 **26,724**건입니다.  #### 분석 및 인사이트  *   현재 스마트스토어 데이터는 총 26,724개의 행을 포함하고 있어, 분석에 활용할 수 있는 충분한 양의 데이터를 확보하고 있습니다. *   이 데이터는 스마트스토어의 전반적인 활동 규모나 리뷰 수"
+  },
+  {
+    "id": "RT-228",
+    "query": "스마트스토어 최근 리뷰 중 긍정적인 것",
+    "table": "review_smartstore",
+    "category": "review_content",
+    "status": "OK",
+    "time": 46.4,
+    "answer_len": 2272,
+    "answer_preview": "### 📊 스마트스토어 최근 긍정 리뷰 분석 (2026년 3월 초 프리뷰)  #### 요약  제공된 최근 20건의 스마트스토어 리뷰 프리뷰를 분석한 결과, **총 18건의 긍정적인 리뷰**가 확인되었습니다. 주로 제품의 **보습력, 발림성, 순한 사용감, 피부 진정 효과**에 대한 만족도가 높게 나타났습니다. 가장 많이 언급된 제품은 **센텔라 라이트 클렌"
+  },
+  {
+    "id": "RT-229",
+    "query": "스마트스토어 2024년 5월 리뷰",
+    "table": "review_smartstore",
+    "category": "date_range",
+    "status": "WARN",
+    "time": 62.0,
+    "answer_len": 441,
+    "answer_preview": "# 데이터 조회 안내  안녕하세요. 요청하신 **스마트스토어 2024년 5월 리뷰** 데이터를 조회하지 못했습니다.  좀 더 구체적인 조건을 포함하여 질문해 주시면 정확한 데이터를 찾는 데 도움이 됩니다.  ---  ## 💡 이렇게 질문해 보세요  1. **\"스마트스토어 2024년 5월 마다가스카르 센텔라 앰플 리뷰 건수는?\"**    — 특정 제품을 지정"
+  },
+  {
+    "id": "RT-230",
+    "query": "스마트스토어 리뷰 수 기준 상위 제품",
+    "table": "review_smartstore",
+    "category": "top_reviewed",
+    "status": "OK",
+    "time": 45.4,
+    "answer_len": 1340,
+    "answer_preview": "### 📊 스마트스토어 리뷰 수 기준 상위 제품 분석  #### 요약  2026년 3월 7일 기준으로 스마트스토어에서 가장 많은 리뷰를 받은 제품은 **센텔라 앰플**로, 총 **7,555**개의 리뷰를 기록했습니다. 상위 20개 제품 중 절반 이상이 '센텔라' 라인 제품으로, 해당 라인의 높은 인기를 확인할 수 있습니다.  #### 상세 데이터  총 35"
+  },
+  {
+    "id": "RT-231",
+    "query": "스마트스토어 피부고민 보습 관련 리뷰",
+    "table": "review_smartstore",
+    "category": "skin_concern",
+    "status": "OK",
+    "time": 40.4,
+    "answer_len": 501,
+    "answer_preview": "`skin_concern` 필드에 '보습'이라는 값은 존재하지 않습니다.  **문제 조건 설명:** SQL에서 사용된 `skin_concern LIKE '%보습%'` 조건이 문제였습니다. `skin_concern` 필드는 주로 '건성', '민감성', '트러블', '지성' 등과 같이 사용자의 피부 '고민' 유형을 나타냅니다. '보습'은 피부 고민이라기보다는 "
+  },
+  {
+    "id": "RT-232",
+    "query": "스마트스토어 피부고민별 리뷰 수 차트",
+    "table": "review_smartstore",
+    "category": "skin_concern",
+    "status": "OK",
+    "time": 46.8,
+    "answer_len": 1966,
+    "answer_preview": "### 📊 스마트스토어 피부고민별 리뷰 현황 분석  #### 요약  스마트스토어 리뷰 데이터 분석 결과, '복합성, 트러블' 관련 피부 고민이 **145건**으로 가장 많은 리뷰 수를 기록했습니다. 전반적으로 '복합성' 피부 타입과 '트러블', '민감성', '잡티' 등의 복합적인 고민을 가진 사용자들이 활발하게 리뷰를 작성하는 경향을 보였습니다.  ####"
+  },
+  {
+    "id": "RT-233",
+    "query": "스마트스토어 피부고민 진정 관련 리뷰 보여줘",
+    "table": "review_smartstore",
+    "category": "skin_concern",
+    "status": "OK",
+    "time": 38.4,
+    "answer_len": 593,
+    "answer_preview": "요청하신 조건(SKIN1004 브랜드 및 피부고민 '진정')에 해당하는 스마트스토어 리뷰 데이터는 현재 조회되지 않습니다.  SQL 쿼리에서 사용된 필터 조건인 `brand` (`%SKIN1004%`)와 `skin_concern` (`%진정%`)의 조합에 해당하는 데이터가 현재 스마트스토어 리뷰 데이터에 없는 것으로 확인됩니다. 다음 중 하나가 원인일 수 "
+  },
+  {
+    "id": "RT-234",
+    "query": "스마트스토어 skin_concern 필드 값 종류",
+    "table": "review_smartstore",
+    "category": "skin_concern",
+    "status": "OK",
+    "time": 59.7,
+    "answer_len": 559,
+    "answer_preview": "# 스마트스토어 'skin_concern' 필드 값  'skin_concern' (피부 고민) 필드에 입력할 수 있는 값은 **고정된 목록이 아니라, 상품이 등록되는 카테고리에 따라 달라집니다.**  ---  ## 확인 방법  1. **판매 상품의 카테고리 ID 확정** — 예: '화장품/미용 > 베이스메이크업 > CC크림' → 카테고리 ID `500004"
+  },
+  {
+    "id": "RT-235",
+    "query": "스마트스토어 피부고민별 Centella Ampoule 리뷰",
+    "table": "review_smartstore",
+    "category": "skin_concern",
+    "status": "OK",
+    "time": 41.1,
+    "answer_len": 586,
+    "answer_preview": "해당 조건에 맞는 데이터가 존재하지 않습니다.  SQL에서 사용된 필터 조건 중 `product_name LIKE '%Centella%Ampoule%'`이 문제일 가능성이 높습니다. 데이터베이스에 저장된 실제 제품명이 'Centella Ampoule' 또는 이와 정확히 일치하는 영문 조합이 아닐 수 있습니다. 예를 들어, 제품명이 한글로 되어 있거나 다른 "
+  },
+  {
+    "id": "RT-236",
+    "query": "스마트스토어 리뷰 수집 날짜 기준 통계",
+    "table": "review_smartstore",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 30.2,
+    "answer_len": 1255,
+    "answer_preview": "### 📊 스마트스토어 리뷰 수집 날짜별 현황  #### 요약  ⚠️ 해당 데이터는 2025년 12월 10일부터 2026년 3월 4일까지의 수집 현황을 포함하고 있습니다 (오늘: 2026년 03월 07일). 제공된 데이터에 따르면, 해당 기간 동안 스마트스토어에서 총 **26,724개**의 리뷰가 수집되었습니다. 가장 많은 리뷰가 수집된 날은 **2026년"
+  },
+  {
+    "id": "RT-237",
+    "query": "스마트스토어 리뷰 제품별 최신 리뷰 요약",
+    "table": "review_smartstore",
+    "category": "review_content",
+    "status": "OK",
+    "time": 30.4,
+    "answer_len": 482,
+    "answer_preview": "# 데이터 조회 안내  안녕하세요. 요청하신 **스마트스토어 제품별 최신 리뷰 요약** 데이터를 조회하지 못했습니다.  좀 더 정확한 결과를 위해 **조건을 구체적으로 지정**해 주시면 다시 조회를 시도해 보겠습니다.  ---  ## 💡 이렇게 질문해 보세요  1. **\"2025년 6월 스마트스토어에서 마다가스카르 센텔라 토닝 토너의 최신 리뷰를 요약해 줘"
+  },
+  {
+    "id": "RT-238",
+    "query": "스마트스토어 2024년 상반기 리뷰 건수",
+    "table": "review_smartstore",
+    "category": "date_range",
+    "status": "OK",
+    "time": 42.4,
+    "answer_len": 543,
+    "answer_preview": "# 데이터 조회 안내  안녕하세요. 요청하신 **스마트스토어 2024년 상반기 리뷰 건수** 데이터를 조회하지 못했습니다.  좀 더 정확한 결과를 위해 **조건을 구체적으로 지정**해 주시면 다시 조회를 시도해 볼 수 있습니다.  ---  ## 💡 이렇게 질문을 바꿔 보세요  | 구체화 요소 | 예시 | |------------|------| | **제품명"
+  },
+  {
+    "id": "RT-239",
+    "query": "스마트스토어 리뷰 데이터 전체 요약 통계",
+    "table": "review_smartstore",
+    "category": "total_count",
+    "status": "OK",
+    "time": 36.4,
+    "answer_len": 661,
+    "answer_preview": "### 📊 스마트스토어 리뷰 데이터 전체 요약 통계  #### 요약  현재까지 수집된 스마트스토어 리뷰 데이터는 총 **26,724**건이며, 이는 **35**개의 고유 제품에 대한 리뷰입니다. 모든 리뷰는 단 **1**개의 브랜드에 대한 것이며, 평균 감성 점수는 **0.63**으로 전반적으로 긍정적인 평가를 받고 있음을 나타냅니다.  #### 분석 및 "
+  },
+  {
+    "id": "RT-240",
+    "query": "스마트스토어 최근 리뷰 전체 보여줘",
+    "table": "review_smartstore",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 54.0,
+    "answer_len": 1863,
+    "answer_preview": "### 📊 SKIN1004 스마트스토어 최근 리뷰 현황  #### 요약  오늘(2026년 03월 07일) 기준으로, SKIN1004 스마트스토어의 **2026년 03월 01일부터 03월 04일까지의 최근 리뷰 총 10,000건**을 분석했습니다. 이 기간 동안 **35개**의 고유 제품에 대한 리뷰가 작성되었으며, 가장 최근 리뷰는 2026년 03월 04일"
+  },
+  {
+    "id": "RT-241",
+    "query": "스마트스토어 리뷰 중 Madagascar Centella Ampoule 비율",
+    "table": "review_smartstore",
+    "category": "product_review",
+    "status": "OK",
+    "time": 45.7,
+    "answer_len": 589,
+    "answer_preview": "### 📊 스마트스토어 리뷰 내 마다가스카르 센텔라 앰플 언급 비율 분석  #### 요약  오늘 날짜(2026년 03월 07일) 기준, SKIN1004 스마트스토어 전체 리뷰 중 'Madagascar Centella Ampoule' 제품이 명시적으로 언급된 리뷰의 비율은 **0.0%**입니다. 이는 현재 조회된 데이터에서 해당 제품명으로 작성된 리뷰가 없음"
+  },
+  {
+    "id": "RT-242",
+    "query": "스마트스토어 리뷰 날짜별 건수 차트",
+    "table": "review_smartstore",
+    "category": "monthly_trend",
+    "status": "WARN",
+    "time": 63.9,
+    "answer_len": 1764,
+    "answer_preview": "### 📊 SKIN1004 스마트스토어 날짜별 리뷰 건수 분석  #### 요약  SKIN1004 브랜드의 스마트스토어 날짜별 리뷰 건수를 분석한 결과, 2015년 1월 23일부터 시작하여 총 **2,530일**에 걸친 리뷰 데이터가 확인되었습니다. 초기에는 일별 리뷰 건수가 1~3건으로 낮은 수준을 보였습니다. ⚠️ 현재 데이터는 2015년 1월 23일부터"
+  },
+  {
+    "id": "RT-243",
+    "query": "스마트스토어 Centella Ampoule 관련 리뷰 전부",
+    "table": "review_smartstore",
+    "category": "product_review",
+    "status": "OK",
+    "time": 27.3,
+    "answer_len": 412,
+    "answer_preview": "해당 조건의 데이터가 없습니다.  SQL에서 `product_name LIKE '%Centella%Ampoule%'` 필터 조건에 문제가 있을 수 있습니다. 데이터베이스에 제품명이 한글로 저장되어 있거나, 정확한 제품명과 다를 수 있습니다. 유사한 제품명으로는 '마다가스카르 센텔라 앰플'이 있습니다.  비슷한 데이터를 조회할 수 있는 대안 질문은 다음과 같"
+  },
+  {
+    "id": "RT-244",
+    "query": "스마트스토어 최근 리뷰 200건 데이터",
+    "table": "review_smartstore",
+    "category": "recent_n",
+    "status": "WARN",
+    "time": 75.3,
+    "answer_len": 1430,
+    "answer_preview": "### 📊 스마트스토어 SKIN1004 최근 리뷰 200건 분석  #### 요약  SKIN1004 스마트스토어의 **최근 리뷰 200건**에 대한 분석 결과입니다. 해당 리뷰는 **2026년 02월 26일부터 2026년 03월 04일**까지 작성되었으며, **총 28개의 고유 제품**에 대한 내용입니다. 이 기간 동안 활발한 리뷰 활동이 있었으며, 다양한 "
+  },
+  {
+    "id": "RT-245",
+    "query": "스마트스토어 리뷰 제품별 점유율",
+    "table": "review_smartstore",
+    "category": "review_count",
+    "status": "OK",
+    "time": 47.3,
+    "answer_len": 2197,
+    "answer_preview": "### 📊 SKIN1004 스마트스토어 제품별 리뷰 점유율 분석  #### 요약  SKIN1004 스마트스토어 리뷰 데이터 분석 결과, '센텔라 앰플'이 전체 리뷰의 **28.27%**를 차지하며 압도적인 1위를 기록했습니다. 상위 3개 제품('센텔라 앰플', '센텔라 앰플 폼', '센텔라 라이트 클렌징 오일')이 전체 리뷰의 약 **44.68%**를 점유"
+  },
+  {
+    "id": "RT-246",
+    "query": "스마트스토어 2024년 2분기 리뷰 수",
+    "table": "review_smartstore",
+    "category": "date_range",
+    "status": "OK",
+    "time": 28.5,
+    "answer_len": 486,
+    "answer_preview": "### 📊 스마트스토어 2024년 2분기 리뷰 현황  #### 요약  2024년 2분기 동안 스마트스토어에서 발생한 총 리뷰 수는 **814건**으로 집계되었습니다. 이는 해당 기간 동안 고객들의 활발한 피드백 활동을 보여줍니다.  #### 분석 및 인사이트  *   2024년 2분기 스마트스토어 리뷰 수는 총 814건으로 확인되었습니다. *   이 수치는"
+  },
+  {
+    "id": "RT-247",
+    "query": "스마트스토어 리뷰 최근 순 정렬 보여줘",
+    "table": "review_smartstore",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 47.5,
+    "answer_len": 3191,
+    "answer_preview": "### 📊 SKIN1004 스마트스토어 최신 리뷰 현황  #### 요약  오늘 날짜(2026년 03월 07일) 기준으로 SKIN1004 스마트스토어에서 **총 10,000건**의 최신 리뷰가 조회되었습니다. 이 리뷰들은 **2026년 03월 01일부터 2026년 03월 04일**까지 작성된 것으로, 가장 최근 리뷰는 **2026년 03월 04일**에 작성되"
+  },
+  {
+    "id": "RT-248",
+    "query": "스마트스토어 Tone Brightening Serum 리뷰 건수",
+    "table": "review_smartstore",
+    "category": "product_review",
+    "status": "OK",
+    "time": 45.0,
+    "answer_len": 500,
+    "answer_preview": "안녕하세요. 요청하신 **스마트스토어 Tone Brightening Serum 리뷰 건수** 데이터를 조회하지 못했습니다.  좀 더 정확한 결과를 위해 **조건을 구체적으로** 지정해 주시면 다시 조회해 드리겠습니다.  ---  **💡 이렇게 질문해 보시면 좋습니다**  1. **\"2024년 1월~6월 네이버 스마트스토어 Tone Brightening Se"
+  },
+  {
+    "id": "RT-249",
+    "query": "스마트스토어 리뷰 수 전년 대비 변화",
+    "table": "review_smartstore",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 37.1,
+    "answer_len": 750,
+    "answer_preview": "### 📊 스마트스토어 리뷰 수 전년 대비 변화 분석  #### 요약  ⚠️ 2026년은 현재 1월 1일부터 3월 7일까지의 데이터만 존재합니다 (오늘: 2026년 03월 07일). 스마트스토어 리뷰 수는 2025년 한 해 동안 **6,730건**을 기록했습니다. 반면, 2026년은 현재 3월 7일까지 **2,049건**의 리뷰가 집계되었습니다. 2026년"
+  },
+  {
+    "id": "RT-250",
+    "query": "스마트스토어 리뷰 한국어 번역 최근 20건",
+    "table": "review_smartstore",
+    "category": "review_content",
+    "status": "OK",
+    "time": 49.9,
+    "answer_len": 108560,
+    "answer_preview": "### 📊 스마트스토어 SKIN1004 브랜드 최근 리뷰 20건  #### 요약  SKIN1004 브랜드의 스마트스토어 최근 리뷰 **20건**을 분석한 결과, 2026년 3월 3일부터 3월 4일까지의 리뷰가 확인되었습니다. 주요 제품으로는 '히알루시카 워터핏 선 세럼', '센텔라 라이트 클렌징 오일', '센텔라 앰플 폼', '센텔라 앰플' 등이 있으며, "
+  },
+  {
+    "id": "RT-251",
+    "query": "스마트스토어 리뷰 데이터 행 건수",
+    "table": "review_smartstore",
+    "category": "total_count",
+    "status": "OK",
+    "time": 33.6,
+    "answer_len": 366,
+    "answer_preview": "### 📊 스마트스토어 리뷰 데이터 총 건수  #### 요약  2026년 03월 07일 기준으로 SKIN1004 스마트스토어에 축적된 리뷰 데이터의 총 행 건수는 **26,724건**입니다.  #### 분석 및 인사이트  *   현재 스마트스토어에 누적된 리뷰 데이터의 전체 규모를 파악할 수 있습니다. *   이 데이터는 고객 피드백 분석, 제품 개선점 도"
+  },
+  {
+    "id": "RT-252",
+    "query": "스마트스토어 2024년 1월 리뷰 데이터",
+    "table": "review_smartstore",
+    "category": "date_range",
+    "status": "OK",
+    "time": 57.8,
+    "answer_len": 483,
+    "answer_preview": "# 데이터 조회 안내  안녕하세요. 요청하신 **스마트스토어 2024년 1월 리뷰 데이터**를 현재 조회하지 못했습니다.  ---  ## 💡 더 구체적으로 질문해 보시겠어요?  조건을 좀 더 명확히 지정해 주시면 정확한 데이터를 찾는 데 도움이 됩니다. 아래 항목들을 포함해 보세요:  - **제품명** (예: 마다가스카르 센텔라 토너 등) - **데이터 유"
+  },
+  {
+    "id": "RT-253",
+    "query": "스마트스토어 리뷰 가장 많은 월은?",
+    "table": "review_smartstore",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 28.7,
+    "answer_len": 818,
+    "answer_preview": "### 📊 스마트스토어 리뷰가 가장 많았던 월 분석  #### 요약  스마트스토어 리뷰가 가장 많았던 월은 **2022년 5월**로, 총 **1,093개**의 리뷰가 작성되었습니다. 이는 전체 데이터 기간 중 가장 높은 수치입니다. 데이터는 2015년 10월부터 2026년 2월까지의 리뷰를 포함합니다 (오늘 날짜 2026년 3월 7일 기준).  #### 상"
+  },
+  {
+    "id": "RT-254",
+    "query": "스마트스토어 제품별 리뷰 수 차트 그려줘",
+    "table": "review_smartstore",
+    "category": "review_count",
+    "status": "OK",
+    "time": 51.9,
+    "answer_len": 1126,
+    "answer_preview": "### 📊 SKIN1004 스마트스토어 제품별 리뷰 수 분석  #### 요약  SKIN1004 스마트스토어에서 가장 많은 리뷰를 받은 제품은 **센텔라 앰플**로, 총 **7,555**개의 리뷰를 기록하며 압도적인 1위를 차지했습니다. 상위 35개 제품 중 `센텔라 앰플`, `센텔라 앰플 폼`, `센텔라 라이트 클렌징 오일`이 가장 높은 리뷰 수를 보이며 "
+  },
+  {
+    "id": "RT-255",
+    "query": "스마트스토어 최근 수집 리뷰 날짜",
+    "table": "review_smartstore",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 27.1,
+    "answer_len": 397,
+    "answer_preview": "안녕하세요. 요청하신 **스마트스토어 최근 수집 리뷰 날짜** 관련 데이터를 조회하지 못했습니다.  좀 더 정확한 결과를 위해 **질문을 구체적으로** 작성해 주시면 다시 조회해 드리겠습니다. 아래 예시를 참고해 주세요.  ---  **💡 질문 예시**  1. **\"스마트스토어에서 마다가스카르 센텔라 라인 제품의 가장 최근 수집된 리뷰 날짜는 언제인가요?\""
+  },
+  {
+    "id": "RT-256",
+    "query": "스마트스토어 Centella 관련 제품 리뷰 합계",
+    "table": "review_smartstore",
+    "category": "product_review",
+    "status": "OK",
+    "time": 54.5,
+    "answer_len": 434,
+    "answer_preview": "요청하신 조건에 해당하는 스마트스토어 Centella 관련 제품 리뷰 데이터가 없습니다.  SQL에서 사용된 필터 조건 중 `product_name LIKE '%Centella%'`가 문제인 것으로 보입니다. `product_name` 필드에 'Centella'라는 정확한 영문 단어가 포함된 제품명이 없을 수 있습니다. 대신 한국어 제품명이나 '시카', '"
+  },
+  {
+    "id": "RT-257",
+    "query": "스마트스토어 리뷰 월 단위 집계",
+    "table": "review_smartstore",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 42.9,
+    "answer_len": 1663,
+    "answer_preview": "### 📊 스마트스토어 월별 리뷰 현황  #### 요약  ⚠️ 2026년 데이터는 아직 집계되지 않았으며, 현재 2015년 1월부터 2025년 12월까지 **총 132개월**의 스마트스토어 리뷰 데이터가 분석되었습니다. 제공된 프리뷰 데이터(2015년 1월 ~ 2016년 8월)에 따르면, 2016년 4월에 **29건**의 리뷰가 발생하여 해당 기간 중 가장"
+  },
+  {
+    "id": "RT-258",
+    "query": "스마트스토어 리뷰 원문 내용 최신 5건",
+    "table": "review_smartstore",
+    "category": "review_content",
+    "status": "OK",
+    "time": 34.5,
+    "answer_len": 1092,
+    "answer_preview": "### 📊 스마트스토어 최신 리뷰 원문 내용 (5건)  #### 요약  2026년 3월 3일과 3월 4일에 작성된 스마트스토어 최신 리뷰 **5건**이 조회되었습니다. 대부분의 리뷰는 제품의 촉촉함, 유분감 없음, 사용 편의성에 대해 긍정적인 평가를 담고 있었으나, 한 건의 리뷰에서는 사은품 구성에 대한 아쉬움이 언급되었습니다.  #### 상세 데이터 | "
+  },
+  {
+    "id": "RT-259",
+    "query": "스마트스토어 리뷰 2024년 4월 데이터",
+    "table": "review_smartstore",
+    "category": "date_range",
+    "status": "WARN",
+    "time": 62.3,
+    "answer_len": 761,
+    "answer_preview": "### 📊 2024년 4월 스마트스토어 리뷰 현황 (4월 22일 ~ 30일 데이터)  #### 요약  2024년 4월 스마트스토어 리뷰 데이터는 **총 293건**이 조회되었습니다. 이 데이터는 2024년 4월 22일부터 4월 30일까지의 리뷰를 포함하며, **30가지의 고유 제품**에 대한 리뷰가 확인되었습니다. 모든 리뷰는 SKIN1004 브랜드의 스마"
+  },
+  {
+    "id": "RT-260",
+    "query": "스마트스토어 SKIN1004 리뷰 수 총합",
+    "table": "review_smartstore",
+    "category": "brand_review",
+    "status": "OK",
+    "time": 23.1,
+    "answer_len": 500,
+    "answer_preview": "### 📊 SKIN1004 스마트스토어 총 리뷰 수 현황  #### 요약  SKIN1004 스마트스토어의 총 리뷰 수는 현재까지 **26,724개**로 집계되었습니다. 이는 고객들의 활발한 참여와 제품에 대한 높은 관심을 보여주는 중요한 지표입니다.  #### 분석 및 인사이트  *   **활발한 고객 참여:** 26,724개의 리뷰 수는 SKIN1004 "
+  },
+  {
+    "id": "RT-261",
+    "query": "스마트스토어 피부고민 노화 관련 리뷰",
+    "table": "review_smartstore",
+    "category": "skin_concern",
+    "status": "OK",
+    "time": 35.9,
+    "answer_len": 405,
+    "answer_preview": "해당 조건에 맞는 데이터가 존재하지 않습니다. 입력하신 '노화'는 skin_concern 필드의 유효한 값으로 존재하지 않습니다.  **문제 조건:** `skin_concern LIKE '%노화%'` `skin_concern` 필드에는 '노화'라는 직접적인 키워드보다는 '주름', '탄력', '피부결', '미백' 등과 같이 세분화된 피부 고민 유형이 저장되어"
+  },
+  {
+    "id": "RT-262",
+    "query": "스마트스토어 피부고민별 Soothing Cream 리뷰",
+    "table": "review_smartstore",
+    "category": "skin_concern",
+    "status": "OK",
+    "time": 37.4,
+    "answer_len": 695,
+    "answer_preview": "해당 조건의 데이터가 없습니다.  SQL에서 사용된 필터 조건 중 다음 부분이 문제일 수 있습니다:  *   **브랜드 (brand):** `SKIN1004` 값이 데이터에 존재하지 않거나, 대소문자 또는 정확한 명칭이 다를 수 있습니다. (예: 'skin1004', 'Skin1004', 'SKIN1004 공식몰' 등) *   **제품명 (product_n"
+  },
+  {
+    "id": "RT-263",
+    "query": "스마트스토어 피부고민 가려움 리뷰 수",
+    "table": "review_smartstore",
+    "category": "skin_concern",
+    "status": "OK",
+    "time": 47.8,
+    "answer_len": 518,
+    "answer_preview": "### 📊 스마트스토어 피부고민 '가려움' 관련 리뷰 현황  #### 요약  2026년 3월 7일 기준으로 스마트스토어 내 피부고민 '가려움'으로 분류된 리뷰는 **0건**입니다. 현재 데이터셋에서는 해당 조건에 맞는 리뷰가 발견되지 않았습니다.  #### 분석 및 인사이트  *   현재 조회된 데이터에 따르면, 스마트스토어 리뷰 중 '가려움'을 피부고민으"
+  },
+  {
+    "id": "RT-264",
+    "query": "스마트스토어 skin_concern TOP 10",
+    "table": "review_smartstore",
+    "category": "skin_concern",
+    "status": "OK",
+    "time": 46.6,
+    "answer_len": 1105,
+    "answer_preview": "### 📊 스마트스토어 고객 피부 고민 TOP 10 분석  #### 요약  스마트스토어 고객들의 피부 고민을 분석한 결과, **'복합성, 트러블'**이 총 **145건**으로 가장 많은 비중을 차지하며 1위에 올랐습니다. 상위 3위까지 모두 '복합성' 피부 타입이 포함된 조합으로 나타나, 복합성 피부를 가진 고객들의 다양한 고민이 두드러지는 것을 확인할 수"
+  },
+  {
+    "id": "RT-265",
+    "query": "스마트스토어 피부고민별 월별 리뷰 건수",
+    "table": "review_smartstore",
+    "category": "skin_concern",
+    "status": "OK",
+    "time": 30.6,
+    "answer_len": 494,
+    "answer_preview": "안녕하세요! 요청하신 **스마트스토어 피부고민별 월별 리뷰 건수** 데이터를 조회하지 못했습니다.  좀 더 구체적인 조건을 추가해 주시면 정확한 데이터를 찾는 데 도움이 됩니다. 아래 예시를 참고하여 질문을 다시 작성해 보시겠어요?  ---  **💡 질문 예시**  1. **\"2024년 1월~6월 스마트스토어에서 피부고민별(모공, 진정, 보습 등) 월별 리"
+  },
+  {
+    "id": "RT-266",
+    "query": "스마트스토어 리뷰 가장 최근 수집된 제품",
+    "table": "review_smartstore",
+    "category": "recent_reviews",
+    "status": "WARN",
+    "time": 63.4,
+    "answer_len": 1506,
+    "answer_preview": "### 📊 SKIN1004 스마트스토어 리뷰 최신 수집 제품 현황  #### 요약  SKIN1004 스마트스토어 리뷰는 **2026년 03월 04일**까지 수집된 데이터가 가장 최신입니다. 현재(2026년 03월 07일) 기준으로 3일 전까지의 리뷰 데이터가 확인되며, 해당 날짜에 **최소 10가지**의 다양한 제품에 대한 리뷰가 수집되었습니다.  ####"
+  },
+  {
+    "id": "RT-267",
+    "query": "스마트스토어 리뷰 제품명별 건수 정리",
+    "table": "review_smartstore",
+    "category": "review_count",
+    "status": "OK",
+    "time": 29.3,
+    "answer_len": 1307,
+    "answer_preview": "### 📊 스마트스토어 제품별 리뷰 현황 분석  #### 요약  스마트스토어의 총 35개 제품 중 상위 20개 제품의 총 리뷰 수는 **23,381건**입니다. 이 중 '센텔라 앰플'이 **7,555건**으로 가장 많은 리뷰를 기록하며 압도적인 인기를 보였습니다.  #### 상세 데이터 | 제품명 | 리뷰 건수 | | :--------------------"
+  },
+  {
+    "id": "RT-268",
+    "query": "스마트스토어 Centella Soothing Cream 최근 리뷰 내용",
+    "table": "review_smartstore",
+    "category": "review_content",
+    "status": "OK",
+    "time": 33.6,
+    "answer_len": 351,
+    "answer_preview": "해당 조건에 맞는 리뷰 데이터가 없습니다.  SQL에서 사용된 제품명 필터 조건인 `product_name LIKE '%Centella%Soothing%Cream%'`이 데이터베이스 내 실제 제품명과 일치하지 않을 수 있습니다. 데이터베이스에는 '마다가스카르 센텔라 수딩 크림' 또는 '센텔라 수딩 크림'과 같이 다르게 저장되어 있을 가능성이 있습니다.  비"
+  },
+  {
+    "id": "RT-269",
+    "query": "스마트스토어 리뷰 2024년 3월 건수",
+    "table": "review_smartstore",
+    "category": "date_range",
+    "status": "OK",
+    "time": 40.4,
+    "answer_len": 398,
+    "answer_preview": "# 데이터 조회 안내  안녕하세요. 요청하신 **스마트스토어 리뷰 2024년 3월 건수** 데이터를 조회하지 못했습니다.  좀 더 정확한 결과를 위해 아래와 같이 **조건을 구체적으로** 지정해 주시면 다시 조회를 시도해 보겠습니다.  ---  ### 💡 이렇게 질문해 보세요  1. **\"2024년 3월 스마트스토어에서 마다가스카르 센텔라 라인 제품의 리뷰"
+  },
+  {
+    "id": "RT-270",
+    "query": "스마트스토어 리뷰 월별 제품별 크로스탭",
+    "table": "review_smartstore",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 34.4,
+    "answer_len": 2043,
+    "answer_preview": "### 📊 SKIN1004 스마트스토어 월별 제품별 리뷰 현황 분석  #### 요약  본 보고서는 **2015년 1월부터 2025년 12월까지**의 SKIN1004 스마트스토어 리뷰 데이터를 분석한 결과입니다. 총 **35개**의 고유 제품에 대한 월별 리뷰 수를 집계했으며, 전체 데이터는 **1662개**의 월별-제품별 리뷰 기록을 포함합니다. 데이터는 "
+  },
+  {
+    "id": "RT-271",
+    "query": "스마트스토어 리뷰 전체 데이터 개수",
+    "table": "review_smartstore",
+    "category": "total_count",
+    "status": "OK",
+    "time": 24.0,
+    "answer_len": 289,
+    "answer_preview": "### 📊 스마트스토어 전체 리뷰 데이터 개수  #### 요약  현재 스마트스토어에 등록된 전체 리뷰 데이터는 총 **26,724개**입니다.  #### 분석 및 인사이트  *   스마트스토어에 축적된 총 리뷰 데이터의 규모를 파악할 수 있습니다. *   `> 해당 데이터는 향후 스마트스토어 리뷰의 상세 분석(예: 긍정/부정 리뷰 비율, 특정 키워드 언급 "
+  },
+  {
+    "id": "RT-272",
+    "query": "스마트스토어 리뷰에서 Cleansing 키워드 검색",
+    "table": "review_smartstore",
+    "category": "product_review",
+    "status": "WARN",
+    "time": 75.2,
+    "answer_len": 2431,
+    "answer_preview": "## 📊 SKIN1004 스마트스토어 클렌징 관련 리뷰 분석 보고서  #### 요약  SKIN1004 스마트스토어에서 '클렌징' 키워드로 검색된 리뷰는 총 **1,052건**입니다. 이 리뷰들은 2025년 6월 4일부터 2026년 3월 4일까지의 기간에 걸쳐 작성되었으며, **30개**의 고유한 제품에서 언급되었습니다. 특히 '센텔라 라이트 클렌징 오일'과"
+  },
+  {
+    "id": "RT-273",
+    "query": "스마트스토어 최근 리뷰 내용 한국어로 보여줘",
+    "table": "review_smartstore",
+    "category": "review_content",
+    "status": "OK",
+    "time": 35.8,
+    "answer_len": 2913,
+    "answer_preview": "### 📊 스마트스토어 최근 SKIN1004 제품 리뷰 분석  #### 요약  2026년 3월 2일부터 3월 4일까지의 스마트스토어 SKIN1004 제품 리뷰 **총 50건**이 조회되었습니다. 가장 최근 리뷰는 **2026년 3월 4일**에 작성되었으며, 전반적으로 제품의 **촉촉함, 순한 사용감, 좋은 발림성**에 대한 긍정적인 평가가 많았습니다. 일부"
+  },
+  {
+    "id": "RT-274",
+    "query": "스마트스토어 리뷰 TOP 10 제품",
+    "table": "review_smartstore",
+    "category": "top_reviewed",
+    "status": "OK",
+    "time": 25.2,
+    "answer_len": 1141,
+    "answer_preview": "### 📊 스마트스토어 SKIN1004 제품별 리뷰 TOP 10  #### 요약  SKIN1004 스마트스토어에서 가장 많은 리뷰를 받은 제품은 **센텔라 앰플**로, 총 **7,555개**의 리뷰를 기록했습니다. 이는 2위 제품인 센텔라 앰플 폼(2,648개)보다 약 2.8배 많은 수치입니다. 상위 10개 제품 중 7개가 '센텔라' 라인 제품으로, 해당 "
+  },
+  {
+    "id": "RT-275",
+    "query": "스마트스토어 2024년 2월 리뷰",
+    "table": "review_smartstore",
+    "category": "date_range",
+    "status": "OK",
+    "time": 42.4,
+    "answer_len": 1215,
+    "answer_preview": "### 📊 SKIN1004 스마트스토어 2024년 2월 리뷰 분석  #### 요약  2024년 2월 한 달간 SKIN1004 스마트스토어에서 총 **270건**의 리뷰가 접수되었으며, 이는 **31개**의 고유 제품에 대한 것입니다. 리뷰는 주로 **촉촉함, 순함, 좋은 발림성** 등 긍정적인 사용 경험에 초점을 맞추고 있으며, 특히 '센텔라 라이트 클렌징"
+  },
+  {
+    "id": "RT-276",
+    "query": "스마트스토어 리뷰 collected_date 별 건수",
+    "table": "review_smartstore",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 32.6,
+    "answer_len": 1384,
+    "answer_preview": "### 📊 SKIN1004 스마트스토어 리뷰 수집일자별 현황  #### 요약  SKIN1004 스마트스토어 리뷰 데이터는 2025년 12월 10일부터 2026년 3월 4일까지의 수집 기록을 보여줍니다. 특히 **2026년 1월 26일에는 19,718건**, **2025년 12월 10일에는 5,855건**으로 이례적으로 높은 리뷰 수집이 확인되었으며, 202"
+  },
+  {
+    "id": "RT-277",
+    "query": "스마트스토어 리뷰 최근 것 review_date 기준",
+    "table": "review_smartstore",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 47.9,
+    "answer_len": 2970,
+    "answer_preview": "### 📊 SKIN1004 스마트스토어 최근 리뷰 분석  #### 요약  2026년 03월 07일 기준으로 조회된 SKIN1004 스마트스토어의 최근 리뷰 **50건**은 2026년 03월 02일부터 **2026년 03월 04일**까지 작성된 리뷰들입니다. 가장 최근 리뷰는 03월 04일에 작성되었으며, '센텔라 라이트 클렌징 오일', '센텔라 수딩 크림'"
+  },
+  {
+    "id": "RT-278",
+    "query": "스마트스토어 리뷰 채널 목록 알려줘",
+    "table": "review_smartstore",
+    "category": "review_count",
+    "status": "OK",
+    "time": 23.7,
+    "answer_len": 353,
+    "answer_preview": "### 📊 스마트스토어 리뷰 채널 목록  #### 요약  스마트스토어 리뷰 데이터에서 확인된 채널은 **Smartstore**입니다. 이는 스마트스토어 리뷰가 단일 채널을 통해 관리되고 있음을 나타냅니다.  #### 분석 및 인사이트  *   스마트스토어 리뷰 데이터는 'Smartstore'라는 단일 채널로 명확하게 분류되어 관리되고 있습니다. *   `현"
+  },
+  {
+    "id": "RT-279",
+    "query": "스마트스토어 리뷰 제품별 번역 리뷰 보여줘",
+    "table": "review_smartstore",
+    "category": "review_content",
+    "status": "OK",
+    "time": 44.7,
+    "answer_len": 2881,
+    "answer_preview": "### 📊 SKIN1004 스마트스토어 제품별 번역 리뷰 현황  #### 요약  SKIN1004 브랜드의 스마트스토어 리뷰 중 번역된 한국어 리뷰 **10,000건**을 제품별로 분석한 결과입니다. 총 **6가지** 제품에 대한 리뷰가 확인되었으며, 현재 프리뷰 데이터에서는 '나이아신아마이드 부스팅 샷 앰플'에 대한 상세 리뷰가 가장 많이 포함되어 있습니다"
+  },
+  {
+    "id": "RT-280",
+    "query": "스마트스토어 리뷰 2025년 월별 누적",
+    "table": "review_smartstore",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 33.8,
+    "answer_len": 1302,
+    "answer_preview": "### 📊 2025년 스마트스토어 월별 리뷰 현황 및 누적 추이  #### 요약  2025년 한 해 동안 스마트스토어 리뷰는 총 **6,730건** 발생했습니다. 월별 리뷰 수는 **7월에 1,016건**으로 가장 많았으며, **4월에 233건**으로 가장 적었습니다. 본 보고서는 2025년 월별 리뷰 수와 함께 누적 리뷰 추이를 분석합니다.  #### 상"
+  },
+  {
+    "id": "RT-281",
+    "query": "스마트스토어 전체 리뷰 현황 요약",
+    "table": "review_smartstore",
+    "category": "total_count",
+    "status": "OK",
+    "time": 34.5,
+    "answer_len": 1225,
+    "answer_preview": "### 📊 SKIN1004 스마트스토어 리뷰 현황 (피부 고민별)  #### 요약  SKIN1004 스마트스토어 리뷰 데이터를 분석한 결과, 총 **1,393가지**의 다양한 피부 고민 조합이 확인되었습니다. 이 중 '복합성, 트러블' 관련 리뷰가 **145건**으로 가장 많았으며, 다음으로 '복합성' 단독 리뷰가 **132건**, '복합성, 민감성' 리뷰"
+  },
+  {
+    "id": "RT-282",
+    "query": "스마트스토어 리뷰 최근 150건",
+    "table": "review_smartstore",
+    "category": "recent_n",
+    "status": "OK",
+    "time": 54.2,
+    "answer_len": 1027,
+    "answer_preview": "### 📊 SKIN1004 스마트스토어 최근 리뷰 150건 분석  #### 요약  SKIN1004 스마트스토어의 최근 리뷰 **150건**을 분석한 결과, `2026년 2월 27일`부터 `2026년 3월 4일`까지의 리뷰가 수집되었습니다. 이 리뷰들은 총 **27개**의 다양한 제품에 대한 고객들의 활발한 피드백을 담고 있습니다.  #### 상세 데이터  "
+  },
+  {
+    "id": "RT-283",
+    "query": "스마트스토어 Madagascar Centella Ampoule 리뷰 전체 건수",
+    "table": "review_smartstore",
+    "category": "product_review",
+    "status": "OK",
+    "time": 47.4,
+    "answer_len": 419,
+    "answer_preview": "안녕하세요. 요청하신 **스마트스토어 Madagascar Centella Ampoule 리뷰 전체 건수** 데이터를 조회하지 못했습니다.  좀 더 정확한 결과를 위해 **조건을 구체적으로 지정**해 주시면 다시 조회를 시도해 보겠습니다.  ---  **💡 질문 예시**  1. **\"2024년 1월~12월 스마트스토어 Madagascar Centella Am"
+  },
+  {
+    "id": "RT-284",
+    "query": "스마트스토어 리뷰 제품별 최다 리뷰 월",
+    "table": "review_smartstore",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 47.8,
+    "answer_len": 2011,
+    "answer_preview": "### 📊 스마트스토어 제품별 최다 리뷰 월 분석  #### 요약  스마트스토어에 등록된 **총 35개 제품**에 대해 제품별 최다 리뷰가 발생한 월을 분석한 결과, '센텔라 앰플'이 **2026년 1월에 600개**의 리뷰를 기록하며 단일 월 기준 가장 많은 리뷰 수를 보였습니다. 이 외에도 '센텔라 앰플 폼'은 2022년 1월에 **231개**, '레티"
+  },
+  {
+    "id": "RT-285",
+    "query": "스마트스토어 리뷰 데이터 최초 수집일",
+    "table": "review_smartstore",
+    "category": "date_range",
+    "status": "OK",
+    "time": 28.8,
+    "answer_len": 451,
+    "answer_preview": "### 📊 스마트스토어 리뷰 데이터 최초 수집일  #### 요약  스마트스토어 리뷰 데이터의 최초 수집일은 **2025년 12월 10일**입니다. 이는 현재(2026년 3월 7일)로부터 약 3개월 전부터 리뷰 데이터가 수집되기 시작했음을 의미합니다.  #### 분석 및 인사이트  *   스마트스토어 리뷰 데이터 수집은 **2025년 12월 10일**부터 시"
+  },
+  {
+    "id": "RT-286",
+    "query": "스마트스토어에서 리뷰 수 증가 추세야?",
+    "table": "review_smartstore",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 59.9,
+    "answer_len": 3919,
+    "answer_preview": "### 📊 스마트스토어 월별 리뷰 수 추이 분석 (2019년 1월 ~ 2026년 3월)  #### 요약  스마트스토어의 월별 리뷰 수는 2019년 초 낮은 수치에서 시작하여 **전반적으로 꾸준한 증가 추세**를 보이고 있습니다. 특히 2023년 이후부터는 월별 리뷰 수가 크게 증가하여, 2025년 12월에는 **200건**으로 최고치를 기록했습니다. 202"
+  },
+  {
+    "id": "RT-287",
+    "query": "스마트스토어 리뷰 최근 데이터 요약해줘",
+    "table": "review_smartstore",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 48.1,
+    "answer_len": 1469,
+    "answer_preview": "### 📊 SKIN1004 스마트스토어 최근 리뷰 요약 보고서  #### 요약  SKIN1004 스마트스토어의 최근 **50개** 리뷰(2026년 3월 2일 ~ 3월 4일)를 분석한 결과, '센텔라' 및 '히알루시카' 라인 제품에 대한 긍정적인 피드백이 주를 이루었습니다. 특히 **촉촉함, 순한 사용감, 우수한 발림성**이 주요 만족 요인으로 나타났으며, "
+  },
+  {
+    "id": "RT-288",
+    "query": "스마트스토어 Tone Brightening 제품 리뷰 몇 건?",
+    "table": "review_smartstore",
+    "category": "product_review",
+    "status": "OK",
+    "time": 28.8,
+    "answer_len": 380,
+    "answer_preview": "### 📊 스마트스토어 Tone Brightening 제품 리뷰 현황  #### 요약  스마트스토어에서 SKIN1004 브랜드의 Tone Brightening 제품에 대한 리뷰는 현재 **0건**으로 확인됩니다.  #### 분석 및 인사이트  *   현재 스마트스토어에서 'Tone Brightening' 제품에 대한 리뷰가 존재하지 않습니다. *   이는 "
+  },
+  {
+    "id": "RT-289",
+    "query": "스마트스토어 리뷰 제품 종류 몇 개야?",
+    "table": "review_smartstore",
+    "category": "review_count",
+    "status": "OK",
+    "time": 23.9,
+    "answer_len": 572,
+    "answer_preview": "### 📊 스마트스토어 리뷰 내 SKIN1004 제품 종류 현황  #### 요약  SKIN1004 스마트스토어 리뷰에 등록된 제품 종류는 총 **35개**입니다. 이는 고객들이 다양한 SKIN1004 제품에 대해 활발하게 리뷰를 남기고 있음을 보여줍니다.  #### 분석 및 인사이트  *   **다양한 제품 포트폴리오:** 총 35개의 고유한 제품 종류가 "
+  },
+  {
+    "id": "RT-290",
+    "query": "스마트스토어 리뷰 번역문 최근 순",
+    "table": "review_smartstore",
+    "category": "review_content",
+    "status": "WARN",
+    "time": 60.1,
+    "answer_len": 531,
+    "answer_preview": "### 📊 스마트스토어 SKIN1004 브랜드 최근 리뷰 현황  #### 요약  SKIN1004 스마트스토어의 최근 리뷰 **10,000건**을 분석한 결과, **2026년 3월 4일**까지의 리뷰가 확인되었습니다. 총 **35개**의 제품에 대한 리뷰가 수집되었으며, 가장 최근 리뷰들은 주로 제품의 보습력, 사용감, 순함에 대한 긍정적인 평가를 담고 있습"
+  },
+  {
+    "id": "RT-291",
+    "query": "스마트스토어 피부고민 모든 종류 리스트",
+    "table": "review_smartstore",
+    "category": "skin_concern",
+    "status": "OK",
+    "time": 43.6,
+    "answer_len": 631,
+    "answer_preview": "# 네이버 스마트스토어 피부 고민 유형 리스트  네이버 스마트스토어에서 상품 검색 시 활용되는 주요 피부 고민 유형은 다음과 같습니다.  | # | 피부 고민 | 설명 | |---|-----------|------| | 1 | **수분/보습** | 건조하고 당기는 피부를 위한 보습 관리 | | 2 | **탄력/주름개선** | 피부 탄력 저하 및 주름 완화 "
+  },
+  {
+    "id": "RT-292",
+    "query": "스마트스토어 피부고민별 Cleansing Oil 리뷰",
+    "table": "review_smartstore",
+    "category": "skin_concern",
+    "status": "OK",
+    "time": 31.3,
+    "answer_len": 570,
+    "answer_preview": "해당 조건의 데이터가 없습니다.  SQL에서 사용된 `product_name` 필터 조건인 `'%Cleansing_Oil%'`이 문제일 가능성이 높습니다. 데이터베이스에 저장된 제품명은 띄어쓰기(`Cleansing Oil`), 다른 표기법(`CleansingOil`), 또는 한글(`클렌징 오일`)로 되어 있을 수 있습니다. `brand` 필터 조건인 `'%"
+  },
+  {
+    "id": "RT-293",
+    "query": "스마트스토어 피부고민 수분 관련 리뷰 수",
+    "table": "review_smartstore",
+    "category": "skin_concern",
+    "status": "OK",
+    "time": 30.1,
+    "answer_len": 1201,
+    "answer_preview": "### 📊 스마트스토어 수분 관련 피부고민별 리뷰 현황  #### 요약  스마트스토어에서 '수분' 관련 피부고민으로 언급된 리뷰는 총 **107가지의 고유한 피부고민 조합**으로 나타났습니다. 이 중 가장 많은 리뷰 수를 기록한 피부고민 조합은 '복합성, 잡티, 탄력, 유수분밸런스'로 **11건**의 리뷰가 확인되었습니다. 전반적으로 '유수분밸런스'와 관련"
+  },
+  {
+    "id": "RT-294",
+    "query": "스마트스토어 skin_concern 필드 분석 리포트",
+    "table": "review_smartstore",
+    "category": "skin_concern",
+    "status": "OK",
+    "time": 29.1,
+    "answer_len": 1593,
+    "answer_preview": "### 📊 스마트스토어 고객 피부 고민 필드 분석 리포트  #### 요약  스마트스토어 고객 리뷰 데이터 분석 결과, 가장 많은 고객이 가진 피부 고민은 **복합성, 트러블**로 총 **145건**의 리뷰에서 언급되었습니다. 전체 **1,393개**의 고유한 피부 고민 조합이 존재하며, 복합성 피부를 가진 고객들이 다양한 추가 고민을 함께 가지고 있는 경향"
+  },
+  {
+    "id": "RT-295",
+    "query": "스마트스토어 피부고민별 리뷰 비율",
+    "table": "review_smartstore",
+    "category": "skin_concern",
+    "status": "OK",
+    "time": 32.7,
+    "answer_len": 1655,
+    "answer_preview": "### 📊 스마트스토어 피부고민별 리뷰 비율 분석  #### 요약  스마트스토어 리뷰 데이터 분석 결과, 총 **1,393가지**의 다양한 피부고민 조합이 확인되었으며, 이 중 **복합성, 트러블**이 **145건(2.42%)**으로 가장 많은 리뷰를 차지했습니다. 전체 피부고민 관련 리뷰 **총 5,989건** 중 상위 3개 고민 조합(복합성, 트러블; "
+  },
+  {
+    "id": "RT-296",
+    "query": "스마트스토어 리뷰 전체 건수는 몇 개?",
+    "table": "review_smartstore",
+    "category": "total_count",
+    "status": "OK",
+    "time": 24.9,
+    "answer_len": 529,
+    "answer_preview": "### 📊 스마트스토어 전체 리뷰 현황  #### 요약  현재 스마트스토어에 등록된 전체 리뷰 건수는 **26,724개**입니다. 이는 스마트스토어 고객들의 활발한 참여와 제품에 대한 높은 관심을 보여줍니다.  #### 상세 데이터  (단일 수치이므로 상세 데이터 섹션은 생략합니다.)  #### 분석 및 인사이트  *   **활발한 고객 참여:** 26,7"
+  },
+  {
+    "id": "RT-297",
+    "query": "스마트스토어 리뷰 제품 TOP 리스트",
+    "table": "review_smartstore",
+    "category": "top_reviewed",
+    "status": "OK",
+    "time": 38.4,
+    "answer_len": 1453,
+    "answer_preview": "### 📊 스마트스토어 리뷰 제품 TOP 리스트  #### 요약  스마트스토어에서 가장 많은 리뷰를 받은 제품은 **센텔라 앰플**로, 총 **7,555개**의 리뷰를 기록했습니다. 이어서 **센텔라 앰플 폼(2,648개)**과 **센텔라 라이트 클렌징 오일(1,737개)**이 각각 2위와 3위를 차지했습니다. 전체 35개의 고유 제품 중 상위 3개 제품이"
+  },
+  {
+    "id": "RT-298",
+    "query": "스마트스토어 리뷰 최신 데이터 전체 확인",
+    "table": "review_smartstore",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 54.5,
+    "answer_len": 1973,
+    "answer_preview": "### 📊 스마트스토어 최신 리뷰 데이터 현황  #### 요약  ⚠️ 요청하신 스마트스토어 최신 리뷰 데이터는 **총 10,000건**이 조회되었으며, 이는 조회 제한에 도달한 일부 데이터입니다. 해당 데이터는 SKIN1004 브랜드의 스마트스토어 채널 리뷰이며, **2026년 3월 4일**까지의 최신 리뷰를 포함하고 있습니다. 총 **35개**의 고유 제"
+  },
+  {
+    "id": "RT-299",
+    "query": "스마트스토어 리뷰 전체 현황 리포트",
+    "table": "review_smartstore",
+    "category": "total_count",
+    "status": "OK",
+    "time": 44.3,
+    "answer_len": 1502,
+    "answer_preview": "### 📊 스마트스토어 리뷰 현황: 피부 고민별 분석  #### 요약  스마트스토어 리뷰 데이터를 분석한 결과, 총 **1,393가지**의 고유한 피부 고민 유형이 확인되었습니다. 이 중 '복합성, 트러블'이 **145건**으로 가장 많은 리뷰 수를 기록했으며, '복합성' 단일 고민이 **132건**으로 그 뒤를 이었습니다. 전반적으로 '복합성'과 '트러블"
+  },
+  {
+    "id": "RT-300",
+    "query": "스마트스토어 피부고민별 전체 리뷰 현황 요약",
+    "table": "review_smartstore",
+    "category": "skin_concern",
+    "status": "OK",
+    "time": 47.8,
+    "answer_len": 1369,
+    "answer_preview": "### 📊 스마트스토어 피부고민별 리뷰 현황 분석  #### 요약  스마트스토어 리뷰 데이터를 분석한 결과, 가장 많은 리뷰가 등록된 피부 고민은 **'복합성, 트러블'**로 총 **145건**을 기록했습니다. 다음으로는 **'복합성'** 단일 고민이 **132건**, **'복합성, 민감성'**이 **119건**으로 나타나, 복합성 피부를 가진 사용자들이 "
+  }
+]

@@ -1,0 +1,3002 @@
+[
+  {
+    "id": "V2_SH-001",
+    "query": "2024년 Shopify 나라별 총 수익 상황",
+    "table": "shopify",
+    "category": "country_sales",
+    "status": "OK",
+    "time": 33.2,
+    "answer_len": 1502,
+    "answer_preview": "### 📊 2024년 Shopify 나라별 총 수익 현황  #### 요약  2024년 Shopify의 나라별 총 수익 분석 결과, **미국**이 **4,599,510달러**로 압도적인 1위를 차지했습니다. 이는 전체 36개 국가 중 가장 높은 비중을 차지하며, 캐나다(590,322달러)와 호주(237,171달러)가 그 뒤를 이었습니다.  #### 상세 데이"
+  },
+  {
+    "id": "V2_SH-002",
+    "query": "2025년 Shopify 미국 매출 얼마인가요",
+    "table": "shopify",
+    "category": "country_sales",
+    "status": "OK",
+    "time": 38.2,
+    "answer_len": 426,
+    "answer_preview": "### 📊 2025년 Shopify 미국 매출 조회 결과  #### 요약  2025년 Shopify 미국 매출은 **조회되지 않습니다.** 이는 해당 기간 동안의 매출 데이터가 존재하지 않거나, 현재 시스템에 집계되지 않았음을 의미합니다.  #### 분석 및 인사이트  *   2025년 Shopify를 통한 미국 매출 데이터가 현재 시스템에서 확인되지 않습"
+  },
+  {
+    "id": "V2_SH-003",
+    "query": "Shopify에서 영국 매출 추이 보여줘 궁금해",
+    "table": "shopify",
+    "category": "country_sales",
+    "status": "OK",
+    "time": 34.3,
+    "answer_len": 2068,
+    "answer_preview": "### 📊 Shopify 영국 매출 추이 분석 보고서  #### 요약  Shopify 영국 매출은 2022년 5월부터 2026년 3월 8일까지의 데이터를 기준으로 분석되었습니다. 2023년 하반기부터 뚜렷한 성장세를 보이며 **2024년 11월에 28,978.56**으로 최고 매출을 기록했습니다. 2025년에는 전반적으로 높은 매출 수준을 유지했으나, 20"
+  },
+  {
+    "id": "V2_SH-004",
+    "query": "2024년 Shopify 캐나다 총 매출금액",
+    "table": "shopify",
+    "category": "country_sales",
+    "status": "OK",
+    "time": 28.6,
+    "answer_len": 400,
+    "answer_preview": "### 📊 2024년 Shopify 캐나다 총 매출 분석  #### 요약  2024년 Shopify 캐나다의 총 매출은 **590,321.73 달러**로 집계되었습니다. 이는 캐나다 시장에서 Shopify 채널을 통한 연간 판매 실적을 나타냅니다.  #### 분석 및 인사이트  *   2024년 한 해 동안 캐나다 Shopify 채널을 통해 약 59만 달러"
+  },
+  {
+    "id": "V2_SH-005",
+    "query": "Shopify 호주 매출 알려줘 좀",
+    "table": "shopify",
+    "category": "country_sales",
+    "status": "OK",
+    "time": 43.8,
+    "answer_len": 575,
+    "answer_preview": "### 📊 Shopify 호주 매출 현황  #### 요약  요청하신 Shopify 호주 매출 데이터는 **2019년 1월 1일부터 2026년 3월 8일까지의 조회 기간 동안 존재하지 않습니다.** 현재 데이터베이스에서 해당 기간의 호주 지역 Shopify 매출은 **0원**으로 확인됩니다.  #### 분석 및 인사이트  *   **데이터 부재 확인:** 2"
+  },
+  {
+    "id": "V2_SH-006",
+    "query": "2025년 Shopify 독일 매출 실태",
+    "table": "shopify",
+    "category": "country_sales",
+    "status": "OK",
+    "time": 24.4,
+    "answer_len": 546,
+    "answer_preview": "### 📊 2025년 Shopify 독일 매출 현황 분석  #### 요약  2025년 Shopify 독일 매출 데이터를 조회한 결과, 해당 기간 동안의 매출 및 주문 수량 데이터가 존재하지 않는 것으로 확인되었습니다. 따라서 2025년 Shopify 독일 매출은 **0원**이며, 주문 수량 또한 **0건**입니다.  #### 분석 및 인사이트  *   20"
+  },
+  {
+    "id": "V2_SH-007",
+    "query": "Shopify 프랑스 세일즈 데이터 보여줄래?",
+    "table": "shopify",
+    "category": "country_sales",
+    "status": "OK",
+    "time": 44.3,
+    "answer_len": 440,
+    "answer_preview": "### 📊 Shopify 프랑스 판매 현황  #### 요약  프랑스 Shopify 채널의 총 판매액은 **286,261.03**이며, 총 주문 수량은 **30,575**개, 총 반품액은 **12,028.42**로 집계되었습니다.  #### 분석 및 인사이트  *   프랑스 Shopify 채널은 총 **286,261.03**의 판매액을 기록하며 상당한 규모의"
+  },
+  {
+    "id": "V2_SH-008",
+    "query": "Shopify 일본 매출 얼마인지 보여줘 확인 부탁드립니다",
+    "table": "shopify",
+    "category": "country_sales",
+    "status": "OK",
+    "time": 32.2,
+    "answer_len": 484,
+    "answer_preview": "### 📊 Shopify 일본 매출 현황  #### 요약  Shopify 채널을 통한 일본 매출을 조회한 결과, 현재 데이터에서 **매출이 집계되지 않았습니다.** 이는 해당 기간 동안 일본으로의 매출이 없었거나, 관련 데이터가 아직 시스템에 반영되지 않았을 수 있음을 의미합니다.  #### 분석 및 인사이트  *   현재 조회된 데이터에 따르면 Shopi"
+  },
+  {
+    "id": "V2_SH-009",
+    "query": "2024년 Shopify 한국 매출 빨리 알려주시면 감사하겠습니다",
+    "table": "shopify",
+    "category": "country_sales",
+    "status": "OK",
+    "time": 24.5,
+    "answer_len": 514,
+    "answer_preview": "### 📊 2024년 Shopify 한국 매출 현황  #### 요약  2024년 Shopify를 통한 한국 매출은 현재 **집계된 데이터가 없습니다.** 이는 해당 기간 동안 Shopify를 통한 한국 내 매출이 발생하지 않았거나, 데이터가 아직 시스템에 반영되지 않았을 수 있습니다.  #### 분석 및 인사이트  *   2024년 Shopify 한국 매출"
+  },
+  {
+    "id": "V2_SH-010",
+    "query": "Shopify 싱가포르 세일즈 동향 알려줘 알 수 있을까요?",
+    "table": "shopify",
+    "category": "country_sales",
+    "status": "OK",
+    "time": 26.9,
+    "answer_len": 369,
+    "answer_preview": "죄송합니다. 요청하신 조건에 해당하는 데이터가 존재하지 않습니다. 'Singapore'는 유효한 국가 값이 아닙니다.  SQL 쿼리에서 `Country = 'Singapore'` 조건이 문제였습니다. `Country` 컬럼의 유효한 값은 한국어로 되어 있으며, 제공된 유효 값 목록에 따르면 '싱가포르'가 올바른 값입니다. 따라서 'Singapore' 대신 "
+  },
+  {
+    "id": "V2_SH-011",
+    "query": "2025년 Shopify 세일즈 TOP 10 국가",
+    "table": "shopify",
+    "category": "country_sales",
+    "status": "OK",
+    "time": 31.4,
+    "answer_len": 1148,
+    "answer_preview": "### 📊 2025년 Shopify 세일즈 TOP 10 국가 분석  #### 요약  2025년 Shopify 세일즈에서 **미국이 약 80.5억원** (6,192,997.88 USD)의 매출을 기록하며 압도적인 1위를 차지했습니다. 이는 2위 캐나다(약 76만 USD)와 큰 격차를 보이는 수치로, 북미 시장이 Shopify 세일즈의 핵심 동력임을 보여줍니다"
+  },
+  {
+    "id": "V2_SH-012",
+    "query": "우리 회사 Shopify 국가 기준 매출 순위 보여줘",
+    "table": "shopify",
+    "category": "country_sales",
+    "status": "OK",
+    "time": 38.6,
+    "answer_len": 1586,
+    "answer_preview": "### 📊 Shopify 국가별 매출 순위 분석  #### 요약  2019년 1월 1일부터 2026년 3월 8일까지의 Shopify 매출 데이터를 분석한 결과, 상위 20개국에서 발생한 총 매출은 약 **208.0억원(약 1,541만 USD)**을 기록했습니다. 이 중 **미국**이 약 **158.8억원(약 1,176만 USD)**으로 압도적인 1위를 차지"
+  },
+  {
+    "id": "V2_SH-013",
+    "query": "Shopify 메출이 가장 높은 국가 어디야",
+    "table": "shopify",
+    "category": "country_sales",
+    "status": "OK",
+    "time": 32.6,
+    "answer_len": 472,
+    "answer_preview": "### 📊 Shopify 매출 최고 국가 분석  #### 요약  Shopify 매출이 가장 높은 국가는 **미국**으로 확인되었습니다. 2019년 1월 1일부터 현재까지 미국에서 발생한 Shopify 총 매출은 **1,176만원**입니다.  #### 상세 데이터  (단일 결과이므로 상세 데이터 섹션은 생략합니다.)  #### 분석 및 인사이트  *   미국"
+  },
+  {
+    "id": "V2_SH-014",
+    "query": "쇼피파이 매출이 가장 낮은 국가는?",
+    "table": "shopify",
+    "category": "country_sales",
+    "status": "OK",
+    "time": 32.9,
+    "answer_len": 636,
+    "answer_preview": "### 📊 쇼피파이 매출 최저 국가 분석 보고서  #### 요약  쇼피파이 매출이 가장 낮은 국가는 **국가 정보가 없는(미분류) 항목**으로 나타났습니다. 해당 미분류 항목의 총 매출은 **1.09**를 기록했습니다. 이는 데이터 입력 오류 또는 특정 국가로 분류되지 않은 매출이 존재함을 시사합니다.  #### 상세 데이터 | 국가 | 총 매출 | |:-"
+  },
+  {
+    "id": "V2_SH-015",
+    "query": "2024년 Shopify 유럽 국가 수익 총액",
+    "table": "shopify",
+    "category": "country_sales",
+    "status": "OK",
+    "time": 27.1,
+    "answer_len": 814,
+    "answer_preview": "### 📊 2024년 Shopify 유럽 국가 수익 총액 분석 결과  #### 요약  2024년 Shopify를 통한 유럽 국가의 총 수익은 **데이터가 존재하지 않습니다.** 현재 조회된 데이터에 따르면, 2024년 해당 국가들에서 발생한 Shopify 매출 기록을 찾을 수 없습니다.  #### 분석 및 인사이트  *   **2024년 Shopify 유럽"
+  },
+  {
+    "id": "V2_SH-016",
+    "query": "Shopify 아시아 국가 매출 대비 어떻게 되나요?",
+    "table": "shopify",
+    "category": "country_sales",
+    "status": "OK",
+    "time": 20.9,
+    "answer_len": 375,
+    "answer_preview": "해당 조건으로 조회된 데이터가 없습니다.  SQL 쿼리에 사용된 국가명('한국', '일본', '중국', '인도네시아', '말레이시아', '필리핀', '싱가포르', '태국', '베트남')은 모두 유효한 값입니다. 하지만 2019년 1월 1일 이후 해당 국가들의 매출 데이터가 존재하지 않아 0행이 반환되었습니다. 이는 지정된 날짜 범위 내에서 해당 국가들의 판"
+  },
+  {
+    "id": "V2_SH-017",
+    "query": "2025년 Shopify 이탈리아 매출액",
+    "table": "shopify",
+    "category": "country_sales",
+    "status": "OK",
+    "time": 20.9,
+    "answer_len": 377,
+    "answer_preview": "### 📊 2025년 Shopify 이탈리아 매출 분석  #### 요약  2025년 Shopify 이탈리아 채널의 총 매출액은 **128,983.56 달러**를 기록했습니다.  #### 분석 및 인사이트  *   2025년 한 해 동안 Shopify 이탈리아 채널에서 12만 달러 이상의 매출을 달성했습니다. *   이는 이탈리아 시장 내 Shopify 플랫"
+  },
+  {
+    "id": "V2_SH-018",
+    "query": "Shopify 스페인 매출 데이터 빨리",
+    "table": "shopify",
+    "category": "country_sales",
+    "status": "OK",
+    "time": 40.1,
+    "answer_len": 519,
+    "answer_preview": "### 📊 Shopify 스페인 총 매출 현황  #### 요약  Shopify 스페인 시장의 **누적 총 매출**은 **13,756.99**이며, 이 기간 동안 발생한 총 주문 수량은 **4,947**개입니다. 이 데이터는 현재까지 집계된 스페인 Shopify 채널의 전체 매출 및 주문 활동을 나타냅니다.  #### 분석 및 인사이트  *   스페인 Sho"
+  },
+  {
+    "id": "V2_SH-019",
+    "query": "Shopify 네덜란드 매출 얼마임?",
+    "table": "shopify",
+    "category": "country_sales",
+    "status": "OK",
+    "time": 23.4,
+    "answer_len": 456,
+    "answer_preview": "### 📊 Shopify 네덜란드 총 매출 현황  #### 요약  2019년 1월 1일부터 현재(2026년 3월 8일)까지 Shopify 네덜란드 채널의 총 매출은 **50,785.11**입니다.  #### 상세 데이터  (단일 합계 수치이므로 상세 데이터 표는 생략합니다.)  #### 분석 및 인사이트  *   제공된 매출액은 2019년 1월 1일부터 현"
+  },
+  {
+    "id": "V2_SH-020",
+    "query": "2024년 Shopify 브라질 매축 현황 확인 부탁드립니다",
+    "table": "shopify",
+    "category": "country_sales",
+    "status": "OK",
+    "time": 42.1,
+    "answer_len": 442,
+    "answer_preview": "### 📊 2024년 Shopify 브라질 매출 현황  #### 요약  2024년 Shopify 브라질 매출 현황을 확인한 결과, 해당 기간에 대한 매출 데이터가 존재하지 않습니다. 따라서 **총 매출, 총 주문 수량, 총 반품액 모두 0**으로 집계되었습니다.  #### 분석 및 인사이트  *   2024년 Shopify 브라질 채널을 통한 매출 데이터가"
+  },
+  {
+    "id": "V2_SH-021",
+    "query": "Shopify 멕시코 매상 보여줄래",
+    "table": "shopify",
+    "category": "country_sales",
+    "status": "OK",
+    "time": 36.7,
+    "answer_len": 451,
+    "answer_preview": "### 📊 Shopify 멕시코 총 매출 현황  #### 요약  Shopify 채널을 통한 멕시코의 총 매출은 **297,008.04 달러**입니다. 이는 현재까지 집계된 멕시코 Shopify 데이터의 전체 합계입니다.  #### 분석 및 인사이트  *   멕시코 시장은 Shopify 채널을 통해 총 29만 달러 이상의 매출을 기록하며 특정 규모의 시장을 "
+  },
+  {
+    "id": "V2_SH-022",
+    "query": "간단하게 Shopify 태국 매출 데이터 보여줘",
+    "table": "shopify",
+    "category": "country_sales",
+    "status": "OK",
+    "time": 29.5,
+    "answer_len": 264,
+    "answer_preview": "요청하신 조건에 해당하는 매출 데이터가 없습니다.  SQL 쿼리에서 `Country` 필터 조건으로 'Thailand'를 사용하셨는데, 실제 데이터에는 국가명이 한국어로 '태국'으로 저장되어 있을 가능성이 높습니다. '태국'으로 변경하여 다시 시도해 보세요.  비슷한 데이터를 조회할 수 있는 대안 질문입니다: *   Shopify 태국 매출 데이터 보여줘 "
+  },
+  {
+    "id": "V2_SH-023",
+    "query": "궁금한데 Shopify 2025년 말레이시아 매출 알려주세요",
+    "table": "shopify",
+    "category": "country_sales",
+    "status": "OK",
+    "time": 33.3,
+    "answer_len": 474,
+    "answer_preview": "### 📊 2025년 Shopify 말레이시아 매출 현황  #### 요약  2025년 Shopify 채널을 통한 말레이시아 매출은 **데이터가 존재하지 않습니다.** 현재 조회된 데이터에 따르면 해당 기간 동안 말레이시아에서의 Shopify 매출은 집계되지 않았습니다.  #### 분석 및 인사이트  *   요청하신 2025년 Shopify 채널의 말레이시아"
+  },
+  {
+    "id": "V2_SH-024",
+    "query": "Shopify 인도네시아 매상 현황 확인 가능한가요?",
+    "table": "shopify",
+    "category": "country_sales",
+    "status": "OK",
+    "time": 34.7,
+    "answer_len": 454,
+    "answer_preview": "### 📊 Shopify 인도네시아 매출 현황 분석 (데이터 없음)  #### 요약  현재 조회된 데이터에 따르면, Shopify 인도네시아 채널의 매출 현황을 확인할 수 없습니다. **총 매출**, **총 주문 수량**, **총 반품 수량** 모두 집계된 데이터가 없습니다.  #### 분석 및 인사이트  *   Shopify 인도네시아 채널에 대한 매출 "
+  },
+  {
+    "id": "V2_SH-025",
+    "query": "Shopify 필리핀 세일즈 얼마임?",
+    "table": "shopify",
+    "category": "country_sales",
+    "status": "OK",
+    "time": 52.8,
+    "answer_len": 406,
+    "answer_preview": "### 📊 Shopify 필리핀 매출 현황  #### 요약  Shopify 필리핀 채널의 매출 데이터는 현재 조회되지 않습니다.  #### 분석 및 인사이트  *   현재 조회된 데이터에 따르면, Shopify 필리핀 채널에서는 매출이 발생하지 않았거나, 해당 매출 데이터가 시스템에 기록되지 않았습니다. *   `> Shopify 필리핀 채널의 실제 운영 "
+  },
+  {
+    "id": "V2_SH-026",
+    "query": "Shopify 상품별 판매 TOP 10",
+    "table": "shopify",
+    "category": "product_ranking",
+    "status": "OK",
+    "time": 44.2,
+    "answer_len": 1556,
+    "answer_preview": "### 📊 Shopify 상품별 판매 TOP 10 분석 보고서  #### 요약  Shopify 채널에서 **'Hyalu-Cica Water-Fit Sun Serum SPF50+ PA++++'** 제품이 총 판매액 **1,951,609원**으로 압도적인 1위를 차지했습니다. TOP 10 제품 중 6개가 'Centella' 라인 제품으로, 해당 라인의 꾸준한 "
+  },
+  {
+    "id": "V2_SH-027",
+    "query": "Shopify에서 가장 많이 팔린 제품 5개 알고 싶어",
+    "table": "shopify",
+    "category": "product_ranking",
+    "status": "OK",
+    "time": 47.5,
+    "answer_len": 1055,
+    "answer_preview": "### 📊 Shopify 베스트셀러 제품 Top 5 분석  #### 요약  Shopify에서 가장 많이 판매된 제품은 'Hyalu-Cica Water-Fit Sun Serum SPF50+ PA++++'으로, 총 **153,011개**가 판매되어 **약 19.5억원**의 매출을 기록했습니다. 상위 5개 제품 모두 8만 6천 개 이상 판매되며 높은 인기를 보였"
+  },
+  {
+    "id": "V2_SH-028",
+    "query": "2024년 Shopify 제품 메출 순위",
+    "table": "shopify",
+    "category": "product_ranking",
+    "status": "OK",
+    "time": 30.3,
+    "answer_len": 2103,
+    "answer_preview": "### 📊 2024년 Shopify 제품 매출 순위  #### 요약  2024년 Shopify 매출 분석 결과, 'Hyalu-Cica Water-Fit Sun Serum SPF50+ PA++++' 제품이 **1,189,938원**의 매출을 기록하며 압도적인 1위를 차지했습니다. 상위 5개 제품이 전체 매출의 상당 부분을 차지했으며, 특히 선케어 및 앰플 제"
+  },
+  {
+    "id": "V2_SH-029",
+    "query": "Shopify 베스트셀러 제품 TOP 20 확인 부탁드립니다",
+    "table": "shopify",
+    "category": "product_ranking",
+    "status": "OK",
+    "time": 41.2,
+    "answer_len": 2410,
+    "answer_preview": "### 📊 Shopify 베스트셀러 제품 TOP 20 분석 보고서  #### 요약  Shopify 채널의 2019년 1월 1일부터 2026년 3월 8일까지의 누적 판매 데이터를 기준으로 분석한 결과, 'Hyalu-Cica Water-Fit Sun Serum SPF50+ PA++++' 제품이 **약 26.3억원**의 매출을 기록하며 압도적인 1위를 차지했습니"
+  },
+  {
+    "id": "V2_SH-030",
+    "query": "궁금한데 2025년 Shopify 제품별 총 매출 순위",
+    "table": "shopify",
+    "category": "product_ranking",
+    "status": "OK",
+    "time": 49.8,
+    "answer_len": 2953,
+    "answer_preview": "### 📊 2025년 Shopify 제품별 총 매출 순위  #### 요약  2025년 Shopify의 총 매출은 **8,544,906 달러**를 기록했습니다. 이 중 'Hyalu-Cica Water-Fit Sun Serum SPF50+ PA++++' 제품이 **705,003 달러**의 매출로 가장 높은 순위를 차지하며 전체 매출의 약 8.25%를 기여했습니"
+  },
+  {
+    "id": "V2_SH-031",
+    "query": "잠깐, Shopify 판매수량 기준 제품 TOP 10",
+    "table": "shopify",
+    "category": "product_ranking",
+    "status": "OK",
+    "time": 34.0,
+    "answer_len": 1715,
+    "answer_preview": "### 📊 Shopify 판매수량 기준 제품 TOP 10 분석 보고서  #### 요약  Shopify 채널에서 판매수량 기준으로 가장 많이 판매된 제품은 **Hyalu-Cica Water-Fit Sun Serum SPF50+ PA++++**로 총 **153,011개**가 판매되었습니다. 상위 10개 제품 중 6개가 센텔라 라인 제품이며, 특히 선세럼, 클렌"
+  },
+  {
+    "id": "V2_SH-032",
+    "query": "잠깐, Shopify에서 매상액이 높은 제품 순서대로",
+    "table": "shopify",
+    "category": "product_ranking",
+    "status": "OK",
+    "time": 34.8,
+    "answer_len": 2293,
+    "answer_preview": "### 📊 Shopify 매출액 상위 제품 분석  #### 요약  Shopify 전체 제품 중 **Hyalu-Cica Water-Fit Sun Serum SPF50+ PA++++**가 **1,951,609**의 매출로 가장 높은 실적을 기록했습니다. 전체 제품의 총 매출은 **15,716,701**이며, 총 224개의 고유 제품이 판매되었습니다.  ####"
+  },
+  {
+    "id": "V2_SH-033",
+    "query": "Shopify 제품별 주문갯수 랭킹",
+    "table": "shopify",
+    "category": "product_ranking",
+    "status": "OK",
+    "time": 40.0,
+    "answer_len": 1927,
+    "answer_preview": "### 📊 Shopify 제품별 주문 수량 랭킹 분석 (2019년 1월 1일 이후)  #### 요약  2019년 1월 1일부터 현재까지 Shopify에서 판매된 제품 중 총 **224개**의 고유 제품이 집계되었으며, 전체 주문 수량은 총 **1,601,285개**입니다. 이 중 'Hyalu-Cica Water-Fit Sun Serum SPF50+ PA++"
+  },
+  {
+    "id": "V2_SH-034",
+    "query": "2024년 하반기 Shopify 제품 TOP 5 확인해줘",
+    "table": "shopify",
+    "category": "product_ranking",
+    "status": "OK",
+    "time": 33.7,
+    "answer_len": 1346,
+    "answer_preview": "### 📊 2024년 하반기 Shopify 제품 TOP 5 매출 분석  #### 요약  2024년 하반기 Shopify 채널에서 가장 높은 매출을 기록한 제품은 **\"Hyalu-Cica Water-Fit Sun Serum SPF50+ PA++++\"**으로, **831,231원**의 매출과 75,144개의 판매량을 보였습니다. 상위 5개 제품의 총 매출은 *"
+  },
+  {
+    "id": "V2_SH-035",
+    "query": "Shopify 제품 매출금액 하위 10개",
+    "table": "shopify",
+    "category": "product_ranking",
+    "status": "OK",
+    "time": 24.3,
+    "answer_len": 1804,
+    "answer_preview": "### 📊 Shopify 제품 매출금액 하위 10개 분석  #### 요약  Shopify 제품 매출금액 하위 10개 목록에서 가장 낮은 매출을 기록한 항목은 \"Order adjustment\"로 **-66,775.23**의 마이너스 매출을 보였습니다. 그 외 9개 제품은 모두 **0.0**의 매출을 기록하여, 실제 판매보다는 프로모션 또는 시스템 관련 항목일"
+  },
+  {
+    "id": "V2_SH-036",
+    "query": "빠르게 Shopify 가장 인기 있는 제품 3개 알려줘",
+    "table": "shopify",
+    "category": "product_ranking",
+    "status": "OK",
+    "time": 31.9,
+    "answer_len": 1275,
+    "answer_preview": "### 📊 Shopify 인기 제품 TOP 3 분석  #### 요약  Shopify에서 가장 인기 있는 제품은 **Hyalu-Cica Water-Fit Sun Serum SPF50+ PA++++**로, 총 매출 **1,951,609.04 USD (약 25.4억원)**를 기록하며 압도적인 1위를 차지했습니다. 이어서 **Centella Ampoule**이 *"
+  },
+  {
+    "id": "V2_SH-037",
+    "query": "2025년 1분기 Shopify 제품 랭킹 부탁",
+    "table": "shopify",
+    "category": "product_ranking",
+    "status": "OK",
+    "time": 31.6,
+    "answer_len": 1831,
+    "answer_preview": "### 📊 2025년 1분기 Shopify 제품 판매 랭킹  #### 요약  2025년 1분기 Shopify 채널에서는 'Hyalu-Cica Water-Fit Sun Serum SPF50+ PA++++' 제품이 **6억 5,305만원**의 압도적인 판매액으로 1위를 차지했습니다. 이 제품은 총 44,900개가 판매되며 분기 매출을 견인했습니다. 상위 10개"
+  },
+  {
+    "id": "V2_SH-038",
+    "query": "빠르게 Shopify 제품별 평균 매출 순위",
+    "table": "shopify",
+    "category": "product_ranking",
+    "status": "OK",
+    "time": 45.8,
+    "answer_len": 2966,
+    "answer_preview": "### 📊 Shopify 제품별 총 매출 순위 분석 (2019년 1월 1일 ~ 2026년 3월 8일)  #### 요약  사용자님께서 요청하신 '평균 매출 순위'는 현재 실행된 SQL이 '총 매출'을 기준으로 집계하였으므로, 본 보고서는 **총 매출 기준**으로 작성되었습니다. 2019년 1월 1일부터 2026년 3월 8일까지의 Shopify 제품별 총 매출"
+  },
+  {
+    "id": "V2_SH-039",
+    "query": "Shopify 미국에서 가장 잘 팔리는 제품?",
+    "table": "shopify",
+    "category": "product_ranking",
+    "status": "OK",
+    "time": 53.2,
+    "answer_len": 1987,
+    "answer_preview": "### 📊 Shopify 미국 베스트셀러 제품 분석 (2019년 1월 1일 이후 누적)  #### 요약  Shopify 미국 채널에서 2019년 1월 1일 이후 가장 많이 판매된 제품은 **\"Hyalu-Cica Water-Fit Sun Serum SPF50+ PA++++\"**으로, 누적 매출 **약 22.6억원**을 기록했습니다. 이 제품은 2위 제품인 \""
+  },
+  {
+    "id": "V2_SH-040",
+    "query": "Shopify 일본에서 인기 있는 제품 TOP 5 어떻게 되나요?",
+    "table": "shopify",
+    "category": "product_ranking",
+    "status": "OK",
+    "time": 15.2,
+    "answer_len": 369,
+    "answer_preview": "요청하신 조건(Country='Japan')에 해당하는 데이터는 존재하지 않습니다.  SQL에서 사용된 `Country` 필터 조건인 'Japan'은 유효한 값 목록에 없습니다. `Country` 컬럼은 한국어 값을 사용하므로, '일본'으로 변경하여 다시 시도해 보시는 것을 추천합니다.  비슷한 데이터를 조회할 수 있는 대안 질문은 다음과 같습니다: *  "
+  },
+  {
+    "id": "V2_SH-041",
+    "query": "확인 좀 해줘 Shopify 각 월 매출 추이 보여줘",
+    "table": "shopify",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 30.0,
+    "answer_len": 2959,
+    "answer_preview": "### 📊 Shopify 월별 매출 추이 분석 (2021년 10월 ~ 2026년 3월)  #### 요약  Shopify의 월별 매출은 2021년 10월부터 2026년 3월까지의 데이터를 기준으로 분석되었습니다. 초기에는 낮은 수준의 매출을 보였으나, 2023년 하반기부터 급격한 성장세를 기록하여 **2024년 11월에는 1,747,827.04원(약 174만"
+  },
+  {
+    "id": "V2_SH-042",
+    "query": "정확한 2024년 Shopify 월간 매출금액 변화 알려주세요",
+    "table": "shopify",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 17.4,
+    "answer_len": 1187,
+    "answer_preview": "### 📊 2024년 Shopify 월간 매출 변화 분석  #### 요약  2024년 Shopify의 총 매출은 **5,522,356원**을 기록했습니다. 월별 매출은 연초 낮은 수준에서 시작하여 점진적으로 증가하는 추세를 보였으며, 특히 **11월에 1,747,827원**으로 연중 최고 매출을 달성한 후 12월에도 높은 매출을 유지했습니다.  #### 상"
+  },
+  {
+    "id": "V2_SH-043",
+    "query": "2025년 Shopify 매월 매상 트렌드",
+    "table": "shopify",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 39.0,
+    "answer_len": 3707,
+    "answer_preview": "### 📈 2025년 Shopify 매월 매상 트렌드 분석  #### 요약  2025년 SKIN1004의 Shopify 총 매출은 **8,544,906원**을 기록했습니다. 내부 데이터에 따르면, 연말 쇼핑 시즌의 영향으로 **11월에 1,434,013원**으로 최고 매출을 달성하며 뚜렷한 계절성을 보였습니다. 반면, 4월부터 10월까지는 매출이 지속적으로"
+  },
+  {
+    "id": "V2_SH-044",
+    "query": "간단하게 Shopify 매출 각 월 성장률 알려주세요",
+    "table": "shopify",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 14.8,
+    "answer_len": 383,
+    "answer_preview": "# 데이터 조회 안내  안녕하세요. 요청하신 **Shopify 매출 월별 성장률** 데이터를 조회하지 못했습니다.  좀 더 구체적인 조건을 포함하여 질문해 주시면 정확한 데이터를 찾는 데 도움이 됩니다.  ---  ### 💡 이렇게 질문해 보시면 좋아요  1. **\"2024년 1월~12월 Shopify 채널 월별 매출과 성장률을 알려주세요\"** 2. **\""
+  },
+  {
+    "id": "V2_SH-045",
+    "query": "Shopify 최근 12개월 매상 추이 확인 가능한가요?",
+    "table": "shopify",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 22.3,
+    "answer_len": 1419,
+    "answer_preview": "### 📊 Shopify 최근 12개월 매상 추이 분석 보고서  #### 요약  Shopify의 최근 12개월(2025년 3월 ~ 2026년 2월) 총 매상은 **6,736,002원**을 기록했습니다. 2026년 3월은 현재까지 **83,479원**의 매상을 기록 중입니다. 이 기간 동안 2025년 11월에 **1,434,013원**으로 가장 높은 월별 매"
+  },
+  {
+    "id": "V2_SH-046",
+    "query": "Shopify 월별 주문수량 변화 추이 알려주시면 감사하겠습니다",
+    "table": "shopify",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 22.9,
+    "answer_len": 2031,
+    "answer_preview": "### 📊 Shopify 월별 주문수량 변화 추이 분석  #### 요약  Shopify의 월별 주문수량은 2021년 10월부터 꾸준히 성장하여 2024년 11월 **201,917개**로 역대 최고치를 기록했습니다. 특히 매년 11월과 12월에 주문수량이 크게 증가하는 뚜렷한 계절적 특성을 보이며, 2025년 11월에도 **187,212개**로 높은 수치를 "
+  },
+  {
+    "id": "V2_SH-047",
+    "query": "간단하게 2024년 Shopify 세일즈 최고 달은 언제야? 궁금해",
+    "table": "shopify",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 16.0,
+    "answer_len": 428,
+    "answer_preview": "### 📊 2024년 Shopify 월별 최고 매출 분석  #### 요약  2024년 Shopify 매출을 분석한 결과, **2024년 11월**이 가장 높은 매출을 기록했습니다. 해당 월의 총 매출은 **1,747,827.04달러**였습니다.  #### 분석 및 인사이트  *   2024년 Shopify 매출 최고 달이 11월로 나타난 것은 블랙프라이데이"
+  },
+  {
+    "id": "V2_SH-048",
+    "query": "Shopify 매출 최저 월은 알려주세요",
+    "table": "shopify",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 13.2,
+    "answer_len": 490,
+    "answer_preview": "### 📊 Shopify 매출 최저 월 분석  #### 요약  Shopify 매출 데이터 분석 결과, **2021년 11월**이 **-15.89**의 매출을 기록하며 가장 낮은 월 매출을 보였습니다. 이는 일반적인 매출 흐름과는 다른 특이점으로, 대규모 반품 및 조정으로 인한 마이너스 매출로 추정됩니다.  #### 분석 및 인사이트  *   **2021년 "
+  },
+  {
+    "id": "V2_SH-049",
+    "query": "Shopify 미국 월별 매상 추이 알려주세요",
+    "table": "shopify",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 37.5,
+    "answer_len": 2659,
+    "answer_preview": "### 📊 Shopify 미국 월별 매상 추이 분석  #### 요약  ⚠️ 2026년 3월 데이터는 3월 8일 기준의 부분 데이터입니다. Shopify 미국 채널의 월별 매상은 2021년 10월부터 2026년 3월까지 전반적으로 **급격한 성장세**를 보였습니다. 특히 2024년부터 매상이 크게 증가하여 2025년 연간 총매출은 약 **80.5억원** (6"
+  },
+  {
+    "id": "V2_SH-050",
+    "query": "혹시 2024년 대비 2025년 Shopify 월별 수익 비교 좀 알려줘",
+    "table": "shopify",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 24.7,
+    "answer_len": 2194,
+    "answer_preview": "### 📊 2024년 대비 2025년 Shopify 월별 수익 비교 분석  #### 요약  2025년 Shopify 월별 수익은 2024년 대비 **전반적으로 크게 성장**했습니다. 2025년 총 수익은 **857.59만원**으로 2024년 총 수익 **592.25만원** 대비 **44.81% 증가**했습니다. 특히 2025년 상반기(1월~5월)에 전년 대"
+  },
+  {
+    "id": "V2_SH-051",
+    "query": "Shopify 영국 월별 매출 변화 확인 부탁드립니다",
+    "table": "shopify",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 28.7,
+    "answer_len": 2531,
+    "answer_preview": "### 📊 Shopify 영국 월별 매출 변화 분석 보고서  #### 요약  Shopify 영국 월별 매출은 2022년 5월부터 2026년 3월까지의 데이터를 기준으로 분석되었습니다. 전체 기간 중 **2024년 11월에 28,978.56으로 최고 매출**을 기록했으며, 2023년 초에는 낮은 매출과 일부 마이너스 매출이 관찰되었습니다. 2024년 매출은 "
+  },
+  {
+    "id": "V2_SH-052",
+    "query": "우리 회사 Shopify 일본 달별 매출 트렌드 빨리 어떻게 되나요?",
+    "table": "shopify",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 13.0,
+    "answer_len": 370,
+    "answer_preview": "해당 조건으로는 조회되는 데이터가 없습니다.  SQL 쿼리의 `Country` 필터 조건에 문제가 있습니다. `WHERE Country = 'Japan'`으로 설정되어 있으나, `Country` 컬럼에는 국가명이 한국어로 저장되어 있습니다. 유효한 값 목록에 따르면 '일본'으로 저장되어 있으므로, `Country = '일본'`으로 수정해야 합니다.  비슷한"
+  },
+  {
+    "id": "V2_SH-053",
+    "query": "Shopify 전월 대비 수익 증감률",
+    "table": "shopify",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 18.2,
+    "answer_len": 692,
+    "answer_preview": "### 📊 Shopify 전월 대비 수익 증감률 분석  #### 요약  2026년 2월 Shopify 매출은 전월(1월) 대비 **44.18% 증가**하며 큰 폭의 성장세를 보였습니다. 2월 총 매출은 **470,228.71달러**를 기록하여 1월 매출 326,130.96달러 대비 **144,097.75달러** 증가했습니다.  #### 상세 데이터  | 월"
+  },
+  {
+    "id": "V2_SH-054",
+    "query": "궁금한데 Shopify 6개월간 매출금액 추세 차트",
+    "table": "shopify",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 22.6,
+    "answer_len": 1159,
+    "answer_preview": "### 📊 Shopify 최근 6개월간 월별 매출 추이 분석  #### 요약  ⚠️ 2026년 3월 데이터는 2026년 3월 8일 기준의 부분 데이터입니다. Shopify의 최근 6개월(2025년 9월 ~ 2026년 2월) 매출은 **2025년 11월 약 18.6억원**으로 최고점을 기록한 후 변동성을 보였습니다. 2026년 3월 매출은 현재까지 **약 1"
+  },
+  {
+    "id": "V2_SH-055",
+    "query": "Shopify 2024년 상반기 월별 매상 얼마임?",
+    "table": "shopify",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 25.2,
+    "answer_len": 977,
+    "answer_preview": "### 📊 Shopify 2024년 상반기 월별 매출 현황  #### 요약  2024년 상반기 Shopify 총 매출은 **약 150.4억원**을 기록했습니다. 월별 매출은 1월 **12억 3,296만원**에서 시작하여 꾸준히 성장하여 6월에는 **40억 8,206만원**으로 상반기 최고 매출을 달성하며 뚜렷한 성장세를 보였습니다.  #### 상세 데이터 "
+  },
+  {
+    "id": "V2_SH-056",
+    "query": "참고로 Shopify 반품 현황 분석 확인해줘",
+    "table": "shopify",
+    "category": "returns",
+    "status": "OK",
+    "time": 29.4,
+    "answer_len": 2184,
+    "answer_preview": "### 📊 Shopify 국가별 반품 현황 분석 (2019년 1월 1일 이후)  #### 요약  2019년 1월 1일 이후 Shopify 데이터를 분석한 결과, **미국**이 총 반품액 **129,616.83 달러**로 가장 높은 반품 규모를 보였습니다. 특히, **스페인(반품률 197.55%)**과 **카자흐스탄(반품률 105.42%)**은 판매액 대비 "
+  },
+  {
+    "id": "V2_SH-057",
+    "query": "Shopify 국가별 반품 판매량 좀 봐줘",
+    "table": "shopify",
+    "category": "returns",
+    "status": "OK",
+    "time": 17.5,
+    "answer_len": 2256,
+    "answer_preview": "### 📊 Shopify 국가별 반품 수량 현황  #### 요약  Shopify 데이터를 분석한 결과, **미국**이 총 **9,226개**의 반품 수량으로 압도적인 1위를 차지했습니다. 다음으로는 스페인이 **2,383개**, 캐나다가 **937개**로 뒤를 이었습니다. 전체 반품 수량의 상당 부분이 상위 몇 개 국가에 집중되어 있으며, 이는 특정 시장에"
+  },
+  {
+    "id": "V2_SH-058",
+    "query": "확인 좀 해줘 Shopify 반품이 가장 많은 국가",
+    "table": "shopify",
+    "category": "returns",
+    "status": "OK",
+    "time": 13.3,
+    "answer_len": 738,
+    "answer_preview": "### 📊 Shopify 반품 최다 발생 국가 분석  #### 요약  Shopify 데이터를 분석한 결과, **United States(미국)**가 가장 많은 반품을 기록한 국가로 확인되었습니다. 2019년 1월 1일부터 현재까지 집계된 총 반품 건수는 **129,616.83건**입니다.  #### 상세 데이터 | 국가          | 총 반품 건수  "
+  },
+  {
+    "id": "V2_SH-059",
+    "query": "2024년 Shopify 총 반품 건수 알려주세요",
+    "table": "shopify",
+    "category": "returns",
+    "status": "OK",
+    "time": 12.0,
+    "answer_len": 399,
+    "answer_preview": "### 📊 2024년 Shopify 총 반품 건수 분석  #### 요약  2024년 Shopify 채널의 총 반품 건수는 **2,971건**으로 집계되었습니다. 이는 해당 연도 Shopify에서 발생한 전체 반품 수량을 나타냅니다.  #### 분석 및 인사이트  *   2024년 Shopify 채널에서 발생한 반품 수량은 총 2,971건입니다. *   `>"
+  },
+  {
+    "id": "V2_SH-060",
+    "query": "Shopify 반품률 어떻게 돼? 궁금해",
+    "table": "shopify",
+    "category": "returns",
+    "status": "OK",
+    "time": 13.9,
+    "answer_len": 435,
+    "answer_preview": "### 📊 Shopify 반품률 분석  #### 요약  Shopify 채널의 전체 기간 반품률은 **1.37%**로 집계되었습니다. 이는 2019년 1월 1일부터 2026년 3월 8일까지의 총 매출 대비 반품 금액의 비율을 나타냅니다.  #### 분석 및 인사이트  *   Shopify 채널의 반품률은 **1.37%**로, 전체 매출 대비 반품이 차지하는 "
+  },
+  {
+    "id": "V2_SH-061",
+    "query": "Shopify 제품별 반품 수량 TOP",
+    "table": "shopify",
+    "category": "returns",
+    "status": "OK",
+    "time": 19.4,
+    "answer_len": 2001,
+    "answer_preview": "### 📊 Shopify 제품별 반품 수량 TOP 분석 보고서  #### 요약  Shopify 채널에서 2019년 1월 1일 이후 발생한 총 반품 수량은 **16,077개**이며, 총 224개의 고유 제품에서 반품이 발생했습니다. 이 중 'Tea-Trica Spot Cover Patch' 제품이 **1,172개**로 가장 많은 반품을 기록했으며, 'Hyal"
+  },
+  {
+    "id": "V2_SH-062",
+    "query": "Shopify 반품이 제일 많은 제품",
+    "table": "shopify",
+    "category": "returns",
+    "status": "OK",
+    "time": 20.7,
+    "answer_len": 1786,
+    "answer_preview": "### 📊 Shopify 제품별 반품 현황 분석 (2019년 1월 1일 ~ 2026년 3월 8일)  #### 요약  2019년 1월 1일부터 현재(2026년 3월 8일)까지 Shopify에서 발생한 반품 데이터를 분석한 결과, 'Order adjustment' 항목이 **62,878.10**건으로 가장 높은 수치를 기록했습니다. 실제 제품 중에서는 'Hya"
+  },
+  {
+    "id": "V2_SH-063",
+    "query": "2025년 Shopify 미국 반품 상황",
+    "table": "shopify",
+    "category": "returns",
+    "status": "OK",
+    "time": 14.1,
+    "answer_len": 441,
+    "answer_preview": "### 📊 2025년 Shopify 미국 반품 현황 분석  #### 요약  2025년 Shopify 미국 채널의 반품 및 매출 데이터는 현재 조회되지 않습니다. 따라서 해당 기간 동안의 총 반품액, 총 매출액, 반품율 모두 **데이터 없음**으로 확인됩니다.  #### 분석 및 인사이트  *   2025년 Shopify 미국 채널에 대한 반품 및 매출 데이"
+  },
+  {
+    "id": "V2_SH-064",
+    "query": "Shopify 월별 반품 추이 알려주세요",
+    "table": "shopify",
+    "category": "returns",
+    "status": "OK",
+    "time": 25.8,
+    "answer_len": 2357,
+    "answer_preview": "### 📊 Shopify 월별 반품 추이 분석  #### 요약  Shopify의 월별 반품액은 2021년 10월부터 2026년 3월까지 전반적으로 증가하는 추세를 보였습니다. 특히 2025년부터 반품액이 크게 증가하여, **2026년 1월에 35,754.30**으로 가장 높은 월별 반품액을 기록했습니다. 2026년 3월 데이터는 현재 **3,340.17**"
+  },
+  {
+    "id": "V2_SH-065",
+    "query": "궁금한데 Shopify 반품률 높은 국가 TOP 5",
+    "table": "shopify",
+    "category": "returns",
+    "status": "OK",
+    "time": 19.5,
+    "answer_len": 1168,
+    "answer_preview": "### 📊 Shopify 반품률 높은 국가 TOP 5 분석  #### 요약  Shopify 데이터를 기준으로 반품률이 가장 높은 상위 5개 국가를 분석한 결과, **스페인**이 **197.55%**로 압도적인 1위를 차지했습니다. 이는 총 매출액(13,757원) 대비 총 반품액(27,178원)이 훨씬 높은 이례적인 수치입니다. 그 뒤를 이어 카자흐스탄(10"
+  },
+  {
+    "id": "V2_SH-066",
+    "query": "요즘 Shopify 일본 반품 데이터 좀",
+    "table": "shopify",
+    "category": "returns",
+    "status": "OK",
+    "time": 12.5,
+    "answer_len": 421,
+    "answer_preview": "요청하신 조건(Country = 'Japan')에 해당하는 데이터가 없습니다. 해당 값은 존재하지 않습니다.  SQL에서 사용된 `Country = 'Japan'` 조건이 문제로 보입니다. `Country` 컬럼에는 '미국', '인도네시아', '말레이시아', '필리핀', '일본', '중국', '한국', '태국', '베트남', '싱가포르', '호주', '독일"
+  },
+  {
+    "id": "V2_SH-067",
+    "query": "쇼피파이 영국 반품 건수 알려주시면 감사하겠습니다",
+    "table": "shopify",
+    "category": "returns",
+    "status": "OK",
+    "time": 23.0,
+    "answer_len": 489,
+    "answer_preview": "### 📊 쇼피파이 영국 반품 건수 분석  #### 요약  2019년 1월 1일부터 현재까지 쇼피파이 영국 채널에서 발생한 총 반품 건수는 **82건**입니다. 이는 해당 기간 동안 반품이 발생한 주문 건수를 집계한 결과입니다.  #### 분석 및 인사이트  *   **기간 범위:** 본 데이터는 2019년 1월 1일 이후의 쇼피파이 영국 채널 반품 데이터"
+  },
+  {
+    "id": "V2_SH-068",
+    "query": "Shopify 반품 대비 매출 비율 어때?",
+    "table": "shopify",
+    "category": "returns",
+    "status": "OK",
+    "time": 15.5,
+    "answer_len": 501,
+    "answer_preview": "### 📊 Shopify 총 매출 대비 반품 비율 분석  #### 요약  2019년 1월 1일부터 현재까지의 Shopify 데이터를 분석한 결과, 총 매출은 **15,716,701원**이었으며, 총 반품액은 **215,928원**으로 집계되었습니다. 이에 따라 매출 대비 반품 비율은 **72.79**를 기록했습니다.  #### 분석 및 인사이트  *   S"
+  },
+  {
+    "id": "V2_SH-069",
+    "query": "2024년 Shopify 반품률 변화 트렌드",
+    "table": "shopify",
+    "category": "returns",
+    "status": "OK",
+    "time": 38.3,
+    "answer_len": 2739,
+    "answer_preview": "### 📈 2024년 Shopify 반품률 변화 트렌드 분석  #### 요약  2024년 SKIN1004의 Shopify 반품률은 월별로 상당한 변동성을 보였으나, 평균 약 0.60%를 기록하며 전반적인 이커머스 시장의 높은 반품률(16.9%~20.5%)과는 대조적으로 매우 낮은 수준을 유지했습니다. 특히 **9월에 1.60%**로 연중 최고치를 기록했으며"
+  },
+  {
+    "id": "V2_SH-070",
+    "query": "Shopify 반품이 가장 낮은 국가",
+    "table": "shopify",
+    "category": "returns",
+    "status": "OK",
+    "time": 11.4,
+    "answer_len": 459,
+    "answer_preview": "### 📊 Shopify 반품이 가장 낮은 국가 분석  #### 요약  2019년 1월 1일부터 현재(2026년 3월 8일)까지의 Shopify 매출 데이터를 분석한 결과, **사우디아라비아(Saudi Arabia)**가 **0.0**건의 반품으로 가장 낮은 반품률을 기록했습니다.  #### 분석 및 인사이트  *   사우디아라비아는 2019년 1월 1일 "
+  },
+  {
+    "id": "V2_SH-071",
+    "query": "shopify 미국 vs 영국 매출 대비 정리해줘",
+    "table": "shopify",
+    "category": "country_comparison",
+    "status": "OK",
+    "time": 18.3,
+    "answer_len": 1022,
+    "answer_preview": "### 📊 Shopify 미국 vs 영국 매출 비교 분석 (2019년 1월 1일 이후)  #### 요약  2019년 1월 1일부터 현재까지의 Shopify 매출 데이터를 분석한 결과, 미국 시장이 영국 시장 대비 압도적으로 높은 매출을 기록했습니다. 미국은 총 **약 152.9억원** (11,764,141.95 USD)의 매출을 달성한 반면, 영국은 **약"
+  },
+  {
+    "id": "V2_SH-072",
+    "query": "Shopify 일본 vs 한국 매출 어디가 높아? 좀",
+    "table": "shopify",
+    "category": "country_comparison",
+    "status": "OK",
+    "time": 13.6,
+    "answer_len": 296,
+    "answer_preview": "요청하신 조건(일본, 한국)에 해당하는 매출 데이터가 존재하지 않습니다.  SQL 쿼리에서 사용된 국가 필터 ('일본', '한국')는 유효한 값이나, 해당 국가와 2019년 1월 1일 이후의 날짜 조건을 모두 만족하는 매출 데이터가 현재 `shopify_analysis_sales` 테이블에 없는 것으로 보입니다.  비슷한 데이터를 조회할 수 있는 대안 질문"
+  },
+  {
+    "id": "V2_SH-073",
+    "query": "우리 회사 Shopify 독일 vs 프랑스 매출액 비교 알려주세요",
+    "table": "shopify",
+    "category": "country_comparison",
+    "status": "OK",
+    "time": 13.5,
+    "answer_len": 800,
+    "answer_preview": "### 📊 Shopify 독일 vs 프랑스 매출액 비교 분석 (2019년 1월 1일 이후 누적)  #### 요약  2019년 1월 1일부터 현재까지의 Shopify 매출액을 비교한 결과, **프랑스가 독일보다 약 2.15배 높은 매출**을 기록했습니다. 프랑스는 **286,261.03**의 매출을 달성한 반면, 독일은 **132,850.17**의 매출을 기"
+  },
+  {
+    "id": "V2_SH-074",
+    "query": "Shopify 캐나다 vs 호주 매출 비교 분석해줘 알려줄래",
+    "table": "shopify",
+    "category": "country_comparison",
+    "status": "OK",
+    "time": 18.7,
+    "answer_len": 956,
+    "answer_preview": "### 📊 Shopify 캐나다 vs 호주 매출 비교 분석  #### 요약  2019년 1월 1일부터 현재까지의 Shopify 매출 데이터를 분석한 결과, 캐나다 시장이 호주 시장보다 약 2배 높은 매출을 기록했습니다. 캐나다의 총 매출은 **1,440,383.58 달러**이며, 호주의 총 매출은 **694,319.14 달러**로 나타났습니다.  #### "
+  },
+  {
+    "id": "V2_SH-075",
+    "query": "간단하게 Shopify 미국 vs 일본 매출 차이",
+    "table": "shopify",
+    "category": "country_comparison",
+    "status": "OK",
+    "time": 11.2,
+    "answer_len": 449,
+    "answer_preview": "해당 조건(2019년 1월 1일 이후 미국 및 일본 매출)에 맞는 데이터가 조회되지 않았습니다.  SQL 쿼리에서 사용된 국가 필터 '미국'과 '일본'은 유효한 값 목록에 포함되어 있습니다. 하지만, `shopify_analysis_sales` 테이블에 2019년 1월 1일 이후로 '미국' 또는 '일본'의 매출 데이터가 없거나, 해당 데이터의 `Total_"
+  },
+  {
+    "id": "V2_SH-076",
+    "query": "Shopify 한국 vs 독일 매상 비교 부탁드려요",
+    "table": "shopify",
+    "category": "country_comparison",
+    "status": "OK",
+    "time": 12.6,
+    "answer_len": 318,
+    "answer_preview": "요청하신 조건(한국, 독일)에 해당하는 매출 데이터가 없습니다.  SQL 쿼리에서 사용된 `Country` 필터 조건인 '한국'과 '독일'은 유효한 국가명입니다. 하지만 현재 데이터베이스의 `shopify_analysis_sales` 테이블에는 해당 국가들의 매출 데이터가 존재하지 않아 0행이 반환되었습니다.  비슷한 데이터를 조회할 수 있는 대안 질문은 "
+  },
+  {
+    "id": "V2_SH-077",
+    "query": "궁금한데 shopify 영국 vs 호주 매출액 누가 더 높아?",
+    "table": "shopify",
+    "category": "country_comparison",
+    "status": "OK",
+    "time": 17.5,
+    "answer_len": 819,
+    "answer_preview": "### 📊 Shopify 영국 vs 호주 누적 매출액 비교 (2019년 1월 1일 이후)  #### 요약  2019년 1월 1일 이후 Shopify 매출액을 비교한 결과, **호주**가 영국보다 약 2.8배 높은 매출을 기록했습니다. 호주의 누적 매출액은 **694,319.14**이며, 영국의 누적 매출액은 **245,221.46**입니다.  #### 상세"
+  },
+  {
+    "id": "V2_SH-078",
+    "query": "Shopify 프랑스 vs 이탈리아 매출 비교 알려주세요",
+    "table": "shopify",
+    "category": "country_comparison",
+    "status": "OK",
+    "time": 11.4,
+    "answer_len": 309,
+    "answer_preview": "요청하신 '프랑스'와 '이탈리아' 국가에 대한 데이터는 존재하지 않습니다.  SQL 쿼리에 사용된 `Country` 필터 조건의 '프랑스'와 '이탈리아' 값은 유효한 국가 목록에 없습니다. 유효한 국가 값은 '미국, 인도네시아, 말레이시아, 필리핀, 일본, 중국, 한국, 태국, 베트남, 싱가포르, 호주, 독일' 등입니다.  비슷한 데이터를 조회할 수 있는 "
+  },
+  {
+    "id": "V2_SH-079",
+    "query": "Shopify 미국 vs 캐나다 vs 영국 매출금액 비교",
+    "table": "shopify",
+    "category": "country_comparison",
+    "status": "OK",
+    "time": 13.4,
+    "answer_len": 497,
+    "answer_preview": "해당 조건의 데이터가 없습니다. SQL에 사용된 '캐나다'와 '영국' 값은 존재하지 않습니다.  SQL에서 사용된 `Country` 필터 조건이 문제입니다. `Country IN ('미국', '캐나다', '영국')`에서 '캐나다'와 '영국'은 유효한 `Country` 컬럼 값 목록에 없습니다. '미국'은 유효한 값이지만, 유효하지 않은 국가명이 포함되어 쿼"
+  },
+  {
+    "id": "V2_SH-080",
+    "query": "Shopify 싱가포르 vs 말레이시아 수익 비교",
+    "table": "shopify",
+    "category": "country_comparison",
+    "status": "OK",
+    "time": 15.9,
+    "answer_len": 403,
+    "answer_preview": "해당 조건에 맞는 데이터가 존재하지 않습니다.  SQL 쿼리에서 `Country` 필터 조건에 사용된 'Singapore'와 'Malaysia' 값은 데이터베이스에 저장된 유효한 한국어 값인 '싱가포르'와 '말레이시아'와 일치하지 않습니다. 데이터베이스에는 국가명이 한국어로 저장되어 있습니다.  `Country IN ('싱가포르', '말레이시아')`로 수정"
+  },
+  {
+    "id": "V2_SH-081",
+    "query": "Shopify 아시아 vs 유럽 매출 대비",
+    "table": "shopify",
+    "category": "country_comparison",
+    "status": "OK",
+    "time": 30.4,
+    "answer_len": 941,
+    "answer_preview": "### 📊 Shopify 아시아 vs 유럽 매출 비교 분석  #### 요약  2019년 1월 1일부터 2026년 3월 8일까지의 Shopify 매출 데이터를 분석한 결과, 유럽 지역의 매출이 아시아 지역에 비해 압도적으로 높은 것으로 나타났습니다. 해당 기간 동안 **유럽은 1,228,047원**의 총 매출을 기록한 반면, **아시아는 22,092원**의 "
+  },
+  {
+    "id": "V2_SH-082",
+    "query": "2024년 Shopify 미국 vs 일본 주문판매량 비교",
+    "table": "shopify",
+    "category": "country_comparison",
+    "status": "OK",
+    "time": 14.0,
+    "answer_len": 396,
+    "answer_preview": "해당 조건의 데이터가 없습니다.  SQL 쿼리에서 `EXTRACT(YEAR FROM Date) = 2024` 조건으로 2024년 데이터를 조회하도록 설정되어 있으나, 현재 `shopify_analysis_sales` 테이블에 2024년 데이터가 아직 업데이트되지 않았거나 충분히 쌓이지 않았을 가능성이 높습니다. `Country` 필터에 사용된 '미국'과 '"
+  },
+  {
+    "id": "V2_SH-083",
+    "query": "확인 좀 해줘 Shopify 브라질 vs 멕시코 매출",
+    "table": "shopify",
+    "category": "country_comparison",
+    "status": "OK",
+    "time": 19.9,
+    "answer_len": 679,
+    "answer_preview": "### 📊 Shopify 브라질 및 멕시코 매출 분석  #### 요약  ⚠️ 요청하신 브라질 매출 데이터는 조회 결과에 포함되지 않았습니다. 현재 데이터로는 2019년 1월 1일 이후 Shopify를 통한 멕시코의 총 매출만 확인 가능하며, **297,008.04 USD**를 기록했습니다. 총 판매 수량은 37,787개입니다.  #### 상세 데이터  요청"
+  },
+  {
+    "id": "V2_SH-084",
+    "query": "Shopify 타이 vs 인도네시아 매출 비교",
+    "table": "shopify",
+    "category": "country_comparison",
+    "status": "OK",
+    "time": 15.1,
+    "answer_len": 302,
+    "answer_preview": "해당 조건의 데이터가 없습니다.  SQL 쿼리에 사용된 '태국'과 '인도네시아'는 유효한 국가 값입니다. 하지만 2019년 1월 1일 이후 해당 국가들의 Shopify 매출 데이터가 존재하지 않아 0행이 반환되었습니다.  비슷한 데이터를 조회할 수 있는 대안 질문은 다음과 같습니다: *   2019년 1월 1일 이후 전체 국가별 Shopify 매출을 비교해"
+  },
+  {
+    "id": "V2_SH-085",
+    "query": "빠르게 Shopify 미국 vs 한국 반품률 견줘봐",
+    "table": "shopify",
+    "category": "country_comparison",
+    "status": "OK",
+    "time": 15.2,
+    "answer_len": 295,
+    "answer_preview": "해당 조건의 데이터가 없습니다.  SQL 쿼리에서 '미국'과 '한국' 국가 필터는 유효하지만, 해당 국가에 대한 데이터가 2019년 1월 1일 이후로 존재하지 않거나, 반품 및 판매 데이터가 없는 것으로 보입니다. 즉, 지정된 날짜 범위와 국가 조건에 일치하는 데이터가 없습니다.  비슷한 데이터를 조회할 수 있는 대안 질문을 제안합니다: 1.  전체 국가의"
+  },
+  {
+    "id": "V2_SH-086",
+    "query": "우리 회사 Shopify 제품유형별 매출 현황 얼마임?",
+    "table": "shopify",
+    "category": "product_type",
+    "status": "OK",
+    "time": 26.3,
+    "answer_len": 1298,
+    "answer_preview": "### 📊 Shopify 제품유형별 총 매출 현황 (2019년 1월 1일 ~ 2026년 3월 8일)  #### 요약  Shopify 제품유형별 총 매출 분석 결과 (2019년 1월 1일 ~ 2026년 3월 8일), **유형 미분류 제품**이 약 **44.6억원**으로 가장 높은 매출을 기록했습니다. 이어서 **Ampoule/Serum**이 약 **32.3억"
+  },
+  {
+    "id": "V2_SH-087",
+    "query": "빠르게 shopify 제품 Type별 매출 상위",
+    "table": "shopify",
+    "category": "product_type",
+    "status": "OK",
+    "time": 16.7,
+    "answer_len": 1202,
+    "answer_preview": "### 📊 Shopify 제품 Type별 매출 상위 분석  #### 요약  2019년 1월 1일 이후 Shopify 매출 데이터를 분석한 결과, **Ampoule/Serum** 제품 Type이 약 **322.5만원**의 매출로 압도적인 1위를 차지했습니다. 이어서 Sun 제품 Type이 약 **248.6만원**, Cream 제품 Type이 약 **191.0"
+  },
+  {
+    "id": "V2_SH-088",
+    "query": "Shopify 어떤 제품유형이 가장 많이 팔려",
+    "table": "shopify",
+    "category": "product_type",
+    "status": "OK",
+    "time": 15.0,
+    "answer_len": 1630,
+    "answer_preview": "### 📊 Shopify 제품 유형별 판매량 분석  #### 요약  Shopify에서 가장 많이 팔린 제품 유형은 **Ampoule/Serum**으로, 총 **324,598개**가 판매되었습니다. Mask/Pad가 246,447개, Sun 제품이 226,167개로 그 뒤를 이었습니다. 특히, 제품 유형이 명시되지 않은 항목(`\"\"`)이 252,920개로 두"
+  },
+  {
+    "id": "V2_SH-089",
+    "query": "2024년 Shopify 제품유형별 총 판매액 빨리 얼마임?",
+    "table": "shopify",
+    "category": "product_type",
+    "status": "OK",
+    "time": 17.8,
+    "answer_len": 1440,
+    "answer_preview": "### 📊 2024년 Shopify 제품유형별 총 판매액 분석  #### 요약  2024년 Shopify 제품유형별 총 판매액은 약 **593만원**으로 집계되었습니다. 이 중 'Sun' 제품 유형이 약 **151만원**의 판매액으로 가장 높은 비중을 차지했으며, 분류되지 않은 제품 유형(Type: \"\")이 약 **148만원**으로 두 번째로 높은 판매액을"
+  },
+  {
+    "id": "V2_SH-090",
+    "query": "쇼피파이 제품유형별 주문수량",
+    "table": "shopify",
+    "category": "product_type",
+    "status": "OK",
+    "time": 14.2,
+    "answer_len": 1497,
+    "answer_preview": "### 📊 쇼피파이 제품 유형별 총 주문 수량 분석  #### 요약  쇼피파이에서 가장 많이 주문된 제품 유형은 **Ampoule/Serum**으로 총 **324,598개**가 주문되었습니다. 이어서 유형이 명확히 분류되지 않은 제품(Type: \"\")이 **252,920개**로 두 번째로 높은 주문 수량을 기록했으며, **Mask/Pad**가 **246,4"
+  },
+  {
+    "id": "V2_SH-091",
+    "query": "Shopify 제품 Type 종류 몇 개야",
+    "table": "shopify",
+    "category": "product_type",
+    "status": "OK",
+    "time": 9.4,
+    "answer_len": 373,
+    "answer_preview": "### 📊 Shopify 제품 Type 종류 현황  #### 요약  Shopify 데이터 분석 결과, 현재 **11개**의 고유한 제품 Type이 확인되었습니다.  #### 분석 및 인사이트  *   현재 SKIN1004 Shopify 채널에서 총 11가지의 다양한 제품 Type을 운영하고 있습니다. 이는 제품 포트폴리오가 여러 카테고리에 걸쳐 분포되어 있"
+  },
+  {
+    "id": "V2_SH-092",
+    "query": "Shopify 제품유형별 반품 상황",
+    "table": "shopify",
+    "category": "product_type",
+    "status": "OK",
+    "time": 26.5,
+    "answer_len": 1199,
+    "answer_preview": "### 📊 Shopify 제품유형별 반품 현황 분석  #### 요약  2019년 1월 1일 이후 Shopify 데이터 분석 결과, 총 반품액은 **약 2.16억원**으로 집계되었습니다. 이 중 유형이 명시되지 않은 제품의 반품액이 **약 1.04억원**으로 가장 높았으며, 'Ampoule/Serum'이 **3,244만원**, 'Sun' 제품이 **1,954"
+  },
+  {
+    "id": "V2_SH-093",
+    "query": "간단하게 2025년 Shopify 제품유형별 매출 추이",
+    "table": "shopify",
+    "category": "product_type",
+    "status": "OK",
+    "time": 33.2,
+    "answer_len": 2062,
+    "answer_preview": "### 📊 2025년 Shopify 제품유형별 매출 추이 분석 (상위 20개 조합 기준)  #### 요약  2025년 Shopify의 총 매출은 **8,544,906**을 기록했습니다. 제공된 상위 20개 월별 제품 유형 매출 조합 데이터를 분석한 결과, **2월의 Sun 제품**이 451,306.99로 가장 높은 단일 월 매출을 기록했으며, **11월의 "
+  },
+  {
+    "id": "V2_SH-094",
+    "query": "Shopify 미국 제품유형별 매출금액",
+    "table": "shopify",
+    "category": "product_type",
+    "status": "OK",
+    "time": 25.5,
+    "answer_len": 1499,
+    "answer_preview": "### 📊 Shopify 미국 제품유형별 매출 분석 (2019년 1월 1일 이후)  #### 요약  Shopify 미국 시장에서 2019년 1월 1일 이후 발생한 총 매출은 약 **152.9억원** (USD 11,764,186)으로 집계되었습니다. 이 중 분류되지 않은 제품 유형(`\"\"`)이 약 **42.9억원** (USD 3,301,477)으로 가장 높은"
+  },
+  {
+    "id": "V2_SH-095",
+    "query": "정확한 Shopify 제품유형별 평균 매상 부탁",
+    "table": "shopify",
+    "category": "product_type",
+    "status": "OK",
+    "time": 15.5,
+    "answer_len": 1385,
+    "answer_preview": "### 📊 Shopify 제품유형별 평균 매상 분석  #### 요약  Shopify 제품유형별 평균 매상 분석 결과, 'Sun' 제품 유형이 **121.55**로 가장 높은 평균 매상을 기록했습니다. 'Others'와 분류되지 않은 유형(`\"\"`) 또한 상대적으로 높은 평균 매상을 보였습니다.  #### 상세 데이터  | 제품 유형      | 평균 매상 "
+  },
+  {
+    "id": "V2_SH-096",
+    "query": "간단하게 Shopify 미국 주문개수 알려줘",
+    "table": "shopify",
+    "category": "order_quantity",
+    "status": "OK",
+    "time": 13.6,
+    "answer_len": 498,
+    "answer_preview": "### 📊 Shopify 미국 주문 개수 분석  #### 요약  2019년 1월 1일부터 현재(2026년 3월 8일)까지의 Shopify 미국 주문 개수를 조회한 결과, 해당 기간 동안의 주문 데이터가 **존재하지 않습니다.**  #### 상세 데이터  (단일 결과이므로 상세 데이터 섹션은 생략합니다.)  #### 분석 및 인사이트  *   요청하신 기간("
+  },
+  {
+    "id": "V2_SH-097",
+    "query": "Shopify 영국 주문수량 얼마인가요",
+    "table": "shopify",
+    "category": "order_quantity",
+    "status": "OK",
+    "time": 15.3,
+    "answer_len": 483,
+    "answer_preview": "### 📊 Shopify 영국 주문수량 분석  #### 요약  Shopify 채널을 통한 영국의 총 주문 수량은 현재 **데이터가 확인되지 않습니다.**  #### 분석 및 인사이트  *   **데이터 부재 확인:** 현재 조회된 데이터에서 Shopify 채널의 영국 주문 수량은 집계되지 않았습니다. 이는 다음 중 하나를 의미할 수 있습니다:     *  "
+  },
+  {
+    "id": "V2_SH-098",
+    "query": "2024년 Shopify 나라별 주문수량 현재 상태 확인 부탁드립니다",
+    "table": "shopify",
+    "category": "order_quantity",
+    "status": "OK",
+    "time": 20.1,
+    "answer_len": 1287,
+    "answer_preview": "### 📊 2024년 Shopify 나라별 주문수량 현황  #### 요약  2024년 Shopify 주문수량 분석 결과, **미국**이 **463,020개**로 압도적인 1위를 차지하며 가장 큰 시장임을 보여주었습니다. 캐나다(62,337개)와 호주(25,770개)가 그 뒤를 이어 주요 시장으로 나타났습니다.  #### 상세 데이터  2024년 Shopif"
+  },
+  {
+    "id": "V2_SH-099",
+    "query": "Shopify 일본 총 주문개수 어떻게 되나요?",
+    "table": "shopify",
+    "category": "order_quantity",
+    "status": "OK",
+    "time": 13.2,
+    "answer_len": 709,
+    "answer_preview": "### 📊 Shopify 일본 총 주문 개수 분석  #### 요약  2019년 1월 1일부터 현재(2026년 3월 8일)까지의 데이터를 기준으로, Shopify 일본 채널의 **총 주문 개수는 확인되지 않습니다.** 이는 해당 기간 동안 Shopify 일본 채널에서 발생한 주문 데이터가 없거나, 집계 가능한 주문 수량 데이터가 존재하지 않음을 의미합니다. "
+  },
+  {
+    "id": "V2_SH-100",
+    "query": "Shopify 주문수량이 최다 국가 알려주시면 감사하겠습니다",
+    "table": "shopify",
+    "category": "order_quantity",
+    "status": "OK",
+    "time": 12.3,
+    "answer_len": 430,
+    "answer_preview": "### 📊 Shopify 주문수량 최다 국가 분석  #### 요약  Shopify 주문수량이 가장 많은 국가는 **미국**이며, 총 **1,182,217**개의 주문 수량을 기록했습니다.  #### 분석 및 인사이트  *   **미국 시장의 압도적 우위:** Shopify 채널에서 미국이 다른 국가들을 압도하며 가장 큰 주문 수량을 기록하는 핵심 시장임을 "
+  },
+  {
+    "id": "V2_SH-101",
+    "query": "2025년 Shopify 한국 주문수량 확인 부탁드립니다",
+    "table": "shopify",
+    "category": "order_quantity",
+    "status": "OK",
+    "time": 14.6,
+    "answer_len": 421,
+    "answer_preview": "### 📊 2025년 Shopify 한국 주문수량 분석 결과  #### 요약  2025년 Shopify 한국 주문수량은 **데이터가 확인되지 않습니다.** 요청하신 기간 및 국가에 해당하는 주문수량은 현재 집계된 바가 없습니다.  #### 분석 및 인사이트  *   요청하신 2025년 Shopify 한국 주문수량에 대한 데이터가 현재 시스템에서 조회되지 않"
+  },
+  {
+    "id": "V2_SH-102",
+    "query": "Shopify 호주 주문수량 데이터 어떻게 되나요?",
+    "table": "shopify",
+    "category": "order_quantity",
+    "status": "OK",
+    "time": 14.8,
+    "answer_len": 557,
+    "answer_preview": "### 📊 Shopify 호주 총 주문 수량 분석  #### 요약  Shopify 호주 채널의 2019년 1월 1일부터 현재(2026년 3월 8일)까지의 누적 총 주문 수량은 **72,071개**입니다. 이 수치는 호주 시장에서 Shopify를 통한 제품 판매 활동의 전반적인 규모를 보여줍니다.  #### 분석 및 인사이트  *   Shopify 호주 채널"
+  },
+  {
+    "id": "V2_SH-103",
+    "query": "혹시 Shopify 독일 주문갯수 보여줘",
+    "table": "shopify",
+    "category": "order_quantity",
+    "status": "OK",
+    "time": 16.3,
+    "answer_len": 607,
+    "answer_preview": "### 📊 Shopify 독일 주문 현황  #### 요약  2019년 1월 1일부터 현재(2026년 3월 8일)까지 Shopify 채널을 통한 독일 주문 수량은 **확인되지 않습니다.** 조회된 데이터에 따르면 주문 수량이 **0건**이거나 관련 데이터가 존재하지 않습니다.  #### 분석 및 인사이트  *   **독일 Shopify 주문 데이터 부재:**"
+  },
+  {
+    "id": "V2_SH-104",
+    "query": "Shopify 각 나라 주문개수 TOP 10",
+    "table": "shopify",
+    "category": "order_quantity",
+    "status": "OK",
+    "time": 15.6,
+    "answer_len": 1341,
+    "answer_preview": "### 📊 Shopify 국가별 총 주문 수량 TOP 10 분석  #### 요약  Shopify 데이터를 기준으로 2019년 1월 1일부터 현재까지의 국가별 총 주문 수량을 분석한 결과, **미국**이 **1,182,217개**로 압도적인 1위를 차지했습니다. 이는 2위인 캐나다(148,084개)보다 약 8배 높은 수치이며, 전체 TOP 10 국가 중에서도"
+  },
+  {
+    "id": "V2_SH-105",
+    "query": "요즘 Shopify 월별 총 주문갯수 추이",
+    "table": "shopify",
+    "category": "order_quantity",
+    "status": "OK",
+    "time": 17.0,
+    "answer_len": 1270,
+    "answer_preview": "### 📊 Shopify 월별 총 주문 수량 추이 분석  #### 요약  Shopify의 월별 총 주문 수량은 2025년 3월부터 2026년 3월까지 다양한 변동을 보였습니다. 특히 **2025년 11월에 187,212개**로 가장 높은 주문 수량을 기록했으며, 이는 연중 최대 프로모션 기간의 영향으로 분석됩니다. 가장 최근 완료된 월인 2026년 2월에는"
+  },
+  {
+    "id": "V2_SH-106",
+    "query": "Shopify 캐나다 주문수량 현황 알려주시면 감사하겠습니다",
+    "table": "shopify",
+    "category": "order_quantity",
+    "status": "OK",
+    "time": 15.2,
+    "answer_len": 542,
+    "answer_preview": "### 📊 Shopify 캐나다 주문수량 현황 분석  #### 요약  Shopify 채널을 통한 캐나다의 총 주문수량은 2019년 1월 1일부터 현재까지 **148,084개**로 집계되었습니다. 이는 캐나다 시장에서 Shopify를 통해 활발한 판매 활동이 이루어졌음을 보여줍니다.  #### 분석 및 인사이트  *   Shopify 캐나다 채널은 2019년"
+  },
+  {
+    "id": "V2_SH-107",
+    "query": "2024년 Shopify 프랑스 주문수량 빨리 알려주세요",
+    "table": "shopify",
+    "category": "order_quantity",
+    "status": "OK",
+    "time": 11.9,
+    "answer_len": 444,
+    "answer_preview": "### 📊 2024년 Shopify 프랑스 주문수량 분석  #### 요약  2024년 Shopify 프랑스 채널의 총 주문수량은 **11,372개**로 집계되었습니다. 이는 해당 기간 동안 프랑스 시장에서 Shopify를 통해 발생한 전체 주문 건수를 나타냅니다.  #### 분석 및 인사이트  *   2024년 한 해 동안 Shopify 프랑스 채널에서 총"
+  },
+  {
+    "id": "V2_SH-108",
+    "query": "Shopify 각 나라 반품률 순서 확인 부탁드립니다",
+    "table": "shopify",
+    "category": "return_rate",
+    "status": "OK",
+    "time": 18.3,
+    "answer_len": 2099,
+    "answer_preview": "### 📊 Shopify 국가별 반품률 순위 분석  #### 요약  Shopify 데이터를 분석한 결과, **스페인**이 **197.55%**로 가장 높은 반품률을 기록했으며, **카자흐스탄**이 **105.42%**로 그 뒤를 이었습니다. 이 두 국가는 반품액이 총 매출액을 초과하는 이례적인 양상을 보였습니다. 전체 51개 국가 중 상위 10개 국가의 반"
+  },
+  {
+    "id": "V2_SH-109",
+    "query": "확인 좀 해줘 Shopify 미국 반품률 몇 퍼센트야? 정리해줘",
+    "table": "shopify",
+    "category": "return_rate",
+    "status": "OK",
+    "time": 14.3,
+    "answer_len": 536,
+    "answer_preview": "### 📊 Shopify 미국 반품률 분석  #### 요약  Shopify 채널을 통한 미국 시장의 총 반품률은 **1.10%**로 집계되었습니다. 이는 2019년 1월 1일부터 현재까지의 데이터를 기준으로 산출된 수치입니다.  #### 분석 및 인사이트  *   **낮은 반품률:** Shopify 미국 시장의 반품률 1.10%는 일반적으로 낮은 수준으로 "
+  },
+  {
+    "id": "V2_SH-110",
+    "query": "Shopify 반품률이 10% 이상인 국가 알려주시면 감사하겠습니다",
+    "table": "shopify",
+    "category": "return_rate",
+    "status": "OK",
+    "time": 16.6,
+    "answer_len": 1235,
+    "answer_preview": "### 📊 Shopify 반품률 10% 이상 국가 현황  #### 요약  Shopify 데이터를 분석한 결과, 반품률이 **10% 이상**인 국가는 총 **7개**로 확인되었습니다. 이 중 스페인의 반품률이 **197.55%**로 가장 높게 나타났으며, 카자흐스탄(**105.42%**)과 러시아(**70.51%**)가 그 뒤를 이었습니다.  #### 상세 "
+  },
+  {
+    "id": "V2_SH-111",
+    "query": "참고로 2024년 Shopify 전체 반품률",
+    "table": "shopify",
+    "category": "return_rate",
+    "status": "OK",
+    "time": 12.5,
+    "answer_len": 484,
+    "answer_preview": "### 📊 2024년 Shopify 전체 반품률 분석  #### 요약  2024년 Shopify 채널의 전체 반품률은 **0.50%**로 집계되었습니다. 이는 매우 낮은 수준의 반품률을 나타냅니다.  #### 분석 및 인사이트  *   2024년 Shopify 채널의 전체 반품률은 **0.50%**로, 판매된 제품 대비 반품되는 비율이 매우 낮은 수준을 유"
+  },
+  {
+    "id": "V2_SH-112",
+    "query": "shopify 제품별 반품률 높은 순서 부탁드려요",
+    "table": "shopify",
+    "category": "return_rate",
+    "status": "OK",
+    "time": 37.8,
+    "answer_len": 4256,
+    "answer_preview": "### 📊 Shopify 제품별 반품률 분석 보고서  #### 요약  Shopify 제품 중 **Poremizing Quick Clay Stick Mask**가 매출액 대비 반품률이 **0.79%**로 가장 높게 나타났습니다. 이는 총 매출 약 52.3만원 중 약 4.1천원이 반품된 수치입니다. 그 다음으로는 Hyalu-Cica Water-Fit Sun S"
+  },
+  {
+    "id": "V2_SH-113",
+    "query": "Shopify 영국 반품률 확인해줘",
+    "table": "shopify",
+    "category": "return_rate",
+    "status": "OK",
+    "time": 18.5,
+    "answer_len": 582,
+    "answer_preview": "### 📊 Shopify 영국 채널 반품률 분석  #### 요약  Shopify 영국 채널의 2019년 1월 1일부터 현재까지의 총 매출은 **245,221.46**이었으며, 이 중 총 반품액은 **1,521.76**으로 집계되었습니다. 이에 따라 영국 채널의 반품률은 **0.62%**로 나타났습니다.  #### 상세 데이터  (단일 데이터이므로 생략)  "
+  },
+  {
+    "id": "V2_SH-114",
+    "query": "Shopify 일본 반품률 현재 상태",
+    "table": "shopify",
+    "category": "return_rate",
+    "status": "OK",
+    "time": 14.8,
+    "answer_len": 302,
+    "answer_preview": "해당 조건에 맞는 데이터가 존재하지 않습니다.  제공된 SQL 쿼리에서 `Country = '일본'` 조건으로 데이터를 조회했지만, 해당 조건에 맞는 반품률 데이터가 현재 테이블에 없는 것으로 확인됩니다. '일본'은 유효한 국가 값 목록에 포함되어 있지만, 실제 데이터는 존재하지 않는 것으로 보입니다.  다음과 같은 질문으로 유사한 데이터를 조회해 볼 수 "
+  },
+  {
+    "id": "V2_SH-115",
+    "query": "Shopify 반품률 가장 낮은 국가 TOP 5 알려주세요",
+    "table": "shopify",
+    "category": "return_rate",
+    "status": "OK",
+    "time": 19.0,
+    "answer_len": 885,
+    "answer_preview": "### 📊 Shopify 반품률 최저 국가 TOP 5 분석  #### 요약  제공된 데이터에 따르면, Shopify 반품률이 가장 낮은 상위 5개 국가는 그리스, 크로아티아, 남아프리카 공화국, 포르투갈, 몰타입니다. 이 국가들은 **음수 반품률**을 기록하고 있으며, 이는 데이터 기록 방식 또는 집계 방식에 대한 추가적인 확인이 필요함을 시사합니다.  #"
+  },
+  {
+    "id": "V2_SH-116",
+    "query": "Shopify 월별 반품률 추이 정리해줘",
+    "table": "shopify",
+    "category": "return_rate",
+    "status": "OK",
+    "time": 23.5,
+    "answer_len": 2912,
+    "answer_preview": "### 📊 Shopify 월별 반품률 추이 분석  #### 요약  ⚠️ Shopify 월별 반품률 데이터는 2021년 10월부터 2026년 3월까지 존재하며, 2026년 3월 데이터는 현재 (2026년 03월 08일 기준) 일부만 반영된 수치입니다. 분석 기간 동안 Shopify의 월별 반품률은 **평균 약 5.01%**를 기록했습니다 (음수 및 NULL "
+  },
+  {
+    "id": "V2_SH-117",
+    "query": "요즘 2025년 Shopify 반품률 변화",
+    "table": "shopify",
+    "category": "return_rate",
+    "status": "OK",
+    "time": 15.4,
+    "answer_len": 991,
+    "answer_preview": "### 📊 2025년 Shopify 월별 반품률 변화 분석  #### 요약  2025년 Shopify의 월별 반품률은 **최저 0.27%** (6월)에서 **최고 13.31%** (10월)까지 큰 변동을 보였습니다. 특히 **10월에 13.31%**로 급격히 상승하며 연중 최고치를 기록했고, 연평균 반품률은 약 2.97%였습니다.  #### 상세 데이터 |"
+  },
+  {
+    "id": "V2_SH-118",
+    "query": "Shopify 가장 많이 팔린 제품 알려줘 부탁 알려주시면 감사하겠습니다",
+    "table": "shopify",
+    "category": "top_products",
+    "status": "OK",
+    "time": 20.7,
+    "answer_len": 2042,
+    "answer_preview": "### 📊 Shopify 베스트셀러 제품 분석 보고서 (2019년 1월 1일 이후)  #### 요약  Shopify 채널에서 2019년 1월 1일 이후 가장 많이 팔린 제품은 \"Hyalu-Cica Water-Fit Sun Serum SPF50+ PA++++\"로, 총 **약 19.5억원**의 매출을 기록하며 압도적인 1위를 차지했습니다. 상위 10개 제품 중"
+  },
+  {
+    "id": "V2_SH-119",
+    "query": "정확한 Shopify 전체 판매 1위 제품",
+    "table": "shopify",
+    "category": "top_products",
+    "status": "OK",
+    "time": 13.4,
+    "answer_len": 546,
+    "answer_preview": "### 📊 Shopify 전체 판매 1위 제품 분석  #### 요약  Shopify 전체 판매 데이터(2019년 1월 1일 이후)를 기준으로, 'Hyalu-Cica Water-Fit Sun Serum SPF50+ PA++++' 제품이 총 **약 19.5억원**의 매출을 기록하며 압도적인 1위를 차지했습니다.  #### 분석 및 인사이트  *   `Hyalu"
+  },
+  {
+    "id": "V2_SH-120",
+    "query": "혹시 Shopify 누적 판매량 TOP 3 제품 알려주시면 감사하겠습니다",
+    "table": "shopify",
+    "category": "top_products",
+    "status": "OK",
+    "time": 14.3,
+    "answer_len": 1076,
+    "answer_preview": "### 📊 Shopify 누적 판매량 TOP 3 제품 분석  #### 요약  Shopify 채널에서 2019년 1월 1일부터 현재(2026년 3월 8일)까지의 누적 판매량 기준 TOP 3 제품은 'Hyalu-Cica Water-Fit Sun Serum SPF50+ PA++++'가 **153,011개**로 압도적인 1위를 차지했습니다. 이어서 'Centell"
+  },
+  {
+    "id": "V2_SH-121",
+    "query": "2024년 Shopify 최다 판매 제품 좀 알려줘",
+    "table": "shopify",
+    "category": "top_products",
+    "status": "OK",
+    "time": 21.2,
+    "answer_len": 1820,
+    "answer_preview": "### 📊 2024년 Shopify 최다 판매 제품 분석  #### 요약  2024년 Shopify에서 가장 많이 판매된 제품은 'Hyalu-Cica Water-Fit Sun Serum SPF50+ PA++++'으로, **100,132개**가 판매되어 약 **16.1억원**의 매출을 기록했습니다. 상위 10개 제품 중 선케어 제품이 2개, 센텔라 라인 제품"
+  },
+  {
+    "id": "V2_SH-122",
+    "query": "잠깐, Shopify 미국에서 1위 제품 뭐야? 확인해줘",
+    "table": "shopify",
+    "category": "top_products",
+    "status": "OK",
+    "time": 13.5,
+    "answer_len": 326,
+    "answer_preview": "죄송합니다. '미국' 국가의 Shopify 판매 데이터는 현재 조회되지 않습니다.  현재 SQL 쿼리에서 사용된 필터 조건은 `Country = '미국'`입니다. '미국'은 유효한 국가 값 목록에 포함되어 있지만, 해당 조건에 맞는 Shopify 판매 데이터가 존재하지 않아 결과가 0행으로 나왔습니다.  대신 다음 질문들을 통해 비슷한 데이터를 조회해 볼 "
+  },
+  {
+    "id": "V2_SH-123",
+    "query": "Shopify 영국 베스트셀러 제품 확인 부탁드립니다",
+    "table": "shopify",
+    "category": "top_products",
+    "status": "OK",
+    "time": 19.5,
+    "answer_len": 1926,
+    "answer_preview": "### 📊 Shopify 영국 베스트셀러 제품 분석  #### 요약  Shopify 영국 채널에서 가장 많이 판매된 제품은 **Centella Ampoule**로, 총 **17,122.35**의 매출을 기록했습니다. 상위 10개 제품 중 7개가 'Centella' 라인업에 속하며, 특히 앰플, 선 세럼, 클렌징 오일 등 데일리 스킨케어 핵심 제품들이 강세를"
+  },
+  {
+    "id": "V2_SH-124",
+    "query": "잠깐, Shopify 일본에서 가장 인기 있는 제품 빨리",
+    "table": "shopify",
+    "category": "top_products",
+    "status": "OK",
+    "time": 23.4,
+    "answer_len": 326,
+    "answer_preview": "죄송합니다, 해당 조건(국가: 일본)에 맞는 판매 데이터가 존재하지 않습니다.  **문제 조건 확인:** SQL에서 사용된 `Country = '일본'` 필터 조건이 문제입니다. '일본'은 유효한 국가 값 목록에 포함되어 있지만, 현재 데이터베이스에는 '일본'으로 필터링했을 때 조회되는 판매 데이터가 없는 것으로 보입니다.  **비슷한 데이터를 조회할 수 "
+  },
+  {
+    "id": "V2_SH-125",
+    "query": "궁금한데 Shopify에서 매출금액 높은 제품 TOP 15 몇이야?",
+    "table": "shopify",
+    "category": "top_products",
+    "status": "OK",
+    "time": 29.2,
+    "answer_len": 2269,
+    "answer_preview": "### 📊 Shopify 매출액 기준 TOP 15 제품 분석  #### 요약  Shopify 채널에서 2019년 1월 1일부터 2026년 3월 8일까지의 매출 데이터를 분석한 결과, **'Hyalu-Cica Water-Fit Sun Serum SPF50+ PA++++'** 제품이 **약 25.4억원**의 압도적인 매출로 1위를 차지했습니다. 상위 15개 제"
+  },
+  {
+    "id": "V2_SH-126",
+    "query": "우리 회사 2025년 Shopify 인기 제품 리스트 알고 싶어",
+    "table": "shopify",
+    "category": "top_products",
+    "status": "OK",
+    "time": 19.3,
+    "answer_len": 3108,
+    "answer_preview": "### 📊 2025년 Shopify 인기 제품 매출 분석 보고서  #### 요약  2025년 한 해 동안 Shopify 채널에서 **총 117개**의 고유 제품이 판매되었으며, 총 매출은 **8,544,906 KRW**를 기록했습니다. 이 중 'Hyalu-Cica Water-Fit Sun Serum SPF50+ PA++++' 제품이 **705,003 KRW"
+  },
+  {
+    "id": "V2_SH-127",
+    "query": "정확한 Shopify 독일에서 잘 팔리는 제품",
+    "table": "shopify",
+    "category": "top_products",
+    "status": "OK",
+    "time": 24.9,
+    "answer_len": 2217,
+    "answer_preview": "### 📊 Shopify 독일 베스트셀러 제품 분석  #### 요약  Shopify 독일 채널에서 가장 잘 팔리는 제품은 **\"Centella Ampoule\"**로, 총 **8,584.26**의 매출과 **909**개의 판매량을 기록했습니다. 전체 독일 Shopify 채널에서는 총 **132,850**의 매출과 **14,012**개의 제품이 판매되었습니다."
+  },
+  {
+    "id": "V2_SH-128",
+    "query": "2024년 1분기 Shopify 매출 알려주세요",
+    "table": "shopify",
+    "category": "quarterly",
+    "status": "OK",
+    "time": 12.3,
+    "answer_len": 374,
+    "answer_preview": "### 📊 2024년 1분기 Shopify 매출 현황  #### 요약  2024년 1분기(1월 1일 ~ 3월 31일) Shopify 채널의 총 매출은 **461,042원**으로 집계되었습니다.  #### 분석 및 인사이트  *   2024년 1분기 Shopify 채널의 총 매출은 461,042원을 기록했습니다. *   > 해당 분기의 매출은 Shopify "
+  },
+  {
+    "id": "V2_SH-129",
+    "query": "2024년 2분기 Shopify 매출 현황 정리해줘 알 수 있을까요?",
+    "table": "shopify",
+    "category": "quarterly",
+    "status": "OK",
+    "time": 12.9,
+    "answer_len": 561,
+    "answer_preview": "### 📊 2024년 2분기 Shopify 매출 현황  #### 요약  2024년 2분기(4월 1일 ~ 6월 30일) Shopify 총 매출은 **약 104만 3천 달러**를 기록했습니다. 이 기간 동안 총 **85,668개**의 상품이 주문되었으며, 반품액은 **5,141.73 달러**였습니다.  #### 분석 및 인사이트  *   2024년 2분기 Sh"
+  },
+  {
+    "id": "V2_SH-130",
+    "query": "2024년 3분기 Shopify 수익",
+    "table": "shopify",
+    "category": "quarterly",
+    "status": "OK",
+    "time": 13.2,
+    "answer_len": 299,
+    "answer_preview": "### 📊 2024년 3분기 Shopify 수익 분석  #### 요약  2024년 3분기 Shopify 채널의 총 수익은 **$1,032,163.04**를 기록했습니다.  #### 분석 및 인사이트  *   2024년 3분기(7월~9월) 동안 Shopify 채널에서 발생한 총 수익은 1백만 달러를 넘어섰습니다. *   `> 해당 분기 동안 Shopify를 "
+  },
+  {
+    "id": "V2_SH-131",
+    "query": "2024년 4분기 Shopify 매출액",
+    "table": "shopify",
+    "category": "quarterly",
+    "status": "OK",
+    "time": 15.7,
+    "answer_len": 395,
+    "answer_preview": "### 📊 2024년 4분기 Shopify 매출액 분석 보고서  #### 요약  2024년 4분기 Shopify 채널의 총 매출액은 **3,385,692원**으로 집계되었습니다. 이 수치는 해당 분기 동안 Shopify를 통한 판매 성과를 나타냅니다.  #### 분석 및 인사이트  *   2024년 4분기는 일반적으로 연말 쇼핑 시즌(블랙프라이데이, 사이버"
+  },
+  {
+    "id": "V2_SH-132",
+    "query": "참고로 2025년 1분기 Shopify 판매액",
+    "table": "shopify",
+    "category": "quarterly",
+    "status": "OK",
+    "time": 17.1,
+    "answer_len": 442,
+    "answer_preview": "### 📊 2025년 1분기 Shopify 판매액 분석  #### 요약  2025년 1분기(1월~3월) Shopify 채널의 총 판매액은 **3,173,793원**을 기록했습니다. 이는 해당 기간 동안 Shopify를 통한 매출 성과를 나타냅니다.  #### 분석 및 인사이트  *   2025년 1분기 Shopify 판매액은 3백만원대 초반으로 집계되었습니"
+  },
+  {
+    "id": "V2_SH-133",
+    "query": "빠르게 Shopify 분기별 매출 대비",
+    "table": "shopify",
+    "category": "quarterly",
+    "status": "OK",
+    "time": 24.9,
+    "answer_len": 1525,
+    "answer_preview": "### 📊 Shopify 분기별 매출 현황 및 추이 분석  #### 요약  Shopify 분기별 매출은 2021년 4분기부터 2026년 1분기까지의 데이터를 기반으로 분석되었습니다. **2024년 총 매출은 약 592만원**을 기록하며 전년 대비 크게 성장했으며, **2025년에는 약 854만원**으로 최고 매출을 달성했습니다. **2026년 1분기 매출은"
+  },
+  {
+    "id": "V2_SH-134",
+    "query": "혹시 Shopify 분기별 세일즈 성장률?",
+    "table": "shopify",
+    "category": "quarterly",
+    "status": "OK",
+    "time": 43.2,
+    "answer_len": 2058,
+    "answer_preview": "### 📊 Shopify 분기별 세일즈 성장률 분석  #### 요약  2026년 1분기 Shopify 세일즈는 **약 88.0억원**을 기록했으나, 이는 2026년 3월 8일 현재까지의 부분 데이터입니다. 직전 분기(2025년 4분기) 대비 **-64.14%**의 성장률을 보이며 큰 폭으로 감소했습니다. 2023년 4분기부터 2024년 4분기까지 매출이 급"
+  },
+  {
+    "id": "V2_SH-135",
+    "query": "2024년 어느 분기 매출이 가장 높았어? Shopify 부탁",
+    "table": "shopify",
+    "category": "quarterly",
+    "status": "OK",
+    "time": 22.5,
+    "answer_len": 498,
+    "answer_preview": "### 📊 2024년 Shopify 분기별 최고 매출 분석  #### 요약  2024년 Shopify 매출 중 가장 높았던 분기는 **4분기**로 확인되었습니다. 해당 분기에는 약 **43.9억원**의 매출을 기록하며 연간 최고 실적을 달성했습니다.  #### 분석 및 인사이트  *   2024년 Shopify 매출은 4분기에 가장 높은 실적을 보였습니다."
+  },
+  {
+    "id": "V2_SH-136",
+    "query": "확인 좀 해줘 Shopify 전분기 대비 수익 증감은 어떤가요?",
+    "table": "shopify",
+    "category": "quarterly",
+    "status": "OK",
+    "time": 16.0,
+    "answer_len": 751,
+    "answer_preview": "### 📊 Shopify 전분기 대비 수익 분석 (2026년 1분기 현재)  #### 요약  ⚠️ 2026년 1분기 데이터는 현재 3월 8일까지의 매출만 포함되어 있습니다. Shopify의 2026년 1분기(현재까지) 수익은 **약 88.0만원**으로, 전분기(2025년 4분기) **약 245.3만원** 대비 **약 64.1% 감소**했습니다. 이 감소는 "
+  },
+  {
+    "id": "V2_SH-137",
+    "query": "2024년 상반기 vs 하반기 Shopify 매출 궁금해 알려주세요",
+    "table": "shopify",
+    "category": "quarterly",
+    "status": "OK",
+    "time": 20.2,
+    "answer_len": 987,
+    "answer_preview": "### 📊 2024년 Shopify 상반기 vs 하반기 매출 분석  #### 요약  2024년 Shopify 매출은 **하반기에 약 57.4억원**을 기록하며, **상반기 약 19.6억원** 대비 **약 193% 증가**한 것으로 나타났습니다. 이는 하반기에 매출이 크게 성장하여 연간 매출의 약 75%를 차지했음을 보여줍니다.  #### 상세 데이터  20"
+  },
+  {
+    "id": "V2_SH-138",
+    "query": "궁금한데 2분기 2025년 Shopify 매출액 전망",
+    "table": "shopify",
+    "category": "quarterly",
+    "status": "OK",
+    "time": 50.1,
+    "answer_len": 2754,
+    "answer_preview": "### 📈 2025년 2분기 Shopify 매출액 전망 분석  #### 요약  SKIN1004의 2025년 2분기 Shopify 매출액에 대한 직접적인 내부 데이터는 현재 제공되지 않아 정확한 전망은 어렵습니다. 그러나 **Shopify Inc.는 2025년 2분기에 전년 대비 31% 증가한 26.8억~27억 달러의 매출을 기록하며 시장 기대를 상회**하는"
+  },
+  {
+    "id": "V2_SH-139",
+    "query": "Shopify 2024년 분기별 주문수",
+    "table": "shopify",
+    "category": "quarterly",
+    "status": "OK",
+    "time": 13.2,
+    "answer_len": 720,
+    "answer_preview": "### 📊 Shopify 2024년 분기별 주문수 분석  #### 요약  2024년 Shopify 주문수는 총 **601,343개**를 기록했습니다. 특히 4분기에 **386,523개**의 주문이 발생하며 연간 주문량의 대부분을 차지했습니다.  #### 상세 데이터  2024년 Shopify 분기별 주문수는 다음과 같습니다.  | 분기 | 총 주문수 | |"
+  },
+  {
+    "id": "V2_SH-140",
+    "query": "Shopify 미국 분기별 매출액",
+    "table": "shopify",
+    "category": "quarterly",
+    "status": "OK",
+    "time": 29.3,
+    "answer_len": 1660,
+    "answer_preview": "### 📊 Shopify 미국 분기별 매출액 분석 보고서  #### 요약  ⚠️ 2026년 1분기 데이터는 현재 1월~3월 8일 기준의 부분 데이터입니다. Shopify 미국 매출은 2022년부터 2024년까지 급격한 성장세를 보였으며, 특히 **2024년 4분기에 2,551,708.49 USD (약 34.4억원)**로 최고 매출을 기록했습니다. 2025년"
+  },
+  {
+    "id": "V2_SH-141",
+    "query": "쇼피파이 2024년 1월 매출 알려주시면 감사하겠습니다",
+    "table": "shopify",
+    "category": "specific_month",
+    "status": "OK",
+    "time": 12.9,
+    "answer_len": 387,
+    "answer_preview": "### 📊 2024년 1월 쇼피파이 총 매출 분석  #### 요약  2024년 1월 쇼피파이 총 매출은 **123,296.34** 달러를 기록했습니다. 이는 해당 기간 동안 쇼피파이 채널에서 발생한 전체 매출 합계입니다.  #### 분석 및 인사이트  *   2024년 1월 쇼피파이 매출은 약 12만 3천 달러 수준으로 집계되었습니다. *   해당 매출은 "
+  },
+  {
+    "id": "V2_SH-142",
+    "query": "Shopify 2024년 2월 매출 얼마나 돼 부탁드려요",
+    "table": "shopify",
+    "category": "specific_month",
+    "status": "OK",
+    "time": 14.8,
+    "answer_len": 384,
+    "answer_preview": "### 📊 2024년 2월 Shopify 총 매출 분석  #### 요약  2024년 2월 Shopify 채널의 총 매출은 **117,994.78 달러**를 기록했습니다.  #### 분석 및 인사이트  *   2024년 2월 한 달간 Shopify 채널에서 발생한 총 매출액을 확인했습니다. *   이 데이터는 해당 기간 동안 Shopify 채널의 전반적인 판"
+  },
+  {
+    "id": "V2_SH-143",
+    "query": "Shopify 3월 2024년 매출 현황 정리해줘은 어떤가요?",
+    "table": "shopify",
+    "category": "specific_month",
+    "status": "OK",
+    "time": 14.1,
+    "answer_len": 379,
+    "answer_preview": "### 📊 Shopify 2024년 3월 매출 현황  #### 요약  2024년 3월 Shopify의 총 매출은 **219,751원**을 기록했습니다. 이는 해당 월의 전체 매출 합계입니다.  #### 분석 및 인사이트  *   2024년 3월 Shopify 채널을 통한 총 매출은 **219,751원**으로 집계되었습니다. *   해당 데이터는 2024년 "
+  },
+  {
+    "id": "V2_SH-144",
+    "query": "쇼피파이 2024년 4월 매출 확인 부탁드립니다",
+    "table": "shopify",
+    "category": "specific_month",
+    "status": "OK",
+    "time": 16.5,
+    "answer_len": 388,
+    "answer_preview": "### 📊 쇼피파이 2024년 4월 매출 현황  #### 요약  2024년 4월 쇼피파이 총 매출은 **318,156.68**로 집계되었습니다. 이는 사용자가 요청한 특정 월의 매출 합계입니다.  #### 분석 및 인사이트  *   2024년 4월 쇼피파이 총 매출은 318,156.68로 확인되었습니다. *   `> 해당 수치는 2024년 4월 한 달간 쇼"
+  },
+  {
+    "id": "V2_SH-145",
+    "query": "Shopify 2024년 5월 매출액 말해줘",
+    "table": "shopify",
+    "category": "specific_month",
+    "status": "OK",
+    "time": 12.5,
+    "answer_len": 276,
+    "answer_preview": "### 📊 Shopify 2024년 5월 매출액  #### 요약  Shopify 채널의 2024년 5월 총 매출액은 **317,086원**입니다.  #### 분석 및 인사이트  *   본 데이터는 2024년 5월 한 달 동안 Shopify 채널에서 발생한 총 매출액을 나타냅니다. *   > 이 수치는 해당 월의 Shopify 채널 매출 성과를 파악하는 데 "
+  },
+  {
+    "id": "V2_SH-146",
+    "query": "간단하게 Shopify 2024년 6월 판매액",
+    "table": "shopify",
+    "category": "specific_month",
+    "status": "OK",
+    "time": 15.9,
+    "answer_len": 293,
+    "answer_preview": "### 📊 Shopify 2024년 6월 판매액 분석  #### 요약  2024년 6월 Shopify 채널의 총 판매액은 **408,206.23 달러**입니다.  #### 분석 및 인사이트  *   2024년 6월 한 달간 Shopify 채널에서 발생한 총 판매액을 정확히 확인할 수 있습니다. *   `> 이 데이터는 특정 채널(Shopify)과 특정 월("
+  },
+  {
+    "id": "V2_SH-147",
+    "query": "우리 회사 Shopify 2024년 7월 매출 데이터",
+    "table": "shopify",
+    "category": "specific_month",
+    "status": "OK",
+    "time": 13.8,
+    "answer_len": 430,
+    "answer_preview": "### 📊 2024년 7월 Shopify 매출 현황  #### 요약  2024년 7월 우리 회사의 Shopify 총 매출은 **391,510.10원**을 기록했습니다. 이는 해당 월의 Shopify 채널을 통한 전체 판매 실적입니다.  #### 분석 및 인사이트  *   2024년 7월 Shopify 매출은 약 39만 1천원 수준으로 집계되었습니다. *  "
+  },
+  {
+    "id": "V2_SH-148",
+    "query": "Shopify 2024년 8월 매출 알려주세요",
+    "table": "shopify",
+    "category": "specific_month",
+    "status": "OK",
+    "time": 14.5,
+    "answer_len": 400,
+    "answer_preview": "### 📊 Shopify 2024년 8월 매출 현황  #### 요약  Shopify 채널의 2024년 8월 총 매출은 **306,768.63원**으로 집계되었습니다.  #### 분석 및 인사이트  *   2024년 8월 한 달간 Shopify 채널을 통해 발생한 총 매출액을 확인했습니다. *   해당 매출액은 Shopify 플랫폼에서 발생한 모든 판매를 합"
+  },
+  {
+    "id": "V2_SH-149",
+    "query": "궁금한데 Shopify 2024년 9월 매출 실태 궁금해",
+    "table": "shopify",
+    "category": "specific_month",
+    "status": "OK",
+    "time": 14.4,
+    "answer_len": 376,
+    "answer_preview": "### 📊 Shopify 2024년 9월 매출 현황  #### 요약  2024년 9월 Shopify 채널의 총 매출은 **333,884.31** 달러를 기록했습니다.  #### 분석 및 인사이트  *   2024년 9월 한 달간 Shopify 채널을 통해 발생한 총 매출액은 333,884.31 달러입니다. *   이 수치는 해당 월 Shopify 플랫폼에서"
+  },
+  {
+    "id": "V2_SH-150",
+    "query": "Shopify 2024년 10월 매출 부탁",
+    "table": "shopify",
+    "category": "specific_month",
+    "status": "OK",
+    "time": 15.3,
+    "answer_len": 290,
+    "answer_preview": "### 📊 Shopify 2024년 10월 매출 현황  #### 요약  2024년 10월 Shopify 채널의 총 매출은 **403,209원**으로 집계되었습니다.  #### 분석 및 인사이트  *   2024년 10월 Shopify 채널에서 총 403,209원의 매출이 발생했습니다. *   `> 해당 기간의 상세 매출 추이 또는 다른 채널/기간과의 비교 "
+  },
+  {
+    "id": "V2_SH-151",
+    "query": "Shopify 2024년 11월 매상 얼마인지?",
+    "table": "shopify",
+    "category": "specific_month",
+    "status": "OK",
+    "time": 15.9,
+    "answer_len": 377,
+    "answer_preview": "### 📊 Shopify 2024년 11월 매상 분석  #### 요약  2024년 11월 Shopify 채널의 총 매상은 **1,747,827.04원**을 기록했습니다.  #### 분석 및 인사이트  *   2024년 11월 Shopify 채널은 170만 원 이상의 매출을 달성했습니다. *   11월은 연말 쇼핑 시즌의 시작을 알리는 달로, 블랙프라이데이,"
+  },
+  {
+    "id": "V2_SH-152",
+    "query": "빠르게 Shopify 2024년 12월 메출",
+    "table": "shopify",
+    "category": "specific_month",
+    "status": "OK",
+    "time": 23.7,
+    "answer_len": 441,
+    "answer_preview": "### 📊 Shopify 2024년 12월 매출 분석  #### 요약  2024년 12월 Shopify 매출은 **1,234,655.82 달러**를 기록했습니다 (한화 약 16.1억원).  #### 분석 및 인사이트  *   2024년 12월은 연말 쇼핑 시즌과 휴일 프로모션이 집중되는 시기로, Shopify 채널에서 120만 달러 이상의 높은 매출을 달성"
+  },
+  {
+    "id": "V2_SH-153",
+    "query": "확인 좀 해줘 Shopify 2025년 1월 매출",
+    "table": "shopify",
+    "category": "specific_month",
+    "status": "OK",
+    "time": 14.5,
+    "answer_len": 290,
+    "answer_preview": "### 📊 Shopify 2025년 1월 매출 보고서  #### 요약  2025년 1월 Shopify 채널의 총 매출은 **782,768.65**입니다.  #### 분석 및 인사이트  *   2025년 1월 한 달간 Shopify 채널에서 발생한 총 매출은 782,768.65입니다. *   > 해당 매출은 2025년의 첫 달 실적으로, 향후 월별 실적과 비"
+  },
+  {
+    "id": "V2_SH-154",
+    "query": "Shopify 2025년 2월 매출금액 현황",
+    "table": "shopify",
+    "category": "specific_month",
+    "status": "OK",
+    "time": 13.0,
+    "answer_len": 409,
+    "answer_preview": "### 📊 Shopify 2025년 2월 매출금액 현황  #### 요약  2025년 2월 Shopify 채널의 총 매출금액은 **1,339,286원**으로 집계되었습니다. 이 금액은 해당 월의 Shopify 판매 활동을 통해 발생한 전체 매출을 나타냅니다.  #### 분석 및 인사이트  *   2025년 2월 Shopify 채널에서 발생한 총 매출은 1,3"
+  },
+  {
+    "id": "V2_SH-155",
+    "query": "2024년 11월 Shopify 미국 매출금액",
+    "table": "shopify",
+    "category": "specific_month",
+    "status": "OK",
+    "time": 17.5,
+    "answer_len": 429,
+    "answer_preview": "### 📊 2024년 11월 Shopify 미국 매출 분석  #### 요약  2024년 11월 Shopify 미국 매출은 **1,316,843.98 달러** (약 17.1억 원)를 기록했습니다.  #### 분석 및 인사이트  *   2024년 11월은 블랙프라이데이, 사이버 먼데이 등 연말 주요 쇼핑 시즌이 포함되어 있어 높은 매출을 기록했을 것으로 예상됩"
+  },
+  {
+    "id": "V2_SH-156",
+    "query": "2024년 12월 Shopify 영국 판매액",
+    "table": "shopify",
+    "category": "specific_month",
+    "status": "OK",
+    "time": 14.6,
+    "answer_len": 491,
+    "answer_preview": "### 📊 2024년 12월 Shopify 영국 판매액 분석  #### 요약  2024년 12월 Shopify 채널을 통한 영국의 총 판매액은 **18,127.24** 달러로 집계되었습니다. 이 수치는 해당 월의 영국 시장 내 Shopify 판매 성과를 나타냅니다.  #### 분석 및 인사이트  *   2024년 12월은 연말 쇼핑 시즌이 포함된 중요한 시"
+  },
+  {
+    "id": "V2_SH-157",
+    "query": "2025년 1월 Shopify 일본 매출 알려주세요",
+    "table": "shopify",
+    "category": "specific_month",
+    "status": "OK",
+    "time": 15.0,
+    "answer_len": 442,
+    "answer_preview": "### 📊 2025년 1월 Shopify 일본 매출 분석  #### 요약  2025년 1월 Shopify 일본 매출 데이터는 **현재 조회되지 않습니다.** 해당 기간 동안의 매출 기록이 시스템에서 발견되지 않았습니다.  #### 분석 및 인사이트  *   요청하신 2025년 1월 Shopify 일본 채널의 매출 데이터는 현재 시스템에서 집계된 바가 없습니"
+  },
+  {
+    "id": "V2_SH-158",
+    "query": "Shopify 2024년 3월 주문수량 확인해줘",
+    "table": "shopify",
+    "category": "specific_month",
+    "status": "OK",
+    "time": 12.8,
+    "answer_len": 307,
+    "answer_preview": "### 📊 Shopify 2024년 3월 주문 수량 분석  #### 요약  2024년 3월 Shopify 채널의 총 주문 수량은 **19,922개**로 집계되었습니다.  #### 분석 및 인사이트  *   2024년 3월 한 달 동안 Shopify 채널에서 약 2만 건에 가까운 주문이 발생했습니다. *   `> 이 수치는 Shopify 채널의 월별 운영 성"
+  },
+  {
+    "id": "V2_SH-159",
+    "query": "Shopify 7월 2024년 반품 현황 확인 가능한가요?",
+    "table": "shopify",
+    "category": "specific_month",
+    "status": "OK",
+    "time": 13.6,
+    "answer_len": 374,
+    "answer_preview": "### 📊 Shopify 2024년 7월 반품 현황  #### 요약  2024년 7월 Shopify 채널의 총 반품액은 **1,954.98**로 집계되었습니다.  #### 분석 및 인사이트  *   2024년 7월 한 달간 Shopify 채널에서 발생한 총 반품액은 1,954.98입니다. *   `> 해당 수치는 특정 기간 동안의 반품 총액을 나타내며, 이"
+  },
+  {
+    "id": "V2_SH-160",
+    "query": "참고로 Shopify 2025년 2월 각 나라 매출액",
+    "table": "shopify",
+    "category": "specific_month",
+    "status": "OK",
+    "time": 22.0,
+    "answer_len": 1180,
+    "answer_preview": "### 📊 2025년 2월 Shopify 국가별 매출 분석  #### 요약  2025년 2월 Shopify 국가별 매출 분석 결과, **미국**이 약 **1,097,525 USD**로 압도적인 1위를 차지했습니다. 전체 34개국에서 매출이 발생했으며, 캐나다(101,341 USD)와 호주(46,713 USD)가 그 뒤를 이으며 북미 및 오세아니아 시장의 강"
+  },
+  {
+    "id": "V2_SH-161",
+    "query": "미국 Shopify Madagascar Brightening Cream 세일즈 알려주세요",
+    "table": "shopify",
+    "category": "product_country",
+    "status": "OK",
+    "time": 16.2,
+    "answer_len": 494,
+    "answer_preview": "해당 조건의 데이터가 없습니다.  SQL에서 사용된 필터 조건 중 `Country = '미국'`은 유효한 값입니다. 그러나 `Product_title LIKE '%Madagascar Brightening Cream%'` 조건에 해당하는 제품이 '미국' 국가에서 판매된 기록이 없거나, 제품명이 정확히 일치하지 않아 데이터가 조회되지 않은 것으로 보입니다. 데"
+  },
+  {
+    "id": "V2_SH-162",
+    "query": "궁금한데 영국 Shopify SKIN1004 제품 매출액 합계",
+    "table": "shopify",
+    "category": "product_country",
+    "status": "OK",
+    "time": 15.9,
+    "answer_len": 409,
+    "answer_preview": "### 📊 영국 Shopify SKIN1004 제품 총 매출액  #### 요약  영국 Shopify 채널에서 SKIN1004 제품의 총 매출액은 **2,243.79**입니다. 이 수치는 2019년 1월 1일부터 현재(2026년 3월 8일)까지의 데이터를 기준으로 집계되었습니다.  #### 분석 및 인사이트  *   영국 Shopify 채널에서 SKIN100"
+  },
+  {
+    "id": "V2_SH-163",
+    "query": "잠깐, 일본 Shopify 센텔라 제품 매출",
+    "table": "shopify",
+    "category": "product_country",
+    "status": "OK",
+    "time": 14.9,
+    "answer_len": 342,
+    "answer_preview": "해당 값은 존재하지 않습니다.  SQL에서 사용된 필터 조건 중 `Country = 'Japan'`이 문제입니다. `Country` 컬럼의 유효한 값 목록에는 'Japan'이 없고 '일본'이 있습니다. 따라서 'Japan'이라는 값은 존재하지 않아 0행이 반환되었습니다. `Country = '일본'`으로 변경하여 다시 시도해 보세요.  비슷한 데이터를 조회"
+  },
+  {
+    "id": "V2_SH-164",
+    "query": "한국 Shopify 제품 기준 판매 실태",
+    "table": "shopify",
+    "category": "product_country",
+    "status": "OK",
+    "time": 15.6,
+    "answer_len": 455,
+    "answer_preview": "해당 조건의 데이터가 없습니다.  SQL에서 사용된 필터 조건 `Country = '한국'`은 유효한 값 목록에 존재합니다. 하지만 `Date >= '2019-01-01'` 조건과 함께 사용되었을 때, 해당 기간 동안 `한국`에서 발생한 Shopify 제품 판매 데이터가 테이블에 없거나 매우 적어 0행이 반환된 것으로 보입니다. 즉, 필터 조건 자체는 문법"
+  },
+  {
+    "id": "V2_SH-165",
+    "query": "정확한 호주 Shopify 제품 세일즈 순위 알 수 있을까요?",
+    "table": "shopify",
+    "category": "product_country",
+    "status": "OK",
+    "time": 20.9,
+    "answer_len": 1653,
+    "answer_preview": "### 📊 호주 Shopify 제품별 누적 세일즈 순위 (2019년 1월 1일 ~ 2026년 3월 8일)  #### 요약  2019년 1월 1일부터 2026년 3월 8일까지 호주 Shopify 채널에서 발생한 총 제품 세일즈는 **694,319원**입니다. 이 기간 동안 가장 높은 매출을 기록한 제품은 'Hyalu-Cica Water-Fit Sun Seru"
+  },
+  {
+    "id": "V2_SH-166",
+    "query": "독일 쇼피파이 가장 잘 팔리는 제품",
+    "table": "shopify",
+    "category": "product_country",
+    "status": "OK",
+    "time": 17.7,
+    "answer_len": 294,
+    "answer_preview": "해당 조건에 맞는 데이터가 없습니다.  SQL 쿼리에서 `Country = '독일'` 필터 조건이 사용되었으나, 현재 데이터베이스에는 '독일' 국가에 대한 판매 데이터가 존재하지 않습니다. '독일'은 유효한 국가 값 목록에 포함되어 있지만, 실제 데이터가 없는 것으로 보입니다.  비슷한 데이터를 조회할 수 있는 대안 질문은 다음과 같습니다: 1.  미국 쇼"
+  },
+  {
+    "id": "V2_SH-167",
+    "query": "프랑스 Shopify 상품별 매출",
+    "table": "shopify",
+    "category": "product_country",
+    "status": "OK",
+    "time": 22.7,
+    "answer_len": 2131,
+    "answer_preview": "### 📊 프랑스 Shopify 상품별 매출 분석  #### 요약  프랑스 Shopify 채널에서 2019년 1월 1일부터 현재(2026년 3월 8일)까지의 상품별 매출을 분석한 결과, 총 **286,261**의 매출과 **30,575**개의 상품이 판매되었습니다. 이 기간 동안 총 123개의 고유 상품이 판매되었으며, 'Centella Ampoule'이 "
+  },
+  {
+    "id": "V2_SH-168",
+    "query": "정확한 캐나다 쇼피파이 제품 주문수량",
+    "table": "shopify",
+    "category": "product_country",
+    "status": "OK",
+    "time": 19.0,
+    "answer_len": 1662,
+    "answer_preview": "### 📊 캐나다 쇼피파이 제품별 총 주문 수량 분석  #### 요약  2019년 1월 1일부터 현재(2026년 3월 8일)까지 캐나다 쇼피파이에서 **총 148,084개**의 제품이 주문되었습니다. 이 중 **\"Hyalu-Cica Water-Fit Sun Serum SPF50+ PA++++\"** 제품이 **12,385개**로 가장 많이 판매되었습니다.  "
+  },
+  {
+    "id": "V2_SH-169",
+    "query": "미국 Shopify 토너 매출 보여줘 확인 부탁드립니다",
+    "table": "shopify",
+    "category": "product_country",
+    "status": "OK",
+    "time": 24.7,
+    "answer_len": 1667,
+    "answer_preview": "### 📊 미국 Shopify 토너 제품별 매출 현황  #### 요약  미국 Shopify 채널의 토너 제품 매출 분석 결과, **Centella Toning Toner**가 **256,775.49**의 매출로 압도적인 1위를 차지했습니다. 전체 토너 제품의 총 매출은 **653,909.31**로 집계되었습니다.  #### 상세 데이터  | Product_"
+  },
+  {
+    "id": "V2_SH-170",
+    "query": "일본 Shopify 앰플 제품 매축 어떻게 되나요?",
+    "table": "shopify",
+    "category": "product_country",
+    "status": "OK",
+    "time": 5.5,
+    "answer_len": 87,
+    "answer_preview": "고객님, 문의하신 일본 Shopify 앰플 제품 매출에 대한 정보는 현재 사내 CS 데이터베이스에서 찾을 수 없습니다.  해당 정보가 CS DB에 없습니다."
+  },
+  {
+    "id": "V2_SH-171",
+    "query": "싱가폴 Shopify 제품 판매 현황",
+    "table": "shopify",
+    "category": "product_country",
+    "status": "OK",
+    "time": 12.5,
+    "answer_len": 375,
+    "answer_preview": "현재 SQL 쿼리에 사용된 'Singapore' 값은 Country 컬럼의 유효한 값 목록에 존재하지 않습니다.  SQL 쿼리의 `Country = 'Singapore'` 조건이 문제입니다. `Country` 컬럼의 값은 한국어로 저장되어 있으므로, 'Singapore' 대신 **'싱가포르'**로 변경하여 조회해야 합니다.  비슷한 데이터를 조회할 수 있는"
+  },
+  {
+    "id": "V2_SH-172",
+    "query": "영국 Shopify 클렌저 매출 알 수 있을까요?",
+    "table": "shopify",
+    "category": "product_country",
+    "status": "OK",
+    "time": 18.5,
+    "answer_len": 422,
+    "answer_preview": "### 📊 영국 Shopify 클렌저 총 매출 분석  #### 요약  2019년 1월 1일부터 현재(2026년 3월 8일)까지 영국 Shopify 채널에서 발생한 클렌저 제품의 총 매출은 **23,653.64**입니다.  #### 분석 및 인사이트  *   이 데이터는 2019년 1월 1일 이후 영국 Shopify 채널에서 클렌저 제품이 기록한 누적 매출 "
+  },
+  {
+    "id": "V2_SH-173",
+    "query": "미국 Shopify 선크림 판매량 알고 싶어 알려주세요",
+    "table": "shopify",
+    "category": "product_country",
+    "status": "OK",
+    "time": 6.0,
+    "answer_len": 95,
+    "answer_preview": "고객님, 문의하신 미국 Shopify 선크림 판매량에 대한 정보는 현재 CS 데이터베이스에서 찾을 수 없습니다.  **출처:** CS 데이터베이스 검색 결과 (1-10번)"
+  },
+  {
+    "id": "V2_SH-174",
+    "query": "태국 쇼피파이 제품 매상 데이터 알려주시면 감사하겠습니다",
+    "table": "shopify",
+    "category": "product_country",
+    "status": "OK",
+    "time": 16.8,
+    "answer_len": 368,
+    "answer_preview": "요청하신 조건에 해당하는 데이터가 없습니다. SQL에 사용된 'Thailand' 값은 유효한 국가 목록에 존재하지 않습니다.  SQL 쿼리에서 `Country` 필터에 'Thailand'를 사용하셨는데, 제공된 유효 값 목록에는 '태국'으로 되어 있습니다. 데이터베이스에 저장된 국가 값이 한글로 되어 있을 가능성이 높습니다.  따라서 `Country = '"
+  },
+  {
+    "id": "V2_SH-175",
+    "query": "궁금한데 말레이시아 Shopify 인기 제품 궁금해",
+    "table": "shopify",
+    "category": "product_country",
+    "status": "OK",
+    "time": 13.2,
+    "answer_len": 308,
+    "answer_preview": "해당 조건의 데이터가 없으며, 요청하신 'Malaysia' 값은 유효한 국가 목록에 존재하지 않습니다.  SQL에서 `Country = 'Malaysia'`로 필터링했으나, 데이터베이스의 `Country` 컬럼은 국가명을 한국어로 저장하고 있습니다. 유효한 값 목록에 따르면 '말레이시아'로 조회해야 합니다.  다음과 같이 다시 질문해 보세요: *   말레이"
+  },
+  {
+    "id": "V2_SH-176",
+    "query": "빠르게 Shopify 전체 매상 토탈",
+    "table": "shopify",
+    "category": "aggregate",
+    "status": "OK",
+    "time": 19.6,
+    "answer_len": 479,
+    "answer_preview": "### 📊 Shopify 전체 매출 현황  #### 요약  Shopify 데이터셋에 기록된 전체 매출은 **1,572만원**입니다. 이 수치는 특정 기간에 한정되지 않고, 현재 데이터셋에 집계된 총 매출을 나타냅니다.  #### 분석 및 인사이트  *   **누적 매출 확인**: 현재 `shopify_analysis_sales` 데이터셋에 기록된 모든 Sh"
+  },
+  {
+    "id": "V2_SH-177",
+    "query": "혹시 2024년 Shopify 총 매출 얼마임? 보여줘",
+    "table": "shopify",
+    "category": "aggregate",
+    "status": "OK",
+    "time": 11.4,
+    "answer_len": 348,
+    "answer_preview": "### 📊 2024년 Shopify 총 매출 현황  #### 요약  2024년 Shopify 채널의 총 매출은 **5,922,346원**으로 집계되었습니다.  #### 분석 및 인사이트  *   2024년 Shopify 채널의 연간 총 매출액을 확인했습니다. *   이 매출액은 Shopify 채널의 2024년 전체 판매 성과를 나타내는 핵심 지표입니다. *"
+  },
+  {
+    "id": "V2_SH-178",
+    "query": "Shopify 전체 주문 건수?",
+    "table": "shopify",
+    "category": "aggregate",
+    "status": "OK",
+    "time": 44.3,
+    "answer_len": 813,
+    "answer_preview": "### 📊 주요 자사몰 및 카페24 채널 전체 주문 건수  #### 요약  2019년 1월 1일부터 현재(2026년 3월 8일)까지 주요 자사몰(CompanyMall, DPMall) 및 카페24 채널에서 발생한 총 주문 건수는 **1,391,455건**입니다. 사용자 질문에서 'Shopify' 채널의 주문 건수를 문의하셨으나, 현재 조회된 데이터는 SQL "
+  },
+  {
+    "id": "V2_SH-179",
+    "query": "Shopify 총 반품 판매량",
+    "table": "shopify",
+    "category": "aggregate",
+    "status": "OK",
+    "time": 14.0,
+    "answer_len": 472,
+    "answer_preview": "### 📊 Shopify 총 반품 수량 현황  #### 요약  2019년 1월 1일 이후 Shopify 채널에서 발생한 총 반품 수량은 **16,077개**입니다. 이 수치는 Shopify 운영 전반에 걸친 누적 반품 현황을 보여줍니다.  #### 분석 및 인사이트  *   총 **16,077개**의 반품 수량은 Shopify 채널 운영에 있어 상당한 규모"
+  },
+  {
+    "id": "V2_SH-180",
+    "query": "참고로 Shopify 평균 주문 금액",
+    "table": "shopify",
+    "category": "aggregate",
+    "status": "OK",
+    "time": 51.0,
+    "answer_len": 724,
+    "answer_preview": "### 📊 Shopify 관련 채널 (회사몰 및 DPMall) 평균 주문 금액 분석  #### 요약  2019년 1월 1일부터 현재(2026년 3월 8일)까지의 데이터를 기준으로, 회사몰 및 DPMall 채널의 평균 주문 금액은 **40,378원**으로 집계되었습니다.  #### 분석 및 인사이트  *   **평균 주문 금액 (AOV) 확인**: 회사몰 및"
+  },
+  {
+    "id": "V2_SH-181",
+    "query": "참고로 Shopify 일평균 매출 좀 봐줘",
+    "table": "shopify",
+    "category": "aggregate",
+    "status": "OK",
+    "time": 14.5,
+    "answer_len": 566,
+    "answer_preview": "### 📊 Shopify 일평균 매출 분석  #### 요약  2019년 1월 1일 이후 전체 기간 동안의 Shopify 일평균 매출은 **10,484.79**입니다. 이는 해당 기간 동안 Shopify 채널에서 발생한 총 매출을 영업일수로 나눈 값입니다.  #### 분석 및 인사이트  *   **장기적인 평균:** 해당 일평균 매출은 2019년 1월 1일부"
+  },
+  {
+    "id": "V2_SH-182",
+    "query": "Shopify 제품 종류 몇 개야은 어떤가요?",
+    "table": "shopify",
+    "category": "aggregate",
+    "status": "OK",
+    "time": 10.5,
+    "answer_len": 345,
+    "answer_preview": "### 📊 Shopify 제품 종류 현황  #### 요약  2019년 1월 1일 이후 Shopify 플랫폼에서 판매된 고유 제품 종류는 총 **224개**입니다.  #### 분석 및 인사이트  *   Shopify 채널을 통해 판매된 제품의 다양성을 보여주는 지표입니다. *   이 수치는 2019년 1월 1일부터 현재까지의 판매 데이터를 기준으로 집계되었습"
+  },
+  {
+    "id": "V2_SH-183",
+    "query": "혹시 Shopify 판매 국가 수 부탁",
+    "table": "shopify",
+    "category": "aggregate",
+    "status": "OK",
+    "time": 9.7,
+    "answer_len": 372,
+    "answer_preview": "### 📊 Shopify 판매 국가 현황  #### 요약  Shopify 채널을 통해 판매가 이루어진 국가는 총 **51개국**입니다.  #### 분석 및 인사이트  *   Shopify를 통해 전 세계 **51개국**에 제품을 판매하고 있어, 글로벌 시장에서의 넓은 유통망을 확보하고 있음을 알 수 있습니다. *   `> 이는 SKIN1004 브랜드가 다양"
+  },
+  {
+    "id": "V2_SH-184",
+    "query": "2025년 Shopify 누적 수익",
+    "table": "shopify",
+    "category": "aggregate",
+    "status": "OK",
+    "time": 12.4,
+    "answer_len": 421,
+    "answer_preview": "### 📊 2025년 Shopify 누적 수익 분석  #### 요약  2025년 Shopify 채널의 총 누적 수익은 **8,544,905원**으로 집계되었습니다. 이는 2025년 한 해 동안 Shopify를 통해 발생한 전체 매출을 합산한 금액입니다.  #### 분석 및 인사이트  *   2025년 Shopify 채널의 연간 총 매출 성과를 명확히 확인할"
+  },
+  {
+    "id": "V2_SH-185",
+    "query": "Shopify 월평균 매출 얼마야? 알려줄래",
+    "table": "shopify",
+    "category": "aggregate",
+    "status": "OK",
+    "time": 16.7,
+    "answer_len": 427,
+    "answer_preview": "### 📊 Shopify 월평균 매출 분석  #### 요약  Shopify의 월평균 매출은 **291,050.02원**으로 집계되었습니다. 이 수치는 2019년 1월부터 2026년 2월까지의 데이터를 기반으로 산출된 평균값입니다.  #### 분석 및 인사이트  *   이 월평균 매출은 지난 약 7년 2개월(2019년 1월 ~ 2026년 2월)간의 Shopi"
+  },
+  {
+    "id": "V2_SH-186",
+    "query": "Shopify 2024년 vs 2025년 매상 비교 알려주세요",
+    "table": "shopify",
+    "category": "yoy",
+    "status": "OK",
+    "time": 15.0,
+    "answer_len": 775,
+    "answer_preview": "### 📊 Shopify 2024년 vs 2025년 매출 비교 분석  #### 요약  2025년 Shopify 매출은 **8,544,905.64원**을 기록하며 2024년 매출인 **5,922,346.01원** 대비 **약 44.3%** 증가한 것으로 나타났습니다. 이는 2025년에 Shopify 채널에서 상당한 매출 성장이 있었음을 보여줍니다.  ####"
+  },
+  {
+    "id": "V2_SH-187",
+    "query": "Shopify 전년 대비 세일즈 성장률",
+    "table": "shopify",
+    "category": "yoy",
+    "status": "OK",
+    "time": 22.7,
+    "answer_len": 739,
+    "answer_preview": "### 📊 Shopify 전년 대비 세일즈 성장률 분석  #### 요약  2025년 Shopify 세일즈는 2024년 대비 **44.28% 성장**하며 매우 높은 성장세를 기록했습니다. 2025년 총 세일즈는 **8,544,906원**으로, 2024년 **5,922,346원** 대비 크게 증가했습니다.  #### 상세 데이터 | 연도 | 총 세일즈 (원) "
+  },
+  {
+    "id": "V2_SH-188",
+    "query": "Shopify 미국 전년 대비 수익 변화",
+    "table": "shopify",
+    "category": "yoy",
+    "status": "OK",
+    "time": 22.0,
+    "answer_len": 403,
+    "answer_preview": "해당 조건의 데이터가 없습니다.  SQL에서 사용된 필터 조건 중 **날짜(Date)** 조건이 문제입니다. `Date >= '2025-01-01'` 와 `Date <= '2026-03-08'` 조건은 미래 날짜를 지정하고 있어, 현재 시점에서는 해당 기간의 판매 데이터가 존재하지 않을 가능성이 높습니다. `Date >= '2019-01-01'` 조건은 `"
+  },
+  {
+    "id": "V2_SH-189",
+    "query": "2023년 vs 2024년 Shopify 매출?",
+    "table": "shopify",
+    "category": "yoy",
+    "status": "OK",
+    "time": 12.1,
+    "answer_len": 649,
+    "answer_preview": "### 📊 2023년 vs 2024년 Shopify 매출 비교 분석  #### 요약  2024년 Shopify 총 매출은 **5,922,346원**으로, 2023년 **262,340원** 대비 약 21.5배(2,150% 이상) 증가하며 매우 큰 폭의 성장을 기록했습니다.  #### 상세 데이터  | 매출 연도 | 총 매출 (원) | |---:|---:| |"
+  },
+  {
+    "id": "V2_SH-190",
+    "query": "빠르게 Shopify 영국 YoY 매출 비교",
+    "table": "shopify",
+    "category": "yoy",
+    "status": "OK",
+    "time": 21.7,
+    "answer_len": 740,
+    "answer_preview": "### 📊 Shopify 영국 동일 기간 YoY 매출 비교 (2025년 vs 2026년 1월 1일 ~ 3월 8일)  #### 요약  2026년 1월 1일부터 3월 8일까지의 Shopify 영국 매출은 **14,412**로, 전년 동기(2025년 1월 1일 ~ 3월 8일) 대비 **46.0% 감소**했습니다. 2025년 동기 매출은 **26,681**였습니다"
+  },
+  {
+    "id": "V2_SH-191",
+    "query": "빠르게 Shopify 일본 2024 vs 2025 매출",
+    "table": "shopify",
+    "category": "yoy",
+    "status": "OK",
+    "time": 15.7,
+    "answer_len": 476,
+    "answer_preview": "요청하신 2024년 및 2025년 일본 매출 데이터는 현재 데이터베이스에 존재하지 않습니다.  SQL에서 사용된 필터 조건 중 `EXTRACT(YEAR FROM Date) IN (2024, 2025)` 조건이 문제입니다. 데이터베이스에는 아직 2024년과 2025년의 매출 데이터가 기록되어 있지 않습니다. 일반적으로 매출 데이터는 실제 발생한 시점을 기준으"
+  },
+  {
+    "id": "V2_SH-192",
+    "query": "Shopify 전년 동기 대비 주문개수 변화 좀 봐줘",
+    "table": "shopify",
+    "category": "yoy",
+    "status": "OK",
+    "time": 16.9,
+    "answer_len": 879,
+    "answer_preview": "### 📊 Shopify 전년 동기 대비 주문 개수 변화 분석 (2026년 3월 8일 기준)  #### 요약  2026년 3월 8일 기준으로 Shopify의 주문 개수는 전년 동기 대비 **약 65.7% 감소**했습니다. 2025년 동기에는 총 **251,230개**의 주문이 발생했으나, 2026년 동기에는 **86,295개**로 크게 줄어들었습니다.  #"
+  },
+  {
+    "id": "V2_SH-193",
+    "query": "Shopify 연도별 매출금액 추이",
+    "table": "shopify",
+    "category": "yoy",
+    "status": "OK",
+    "time": 19.2,
+    "answer_len": 981,
+    "answer_preview": "### 📊 Shopify 연도별 매출금액 추이 분석  #### 요약  ⚠️ 2026년은 현재 3월 8일까지의 데이터만 존재합니다. Shopify 연도별 매출은 2023년부터 2025년까지 **가파른 성장세**를 보였습니다. 특히 **2025년에는 8,544,906원**으로 가장 높은 매출을 기록하며 전년 대비 약 44.3% 증가했습니다. 2021년에는 매출"
+  },
+  {
+    "id": "V2_SH-194",
+    "query": "Shopify 호주 전년 대비 수익 성장",
+    "table": "shopify",
+    "category": "yoy",
+    "status": "OK",
+    "time": 24.3,
+    "answer_len": 838,
+    "answer_preview": "### 📊 Shopify 호주 전년 대비 수익 성장 (2026년 3월 8일 기준)  #### 요약  ⚠️ 2026년 3월 8일 기준, Shopify 호주의 전년 대비 수익은 감소했습니다. 2026년 현재까지의 수익은 **31,627.81**이었으며, 이는 전년 동기(2025년 3월 8일 기준) **38,918.71** 대비 **18.73% 감소**한 수치입"
+  },
+  {
+    "id": "V2_SH-195",
+    "query": "요즘 2024년 1분기 vs 2025년 1분기 Shopify 매출",
+    "table": "shopify",
+    "category": "yoy",
+    "status": "OK",
+    "time": 20.2,
+    "answer_len": 794,
+    "answer_preview": "### 📊 2024년 1분기 vs 2025년 1분기 Shopify 매출 비교 분석  #### 요약  2025년 1분기 Shopify 매출은 **3,173,793.09원**으로, 2024년 1분기 매출 **461,042.42원** 대비 **약 588% 증가**했습니다. 이는 전년 동기 대비 Shopify 채널에서 매우 큰 폭의 성장을 기록했음을 보여줍니다. "
+  },
+  {
+    "id": "V2_SH-196",
+    "query": "Shopify 주간별 세일즈 추이 알고 싶어 알 수 있을까요?",
+    "table": "shopify",
+    "category": "advanced",
+    "status": "OK",
+    "time": 29.2,
+    "answer_len": 1591,
+    "answer_preview": "### 📊 Shopify 주간별 세일즈 추이 분석 보고서  #### 요약  Shopify의 주간별 세일즈 추이를 분석한 결과, 2019년부터 2025년까지 총 **1,571만 6천원**의 매출이 발생했습니다. 가장 높은 주간 매출은 **2024년 48주차에 977,739원**을 기록했으며, 2025년 8주차와 2025년 47주차에도 높은 매출을 보였습니다."
+  },
+  {
+    "id": "V2_SH-197",
+    "query": "간단하게 Shopify 요일별 매출 분포",
+    "table": "shopify",
+    "category": "advanced",
+    "status": "OK",
+    "time": 25.6,
+    "answer_len": 1002,
+    "answer_preview": "### 📊 Shopify 요일별 매출 분포 분석  #### 요약  Shopify 요일별 매출 분석 결과, **금요일**이 약 **259만원**으로 가장 높은 매출을 기록했으며, **수요일**이 약 **202만원**으로 가장 낮은 매출을 보였습니다. 전체 기간(2019년 1월 1일 이후) 동안의 총 매출은 약 **1,572만원**입니다.  #### 상세 데이"
+  },
+  {
+    "id": "V2_SH-198",
+    "query": "Shopify 주말 vs 평일 매출금액 차이 알려주세요",
+    "table": "shopify",
+    "category": "advanced",
+    "status": "OK",
+    "time": 16.7,
+    "answer_len": 649,
+    "answer_preview": "### 📊 Shopify 주말 vs 평일 매출 분석  #### 요약  Shopify 매출은 평일에 집중되어 있으며, 평일 총 매출은 **1,109만원**, 주말 총 매출은 **462만원**으로 집계되었습니다. 이는 평일 매출이 주말 매출보다 **약 2.4배** 높은 수준입니다.  #### 상세 데이터 | 구분 | 총 매출 금액 | | :--- | ---: "
+  },
+  {
+    "id": "V2_SH-199",
+    "query": "확인 좀 해줘 Shopify 최근 7일 매출 현황",
+    "table": "shopify",
+    "category": "advanced",
+    "status": "OK",
+    "time": 17.2,
+    "answer_len": 967,
+    "answer_preview": "### 📊 Shopify 최근 7일 매출 현황 분석  #### 요약  지난 7일간(2026년 3월 1일 ~ 3월 7일) Shopify 총 매출은 **83,479.09** 달러, 총 판매 수량은 **7,592**개로 집계되었습니다. 일별 매출은 3월 4일에 **14,975.62** 달러로 가장 높았으며, 3월 7일에는 **8,998.35** 달러로 가장 낮은"
+  },
+  {
+    "id": "V2_SH-200",
+    "query": "Shopify 최근 30일 매출금액 궁금해",
+    "table": "shopify",
+    "category": "advanced",
+    "status": "OK",
+    "time": 14.6,
+    "answer_len": 457,
+    "answer_preview": "### 📊 Shopify 최근 30일 매출 분석  #### 요약  Shopify 채널의 최근 30일(2026년 02월 06일 ~ 2026년 03월 07일) 총 매출은 **456,493.78원**으로 집계되었습니다.  #### 분석 및 인사이트  *   조회 기간은 2026년 02월 06일부터 2026년 03월 07일까지이며, 이 기간 동안 Shopify 채"
+  },
+  {
+    "id": "V2_SH-201",
+    "query": "요즘 Shopify 매출금액 성장률이 가장 높은 국가 확인 부탁드립니다",
+    "table": "shopify",
+    "category": "advanced",
+    "status": "OK",
+    "time": 23.0,
+    "answer_len": 769,
+    "answer_preview": "### 📊 2026년 1월 대비 2월 Shopify 매출 성장률 상위 국가 분석  #### 요약  ⚠️ 2026년은 현재 1월~2월 데이터만 존재합니다 (오늘: 2026년 03월 08일). 2026년 1월 대비 2월 Shopify 매출 성장률이 가장 높은 국가는 **아랍에미리트(United Arab Emirates)**로 확인되었습니다. 아랍에미리트는 해당"
+  },
+  {
+    "id": "V2_SH-202",
+    "query": "Shopify 국가 기준 매출 점유율",
+    "table": "shopify",
+    "category": "advanced",
+    "status": "OK",
+    "time": 38.3,
+    "answer_len": 607,
+    "answer_preview": "### 📊 Shopify 국가별 매출 점유율 분석 (2019년 1월 1일 ~ 2026년 3월 8일)  #### 요약  2019년 1월 1일부터 2026년 3월 8일까지의 Shopify 매출 데이터를 분석한 결과, **미국**이 전체 매출의 **74.85%**를 차지하며 압도적인 점유율을 보였습니다. 캐나다(9.16%)와 호주(4.42%)가 그 뒤를 이었으며"
+  },
+  {
+    "id": "V2_SH-203",
+    "query": "Shopify 제품별 매출 점유율 알려주세요",
+    "table": "shopify",
+    "category": "advanced",
+    "status": "OK",
+    "time": 22.5,
+    "answer_len": 1626,
+    "answer_preview": "### 📊 Shopify 제품별 매출 점유율 분석 보고서 (2019년 1월 1일 ~ 2026년 3월 8일)  #### 요약  2019년 1월 1일부터 2026년 3월 8일까지의 Shopify 총 매출은 **약 1,571만 6,701원**입니다. 이 기간 동안 가장 높은 매출 점유율을 보인 제품은 **Hyalu-Cica Water-Fit Sun Serum S"
+  },
+  {
+    "id": "V2_SH-204",
+    "query": "Shopify 미국 제품유형별 매상 살펴봐줘",
+    "table": "shopify",
+    "category": "advanced",
+    "status": "OK",
+    "time": 17.2,
+    "answer_len": 1402,
+    "answer_preview": "### 📊 Shopify 미국 제품유형별 총매출 분석 (2019년 1월 1일 이후)  #### 요약  2019년 1월 1일 이후 Shopify 미국 시장에서 제품 유형별 총매출을 분석한 결과, **분류되지 않은 제품(product_type이 빈 값)**이 약 **330만 달러**로 가장 높은 매출을 기록했습니다. 이어서 **Ampoule/Serum**이 약"
+  },
+  {
+    "id": "V2_SH-205",
+    "query": "Shopify 영국 월별 제품 매상 추이",
+    "table": "shopify",
+    "category": "advanced",
+    "status": "OK",
+    "time": 40.1,
+    "answer_len": 2788,
+    "answer_preview": "### 📊 Shopify 영국 월별 제품 매상 추이 분석  #### 요약  ⚠️ 현재 데이터는 2025년 04월까지의 정보를 포함하고 있으며, 2026년 03월 08일 기준 최신 데이터가 반영되지 않았습니다. Shopify 영국 채널의 월별 제품 매상 추이를 분석한 결과, 조회된 **1,000건의 데이터에서 총 162,483**의 매출이 발생했습니다. 가장"
+  },
+  {
+    "id": "V2_SH-206",
+    "query": "Shopify 국가별 제품당 평균 매출 알려주세요",
+    "table": "shopify",
+    "category": "advanced",
+    "status": "OK",
+    "time": 22.1,
+    "answer_len": 3260,
+    "answer_preview": "### 📊 Shopify 국가별 제품당 평균 매출 분석 보고서  #### 요약  2019년 1월 1일 이후 Shopify 데이터를 분석한 결과, **50개 국가** 및 **158개 제품**에 걸쳐 국가별 제품당 평균 매출이 집계되었습니다. 특히, **미국** 시장에서 'Hyalu-Cica Water-Fit Sun Serum UV' 제품이 **1,572.37"
+  },
+  {
+    "id": "V2_SH-207",
+    "query": "Shopify 각 나라 주문당 평균 금액",
+    "table": "shopify",
+    "category": "advanced",
+    "status": "OK",
+    "time": 30.5,
+    "answer_len": 982,
+    "answer_preview": "### 📊 Shopify 주요 국가별 주문당 평균 금액 분석  #### 요약  2019년 1월 1일부터 현재까지의 데이터 분석 결과, Shopify 채널(CompanyMall, DPMall, cafe24_skin1004, cafe24_zombiebeauty 포함)에서 주문당 평균 금액이 가장 높은 국가는 **미국**으로 **135,637원**을 기록했습니다"
+  },
+  {
+    "id": "V2_SH-208",
+    "query": "Shopify 제품유형별 반품률 분석 좀",
+    "table": "shopify",
+    "category": "advanced",
+    "status": "OK",
+    "time": 28.7,
+    "answer_len": 1576,
+    "answer_preview": "### 📊 Shopify 제품유형별 반품률 분석  #### 요약  Shopify 제품유형별 반품률 분석 결과, **'tool' 유형이 2.62%로 가장 높은 반품률**을 보였습니다. 반면, 'singleton_gift' 유형은 반품이 전혀 발생하지 않아 0.00%의 반품률을 기록했습니다. 전체 매출에서 가장 큰 비중을 차지하는 미분류(Type: \"\") 제품"
+  },
+  {
+    "id": "V2_SH-209",
+    "query": "Shopify 메출금액 상위 5개 국가의 제품 구성",
+    "table": "shopify",
+    "category": "advanced",
+    "status": "OK",
+    "time": 38.0,
+    "answer_len": 2938,
+    "answer_preview": "### 📊 Shopify 매출 상위 5개 국가별 제품 구성 분석  #### 요약  2019년 1월 1일부터 2026년 3월 8일까지의 Shopify 매출 데이터를 분석한 결과, **미국, 캐나다, 프랑스, 호주, 멕시코**가 매출 상위 5개 국가로 나타났습니다. 이들 국가의 총 매출은 **약 1,448만 달러**이며, 특히 미국 시장에서는 'Hyalu-Ci"
+  },
+  {
+    "id": "V2_SH-210",
+    "query": "정확한 Shopify 반품률 10% 이상인 제품 목록 보여줘 부탁드려요",
+    "table": "shopify",
+    "category": "advanced",
+    "status": "OK",
+    "time": 18.6,
+    "answer_len": 510,
+    "answer_preview": "# 데이터 조회 안내  안녕하세요. 요청하신 **Shopify 반품률 10% 이상 제품 목록**에 대한 데이터를 현재 조회하지 못했습니다.  ---  ## 💡 더 정확한 결과를 위해 아래 정보를 추가해 주시면 도움이 됩니다  - **조회 기간** (예: 2024년 1분기, 최근 3개월 등) - **Shopify 스토어/국가** (예: 미국 Shopify, "
+  },
+  {
+    "id": "V2_SH-211",
+    "query": "shopify 2024년 블랙프라이데이 세일즈 알려주세요",
+    "table": "shopify",
+    "category": "event",
+    "status": "OK",
+    "time": 16.8,
+    "answer_len": 484,
+    "answer_preview": "### 📊 Shopify 2024년 블랙프라이데이 세일즈 분석  #### 요약  2024년 Shopify 블랙프라이데이 세일즈 기간(11월 28일 ~ 12월 2일) 동안의 총 매출은 **791,276원**을 기록했습니다.  #### 상세 데이터  (단일 합계 데이터이므로 상세 데이터 섹션은 생략합니다.)  #### 분석 및 인사이트  *   2024년 블랙"
+  },
+  {
+    "id": "V2_SH-212",
+    "query": "Shopify 11월 매출금액이 다른 달보다 높은지 확인",
+    "table": "shopify",
+    "category": "event",
+    "status": "OK",
+    "time": 34.1,
+    "answer_len": 1668,
+    "answer_preview": "### 📊 Shopify 월별 매출 분석: 11월 매출 현황  #### 요약  제공된 데이터(2021년 10월 ~ 2023년 5월 프리뷰)를 기준으로 분석한 결과, **2022년 11월 매출은 해당 연도 중 가장 높은 매출을 기록**했습니다. 다만, 2021년 11월에는 비정상적인 마이너스 매출이 확인되었으며, 2023년 이후의 11월 매출 데이터는 현재 "
+  },
+  {
+    "id": "V2_SH-213",
+    "query": "Shopify 연말 수익 현황 알려주세요",
+    "table": "shopify",
+    "category": "event",
+    "status": "OK",
+    "time": 18.9,
+    "answer_len": 630,
+    "answer_preview": "### 📊 2025년 Shopify 연말 수익 현황  #### 요약  2025년 Shopify의 연말 총 수익은 **8,544,905.64 USD**로 집계되었습니다. 이는 2025년 한 해 동안 Shopify 채널을 통해 발생한 총 매출액을 나타냅니다.  #### 분석 및 인사이트  *   **2025년 Shopify 매출 성과:** 2025년 Shopi"
+  },
+  {
+    "id": "V2_SH-214",
+    "query": "Shopify 여름 시즌 매축 분석",
+    "table": "shopify",
+    "category": "event",
+    "status": "OK",
+    "time": 44.1,
+    "answer_len": 3373,
+    "answer_preview": "### 📈 Shopify 여름 시즌 매출 분석  #### 요약  SKIN1004의 Shopify 여름 시즌(6월, 7월, 8월) 매출은 2025년에 **1,322,748.47**을 기록하며 역대 최고 실적을 달성했습니다. 특히 2024년부터 매출이 **1,106,484.96**으로 전년 대비 약 5,750% 이상 폭발적으로 증가한 후, 2025년에도 약 1"
+  },
+  {
+    "id": "V2_SH-215",
+    "query": "빠르게 Shopify 겨울 시즌 매축 알려줄래",
+    "table": "shopify",
+    "category": "event",
+    "status": "OK",
+    "time": 40.5,
+    "answer_len": 3149,
+    "answer_preview": "### 📈 Shopify 겨울 시즌 매출 분석  #### 요약  SKIN1004의 Shopify 플랫폼 겨울 시즌(12월, 1월, 2월) 누적 매출은 2019년부터 2026년까지 총 **5,279,263원**으로 집계되었습니다. 이 수치는 지난 7년간의 겨울 시즌 매출을 합산한 결과로, 특정 한 해의 실적이 아닌 장기적인 플랫폼 수익성을 보여줍니다. 외부 "
+  },
+  {
+    "id": "V2_SH-216",
+    "query": "잠깐, Shopify 국가코드별 매출 그룹화 어떻게 되나요?",
+    "table": "shopify",
+    "category": "detail",
+    "status": "OK",
+    "time": 25.2,
+    "answer_len": 1420,
+    "answer_preview": "### 📊 Shopify 국가코드별 매출 현황 분석 보고서  #### 요약  2019년 1월 1일부터 현재(2026년 3월 8일)까지의 Shopify 매출 데이터를 분석한 결과, **미국(US)**이 압도적인 매출로 1위를 차지했습니다. 누적 매출액은 약 **1,174만 달러**에 달하며, 이는 2위인 캐나다(CA)의 약 144만 달러와 큰 격차를 보입니다"
+  },
+  {
+    "id": "V2_SH-217",
+    "query": "정확한 shopify Country_code 기준 매출 정리",
+    "table": "shopify",
+    "category": "detail",
+    "status": "OK",
+    "time": 24.1,
+    "answer_len": 1546,
+    "answer_preview": "### 📊 Shopify 국가별 총 매출 현황 분석  #### 요약  본 보고서는 2019년 1월 1일부터 현재까지의 Shopify 국가별 총 매출 데이터를 분석한 결과입니다. 분석 결과, **미국(US)**이 약 **117.4억원**의 압도적인 매출로 1위를 차지했습니다. 이어서 **캐나다(CA)**가 약 **14.4억원**, **호주(AU)**가 6억 "
+  },
+  {
+    "id": "V2_SH-218",
+    "query": "Shopify Product_ID별 매출금액 데이터",
+    "table": "shopify",
+    "category": "detail",
+    "status": "OK",
+    "time": 26.7,
+    "answer_len": 1707,
+    "answer_preview": "### 📊 Shopify Product_ID별 총 매출 분석 보고서  #### 요약  Shopify 데이터베이스에서 2019년 1월 1일부터 오늘(2026년 3월 8일)까지의 Product_ID별 총 매출을 분석한 결과, 총 **107개**의 고유 Product_ID가 식별되었으며, 전체 매출은 약 **1,571만 6,701원**으로 집계되었습니다. 이 중"
+  },
+  {
+    "id": "V2_SH-219",
+    "query": "잠깐, shopify Product_title에 'centella' 포함된 제품 매출 확인 부탁드립니다",
+    "table": "shopify",
+    "category": "detail",
+    "status": "OK",
+    "time": 19.7,
+    "answer_len": 2603,
+    "answer_preview": "### 📊 Shopify 'Centella' 포함 제품 매출 분석  #### 요약  Shopify에서 'Centella'를 포함하는 제품들의 매출을 분석한 결과, **Centella Ampoule**이 약 **8.3억원**으로 가장 높은 매출을 기록했습니다. 상위 20개 제품의 총 매출은 약 **36.2억원**을 기록했으며, 전체 60개 제품의 총 매출은 "
+  },
+  {
+    "id": "V2_SH-220",
+    "query": "Shopify Product_title에 'toner' 포함된 제품 어떻게 되나요?",
+    "table": "shopify",
+    "category": "detail",
+    "status": "OK",
+    "time": 13.4,
+    "answer_len": 343,
+    "answer_preview": "해당 조건에 맞는 데이터가 조회되지 않았습니다.  SQL 쿼리에서 `Product_title LIKE '%toner%'` 조건이 문제인 것으로 보입니다. `shopify_analysis_sales` 테이블의 제품명 필드에 'toner'라는 단어가 포함된 제품이 없거나, 다른 표기(예: '토너', 'Toner' 등)를 사용하고 있을 수 있습니다.  다음과 같"
+  },
+  {
+    "id": "V2_SH-221",
+    "query": "정확한 Shopify Product_title에 'cream' 있는 제품 매출",
+    "table": "shopify",
+    "category": "detail",
+    "status": "OK",
+    "time": 26.0,
+    "answer_len": 2635,
+    "answer_preview": "### 📊 Shopify 'Cream' 제품 매출 분석 (2019년 1월 1일 ~ 2026년 3월 8일)  #### 요약  Shopify에서 'cream'을 포함하는 제품들의 매출을 분석한 결과, 총 26개의 제품이 확인되었습니다. 이 중 **'Centella Soothing Cream'**이 **380,951.64**의 매출로 가장 높은 성과를 보였습니다"
+  },
+  {
+    "id": "V2_SH-222",
+    "query": "Shopify Product_title에 'serum' 포함 제품 판매량 어떻게 되나요?",
+    "table": "shopify",
+    "category": "detail",
+    "status": "OK",
+    "time": 13.9,
+    "answer_len": 392,
+    "answer_preview": "죄송합니다. 요청하신 조건에 해당하는 판매 데이터가 조회되지 않았습니다.  SQL 쿼리에 사용된 필터 조건 중 `Product_title LIKE '%serum%'`이 문제일 가능성이 높습니다. 데이터베이스 내 `Product_title` 컬럼에 'serum'이라는 단어가 포함된 제품명이 없거나, 다른 표현을 사용하고 있을 수 있습니다. 예를 들어, '세럼"
+  },
+  {
+    "id": "V2_SH-223",
+    "query": "쇼피파이 Product_title에 'cleanser' 있는 제품",
+    "table": "shopify",
+    "category": "detail",
+    "status": "OK",
+    "time": 13.8,
+    "answer_len": 330,
+    "answer_preview": "해당 조건의 데이터가 없습니다.  문제는 `Product_title` 필터 조건인 'cleanser'에 있습니다. `shopify_analysis_sales` 테이블의 제품명에 'cleanser'라는 단어가 포함된 데이터가 없는 것으로 보입니다. 대신 한국어 표현이나 다른 유사한 용어가 사용되었을 수 있습니다.  다음과 같은 질문을 통해 유사한 데이터를 조"
+  },
+  {
+    "id": "V2_SH-224",
+    "query": "쇼피파이 Product_title에 'sunscreen' 포함 제품 매출은 어떤가요?",
+    "table": "shopify",
+    "category": "detail",
+    "status": "OK",
+    "time": 13.4,
+    "answer_len": 368,
+    "answer_preview": "해당 조건의 데이터가 없습니다.  문제는 `Product_title LIKE '%sunscreen%'` 필터 조건입니다. `Product_title` 필드에 'sunscreen'이라는 단어가 포함된 제품이 없는 것으로 보입니다. 제품명은 주로 한글이거나 다른 영문 표현(예: 'SPF', 'UV')을 사용할 수 있습니다.  비슷한 데이터를 조회할 수 있는 대"
+  },
+  {
+    "id": "V2_SH-225",
+    "query": "우리 회사 Shopify Product_title에 'ampoule' 있는 제품 주문수량",
+    "table": "shopify",
+    "category": "detail",
+    "status": "OK",
+    "time": 23.1,
+    "answer_len": 2994,
+    "answer_preview": "### 📊 Shopify 'ampoule' 제품별 총 주문 수량 분석  #### 요약  2019년 1월 1일 이후 현재까지 Shopify에서 'ampoule'이 포함된 제품은 총 **37개**가 주문되었으며, 이들의 상위 20개 제품 총 주문 수량은 **498,735개**입니다. 이 중 'Centella Ampoule Foam'이 **109,446개**로 "
+  },
+  {
+    "id": "V2_SH-226",
+    "query": "Shopify 미국 매출 최근 3개월 트렌드",
+    "table": "shopify",
+    "category": "recent",
+    "status": "OK",
+    "time": 44.1,
+    "answer_len": 2669,
+    "answer_preview": "### 📈 Shopify 미국 매출 최근 3개월 트렌드 분석  #### 요약  SKIN1004의 Shopify 미국 채널 매출은 2025년 12월부터 2026년 2월까지 견조한 성장세를 보였으며, 특히 **2026년 2월에 341,398.70 달러**로 가장 높은 월 매출을 기록했습니다. 이는 Shopify가 발표한 2025년 4분기 미국 시장의 견고한 성"
+  },
+  {
+    "id": "V2_SH-227",
+    "query": "Shopify 최근 6개월 국가별 매출 어떻게 되나요?",
+    "table": "shopify",
+    "category": "recent",
+    "status": "OK",
+    "time": 28.9,
+    "answer_len": 1335,
+    "answer_preview": "### 📊 Shopify 최근 6개월 국가별 매출 현황  #### 요약  2025년 9월 8일부터 2026년 3월 8일까지 최근 6개월간 Shopify 국가별 매출 분석 결과, 총 47개 국가에서 매출이 발생했습니다. 이 기간 동안 가장 높은 매출을 기록한 국가는 **미국**으로, 약 **31.8억원**의 매출을 달성하며 전체 매출의 약 68%를 차지했습니"
+  },
+  {
+    "id": "V2_SH-228",
+    "query": "Shopify 최근 1년 메출 총합",
+    "table": "shopify",
+    "category": "recent",
+    "status": "OK",
+    "time": 14.5,
+    "answer_len": 467,
+    "answer_preview": "### 📊 Shopify 최근 1년 매출 총합 분석  #### 요약  Shopify 플랫폼의 최근 1년간 총 매출은 **6,819,481.57원**으로 집계되었습니다. 이 수치는 2025년 3월 8일부터 2026년 3월 7일까지의 판매 데이터를 기준으로 합니다.  #### 상세 데이터  (단일 합계 데이터이므로 상세 데이터 섹션은 생략합니다.)  #### "
+  },
+  {
+    "id": "V2_SH-229",
+    "query": "궁금한데 Shopify 이번 달 매출",
+    "table": "shopify",
+    "category": "recent",
+    "status": "OK",
+    "time": 12.9,
+    "answer_len": 486,
+    "answer_preview": "### 📊 Shopify 2026년 3월 현재 매출 현황  #### 요약  2026년 3월 8일 현재 Shopify의 이번 달(3월) 총 매출은 **83,479원**입니다. 이는 3월 1일부터 8일까지의 누적 매출액입니다.  #### 분석 및 인사이트  *   **월초 매출 현황:** 2026년 3월 1일부터 3월 8일까지 Shopify 채널에서 발생한 총"
+  },
+  {
+    "id": "V2_SH-230",
+    "query": "궁금한데 Shopify 지난달 매출 얼마인가요",
+    "table": "shopify",
+    "category": "recent",
+    "status": "OK",
+    "time": 20.8,
+    "answer_len": 415,
+    "answer_preview": "### 📊 Shopify 지난달(2026년 2월) 매출 현황  #### 요약  Shopify 채널의 지난달(2026년 2월) 총 매출은 **470,228원**을 기록했습니다.  #### 분석 및 인사이트  *   2026년 2월 Shopify 채널의 매출은 **470,228원**으로 집계되었습니다. *   `> 해당 매출은 Shopify 채널에 한정된 데이"
+  },
+  {
+    "id": "V2_SH-231",
+    "query": "Shopify 올해 세일즈 현황 좀?",
+    "table": "shopify",
+    "category": "recent",
+    "status": "OK",
+    "time": 20.5,
+    "answer_len": 661,
+    "answer_preview": "### 📊 Shopify 2026년 현재까지의 세일즈 현황  #### 요약  ⚠️ 2026년 Shopify 세일즈 데이터는 현재까지의 집계이며, 오늘 날짜(2026년 03월 08일) 기준으로 연간 전체 데이터가 아닙니다. 2026년 현재까지 Shopify 총 세일즈는 **약 11.7억원** (879,838.76 USD)이며, 총 주문 수량은 **86,295"
+  },
+  {
+    "id": "V2_SH-232",
+    "query": "Shopify 작년 매출 총합은 어떤가요?",
+    "table": "shopify",
+    "category": "recent",
+    "status": "OK",
+    "time": 16.5,
+    "answer_len": 487,
+    "answer_preview": "### 📊 Shopify 2025년 연간 매출 총합 분석  #### 요약  Shopify 채널의 2025년 연간 총 매출은 **8,544,905.64**를 기록했습니다. 이는 작년 한 해 동안 Shopify를 통해 발생한 전체 매출을 나타냅니다.  #### 분석 및 인사이트  *   2025년 Shopify 채널의 총 매출은 **8,544,905.64**로"
+  },
+  {
+    "id": "V2_SH-233",
+    "query": "Shopify 오늘 매출 있어 알려주시면 감사하겠습니다",
+    "table": "shopify",
+    "category": "recent",
+    "status": "OK",
+    "time": 16.3,
+    "answer_len": 371,
+    "answer_preview": "### 📊 Shopify 오늘 매출 현황  #### 요약  2026년 03월 08일 기준 Shopify 채널의 오늘 매출은 **0원**으로 확인되었습니다. 현재까지 해당 날짜에 집계된 매출 데이터는 없습니다.  #### 분석 및 인사이트  *   오늘(2026년 03월 08일) Shopify 채널에서 발생한 매출은 집계되지 않았습니다. *   이는 아직 매"
+  },
+  {
+    "id": "V2_SH-234",
+    "query": "Shopify 이번 주 매출 알려주세요",
+    "table": "shopify",
+    "category": "recent",
+    "status": "OK",
+    "time": 16.4,
+    "answer_len": 343,
+    "answer_preview": "### 📊 Shopify 이번 주 매출 현황  #### 요약  Shopify의 이번 주(2026년 03월 03일 ~ 2026년 03월 09일) 총 매출은 **71,009.72달러**입니다.  #### 분석 및 인사이트  *   현재까지 집계된 이번 주 Shopify 총 매출은 71,009.72달러를 기록했습니다. *   > 해당 매출은 2026년 03월 0"
+  },
+  {
+    "id": "V2_SH-235",
+    "query": "Shopify 최근 데이터 날짜 언제야은 어떤가요?",
+    "table": "shopify",
+    "category": "recent",
+    "status": "OK",
+    "time": 10.8,
+    "answer_len": 328,
+    "answer_preview": "### 📊 Shopify 최근 데이터 업데이트 현황  #### 요약  Shopify 매출 데이터는 **2026년 03월 07일**까지 업데이트되어 있습니다. 이는 오늘 날짜(2026년 03월 08일) 기준으로 전날까지의 데이터가 반영되었음을 의미합니다.  #### 분석 및 인사이트  *   Shopify 매출 데이터는 오늘 날짜 기준으로 전날까지의 최신 정"
+  },
+  {
+    "id": "V2_SH-236",
+    "query": "Shopify 메출 데이터 기간 확인해줘 확인 가능한가요?",
+    "table": "shopify",
+    "category": "meta",
+    "status": "OK",
+    "time": 14.2,
+    "answer_len": 607,
+    "answer_preview": "### 📊 Shopify 매출 데이터 조회 기간 확인  #### 요약  Shopify 매출 데이터는 **2021년 10월 06일**부터 **2026년 03월 07일**까지 조회 가능합니다. 이는 약 4년 5개월에 해당하는 기간으로, 장기적인 매출 추이 분석에 활용될 수 있습니다.  #### 상세 데이터 | 구분 | 날짜 | |:---|:---| | 시작일 "
+  },
+  {
+    "id": "V2_SH-237",
+    "query": "Shopify 데이터 시작일과 종료일 알려주세요",
+    "table": "shopify",
+    "category": "meta",
+    "status": "OK",
+    "time": 13.9,
+    "answer_len": 487,
+    "answer_preview": "### 📊 Shopify 데이터 조회 기간  #### 요약  Shopify 데이터는 **2021년 10월 6일**부터 **2026년 3월 7일**까지의 기간을 포함하고 있습니다. 이는 약 4년 5개월에 해당하는 데이터이며, 오늘(2026년 3월 8일) 기준으로 어제까지의 최신 정보를 반영합니다.  #### 분석 및 인사이트  *   Shopify 데이터는 "
+  },
+  {
+    "id": "V2_SH-238",
+    "query": "참고로 Shopify 테이블에 데이터 몇 건이야",
+    "table": "shopify",
+    "category": "meta",
+    "status": "OK",
+    "time": 13.6,
+    "answer_len": 527,
+    "answer_preview": "### 📊 Shopify 테이블 총 데이터 건수  #### 요약  2019년 1월 1일 이후 Shopify 테이블에 기록된 총 데이터는 **249,597건**입니다. 이는 Shopify 채널의 상당한 운영 규모를 보여줍니다.  #### 분석 및 인사이트  *   **데이터 규모 확인**: Shopify 채널의 `shopify_analysis_sales` 테"
+  },
+  {
+    "id": "V2_SH-239",
+    "query": "정확한 Shopify 테이블 국가 종류 목록 좀 봐줘",
+    "table": "shopify",
+    "category": "meta",
+    "status": "OK",
+    "time": 14.2,
+    "answer_len": 1014,
+    "answer_preview": "### 📊 Shopify 판매 데이터에 포함된 국가 종류 목록  #### 요약  Shopify 판매 데이터 분석 결과, **총 51개**의 고유한 판매 국가가 확인되었습니다. 이 목록에는 아르헨티나, 호주, 캐나다, 프랑스, 독일 등 다양한 국가가 포함되어 있으며, 데이터 내에 **빈 문자열(\"\")**로 기록된 국가 항목이 1건 존재합니다.  #### 상세"
+  },
+  {
+    "id": "V2_SH-240",
+    "query": "요즘 Shopify 제품 목록 전체 보여줘",
+    "table": "shopify",
+    "category": "meta",
+    "status": "OK",
+    "time": 18.4,
+    "answer_len": 1455,
+    "answer_preview": "### 📊 Shopify 판매 제품 목록 현황  #### 요약  현재 Shopify 판매 데이터에서 확인된 고유 제품은 총 **224개**입니다. 이 목록은 `shopify_analysis_sales` 데이터베이스에서 추출된 모든 고유 제품 타이틀을 포함합니다.  #### 상세 데이터  아래는 Shopify 판매 데이터에서 확인된 전체 224개 제품 중 상"
+  },
+  {
+    "id": "V2_SH-241",
+    "query": "우리 회사 Shopify 제품 유형 종류 목록",
+    "table": "shopify",
+    "category": "meta",
+    "status": "OK",
+    "time": 16.5,
+    "answer_len": 825,
+    "answer_preview": "### 📊 Shopify 판매 제품 유형 종류 목록  #### 요약  우리 회사 Shopify에서 판매되는 제품 유형은 총 **10가지**입니다. 주요 유형으로는 Ampoule/Serum, Cleanser, Cream 등 기본적인 스킨케어 제품군과 함께, 사은품 및 도구 등 다양한 품목이 포함되어 있습니다.  #### 상세 데이터  | 제품 유형 | |:-"
+  },
+  {
+    "id": "V2_SH-242",
+    "query": "정확한 Shopify Country_code 목록 빨리",
+    "table": "shopify",
+    "category": "meta",
+    "status": "OK",
+    "time": 17.6,
+    "answer_len": 2247,
+    "answer_preview": "### 📊 Shopify 매출 데이터 국가 코드 목록  #### 요약  2019년 1월 1일 이후 Shopify 매출 데이터 분석 결과, **총 70개**의 고유한 국가 코드가 확인되었습니다. 이 목록은 SKIN1004 제품이 Shopify를 통해 판매된 모든 국가를 나타내며, 첫 번째 항목인 빈 값(`\"\"`)은 일부 거래에서 국가 정보가 누락되었음을 의미"
+  },
+  {
+    "id": "V2_SH-243",
+    "query": "궁금한데 Shopify 각 나라 제품 수 알 수 있을까요?",
+    "table": "shopify",
+    "category": "cross_analysis",
+    "status": "OK",
+    "time": 21.9,
+    "answer_len": 1701,
+    "answer_preview": "### 📊 Shopify 국가별 제품 수 현황  #### 요약  2019년 1월 1일 이후 Shopify 데이터를 분석한 결과, **미국**이 **209개**의 제품으로 가장 많은 제품 수를 보유하고 있습니다. 이어서 캐나다(**175개**), 호주(**136개**), 영국(**132개**) 순으로 제품 수가 많았으며, 총 51개 국가의 제품 수가 확인되었"
+  },
+  {
+    "id": "V2_SH-244",
+    "query": "Shopify 미국에서 판매되는 제품 종류 수 알려줄래 좀 알려줘",
+    "table": "shopify",
+    "category": "cross_analysis",
+    "status": "OK",
+    "time": 17.2,
+    "answer_len": 428,
+    "answer_preview": "### 📊 Shopify 미국 판매 제품 종류 수 분석  #### 요약  Shopify 미국 채널에서 판매된 제품 종류는 **0개**로 확인되었습니다. 이는 2019년 1월 1일 이후의 데이터를 기준으로 한 결과입니다.  #### 분석 및 인사이트  *   Shopify 미국 채널에서는 2019년 1월 1일 이후 현재까지 판매된 제품이 없는 것으로 보입니다"
+  },
+  {
+    "id": "V2_SH-245",
+    "query": "Shopify 국가별 월별 매출 히트맵 알려주세요",
+    "table": "shopify",
+    "category": "cross_analysis",
+    "status": "OK",
+    "time": 36.8,
+    "answer_len": 1848,
+    "answer_preview": "### 📊 Shopify 국가별 월별 매출 분석 보고서  #### 요약  Shopify의 국가별 월별 매출 분석 결과, 총 **49개 국가**의 **46개 월별** 매출 데이터에서 총 **3,732,205원** (약 **373만원**)의 매출이 집계되었습니다. 가장 최근 데이터는 **2025년 12월**이며, **캐나다**, **멕시코**, **호주**가 "
+  },
+  {
+    "id": "V2_SH-246",
+    "query": "Shopify 상품별 국가별 매축 크로스탭",
+    "table": "shopify",
+    "category": "cross_analysis",
+    "status": "OK",
+    "time": 23.4,
+    "answer_len": 2764,
+    "answer_preview": "### 📊 Shopify 상품별 국가별 매출 분석 보고서 (2019년 1월 1일 이후)  #### 요약  2019년 1월 1일부터 현재(2026년 3월 8일)까지의 Shopify 매출 데이터를 분석한 결과, 상위 1,000개 상품-국가 조합의 총 매출액은 **약 1,539만 달러**입니다. 이 중 가장 높은 매출을 기록한 조합은 **미국 시장의 'Hyalu"
+  },
+  {
+    "id": "V2_SH-247",
+    "query": "Shopify 제품유형별 국가별 매출 부탁 알려주세요",
+    "table": "shopify",
+    "category": "cross_analysis",
+    "status": "OK",
+    "time": 24.5,
+    "answer_len": 1579,
+    "answer_preview": "### 📊 Shopify 제품유형별 국가별 매출 현황 (2019년 1월 1일 이후)  #### 요약  2019년 1월 1일부터 현재까지 Shopify 전체 매출은 약 **212.2억원** (약 1,571만 USD)을 기록했습니다. 이 중 미국 시장이 압도적인 매출 비중을 보였으며, 특히 분류되지 않은 제품 유형(`''`), Ampoule/Serum, Sun"
+  },
+  {
+    "id": "V2_SH-248",
+    "query": "Shopify 국가별 평균 주문 금액 비교 얼마임?",
+    "table": "shopify",
+    "category": "cross_analysis",
+    "status": "OK",
+    "time": 27.6,
+    "answer_len": 1108,
+    "answer_preview": "### 📊 Shopify 및 자사몰 국가별 평균 주문 금액 비교  #### 요약  지정된 자사몰(Shopify 및 유사 플랫폼 포함)의 국가별 평균 주문 금액을 분석한 결과, **미국**이 **136,073원**으로 가장 높은 평균 주문 금액을 기록했습니다. 이는 한국(38,682원), 말레이시아(27,565원), 필리핀(22,501원)에 비해 현저히 높은"
+  },
+  {
+    "id": "V2_SH-249",
+    "query": "Shopify 각 나라 제품당 주문수 평균",
+    "table": "shopify",
+    "category": "cross_analysis",
+    "status": "OK",
+    "time": 20.7,
+    "answer_len": 2093,
+    "answer_preview": "### 📊 Shopify 국가별 제품당 평균 주문 수 분석  #### 요약  Shopify 판매 데이터를 기준으로 국가 및 제품별 평균 주문 수를 분석한 결과, **미국** 시장의 **'Hyalu-Cica Water-Fit Sun Serum UV'** 제품이 평균 **101.01개**로 가장 높은 주문 수를 기록했습니다. 상위 20개 제품 모두 미국에서 발"
+  },
+  {
+    "id": "V2_SH-250",
+    "query": "Shopify 미국 제품 기준 각 월 매상",
+    "table": "shopify",
+    "category": "cross_analysis",
+    "status": "OK",
+    "time": 28.8,
+    "answer_len": 1394,
+    "answer_preview": "### 📊 Shopify 미국 제품 월별 매상 분석  #### 요약  ⚠️ 현재 데이터는 2019년 1월부터 2025년 11월까지의 미국 Shopify 매출을 포함하고 있습니다. (오늘 날짜 2026년 03월 08일 기준, 2025년 12월 및 2026년 데이터는 현재 결과에 포함되어 있지 않습니다.) 제공된 상위 1000개 데이터 기준, Shopify 미"
+  },
+  {
+    "id": "V2_SH-251",
+    "query": "Shopify 영국 2024년 제품 TOP 5 알려주시면 감사하겠습니다",
+    "table": "shopify",
+    "category": "cross_analysis",
+    "status": "OK",
+    "time": 16.7,
+    "answer_len": 1297,
+    "answer_preview": "### 📊 2024년 Shopify 영국 TOP 5 제품 매출 분석  #### 요약  2024년 Shopify 영국에서 가장 높은 매출을 기록한 제품은 **Hyalu-Cica Water-Fit Sun Serum SPF50+ PA++++**으로, 총 **9,930.89**의 매출을 달성했습니다. 상위 5개 제품의 총 매출은 **31,331.25**를 기록했습"
+  },
+  {
+    "id": "V2_SH-252",
+    "query": "Shopify 일본 제품유형별 주문수 정리해줘",
+    "table": "shopify",
+    "category": "cross_analysis",
+    "status": "OK",
+    "time": 10.9,
+    "answer_len": 312,
+    "answer_preview": "해당 조건에 맞는 데이터가 존재하지 않습니다.  SQL 쿼리에서 `Country` 필터 조건으로 'Japan'을 사용하셨으나, 유효한 컬럼 값 목록에 따르면 국가명은 한국어로 '일본'으로 저장되어 있습니다. 따라서 `Country = '일본'`으로 수정하시면 데이터를 조회할 수 있을 것입니다.  비슷한 데이터를 조회할 수 있는 대안 질문은 다음과 같습니다:"
+  },
+  {
+    "id": "V2_SH-253",
+    "query": "Shopify에서 매출금액 100달러 이상인 제품",
+    "table": "shopify",
+    "category": "filter",
+    "status": "OK",
+    "time": 20.9,
+    "answer_len": 2570,
+    "answer_preview": "### 📊 Shopify 매출 100달러 이상 제품 현황  #### 요약  Shopify에서 2019년 1월 1일부터 현재까지 **총 194개**의 제품이 100달러 이상의 누적 매출을 기록했습니다. 이들 제품의 총 매출액은 **$15,782,734**에 달합니다. 가장 높은 매출을 기록한 제품은 'Hyalu-Cica Water-Fit Sun Serum S"
+  },
+  {
+    "id": "V2_SH-254",
+    "query": "쇼피파이 주문수량 50개 이상인 제품",
+    "table": "shopify",
+    "category": "filter",
+    "status": "OK",
+    "time": 19.8,
+    "answer_len": 2562,
+    "answer_preview": "### 📊 쇼피파이 개별 주문수량 50개 이상 제품별 총 주문수량 현황  #### 요약  쇼피파이에서 **개별 주문 건당 50개 이상**으로 주문된 제품은 총 **84개**이며, 이들 제품의 총 주문수량은 상위 제품에 집중되어 있습니다. 특히 'Hyalu-Cica Water-Fit Sun Serum SPF50+ PA++++' 제품이 이러한 조건으로 집계된 "
+  },
+  {
+    "id": "V2_SH-255",
+    "query": "Shopify 매출 0인 국가 있어? 보여줘",
+    "table": "shopify",
+    "category": "filter",
+    "status": "OK",
+    "time": 13.7,
+    "answer_len": 373,
+    "answer_preview": "안녕하세요! 요청하신 **Shopify 매출이 0인 국가** 데이터를 조회하지 못했습니다.  좀 더 정확한 결과를 위해 **조건을 구체적으로** 지정해 주시면 다시 조회해 드리겠습니다.  ---  **💡 이렇게 질문해 보시면 좋아요:**  1. **\"2024년 12월 Shopify 매출이 0인 국가 목록 보여줘\"** — 특정 기간 지정 2. **\"2025년"
+  },
+  {
+    "id": "V2_SH-256",
+    "query": "잠깐, Shopify 반품 0건인 국가 목록",
+    "table": "shopify",
+    "category": "filter",
+    "status": "OK",
+    "time": 15.7,
+    "answer_len": 900,
+    "answer_preview": "### 📊 Shopify 반품 0건 국가 현황  #### 요약  2019년 1월 1일부터 현재(2026년 3월 8일)까지의 Shopify 매출 데이터 분석 결과, **총 9개**의 국가에서 반품이 발생하지 않은 것으로 확인되었습니다. 이 국가들은 아르메니아, 벨라루스, 브루나이, 키르기스스탄, 모나코, 미얀마, 사우디아라비아, 우즈베키스탄이며, 국가 정보가"
+  },
+  {
+    "id": "V2_SH-257",
+    "query": "Shopify 매축 1000달러 이상 국가",
+    "table": "shopify",
+    "category": "filter",
+    "status": "OK",
+    "time": 16.8,
+    "answer_len": 572,
+    "answer_preview": "안녕하세요! 요청하신 Shopify 매출 데이터를 조회하지 못했습니다.  좀 더 정확한 결과를 위해 **조건을 구체적으로** 지정해 주시면 다시 조회해 드리겠습니다.  ---  **📌 다음과 같이 질문을 구체화해 보세요:**  1. **\"2024년 Shopify 매출 1,000달러 이상인 국가 목록을 알려줘\"** (기간 명시) 2. **\"2025년 1분기 "
+  },
+  {
+    "id": "V2_SH-258",
+    "query": "궁금한데 Shopify 주문수량 100개 이상 국가 보여줘",
+    "table": "shopify",
+    "category": "filter",
+    "status": "OK",
+    "time": 14.6,
+    "answer_len": 1980,
+    "answer_preview": "### 📊 Shopify 주문수량 100개 이상 국가 현황  #### 요약  2019년 1월 1일부터 현재(2026년 3월 8일)까지의 Shopify 주문 데이터를 분석한 결과, 총 45개 국가에서 누적 주문수량 100개 이상을 기록했습니다. 이 중 **미국**이 **1,182,217개**로 압도적인 1위를 차지했으며, **캐나다(148,084개)**와 *"
+  },
+  {
+    "id": "V2_SH-259",
+    "query": "Shopify 미국 메출 일별 데이터",
+    "table": "shopify",
+    "category": "daily",
+    "status": "OK",
+    "time": 19.8,
+    "answer_len": 339,
+    "answer_preview": "해당 조건에 맞는 데이터가 존재하지 않습니다.  SQL 쿼리에서 `Country = '미국'` 필터 조건은 유효한 값 목록에 포함되어 있습니다. 하지만, `shopify_analysis_sales` 테이블에 '미국'에 대한 매출 데이터가 없거나, `Date >= '2019-01-01'` 조건에 해당하는 '미국' 매출 데이터가 없는 것으로 보입니다.  다음과"
+  },
+  {
+    "id": "V2_SH-260",
+    "query": "잠깐, Shopify 2024년 12월 일별 매출",
+    "table": "shopify",
+    "category": "daily",
+    "status": "OK",
+    "time": 19.2,
+    "answer_len": 1626,
+    "answer_preview": "### 📊 Shopify 2024년 12월 일별 매출 분석  #### 요약  2024년 12월 Shopify의 총 매출은 **1,292,722.88**을 기록했습니다. 일별 매출은 12월 8일에 **122,510.14**로 가장 높았으며, 12월 23일에 **14,289.85**로 가장 낮았습니다. 월 초에 높은 매출을 보인 후 중순부터 감소하는 추세를 나"
+  },
+  {
+    "id": "V2_SH-261",
+    "query": "Shopify 일별 매출 추이 알려주시면 감사하겠습니다",
+    "table": "shopify",
+    "category": "daily",
+    "status": "OK",
+    "time": 33.9,
+    "answer_len": 1509,
+    "answer_preview": "### 📊 Shopify 일별 매출 추이 분석 보고서  #### 요약  Shopify의 일별 매출 데이터를 분석한 결과, 조회된 총 1,000일 동안의 누적 매출은 **3,225,701**입니다. 가장 높은 일별 매출은 **2024년 10월 13일**에 기록된 **19,168.39**였습니다. 데이터는 2019년 1월 1일부터 2024년 10월 13일까지의"
+  },
+  {
+    "id": "V2_SH-262",
+    "query": "Shopify 매출액 최고일 언제야?",
+    "table": "shopify",
+    "category": "daily",
+    "status": "OK",
+    "time": 22.5,
+    "answer_len": 649,
+    "answer_preview": "### 📊 Shopify 일별 최고 매출액 분석  #### 요약  Shopify에서 기록된 일별 최고 매출액은 **2025년 11월 28일**에 발생했으며, 이 날의 매출액은 **약 4.5억원 (344,264.95 USD)**을 기록했습니다. 이는 연말 대규모 쇼핑 시즌과 연관된 것으로 분석됩니다.  #### 상세 데이터 | 날짜 | 총 매출액 (USD) "
+  },
+  {
+    "id": "V2_SH-263",
+    "query": "Shopify 11월 2024년 일별 주문수량 알려주세요",
+    "table": "shopify",
+    "category": "daily",
+    "status": "OK",
+    "time": 16.8,
+    "answer_len": 1758,
+    "answer_preview": "### 📊 2024년 11월 Shopify 일별 주문 수량 분석  #### 요약  2024년 11월 Shopify의 총 주문 수량은 **179,618개**로 집계되었습니다. 특히 월말인 11월 29일에는 **31,398개**로 가장 높은 일별 주문 수량을 기록하며, 블랙프라이데이 등 연말 프로모션의 영향으로 월말에 주문량이 크게 증가하는 추세를 보였습니다."
+  },
+  {
+    "id": "V2_SH-264",
+    "query": "Shopify 나라별 누적 판매액 차트",
+    "table": "shopify",
+    "category": "visualization",
+    "status": "OK",
+    "time": 24.6,
+    "answer_len": 1782,
+    "answer_preview": "### 📊 Shopify 나라별 누적 판매액 현황  #### 요약  Shopify의 나라별 누적 판매액 분석 결과, **미국**이 약 **152.9억원**으로 압도적인 1위를 차지했습니다. 이는 2위인 캐나다(약 18.7억원)와 큰 격차를 보이며, 전체 51개국 중 상위 10개국이 전체 판매액의 대부분을 차지하고 있습니다.  #### 상세 데이터  전체 5"
+  },
+  {
+    "id": "V2_SH-265",
+    "query": "쇼피파이 제품별 세일즈 파이차트",
+    "table": "shopify",
+    "category": "visualization",
+    "status": "OK",
+    "time": 21.6,
+    "answer_len": 2187,
+    "answer_preview": "### 📊 쇼피파이 제품별 총 매출 분석 (2019년 1월 1일 이후)  #### 요약  2019년 1월 1일 이후 쇼피파이에서 발생한 총 매출은 **1,571만 6,701원**입니다. 이 중 'Hyalu-Cica Water-Fit Sun Serum SPF50+ PA++++' 제품이 **195만 1,609원**으로 전체 매출의 약 12.4%를 차지하며 가장"
+  },
+  {
+    "id": "V2_SH-266",
+    "query": "Shopify 월간 매출 바차트",
+    "table": "shopify",
+    "category": "visualization",
+    "status": "OK",
+    "time": 29.2,
+    "answer_len": 1382,
+    "answer_preview": "### 📊 Shopify 월별 매출 현황  #### 요약  ⚠️ 현재 2026년 3월 8일 기준으로, 제공된 데이터는 2021년 10월부터 2023년 5월까지의 정보만 포함하고 있습니다. 해당 기간 동안 Shopify의 총 매출은 **154,891.08**을 기록했습니다. 가장 높은 월 매출은 2022년 11월에 **16,781.90**이었으며, 가장 낮은"
+  },
+  {
+    "id": "V2_SH-267",
+    "query": "Shopify 나라별 수익 비중 그래프",
+    "table": "shopify",
+    "category": "visualization",
+    "status": "OK",
+    "time": 45.6,
+    "answer_len": 1577,
+    "answer_preview": "### 📊 Shopify 나라별 수익 현황 분석 (2019년 1월 1일 이후)  #### 요약  2019년 1월 1일 이후 Shopify 매출 데이터를 분석한 결과, **미국**이 압도적인 수익을 기록하며 전체 51개 국가 중 가장 큰 비중을 차지하고 있습니다. 미국은 총 **11,764,141.95**의 수익을 달성했으며, 이는 상위 10개국 수익 합계의"
+  },
+  {
+    "id": "V2_SH-268",
+    "query": "Shopify 매출 추이 라인차트?",
+    "table": "shopify",
+    "category": "visualization",
+    "status": "OK",
+    "time": 40.8,
+    "answer_len": 1606,
+    "answer_preview": "### 📊 Shopify 월별 매출 추이 분석  #### 요약  ⚠️ 2026년 3월은 현재 8일까지만 데이터가 반영되어 있습니다. Shopify 월별 매출은 2021년 10월부터 2026년 3월까지의 데이터를 기준으로 분석되었습니다. 특히 **2024년 11월에 1,747,827원**으로 최고 매출을 기록했으며, 2023년 하반기부터 2024년까지 가파른"
+  },
+  {
+    "id": "V2_SH-269",
+    "query": "Shopify 매출이 증가한 국가 목록 알려주시면 감사하겠습니다",
+    "table": "shopify",
+    "category": "growth",
+    "status": "OK",
+    "time": 18.7,
+    "answer_len": 436,
+    "answer_preview": "안녕하세요. 요청하신 **Shopify 매출 증가 국가 목록**에 대한 데이터를 현재 조회하지 못했습니다.  좀 더 정확한 결과를 드리기 위해, 아래와 같이 **조건을 구체적으로** 지정해 주시면 다시 조회해 보겠습니다.  ---  ### 💡 이렇게 질문을 바꿔보시면 좋습니다  > **1.** \"2025년 1분기 대비 2분기에 Shopify 매출이 증가한 "
+  },
+  {
+    "id": "V2_SH-270",
+    "query": "궁금한데 Shopify 매상 감소한 국가 알고 싶어 알려주세요",
+    "table": "shopify",
+    "category": "growth",
+    "status": "OK",
+    "time": 27.7,
+    "answer_len": 2324,
+    "answer_preview": "### 📊 2025년 대비 2026년 Shopify 매상 감소 국가 분석 (2026년 3월 8일 기준)  #### 요약  ⚠️ 2026년은 현재 3월 8일까지의 데이터만 존재합니다. 이 점을 고려하여 분석 결과를 확인해 주시기 바랍니다. 2025년 대비 2026년 Shopify 매상이 감소한 국가는 총 38개로 확인되었습니다. 특히, **미국**은 약 **"
+  },
+  {
+    "id": "V2_SH-271",
+    "query": "참고로 Shopify 가장 빠르게 성장하는 시장 부탁드려요",
+    "table": "shopify",
+    "category": "growth",
+    "status": "OK",
+    "time": 29.3,
+    "answer_len": 1780,
+    "answer_preview": "### 📊 Shopify 가장 빠르게 성장하는 시장 분석 보고서  #### 요약  2024년 대비 2025년 Shopify 매출 데이터를 분석한 결과, **모나코**가 **564.65%**의 압도적인 성장률을 기록하며 가장 빠르게 성장하는 시장으로 나타났습니다. 이어서 남아프리카 공화국(512.60%)과 콜롬비아(443.69%)가 높은 성장률을 보이며 상위"
+  },
+  {
+    "id": "V2_SH-272",
+    "query": "Shopify 성장률 TOP 5 국가 어때?",
+    "table": "shopify",
+    "category": "growth",
+    "status": "OK",
+    "time": 21.4,
+    "answer_len": 1367,
+    "answer_preview": "### 📊 Shopify 성장률 TOP 5 국가 분석 (2026년 1-2월 기준)  #### 요약  ⚠️ 2026년은 현재 1-2월 데이터만 존재합니다 (오늘: 2026년 03월 08일). 2026년 1-2월 기준, Shopify 매출 성장률이 가장 높은 국가는 **아르헨티나**로 전년 동기 대비 **13.36%** 성장했습니다. 그 뒤를 이어 **아르메니"
+  },
+  {
+    "id": "V2_SH-273",
+    "query": "요즘 Shopify 2024년 대비 성장한 제품 확인 부탁드립니다",
+    "table": "shopify",
+    "category": "growth",
+    "status": "OK",
+    "time": 25.8,
+    "answer_len": 2434,
+    "answer_preview": "### 📊 Shopify 2024년 대비 2026년 성장 제품 분석  #### 요약  2026년 1월 1일부터 3월 8일까지의 Shopify 매출 데이터를 2024년 동기간과 비교한 결과, 총 **28개** 제품이 매출 성장을 기록했습니다. 이 중 가장 높은 성장을 보인 제품은 **Poremizing Quick Clay Stick Mask**로, 2024년"
+  },
+  {
+    "id": "V2_SH-274",
+    "query": "Shopify 매출금액 정체 국가",
+    "table": "shopify",
+    "category": "growth",
+    "status": "OK",
+    "time": 30.2,
+    "answer_len": 2043,
+    "answer_preview": "### 📊 Shopify 매출금액 추이 분석: 주요 국가별 정체 가능성  #### 요약  2025년 12월까지의 Shopify 매출 데이터를 분석한 결과, 주요 매출 발생 국가인 캐나다, 호주, 멕시코에서 **2024년 말 대비 2025년 하반기에 매출이 전반적으로 감소하거나 정체되는 경향**이 관찰되었습니다. 특히, **캐나다**는 2024년 11월 **"
+  },
+  {
+    "id": "V2_SH-275",
+    "query": "요즘 Shopify 신규 진입 국가 있어 확인 가능한가요?",
+    "table": "shopify",
+    "category": "growth",
+    "status": "OK",
+    "time": 19.4,
+    "answer_len": 723,
+    "answer_preview": "### 📊 Shopify 2026년 신규 진출 국가 현황  #### 요약  ⚠️ 2026년은 현재 1월부터 **3월 8일**까지의 데이터만 존재합니다. 2026년 1월부터 3월 8일 현재까지 Shopify를 통해 **새롭게 진출한 국가는 총 2개국**으로 확인됩니다. 해당 국가들은 **아랍에미리트**와 **사우디아라비아**입니다. 또한, 국가 정보가 명시되"
+  },
+  {
+    "id": "V2_SH-276",
+    "query": "Shopify 매출 하락 원인 살펴봐줘 알려주세요",
+    "table": "shopify",
+    "category": "growth",
+    "status": "WARN",
+    "time": 69.8,
+    "answer_len": 3341,
+    "answer_preview": "### 📈 Shopify 매출 추이 분석 및 오해 해소  #### 요약  SKIN1004의 Shopify 매출은 2023년 하반기부터 **급격한 성장세**를 보였으며, 2024년 11월 **174.8만원**으로 최고점을 기록했습니다. 2025년에도 높은 매출 수준을 유지했으나, 2026년 초 매출은 이전 최고점 대비 계절적 하락을 보이며, 2026년 3월 "
+  },
+  {
+    "id": "V2_SH-277",
+    "query": "정확한 Shopify 전년 동월 대비 성장률 높은 국가",
+    "table": "shopify",
+    "category": "growth",
+    "status": "OK",
+    "time": 23.2,
+    "answer_len": 673,
+    "answer_preview": "# 데이터 조회 안내  안녕하세요. 요청하신 **Shopify 전년 동월 대비 성장률 높은 국가** 데이터를 조회하지 못했습니다.  좀 더 정확한 결과를 위해 **조건을 구체적으로 지정**해 주시면 다시 조회를 시도해 보겠습니다.  ---  ## 💡 이렇게 질문을 바꿔보시면 좋습니다  아래 항목들을 포함해 주시면 조회 성공률이 높아집니다:  | 구체화 항목"
+  },
+  {
+    "id": "V2_SH-278",
+    "query": "Shopify 국가별 매출액 중앙값은 어떤가요?",
+    "table": "shopify",
+    "category": "statistics",
+    "status": "OK",
+    "time": 18.6,
+    "answer_len": 762,
+    "answer_preview": "### 📊 Shopify 미국 매출액 중앙값 분석 (2019년 1월 1일 이후)  #### 요약  ⚠️ 현재 조회된 데이터는 **미국(United States)**에 대한 정보만 포함하고 있습니다. 2019년 1월 1일 이후 Shopify 채널에서 미국의 매출액 중앙값은 **183.15**입니다. 다른 국가의 데이터는 현재 결과에 포함되어 있지 않아 포괄적"
+  },
+  {
+    "id": "V2_SH-279",
+    "query": "Shopify 제품별 매출 표준편차 알려주시면 감사하겠습니다",
+    "table": "shopify",
+    "category": "statistics",
+    "status": "OK",
+    "time": 36.0,
+    "answer_len": 2786,
+    "answer_preview": "### 📊 Shopify 제품별 매출 표준편차 분석 보고서  #### 요약  Shopify 제품별 매출 표준편차 분석 결과, 2019년 1월 1일부터 현재(2026년 3월 8일)까지의 데이터를 기준으로 총 224개 제품의 매출을 분석했습니다. 전체 제품의 총 매출은 **15,716,701**이며, 총 249,597건의 거래가 발생했습니다. 개별 거래 매출액"
+  },
+  {
+    "id": "V2_SH-280",
+    "query": "빠르게 Shopify 매출금액 분산 분석 정리해줘",
+    "table": "shopify",
+    "category": "statistics",
+    "status": "OK",
+    "time": 46.8,
+    "answer_len": 2553,
+    "answer_preview": "### 📊 Shopify 매출금액 국가별/제품별 분산 분석  #### 요약  2019년 1월 1일 이후 Shopify 매출 데이터를 분석한 결과, 총 매출액은 **15,392,973원**이며, 34개 국가의 167개 고유 제품에서 발생했습니다. 특히, 상위 매출은 **미국 시장**이 압도적으로 지배하고 있으며, 'Hyalu-Cica Water-Fit Sun"
+  },
+  {
+    "id": "V2_SH-281",
+    "query": "Shopify 국가별 매출 최솟값 최댓값 어떻게 되나요?",
+    "table": "shopify",
+    "category": "statistics",
+    "status": "OK",
+    "time": 15.4,
+    "answer_len": 750,
+    "answer_preview": "### 📊 Shopify 국가별 총 매출 범위 분석  #### 요약  Shopify 플랫폼에서 국가별 총 매출을 분석한 결과, 최소 매출은 **1.09원**이었으며, 최대 매출은 **1,176만 4,142원**으로 나타났습니다. 이는 Shopify를 통해 판매하는 국가별 매출 성과가 매우 큰 편차를 보이고 있음을 시사합니다.  #### 분석 및 인사이트  "
+  },
+  {
+    "id": "V2_SH-282",
+    "query": "Shopify 달별 매출금액 평균과 중앙값",
+    "table": "shopify",
+    "category": "statistics",
+    "status": "OK",
+    "time": 27.4,
+    "answer_len": 1685,
+    "answer_preview": "### 📊 Shopify 월별 매출 평균 및 중앙값 분석  #### 요약  Shopify 월별 매출 데이터 분석 결과, **2021년 10월부터 2023년 5월까지**의 기간 동안 월별 매출 평균과 중앙값은 상당한 변동성을 보였습니다. 특히 **2022년 1월**에는 월별 평균 매출이 **32.23**으로 가장 높게 나타났으며, **2021년 11월과 12"
+  },
+  {
+    "id": "V2_SH-283",
+    "query": "잠깐, Shopify 미국 vs 영국 제품별 매출 대비표 얼마임?",
+    "table": "shopify",
+    "category": "complex",
+    "status": "OK",
+    "time": 14.0,
+    "answer_len": 327,
+    "answer_preview": "해당 조건의 데이터가 없습니다. SQL에서 사용된 '영국' 국가 필터는 유효 값 목록에 존재하지 않습니다.  **문제 설명:** `Country` 컬럼의 유효 값 목록에는 '미국'은 포함되어 있으나, '영국'은 포함되어 있지 않습니다. 따라서 '영국'으로 필터링하면 데이터가 조회되지 않습니다.  **유사한 데이터를 조회할 수 있는 대안 질문:** 1.  \""
+  },
+  {
+    "id": "V2_SH-284",
+    "query": "Shopify 2024년 나라별 분기별 매출액 피벗",
+    "table": "shopify",
+    "category": "complex",
+    "status": "OK",
+    "time": 37.5,
+    "answer_len": 2217,
+    "answer_preview": "### 📊 2024년 Shopify 나라별 분기별 매출액 현황  #### 요약  2024년 Shopify 매출은 **미국**이 **약 460만원**으로 압도적인 1위를 차지했습니다. 총 36개 국가에서 매출이 발생했으며, 대부분의 국가에서 4분기 매출이 연간 매출의 상당 부분을 차지하며 연말 쇼핑 시즌의 영향이 두드러졌습니다.  #### 상세 데이터  20"
+  },
+  {
+    "id": "V2_SH-285",
+    "query": "요즘 Shopify 매출액 TOP 3 국가의 제품별 비교 확인해줘",
+    "table": "shopify",
+    "category": "complex",
+    "status": "OK",
+    "time": 31.3,
+    "answer_len": 1751,
+    "answer_preview": "### 📊 최근 3개월 Shopify 매출액 TOP 3 국가별 제품 비교 분석  #### 요약  최근 3개월(2025년 12월 8일 ~ 2026년 3월 8일) Shopify 매출액 TOP 3 국가는 **미국, 캐나다, 멕시코**이며, 이들 국가의 총 매출은 **$1,091,836**입니다. 제공된 데이터 프리뷰에 따르면, 미국 시장에서는 'Hyalu-Cic"
+  },
+  {
+    "id": "V2_SH-286",
+    "query": "Shopify 분기별 나라별 매출 증감률 알고 싶어 알려주세요",
+    "table": "shopify",
+    "category": "complex",
+    "status": "OK",
+    "time": 25.0,
+    "answer_len": 561,
+    "answer_preview": "# 데이터 조회 안내  안녕하세요. 요청하신 **Shopify 분기별 나라별 매출 증감률** 데이터를 조회하지 못했습니다.  좀 더 정확한 결과를 위해 **조건을 구체적으로 지정**해 주시면 다시 조회해 드리겠습니다.  ---  ## 💡 이렇게 질문해 보시면 좋아요  > **1.** \"2024년 3분기 대비 4분기 Shopify **미국** 매출 증감률 알"
+  },
+  {
+    "id": "V2_SH-287",
+    "query": "Shopify 국가별 제품유형별 반품률 매트릭스 알려주세요",
+    "table": "shopify",
+    "category": "complex",
+    "status": "OK",
+    "time": 36.5,
+    "answer_len": 2168,
+    "answer_preview": "### 📊 Shopify 국가별 제품유형별 반품률 분석 보고서  #### 요약  Shopify의 국가별 제품유형별 반품률 분석 결과, 총 매출 **15,898,848원** 중 **멕시코의 앰플/세럼** 제품이 **0.92%**로 가장 높은 반품률을 기록했습니다. 반면, 프랑스, 미국, 캐나다 등 일부 국가의 미분류 제품(`Type: \"\"`)에서는 반품액이 "
+  },
+  {
+    "id": "V2_SH-288",
+    "query": "확인 좀 해줘 Shopify 매출 기여도 분석",
+    "table": "shopify",
+    "category": "complex",
+    "status": "OK",
+    "time": 30.4,
+    "answer_len": 1725,
+    "answer_preview": "### 📊 Shopify 국가별 매출 기여도 분석  #### 요약  2019년 1월 1일부터 현재(2026년 3월 8일)까지의 Shopify 매출 데이터를 분석한 결과, **미국**이 압도적인 매출 기여도를 보이며 핵심 시장임을 입증했습니다. 미국은 **약 117.6억원**의 매출을 기록했으며, 이는 상위 10개국 총 매출의 **약 77%**에 해당합니다."
+  },
+  {
+    "id": "V2_SH-289",
+    "query": "우리 회사 Shopify 각 나라 매출 YoY 성장률 비교",
+    "table": "shopify",
+    "category": "complex",
+    "status": "OK",
+    "time": 29.0,
+    "answer_len": 1771,
+    "answer_preview": "📊 **Shopify 각 나라별 2026년 1분기(1-3월) 매출 YoY 성장률 비교**  #### 요약  2026년 1분기(1월~3월) Shopify 매출은 전반적으로 전년 동기 대비 큰 폭의 감소세를 보였습니다. 전체 48개 국가 중 **브루나이(Brunei)만이 12.86%의 유일한 양(+)의 성장률**을 기록했으며, 나머지 대부분의 국가에서 매출이 "
+  },
+  {
+    "id": "V2_SH-290",
+    "query": "Shopify 미국 분기별 제품 TOP 3 변화 몇이야?",
+    "table": "shopify",
+    "category": "complex",
+    "status": "OK",
+    "time": 19.6,
+    "answer_len": 335,
+    "answer_preview": "해당 조건(2019년 1월 1일 이후 미국 데이터)에 맞는 데이터가 존재하지 않습니다.  SQL 쿼리에서 사용된 `Country = '미국'` 필터 조건은 유효한 값 목록에 포함되어 있지만, `Date >= '2019-01-01'` 조건과 함께 해당 조건을 모두 만족하는 데이터가 현재 테이블에 없는 것으로 보입니다.  비슷한 데이터를 조회할 수 있는 대안 "
+  },
+  {
+    "id": "V2_SH-291",
+    "query": "Shopify 전체 매축 대비 미국 비중 알려주세요",
+    "table": "shopify",
+    "category": "share",
+    "status": "OK",
+    "time": 14.4,
+    "answer_len": 442,
+    "answer_preview": "### 📊 Shopify 전체 매출 대비 미국 비중 분석  #### 요약  Shopify 전체 매출에서 미국이 차지하는 비중은 **74.85%**로 나타났습니다. 이는 2019년 1월 1일부터 현재까지의 데이터를 기준으로 분석한 결과입니다.  #### 분석 및 인사이트  *   미국 시장은 Shopify 전체 매출의 약 4분의 3을 차지하며, 가장 지배적인"
+  },
+  {
+    "id": "V2_SH-292",
+    "query": "Shopify 미국 수익이 전체에서 차지하는 비율",
+    "table": "shopify",
+    "category": "share",
+    "status": "OK",
+    "time": 15.4,
+    "answer_len": 490,
+    "answer_preview": "### 📊 Shopify 전체 매출 대비 미국 수익 비중 분석  #### 요약  2019년 1월 1일 이후 Shopify 전체 매출에서 미국이 차지하는 비중은 **74.85%**입니다. 이는 미국 시장이 Shopify의 핵심적인 수익원임을 명확히 보여줍니다.  #### 분석 및 인사이트  *   미국 시장은 Shopify 전체 매출의 약 4분의 3을 차지하"
+  },
+  {
+    "id": "V2_SH-293",
+    "query": "우리 회사 쇼피파이 일본 판매액 비중 몇 퍼센트 어때?",
+    "table": "shopify",
+    "category": "share",
+    "status": "OK",
+    "time": 18.1,
+    "answer_len": 668,
+    "answer_preview": "### 📊 쇼피파이 일본 판매액 비중 분석  #### 요약  현재 조회된 데이터에 따르면, 우리 회사의 쇼피파이 전체 판매액 중 일본 판매액이 차지하는 비중은 **0.0%**입니다. 이는 쇼피파이 채널에서 일본으로의 판매가 전혀 발생하지 않았거나, 해당 데이터셋에 일본 판매 기록이 없음을 의미합니다.  #### 분석 및 인사이트  *   **일본 판매 부재"
+  },
+  {
+    "id": "V2_SH-294",
+    "query": "Shopify 상위 3개국 매상 비중 얼마임?",
+    "table": "shopify",
+    "category": "share",
+    "status": "OK",
+    "time": 19.2,
+    "answer_len": 903,
+    "answer_preview": "### 📊 Shopify 상위 3개국 매출 비중 분석  #### 요약  Shopify 전체 매출(2019년 1월 1일 이후 기준) 중 상위 3개국인 미국, 캐나다, 호주가 차지하는 비중은 **총 88.43%**입니다. 특히 **미국이 약 117.6억원**의 매출로 **74.85%**를 차지하며 압도적인 비중을 보이고 있습니다.  #### 상세 데이터  | "
+  },
+  {
+    "id": "V2_SH-295",
+    "query": "Shopify 유럽 국가 매출액 비중 전체",
+    "table": "shopify",
+    "category": "share",
+    "status": "OK",
+    "time": 23.9,
+    "answer_len": 418,
+    "answer_preview": "해당 조건의 데이터가 없습니다. SQL에 사용된 대부분의 유럽 국가명은 유효한 값 목록에 존재하지 않습니다.  **문제 조건 설명:** `Country` 필터 조건이 문제입니다. SQL 쿼리에 사용된 '프랑스', '영국', '이탈리아', '스페인' 등 대부분의 유럽 국가명은 `Country` 컬럼의 유효 값 목록에 없습니다. 유효 값 목록에는 '독일'만 유"
+  },
+  {
+    "id": "V2_SH-296",
+    "query": "Shopify 연간 2024년 매출 리포트 확인해줘",
+    "table": "shopify",
+    "category": "report",
+    "status": "OK",
+    "time": 15.1,
+    "answer_len": 320,
+    "answer_preview": "### 📊 Shopify 2024년 연간 매출 리포트  #### 요약  2024년 Shopify 채널의 총 매출은 **5,922,346원**으로 집계되었습니다.  #### 분석 및 인사이트  *   2024년 한 해 동안 Shopify 채널에서 발생한 전체 매출액을 확인할 수 있습니다. *   `> 해당 매출액은 Shopify 채널의 2024년 실적을 나타"
+  },
+  {
+    "id": "V2_SH-297",
+    "query": "쇼피파이 매출 종합 분석 보고서",
+    "table": "shopify",
+    "category": "report",
+    "status": "OK",
+    "time": 29.0,
+    "answer_len": 4082,
+    "answer_preview": "### 📊 쇼피파이 매출 종합 분석 보고서  #### 요약  본 보고서는 2024년 3월부터 2026년 2월까지의 쇼피파이 매출 데이터를 분석한 결과입니다. (⚠️ 2026년은 현재 1~2월 데이터만 존재합니다. 오늘 날짜: 2026년 03월 08일) 분석 대상 국가는 미국, 캐나다, 멕시코, 호주이며, 전체 기간 동안 **총 매출은 $11,461,606*"
+  },
+  {
+    "id": "V2_SH-298",
+    "query": "Shopify 나라별 판매액 요약 테이블 좀 어때?",
+    "table": "shopify",
+    "category": "report",
+    "status": "OK",
+    "time": 29.0,
+    "answer_len": 1977,
+    "answer_preview": "### 📊 Shopify 나라별 판매액 요약 보고서  #### 요약  Shopify 채널의 나라별 판매액을 분석한 결과, **미국**이 약 **117.6억원**의 총 판매액으로 압도적인 1위를 차지했습니다. 이는 상위 10개국 판매액의 약 77%에 해당하며, 캐나다(약 14.4억원)가 2위를 기록하며 북미 시장의 강세가 두드러집니다.  #### 상세 데이터"
+  },
+  {
+    "id": "V2_SH-299",
+    "query": "Shopify 제품 성과 리포트 알 수 있을까요?",
+    "table": "shopify",
+    "category": "report",
+    "status": "OK",
+    "time": 21.3,
+    "answer_len": 2518,
+    "answer_preview": "### 📊 Shopify 제품 성과 리포트 (2019년 1월 1일 이후 누적)  #### 요약  2019년 1월 1일 이후 Shopify에서 가장 높은 누적 매출을 기록한 제품은 \"Hyalu-Cica Water-Fit Sun Serum SPF50+ PA++++\"으로, **약 19.5억원**의 매출을 달성했습니다. 상위 10개 제품의 총 누적 매출은 **약 "
+  },
+  {
+    "id": "V2_SH-300",
+    "query": "Shopify 반기 2024년 실적 요약",
+    "table": "shopify",
+    "category": "report",
+    "status": "OK",
+    "time": 20.1,
+    "answer_len": 647,
+    "answer_preview": "### 📊 SKIN1004 Shopify 2024년 상반기 실적 요약  #### 요약  SKIN1004의 2024년 상반기 Shopify 채널 총 매출은 **1,504,491원**을 기록했으며, 총 주문 수량은 **127,652개**였습니다. 반품액은 **7,791원**으로 집계되었습니다.  #### 분석 및 인사이트  *   **Shopify 채널의 안정"
+  }
+]

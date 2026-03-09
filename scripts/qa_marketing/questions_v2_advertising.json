@@ -1,0 +1,1502 @@
+[
+  {
+    "id": "V2_AD-001",
+    "query": "요즘 2025년 TikTok 총 광고 비용 몇이야 어떻게 되나요?",
+    "category": "platform_cost"
+  },
+  {
+    "id": "V2_AD-002",
+    "query": "확인 좀 해줘 2024년 Facebook 광고 비용 총액",
+    "category": "platform_cost"
+  },
+  {
+    "id": "V2_AD-003",
+    "query": "2025년 Google 광고비 보여줘 확인 부탁드립니다",
+    "category": "platform_cost"
+  },
+  {
+    "id": "V2_AD-004",
+    "query": "Shopee 2024년 광고비 총액 알고 싶어",
+    "category": "platform_cost"
+  },
+  {
+    "id": "V2_AD-005",
+    "query": "2025년 네이버 검색 광고 집행비",
+    "category": "platform_cost"
+  },
+  {
+    "id": "V2_AD-006",
+    "query": "2024년 NaverGFA 광고비 합계 알려주세요",
+    "category": "platform_cost"
+  },
+  {
+    "id": "V2_AD-007",
+    "query": "2025년 SingleONE 광고 예산",
+    "category": "platform_cost"
+  },
+  {
+    "id": "V2_AD-008",
+    "query": "2024년 카카오모먼트 광고비 확인 부탁드립니다",
+    "category": "platform_cost"
+  },
+  {
+    "id": "V2_AD-009",
+    "query": "AmazonAds 2025년 광고비 총합 어떻게 되나요?",
+    "category": "platform_cost"
+  },
+  {
+    "id": "V2_AD-010",
+    "query": "2024년 전체 플랫폼 광고비 합산",
+    "category": "platform_cost"
+  },
+  {
+    "id": "V2_AD-011",
+    "query": "잠깐, 2025년 1분기 TikTok 광고비",
+    "category": "platform_cost"
+  },
+  {
+    "id": "V2_AD-012",
+    "query": "2024년 상반기 Facebook 광고비 어떻게 되나요?",
+    "category": "platform_cost"
+  },
+  {
+    "id": "V2_AD-013",
+    "query": "2025년 하반기 Google 광고 지출",
+    "category": "platform_cost"
+  },
+  {
+    "id": "V2_AD-014",
+    "query": "2024년 4분기 Shopee 광고 예산",
+    "category": "platform_cost"
+  },
+  {
+    "id": "V2_AD-015",
+    "query": "혹시 2025년 2분기 네이버 검색 광고비",
+    "category": "platform_cost"
+  },
+  {
+    "id": "V2_AD-016",
+    "query": "2024년 3분기 NaverGFA 광고 집행비 확인 부탁드립니다",
+    "category": "platform_cost"
+  },
+  {
+    "id": "V2_AD-017",
+    "query": "올해 SingleONE 광고 집행 지출 알려줘",
+    "category": "platform_cost"
+  },
+  {
+    "id": "V2_AD-018",
+    "query": "혹시 작년 카카오모먼트에 쓴 광고 집행비 총액 알려주세요",
+    "category": "platform_cost"
+  },
+  {
+    "id": "V2_AD-019",
+    "query": "빠르게 2025년 AmazonAds에 집행한 총 비용 알려주세요",
+    "category": "platform_cost"
+  },
+  {
+    "id": "V2_AD-020",
+    "query": "궁금한데 2024년 1월 TikTok 광고 지출은 어떤가요?",
+    "category": "platform_cost"
+  },
+  {
+    "id": "V2_AD-021",
+    "query": "혹시 2025년 3월 Facebook 광고 비용 어떻게 되나요?",
+    "category": "platform_cost"
+  },
+  {
+    "id": "V2_AD-022",
+    "query": "잠깐, 2024년 6월 Google 광고 예산 알려줘",
+    "category": "platform_cost"
+  },
+  {
+    "id": "V2_AD-023",
+    "query": "2025년 9월 Shopee 광고 집행비 얼마임?",
+    "category": "platform_cost"
+  },
+  {
+    "id": "V2_AD-024",
+    "query": "2024년 12월 네이버 검색 광고 예산",
+    "category": "platform_cost"
+  },
+  {
+    "id": "V2_AD-025",
+    "query": "혹시 5월 2025년 NaverGFA 예산 좀 알려줘",
+    "category": "platform_cost"
+  },
+  {
+    "id": "V2_AD-026",
+    "query": "확인 좀 해줘 2024년 8월 SingleONE 비용 합산 부탁드려요",
+    "category": "platform_cost"
+  },
+  {
+    "id": "V2_AD-027",
+    "query": "7월 2025년 카카오모먼트 광고비 알려주세요",
+    "category": "platform_cost"
+  },
+  {
+    "id": "V2_AD-028",
+    "query": "2024년 11월 AmazonAds 지출",
+    "category": "platform_cost"
+  },
+  {
+    "id": "V2_AD-029",
+    "query": "잠깐, 2025년 TikTok 광고 집행비 월별 추이 알려주세요",
+    "category": "monthly_trend"
+  },
+  {
+    "id": "V2_AD-030",
+    "query": "Facebook 2024년 매월 광고비 추이 보여줘",
+    "category": "monthly_trend"
+  },
+  {
+    "id": "V2_AD-031",
+    "query": "Google 광고 예산 2025년 각 월 트렌드",
+    "category": "monthly_trend"
+  },
+  {
+    "id": "V2_AD-032",
+    "query": "간단하게 Shopee 2024년 월별 광고 지출 변화",
+    "category": "monthly_trend"
+  },
+  {
+    "id": "V2_AD-033",
+    "query": "궁금한데 네이버 검색 2025년 월별 광고비 흐름",
+    "category": "monthly_trend"
+  },
+  {
+    "id": "V2_AD-034",
+    "query": "NaverGFA 2024년 월간 광고비 트렌드",
+    "category": "monthly_trend"
+  },
+  {
+    "id": "V2_AD-035",
+    "query": "SingleONE 2025년 광고 지출 월별 변화 추이 확인 가능한가요?",
+    "category": "monthly_trend"
+  },
+  {
+    "id": "V2_AD-036",
+    "query": "참고로 카카오모먼트 2024년 월별 광고비 추이 알려주시면 감사하겠습니다",
+    "category": "monthly_trend"
+  },
+  {
+    "id": "V2_AD-037",
+    "query": "AmazonAds 각 2025년 월 비용 추이 보여줄 수 있어? 빨리 확인 가능한가요?",
+    "category": "monthly_trend"
+  },
+  {
+    "id": "V2_AD-038",
+    "query": "2025년 전체 플랫폼 달별 광고 비용 변동",
+    "category": "monthly_trend"
+  },
+  {
+    "id": "V2_AD-039",
+    "query": "요즘 TikTok 광고 집행비가 가장 많았던 달은 알려주시면 감사하겠습니다",
+    "category": "monthly_trend"
+  },
+  {
+    "id": "V2_AD-040",
+    "query": "확인 좀 해줘 Facebook 광고비 전월 대비 증감 추이",
+    "category": "monthly_trend"
+  },
+  {
+    "id": "V2_AD-041",
+    "query": "2025년 1분기 Google 광고비 월별 추이 부탁드려요",
+    "category": "monthly_trend"
+  },
+  {
+    "id": "V2_AD-042",
+    "query": "Shopee 광고비 분기별 추이 확인 부탁드립니다",
+    "category": "monthly_trend"
+  },
+  {
+    "id": "V2_AD-043",
+    "query": "인도네시아 TikTok ROAS 몇이야 알려주세요",
+    "category": "roas"
+  },
+  {
+    "id": "V2_AD-044",
+    "query": "참고로 필리핀 Facebook ROAS 좀",
+    "category": "roas"
+  },
+  {
+    "id": "V2_AD-045",
+    "query": "참고로 태국 Shopee ROAS 확인해줘",
+    "category": "roas"
+  },
+  {
+    "id": "V2_AD-046",
+    "query": "우리 회사 베트남 Google ROAS",
+    "category": "roas"
+  },
+  {
+    "id": "V2_AD-047",
+    "query": "정확한 말레이시아 TikTok 광고 수익률 부탁드려요",
+    "category": "roas"
+  },
+  {
+    "id": "V2_AD-048",
+    "query": "싱가포르 Facebook ROAS 분석 좀",
+    "category": "roas"
+  },
+  {
+    "id": "V2_AD-049",
+    "query": "일본 AmazonAds ROAS 확인 가능한가요?",
+    "category": "roas"
+  },
+  {
+    "id": "V2_AD-050",
+    "query": "빠르게 한국 네이버 검색 광고 ROAS",
+    "category": "roas"
+  },
+  {
+    "id": "V2_AD-051",
+    "query": "한국 카카오모먼트 ROAS 좀 알려줘",
+    "category": "roas"
+  },
+  {
+    "id": "V2_AD-052",
+    "query": "미국 Google 광고 ROAS 알려주세요",
+    "category": "roas"
+  },
+  {
+    "id": "V2_AD-053",
+    "query": "2025년 TikTok ROAS 추이?",
+    "category": "roas"
+  },
+  {
+    "id": "V2_AD-054",
+    "query": "2024년 Facebook ROAS 월간 변화",
+    "category": "roas"
+  },
+  {
+    "id": "V2_AD-055",
+    "query": "플랫폼 기준 ROAS 비교",
+    "category": "roas"
+  },
+  {
+    "id": "V2_AD-056",
+    "query": "ROAS가 가장 높은 플랫폼은 몇이야?",
+    "category": "roas"
+  },
+  {
+    "id": "V2_AD-057",
+    "query": "국가 기준 전체 광고 ROAS 랭킹 확인 부탁드립니다",
+    "category": "roas"
+  },
+  {
+    "id": "V2_AD-058",
+    "query": "1분기 2025년 TikTok ROAS 부탁드려요",
+    "category": "roas"
+  },
+  {
+    "id": "V2_AD-059",
+    "query": "Shopee 광고 ROAS 나라별 비교 살펴봐줘",
+    "category": "roas"
+  },
+  {
+    "id": "V2_AD-060",
+    "query": "NaverGFA ROAS 파악해줘해줘",
+    "category": "roas"
+  },
+  {
+    "id": "V2_AD-061",
+    "query": "간단하게 SingleONE 광고 수익률 부탁",
+    "category": "roas"
+  },
+  {
+    "id": "V2_AD-062",
+    "query": "AmazonAds ROAS 월별 추이 부탁드려요",
+    "category": "roas"
+  },
+  {
+    "id": "V2_AD-063",
+    "query": "국가별 TikTok 광고 비용 비교",
+    "category": "country_comparison"
+  },
+  {
+    "id": "V2_AD-064",
+    "query": "국가별 Facebook 광고 지출 견줘봐해줘 확인해줘",
+    "category": "country_comparison"
+  },
+  {
+    "id": "V2_AD-065",
+    "query": "나라별 Google 광고비 비교 부탁드려요",
+    "category": "country_comparison"
+  },
+  {
+    "id": "V2_AD-066",
+    "query": "국가별 Shopee 광고 집행비 순위",
+    "category": "country_comparison"
+  },
+  {
+    "id": "V2_AD-067",
+    "query": "국가별 전체 광고 지출 비교 분석 부탁",
+    "category": "country_comparison"
+  },
+  {
+    "id": "V2_AD-068",
+    "query": "인도네시아 vs 태국 TikTok 광고 집행비 비교",
+    "category": "country_comparison"
+  },
+  {
+    "id": "V2_AD-069",
+    "query": "필리핀 vs 베트남 Facebook 광고비 어때?",
+    "category": "country_comparison"
+  },
+  {
+    "id": "V2_AD-070",
+    "query": "확인 좀 해줘 동남아 국가별 Shopee 광고 지출 순위 보여줘",
+    "category": "country_comparison"
+  },
+  {
+    "id": "V2_AD-071",
+    "query": "한국 vs 일본 광고 지출 비교 살펴봐줘",
+    "category": "country_comparison"
+  },
+  {
+    "id": "V2_AD-072",
+    "query": "미국 광고 예산 총액",
+    "category": "country_comparison"
+  },
+  {
+    "id": "V2_AD-073",
+    "query": "2025년 국가별 TikTok 광고비 랭킹 좀",
+    "category": "country_comparison"
+  },
+  {
+    "id": "V2_AD-074",
+    "query": "국가별 2024년 Facebook 광고비 분포",
+    "category": "country_comparison"
+  },
+  {
+    "id": "V2_AD-075",
+    "query": "인도네시아 전체 플랫폼 광고비 합계 좀 알려줘",
+    "category": "country_comparison"
+  },
+  {
+    "id": "V2_AD-076",
+    "query": "태국 전체 광고비 정리해줘 확인 가능한가요?",
+    "category": "country_comparison"
+  },
+  {
+    "id": "V2_AD-077",
+    "query": "베트남 광고비 플랫폼 기준 분석 몇이야?",
+    "category": "country_comparison"
+  },
+  {
+    "id": "V2_AD-078",
+    "query": "말레이시아 2025년 광고 지출 총액",
+    "category": "country_comparison"
+  },
+  {
+    "id": "V2_AD-079",
+    "query": "싱가포르 광고비 월별 추이 몇이야?",
+    "category": "country_comparison"
+  },
+  {
+    "id": "V2_AD-080",
+    "query": "일본 광고 비용 플랫폼별 비교",
+    "category": "country_comparison"
+  },
+  {
+    "id": "V2_AD-081",
+    "query": "2025년 1월 채널별 총 광고 예산",
+    "category": "platform_comparison"
+  },
+  {
+    "id": "V2_AD-082",
+    "query": "우리 회사 2024년 3월 플랫폼별 광고비 비교 알려주세요",
+    "category": "platform_comparison"
+  },
+  {
+    "id": "V2_AD-083",
+    "query": "2025년 6월 플랫폼별 광고 지출",
+    "category": "platform_comparison"
+  },
+  {
+    "id": "V2_AD-084",
+    "query": "2024년 9월 플랫폼 기준 광고 예산 순위 알려주시면 감사하겠습니다",
+    "category": "platform_comparison"
+  },
+  {
+    "id": "V2_AD-085",
+    "query": "참고로 2025년 12월 채널별 광고비 대조",
+    "category": "platform_comparison"
+  },
+  {
+    "id": "V2_AD-086",
+    "query": "광고비가 최다 플랫폼은?",
+    "category": "platform_comparison"
+  },
+  {
+    "id": "V2_AD-087",
+    "query": "확인 좀 해줘 플랫폼 기준 2025년 총 광고 예산 순위",
+    "category": "platform_comparison"
+  },
+  {
+    "id": "V2_AD-088",
+    "query": "2024년 플랫폼별 광고 집행비 비중 알려줄래 알려주시면 감사하겠습니다",
+    "category": "platform_comparison"
+  },
+  {
+    "id": "V2_AD-089",
+    "query": "TikTok vs Facebook 광고 비용 비교",
+    "category": "platform_comparison"
+  },
+  {
+    "id": "V2_AD-090",
+    "query": "Google vs 네이버 광고 지출 비교 분석 좀",
+    "category": "platform_comparison"
+  },
+  {
+    "id": "V2_AD-091",
+    "query": "Shopee vs TikTok 광고비 비교 분석 몇이야?",
+    "category": "platform_comparison"
+  },
+  {
+    "id": "V2_AD-092",
+    "query": "국내 플랫폼(네이버, 카카오) vs 해외 플랫폼 광고 예산",
+    "category": "platform_comparison"
+  },
+  {
+    "id": "V2_AD-093",
+    "query": "2025년 상반기 플랫폼 기준 광고 비용 궁금해 부탁드려요",
+    "category": "platform_comparison"
+  },
+  {
+    "id": "V2_AD-094",
+    "query": "하반기 2024년 채널별 광고비",
+    "category": "platform_comparison"
+  },
+  {
+    "id": "V2_AD-095",
+    "query": "TikTok 클릭율 보여줄래",
+    "category": "ctr"
+  },
+  {
+    "id": "V2_AD-096",
+    "query": "Facebook CTR 분석 확인 부탁드립니다",
+    "category": "ctr"
+  },
+  {
+    "id": "V2_AD-097",
+    "query": "Google 광고 클릭률 알고 싶어",
+    "category": "ctr"
+  },
+  {
+    "id": "V2_AD-098",
+    "query": "Shopee 광고 CTR 정리해줘",
+    "category": "ctr"
+  },
+  {
+    "id": "V2_AD-099",
+    "query": "잠깐, 네이버 검색 광고 클릭률 알려주시면 감사하겠습니다",
+    "category": "ctr"
+  },
+  {
+    "id": "V2_AD-100",
+    "query": "NaverGFA 클릭률 분석 확인 부탁드립니다",
+    "category": "ctr"
+  },
+  {
+    "id": "V2_AD-101",
+    "query": "SingleONE CTR",
+    "category": "ctr"
+  },
+  {
+    "id": "V2_AD-102",
+    "query": "요즘 카카오모먼트 CTR",
+    "category": "ctr"
+  },
+  {
+    "id": "V2_AD-103",
+    "query": "AmazonAds 클릭율",
+    "category": "ctr"
+  },
+  {
+    "id": "V2_AD-104",
+    "query": "플랫폼별 CTR 비교 알려줄래 알려주시면 감사하겠습니다",
+    "category": "ctr"
+  },
+  {
+    "id": "V2_AD-105",
+    "query": "2025년 TikTok CTR 추이 빨리 어떻게 되나요?",
+    "category": "ctr"
+  },
+  {
+    "id": "V2_AD-106",
+    "query": "Facebook 2024년 CTR 월별 변화",
+    "category": "ctr"
+  },
+  {
+    "id": "V2_AD-107",
+    "query": "참고로 CTR이 가장 높은 플랫폼",
+    "category": "ctr"
+  },
+  {
+    "id": "V2_AD-108",
+    "query": "각 나라 TikTok CTR 대조",
+    "category": "ctr"
+  },
+  {
+    "id": "V2_AD-109",
+    "query": "확인 좀 해줘 인도네시아 Facebook 클릭률 빨리",
+    "category": "ctr"
+  },
+  {
+    "id": "V2_AD-110",
+    "query": "태국 Google 광고 CTR 정리해줘",
+    "category": "ctr"
+  },
+  {
+    "id": "V2_AD-111",
+    "query": "2025년 1분기 플랫폼 기준 CTR",
+    "category": "ctr"
+  },
+  {
+    "id": "V2_AD-112",
+    "query": "Shopee 광고 국가별 클릭률 순서",
+    "category": "ctr"
+  },
+  {
+    "id": "V2_AD-113",
+    "query": "TikTok 전환수 확인해줘",
+    "category": "conversion"
+  },
+  {
+    "id": "V2_AD-114",
+    "query": "Facebook 전환수은 어떤가요?",
+    "category": "conversion"
+  },
+  {
+    "id": "V2_AD-115",
+    "query": "Google 광고 구매수",
+    "category": "conversion"
+  },
+  {
+    "id": "V2_AD-116",
+    "query": "요즘 Shopee 광고 전환수",
+    "category": "conversion"
+  },
+  {
+    "id": "V2_AD-117",
+    "query": "네이버 검색 광고 전환수 몇이야?",
+    "category": "conversion"
+  },
+  {
+    "id": "V2_AD-118",
+    "query": "잠깐, NaverGFA 전환수",
+    "category": "conversion"
+  },
+  {
+    "id": "V2_AD-119",
+    "query": "SingleONE 전환수 어떻게 되나요?",
+    "category": "conversion"
+  },
+  {
+    "id": "V2_AD-120",
+    "query": "요즘 카카오모먼트 구매수 알려주세요",
+    "category": "conversion"
+  },
+  {
+    "id": "V2_AD-121",
+    "query": "정확한 AmazonAds 구매수 부탁드려요",
+    "category": "conversion"
+  },
+  {
+    "id": "V2_AD-122",
+    "query": "채널별 전환수 견줘봐 확인해줘 어떻게 되나요?",
+    "category": "conversion"
+  },
+  {
+    "id": "V2_AD-123",
+    "query": "TikTok 2025년 전환수 변화",
+    "category": "conversion"
+  },
+  {
+    "id": "V2_AD-124",
+    "query": "Facebook 2024년 전환수 월별 변화",
+    "category": "conversion"
+  },
+  {
+    "id": "V2_AD-125",
+    "query": "빠르게 전환수가 가장 높은 플랫폼 알고 싶어 알려주세요",
+    "category": "conversion"
+  },
+  {
+    "id": "V2_AD-126",
+    "query": "국가별 TikTok 전환 횟수 비교",
+    "category": "conversion"
+  },
+  {
+    "id": "V2_AD-127",
+    "query": "인도네시아 Shopee 구매수",
+    "category": "conversion"
+  },
+  {
+    "id": "V2_AD-128",
+    "query": "태국 Facebook 구매 전환수 얼마임?",
+    "category": "conversion"
+  },
+  {
+    "id": "V2_AD-129",
+    "query": "2025년 1분기 플랫폼별 전환수 좀 알려줘",
+    "category": "conversion"
+  },
+  {
+    "id": "V2_AD-130",
+    "query": "확인 좀 해줘 CPA가 가장 낮은 플랫폼은?",
+    "category": "conversion"
+  },
+  {
+    "id": "V2_AD-131",
+    "query": "혹시 플랫폼별 전환 단가 비교",
+    "category": "conversion"
+  },
+  {
+    "id": "V2_AD-132",
+    "query": "2025년 TikTok 노출 건수 추이 알려주세요",
+    "category": "impressions"
+  },
+  {
+    "id": "V2_AD-133",
+    "query": "Facebook 2024년 노출 횟수 월별 흐름 확인 부탁드립니다",
+    "category": "impressions"
+  },
+  {
+    "id": "V2_AD-134",
+    "query": "Google 광고 2025년 노출수 얼마임?",
+    "category": "impressions"
+  },
+  {
+    "id": "V2_AD-135",
+    "query": "Shopee 2024년 노출 건수 트렌드",
+    "category": "impressions"
+  },
+  {
+    "id": "V2_AD-136",
+    "query": "네이버 검색 광고 노출수 정리해줘",
+    "category": "impressions"
+  },
+  {
+    "id": "V2_AD-137",
+    "query": "잠깐, NaverGFA 2025년 노출수 추이",
+    "category": "impressions"
+  },
+  {
+    "id": "V2_AD-138",
+    "query": "SingleONE 노출수 매월 변화",
+    "category": "impressions"
+  },
+  {
+    "id": "V2_AD-139",
+    "query": "카카오모먼트 노출수 좀 알려줘",
+    "category": "impressions"
+  },
+  {
+    "id": "V2_AD-140",
+    "query": "AmazonAds 노출수 추이 어떻게 되나요?",
+    "category": "impressions"
+  },
+  {
+    "id": "V2_AD-141",
+    "query": "플랫폼별 노출 횟수 견줘봐?",
+    "category": "impressions"
+  },
+  {
+    "id": "V2_AD-142",
+    "query": "확인 좀 해줘 2025년 전체 광고 노출 건수",
+    "category": "impressions"
+  },
+  {
+    "id": "V2_AD-143",
+    "query": "잠깐, 노출수가 가장 많은 플랫폼",
+    "category": "impressions"
+  },
+  {
+    "id": "V2_AD-144",
+    "query": "국가 기준 TikTok 노출수",
+    "category": "impressions"
+  },
+  {
+    "id": "V2_AD-145",
+    "query": "인도네시아 Facebook 노출 건수 부탁드려요",
+    "category": "impressions"
+  },
+  {
+    "id": "V2_AD-146",
+    "query": "2025년 1분기 Google 노출수 궁금해",
+    "category": "impressions"
+  },
+  {
+    "id": "V2_AD-147",
+    "query": "잠깐, CPM이 가장 낮은 플랫폼은? 좀",
+    "category": "impressions"
+  },
+  {
+    "id": "V2_AD-148",
+    "query": "플랫폼별 CPM 견줘봐 알려주세요",
+    "category": "impressions"
+  },
+  {
+    "id": "V2_AD-149",
+    "query": "정확한 TikTok 광고비 대비 매출",
+    "category": "cost_vs_revenue"
+  },
+  {
+    "id": "V2_AD-150",
+    "query": "정확한 Facebook 광고비 대비 매출액 분석 확인 부탁드립니다",
+    "category": "cost_vs_revenue"
+  },
+  {
+    "id": "V2_AD-151",
+    "query": "빠르게 Google 광고비 대비 전환 매출",
+    "category": "cost_vs_revenue"
+  },
+  {
+    "id": "V2_AD-152",
+    "query": "참고로 Shopee 광고 지출 대비 GMV 빨리 확인 부탁드립니다",
+    "category": "cost_vs_revenue"
+  },
+  {
+    "id": "V2_AD-153",
+    "query": "네이버 검색 광고비 대비 전환 매출 부탁 부탁드려요",
+    "category": "cost_vs_revenue"
+  },
+  {
+    "id": "V2_AD-154",
+    "query": "NaverGFA 광고비 대비 매출 확인 부탁드립니다",
+    "category": "cost_vs_revenue"
+  },
+  {
+    "id": "V2_AD-155",
+    "query": "SingleONE 광고비 대비 매출액",
+    "category": "cost_vs_revenue"
+  },
+  {
+    "id": "V2_AD-156",
+    "query": "카카오모먼트 광고 비용 대비 구매 금액",
+    "category": "cost_vs_revenue"
+  },
+  {
+    "id": "V2_AD-157",
+    "query": "AmazonAds 광고 예산 대비 매상",
+    "category": "cost_vs_revenue"
+  },
+  {
+    "id": "V2_AD-158",
+    "query": "플랫폼별 광고비 대비 매상 비교 알려주시면 감사하겠습니다",
+    "category": "cost_vs_revenue"
+  },
+  {
+    "id": "V2_AD-159",
+    "query": "2025년 TikTok 광고 집행비 vs 수익 추이",
+    "category": "cost_vs_revenue"
+  },
+  {
+    "id": "V2_AD-160",
+    "query": "2024년 Facebook 광고비 vs 매축 각 월 대조은 어떤가요?",
+    "category": "cost_vs_revenue"
+  },
+  {
+    "id": "V2_AD-161",
+    "query": "광고 효율이 가장 높은 플랫폼은 어때?",
+    "category": "cost_vs_revenue"
+  },
+  {
+    "id": "V2_AD-162",
+    "query": "국가별 광고비 대비 매축 분석 좀",
+    "category": "cost_vs_revenue"
+  },
+  {
+    "id": "V2_AD-163",
+    "query": "인도네시아 TikTok 광고 비용 대비 매출",
+    "category": "cost_vs_revenue"
+  },
+  {
+    "id": "V2_AD-164",
+    "query": "2025년 전체 광고 지출 총합",
+    "category": "total_cost"
+  },
+  {
+    "id": "V2_AD-165",
+    "query": "2024년 전체 광고 지출",
+    "category": "total_cost"
+  },
+  {
+    "id": "V2_AD-166",
+    "query": "2025년 상반기 전체 광고 집행비 부탁드려요",
+    "category": "total_cost"
+  },
+  {
+    "id": "V2_AD-167",
+    "query": "궁금한데 2024년 하반기 전체 광고비 합계 얼마임?",
+    "category": "total_cost"
+  },
+  {
+    "id": "V2_AD-168",
+    "query": "확인 좀 해줘 2025년 1분기 전체 광고비 알려주시면 감사하겠습니다",
+    "category": "total_cost"
+  },
+  {
+    "id": "V2_AD-169",
+    "query": "간단하게 2024년 4분기 전체 광고 집행비",
+    "category": "total_cost"
+  },
+  {
+    "id": "V2_AD-170",
+    "query": "2025년 1월 전체 광고 집행비 합산",
+    "category": "total_cost"
+  },
+  {
+    "id": "V2_AD-171",
+    "query": "매월 전체 광고 비용 변동",
+    "category": "total_cost"
+  },
+  {
+    "id": "V2_AD-172",
+    "query": "2024년 대비 2025년 광고비 증감률 몇이야?",
+    "category": "total_cost"
+  },
+  {
+    "id": "V2_AD-173",
+    "query": "광고비가 가장 많이 집행된 달은 부탁드려요",
+    "category": "total_cost"
+  },
+  {
+    "id": "V2_AD-174",
+    "query": "2025년 TikTok 인도네시아 광고 지출 각 월 추이",
+    "category": "combined"
+  },
+  {
+    "id": "V2_AD-175",
+    "query": "2024년 Facebook 태국 광고비 및 구매수",
+    "category": "combined"
+  },
+  {
+    "id": "V2_AD-176",
+    "query": "2025년 Google 미국 ROAS 알 수 있을까요?",
+    "category": "combined"
+  },
+  {
+    "id": "V2_AD-177",
+    "query": "참고로 2024년 Shopee 베트남 광고비 대비 GMV 알고 싶어",
+    "category": "combined"
+  },
+  {
+    "id": "V2_AD-178",
+    "query": "인도네시아 TikTok vs Facebook 광고비 대조",
+    "category": "combined"
+  },
+  {
+    "id": "V2_AD-179",
+    "query": "태국 Shopee vs TikTok ROAS 비교 분석",
+    "category": "combined"
+  },
+  {
+    "id": "V2_AD-180",
+    "query": "2025년 1분기 인도네시아 전체 플랫폼 광고비 알려주시면 감사하겠습니다",
+    "category": "combined"
+  },
+  {
+    "id": "V2_AD-181",
+    "query": "간단하게 필리핀 Facebook 광고 노출 횟수 및 클릭수",
+    "category": "combined"
+  },
+  {
+    "id": "V2_AD-182",
+    "query": "말레이시아 Google 전환수 각 월 추이",
+    "category": "combined"
+  },
+  {
+    "id": "V2_AD-183",
+    "query": "요즘 싱가포르 TikTok 광고 성과 요약 빨리",
+    "category": "combined"
+  },
+  {
+    "id": "V2_AD-184",
+    "query": "2025년 베트남 전체 광고비 및 구매수",
+    "category": "combined"
+  },
+  {
+    "id": "V2_AD-185",
+    "query": "확인 좀 해줘 일본 AmazonAds 광고비 및 ROAS 알려주세요",
+    "category": "combined"
+  },
+  {
+    "id": "V2_AD-186",
+    "query": "정확한 한국 네이버 검색 + NaverGFA 합산 광고비",
+    "category": "combined"
+  },
+  {
+    "id": "V2_AD-187",
+    "query": "한국 카카오모먼트 + SingleONE 합산 광고 집행비",
+    "category": "combined"
+  },
+  {
+    "id": "V2_AD-188",
+    "query": "참고로 2025년 3월 인도네시아 TikTok 광고 성과",
+    "category": "combined"
+  },
+  {
+    "id": "V2_AD-189",
+    "query": "6월 2024년 태국 Facebook 광고 성과 얼마임?",
+    "category": "combined"
+  },
+  {
+    "id": "V2_AD-190",
+    "query": "정확한 TikTok 광고주별 광고비 상위 알려주세요",
+    "category": "advertiser"
+  },
+  {
+    "id": "V2_AD-191",
+    "query": "Facebook 계정별 광고 예산 비교 얼마임?",
+    "category": "advertiser"
+  },
+  {
+    "id": "V2_AD-192",
+    "query": "Google 계정별 광고 비용 확인 가능한가요?",
+    "category": "advertiser"
+  },
+  {
+    "id": "V2_AD-193",
+    "query": "Shopee 숍별 광고비 순위 확인 부탁드립니다",
+    "category": "advertiser"
+  },
+  {
+    "id": "V2_AD-194",
+    "query": "확인 좀 해줘 네이버 검색 계정별 광고 집행비",
+    "category": "advertiser"
+  },
+  {
+    "id": "V2_AD-195",
+    "query": "NaverGFA 계정별 광고비 대비?",
+    "category": "advertiser"
+  },
+  {
+    "id": "V2_AD-196",
+    "query": "TikTok 광고주별 ROAS 순위 부탁드려요",
+    "category": "advertiser"
+  },
+  {
+    "id": "V2_AD-197",
+    "query": "Facebook 계정별 전환수 견줘봐 어떻게 되나요?",
+    "category": "advertiser"
+  },
+  {
+    "id": "V2_AD-198",
+    "query": "Shopee 숍별 GMV 상위",
+    "category": "advertiser"
+  },
+  {
+    "id": "V2_AD-199",
+    "query": "정확한 Google 계정별 CTR 비교 분석은 어떤가요?",
+    "category": "advertiser"
+  },
+  {
+    "id": "V2_AD-200",
+    "query": "참고로 카카오모먼트 계정별 광고 지출",
+    "category": "advertiser"
+  },
+  {
+    "id": "V2_AD-201",
+    "query": "AmazonAds 계정별 광고비 순서 얼마임?",
+    "category": "advertiser"
+  },
+  {
+    "id": "V2_AD-202",
+    "query": "SingleONE 계정별 광고 예산",
+    "category": "advertiser"
+  },
+  {
+    "id": "V2_AD-203",
+    "query": "TikTok 광고주별 노출 횟수 TOP 10",
+    "category": "advertiser"
+  },
+  {
+    "id": "V2_AD-204",
+    "query": "Facebook 계정별 클릭수 순위 부탁드려요",
+    "category": "advertiser"
+  },
+  {
+    "id": "V2_AD-205",
+    "query": "2025년 TikTok 클릭수 합계 알려주세요",
+    "category": "clicks"
+  },
+  {
+    "id": "V2_AD-206",
+    "query": "Facebook 링크 2024년 클릭수",
+    "category": "clicks"
+  },
+  {
+    "id": "V2_AD-207",
+    "query": "Google 광고 클릭수 각 월 변화 어때?",
+    "category": "clicks"
+  },
+  {
+    "id": "V2_AD-208",
+    "query": "Shopee 클릭수 국가별 비교 알려주세요",
+    "category": "clicks"
+  },
+  {
+    "id": "V2_AD-209",
+    "query": "요즘 네이버 검색 클릭수 추이",
+    "category": "clicks"
+  },
+  {
+    "id": "V2_AD-210",
+    "query": "NaverGFA 클릭수 월별 변화 알려주세요",
+    "category": "clicks"
+  },
+  {
+    "id": "V2_AD-211",
+    "query": "채널별 클릭수 견줘봐",
+    "category": "clicks"
+  },
+  {
+    "id": "V2_AD-212",
+    "query": "참고로 클릭수가 가장 많은 플랫폼은?",
+    "category": "clicks"
+  },
+  {
+    "id": "V2_AD-213",
+    "query": "우리 회사 CPC가 가장 낮은 플랫폼",
+    "category": "clicks"
+  },
+  {
+    "id": "V2_AD-214",
+    "query": "채널별 CPC 비교 알려주세요",
+    "category": "clicks"
+  },
+  {
+    "id": "V2_AD-215",
+    "query": "정확한 2025년 TikTok CPC 추이 알 수 있을까요?",
+    "category": "clicks"
+  },
+  {
+    "id": "V2_AD-216",
+    "query": "정확한 인도네시아 TikTok 클릭수 알려줄래?",
+    "category": "clicks"
+  },
+  {
+    "id": "V2_AD-217",
+    "query": "잠깐, 태국 Facebook 링크 클릭수",
+    "category": "clicks"
+  },
+  {
+    "id": "V2_AD-218",
+    "query": "간단하게 2025년 전체 플랫폼 클릭수 합계",
+    "category": "clicks"
+  },
+  {
+    "id": "V2_AD-219",
+    "query": "혹시 TikTok 결제 완료 건수 얼마임?",
+    "category": "conversion_value"
+  },
+  {
+    "id": "V2_AD-220",
+    "query": "TikTok 결제 완료 금액 토탈",
+    "category": "conversion_value"
+  },
+  {
+    "id": "V2_AD-221",
+    "query": "우리 회사 Facebook 구매 전환 금액",
+    "category": "conversion_value"
+  },
+  {
+    "id": "V2_AD-222",
+    "query": "잠깐, Facebook 웹사이트 구매수 확인해줘",
+    "category": "conversion_value"
+  },
+  {
+    "id": "V2_AD-223",
+    "query": "Shopee GMV 합계 알려주세요",
+    "category": "conversion_value"
+  },
+  {
+    "id": "V2_AD-224",
+    "query": "정확한 Google 전환 금액 합산",
+    "category": "conversion_value"
+  },
+  {
+    "id": "V2_AD-225",
+    "query": "잠깐, 네이버 검색 전환 금액",
+    "category": "conversion_value"
+  },
+  {
+    "id": "V2_AD-226",
+    "query": "NaverGFA 구매 전환 세일즈",
+    "category": "conversion_value"
+  },
+  {
+    "id": "V2_AD-227",
+    "query": "SingleONE 매출 합계 알려주세요",
+    "category": "conversion_value"
+  },
+  {
+    "id": "V2_AD-228",
+    "query": "카카오모먼트 구매 금액 확인 가능한가요?",
+    "category": "conversion_value"
+  },
+  {
+    "id": "V2_AD-229",
+    "query": "AmazonAds 구매 금액 전체",
+    "category": "conversion_value"
+  },
+  {
+    "id": "V2_AD-230",
+    "query": "정확한 플랫폼 기준 전환 매출 비교 좀",
+    "category": "conversion_value"
+  },
+  {
+    "id": "V2_AD-231",
+    "query": "우리 회사 전환 메출이 가장 높은 플랫폼은 어떤가요?",
+    "category": "conversion_value"
+  },
+  {
+    "id": "V2_AD-232",
+    "query": "TikTok 2025년 결제 완료 금액 변동",
+    "category": "conversion_value"
+  },
+  {
+    "id": "V2_AD-233",
+    "query": "2024년 Facebook 구매 전환 금액 월별 추이 정리해줘",
+    "category": "conversion_value"
+  },
+  {
+    "id": "V2_AD-234",
+    "query": "나라별 Shopee GMV 랭킹",
+    "category": "conversion_value"
+  },
+  {
+    "id": "V2_AD-235",
+    "query": "4월 2025년 TikTok 인도네시아 광고비 알려주세요",
+    "category": "specific_period"
+  },
+  {
+    "id": "V2_AD-236",
+    "query": "정확한 2024년 10월 Facebook 필리핀 전환수 알 수 있을까요?",
+    "category": "specific_period"
+  },
+  {
+    "id": "V2_AD-237",
+    "query": "2025년 2월 Google 미국 노출수 알려줄래 알려주세요",
+    "category": "specific_period"
+  },
+  {
+    "id": "V2_AD-238",
+    "query": "2024년 7월 Shopee 타이 GMV",
+    "category": "specific_period"
+  },
+  {
+    "id": "V2_AD-239",
+    "query": "우리 회사 2025년 8월 네이버 검색 광고 비용",
+    "category": "specific_period"
+  },
+  {
+    "id": "V2_AD-240",
+    "query": "2024년 5월 NaverGFA 클릭수 확인 부탁드립니다",
+    "category": "specific_period"
+  },
+  {
+    "id": "V2_AD-241",
+    "query": "2025년 11월 카카오모먼트 구매수은 어떤가요?",
+    "category": "specific_period"
+  },
+  {
+    "id": "V2_AD-242",
+    "query": "2024년 2월 AmazonAds 광고 예산 부탁드려요",
+    "category": "specific_period"
+  },
+  {
+    "id": "V2_AD-243",
+    "query": "요즘 2025년 10월 SingleONE 매출",
+    "category": "specific_period"
+  },
+  {
+    "id": "V2_AD-244",
+    "query": "2024년 1월~3월 TikTok 인도네시아 광고비 합산",
+    "category": "specific_period"
+  },
+  {
+    "id": "V2_AD-245",
+    "query": "참고로 2025년 4월~6월 Facebook 태국 전환수 알려주세요",
+    "category": "specific_period"
+  },
+  {
+    "id": "V2_AD-246",
+    "query": "2024년 상반기 Google 일본 ROAS 확인해줘",
+    "category": "specific_period"
+  },
+  {
+    "id": "V2_AD-247",
+    "query": "궁금한데 2025년 하반기 Shopee 말레이시아 광고비 알려주세요",
+    "category": "specific_period"
+  },
+  {
+    "id": "V2_AD-248",
+    "query": "최근 3개월 TikTok 광고 성과 확인 부탁드립니다",
+    "category": "specific_period"
+  },
+  {
+    "id": "V2_AD-249",
+    "query": "최근 6개월 Facebook 광고비 추세",
+    "category": "specific_period"
+  },
+  {
+    "id": "V2_AD-250",
+    "query": "TikTok 인도네시아 광고 성과 요약 확인해줘 확인 부탁드립니다",
+    "category": "summary"
+  },
+  {
+    "id": "V2_AD-251",
+    "query": "Facebook 태국 광고 성과 리포트 정리해줘",
+    "category": "summary"
+  },
+  {
+    "id": "V2_AD-252",
+    "query": "Google 미국 광고 성과 분석 알려주세요",
+    "category": "summary"
+  },
+  {
+    "id": "V2_AD-253",
+    "query": "우리 회사 Shopee 동남아 광고 성과 요약",
+    "category": "summary"
+  },
+  {
+    "id": "V2_AD-254",
+    "query": "네이버 광고 전체 성과 요약 알 수 있을까요?",
+    "category": "summary"
+  },
+  {
+    "id": "V2_AD-255",
+    "query": "참고로 2025년 전체 광고 성과 리포트 좀",
+    "category": "summary"
+  },
+  {
+    "id": "V2_AD-256",
+    "query": "2024년 연간 광고 성과 분석해줘",
+    "category": "summary"
+  },
+  {
+    "id": "V2_AD-257",
+    "query": "인도네시아 전체 광고 성과 분석 알려주세요",
+    "category": "summary"
+  },
+  {
+    "id": "V2_AD-258",
+    "query": "타이 2025년 광고 성과 요약",
+    "category": "summary"
+  },
+  {
+    "id": "V2_AD-259",
+    "query": "확인 좀 해줘 베트남 광고 성과 리포트",
+    "category": "summary"
+  },
+  {
+    "id": "V2_AD-260",
+    "query": "요즘 한국 광고 성과 전체 요약",
+    "category": "summary"
+  },
+  {
+    "id": "V2_AD-261",
+    "query": "일본 광고 성과 분석 좀 리포트",
+    "category": "summary"
+  },
+  {
+    "id": "V2_AD-262",
+    "query": "빠르게 미국 광고 성과 요약해줘 빨리",
+    "category": "summary"
+  },
+  {
+    "id": "V2_AD-263",
+    "query": "필리핀 광고 성과 분석해주세요",
+    "category": "summary"
+  },
+  {
+    "id": "V2_AD-264",
+    "query": "TikTok 전체 국가 광고 성과 견줘봐 알려주시면 감사하겠습니다",
+    "category": "summary"
+  },
+  {
+    "id": "V2_AD-265",
+    "query": "전환율이 가장 높은 국가와 플랫폼 조합 알려주세요",
+    "category": "ranking"
+  },
+  {
+    "id": "V2_AD-266",
+    "query": "혹시 광고 지출 TOP 5 국가",
+    "category": "ranking"
+  },
+  {
+    "id": "V2_AD-267",
+    "query": "우리 회사 ROAS TOP 5 플랫폼-국가 조합 알고 싶어",
+    "category": "ranking"
+  },
+  {
+    "id": "V2_AD-268",
+    "query": "CTR TOP 5 플랫폼은 어떤가요?",
+    "category": "ranking"
+  },
+  {
+    "id": "V2_AD-269",
+    "query": "혹시 CPC가 가장 비싼 플랫폼 TOP 3",
+    "category": "ranking"
+  },
+  {
+    "id": "V2_AD-270",
+    "query": "CPM이 가장 비싼 국가 TOP 5 알려주세요",
+    "category": "ranking"
+  },
+  {
+    "id": "V2_AD-271",
+    "query": "간단하게 전환수 TOP 10 국가-플랫폼 알려주시면 감사하겠습니다",
+    "category": "ranking"
+  },
+  {
+    "id": "V2_AD-272",
+    "query": "광고 클릭수 TOP 5 플랫폼 알려주세요",
+    "category": "ranking"
+  },
+  {
+    "id": "V2_AD-273",
+    "query": "노출 건수 TOP 5 플랫폼",
+    "category": "ranking"
+  },
+  {
+    "id": "V2_AD-274",
+    "query": "전환 매출 TOP 5 플랫폼 알 수 있을까요?",
+    "category": "ranking"
+  },
+  {
+    "id": "V2_AD-275",
+    "query": "2025년 TikTok vs 2024년 TikTok 광고비 대비",
+    "category": "yoy"
+  },
+  {
+    "id": "V2_AD-276",
+    "query": "Facebook 광고 지출 전년 대비 증감",
+    "category": "yoy"
+  },
+  {
+    "id": "V2_AD-277",
+    "query": "정확한 Google 광고 예산 YoY 비교",
+    "category": "yoy"
+  },
+  {
+    "id": "V2_AD-278",
+    "query": "궁금한데 Shopee 광고비 전년 대비 변화",
+    "category": "yoy"
+  },
+  {
+    "id": "V2_AD-279",
+    "query": "전체 광고 예산 전년 동기 대비",
+    "category": "yoy"
+  },
+  {
+    "id": "V2_AD-280",
+    "query": "TikTok ROAS 전년 대비 변화?",
+    "category": "yoy"
+  },
+  {
+    "id": "V2_AD-281",
+    "query": "Facebook 전환수 전년 대비 증감 부탁드려요",
+    "category": "yoy"
+  },
+  {
+    "id": "V2_AD-282",
+    "query": "참고로 2025년 1분기 vs 2024년 1분기 전체 광고비 알려주세요",
+    "category": "yoy"
+  },
+  {
+    "id": "V2_AD-283",
+    "query": "잠깐, 인도네시아 광고비 전년 대비 비교 부탁드려요",
+    "category": "yoy"
+  },
+  {
+    "id": "V2_AD-284",
+    "query": "태국 광고비 YoY 증감률 확인 부탁드립니다",
+    "category": "yoy"
+  },
+  {
+    "id": "V2_AD-285",
+    "query": "TikTok 광고비 중 인도네시아 비중은",
+    "category": "ratio"
+  },
+  {
+    "id": "V2_AD-286",
+    "query": "참고로 Facebook 광고비에서 태국이 차지하는 비율",
+    "category": "ratio"
+  },
+  {
+    "id": "V2_AD-287",
+    "query": "전체 광고비 중 TikTok 비중 어때?",
+    "category": "ratio"
+  },
+  {
+    "id": "V2_AD-288",
+    "query": "간단하게 전체 광고비 중 Facebook 비중은?",
+    "category": "ratio"
+  },
+  {
+    "id": "V2_AD-289",
+    "query": "국가별 광고비 비중 분석 알 수 있을까요?",
+    "category": "ratio"
+  },
+  {
+    "id": "V2_AD-290",
+    "query": "플랫폼별 광고비 비중 파이차트 알 수 있을까요?",
+    "category": "ratio"
+  },
+  {
+    "id": "V2_AD-291",
+    "query": "잠깐, 인도네시아 광고비 중 TikTok 비중",
+    "category": "ratio"
+  },
+  {
+    "id": "V2_AD-292",
+    "query": "우리 회사 한국 광고비 중 네이버 비중 어떻게 되나요?",
+    "category": "ratio"
+  },
+  {
+    "id": "V2_AD-293",
+    "query": "동남아 광고 집행비가 전체에서 차지하는 비율 부탁드려요",
+    "category": "ratio"
+  },
+  {
+    "id": "V2_AD-294",
+    "query": "디지털 광고 전체 상황 분석해줘",
+    "category": "general"
+  },
+  {
+    "id": "V2_AD-295",
+    "query": "확인 좀 해줘 광고 데이터 있는 날짜 범위가 어떻게 돼 알려주세요",
+    "category": "general"
+  },
+  {
+    "id": "V2_AD-296",
+    "query": "광고 데이터에 어떤 국가들이 있나요",
+    "category": "general"
+  },
+  {
+    "id": "V2_AD-297",
+    "query": "광고 데이터에 어떤 플랫폼들이 있어? 알려줄래?",
+    "category": "general"
+  },
+  {
+    "id": "V2_AD-298",
+    "query": "빠르게 가장 최근 광고 데이터 날짜는? 알고 싶어",
+    "category": "general"
+  },
+  {
+    "id": "V2_AD-299",
+    "query": "요즘 2025년 광고 데이터 건수 좀 알려줘",
+    "category": "general"
+  },
+  {
+    "id": "V2_AD-300",
+    "query": "혹시 전체 광고 데이터 레코드 수 확인 가능한가요?",
+    "category": "general"
+  }
+]

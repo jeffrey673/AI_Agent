@@ -1,0 +1,182 @@
+[
+  {
+    "id": "RQ-286",
+    "table": "review_qoo10",
+    "query": "Qoo10 리뷰 번역 내용 전체",
+    "old": 63.3,
+    "new": 41.2,
+    "status": "OK",
+    "delta": 22.1
+  },
+  {
+    "id": "IF-222",
+    "table": "influencer",
+    "query": "팔로워수와 조회수 상관관계",
+    "old": 89.8,
+    "new": 92.1,
+    "status": "FAIL",
+    "delta": -2.3
+  },
+  {
+    "id": "AZ-048",
+    "table": "amazon_search",
+    "query": "아마존 캐나다 전환율 데이터",
+    "old": 61.1,
+    "new": 60.4,
+    "status": "WARN",
+    "delta": 0.7
+  },
+  {
+    "id": "RT-109",
+    "table": "review_smartstore",
+    "query": "스마트스토어 리뷰 주간 트렌드",
+    "old": 80.9,
+    "new": 74.6,
+    "status": "WARN",
+    "delta": 6.3
+  },
+  {
+    "id": "MT-274",
+    "table": "meta_ads",
+    "query": "플랫폼별 광고 건수 합계",
+    "old": 69.3,
+    "new": 53.9,
+    "status": "OK",
+    "delta": 15.4
+  },
+  {
+    "id": "MT-198",
+    "table": "meta_ads",
+    "query": "최근 2개월 신규 광고",
+    "old": 68.0,
+    "new": 56.4,
+    "status": "OK",
+    "delta": 11.6
+  },
+  {
+    "id": "MT-118",
+    "table": "meta_ads",
+    "query": "최근 start_date 기준 광고 20건",
+    "old": 64.1,
+    "new": 48.6,
+    "status": "OK",
+    "delta": 15.5
+  },
+  {
+    "id": "MC-059",
+    "table": "marketing_cost",
+    "query": "영업팀 월별 마케팅 비용 추이",
+    "old": 63.3,
+    "new": 21.5,
+    "status": "OK",
+    "delta": 41.8
+  },
+  {
+    "id": "RT-088",
+    "table": "review_smartstore",
+    "query": "스마트스토어 리뷰 월별 증감 추이",
+    "old": 79.6,
+    "new": 31.4,
+    "status": "OK",
+    "delta": 48.2
+  },
+  {
+    "id": "IF-165",
+    "table": "influencer",
+    "query": "비용 효율이 가장 좋은 국가",
+    "old": 62.9,
+    "new": 45.1,
+    "status": "OK",
+    "delta": 17.8
+  },
+  {
+    "id": "V2_IF-198",
+    "table": "influencer",
+    "query": "우리 회사 유튜브 인플루언서 성과",
+    "old": 67.1,
+    "new": 31.7,
+    "status": "OK",
+    "delta": 35.4
+  },
+  {
+    "id": "V2_RS-127",
+    "table": "review_shopee",
+    "query": "쇼피 리뷰 중 최근 것부터 정렬해서 보여줘 부탁",
+    "old": 67.8,
+    "new": 36.9,
+    "status": "OK",
+    "delta": 30.9
+  },
+  {
+    "id": "V2_AZ-055",
+    "table": "amazon_search",
+    "query": "아마존 국가별 구매 전환율 비교 분석 좀",
+    "old": 64.5,
+    "new": 96.7,
+    "status": "FAIL",
+    "delta": -32.2
+  },
+  {
+    "id": "V2_AZ-054",
+    "table": "amazon_search",
+    "query": "아마존 전환율 개선 필요 국가 알 수 있을까요?",
+    "old": 80.8,
+    "new": 67.8,
+    "status": "WARN",
+    "delta": 13.0
+  },
+  {
+    "id": "V2_IF-215",
+    "table": "influencer",
+    "query": "미디어별 티어별 인플루언서 분포?",
+    "old": 61.3,
+    "new": 43.3,
+    "status": "OK",
+    "delta": 18.0
+  },
+  {
+    "id": "V2_PL-071",
+    "table": "platform",
+    "query": "SKIN1004 세일률 TOP 10 제품",
+    "old": 63.8,
+    "new": 43.9,
+    "status": "OK",
+    "delta": 19.9
+  },
+  {
+    "id": "V2_PL-124",
+    "table": "platform",
+    "query": "요즘 20~30달러 제품 수",
+    "old": 70.2,
+    "new": 51.5,
+    "status": "OK",
+    "delta": 18.7
+  },
+  {
+    "id": "V2_SA-160",
+    "table": "sales_all",
+    "query": "플랫폼 기준 할인 금액 대조",
+    "old": 80.0,
+    "new": 45.9,
+    "status": "OK",
+    "delta": 34.1
+  },
+  {
+    "id": "V2_AZ-051",
+    "table": "amazon_search",
+    "query": "궁금한데 아마존 구매 전환율 분석",
+    "old": 84.4,
+    "new": 63.1,
+    "status": "WARN",
+    "delta": 21.3
+  },
+  {
+    "id": "V2_MT-292",
+    "table": "meta_ads",
+    "query": "궁금한데 나라별 광고 비율 분석 궁금해",
+    "old": 68.0,
+    "new": 64.6,
+    "status": "WARN",
+    "delta": 3.4
+  }
+]

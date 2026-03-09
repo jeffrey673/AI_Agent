@@ -1,0 +1,1502 @@
+[
+  {
+    "id": "V2_SH-001",
+    "query": "2024년 Shopify 나라별 총 수익 상황",
+    "category": "country_sales"
+  },
+  {
+    "id": "V2_SH-002",
+    "query": "2025년 Shopify 미국 매출 얼마인가요",
+    "category": "country_sales"
+  },
+  {
+    "id": "V2_SH-003",
+    "query": "Shopify에서 영국 매출 추이 보여줘 궁금해",
+    "category": "country_sales"
+  },
+  {
+    "id": "V2_SH-004",
+    "query": "2024년 Shopify 캐나다 총 매출금액",
+    "category": "country_sales"
+  },
+  {
+    "id": "V2_SH-005",
+    "query": "Shopify 호주 매출 알려줘 좀",
+    "category": "country_sales"
+  },
+  {
+    "id": "V2_SH-006",
+    "query": "2025년 Shopify 독일 매출 실태",
+    "category": "country_sales"
+  },
+  {
+    "id": "V2_SH-007",
+    "query": "Shopify 프랑스 세일즈 데이터 보여줄래?",
+    "category": "country_sales"
+  },
+  {
+    "id": "V2_SH-008",
+    "query": "Shopify 일본 매출 얼마인지 보여줘 확인 부탁드립니다",
+    "category": "country_sales"
+  },
+  {
+    "id": "V2_SH-009",
+    "query": "2024년 Shopify 한국 매출 빨리 알려주시면 감사하겠습니다",
+    "category": "country_sales"
+  },
+  {
+    "id": "V2_SH-010",
+    "query": "Shopify 싱가포르 세일즈 동향 알려줘 알 수 있을까요?",
+    "category": "country_sales"
+  },
+  {
+    "id": "V2_SH-011",
+    "query": "2025년 Shopify 세일즈 TOP 10 국가",
+    "category": "country_sales"
+  },
+  {
+    "id": "V2_SH-012",
+    "query": "우리 회사 Shopify 국가 기준 매출 순위 보여줘",
+    "category": "country_sales"
+  },
+  {
+    "id": "V2_SH-013",
+    "query": "Shopify 메출이 가장 높은 국가 어디야",
+    "category": "country_sales"
+  },
+  {
+    "id": "V2_SH-014",
+    "query": "쇼피파이 매출이 가장 낮은 국가는?",
+    "category": "country_sales"
+  },
+  {
+    "id": "V2_SH-015",
+    "query": "2024년 Shopify 유럽 국가 수익 총액",
+    "category": "country_sales"
+  },
+  {
+    "id": "V2_SH-016",
+    "query": "Shopify 아시아 국가 매출 대비 어떻게 되나요?",
+    "category": "country_sales"
+  },
+  {
+    "id": "V2_SH-017",
+    "query": "2025년 Shopify 이탈리아 매출액",
+    "category": "country_sales"
+  },
+  {
+    "id": "V2_SH-018",
+    "query": "Shopify 스페인 매출 데이터 빨리",
+    "category": "country_sales"
+  },
+  {
+    "id": "V2_SH-019",
+    "query": "Shopify 네덜란드 매출 얼마임?",
+    "category": "country_sales"
+  },
+  {
+    "id": "V2_SH-020",
+    "query": "2024년 Shopify 브라질 매축 현황 확인 부탁드립니다",
+    "category": "country_sales"
+  },
+  {
+    "id": "V2_SH-021",
+    "query": "Shopify 멕시코 매상 보여줄래",
+    "category": "country_sales"
+  },
+  {
+    "id": "V2_SH-022",
+    "query": "간단하게 Shopify 태국 매출 데이터 보여줘",
+    "category": "country_sales"
+  },
+  {
+    "id": "V2_SH-023",
+    "query": "궁금한데 Shopify 2025년 말레이시아 매출 알려주세요",
+    "category": "country_sales"
+  },
+  {
+    "id": "V2_SH-024",
+    "query": "Shopify 인도네시아 매상 현황 확인 가능한가요?",
+    "category": "country_sales"
+  },
+  {
+    "id": "V2_SH-025",
+    "query": "Shopify 필리핀 세일즈 얼마임?",
+    "category": "country_sales"
+  },
+  {
+    "id": "V2_SH-026",
+    "query": "Shopify 상품별 판매 TOP 10",
+    "category": "product_ranking"
+  },
+  {
+    "id": "V2_SH-027",
+    "query": "Shopify에서 가장 많이 팔린 제품 5개 알고 싶어",
+    "category": "product_ranking"
+  },
+  {
+    "id": "V2_SH-028",
+    "query": "2024년 Shopify 제품 메출 순위",
+    "category": "product_ranking"
+  },
+  {
+    "id": "V2_SH-029",
+    "query": "Shopify 베스트셀러 제품 TOP 20 확인 부탁드립니다",
+    "category": "product_ranking"
+  },
+  {
+    "id": "V2_SH-030",
+    "query": "궁금한데 2025년 Shopify 제품별 총 매출 순위",
+    "category": "product_ranking"
+  },
+  {
+    "id": "V2_SH-031",
+    "query": "잠깐, Shopify 판매수량 기준 제품 TOP 10",
+    "category": "product_ranking"
+  },
+  {
+    "id": "V2_SH-032",
+    "query": "잠깐, Shopify에서 매상액이 높은 제품 순서대로",
+    "category": "product_ranking"
+  },
+  {
+    "id": "V2_SH-033",
+    "query": "Shopify 제품별 주문갯수 랭킹",
+    "category": "product_ranking"
+  },
+  {
+    "id": "V2_SH-034",
+    "query": "2024년 하반기 Shopify 제품 TOP 5 확인해줘",
+    "category": "product_ranking"
+  },
+  {
+    "id": "V2_SH-035",
+    "query": "Shopify 제품 매출금액 하위 10개",
+    "category": "product_ranking"
+  },
+  {
+    "id": "V2_SH-036",
+    "query": "빠르게 Shopify 가장 인기 있는 제품 3개 알려줘",
+    "category": "product_ranking"
+  },
+  {
+    "id": "V2_SH-037",
+    "query": "2025년 1분기 Shopify 제품 랭킹 부탁",
+    "category": "product_ranking"
+  },
+  {
+    "id": "V2_SH-038",
+    "query": "빠르게 Shopify 제품별 평균 매출 순위",
+    "category": "product_ranking"
+  },
+  {
+    "id": "V2_SH-039",
+    "query": "Shopify 미국에서 가장 잘 팔리는 제품?",
+    "category": "product_ranking"
+  },
+  {
+    "id": "V2_SH-040",
+    "query": "Shopify 일본에서 인기 있는 제품 TOP 5 어떻게 되나요?",
+    "category": "product_ranking"
+  },
+  {
+    "id": "V2_SH-041",
+    "query": "확인 좀 해줘 Shopify 각 월 매출 추이 보여줘",
+    "category": "monthly_trend"
+  },
+  {
+    "id": "V2_SH-042",
+    "query": "정확한 2024년 Shopify 월간 매출금액 변화 알려주세요",
+    "category": "monthly_trend"
+  },
+  {
+    "id": "V2_SH-043",
+    "query": "2025년 Shopify 매월 매상 트렌드",
+    "category": "monthly_trend"
+  },
+  {
+    "id": "V2_SH-044",
+    "query": "간단하게 Shopify 매출 각 월 성장률 알려주세요",
+    "category": "monthly_trend"
+  },
+  {
+    "id": "V2_SH-045",
+    "query": "Shopify 최근 12개월 매상 추이 확인 가능한가요?",
+    "category": "monthly_trend"
+  },
+  {
+    "id": "V2_SH-046",
+    "query": "Shopify 월별 주문수량 변화 추이 알려주시면 감사하겠습니다",
+    "category": "monthly_trend"
+  },
+  {
+    "id": "V2_SH-047",
+    "query": "간단하게 2024년 Shopify 세일즈 최고 달은 언제야? 궁금해",
+    "category": "monthly_trend"
+  },
+  {
+    "id": "V2_SH-048",
+    "query": "Shopify 매출 최저 월은 알려주세요",
+    "category": "monthly_trend"
+  },
+  {
+    "id": "V2_SH-049",
+    "query": "Shopify 미국 월별 매상 추이 알려주세요",
+    "category": "monthly_trend"
+  },
+  {
+    "id": "V2_SH-050",
+    "query": "혹시 2024년 대비 2025년 Shopify 월별 수익 비교 좀 알려줘",
+    "category": "monthly_trend"
+  },
+  {
+    "id": "V2_SH-051",
+    "query": "Shopify 영국 월별 매출 변화 확인 부탁드립니다",
+    "category": "monthly_trend"
+  },
+  {
+    "id": "V2_SH-052",
+    "query": "우리 회사 Shopify 일본 달별 매출 트렌드 빨리 어떻게 되나요?",
+    "category": "monthly_trend"
+  },
+  {
+    "id": "V2_SH-053",
+    "query": "Shopify 전월 대비 수익 증감률",
+    "category": "monthly_trend"
+  },
+  {
+    "id": "V2_SH-054",
+    "query": "궁금한데 Shopify 6개월간 매출금액 추세 차트",
+    "category": "monthly_trend"
+  },
+  {
+    "id": "V2_SH-055",
+    "query": "Shopify 2024년 상반기 월별 매상 얼마임?",
+    "category": "monthly_trend"
+  },
+  {
+    "id": "V2_SH-056",
+    "query": "참고로 Shopify 반품 현황 분석 확인해줘",
+    "category": "returns"
+  },
+  {
+    "id": "V2_SH-057",
+    "query": "Shopify 국가별 반품 판매량 좀 봐줘",
+    "category": "returns"
+  },
+  {
+    "id": "V2_SH-058",
+    "query": "확인 좀 해줘 Shopify 반품이 가장 많은 국가",
+    "category": "returns"
+  },
+  {
+    "id": "V2_SH-059",
+    "query": "2024년 Shopify 총 반품 건수 알려주세요",
+    "category": "returns"
+  },
+  {
+    "id": "V2_SH-060",
+    "query": "Shopify 반품률 어떻게 돼? 궁금해",
+    "category": "returns"
+  },
+  {
+    "id": "V2_SH-061",
+    "query": "Shopify 제품별 반품 수량 TOP",
+    "category": "returns"
+  },
+  {
+    "id": "V2_SH-062",
+    "query": "Shopify 반품이 제일 많은 제품",
+    "category": "returns"
+  },
+  {
+    "id": "V2_SH-063",
+    "query": "2025년 Shopify 미국 반품 상황",
+    "category": "returns"
+  },
+  {
+    "id": "V2_SH-064",
+    "query": "Shopify 월별 반품 추이 알려주세요",
+    "category": "returns"
+  },
+  {
+    "id": "V2_SH-065",
+    "query": "궁금한데 Shopify 반품률 높은 국가 TOP 5",
+    "category": "returns"
+  },
+  {
+    "id": "V2_SH-066",
+    "query": "요즘 Shopify 일본 반품 데이터 좀",
+    "category": "returns"
+  },
+  {
+    "id": "V2_SH-067",
+    "query": "쇼피파이 영국 반품 건수 알려주시면 감사하겠습니다",
+    "category": "returns"
+  },
+  {
+    "id": "V2_SH-068",
+    "query": "Shopify 반품 대비 매출 비율 어때?",
+    "category": "returns"
+  },
+  {
+    "id": "V2_SH-069",
+    "query": "2024년 Shopify 반품률 변화 트렌드",
+    "category": "returns"
+  },
+  {
+    "id": "V2_SH-070",
+    "query": "Shopify 반품이 가장 낮은 국가",
+    "category": "returns"
+  },
+  {
+    "id": "V2_SH-071",
+    "query": "shopify 미국 vs 영국 매출 대비 정리해줘",
+    "category": "country_comparison"
+  },
+  {
+    "id": "V2_SH-072",
+    "query": "Shopify 일본 vs 한국 매출 어디가 높아? 좀",
+    "category": "country_comparison"
+  },
+  {
+    "id": "V2_SH-073",
+    "query": "우리 회사 Shopify 독일 vs 프랑스 매출액 비교 알려주세요",
+    "category": "country_comparison"
+  },
+  {
+    "id": "V2_SH-074",
+    "query": "Shopify 캐나다 vs 호주 매출 비교 분석해줘 알려줄래",
+    "category": "country_comparison"
+  },
+  {
+    "id": "V2_SH-075",
+    "query": "간단하게 Shopify 미국 vs 일본 매출 차이",
+    "category": "country_comparison"
+  },
+  {
+    "id": "V2_SH-076",
+    "query": "Shopify 한국 vs 독일 매상 비교 부탁드려요",
+    "category": "country_comparison"
+  },
+  {
+    "id": "V2_SH-077",
+    "query": "궁금한데 shopify 영국 vs 호주 매출액 누가 더 높아?",
+    "category": "country_comparison"
+  },
+  {
+    "id": "V2_SH-078",
+    "query": "Shopify 프랑스 vs 이탈리아 매출 비교 알려주세요",
+    "category": "country_comparison"
+  },
+  {
+    "id": "V2_SH-079",
+    "query": "Shopify 미국 vs 캐나다 vs 영국 매출금액 비교",
+    "category": "country_comparison"
+  },
+  {
+    "id": "V2_SH-080",
+    "query": "Shopify 싱가포르 vs 말레이시아 수익 비교",
+    "category": "country_comparison"
+  },
+  {
+    "id": "V2_SH-081",
+    "query": "Shopify 아시아 vs 유럽 매출 대비",
+    "category": "country_comparison"
+  },
+  {
+    "id": "V2_SH-082",
+    "query": "2024년 Shopify 미국 vs 일본 주문판매량 비교",
+    "category": "country_comparison"
+  },
+  {
+    "id": "V2_SH-083",
+    "query": "확인 좀 해줘 Shopify 브라질 vs 멕시코 매출",
+    "category": "country_comparison"
+  },
+  {
+    "id": "V2_SH-084",
+    "query": "Shopify 타이 vs 인도네시아 매출 비교",
+    "category": "country_comparison"
+  },
+  {
+    "id": "V2_SH-085",
+    "query": "빠르게 Shopify 미국 vs 한국 반품률 견줘봐",
+    "category": "country_comparison"
+  },
+  {
+    "id": "V2_SH-086",
+    "query": "우리 회사 Shopify 제품유형별 매출 현황 얼마임?",
+    "category": "product_type"
+  },
+  {
+    "id": "V2_SH-087",
+    "query": "빠르게 shopify 제품 Type별 매출 상위",
+    "category": "product_type"
+  },
+  {
+    "id": "V2_SH-088",
+    "query": "Shopify 어떤 제품유형이 가장 많이 팔려",
+    "category": "product_type"
+  },
+  {
+    "id": "V2_SH-089",
+    "query": "2024년 Shopify 제품유형별 총 판매액 빨리 얼마임?",
+    "category": "product_type"
+  },
+  {
+    "id": "V2_SH-090",
+    "query": "쇼피파이 제품유형별 주문수량",
+    "category": "product_type"
+  },
+  {
+    "id": "V2_SH-091",
+    "query": "Shopify 제품 Type 종류 몇 개야",
+    "category": "product_type"
+  },
+  {
+    "id": "V2_SH-092",
+    "query": "Shopify 제품유형별 반품 상황",
+    "category": "product_type"
+  },
+  {
+    "id": "V2_SH-093",
+    "query": "간단하게 2025년 Shopify 제품유형별 매출 추이",
+    "category": "product_type"
+  },
+  {
+    "id": "V2_SH-094",
+    "query": "Shopify 미국 제품유형별 매출금액",
+    "category": "product_type"
+  },
+  {
+    "id": "V2_SH-095",
+    "query": "정확한 Shopify 제품유형별 평균 매상 부탁",
+    "category": "product_type"
+  },
+  {
+    "id": "V2_SH-096",
+    "query": "간단하게 Shopify 미국 주문개수 알려줘",
+    "category": "order_quantity"
+  },
+  {
+    "id": "V2_SH-097",
+    "query": "Shopify 영국 주문수량 얼마인가요",
+    "category": "order_quantity"
+  },
+  {
+    "id": "V2_SH-098",
+    "query": "2024년 Shopify 나라별 주문수량 현재 상태 확인 부탁드립니다",
+    "category": "order_quantity"
+  },
+  {
+    "id": "V2_SH-099",
+    "query": "Shopify 일본 총 주문개수 어떻게 되나요?",
+    "category": "order_quantity"
+  },
+  {
+    "id": "V2_SH-100",
+    "query": "Shopify 주문수량이 최다 국가 알려주시면 감사하겠습니다",
+    "category": "order_quantity"
+  },
+  {
+    "id": "V2_SH-101",
+    "query": "2025년 Shopify 한국 주문수량 확인 부탁드립니다",
+    "category": "order_quantity"
+  },
+  {
+    "id": "V2_SH-102",
+    "query": "Shopify 호주 주문수량 데이터 어떻게 되나요?",
+    "category": "order_quantity"
+  },
+  {
+    "id": "V2_SH-103",
+    "query": "혹시 Shopify 독일 주문갯수 보여줘",
+    "category": "order_quantity"
+  },
+  {
+    "id": "V2_SH-104",
+    "query": "Shopify 각 나라 주문개수 TOP 10",
+    "category": "order_quantity"
+  },
+  {
+    "id": "V2_SH-105",
+    "query": "요즘 Shopify 월별 총 주문갯수 추이",
+    "category": "order_quantity"
+  },
+  {
+    "id": "V2_SH-106",
+    "query": "Shopify 캐나다 주문수량 현황 알려주시면 감사하겠습니다",
+    "category": "order_quantity"
+  },
+  {
+    "id": "V2_SH-107",
+    "query": "2024년 Shopify 프랑스 주문수량 빨리 알려주세요",
+    "category": "order_quantity"
+  },
+  {
+    "id": "V2_SH-108",
+    "query": "Shopify 각 나라 반품률 순서 확인 부탁드립니다",
+    "category": "return_rate"
+  },
+  {
+    "id": "V2_SH-109",
+    "query": "확인 좀 해줘 Shopify 미국 반품률 몇 퍼센트야? 정리해줘",
+    "category": "return_rate"
+  },
+  {
+    "id": "V2_SH-110",
+    "query": "Shopify 반품률이 10% 이상인 국가 알려주시면 감사하겠습니다",
+    "category": "return_rate"
+  },
+  {
+    "id": "V2_SH-111",
+    "query": "참고로 2024년 Shopify 전체 반품률",
+    "category": "return_rate"
+  },
+  {
+    "id": "V2_SH-112",
+    "query": "shopify 제품별 반품률 높은 순서 부탁드려요",
+    "category": "return_rate"
+  },
+  {
+    "id": "V2_SH-113",
+    "query": "Shopify 영국 반품률 확인해줘",
+    "category": "return_rate"
+  },
+  {
+    "id": "V2_SH-114",
+    "query": "Shopify 일본 반품률 현재 상태",
+    "category": "return_rate"
+  },
+  {
+    "id": "V2_SH-115",
+    "query": "Shopify 반품률 가장 낮은 국가 TOP 5 알려주세요",
+    "category": "return_rate"
+  },
+  {
+    "id": "V2_SH-116",
+    "query": "Shopify 월별 반품률 추이 정리해줘",
+    "category": "return_rate"
+  },
+  {
+    "id": "V2_SH-117",
+    "query": "요즘 2025년 Shopify 반품률 변화",
+    "category": "return_rate"
+  },
+  {
+    "id": "V2_SH-118",
+    "query": "Shopify 가장 많이 팔린 제품 알려줘 부탁 알려주시면 감사하겠습니다",
+    "category": "top_products"
+  },
+  {
+    "id": "V2_SH-119",
+    "query": "정확한 Shopify 전체 판매 1위 제품",
+    "category": "top_products"
+  },
+  {
+    "id": "V2_SH-120",
+    "query": "혹시 Shopify 누적 판매량 TOP 3 제품 알려주시면 감사하겠습니다",
+    "category": "top_products"
+  },
+  {
+    "id": "V2_SH-121",
+    "query": "2024년 Shopify 최다 판매 제품 좀 알려줘",
+    "category": "top_products"
+  },
+  {
+    "id": "V2_SH-122",
+    "query": "잠깐, Shopify 미국에서 1위 제품 뭐야? 확인해줘",
+    "category": "top_products"
+  },
+  {
+    "id": "V2_SH-123",
+    "query": "Shopify 영국 베스트셀러 제품 확인 부탁드립니다",
+    "category": "top_products"
+  },
+  {
+    "id": "V2_SH-124",
+    "query": "잠깐, Shopify 일본에서 가장 인기 있는 제품 빨리",
+    "category": "top_products"
+  },
+  {
+    "id": "V2_SH-125",
+    "query": "궁금한데 Shopify에서 매출금액 높은 제품 TOP 15 몇이야?",
+    "category": "top_products"
+  },
+  {
+    "id": "V2_SH-126",
+    "query": "우리 회사 2025년 Shopify 인기 제품 리스트 알고 싶어",
+    "category": "top_products"
+  },
+  {
+    "id": "V2_SH-127",
+    "query": "정확한 Shopify 독일에서 잘 팔리는 제품",
+    "category": "top_products"
+  },
+  {
+    "id": "V2_SH-128",
+    "query": "2024년 1분기 Shopify 매출 알려주세요",
+    "category": "quarterly"
+  },
+  {
+    "id": "V2_SH-129",
+    "query": "2024년 2분기 Shopify 매출 현황 정리해줘 알 수 있을까요?",
+    "category": "quarterly"
+  },
+  {
+    "id": "V2_SH-130",
+    "query": "2024년 3분기 Shopify 수익",
+    "category": "quarterly"
+  },
+  {
+    "id": "V2_SH-131",
+    "query": "2024년 4분기 Shopify 매출액",
+    "category": "quarterly"
+  },
+  {
+    "id": "V2_SH-132",
+    "query": "참고로 2025년 1분기 Shopify 판매액",
+    "category": "quarterly"
+  },
+  {
+    "id": "V2_SH-133",
+    "query": "빠르게 Shopify 분기별 매출 대비",
+    "category": "quarterly"
+  },
+  {
+    "id": "V2_SH-134",
+    "query": "혹시 Shopify 분기별 세일즈 성장률?",
+    "category": "quarterly"
+  },
+  {
+    "id": "V2_SH-135",
+    "query": "2024년 어느 분기 매출이 가장 높았어? Shopify 부탁",
+    "category": "quarterly"
+  },
+  {
+    "id": "V2_SH-136",
+    "query": "확인 좀 해줘 Shopify 전분기 대비 수익 증감은 어떤가요?",
+    "category": "quarterly"
+  },
+  {
+    "id": "V2_SH-137",
+    "query": "2024년 상반기 vs 하반기 Shopify 매출 궁금해 알려주세요",
+    "category": "quarterly"
+  },
+  {
+    "id": "V2_SH-138",
+    "query": "궁금한데 2분기 2025년 Shopify 매출액 전망",
+    "category": "quarterly"
+  },
+  {
+    "id": "V2_SH-139",
+    "query": "Shopify 2024년 분기별 주문수",
+    "category": "quarterly"
+  },
+  {
+    "id": "V2_SH-140",
+    "query": "Shopify 미국 분기별 매출액",
+    "category": "quarterly"
+  },
+  {
+    "id": "V2_SH-141",
+    "query": "쇼피파이 2024년 1월 매출 알려주시면 감사하겠습니다",
+    "category": "specific_month"
+  },
+  {
+    "id": "V2_SH-142",
+    "query": "Shopify 2024년 2월 매출 얼마나 돼 부탁드려요",
+    "category": "specific_month"
+  },
+  {
+    "id": "V2_SH-143",
+    "query": "Shopify 3월 2024년 매출 현황 정리해줘은 어떤가요?",
+    "category": "specific_month"
+  },
+  {
+    "id": "V2_SH-144",
+    "query": "쇼피파이 2024년 4월 매출 확인 부탁드립니다",
+    "category": "specific_month"
+  },
+  {
+    "id": "V2_SH-145",
+    "query": "Shopify 2024년 5월 매출액 말해줘",
+    "category": "specific_month"
+  },
+  {
+    "id": "V2_SH-146",
+    "query": "간단하게 Shopify 2024년 6월 판매액",
+    "category": "specific_month"
+  },
+  {
+    "id": "V2_SH-147",
+    "query": "우리 회사 Shopify 2024년 7월 매출 데이터",
+    "category": "specific_month"
+  },
+  {
+    "id": "V2_SH-148",
+    "query": "Shopify 2024년 8월 매출 알려주세요",
+    "category": "specific_month"
+  },
+  {
+    "id": "V2_SH-149",
+    "query": "궁금한데 Shopify 2024년 9월 매출 실태 궁금해",
+    "category": "specific_month"
+  },
+  {
+    "id": "V2_SH-150",
+    "query": "Shopify 2024년 10월 매출 부탁",
+    "category": "specific_month"
+  },
+  {
+    "id": "V2_SH-151",
+    "query": "Shopify 2024년 11월 매상 얼마인지?",
+    "category": "specific_month"
+  },
+  {
+    "id": "V2_SH-152",
+    "query": "빠르게 Shopify 2024년 12월 메출",
+    "category": "specific_month"
+  },
+  {
+    "id": "V2_SH-153",
+    "query": "확인 좀 해줘 Shopify 2025년 1월 매출",
+    "category": "specific_month"
+  },
+  {
+    "id": "V2_SH-154",
+    "query": "Shopify 2025년 2월 매출금액 현황",
+    "category": "specific_month"
+  },
+  {
+    "id": "V2_SH-155",
+    "query": "2024년 11월 Shopify 미국 매출금액",
+    "category": "specific_month"
+  },
+  {
+    "id": "V2_SH-156",
+    "query": "2024년 12월 Shopify 영국 판매액",
+    "category": "specific_month"
+  },
+  {
+    "id": "V2_SH-157",
+    "query": "2025년 1월 Shopify 일본 매출 알려주세요",
+    "category": "specific_month"
+  },
+  {
+    "id": "V2_SH-158",
+    "query": "Shopify 2024년 3월 주문수량 확인해줘",
+    "category": "specific_month"
+  },
+  {
+    "id": "V2_SH-159",
+    "query": "Shopify 7월 2024년 반품 현황 확인 가능한가요?",
+    "category": "specific_month"
+  },
+  {
+    "id": "V2_SH-160",
+    "query": "참고로 Shopify 2025년 2월 각 나라 매출액",
+    "category": "specific_month"
+  },
+  {
+    "id": "V2_SH-161",
+    "query": "미국 Shopify Madagascar Brightening Cream 세일즈 알려주세요",
+    "category": "product_country"
+  },
+  {
+    "id": "V2_SH-162",
+    "query": "궁금한데 영국 Shopify SKIN1004 제품 매출액 합계",
+    "category": "product_country"
+  },
+  {
+    "id": "V2_SH-163",
+    "query": "잠깐, 일본 Shopify 센텔라 제품 매출",
+    "category": "product_country"
+  },
+  {
+    "id": "V2_SH-164",
+    "query": "한국 Shopify 제품 기준 판매 실태",
+    "category": "product_country"
+  },
+  {
+    "id": "V2_SH-165",
+    "query": "정확한 호주 Shopify 제품 세일즈 순위 알 수 있을까요?",
+    "category": "product_country"
+  },
+  {
+    "id": "V2_SH-166",
+    "query": "독일 쇼피파이 가장 잘 팔리는 제품",
+    "category": "product_country"
+  },
+  {
+    "id": "V2_SH-167",
+    "query": "프랑스 Shopify 상품별 매출",
+    "category": "product_country"
+  },
+  {
+    "id": "V2_SH-168",
+    "query": "정확한 캐나다 쇼피파이 제품 주문수량",
+    "category": "product_country"
+  },
+  {
+    "id": "V2_SH-169",
+    "query": "미국 Shopify 토너 매출 보여줘 확인 부탁드립니다",
+    "category": "product_country"
+  },
+  {
+    "id": "V2_SH-170",
+    "query": "일본 Shopify 앰플 제품 매축 어떻게 되나요?",
+    "category": "product_country"
+  },
+  {
+    "id": "V2_SH-171",
+    "query": "싱가폴 Shopify 제품 판매 현황",
+    "category": "product_country"
+  },
+  {
+    "id": "V2_SH-172",
+    "query": "영국 Shopify 클렌저 매출 알 수 있을까요?",
+    "category": "product_country"
+  },
+  {
+    "id": "V2_SH-173",
+    "query": "미국 Shopify 선크림 판매량 알고 싶어 알려주세요",
+    "category": "product_country"
+  },
+  {
+    "id": "V2_SH-174",
+    "query": "태국 쇼피파이 제품 매상 데이터 알려주시면 감사하겠습니다",
+    "category": "product_country"
+  },
+  {
+    "id": "V2_SH-175",
+    "query": "궁금한데 말레이시아 Shopify 인기 제품 궁금해",
+    "category": "product_country"
+  },
+  {
+    "id": "V2_SH-176",
+    "query": "빠르게 Shopify 전체 매상 토탈",
+    "category": "aggregate"
+  },
+  {
+    "id": "V2_SH-177",
+    "query": "혹시 2024년 Shopify 총 매출 얼마임? 보여줘",
+    "category": "aggregate"
+  },
+  {
+    "id": "V2_SH-178",
+    "query": "Shopify 전체 주문 건수?",
+    "category": "aggregate"
+  },
+  {
+    "id": "V2_SH-179",
+    "query": "Shopify 총 반품 판매량",
+    "category": "aggregate"
+  },
+  {
+    "id": "V2_SH-180",
+    "query": "참고로 Shopify 평균 주문 금액",
+    "category": "aggregate"
+  },
+  {
+    "id": "V2_SH-181",
+    "query": "참고로 Shopify 일평균 매출 좀 봐줘",
+    "category": "aggregate"
+  },
+  {
+    "id": "V2_SH-182",
+    "query": "Shopify 제품 종류 몇 개야은 어떤가요?",
+    "category": "aggregate"
+  },
+  {
+    "id": "V2_SH-183",
+    "query": "혹시 Shopify 판매 국가 수 부탁",
+    "category": "aggregate"
+  },
+  {
+    "id": "V2_SH-184",
+    "query": "2025년 Shopify 누적 수익",
+    "category": "aggregate"
+  },
+  {
+    "id": "V2_SH-185",
+    "query": "Shopify 월평균 매출 얼마야? 알려줄래",
+    "category": "aggregate"
+  },
+  {
+    "id": "V2_SH-186",
+    "query": "Shopify 2024년 vs 2025년 매상 비교 알려주세요",
+    "category": "yoy"
+  },
+  {
+    "id": "V2_SH-187",
+    "query": "Shopify 전년 대비 세일즈 성장률",
+    "category": "yoy"
+  },
+  {
+    "id": "V2_SH-188",
+    "query": "Shopify 미국 전년 대비 수익 변화",
+    "category": "yoy"
+  },
+  {
+    "id": "V2_SH-189",
+    "query": "2023년 vs 2024년 Shopify 매출?",
+    "category": "yoy"
+  },
+  {
+    "id": "V2_SH-190",
+    "query": "빠르게 Shopify 영국 YoY 매출 비교",
+    "category": "yoy"
+  },
+  {
+    "id": "V2_SH-191",
+    "query": "빠르게 Shopify 일본 2024 vs 2025 매출",
+    "category": "yoy"
+  },
+  {
+    "id": "V2_SH-192",
+    "query": "Shopify 전년 동기 대비 주문개수 변화 좀 봐줘",
+    "category": "yoy"
+  },
+  {
+    "id": "V2_SH-193",
+    "query": "Shopify 연도별 매출금액 추이",
+    "category": "yoy"
+  },
+  {
+    "id": "V2_SH-194",
+    "query": "Shopify 호주 전년 대비 수익 성장",
+    "category": "yoy"
+  },
+  {
+    "id": "V2_SH-195",
+    "query": "요즘 2024년 1분기 vs 2025년 1분기 Shopify 매출",
+    "category": "yoy"
+  },
+  {
+    "id": "V2_SH-196",
+    "query": "Shopify 주간별 세일즈 추이 알고 싶어 알 수 있을까요?",
+    "category": "advanced"
+  },
+  {
+    "id": "V2_SH-197",
+    "query": "간단하게 Shopify 요일별 매출 분포",
+    "category": "advanced"
+  },
+  {
+    "id": "V2_SH-198",
+    "query": "Shopify 주말 vs 평일 매출금액 차이 알려주세요",
+    "category": "advanced"
+  },
+  {
+    "id": "V2_SH-199",
+    "query": "확인 좀 해줘 Shopify 최근 7일 매출 현황",
+    "category": "advanced"
+  },
+  {
+    "id": "V2_SH-200",
+    "query": "Shopify 최근 30일 매출금액 궁금해",
+    "category": "advanced"
+  },
+  {
+    "id": "V2_SH-201",
+    "query": "요즘 Shopify 매출금액 성장률이 가장 높은 국가 확인 부탁드립니다",
+    "category": "advanced"
+  },
+  {
+    "id": "V2_SH-202",
+    "query": "Shopify 국가 기준 매출 점유율",
+    "category": "advanced"
+  },
+  {
+    "id": "V2_SH-203",
+    "query": "Shopify 제품별 매출 점유율 알려주세요",
+    "category": "advanced"
+  },
+  {
+    "id": "V2_SH-204",
+    "query": "Shopify 미국 제품유형별 매상 살펴봐줘",
+    "category": "advanced"
+  },
+  {
+    "id": "V2_SH-205",
+    "query": "Shopify 영국 월별 제품 매상 추이",
+    "category": "advanced"
+  },
+  {
+    "id": "V2_SH-206",
+    "query": "Shopify 국가별 제품당 평균 매출 알려주세요",
+    "category": "advanced"
+  },
+  {
+    "id": "V2_SH-207",
+    "query": "Shopify 각 나라 주문당 평균 금액",
+    "category": "advanced"
+  },
+  {
+    "id": "V2_SH-208",
+    "query": "Shopify 제품유형별 반품률 분석 좀",
+    "category": "advanced"
+  },
+  {
+    "id": "V2_SH-209",
+    "query": "Shopify 메출금액 상위 5개 국가의 제품 구성",
+    "category": "advanced"
+  },
+  {
+    "id": "V2_SH-210",
+    "query": "정확한 Shopify 반품률 10% 이상인 제품 목록 보여줘 부탁드려요",
+    "category": "advanced"
+  },
+  {
+    "id": "V2_SH-211",
+    "query": "shopify 2024년 블랙프라이데이 세일즈 알려주세요",
+    "category": "event"
+  },
+  {
+    "id": "V2_SH-212",
+    "query": "Shopify 11월 매출금액이 다른 달보다 높은지 확인",
+    "category": "event"
+  },
+  {
+    "id": "V2_SH-213",
+    "query": "Shopify 연말 수익 현황 알려주세요",
+    "category": "event"
+  },
+  {
+    "id": "V2_SH-214",
+    "query": "Shopify 여름 시즌 매축 분석",
+    "category": "event"
+  },
+  {
+    "id": "V2_SH-215",
+    "query": "빠르게 Shopify 겨울 시즌 매축 알려줄래",
+    "category": "event"
+  },
+  {
+    "id": "V2_SH-216",
+    "query": "잠깐, Shopify 국가코드별 매출 그룹화 어떻게 되나요?",
+    "category": "detail"
+  },
+  {
+    "id": "V2_SH-217",
+    "query": "정확한 shopify Country_code 기준 매출 정리",
+    "category": "detail"
+  },
+  {
+    "id": "V2_SH-218",
+    "query": "Shopify Product_ID별 매출금액 데이터",
+    "category": "detail"
+  },
+  {
+    "id": "V2_SH-219",
+    "query": "잠깐, shopify Product_title에 'centella' 포함된 제품 매출 확인 부탁드립니다",
+    "category": "detail"
+  },
+  {
+    "id": "V2_SH-220",
+    "query": "Shopify Product_title에 'toner' 포함된 제품 어떻게 되나요?",
+    "category": "detail"
+  },
+  {
+    "id": "V2_SH-221",
+    "query": "정확한 Shopify Product_title에 'cream' 있는 제품 매출",
+    "category": "detail"
+  },
+  {
+    "id": "V2_SH-222",
+    "query": "Shopify Product_title에 'serum' 포함 제품 판매량 어떻게 되나요?",
+    "category": "detail"
+  },
+  {
+    "id": "V2_SH-223",
+    "query": "쇼피파이 Product_title에 'cleanser' 있는 제품",
+    "category": "detail"
+  },
+  {
+    "id": "V2_SH-224",
+    "query": "쇼피파이 Product_title에 'sunscreen' 포함 제품 매출은 어떤가요?",
+    "category": "detail"
+  },
+  {
+    "id": "V2_SH-225",
+    "query": "우리 회사 Shopify Product_title에 'ampoule' 있는 제품 주문수량",
+    "category": "detail"
+  },
+  {
+    "id": "V2_SH-226",
+    "query": "Shopify 미국 매출 최근 3개월 트렌드",
+    "category": "recent"
+  },
+  {
+    "id": "V2_SH-227",
+    "query": "Shopify 최근 6개월 국가별 매출 어떻게 되나요?",
+    "category": "recent"
+  },
+  {
+    "id": "V2_SH-228",
+    "query": "Shopify 최근 1년 메출 총합",
+    "category": "recent"
+  },
+  {
+    "id": "V2_SH-229",
+    "query": "궁금한데 Shopify 이번 달 매출",
+    "category": "recent"
+  },
+  {
+    "id": "V2_SH-230",
+    "query": "궁금한데 Shopify 지난달 매출 얼마인가요",
+    "category": "recent"
+  },
+  {
+    "id": "V2_SH-231",
+    "query": "Shopify 올해 세일즈 현황 좀?",
+    "category": "recent"
+  },
+  {
+    "id": "V2_SH-232",
+    "query": "Shopify 작년 매출 총합은 어떤가요?",
+    "category": "recent"
+  },
+  {
+    "id": "V2_SH-233",
+    "query": "Shopify 오늘 매출 있어 알려주시면 감사하겠습니다",
+    "category": "recent"
+  },
+  {
+    "id": "V2_SH-234",
+    "query": "Shopify 이번 주 매출 알려주세요",
+    "category": "recent"
+  },
+  {
+    "id": "V2_SH-235",
+    "query": "Shopify 최근 데이터 날짜 언제야은 어떤가요?",
+    "category": "recent"
+  },
+  {
+    "id": "V2_SH-236",
+    "query": "Shopify 메출 데이터 기간 확인해줘 확인 가능한가요?",
+    "category": "meta"
+  },
+  {
+    "id": "V2_SH-237",
+    "query": "Shopify 데이터 시작일과 종료일 알려주세요",
+    "category": "meta"
+  },
+  {
+    "id": "V2_SH-238",
+    "query": "참고로 Shopify 테이블에 데이터 몇 건이야",
+    "category": "meta"
+  },
+  {
+    "id": "V2_SH-239",
+    "query": "정확한 Shopify 테이블 국가 종류 목록 좀 봐줘",
+    "category": "meta"
+  },
+  {
+    "id": "V2_SH-240",
+    "query": "요즘 Shopify 제품 목록 전체 보여줘",
+    "category": "meta"
+  },
+  {
+    "id": "V2_SH-241",
+    "query": "우리 회사 Shopify 제품 유형 종류 목록",
+    "category": "meta"
+  },
+  {
+    "id": "V2_SH-242",
+    "query": "정확한 Shopify Country_code 목록 빨리",
+    "category": "meta"
+  },
+  {
+    "id": "V2_SH-243",
+    "query": "궁금한데 Shopify 각 나라 제품 수 알 수 있을까요?",
+    "category": "cross_analysis"
+  },
+  {
+    "id": "V2_SH-244",
+    "query": "Shopify 미국에서 판매되는 제품 종류 수 알려줄래 좀 알려줘",
+    "category": "cross_analysis"
+  },
+  {
+    "id": "V2_SH-245",
+    "query": "Shopify 국가별 월별 매출 히트맵 알려주세요",
+    "category": "cross_analysis"
+  },
+  {
+    "id": "V2_SH-246",
+    "query": "Shopify 상품별 국가별 매축 크로스탭",
+    "category": "cross_analysis"
+  },
+  {
+    "id": "V2_SH-247",
+    "query": "Shopify 제품유형별 국가별 매출 부탁 알려주세요",
+    "category": "cross_analysis"
+  },
+  {
+    "id": "V2_SH-248",
+    "query": "Shopify 국가별 평균 주문 금액 비교 얼마임?",
+    "category": "cross_analysis"
+  },
+  {
+    "id": "V2_SH-249",
+    "query": "Shopify 각 나라 제품당 주문수 평균",
+    "category": "cross_analysis"
+  },
+  {
+    "id": "V2_SH-250",
+    "query": "Shopify 미국 제품 기준 각 월 매상",
+    "category": "cross_analysis"
+  },
+  {
+    "id": "V2_SH-251",
+    "query": "Shopify 영국 2024년 제품 TOP 5 알려주시면 감사하겠습니다",
+    "category": "cross_analysis"
+  },
+  {
+    "id": "V2_SH-252",
+    "query": "Shopify 일본 제품유형별 주문수 정리해줘",
+    "category": "cross_analysis"
+  },
+  {
+    "id": "V2_SH-253",
+    "query": "Shopify에서 매출금액 100달러 이상인 제품",
+    "category": "filter"
+  },
+  {
+    "id": "V2_SH-254",
+    "query": "쇼피파이 주문수량 50개 이상인 제품",
+    "category": "filter"
+  },
+  {
+    "id": "V2_SH-255",
+    "query": "Shopify 매출 0인 국가 있어? 보여줘",
+    "category": "filter"
+  },
+  {
+    "id": "V2_SH-256",
+    "query": "잠깐, Shopify 반품 0건인 국가 목록",
+    "category": "filter"
+  },
+  {
+    "id": "V2_SH-257",
+    "query": "Shopify 매축 1000달러 이상 국가",
+    "category": "filter"
+  },
+  {
+    "id": "V2_SH-258",
+    "query": "궁금한데 Shopify 주문수량 100개 이상 국가 보여줘",
+    "category": "filter"
+  },
+  {
+    "id": "V2_SH-259",
+    "query": "Shopify 미국 메출 일별 데이터",
+    "category": "daily"
+  },
+  {
+    "id": "V2_SH-260",
+    "query": "잠깐, Shopify 2024년 12월 일별 매출",
+    "category": "daily"
+  },
+  {
+    "id": "V2_SH-261",
+    "query": "Shopify 일별 매출 추이 알려주시면 감사하겠습니다",
+    "category": "daily"
+  },
+  {
+    "id": "V2_SH-262",
+    "query": "Shopify 매출액 최고일 언제야?",
+    "category": "daily"
+  },
+  {
+    "id": "V2_SH-263",
+    "query": "Shopify 11월 2024년 일별 주문수량 알려주세요",
+    "category": "daily"
+  },
+  {
+    "id": "V2_SH-264",
+    "query": "Shopify 나라별 누적 판매액 차트",
+    "category": "visualization"
+  },
+  {
+    "id": "V2_SH-265",
+    "query": "쇼피파이 제품별 세일즈 파이차트",
+    "category": "visualization"
+  },
+  {
+    "id": "V2_SH-266",
+    "query": "Shopify 월간 매출 바차트",
+    "category": "visualization"
+  },
+  {
+    "id": "V2_SH-267",
+    "query": "Shopify 나라별 수익 비중 그래프",
+    "category": "visualization"
+  },
+  {
+    "id": "V2_SH-268",
+    "query": "Shopify 매출 추이 라인차트?",
+    "category": "visualization"
+  },
+  {
+    "id": "V2_SH-269",
+    "query": "Shopify 매출이 증가한 국가 목록 알려주시면 감사하겠습니다",
+    "category": "growth"
+  },
+  {
+    "id": "V2_SH-270",
+    "query": "궁금한데 Shopify 매상 감소한 국가 알고 싶어 알려주세요",
+    "category": "growth"
+  },
+  {
+    "id": "V2_SH-271",
+    "query": "참고로 Shopify 가장 빠르게 성장하는 시장 부탁드려요",
+    "category": "growth"
+  },
+  {
+    "id": "V2_SH-272",
+    "query": "Shopify 성장률 TOP 5 국가 어때?",
+    "category": "growth"
+  },
+  {
+    "id": "V2_SH-273",
+    "query": "요즘 Shopify 2024년 대비 성장한 제품 확인 부탁드립니다",
+    "category": "growth"
+  },
+  {
+    "id": "V2_SH-274",
+    "query": "Shopify 매출금액 정체 국가",
+    "category": "growth"
+  },
+  {
+    "id": "V2_SH-275",
+    "query": "요즘 Shopify 신규 진입 국가 있어 확인 가능한가요?",
+    "category": "growth"
+  },
+  {
+    "id": "V2_SH-276",
+    "query": "Shopify 매출 하락 원인 살펴봐줘 알려주세요",
+    "category": "growth"
+  },
+  {
+    "id": "V2_SH-277",
+    "query": "정확한 Shopify 전년 동월 대비 성장률 높은 국가",
+    "category": "growth"
+  },
+  {
+    "id": "V2_SH-278",
+    "query": "Shopify 국가별 매출액 중앙값은 어떤가요?",
+    "category": "statistics"
+  },
+  {
+    "id": "V2_SH-279",
+    "query": "Shopify 제품별 매출 표준편차 알려주시면 감사하겠습니다",
+    "category": "statistics"
+  },
+  {
+    "id": "V2_SH-280",
+    "query": "빠르게 Shopify 매출금액 분산 분석 정리해줘",
+    "category": "statistics"
+  },
+  {
+    "id": "V2_SH-281",
+    "query": "Shopify 국가별 매출 최솟값 최댓값 어떻게 되나요?",
+    "category": "statistics"
+  },
+  {
+    "id": "V2_SH-282",
+    "query": "Shopify 달별 매출금액 평균과 중앙값",
+    "category": "statistics"
+  },
+  {
+    "id": "V2_SH-283",
+    "query": "잠깐, Shopify 미국 vs 영국 제품별 매출 대비표 얼마임?",
+    "category": "complex"
+  },
+  {
+    "id": "V2_SH-284",
+    "query": "Shopify 2024년 나라별 분기별 매출액 피벗",
+    "category": "complex"
+  },
+  {
+    "id": "V2_SH-285",
+    "query": "요즘 Shopify 매출액 TOP 3 국가의 제품별 비교 확인해줘",
+    "category": "complex"
+  },
+  {
+    "id": "V2_SH-286",
+    "query": "Shopify 분기별 나라별 매출 증감률 알고 싶어 알려주세요",
+    "category": "complex"
+  },
+  {
+    "id": "V2_SH-287",
+    "query": "Shopify 국가별 제품유형별 반품률 매트릭스 알려주세요",
+    "category": "complex"
+  },
+  {
+    "id": "V2_SH-288",
+    "query": "확인 좀 해줘 Shopify 매출 기여도 분석",
+    "category": "complex"
+  },
+  {
+    "id": "V2_SH-289",
+    "query": "우리 회사 Shopify 각 나라 매출 YoY 성장률 비교",
+    "category": "complex"
+  },
+  {
+    "id": "V2_SH-290",
+    "query": "Shopify 미국 분기별 제품 TOP 3 변화 몇이야?",
+    "category": "complex"
+  },
+  {
+    "id": "V2_SH-291",
+    "query": "Shopify 전체 매축 대비 미국 비중 알려주세요",
+    "category": "share"
+  },
+  {
+    "id": "V2_SH-292",
+    "query": "Shopify 미국 수익이 전체에서 차지하는 비율",
+    "category": "share"
+  },
+  {
+    "id": "V2_SH-293",
+    "query": "우리 회사 쇼피파이 일본 판매액 비중 몇 퍼센트 어때?",
+    "category": "share"
+  },
+  {
+    "id": "V2_SH-294",
+    "query": "Shopify 상위 3개국 매상 비중 얼마임?",
+    "category": "share"
+  },
+  {
+    "id": "V2_SH-295",
+    "query": "Shopify 유럽 국가 매출액 비중 전체",
+    "category": "share"
+  },
+  {
+    "id": "V2_SH-296",
+    "query": "Shopify 연간 2024년 매출 리포트 확인해줘",
+    "category": "report"
+  },
+  {
+    "id": "V2_SH-297",
+    "query": "쇼피파이 매출 종합 분석 보고서",
+    "category": "report"
+  },
+  {
+    "id": "V2_SH-298",
+    "query": "Shopify 나라별 판매액 요약 테이블 좀 어때?",
+    "category": "report"
+  },
+  {
+    "id": "V2_SH-299",
+    "query": "Shopify 제품 성과 리포트 알 수 있을까요?",
+    "category": "report"
+  },
+  {
+    "id": "V2_SH-300",
+    "query": "Shopify 반기 2024년 실적 요약",
+    "category": "report"
+  }
+]

@@ -1,0 +1,1502 @@
+[
+  {
+    "id": "V2_MT-001",
+    "query": "브랜드별 활성 메타 광고 수 가르쳐줘",
+    "category": "active_ads"
+  },
+  {
+    "id": "V2_MT-002",
+    "query": "국가 기준 메타 광고 수",
+    "category": "country_distribution"
+  },
+  {
+    "id": "V2_MT-003",
+    "query": "혹시 메타 광고 유형별 분포 확인 부탁드립니다",
+    "category": "ad_type"
+  },
+  {
+    "id": "V2_MT-004",
+    "query": "게시 플랫폼 기준 메타 광고 수은 어떤가요?",
+    "category": "platform"
+  },
+  {
+    "id": "V2_MT-005",
+    "query": "정확한 페이지별 메타 광고 수 알려줄래?",
+    "category": "page_analysis"
+  },
+  {
+    "id": "V2_MT-006",
+    "query": "활성/비활성 메타 광고 비율 보여줘",
+    "category": "active_vs_inactive"
+  },
+  {
+    "id": "V2_MT-007",
+    "query": "한국 SKIN1004 메타 광고 몇이야?",
+    "category": "country_brand"
+  },
+  {
+    "id": "V2_MT-008",
+    "query": "최근 메타 광고 보여줄래 어떻게 되나요?",
+    "category": "recent_ads"
+  },
+  {
+    "id": "V2_MT-009",
+    "query": "메타 광고 아카이브 분석 알려주시면 감사하겠습니다",
+    "category": "ad_archive"
+  },
+  {
+    "id": "V2_MT-010",
+    "query": "전체 메타 광고 수 궁금해",
+    "category": "total_count"
+  },
+  {
+    "id": "V2_MT-011",
+    "query": "메타 광고 중 현재 활성인 것 몇 개야",
+    "category": "active_ads"
+  },
+  {
+    "id": "V2_MT-012",
+    "query": "미국 메타 광고 수는 알려주세요",
+    "category": "country_distribution"
+  },
+  {
+    "id": "V2_MT-013",
+    "query": "메타 광고 타입 종류 알려줘 확인 가능한가요?",
+    "category": "ad_type"
+  },
+  {
+    "id": "V2_MT-014",
+    "query": "참고로 Facebook 플랫폼 메타 광고 수 정리해줘",
+    "category": "platform"
+  },
+  {
+    "id": "V2_MT-015",
+    "query": "혹시 메타 광고 페이지 목록",
+    "category": "page_analysis"
+  },
+  {
+    "id": "V2_MT-016",
+    "query": "비활성 메타 광고 수 확인 부탁드립니다",
+    "category": "active_vs_inactive"
+  },
+  {
+    "id": "V2_MT-017",
+    "query": "요즘 일본 SKIN1004 메타 광고 있어?",
+    "category": "country_brand"
+  },
+  {
+    "id": "V2_MT-018",
+    "query": "최근 시작된 메타 광고 확인 부탁드립니다",
+    "category": "recent_ads"
+  },
+  {
+    "id": "V2_MT-019",
+    "query": "메타 광고 아카이브 ID 목록 알려줄래?",
+    "category": "ad_archive"
+  },
+  {
+    "id": "V2_MT-020",
+    "query": "메타 광고 데이터 전체 건수 알 수 있을까요?",
+    "category": "total_count"
+  },
+  {
+    "id": "V2_MT-021",
+    "query": "SKIN1004 활성 메타 광고 리스트 어때?",
+    "category": "active_ads"
+  },
+  {
+    "id": "V2_MT-022",
+    "query": "태국 메타 광고 수 좀 알려줘",
+    "category": "country_distribution"
+  },
+  {
+    "id": "V2_MT-023",
+    "query": "궁금한데 메타 광고 유형 비율 차트 확인해줘",
+    "category": "ad_type"
+  },
+  {
+    "id": "V2_MT-024",
+    "query": "잠깐, Instagram 플랫폼 광고 수 보여줘",
+    "category": "platform"
+  },
+  {
+    "id": "V2_MT-025",
+    "query": "가장 광고 많은 페이지는 어떻게 되나요?",
+    "category": "page_analysis"
+  },
+  {
+    "id": "V2_MT-026",
+    "query": "활성 광고 비율 말해줘 확인 가능한가요?",
+    "category": "active_vs_inactive"
+  },
+  {
+    "id": "V2_MT-027",
+    "query": "확인 좀 해줘 베트남 메타 광고",
+    "category": "country_brand"
+  },
+  {
+    "id": "V2_MT-028",
+    "query": "혹시 이번 달 시작된 메타 광고",
+    "category": "recent_ads"
+  },
+  {
+    "id": "V2_MT-029",
+    "query": "메타 광고 스냅샷 데이터 확인해줘",
+    "category": "ad_archive"
+  },
+  {
+    "id": "V2_MT-030",
+    "query": "메타 광고 총 몇 건",
+    "category": "total_count"
+  },
+  {
+    "id": "V2_MT-031",
+    "query": "브랜드별 활성 광고 비교 확인 가능한가요?",
+    "category": "active_ads"
+  },
+  {
+    "id": "V2_MT-032",
+    "query": "국가 코드별 메타 광고 분포 좀",
+    "category": "country_distribution"
+  },
+  {
+    "id": "V2_MT-033",
+    "query": "메타 광고 ad_type 별 건수 알려주세요",
+    "category": "ad_type"
+  },
+  {
+    "id": "V2_MT-034",
+    "query": "publisher_platform 별 광고 통계 확인 가능한가요?",
+    "category": "platform"
+  },
+  {
+    "id": "V2_MT-035",
+    "query": "잠깐, page_name 별 활성 광고 수 빨리",
+    "category": "page_analysis"
+  },
+  {
+    "id": "V2_MT-036",
+    "query": "잠깐, 종료된 메타 광고 수",
+    "category": "active_vs_inactive"
+  },
+  {
+    "id": "V2_MT-037",
+    "query": "정확한 인도네시아 SKIN1004 광고 정리해줘",
+    "category": "country_brand"
+  },
+  {
+    "id": "V2_MT-038",
+    "query": "최근 7일 시작된 메타 광고 궁금해?",
+    "category": "recent_ads"
+  },
+  {
+    "id": "V2_MT-039",
+    "query": "메타 광고 URL 목록 알고 싶어",
+    "category": "ad_archive"
+  },
+  {
+    "id": "V2_MT-040",
+    "query": "궁금한데 메타 광고 데이터 전체 요약",
+    "category": "total_count"
+  },
+  {
+    "id": "V2_MT-041",
+    "query": "빠르게 현재 활성 상태인 메타 광고 목록",
+    "category": "active_ads"
+  },
+  {
+    "id": "V2_MT-042",
+    "query": "혹시 나라별 메타 광고 비율 차트 빨리",
+    "category": "country_distribution"
+  },
+  {
+    "id": "V2_MT-043",
+    "query": "요즘 메타 광고 유형 중 가장 많은 것은 알려주세요",
+    "category": "ad_type"
+  },
+  {
+    "id": "V2_MT-044",
+    "query": "빠르게 Messenger 플랫폼 광고 있어?",
+    "category": "platform"
+  },
+  {
+    "id": "V2_MT-045",
+    "query": "정확한 페이지별 광고 수 순위 확인 부탁드립니다",
+    "category": "page_analysis"
+  },
+  {
+    "id": "V2_MT-046",
+    "query": "빠르게 is_active가 true인 광고 수",
+    "category": "active_vs_inactive"
+  },
+  {
+    "id": "V2_MT-047",
+    "query": "필리핀 메타 광고 현황 확인 가능한가요?",
+    "category": "country_brand"
+  },
+  {
+    "id": "V2_MT-048",
+    "query": "빠르게 최근 30일 신규 메타 광고 부탁드려요",
+    "category": "recent_ads"
+  },
+  {
+    "id": "V2_MT-049",
+    "query": "확인 좀 해줘 메타 광고 아카이브 ID별 상세 정보",
+    "category": "ad_archive"
+  },
+  {
+    "id": "V2_MT-050",
+    "query": "우리 회사 메타 광고 데이터 행 수 정리해줘",
+    "category": "total_count"
+  },
+  {
+    "id": "V2_MT-051",
+    "query": "활성 메타 광고 국가별 분포 어때?",
+    "category": "active_ads"
+  },
+  {
+    "id": "V2_MT-052",
+    "query": "혹시 country_name 별 광고 건수",
+    "category": "country_distribution"
+  },
+  {
+    "id": "V2_MT-053",
+    "query": "비디오 유형 메타 광고 수 알려주세요",
+    "category": "ad_type"
+  },
+  {
+    "id": "V2_MT-054",
+    "query": "요즘 Audience Network 광고 있어?",
+    "category": "platform"
+  },
+  {
+    "id": "V2_MT-055",
+    "query": "SKIN1004 페이지 광고 수 확인 부탁드립니다",
+    "category": "page_analysis"
+  },
+  {
+    "id": "V2_MT-056",
+    "query": "요즘 활성/비활성 광고 건수 비교 확인 가능한가요?",
+    "category": "active_vs_inactive"
+  },
+  {
+    "id": "V2_MT-057",
+    "query": "빠르게 말레이시아 SKIN1004 메타 광고 확인 부탁드립니다",
+    "category": "country_brand"
+  },
+  {
+    "id": "V2_MT-058",
+    "query": "최근 시작된 광고 10건 좀 알려줘",
+    "category": "recent_ads"
+  },
+  {
+    "id": "V2_MT-059",
+    "query": "메타 광고 end_date 분석 좀",
+    "category": "ad_archive"
+  },
+  {
+    "id": "V2_MT-060",
+    "query": "메타 광고 전체 현황 리포트 확인 가능한가요?",
+    "category": "total_count"
+  },
+  {
+    "id": "V2_MT-061",
+    "query": "브랜드별 is_active 광고 수 알려주세요",
+    "category": "active_ads"
+  },
+  {
+    "id": "V2_MT-062",
+    "query": "우리 회사 싱가포르 메타 광고 수 정리해줘",
+    "category": "country_distribution"
+  },
+  {
+    "id": "V2_MT-063",
+    "query": "이미지 유형 메타 광고 알려주시면 감사하겠습니다",
+    "category": "ad_type"
+  },
+  {
+    "id": "V2_MT-064",
+    "query": "플랫폼별 활성 광고 수 확인 부탁드립니다",
+    "category": "platform"
+  },
+  {
+    "id": "V2_MT-065",
+    "query": "간단하게 페이지별 비활성 광고 수",
+    "category": "page_analysis"
+  },
+  {
+    "id": "V2_MT-066",
+    "query": "궁금한데 is_active false인 광고 리스트",
+    "category": "active_vs_inactive"
+  },
+  {
+    "id": "V2_MT-067",
+    "query": "요즘 대만 메타 광고 현황",
+    "category": "country_brand"
+  },
+  {
+    "id": "V2_MT-068",
+    "query": "최근 메타 광고 5건 보여줘 확인 가능한가요?",
+    "category": "recent_ads"
+  },
+  {
+    "id": "V2_MT-069",
+    "query": "궁금한데 메타 광고 start_date 기준 정렬 확인해줘",
+    "category": "ad_archive"
+  },
+  {
+    "id": "V2_MT-070",
+    "query": "메타 광고 데이터 수집 동향",
+    "category": "total_count"
+  },
+  {
+    "id": "V2_MT-071",
+    "query": "요즘 활성 광고 중 가장 오래된 것 좀",
+    "category": "active_ads"
+  },
+  {
+    "id": "V2_MT-072",
+    "query": "국가 기준 활성 메타 광고 수 확인 가능한가요?",
+    "category": "country_distribution"
+  },
+  {
+    "id": "V2_MT-073",
+    "query": "메타 광고 ad_type 목록 알려주시면 감사하겠습니다",
+    "category": "ad_type"
+  },
+  {
+    "id": "V2_MT-074",
+    "query": "Facebook과 Instagram 광고 수 비교 분석 좀",
+    "category": "platform"
+  },
+  {
+    "id": "V2_MT-075",
+    "query": "정확한 광고 가장 많은 페이지 TOP 5",
+    "category": "page_analysis"
+  },
+  {
+    "id": "V2_MT-076",
+    "query": "활성 광고 비율 차트 알려주세요",
+    "category": "active_vs_inactive"
+  },
+  {
+    "id": "V2_MT-077",
+    "query": "잠깐, 호주 SKIN1004 메타 광고 있어 부탁드려요",
+    "category": "country_brand"
+  },
+  {
+    "id": "V2_MT-078",
+    "query": "잠깐, 최근 2주간 시작된 메타 광고 좀 봐줘",
+    "category": "recent_ads"
+  },
+  {
+    "id": "V2_MT-079",
+    "query": "메타 광고 collect_date 분석 알려주시면 감사하겠습니다",
+    "category": "ad_archive"
+  },
+  {
+    "id": "V2_MT-080",
+    "query": "빠르게 메타 광고 테이블 전체 데이터 수 좀",
+    "category": "total_count"
+  },
+  {
+    "id": "V2_MT-081",
+    "query": "SKIN1004 활성 광고 국가 분포 확인 가능한가요?",
+    "category": "active_ads"
+  },
+  {
+    "id": "V2_MT-082",
+    "query": "잠깐, 유럽 국가 메타 광고 수 알고 싶어",
+    "category": "country_distribution"
+  },
+  {
+    "id": "V2_MT-083",
+    "query": "메타 광고 유형별 활성 비율 부탁",
+    "category": "ad_type"
+  },
+  {
+    "id": "V2_MT-084",
+    "query": "요즘 플랫폼별 광고 비율 차트",
+    "category": "platform"
+  },
+  {
+    "id": "V2_MT-085",
+    "query": "혹시 page_name 종류 몇 개야",
+    "category": "page_analysis"
+  },
+  {
+    "id": "V2_MT-086",
+    "query": "빠르게 최근 종료된 메타 광고 어떻게 되나요?",
+    "category": "active_vs_inactive"
+  },
+  {
+    "id": "V2_MT-087",
+    "query": "중국 메타 광고 데이터 부탁 얼마임?",
+    "category": "country_brand"
+  },
+  {
+    "id": "V2_MT-088",
+    "query": "잠깐, 2025년 시작된 메타 광고 수",
+    "category": "recent_ads"
+  },
+  {
+    "id": "V2_MT-089",
+    "query": "참고로 메타 광고 snapshot 데이터 보여줘",
+    "category": "ad_archive"
+  },
+  {
+    "id": "V2_MT-090",
+    "query": "메타 광고 수 합산",
+    "category": "total_count"
+  },
+  {
+    "id": "V2_MT-091",
+    "query": "혹시 활성 메타 광고 유형별 분포",
+    "category": "active_ads"
+  },
+  {
+    "id": "V2_MT-092",
+    "query": "동남아시아 국가 메타 광고 알려주세요",
+    "category": "country_distribution"
+  },
+  {
+    "id": "V2_MT-093",
+    "query": "혹시 캐러셀 유형 메타 광고 수 궁금해",
+    "category": "ad_type"
+  },
+  {
+    "id": "V2_MT-094",
+    "query": "멀티 플랫폼 게시 광고 보여줘",
+    "category": "platform"
+  },
+  {
+    "id": "V2_MT-095",
+    "query": "페이지별 최근 광고 보여줄래",
+    "category": "page_analysis"
+  },
+  {
+    "id": "V2_MT-096",
+    "query": "end_date 지난 광고 수 좀 봐줘 알려주세요",
+    "category": "active_vs_inactive"
+  },
+  {
+    "id": "V2_MT-097",
+    "query": "캐나다 SKIN1004 메타 광고 확인 가능한가요?",
+    "category": "country_brand"
+  },
+  {
+    "id": "V2_MT-098",
+    "query": "최근 3개월 메타 광고 흐름 빨리 어떻게 되나요?",
+    "category": "recent_ads"
+  },
+  {
+    "id": "V2_MT-099",
+    "query": "메타 광고 URL 분석 좀",
+    "category": "ad_archive"
+  },
+  {
+    "id": "V2_MT-100",
+    "query": "참고로 메타 광고 데이터 요약 통계",
+    "category": "total_count"
+  },
+  {
+    "id": "V2_MT-101",
+    "query": "활성 광고 페이지별 분포 확인 부탁드립니다",
+    "category": "active_ads"
+  },
+  {
+    "id": "V2_MT-102",
+    "query": "아시아 국가별 메타 광고 수 알려주세요",
+    "category": "country_distribution"
+  },
+  {
+    "id": "V2_MT-103",
+    "query": "혹시 메타 광고 유형 중 비디오 비율",
+    "category": "ad_type"
+  },
+  {
+    "id": "V2_MT-104",
+    "query": "우리 회사 Instagram 전용 광고 수",
+    "category": "platform"
+  },
+  {
+    "id": "V2_MT-105",
+    "query": "혹시 페이지별 활성 광고 비율 보여줘",
+    "category": "page_analysis"
+  },
+  {
+    "id": "V2_MT-106",
+    "query": "확인 좀 해줘 활성 광고 vs 종료 광고 수 비교 알고 싶어",
+    "category": "active_vs_inactive"
+  },
+  {
+    "id": "V2_MT-107",
+    "query": "영국 메타 광고 실태",
+    "category": "country_brand"
+  },
+  {
+    "id": "V2_MT-108",
+    "query": "이번 주 시작된 메타 광고 어떻게 되나요?",
+    "category": "recent_ads"
+  },
+  {
+    "id": "V2_MT-109",
+    "query": "메타 광고 아카이브 번호 기준 정렬 알려주시면 감사하겠습니다",
+    "category": "ad_archive"
+  },
+  {
+    "id": "V2_MT-110",
+    "query": "메타 광고 전체 건수와 활성 건수 알 수 있을까요?",
+    "category": "total_count"
+  },
+  {
+    "id": "V2_MT-111",
+    "query": "우리 회사 활성 메타 광고 최근 시작된 순 빨리",
+    "category": "active_ads"
+  },
+  {
+    "id": "V2_MT-112",
+    "query": "간단하게 북미 국가 메타 광고",
+    "category": "country_distribution"
+  },
+  {
+    "id": "V2_MT-113",
+    "query": "메타 광고 유형별 국가 분포 알려주세요",
+    "category": "ad_type"
+  },
+  {
+    "id": "V2_MT-114",
+    "query": "정확한 Facebook 전용 광고 수",
+    "category": "platform"
+  },
+  {
+    "id": "V2_MT-115",
+    "query": "우리 회사 SKIN1004 페이지 활성 광고 리스트",
+    "category": "page_analysis"
+  },
+  {
+    "id": "V2_MT-116",
+    "query": "요즘 비활성 광고 종료일 분석",
+    "category": "active_vs_inactive"
+  },
+  {
+    "id": "V2_MT-117",
+    "query": "독일 SKIN1004 메타 광고 있어",
+    "category": "country_brand"
+  },
+  {
+    "id": "V2_MT-118",
+    "query": "궁금한데 최근 start_date 기준 광고 20건 좀 봐줘",
+    "category": "recent_ads"
+  },
+  {
+    "id": "V2_MT-119",
+    "query": "혹시 메타 광고 end_date 있는 것만 궁금해",
+    "category": "ad_archive"
+  },
+  {
+    "id": "V2_MT-120",
+    "query": "확인 좀 해줘 메타 광고 데이터 컬럼 정보",
+    "category": "total_count"
+  },
+  {
+    "id": "V2_MT-121",
+    "query": "활성 광고 브랜드별 국가별 교차 분석 알려주세요",
+    "category": "active_ads"
+  },
+  {
+    "id": "V2_MT-122",
+    "query": "우리 회사 country_code KR 광고 수",
+    "category": "country_distribution"
+  },
+  {
+    "id": "V2_MT-123",
+    "query": "메타 광고 유형별 플랫폼별 분석해줘",
+    "category": "ad_type"
+  },
+  {
+    "id": "V2_MT-124",
+    "query": "확인 좀 해줘 채널별 비활성 광고 수 확인해줘",
+    "category": "platform"
+  },
+  {
+    "id": "V2_MT-125",
+    "query": "혹시 페이지별 광고 유형 분포 확인 가능한가요?",
+    "category": "page_analysis"
+  },
+  {
+    "id": "V2_MT-126",
+    "query": "활성 광고 중 가장 최근 시작된 것 좀 알려줘",
+    "category": "active_vs_inactive"
+  },
+  {
+    "id": "V2_MT-127",
+    "query": "프랑스 메타 광고 데이터 어떻게 되나요?",
+    "category": "country_brand"
+  },
+  {
+    "id": "V2_MT-128",
+    "query": "2024년 시작된 메타 광고 수 알 수 있을까요?",
+    "category": "recent_ads"
+  },
+  {
+    "id": "V2_MT-129",
+    "query": "우리 회사 메타 광고 start_date와 end_date 분석",
+    "category": "ad_archive"
+  },
+  {
+    "id": "V2_MT-130",
+    "query": "빠르게 메타 광고 총 데이터 행 수",
+    "category": "total_count"
+  },
+  {
+    "id": "V2_MT-131",
+    "query": "요즘 활성 광고 중 Facebook 게시 건수",
+    "category": "active_ads"
+  },
+  {
+    "id": "V2_MT-132",
+    "query": "country_code US 광고 수 좀",
+    "category": "country_distribution"
+  },
+  {
+    "id": "V2_MT-133",
+    "query": "혹시 메타 광고 유형 이미지 vs 비디오 알려줄래?",
+    "category": "ad_type"
+  },
+  {
+    "id": "V2_MT-134",
+    "query": "간단하게 플랫폼 종류 목록",
+    "category": "platform"
+  },
+  {
+    "id": "V2_MT-135",
+    "query": "가장 활발한 페이지 알려줘 부탁드려요",
+    "category": "page_analysis"
+  },
+  {
+    "id": "V2_MT-136",
+    "query": "end_date가 없는 활성 광고 알려주세요",
+    "category": "active_vs_inactive"
+  },
+  {
+    "id": "V2_MT-137",
+    "query": "우리 회사 스페인 SKIN1004 메타 광고 궁금해",
+    "category": "country_brand"
+  },
+  {
+    "id": "V2_MT-138",
+    "query": "최근 1개월 시작된 광고 수 좀 알려줘",
+    "category": "recent_ads"
+  },
+  {
+    "id": "V2_MT-139",
+    "query": "메타 광고 수집일 기준 최신 데이터 알려주세요",
+    "category": "ad_archive"
+  },
+  {
+    "id": "V2_MT-140",
+    "query": "메타 광고 전체 상황 요약해줘",
+    "category": "total_count"
+  },
+  {
+    "id": "V2_MT-141",
+    "query": "활성 광고 국가 TOP 5 어떻게 되나요?",
+    "category": "active_ads"
+  },
+  {
+    "id": "V2_MT-142",
+    "query": "country_code JP 광고 현재 상태",
+    "category": "country_distribution"
+  },
+  {
+    "id": "V2_MT-143",
+    "query": "간단하게 메타 광고 유형별 건수 표",
+    "category": "ad_type"
+  },
+  {
+    "id": "V2_MT-144",
+    "query": "간단하게 각 채널별 활성 광고 비율 얼마임?",
+    "category": "platform"
+  },
+  {
+    "id": "V2_MT-145",
+    "query": "페이지별 국가 기준 교차 분석",
+    "category": "page_analysis"
+  },
+  {
+    "id": "V2_MT-146",
+    "query": "혹시 활성 광고 총 수와 비율",
+    "category": "active_vs_inactive"
+  },
+  {
+    "id": "V2_MT-147",
+    "query": "참고로 이탈리아 메타 광고 있어?",
+    "category": "country_brand"
+  },
+  {
+    "id": "V2_MT-148",
+    "query": "잠깐, 2025년 1월 시작된 메타 광고 좀",
+    "category": "recent_ads"
+  },
+  {
+    "id": "V2_MT-149",
+    "query": "잠깐, 메타 광고 데이터 날짜 범위",
+    "category": "ad_archive"
+  },
+  {
+    "id": "V2_MT-150",
+    "query": "메타 광고 데이터 전체 분석 알려주세요",
+    "category": "total_count"
+  },
+  {
+    "id": "V2_MT-151",
+    "query": "활성 광고 가장 높은 국가",
+    "category": "active_ads"
+  },
+  {
+    "id": "V2_MT-152",
+    "query": "country_code TH 광고 수?",
+    "category": "country_distribution"
+  },
+  {
+    "id": "V2_MT-153",
+    "query": "메타 광고 유형 분류 기준 알려주세요",
+    "category": "ad_type"
+  },
+  {
+    "id": "V2_MT-154",
+    "query": "플랫폼 조합별 광고 수 알려주세요",
+    "category": "platform"
+  },
+  {
+    "id": "V2_MT-155",
+    "query": "확인 좀 해줘 페이지별 광고 유형별 건수",
+    "category": "page_analysis"
+  },
+  {
+    "id": "V2_MT-156",
+    "query": "정확한 비활성 광고 비율 알려줘 알려줄래?",
+    "category": "active_vs_inactive"
+  },
+  {
+    "id": "V2_MT-157",
+    "query": "요즘 브라질 SKIN1004 메타 광고",
+    "category": "country_brand"
+  },
+  {
+    "id": "V2_MT-158",
+    "query": "2월 2025년 시작된 메타 광고",
+    "category": "recent_ads"
+  },
+  {
+    "id": "V2_MT-159",
+    "query": "메타 광고 end_date 분포 알려주시면 감사하겠습니다",
+    "category": "ad_archive"
+  },
+  {
+    "id": "V2_MT-160",
+    "query": "메타 광고 수 추이 부탁",
+    "category": "total_count"
+  },
+  {
+    "id": "V2_MT-161",
+    "query": "활성 광고 플랫폼별 분포 확인 부탁드립니다",
+    "category": "active_ads"
+  },
+  {
+    "id": "V2_MT-162",
+    "query": "country_code VN 광고 현황 정리해줘",
+    "category": "country_distribution"
+  },
+  {
+    "id": "V2_MT-163",
+    "query": "궁금한데 메타 광고 ad_type 중 가장 적은 것",
+    "category": "ad_type"
+  },
+  {
+    "id": "V2_MT-164",
+    "query": "publisher_platform 목록 말해줘",
+    "category": "platform"
+  },
+  {
+    "id": "V2_MT-165",
+    "query": "잠깐, 페이지별 최신 광고 날짜?",
+    "category": "page_analysis"
+  },
+  {
+    "id": "V2_MT-166",
+    "query": "최근 종료된 광고 리스트 궁금해",
+    "category": "active_vs_inactive"
+  },
+  {
+    "id": "V2_MT-167",
+    "query": "정확한 멕시코 메타 광고 데이터",
+    "category": "country_brand"
+  },
+  {
+    "id": "V2_MT-168",
+    "query": "빠르게 최근 시작된 광고 start_date 순 알려줄래?",
+    "category": "recent_ads"
+  },
+  {
+    "id": "V2_MT-169",
+    "query": "메타 광고 collect_date 최신 데이터 얼마임?",
+    "category": "ad_archive"
+  },
+  {
+    "id": "V2_MT-170",
+    "query": "메타 광고 데이터 건수 토탈",
+    "category": "total_count"
+  },
+  {
+    "id": "V2_MT-171",
+    "query": "활성 광고 유형별 국가 기준 분석",
+    "category": "active_ads"
+  },
+  {
+    "id": "V2_MT-172",
+    "query": "country_code ID 광고 수 확인 가능한가요?",
+    "category": "country_distribution"
+  },
+  {
+    "id": "V2_MT-173",
+    "query": "궁금한데 메타 광고 유형별 최근 추이",
+    "category": "ad_type"
+  },
+  {
+    "id": "V2_MT-174",
+    "query": "각 플랫폼 광고 수 차트 좀 알려줘",
+    "category": "platform"
+  },
+  {
+    "id": "V2_MT-175",
+    "query": "간단하게 페이지 수 몇 개인가요",
+    "category": "page_analysis"
+  },
+  {
+    "id": "V2_MT-176",
+    "query": "활성 상태 변경 내역 부탁",
+    "category": "active_vs_inactive"
+  },
+  {
+    "id": "V2_MT-177",
+    "query": "인도 SKIN1004 메타 광고 있어 알 수 있을까요?",
+    "category": "country_brand"
+  },
+  {
+    "id": "V2_MT-178",
+    "query": "참고로 2025년 3월 메타 광고 데이터 알려줄래?",
+    "category": "recent_ads"
+  },
+  {
+    "id": "V2_MT-179",
+    "query": "참고로 메타 광고 start_date 기준 통계 알고 싶어",
+    "category": "ad_archive"
+  },
+  {
+    "id": "V2_MT-180",
+    "query": "정확한 메타 광고 전체 수 확인해줘 확인해줘 확인 부탁드립니다",
+    "category": "total_count"
+  },
+  {
+    "id": "V2_MT-181",
+    "query": "활성 광고 중 Instagram 게시 건수 확인해주세요",
+    "category": "active_ads"
+  },
+  {
+    "id": "V2_MT-182",
+    "query": "확인 좀 해줘 country_code MY 광고 데이터",
+    "category": "country_distribution"
+  },
+  {
+    "id": "V2_MT-183",
+    "query": "메타 광고 유형별 페이지별 분석 보여줘",
+    "category": "ad_type"
+  },
+  {
+    "id": "V2_MT-184",
+    "query": "요즘 플랫폼별 브랜드별 광고 수 정리해줘",
+    "category": "platform"
+  },
+  {
+    "id": "V2_MT-185",
+    "query": "혹시 페이지별 브랜드별 광고 분포 정리해줘",
+    "category": "page_analysis"
+  },
+  {
+    "id": "V2_MT-186",
+    "query": "is_active 값별 건수 알려주세요",
+    "category": "active_vs_inactive"
+  },
+  {
+    "id": "V2_MT-187",
+    "query": "간단하게 러시아 메타 광고 현재 상태",
+    "category": "country_brand"
+  },
+  {
+    "id": "V2_MT-188",
+    "query": "최근 광고 20건 보여줄래 궁금해 알려주세요",
+    "category": "recent_ads"
+  },
+  {
+    "id": "V2_MT-189",
+    "query": "메타 광고 아카이브 데이터 분석 좀",
+    "category": "ad_archive"
+  },
+  {
+    "id": "V2_MT-190",
+    "query": "참고로 메타 광고 테이블 데이터 요약?",
+    "category": "total_count"
+  },
+  {
+    "id": "V2_MT-191",
+    "query": "활성 광고 최근 시작된 10건 알 수 있을까요?",
+    "category": "active_ads"
+  },
+  {
+    "id": "V2_MT-192",
+    "query": "country_code SG 광고 수은 어떤가요?",
+    "category": "country_distribution"
+  },
+  {
+    "id": "V2_MT-193",
+    "query": "메타 광고 유형 통계 요약 부탁드려요",
+    "category": "ad_type"
+  },
+  {
+    "id": "V2_MT-194",
+    "query": "플랫폼별 나라별 교차 분석",
+    "category": "platform"
+  },
+  {
+    "id": "V2_MT-195",
+    "query": "요즘 페이지별 광고 수 내림차순 정렬",
+    "category": "page_analysis"
+  },
+  {
+    "id": "V2_MT-196",
+    "query": "활성 vs 비활성 광고 차트 확인 가능한가요?",
+    "category": "active_vs_inactive"
+  },
+  {
+    "id": "V2_MT-197",
+    "query": "정확한 터키 SKIN1004 메타 광고",
+    "category": "country_brand"
+  },
+  {
+    "id": "V2_MT-198",
+    "query": "정확한 최근 2개월 신규 광고 좀 봐줘",
+    "category": "recent_ads"
+  },
+  {
+    "id": "V2_MT-199",
+    "query": "메타 광고 데이터 날짜 파악해줘",
+    "category": "ad_archive"
+  },
+  {
+    "id": "V2_MT-200",
+    "query": "간단하게 메타 광고 전체 데이터 현황",
+    "category": "total_count"
+  },
+  {
+    "id": "V2_MT-201",
+    "query": "활성 광고만 국가별 집계 보여줘",
+    "category": "active_ads"
+  },
+  {
+    "id": "V2_MT-202",
+    "query": "country_code PH 광고 현황 알려주세요",
+    "category": "country_distribution"
+  },
+  {
+    "id": "V2_MT-203",
+    "query": "메타 광고 유형별 활성/비활성 비교 분석",
+    "category": "ad_type"
+  },
+  {
+    "id": "V2_MT-204",
+    "query": "플랫폼별 최근 광고 빨리 어때?",
+    "category": "platform"
+  },
+  {
+    "id": "V2_MT-205",
+    "query": "페이지별 국가 분포 보여줘 확인 가능한가요?",
+    "category": "page_analysis"
+  },
+  {
+    "id": "V2_MT-206",
+    "query": "간단하게 최근 비활성화된 광고 수",
+    "category": "active_vs_inactive"
+  },
+  {
+    "id": "V2_MT-207",
+    "query": "혹시 남아프리카공화국 메타 광고?",
+    "category": "country_brand"
+  },
+  {
+    "id": "V2_MT-208",
+    "query": "정확한 start_date 기준 최근 광고 50건",
+    "category": "recent_ads"
+  },
+  {
+    "id": "V2_MT-209",
+    "query": "궁금한데 메타 광고 아카이브 최근 데이터",
+    "category": "ad_archive"
+  },
+  {
+    "id": "V2_MT-210",
+    "query": "메타 광고 데이터 총 행 수 좀 알려줘",
+    "category": "total_count"
+  },
+  {
+    "id": "V2_MT-211",
+    "query": "활성 광고 페이지별 TOP 3 확인 가능한가요?",
+    "category": "active_ads"
+  },
+  {
+    "id": "V2_MT-212",
+    "query": "잠깐, 국가별 광고 수 TOP 10 몇이야?",
+    "category": "country_distribution"
+  },
+  {
+    "id": "V2_MT-213",
+    "query": "참고로 메타 광고 유형 종류 수",
+    "category": "ad_type"
+  },
+  {
+    "id": "V2_MT-214",
+    "query": "정확한 플랫폼 수 몇 개야?",
+    "category": "platform"
+  },
+  {
+    "id": "V2_MT-215",
+    "query": "잠깐, 페이지별 광고 시작일 분석",
+    "category": "page_analysis"
+  },
+  {
+    "id": "V2_MT-216",
+    "query": "활성 광고 수 추이 변화 확인해줘",
+    "category": "active_vs_inactive"
+  },
+  {
+    "id": "V2_MT-217",
+    "query": "잠깐, 사우디아라비아 메타 광고 있어?",
+    "category": "country_brand"
+  },
+  {
+    "id": "V2_MT-218",
+    "query": "궁금한데 2024년 12월 시작된 메타 광고",
+    "category": "recent_ads"
+  },
+  {
+    "id": "V2_MT-219",
+    "query": "요즘 메타 광고 수집일 목록 좀 봐줘",
+    "category": "ad_archive"
+  },
+  {
+    "id": "V2_MT-220",
+    "query": "메타 광고 전체 통계 좀",
+    "category": "total_count"
+  },
+  {
+    "id": "V2_MT-221",
+    "query": "활성 광고 브랜드별 페이지별 분석 좀",
+    "category": "active_ads"
+  },
+  {
+    "id": "V2_MT-222",
+    "query": "국가 수 몇 개야 부탁드려요",
+    "category": "country_distribution"
+  },
+  {
+    "id": "V2_MT-223",
+    "query": "메타 광고 유형 변화 변동",
+    "category": "ad_type"
+  },
+  {
+    "id": "V2_MT-224",
+    "query": "궁금한데 단일 플랫폼 vs 멀티 플랫폼 광고",
+    "category": "platform"
+  },
+  {
+    "id": "V2_MT-225",
+    "query": "혹시 각 페이지 광고 수 요약",
+    "category": "page_analysis"
+  },
+  {
+    "id": "V2_MT-226",
+    "query": "혹시 비활성 광고 종료일 통계",
+    "category": "active_vs_inactive"
+  },
+  {
+    "id": "V2_MT-227",
+    "query": "아르헨티나 SKIN1004 메타 광고 확인 부탁드립니다",
+    "category": "country_brand"
+  },
+  {
+    "id": "V2_MT-228",
+    "query": "요즘 최근 광고 시작일 기준 정렬",
+    "category": "recent_ads"
+  },
+  {
+    "id": "V2_MT-229",
+    "query": "메타 광고 end_date null인 것 확인 부탁드립니다",
+    "category": "ad_archive"
+  },
+  {
+    "id": "V2_MT-230",
+    "query": "메타 광고 총 건수 확인 알 수 있을까요?",
+    "category": "total_count"
+  },
+  {
+    "id": "V2_MT-231",
+    "query": "활성 광고 중 최근 수집된 것 부탁드려요",
+    "category": "active_ads"
+  },
+  {
+    "id": "V2_MT-232",
+    "query": "country_code AU 광고 수 몇이야?",
+    "category": "country_distribution"
+  },
+  {
+    "id": "V2_MT-233",
+    "query": "메타 광고 유형별 브랜드 분석 몇이야?",
+    "category": "ad_type"
+  },
+  {
+    "id": "V2_MT-234",
+    "query": "플랫폼별 광고 유형 교차 분석 어때?",
+    "category": "platform"
+  },
+  {
+    "id": "V2_MT-235",
+    "query": "궁금한데 페이지별 플랫폼별 광고 수",
+    "category": "page_analysis"
+  },
+  {
+    "id": "V2_MT-236",
+    "query": "활성/비활성 비율 변화 추세 알 수 있을까요?",
+    "category": "active_vs_inactive"
+  },
+  {
+    "id": "V2_MT-237",
+    "query": "참고로 콜롬비아 메타 광고 데이터",
+    "category": "country_brand"
+  },
+  {
+    "id": "V2_MT-238",
+    "query": "잠깐, 최근 6개월 메타 광고 현황",
+    "category": "recent_ads"
+  },
+  {
+    "id": "V2_MT-239",
+    "query": "메타 광고 start_date 분포은 어떤가요?",
+    "category": "ad_archive"
+  },
+  {
+    "id": "V2_MT-240",
+    "query": "메타 광고 데이터 전체 행 수 알려줘은 어떤가요?",
+    "category": "total_count"
+  },
+  {
+    "id": "V2_MT-241",
+    "query": "확인 좀 해줘 활성 광고 시작일별 분포",
+    "category": "active_ads"
+  },
+  {
+    "id": "V2_MT-242",
+    "query": "country_code TW 광고 현재 상태",
+    "category": "country_distribution"
+  },
+  {
+    "id": "V2_MT-243",
+    "query": "정확한 메타 광고 유형별 페이지별 교차표",
+    "category": "ad_type"
+  },
+  {
+    "id": "V2_MT-244",
+    "query": "참고로 플랫폼별 활성/비활성 비율은 어떤가요?",
+    "category": "platform"
+  },
+  {
+    "id": "V2_MT-245",
+    "query": "페이지별 최근 활성 광고 부탁 알려주시면 감사하겠습니다",
+    "category": "page_analysis"
+  },
+  {
+    "id": "V2_MT-246",
+    "query": "확인 좀 해줘 종료 날짜 지난 광고 수 알려주세요",
+    "category": "active_vs_inactive"
+  },
+  {
+    "id": "V2_MT-247",
+    "query": "정확한 칠레 SKIN1004 메타 광고 있어?",
+    "category": "country_brand"
+  },
+  {
+    "id": "V2_MT-248",
+    "query": "궁금한데 2025년 1분기 메타 광고 수",
+    "category": "recent_ads"
+  },
+  {
+    "id": "V2_MT-249",
+    "query": "혹시 메타 광고 아카이브 ID 수",
+    "category": "ad_archive"
+  },
+  {
+    "id": "V2_MT-250",
+    "query": "메타 광고 수 달별 변동 어때?",
+    "category": "total_count"
+  },
+  {
+    "id": "V2_MT-251",
+    "query": "정확한 활성 광고 유형별 TOP 3",
+    "category": "active_ads"
+  },
+  {
+    "id": "V2_MT-252",
+    "query": "간단하게 country_code GB 광고 수 궁금해",
+    "category": "country_distribution"
+  },
+  {
+    "id": "V2_MT-253",
+    "query": "요즘 메타 광고 유형별 시작일 분석 보여줘",
+    "category": "ad_type"
+  },
+  {
+    "id": "V2_MT-254",
+    "query": "정확한 플랫폼별 광고 시작일 분포 빨리",
+    "category": "platform"
+  },
+  {
+    "id": "V2_MT-255",
+    "query": "참고로 페이지별 광고 수 비율 차트",
+    "category": "page_analysis"
+  },
+  {
+    "id": "V2_MT-256",
+    "query": "비활성 광고 가장 높은 국가",
+    "category": "active_vs_inactive"
+  },
+  {
+    "id": "V2_MT-257",
+    "query": "혹시 페루 메타 광고 현황 궁금해",
+    "category": "country_brand"
+  },
+  {
+    "id": "V2_MT-258",
+    "query": "간단하게 최근 광고 collect_date 기준 정렬 빨리 알려주세요",
+    "category": "recent_ads"
+  },
+  {
+    "id": "V2_MT-259",
+    "query": "메타 광고 데이터 수집일 분석해주세요",
+    "category": "ad_archive"
+  },
+  {
+    "id": "V2_MT-260",
+    "query": "메타 광고 상황 대시보드 알려주세요",
+    "category": "total_count"
+  },
+  {
+    "id": "V2_MT-261",
+    "query": "빠르게 활성 광고 수 국가별 차트 확인 가능한가요?",
+    "category": "active_ads"
+  },
+  {
+    "id": "V2_MT-262",
+    "query": "간단하게 country_code DE 광고 데이터",
+    "category": "country_distribution"
+  },
+  {
+    "id": "V2_MT-263",
+    "query": "정확한 메타 광고 유형별 종료 분석 보여줘",
+    "category": "ad_type"
+  },
+  {
+    "id": "V2_MT-264",
+    "query": "플랫폼별 최신 광고 알려주세요",
+    "category": "platform"
+  },
+  {
+    "id": "V2_MT-265",
+    "query": "잠깐, 페이지별 활성/비활성 비율 알려주세요",
+    "category": "page_analysis"
+  },
+  {
+    "id": "V2_MT-266",
+    "query": "참고로 최근 활성화된 광고 수",
+    "category": "active_vs_inactive"
+  },
+  {
+    "id": "V2_MT-267",
+    "query": "뉴질랜드 메타 광고 있어",
+    "category": "country_brand"
+  },
+  {
+    "id": "V2_MT-268",
+    "query": "정확한 2024년 4분기 시작된 메타 광고",
+    "category": "recent_ads"
+  },
+  {
+    "id": "V2_MT-269",
+    "query": "메타 광고 end_date 파악해줘 요약 얼마임?",
+    "category": "ad_archive"
+  },
+  {
+    "id": "V2_MT-270",
+    "query": "빠르게 메타 광고 리포트 생성해줘",
+    "category": "total_count"
+  },
+  {
+    "id": "V2_MT-271",
+    "query": "활성 광고 최근 30건 어떻게 되나요?",
+    "category": "active_ads"
+  },
+  {
+    "id": "V2_MT-272",
+    "query": "우리 회사 country_code FR 광고 수 좀",
+    "category": "country_distribution"
+  },
+  {
+    "id": "V2_MT-273",
+    "query": "메타 광고 유형 전체 목록 보여줄 수 있어?",
+    "category": "ad_type"
+  },
+  {
+    "id": "V2_MT-274",
+    "query": "플랫폼별 광고 건수 전체",
+    "category": "platform"
+  },
+  {
+    "id": "V2_MT-275",
+    "query": "페이지별 광고 건수 합계 알려주세요",
+    "category": "page_analysis"
+  },
+  {
+    "id": "V2_MT-276",
+    "query": "빠르게 is_active 기준 광고 분류",
+    "category": "active_vs_inactive"
+  },
+  {
+    "id": "V2_MT-277",
+    "query": "이집트 SKIN1004 메타 광고 보여주세요",
+    "category": "country_brand"
+  },
+  {
+    "id": "V2_MT-278",
+    "query": "최근 start_date 기준 광고 데이터 부탁드려요",
+    "category": "recent_ads"
+  },
+  {
+    "id": "V2_MT-279",
+    "query": "우리 회사 메타 광고 snapshot 분석 좀 봐줘",
+    "category": "ad_archive"
+  },
+  {
+    "id": "V2_MT-280",
+    "query": "메타 광고 전체 데이터 건수 알려주세요",
+    "category": "total_count"
+  },
+  {
+    "id": "V2_MT-281",
+    "query": "활성 광고 브랜드 목록 알려주시면 감사하겠습니다",
+    "category": "active_ads"
+  },
+  {
+    "id": "V2_MT-282",
+    "query": "country_code CA 광고 현황은 어떤가요?",
+    "category": "country_distribution"
+  },
+  {
+    "id": "V2_MT-283",
+    "query": "메타 광고 유형별 국가별 교차표 확인 부탁드립니다",
+    "category": "ad_type"
+  },
+  {
+    "id": "V2_MT-284",
+    "query": "확인 좀 해줘 플랫폼 기준 나라별 광고 수 알 수 있을까요?",
+    "category": "platform"
+  },
+  {
+    "id": "V2_MT-285",
+    "query": "페이지 목록과 광고 수 정리?",
+    "category": "page_analysis"
+  },
+  {
+    "id": "V2_MT-286",
+    "query": "활성 광고 시작일 통계 좀",
+    "category": "active_vs_inactive"
+  },
+  {
+    "id": "V2_MT-287",
+    "query": "확인 좀 해줘 폴란드 메타 광고 데이터 알고 싶어",
+    "category": "country_brand"
+  },
+  {
+    "id": "V2_MT-288",
+    "query": "하반기 2024년 시작된 메타 광고 알려주세요",
+    "category": "recent_ads"
+  },
+  {
+    "id": "V2_MT-289",
+    "query": "메타 광고 URL 도메인 분석 어떻게 되나요?",
+    "category": "ad_archive"
+  },
+  {
+    "id": "V2_MT-290",
+    "query": "메타 광고 수 동향 요약",
+    "category": "total_count"
+  },
+  {
+    "id": "V2_MT-291",
+    "query": "궁금한데 활성 광고 collect_date 최신 데이터 알려주세요",
+    "category": "active_ads"
+  },
+  {
+    "id": "V2_MT-292",
+    "query": "궁금한데 나라별 광고 비율 분석 궁금해",
+    "category": "country_distribution"
+  },
+  {
+    "id": "V2_MT-293",
+    "query": "메타 광고 유형별 비율 분석은 어떤가요?",
+    "category": "ad_type"
+  },
+  {
+    "id": "V2_MT-294",
+    "query": "채널별 광고 비율 분석해줘",
+    "category": "platform"
+  },
+  {
+    "id": "V2_MT-295",
+    "query": "페이지별 광고 상황 리포트 알려주세요",
+    "category": "page_analysis"
+  },
+  {
+    "id": "V2_MT-296",
+    "query": "활성/비활성 광고 전체 요약 알려주시면 감사하겠습니다",
+    "category": "active_vs_inactive"
+  },
+  {
+    "id": "V2_MT-297",
+    "query": "정확한 스위스 SKIN1004 메타 광고 있나요",
+    "category": "country_brand"
+  },
+  {
+    "id": "V2_MT-298",
+    "query": "최근 메타 광고 전체 알려줘",
+    "category": "recent_ads"
+  },
+  {
+    "id": "V2_MT-299",
+    "query": "잠깐, 메타 광고 아카이브 전체 현황",
+    "category": "ad_archive"
+  },
+  {
+    "id": "V2_MT-300",
+    "query": "요즘 메타 광고 전체 현황 리포트 확인해줘",
+    "category": "total_count"
+  }
+]

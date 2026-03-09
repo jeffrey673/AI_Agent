@@ -1,0 +1,1502 @@
+[
+  {
+    "id": "V2_PL-001",
+    "query": "SKIN1004 제품 채널별 순위 알려줘 부탁드려요",
+    "category": "product_ranking"
+  },
+  {
+    "id": "V2_PL-002",
+    "query": "확인 좀 해줘 채널별 SKIN1004 제품 랭킹",
+    "category": "product_ranking"
+  },
+  {
+    "id": "V2_PL-003",
+    "query": "SKIN1004 제품 상위 1위인 채널",
+    "category": "product_ranking"
+  },
+  {
+    "id": "V2_PL-004",
+    "query": "채널별 SKIN1004 제품 랭킹 TOP 5 부탁",
+    "category": "product_ranking"
+  },
+  {
+    "id": "V2_PL-005",
+    "query": "간단하게 SKIN1004 제품 중 랭킹이 가장 높은 것 보여줘 알려주시면 감사하겠습니다",
+    "category": "product_ranking"
+  },
+  {
+    "id": "V2_PL-006",
+    "query": "정확한 각 채널에서 SKIN1004 랭킹 몇 위야?",
+    "category": "product_ranking"
+  },
+  {
+    "id": "V2_PL-007",
+    "query": "SKIN1004 제품 순서 평균",
+    "category": "product_ranking"
+  },
+  {
+    "id": "V2_PL-008",
+    "query": "궁금한데 채널별 제품 TOP 비교",
+    "category": "product_ranking"
+  },
+  {
+    "id": "V2_PL-009",
+    "query": "요즘 SKIN1004 순위가 10위 이내인 제품 알려줄래?",
+    "category": "product_ranking"
+  },
+  {
+    "id": "V2_PL-010",
+    "query": "SKIN1004 순위가 가장 낮은 채널 알려주시면 감사하겠습니다",
+    "category": "product_ranking"
+  },
+  {
+    "id": "V2_PL-011",
+    "query": "참고로 채널별 제품 상위 1위 목록",
+    "category": "product_ranking"
+  },
+  {
+    "id": "V2_PL-012",
+    "query": "SKIN1004 순위 TOP 3 제품 어떻게 되나요?",
+    "category": "product_ranking"
+  },
+  {
+    "id": "V2_PL-013",
+    "query": "궁금한데 채널별 SKIN1004 순위 변화",
+    "category": "product_ranking"
+  },
+  {
+    "id": "V2_PL-014",
+    "query": "SKIN1004 전체 채널 평균 순위 어떻게 되나요?",
+    "category": "product_ranking"
+  },
+  {
+    "id": "V2_PL-015",
+    "query": "채널별 순위 1~5위 제품 리스트 부탁드려요",
+    "category": "product_ranking"
+  },
+  {
+    "id": "V2_PL-016",
+    "query": "SKIN1004 제품 순위 100위 이내 알려주세요",
+    "category": "product_ranking"
+  },
+  {
+    "id": "V2_PL-017",
+    "query": "잠깐, 각 채널 1위 브랜드 뭐야?",
+    "category": "product_ranking"
+  },
+  {
+    "id": "V2_PL-018",
+    "query": "SKIN1004 TOP가 개선된 채널",
+    "category": "product_ranking"
+  },
+  {
+    "id": "V2_PL-019",
+    "query": "잠깐, 전체 채널 SKIN1004 순위 요약 좀 봐줘",
+    "category": "product_ranking"
+  },
+  {
+    "id": "V2_PL-020",
+    "query": "SKIN1004 순위 TOP 20 제품 목록은 어떤가요?",
+    "category": "product_ranking"
+  },
+  {
+    "id": "V2_PL-021",
+    "query": "채널별 SKIN1004 제품 순위 전체 보여줘 부탁드려요",
+    "category": "product_ranking"
+  },
+  {
+    "id": "V2_PL-022",
+    "query": "SKIN1004 랭킹가 50위 이내인 제품 수",
+    "category": "product_ranking"
+  },
+  {
+    "id": "V2_PL-023",
+    "query": "혹시 채널별 SKIN1004 평균 제품 순서 비교 분석은 어떤가요?",
+    "category": "product_ranking"
+  },
+  {
+    "id": "V2_PL-024",
+    "query": "SKIN1004 순위 하위 10개 제품 알려주세요",
+    "category": "product_ranking"
+  },
+  {
+    "id": "V2_PL-025",
+    "query": "채널별 SKIN1004 랭킹 분포 알고 싶어은 어떤가요?",
+    "category": "product_ranking"
+  },
+  {
+    "id": "V2_PL-026",
+    "query": "우리 회사 채널별 SKIN1004 평균 가격",
+    "category": "price_comparison"
+  },
+  {
+    "id": "V2_PL-027",
+    "query": "SKIN1004 제품 채널별 가격 대비 알려주세요",
+    "category": "price_comparison"
+  },
+  {
+    "id": "V2_PL-028",
+    "query": "SKIN1004 가장 비싼 채널 어떻게 되나요?",
+    "category": "price_comparison"
+  },
+  {
+    "id": "V2_PL-029",
+    "query": "SKIN1004 가장 저렴한 채널 어때?",
+    "category": "price_comparison"
+  },
+  {
+    "id": "V2_PL-030",
+    "query": "채널별 SKIN1004 가격 차이 알려주세요",
+    "category": "price_comparison"
+  },
+  {
+    "id": "V2_PL-031",
+    "query": "궁금한데 SKIN1004 제품 평균 가격 얼마인가요",
+    "category": "price_comparison"
+  },
+  {
+    "id": "V2_PL-032",
+    "query": "채널별 SKIN1004 제품 최고가 알려주세요",
+    "category": "price_comparison"
+  },
+  {
+    "id": "V2_PL-033",
+    "query": "채널별 SKIN1004 제품 최저가 보여줘",
+    "category": "price_comparison"
+  },
+  {
+    "id": "V2_PL-034",
+    "query": "SKIN1004 가격대 분포 보여줘 어떻게 되나요?",
+    "category": "price_comparison"
+  },
+  {
+    "id": "V2_PL-035",
+    "query": "채널별 SKIN1004 가격 편차은 어떤가요?",
+    "category": "price_comparison"
+  },
+  {
+    "id": "V2_PL-036",
+    "query": "SKIN1004 제품 가격이 가장 높은 것 어떻게 되나요?",
+    "category": "price_comparison"
+  },
+  {
+    "id": "V2_PL-037",
+    "query": "SKIN1004 제품 가격이 가장 낮은 것 좀",
+    "category": "price_comparison"
+  },
+  {
+    "id": "V2_PL-038",
+    "query": "정확한 채널별 동일 제품 가격 비교 알려주세요",
+    "category": "price_comparison"
+  },
+  {
+    "id": "V2_PL-039",
+    "query": "SKIN1004 센텔라 토너 채널별 가격 얼마임?",
+    "category": "price_comparison"
+  },
+  {
+    "id": "V2_PL-040",
+    "query": "SKIN1004 마다가스카르 크림 채널별 가격 알려주세요",
+    "category": "price_comparison"
+  },
+  {
+    "id": "V2_PL-041",
+    "query": "SKIN1004 앰플 채널별 가격 대비",
+    "category": "price_comparison"
+  },
+  {
+    "id": "V2_PL-042",
+    "query": "빠르게 SKIN1004 선크림 채널별 가격 좀 봐줘",
+    "category": "price_comparison"
+  },
+  {
+    "id": "V2_PL-043",
+    "query": "SKIN1004 클렌저 채널별 가격 대조",
+    "category": "price_comparison"
+  },
+  {
+    "id": "V2_PL-044",
+    "query": "확인 좀 해줘 채널별 SKIN1004 가격 중앙값 알 수 있을까요?",
+    "category": "price_comparison"
+  },
+  {
+    "id": "V2_PL-045",
+    "query": "확인 좀 해줘 SKIN1004 전체 채널 평균 가격 확인해줘",
+    "category": "price_comparison"
+  },
+  {
+    "id": "V2_PL-046",
+    "query": "요즘 채널별 SKIN1004 가격 범위",
+    "category": "price_comparison"
+  },
+  {
+    "id": "V2_PL-047",
+    "query": "간단하게 SKIN1004 같은 제품 채널 간 가격 차이율",
+    "category": "price_comparison"
+  },
+  {
+    "id": "V2_PL-048",
+    "query": "SKIN1004 10달러 이하 제품 채널별 부탁드려요",
+    "category": "price_comparison"
+  },
+  {
+    "id": "V2_PL-049",
+    "query": "우리 회사 SKIN1004 20달러 이상 제품 목록 좀 봐줘",
+    "category": "price_comparison"
+  },
+  {
+    "id": "V2_PL-050",
+    "query": "혹시 채널별 SKIN1004 가격 순위 알려주세요",
+    "category": "price_comparison"
+  },
+  {
+    "id": "V2_PL-051",
+    "query": "채널별 할인률 분석 알려주세요",
+    "category": "discount"
+  },
+  {
+    "id": "V2_PL-052",
+    "query": "SKIN1004 제품 할인율 얼마야",
+    "category": "discount"
+  },
+  {
+    "id": "V2_PL-053",
+    "query": "할인율이 가장 높은 채널 알려주시면 감사하겠습니다",
+    "category": "discount"
+  },
+  {
+    "id": "V2_PL-054",
+    "query": "디스카운트율이 가장 낮은 채널",
+    "category": "discount"
+  },
+  {
+    "id": "V2_PL-055",
+    "query": "채널별 평균 디스카운트율 대비은 어떤가요?",
+    "category": "discount"
+  },
+  {
+    "id": "V2_PL-056",
+    "query": "잠깐, SKIN1004 할인가 제품 목록 알려줄래?",
+    "category": "discount"
+  },
+  {
+    "id": "V2_PL-057",
+    "query": "할인 적용된 SKIN1004 제품 수 궁금해 알려주시면 감사하겠습니다",
+    "category": "discount"
+  },
+  {
+    "id": "V2_PL-058",
+    "query": "간단하게 채널별 할인가와 정상가 차이 부탁",
+    "category": "discount"
+  },
+  {
+    "id": "V2_PL-059",
+    "query": "SKIN1004 디스카운트율 30% 이상 제품",
+    "category": "discount"
+  },
+  {
+    "id": "V2_PL-060",
+    "query": "SKIN1004 할인율 50% 이상 제품 어때?",
+    "category": "discount"
+  },
+  {
+    "id": "V2_PL-061",
+    "query": "채널별 할인 미적용 제품 수 알려주세요",
+    "category": "discount"
+  },
+  {
+    "id": "V2_PL-062",
+    "query": "SKIN1004 할인가 평균 얼마야? 좀 봐줘",
+    "category": "discount"
+  },
+  {
+    "id": "V2_PL-063",
+    "query": "채널별 할인 폭 대조",
+    "category": "discount"
+  },
+  {
+    "id": "V2_PL-064",
+    "query": "우리 회사 SKIN1004 세일률 평균 몇 퍼센트?",
+    "category": "discount"
+  },
+  {
+    "id": "V2_PL-065",
+    "query": "잠깐, 채널별 할인가 제품 비중",
+    "category": "discount"
+  },
+  {
+    "id": "V2_PL-066",
+    "query": "SKIN1004 정상가 대비 할인율 분석 빨리",
+    "category": "discount"
+  },
+  {
+    "id": "V2_PL-067",
+    "query": "채널별 최대 할인율 제품 확인 부탁드립니다",
+    "category": "discount"
+  },
+  {
+    "id": "V2_PL-068",
+    "query": "정확한 SKIN1004 할인 없는 제품 목록",
+    "category": "discount"
+  },
+  {
+    "id": "V2_PL-069",
+    "query": "확인 좀 해줘 채널별 할인 적용 제품 비율 얼마임?",
+    "category": "discount"
+  },
+  {
+    "id": "V2_PL-070",
+    "query": "간단하게 SKIN1004 할인가가 정상가와 같은 제품",
+    "category": "discount"
+  },
+  {
+    "id": "V2_PL-071",
+    "query": "SKIN1004 세일률 TOP 10 제품",
+    "category": "discount"
+  },
+  {
+    "id": "V2_PL-072",
+    "query": "우리 회사 채널별 할인가 최솟값 빨리",
+    "category": "discount"
+  },
+  {
+    "id": "V2_PL-073",
+    "query": "확인 좀 해줘 SKIN1004 제품 할인가 범위",
+    "category": "discount"
+  },
+  {
+    "id": "V2_PL-074",
+    "query": "채널별 할인 정책 비교 파악해줘",
+    "category": "discount"
+  },
+  {
+    "id": "V2_PL-075",
+    "query": "SKIN1004 세일률 분포 차트",
+    "category": "discount"
+  },
+  {
+    "id": "V2_PL-076",
+    "query": "TOP 1위 제품들 보여줄 수 있어?",
+    "category": "top_ranked"
+  },
+  {
+    "id": "V2_PL-077",
+    "query": "확인 좀 해줘 각 채널 1위 제품 목록 얼마임?",
+    "category": "top_ranked"
+  },
+  {
+    "id": "V2_PL-078",
+    "query": "전체 채널에서 랭킹 1위인 제품",
+    "category": "top_ranked"
+  },
+  {
+    "id": "V2_PL-079",
+    "query": "랭킹 1~3위 제품 리스트 좀",
+    "category": "top_ranked"
+  },
+  {
+    "id": "V2_PL-080",
+    "query": "채널별 TOP 5 제품 알려줄래 몇이야?",
+    "category": "top_ranked"
+  },
+  {
+    "id": "V2_PL-081",
+    "query": "확인 좀 해줘 SKIN1004가 1위인 채널 있어?",
+    "category": "top_ranked"
+  },
+  {
+    "id": "V2_PL-082",
+    "query": "전체 상위 1위 브랜드 분석 좀",
+    "category": "top_ranked"
+  },
+  {
+    "id": "V2_PL-083",
+    "query": "요즘 채널별 순위 TOP 10 제품",
+    "category": "top_ranked"
+  },
+  {
+    "id": "V2_PL-084",
+    "query": "궁금한데 SKIN1004 순위가 1위인 제품 있어 알 수 있을까요?",
+    "category": "top_ranked"
+  },
+  {
+    "id": "V2_PL-085",
+    "query": "잠깐, 순서 상위 제품들의 가격 분석",
+    "category": "top_ranked"
+  },
+  {
+    "id": "V2_PL-086",
+    "query": "채널별 상위 순위 브랜드 비교 알려주세요",
+    "category": "top_ranked"
+  },
+  {
+    "id": "V2_PL-087",
+    "query": "순위 1위 제품의 평균 가격 부탁드려요",
+    "category": "top_ranked"
+  },
+  {
+    "id": "V2_PL-088",
+    "query": "채널별 순서 TOP 3 브랜드",
+    "category": "top_ranked"
+  },
+  {
+    "id": "V2_PL-089",
+    "query": "정확한 SKIN1004 vs 경쟁사 순위 대조",
+    "category": "top_ranked"
+  },
+  {
+    "id": "V2_PL-090",
+    "query": "빠르게 순서 상위 제품의 할인율",
+    "category": "top_ranked"
+  },
+  {
+    "id": "V2_PL-091",
+    "query": "채널1 vs 채널2 제품 가격 대조해줘",
+    "category": "channel_comparison"
+  },
+  {
+    "id": "V2_PL-092",
+    "query": "Shopee vs Amazon SKIN1004 가격 대비",
+    "category": "channel_comparison"
+  },
+  {
+    "id": "V2_PL-093",
+    "query": "Lazada vs Shopee SKIN1004 순위 비교 파악해줘",
+    "category": "channel_comparison"
+  },
+  {
+    "id": "V2_PL-094",
+    "query": "TikTok Shop vs Shopee 가격 차이 부탁 알려주시면 감사하겠습니다",
+    "category": "channel_comparison"
+  },
+  {
+    "id": "V2_PL-095",
+    "query": "우리 회사 Amazon vs Lazada 제품 가격 비교 알려주시면 감사하겠습니다",
+    "category": "channel_comparison"
+  },
+  {
+    "id": "V2_PL-096",
+    "query": "채널 간 SKIN1004 가격 격차 알려줄래?",
+    "category": "channel_comparison"
+  },
+  {
+    "id": "V2_PL-097",
+    "query": "혹시 Shopee vs TikTok Shop 할인율 비교",
+    "category": "channel_comparison"
+  },
+  {
+    "id": "V2_PL-098",
+    "query": "확인 좀 해줘 Amazon vs Shopee SKIN1004 순위 차이 부탁",
+    "category": "channel_comparison"
+  },
+  {
+    "id": "V2_PL-099",
+    "query": "채널별 동일 제품 순위 비교 분석 좀",
+    "category": "channel_comparison"
+  },
+  {
+    "id": "V2_PL-100",
+    "query": "Lazada vs TikTok Shop 제품 비교 알려주시면 감사하겠습니다",
+    "category": "channel_comparison"
+  },
+  {
+    "id": "V2_PL-101",
+    "query": "채널 간 SKIN1004 가격 일관성 분석 알려주시면 감사하겠습니다",
+    "category": "channel_comparison"
+  },
+  {
+    "id": "V2_PL-102",
+    "query": "참고로 Amazon과 다른 채널 가격 차이 좀 알려줘",
+    "category": "channel_comparison"
+  },
+  {
+    "id": "V2_PL-103",
+    "query": "요즘 Shopee가 가장 저렴한 제품 목록",
+    "category": "channel_comparison"
+  },
+  {
+    "id": "V2_PL-104",
+    "query": "채널별 센텔라 토너 가격 비교 어때?",
+    "category": "channel_comparison"
+  },
+  {
+    "id": "V2_PL-105",
+    "query": "채널별 클렌저 제품 상위 비교 분석해줘",
+    "category": "channel_comparison"
+  },
+  {
+    "id": "V2_PL-106",
+    "query": "브랜드별 제품 TOP 분석",
+    "category": "brand_ranking"
+  },
+  {
+    "id": "V2_PL-107",
+    "query": "우리 회사 SKIN1004 브랜드 전체 랭킹 평균은 어떤가요?",
+    "category": "brand_ranking"
+  },
+  {
+    "id": "V2_PL-108",
+    "query": "브랜드 상위 TOP 10",
+    "category": "brand_ranking"
+  },
+  {
+    "id": "V2_PL-109",
+    "query": "브랜드별 등록 제품 수",
+    "category": "brand_ranking"
+  },
+  {
+    "id": "V2_PL-110",
+    "query": "브랜드별 평균 가격 순위은 어떤가요?",
+    "category": "brand_ranking"
+  },
+  {
+    "id": "V2_PL-111",
+    "query": "SKIN1004 vs 다른 브랜드 순위 대비",
+    "category": "brand_ranking"
+  },
+  {
+    "id": "V2_PL-112",
+    "query": "확인 좀 해줘 브랜드별 채널 수 보여줘",
+    "category": "brand_ranking"
+  },
+  {
+    "id": "V2_PL-113",
+    "query": "브렌드별 디스카운트율 대비 좀 알려줘",
+    "category": "brand_ranking"
+  },
+  {
+    "id": "V2_PL-114",
+    "query": "브랜드별 최고 상위 제품",
+    "category": "brand_ranking"
+  },
+  {
+    "id": "V2_PL-115",
+    "query": "브랜드별 평균 랭킹 랭킹 몇이야?",
+    "category": "brand_ranking"
+  },
+  {
+    "id": "V2_PL-116",
+    "query": "SKIN1004 브랜드 채널별 순서 분포 알려줄래?",
+    "category": "brand_ranking"
+  },
+  {
+    "id": "V2_PL-117",
+    "query": "브랜드별 가격대 분석해줘",
+    "category": "brand_ranking"
+  },
+  {
+    "id": "V2_PL-118",
+    "query": "브랜드 종류 몇 개야은 어떤가요?",
+    "category": "brand_ranking"
+  },
+  {
+    "id": "V2_PL-119",
+    "query": "브랜드별 제품 랭킹 분포",
+    "category": "brand_ranking"
+  },
+  {
+    "id": "V2_PL-120",
+    "query": "SKIN1004 브랜드 전체 채널 성과 확인해줘",
+    "category": "brand_ranking"
+  },
+  {
+    "id": "V2_PL-121",
+    "query": "가격대별 제품 분포 보여줄 수 있어",
+    "category": "price_range"
+  },
+  {
+    "id": "V2_PL-122",
+    "query": "빠르게 0~10달러 제품 수 알려주세요",
+    "category": "price_range"
+  },
+  {
+    "id": "V2_PL-123",
+    "query": "확인 좀 해줘 10~20달러 제품 수",
+    "category": "price_range"
+  },
+  {
+    "id": "V2_PL-124",
+    "query": "요즘 20~30달러 제품 수",
+    "category": "price_range"
+  },
+  {
+    "id": "V2_PL-125",
+    "query": "잠깐, 30달러 이상 제품 목록 확인해줘",
+    "category": "price_range"
+  },
+  {
+    "id": "V2_PL-126",
+    "query": "요즘 5달러 이하 제품 있어?",
+    "category": "price_range"
+  },
+  {
+    "id": "V2_PL-127",
+    "query": "참고로 가격대별 브랜드 분포",
+    "category": "price_range"
+  },
+  {
+    "id": "V2_PL-128",
+    "query": "잠깐, 가격대별 채널 분포 알려주세요",
+    "category": "price_range"
+  },
+  {
+    "id": "V2_PL-129",
+    "query": "정확한 SKIN1004 가격대 분석",
+    "category": "price_range"
+  },
+  {
+    "id": "V2_PL-130",
+    "query": "우리 회사 채널별 가격대 분포 비교 분석 알 수 있을까요?",
+    "category": "price_range"
+  },
+  {
+    "id": "V2_PL-131",
+    "query": "고가 제품 TOP 10 알려주시면 감사하겠습니다",
+    "category": "price_range"
+  },
+  {
+    "id": "V2_PL-132",
+    "query": "요즘 저가 제품 TOP 10 부탁",
+    "category": "price_range"
+  },
+  {
+    "id": "V2_PL-133",
+    "query": "평균 가격 이상 제품 수 알 수 있을까요?",
+    "category": "price_range"
+  },
+  {
+    "id": "V2_PL-134",
+    "query": "평균 가격 이하 제품 수 좀",
+    "category": "price_range"
+  },
+  {
+    "id": "V2_PL-135",
+    "query": "가격 분포 히스토그램 알려주세요",
+    "category": "price_range"
+  },
+  {
+    "id": "V2_PL-136",
+    "query": "할인가 제품 목록 전체 확인해줘 확인 가능한가요?",
+    "category": "discount_price"
+  },
+  {
+    "id": "V2_PL-137",
+    "query": "할인가가 있는 제품 수 정리해주세요",
+    "category": "discount_price"
+  },
+  {
+    "id": "V2_PL-138",
+    "query": "할인가 제품 채널별 분포 알려주세요",
+    "category": "discount_price"
+  },
+  {
+    "id": "V2_PL-139",
+    "query": "잠깐, 할인가 TOP 10 제품",
+    "category": "discount_price"
+  },
+  {
+    "id": "V2_PL-140",
+    "query": "할인가 최저 제품 목록 어때?",
+    "category": "discount_price"
+  },
+  {
+    "id": "V2_PL-141",
+    "query": "빠르게 할인가 평균 금액",
+    "category": "discount_price"
+  },
+  {
+    "id": "V2_PL-142",
+    "query": "요즘 할인가 제품 브랜드별 살펴봐줘 확인 부탁드립니다",
+    "category": "discount_price"
+  },
+  {
+    "id": "V2_PL-143",
+    "query": "할인가 vs 정상가 격차 분석 좀은 어떤가요?",
+    "category": "discount_price"
+  },
+  {
+    "id": "V2_PL-144",
+    "query": "빠르게 할인가 5달러 이하 제품 좀 봐줘",
+    "category": "discount_price"
+  },
+  {
+    "id": "V2_PL-145",
+    "query": "간단하게 할인가 없는 제품 목록",
+    "category": "discount_price"
+  },
+  {
+    "id": "V2_PL-146",
+    "query": "궁금한데 채널별 등록 제품 수 좀 봐줘",
+    "category": "product_count"
+  },
+  {
+    "id": "V2_PL-147",
+    "query": "간단하게 제품이 가장 많은 채널",
+    "category": "product_count"
+  },
+  {
+    "id": "V2_PL-148",
+    "query": "정확한 제품이 가장 적은 채널 좀 알려주시면 감사하겠습니다",
+    "category": "product_count"
+  },
+  {
+    "id": "V2_PL-149",
+    "query": "채널별 SKIN1004 제품 수 좀 부탁드려요",
+    "category": "product_count"
+  },
+  {
+    "id": "V2_PL-150",
+    "query": "전체 등록 제품 수 몇 개야은 어떤가요?",
+    "category": "product_count"
+  },
+  {
+    "id": "V2_PL-151",
+    "query": "잠깐, 채널별 브랜드 수 정리해줘",
+    "category": "product_count"
+  },
+  {
+    "id": "V2_PL-152",
+    "query": "SKIN1004 등록된 채널 수 알 수 있을까요?",
+    "category": "product_count"
+  },
+  {
+    "id": "V2_PL-153",
+    "query": "정확한 채널별 제품 종류 수",
+    "category": "product_count"
+  },
+  {
+    "id": "V2_PL-154",
+    "query": "잠깐, 채널 전체 제품 수 비교",
+    "category": "product_count"
+  },
+  {
+    "id": "V2_PL-155",
+    "query": "브랜드별 채널 등록 현황 확인 가능한가요?",
+    "category": "product_count"
+  },
+  {
+    "id": "V2_PL-156",
+    "query": "궁금한데 채널별 브랜드 다양성 분석",
+    "category": "product_count"
+  },
+  {
+    "id": "V2_PL-157",
+    "query": "궁금한데 SKIN1004 제품이 등록된 채널 목록 보여줘",
+    "category": "product_count"
+  },
+  {
+    "id": "V2_PL-158",
+    "query": "간단하게 채널별 신규 제품 수 알고 싶어",
+    "category": "product_count"
+  },
+  {
+    "id": "V2_PL-159",
+    "query": "빠르게 채널별 평균 제품 수 확인 가능한가요?",
+    "category": "product_count"
+  },
+  {
+    "id": "V2_PL-160",
+    "query": "우리 회사 채널별 제품 등록 비중 알려주세요",
+    "category": "product_count"
+  },
+  {
+    "id": "V2_PL-161",
+    "query": "통화별 가격 분석?",
+    "category": "currency"
+  },
+  {
+    "id": "V2_PL-162",
+    "query": "요즘 USD 기준 제품 수 좀 좀 알려줘",
+    "category": "currency"
+  },
+  {
+    "id": "V2_PL-163",
+    "query": "통화 종류 몇 개인가요",
+    "category": "currency"
+  },
+  {
+    "id": "V2_PL-164",
+    "query": "확인 좀 해줘 통화별 평균 가격",
+    "category": "currency"
+  },
+  {
+    "id": "V2_PL-165",
+    "query": "통화별 제품 수 비교 확인 부탁드립니다",
+    "category": "currency"
+  },
+  {
+    "id": "V2_PL-166",
+    "query": "참고로 THB 기준 제품 가격 알고 싶어",
+    "category": "currency"
+  },
+  {
+    "id": "V2_PL-167",
+    "query": "확인 좀 해줘 VND 기준 제품 가격",
+    "category": "currency"
+  },
+  {
+    "id": "V2_PL-168",
+    "query": "MYR 기준 제품 가격 알려주세요",
+    "category": "currency"
+  },
+  {
+    "id": "V2_PL-169",
+    "query": "확인 좀 해줘 SGD 기준 제품 가격",
+    "category": "currency"
+  },
+  {
+    "id": "V2_PL-170",
+    "query": "PHP 기준 제품 가격 어떻게 되나요?",
+    "category": "currency"
+  },
+  {
+    "id": "V2_PL-171",
+    "query": "IDR 기준 제품 가격 알려주시면 감사하겠습니다",
+    "category": "currency"
+  },
+  {
+    "id": "V2_PL-172",
+    "query": "잠깐, JPY 기준 제품 가격 알고 싶어",
+    "category": "currency"
+  },
+  {
+    "id": "V2_PL-173",
+    "query": "통화별 할인율 비교 몇이야?",
+    "category": "currency"
+  },
+  {
+    "id": "V2_PL-174",
+    "query": "참고로 통화별 가격 범위 파악해줘 좀 알려주세요",
+    "category": "currency"
+  },
+  {
+    "id": "V2_PL-175",
+    "query": "궁금한데 각 통화 제품 목록 알려주세요",
+    "category": "currency"
+  },
+  {
+    "id": "V2_PL-176",
+    "query": "전체 채널 수 몇 개야? 정리해줘 확인 가능한가요?",
+    "category": "channel_meta"
+  },
+  {
+    "id": "V2_PL-177",
+    "query": "혹시 채널 목록 보여줘",
+    "category": "channel_meta"
+  },
+  {
+    "id": "V2_PL-178",
+    "query": "빠르게 브랜드 목록 전체 좀 봐줘",
+    "category": "channel_meta"
+  },
+  {
+    "id": "V2_PL-179",
+    "query": "제품명 목록 보여줄래",
+    "category": "channel_meta"
+  },
+  {
+    "id": "V2_PL-180",
+    "query": "통화 목록 전체 알려주세요",
+    "category": "channel_meta"
+  },
+  {
+    "id": "V2_PL-181",
+    "query": "요즘 데이터 전체 건수",
+    "category": "channel_meta"
+  },
+  {
+    "id": "V2_PL-182",
+    "query": "빠르게 테이블 컬럼 목록 알려줘",
+    "category": "channel_meta"
+  },
+  {
+    "id": "V2_PL-183",
+    "query": "SKIN1004 제품명 목록 좀 봐줘",
+    "category": "channel_meta"
+  },
+  {
+    "id": "V2_PL-184",
+    "query": "데이터에 어떤 채널이 있어",
+    "category": "channel_meta"
+  },
+  {
+    "id": "V2_PL-185",
+    "query": "SKIN1004 외 다른 브랜드 있나요",
+    "category": "channel_meta"
+  },
+  {
+    "id": "V2_PL-186",
+    "query": "SKIN1004 센텔라 제품 채널별 현황 확인해줘",
+    "category": "product_detail"
+  },
+  {
+    "id": "V2_PL-187",
+    "query": "빠르게 SKIN1004 마다가스카르 제품 정보",
+    "category": "product_detail"
+  },
+  {
+    "id": "V2_PL-188",
+    "query": "SKIN1004 토너 제품 정보 전체 알려주세요",
+    "category": "product_detail"
+  },
+  {
+    "id": "V2_PL-189",
+    "query": "SKIN1004 크림 제품 채널별 가격은 어떤가요?",
+    "category": "product_detail"
+  },
+  {
+    "id": "V2_PL-190",
+    "query": "SKIN1004 세럼 제품 순위 어때?",
+    "category": "product_detail"
+  },
+  {
+    "id": "V2_PL-191",
+    "query": "간단하게 SKIN1004 앰플 제품 정보?",
+    "category": "product_detail"
+  },
+  {
+    "id": "V2_PL-192",
+    "query": "SKIN1004 클렌저 제품 채널별 현재 상태 좀 알려줘",
+    "category": "product_detail"
+  },
+  {
+    "id": "V2_PL-193",
+    "query": "SKIN1004 선크림 가격 대조",
+    "category": "product_detail"
+  },
+  {
+    "id": "V2_PL-194",
+    "query": "SKIN1004 마스크팩 제품 정보 몇이야?",
+    "category": "product_detail"
+  },
+  {
+    "id": "V2_PL-195",
+    "query": "혹시 SKIN1004 에센스 제품 순위와 가격",
+    "category": "product_detail"
+  },
+  {
+    "id": "V2_PL-196",
+    "query": "SKIN1004 워터 제품 채널별 정보 알려주세요",
+    "category": "product_detail"
+  },
+  {
+    "id": "V2_PL-197",
+    "query": "참고로 SKIN1004 제품명에 'Centella' 포함된 것 보여줘",
+    "category": "product_detail"
+  },
+  {
+    "id": "V2_PL-198",
+    "query": "확인 좀 해줘 SKIN1004 제품명에 'Madagascar' 포함된 것 확인해줘",
+    "category": "product_detail"
+  },
+  {
+    "id": "V2_PL-199",
+    "query": "SKIN1004 제품명에 'Toner' 포함된 것 알고 싶어",
+    "category": "product_detail"
+  },
+  {
+    "id": "V2_PL-200",
+    "query": "혹시 SKIN1004 제품명에 'Cream' 포함된 것 부탁",
+    "category": "product_detail"
+  },
+  {
+    "id": "V2_PL-201",
+    "query": "채널별 상위와 가격 상관관계",
+    "category": "analysis"
+  },
+  {
+    "id": "V2_PL-202",
+    "query": "정확한 랭킹가 높을수록 가격이 낮은지 분석 확인해줘 알려주시면 감사하겠습니다",
+    "category": "analysis"
+  },
+  {
+    "id": "V2_PL-203",
+    "query": "할인율과 순위 상관관계은 어떤가요?",
+    "category": "analysis"
+  },
+  {
+    "id": "V2_PL-204",
+    "query": "채널별 가격 경쟁력 분석해줘",
+    "category": "analysis"
+  },
+  {
+    "id": "V2_PL-205",
+    "query": "요즘 SKIN1004 채널 전략 분석 좀 알려주세요",
+    "category": "analysis"
+  },
+  {
+    "id": "V2_PL-206",
+    "query": "궁금한데 채널별 가격 정책 비교 분석 분석 부탁드려요",
+    "category": "analysis"
+  },
+  {
+    "id": "V2_PL-207",
+    "query": "간단하게 SKIN1004 채널별 포지셔닝 분석 부탁",
+    "category": "analysis"
+  },
+  {
+    "id": "V2_PL-208",
+    "query": "채널별 가격 vs 순서 매트릭스",
+    "category": "analysis"
+  },
+  {
+    "id": "V2_PL-209",
+    "query": "SKIN1004 경쟁사 대비 가격 경쟁력 확인 부탁드립니다",
+    "category": "analysis"
+  },
+  {
+    "id": "V2_PL-210",
+    "query": "채널별 할인 전략 분석 좀 알려주세요",
+    "category": "analysis"
+  },
+  {
+    "id": "V2_PL-211",
+    "query": "채널별 제품 다양성 분석 어떻게 되나요?",
+    "category": "analysis"
+  },
+  {
+    "id": "V2_PL-212",
+    "query": "SKIN1004 채널별 브랜드 인지도 순서",
+    "category": "analysis"
+  },
+  {
+    "id": "V2_PL-213",
+    "query": "빠르게 채널별 SKIN1004 경쟁 포지션 알려주세요",
+    "category": "analysis"
+  },
+  {
+    "id": "V2_PL-214",
+    "query": "가격 대비 순서 효율 분석 좀",
+    "category": "analysis"
+  },
+  {
+    "id": "V2_PL-215",
+    "query": "정확한 채널별 SKIN1004 제품 전략 요약 알려주시면 감사하겠습니다",
+    "category": "analysis"
+  },
+  {
+    "id": "V2_PL-216",
+    "query": "우리 회사 채널별 가격 vs 할인가 비교 테이블 알 수 있을까요?",
+    "category": "cross"
+  },
+  {
+    "id": "V2_PL-217",
+    "query": "혹시 채널별 브랜드별 평균 가격 크로스탭 알려주시면 감사하겠습니다",
+    "category": "cross"
+  },
+  {
+    "id": "V2_PL-218",
+    "query": "채널별 순위대별 제품 분포 어때?",
+    "category": "cross"
+  },
+  {
+    "id": "V2_PL-219",
+    "query": "브랜드별 채널별 상위 매트릭스",
+    "category": "cross"
+  },
+  {
+    "id": "V2_PL-220",
+    "query": "통화별 채널별 가격 비교 분석 좀",
+    "category": "cross"
+  },
+  {
+    "id": "V2_PL-221",
+    "query": "빠르게 채널별 가격대별 제품 수",
+    "category": "cross"
+  },
+  {
+    "id": "V2_PL-222",
+    "query": "정확한 브랜드별 통화별 평균 가격",
+    "category": "cross"
+  },
+  {
+    "id": "V2_PL-223",
+    "query": "채널별 SKIN1004 제품 가격 vs 순위 알려주시면 감사하겠습니다",
+    "category": "cross"
+  },
+  {
+    "id": "V2_PL-224",
+    "query": "빠르게 채널별 할인율별 제품 분포 보여줘",
+    "category": "cross"
+  },
+  {
+    "id": "V2_PL-225",
+    "query": "브랜드별 채널별 제품 수 매트릭스 어떻게 되나요?",
+    "category": "cross"
+  },
+  {
+    "id": "V2_PL-226",
+    "query": "순위 1~10위 제품의 가격 분석 좀 부탁 알려주세요",
+    "category": "rank_analysis"
+  },
+  {
+    "id": "V2_PL-227",
+    "query": "랭킹 11~50위 제품 목록 정리해줘",
+    "category": "rank_analysis"
+  },
+  {
+    "id": "V2_PL-228",
+    "query": "순서 100위 밖 제품 수 좀 알려줘",
+    "category": "rank_analysis"
+  },
+  {
+    "id": "V2_PL-229",
+    "query": "랭킹별 가격 분포 알려주시면 감사하겠습니다",
+    "category": "rank_analysis"
+  },
+  {
+    "id": "V2_PL-230",
+    "query": "잠깐, 순위 상위 10% 제품 특성 확인 가능한가요?",
+    "category": "rank_analysis"
+  },
+  {
+    "id": "V2_PL-231",
+    "query": "상위 하위 10% 제품 특성 궁금해",
+    "category": "rank_analysis"
+  },
+  {
+    "id": "V2_PL-232",
+    "query": "SKIN1004 순위 분포 분석 빨리",
+    "category": "rank_analysis"
+  },
+  {
+    "id": "V2_PL-233",
+    "query": "순위별 브랜드 분포 알고 싶어 몇이야?",
+    "category": "rank_analysis"
+  },
+  {
+    "id": "V2_PL-234",
+    "query": "순위 개선 필요한 SKIN1004 제품 몇이야?",
+    "category": "rank_analysis"
+  },
+  {
+    "id": "V2_PL-235",
+    "query": "잠깐, 순위 TOP 5 제품의 공통점 확인 부탁드립니다",
+    "category": "rank_analysis"
+  },
+  {
+    "id": "V2_PL-236",
+    "query": "SKIN1004 센텔라 라인 채널별 동향",
+    "category": "product_line"
+  },
+  {
+    "id": "V2_PL-237",
+    "query": "SKIN1004 마다가스카르 라인 전체 정보 어때?",
+    "category": "product_line"
+  },
+  {
+    "id": "V2_PL-238",
+    "query": "SKIN1004 스킨케어 라인 가격 비교 알려주세요",
+    "category": "product_line"
+  },
+  {
+    "id": "V2_PL-239",
+    "query": "SKIN1004 제품 라인별 순위 분석 좀 알려주세요",
+    "category": "product_line"
+  },
+  {
+    "id": "V2_PL-240",
+    "query": "SKIN1004 제품 카테고리별 채널 분포 확인 부탁드립니다",
+    "category": "product_line"
+  },
+  {
+    "id": "V2_PL-241",
+    "query": "정확한 SKIN1004 전체 제품 목록과 가격 확인해줘",
+    "category": "product_line"
+  },
+  {
+    "id": "V2_PL-242",
+    "query": "잠깐, SKIN1004 제품 라인별 평균 가격 빨리",
+    "category": "product_line"
+  },
+  {
+    "id": "V2_PL-243",
+    "query": "우리 회사 SKIN1004 제품 라인별 할인율",
+    "category": "product_line"
+  },
+  {
+    "id": "V2_PL-244",
+    "query": "SKIN1004 제품 라인별 채널 커버리지 몇이야?",
+    "category": "product_line"
+  },
+  {
+    "id": "V2_PL-245",
+    "query": "SKIN1004 제품 라인별 순위 평균 확인 부탁드립니다",
+    "category": "product_line"
+  },
+  {
+    "id": "V2_PL-246",
+    "query": "전체 데이터 요약 보여줄래",
+    "category": "summary"
+  },
+  {
+    "id": "V2_PL-247",
+    "query": "참고로 채널별 종합 현재 상태 요약",
+    "category": "summary"
+  },
+  {
+    "id": "V2_PL-248",
+    "query": "우리 회사 SKIN1004 채널 성과 요약 리포트",
+    "category": "summary"
+  },
+  {
+    "id": "V2_PL-249",
+    "query": "궁금한데 브랜드별 종합 상위 요약 알려주세요",
+    "category": "summary"
+  },
+  {
+    "id": "V2_PL-250",
+    "query": "채널별 가격 종합 파악해줘",
+    "category": "summary"
+  },
+  {
+    "id": "V2_PL-251",
+    "query": "SKIN1004 전체 채널 동향 한눈에 알려주시면 감사하겠습니다",
+    "category": "summary"
+  },
+  {
+    "id": "V2_PL-252",
+    "query": "제품 데이터 전체 동향 요약 궁금해",
+    "category": "summary"
+  },
+  {
+    "id": "V2_PL-253",
+    "query": "채널별 브랜드 실태 종합 좀 확인 가능한가요?",
+    "category": "summary"
+  },
+  {
+    "id": "V2_PL-254",
+    "query": "혹시 SKIN1004 글로벌 채널 성과",
+    "category": "summary"
+  },
+  {
+    "id": "V2_PL-255",
+    "query": "전체 데이터 인사이트 요약 확인 가능한가요?",
+    "category": "summary"
+  },
+  {
+    "id": "V2_PL-256",
+    "query": "잠깐, 채널별 가격 바차트",
+    "category": "visualization"
+  },
+  {
+    "id": "V2_PL-257",
+    "query": "요즘 브랜드별 순위 차트 좀 봐줘 어떻게 되나요?",
+    "category": "visualization"
+  },
+  {
+    "id": "V2_PL-258",
+    "query": "채널별 제품 수 파이차트 알려주세요",
+    "category": "visualization"
+  },
+  {
+    "id": "V2_PL-259",
+    "query": "참고로 가격 분포 히스토그램 그려줘 부탁",
+    "category": "visualization"
+  },
+  {
+    "id": "V2_PL-260",
+    "query": "채널별 세일률 비교 분석 차트",
+    "category": "visualization"
+  },
+  {
+    "id": "V2_PL-261",
+    "query": "순위 vs 가격 산점도 알려주세요",
+    "category": "visualization"
+  },
+  {
+    "id": "V2_PL-262",
+    "query": "채널별 SKIN1004 가격 비교 그래프 확인해줘",
+    "category": "visualization"
+  },
+  {
+    "id": "V2_PL-263",
+    "query": "잠깐, 브렌드별 평균 가격 차트",
+    "category": "visualization"
+  },
+  {
+    "id": "V2_PL-264",
+    "query": "채널별 순서 분포 박스플롯 빨리",
+    "category": "visualization"
+  },
+  {
+    "id": "V2_PL-265",
+    "query": "잠깐, 통화별 제품 수 차트 알고 싶어",
+    "category": "visualization"
+  },
+  {
+    "id": "V2_PL-266",
+    "query": "SKIN1004 가격이 가장 비싼 채널에서 순위가 어떻게 돼 알려주세요",
+    "category": "complex"
+  },
+  {
+    "id": "V2_PL-267",
+    "query": "참고로 할인율이 높은 채널에서 SKIN1004 순위가 더 좋은지 분석해줘",
+    "category": "complex"
+  },
+  {
+    "id": "V2_PL-268",
+    "query": "채널별 SKIN1004 포지셔닝 맵 좀 알려줘",
+    "category": "complex"
+  },
+  {
+    "id": "V2_PL-269",
+    "query": "참고로 SKIN1004 채널 전략 추천 좀 알려줘",
+    "category": "complex"
+  },
+  {
+    "id": "V2_PL-270",
+    "query": "참고로 채널별 SKIN1004 가격 최적화 분석",
+    "category": "complex"
+  },
+  {
+    "id": "V2_PL-271",
+    "query": "확인 좀 해줘 SKIN1004 순위 개선을 위한 채널별 제안",
+    "category": "complex"
+  },
+  {
+    "id": "V2_PL-272",
+    "query": "채널별 경쟁 강도 분석해줘",
+    "category": "complex"
+  },
+  {
+    "id": "V2_PL-273",
+    "query": "SKIN1004 채널별 가격 경쟁력 지수 알려주세요",
+    "category": "complex"
+  },
+  {
+    "id": "V2_PL-274",
+    "query": "혹시 채널별 SKIN1004 제품 포트폴리오 파악해줘",
+    "category": "complex"
+  },
+  {
+    "id": "V2_PL-275",
+    "query": "SKIN1004 멀티채널 전략 종합 살펴봐줘",
+    "category": "complex"
+  },
+  {
+    "id": "V2_PL-276",
+    "query": "요즘 채널별 가격 표준편차",
+    "category": "statistics"
+  },
+  {
+    "id": "V2_PL-277",
+    "query": "브랜드별 TOP 중앙값 알 수 있을까요?",
+    "category": "statistics"
+  },
+  {
+    "id": "V2_PL-278",
+    "query": "채널별 가격 최솟값 최댓값 보여줘 어떻게 되나요?",
+    "category": "statistics"
+  },
+  {
+    "id": "V2_PL-279",
+    "query": "순서 평균과 중앙값 차이",
+    "category": "statistics"
+  },
+  {
+    "id": "V2_PL-280",
+    "query": "채널별 가격 분산 파악해줘",
+    "category": "statistics"
+  },
+  {
+    "id": "V2_PL-281",
+    "query": "브랜드별 TOP 표준편차",
+    "category": "statistics"
+  },
+  {
+    "id": "V2_PL-282",
+    "query": "가격 4분위수 파악해줘",
+    "category": "statistics"
+  },
+  {
+    "id": "V2_PL-283",
+    "query": "순위 4분위수 파악해줘 좀",
+    "category": "statistics"
+  },
+  {
+    "id": "V2_PL-284",
+    "query": "채널별 통계 요약 테이블 알 수 있을까요?",
+    "category": "statistics"
+  },
+  {
+    "id": "V2_PL-285",
+    "query": "SKIN1004 가격 통계 살펴봐줘",
+    "category": "statistics"
+  },
+  {
+    "id": "V2_PL-286",
+    "query": "가격이 null인 제품 있어 얼마임?",
+    "category": "data_quality"
+  },
+  {
+    "id": "V2_PL-287",
+    "query": "참고로 할인가가 null인 제품 수",
+    "category": "data_quality"
+  },
+  {
+    "id": "V2_PL-288",
+    "query": "순위가 없는 제품 있어 좀 알려줘",
+    "category": "data_quality"
+  },
+  {
+    "id": "V2_PL-289",
+    "query": "확인 좀 해줘 브랜드명이 비어있는 데이터",
+    "category": "data_quality"
+  },
+  {
+    "id": "V2_PL-290",
+    "query": "혹시 중복 제품 데이터 확인 좀 봐줘",
+    "category": "data_quality"
+  },
+  {
+    "id": "V2_PL-291",
+    "query": "채널별 데이터 건수 알려주세요",
+    "category": "data_quality"
+  },
+  {
+    "id": "V2_PL-292",
+    "query": "우리 회사 데이터 품질 검증 리포트",
+    "category": "data_quality"
+  },
+  {
+    "id": "V2_PL-293",
+    "query": "가격이 0인 제품 있어? 확인해줘",
+    "category": "data_quality"
+  },
+  {
+    "id": "V2_PL-294",
+    "query": "순서가 0인 데이터 확인 어떻게 되나요?",
+    "category": "data_quality"
+  },
+  {
+    "id": "V2_PL-295",
+    "query": "할인가가 정상가보다 높은 이상 데이터 좀 알려주세요",
+    "category": "data_quality"
+  },
+  {
+    "id": "V2_PL-296",
+    "query": "플랫폼 데이터 전체 리포트 알려주시면 감사하겠습니다",
+    "category": "report"
+  },
+  {
+    "id": "V2_PL-297",
+    "query": "확인 좀 해줘 채널별 가격 경쟁력 보고서",
+    "category": "report"
+  },
+  {
+    "id": "V2_PL-298",
+    "query": "SKIN1004 채널 분석해줘 보고서 확인 부탁드립니다",
+    "category": "report"
+  },
+  {
+    "id": "V2_PL-299",
+    "query": "브렌드 포지셔닝 분석 좀 리포트 몇이야?",
+    "category": "report"
+  },
+  {
+    "id": "V2_PL-300",
+    "query": "우리 회사 채널별 종합 성과 평가 보고서 알려주시면 감사하겠습니다",
+    "category": "report"
+  }
+]

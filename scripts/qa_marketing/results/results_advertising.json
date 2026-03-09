@@ -1,0 +1,3002 @@
+[
+  {
+    "id": "AD-001",
+    "query": "2025년 TikTok 총 광고비 얼마야?",
+    "table": "advertising",
+    "category": "platform_cost",
+    "status": "OK",
+    "time": 11.8,
+    "answer_len": 481,
+    "answer_preview": "### 📊 2025년 TikTok 총 광고비 분석  #### 요약  2025년 한 해 동안 TikTok 채널에 지출된 총 광고비는 **약 102.7억원**으로 집계되었습니다.  #### 분석 및 인사이트  *   2025년 TikTok 채널에 **100억 원 이상**의 상당한 규모의 광고비가 투자되었음을 확인할 수 있습니다. 이는 TikTok이 SKIN10"
+  },
+  {
+    "id": "AD-002",
+    "query": "2024년 Facebook 광고비 합계",
+    "table": "advertising",
+    "category": "platform_cost",
+    "status": "OK",
+    "time": 28.7,
+    "answer_len": 493,
+    "answer_preview": "### 📊 2024년 Facebook 광고비 합계 분석  #### 요약  2024년 한 해 동안 SKIN1004의 Facebook 광고비는 총 **약 21.3억원**으로 집계되었습니다. 이는 해당 기간 동안 Facebook 채널에 대한 상당한 마케팅 투자가 이루어졌음을 보여줍니다.  #### 분석 및 인사이트  *   2024년 Facebook 광고비는 약"
+  },
+  {
+    "id": "AD-003",
+    "query": "2025년 Google 광고비",
+    "table": "advertising",
+    "category": "platform_cost",
+    "status": "OK",
+    "time": 25.6,
+    "answer_len": 261,
+    "answer_preview": "### 📊 2025년 Google 광고비 분석  #### 요약  2025년 Google 광고비는 **약 9.13억원**으로 집계되었습니다.  #### 분석 및 인사이트  *   2025년 한 해 동안 Google 광고 채널에 총 약 9.13억원의 비용이 집행되었습니다. *   `> 해당 금액은 2025년 전체 Google 광고 활동에 대한 총 지출을 나타냅"
+  },
+  {
+    "id": "AD-004",
+    "query": "2024년 Shopee 광고비 총액",
+    "table": "advertising",
+    "category": "platform_cost",
+    "status": "OK",
+    "time": 26.4,
+    "answer_len": 518,
+    "answer_preview": "### 📊 2024년 Shopee 광고비 총액 분석  #### 요약  2024년 한 해 동안 Shopee 채널에 집행된 총 광고비는 **약 17.3억원**으로 집계되었습니다. 이는 해당 기간 동안 Shopee 플랫폼에 상당한 마케팅 투자가 이루어졌음을 보여줍니다.  #### 분석 및 인사이트  *   2024년 Shopee 광고비는 **약 17.3억원**으"
+  },
+  {
+    "id": "AD-005",
+    "query": "2025년 네이버 검색 광고비",
+    "table": "advertising",
+    "category": "platform_cost",
+    "status": "OK",
+    "time": 29.7,
+    "answer_len": 481,
+    "answer_preview": "### 📊 2025년 네이버 검색 광고비 현황  #### 요약  2025년 한 해 동안 집행된 네이버 검색 광고비는 총 **57,664,552원**입니다.  #### 분석 및 인사이트  *   2025년 네이버 검색 광고에 총 **57,664,552원**이 투자되었습니다. 이는 국내 주요 검색 엔진인 네이버를 통한 잠재 고객 확보 및 브랜드 노출에 대한 연"
+  },
+  {
+    "id": "AD-006",
+    "query": "2024년 NaverGFA 광고비 합계 알려줘",
+    "table": "advertising",
+    "category": "platform_cost",
+    "status": "OK",
+    "time": 29.1,
+    "answer_len": 343,
+    "answer_preview": "### 📊 2024년 NaverGFA 광고비 합계  #### 요약  2024년 한 해 동안 NaverGFA 채널에 집행된 총 광고비는 **245,738원**으로 집계되었습니다.  #### 분석 및 인사이트  *   2024년 NaverGFA 광고비는 총 245,738원으로, 해당 기간 동안 NaverGFA 채널에 투자된 전체 비용을 나타냅니다. *   `>"
+  },
+  {
+    "id": "AD-007",
+    "query": "2025년 SingleONE 광고비",
+    "table": "advertising",
+    "category": "platform_cost",
+    "status": "OK",
+    "time": 21.2,
+    "answer_len": 459,
+    "answer_preview": "### 📊 2025년 SingleONE 광고비 현황  #### 요약  2025년 한 해 동안 SingleONE 광고에 집행된 총 광고비는 **약 12억 7,308만원**으로 집계되었습니다.  #### 분석 및 인사이트  *   2025년 SingleONE 광고에 대한 연간 총 지출은 12억 7,308만원 수준입니다. 이는 SingleONE 관련 마케팅 활동"
+  },
+  {
+    "id": "AD-008",
+    "query": "2024년 카카오모먼트 광고비",
+    "table": "advertising",
+    "category": "platform_cost",
+    "status": "OK",
+    "time": 26.4,
+    "answer_len": 495,
+    "answer_preview": "### 📊 2024년 카카오모먼트 광고비 현황  #### 요약  2024년 카카오모먼트 광고비는 총 **13,373,605원**으로 집계되었습니다.  #### 분석 및 인사이트  *   **연간 총 광고비:** 2024년 한 해 동안 카카오모먼트에 집행된 총 광고비는 13,373,605원입니다. *   **추가 분석 필요:** 해당 광고비가 효율적으로 집행"
+  },
+  {
+    "id": "AD-009",
+    "query": "2025년 AmazonAds 광고비 총합",
+    "table": "advertising",
+    "category": "platform_cost",
+    "status": "OK",
+    "time": 30.0,
+    "answer_len": 464,
+    "answer_preview": "### 📊 2025년 AmazonAds 광고비 총합 분석  #### 요약  2025년 AmazonAds 광고비 총합은 **약 9,108만원**으로 집계되었습니다.  #### 분석 및 인사이트  *   2025년 한 해 동안 AmazonAds 채널에 총 91,079,059원 (약 9,108만원)의 광고비가 지출되었음을 확인했습니다. *   `> 이 수치는 단"
+  },
+  {
+    "id": "AD-010",
+    "query": "2024년 전체 플랫폼 광고비 합계",
+    "table": "advertising",
+    "category": "platform_cost",
+    "status": "OK",
+    "time": 43.4,
+    "answer_len": 805,
+    "answer_preview": "### 📊 2024년 전체 플랫폼 광고비 합계 분석  #### 요약  2024년 전체 플랫폼 광고비 합계는 약 **80.9억원**으로 집계되었습니다. 이 중 TikTok, Facebook, Shopee, Amazon Ads가 전체 광고비의 대부분을 차지하며 주요 광고 채널로 나타났습니다.  #### 상세 데이터  | 플랫폼 | 광고비 (KRW) | | :-"
+  },
+  {
+    "id": "AD-011",
+    "query": "2025년 1분기 TikTok 광고비",
+    "table": "advertising",
+    "category": "platform_cost",
+    "status": "OK",
+    "time": 31.7,
+    "answer_len": 306,
+    "answer_preview": "### 📊 2025년 1분기 TikTok 광고비 분석  #### 요약  2025년 1분기 동안 TikTok 채널에 집행된 총 광고비는 **약 9.4억원**으로 집계되었습니다.  #### 분석 및 인사이트  *   2025년 1분기(1월 1일 ~ 3월 31일) 동안 TikTok 채널에 집행된 총 광고비는 935,937,416원입니다. *   `> 해당 기간 "
+  },
+  {
+    "id": "AD-012",
+    "query": "2024년 상반기 Facebook 광고비",
+    "table": "advertising",
+    "category": "platform_cost",
+    "status": "OK",
+    "time": 36.6,
+    "answer_len": 415,
+    "answer_preview": "### 📊 2024년 상반기 Facebook 광고비 분석  #### 요약  2024년 상반기(1월 1일 ~ 6월 30일) 동안의 Facebook 광고비는 총 **약 3.03억원**으로 집계되었으며, 정확한 금액은 **303,110,780원**입니다.  #### 분석 및 인사이트  *   2024년 상반기 Facebook 광고비는 약 3.03억원으로, 해당 "
+  },
+  {
+    "id": "AD-013",
+    "query": "2025년 하반기 Google 광고비",
+    "table": "advertising",
+    "category": "platform_cost",
+    "status": "OK",
+    "time": 24.8,
+    "answer_len": 439,
+    "answer_preview": "### 📊 2025년 하반기 Google 광고비 현황  #### 요약  2025년 하반기(7월~12월) Google 광고비는 총 **약 4.5억원**으로 집계되었습니다. 이는 해당 기간 동안 Google 채널을 통해 집행된 광고 비용의 합계입니다.  #### 분석 및 인사이트  *   2025년 하반기 동안 Google 광고에 **약 4.5억원**의 상당한"
+  },
+  {
+    "id": "AD-014",
+    "query": "2024년 4분기 Shopee 광고비",
+    "table": "advertising",
+    "category": "platform_cost",
+    "status": "OK",
+    "time": 27.1,
+    "answer_len": 371,
+    "answer_preview": "### 📊 2024년 4분기 Shopee 광고비 현황  #### 요약  2024년 4분기 Shopee 광고비는 총 **약 8.4억원**으로 집계되었습니다.  #### 분석 및 인사이트  *   2024년 4분기 동안 Shopee 플랫폼에 대한 광고 집행이 활발하게 이루어졌음을 확인할 수 있습니다. *   `> 해당 분기 광고비는 Shopee 채널 내에서 브"
+  },
+  {
+    "id": "AD-015",
+    "query": "2025년 2분기 네이버 검색 광고비",
+    "table": "advertising",
+    "category": "platform_cost",
+    "status": "OK",
+    "time": 22.8,
+    "answer_len": 389,
+    "answer_preview": "### 📊 2025년 2분기 네이버 검색 광고비 현황  #### 요약  2025년 2분기 동안의 네이버 검색 광고비는 총 **1,755,655원**으로 집계되었습니다.  #### 분석 및 인사이트  *   해당 데이터는 2025년 4월부터 6월까지의 네이버 검색 광고에 지출된 총 비용을 나타냅니다. *   `> 이 비용은 특정 분기 동안의 네이버 검색 채널"
+  },
+  {
+    "id": "AD-016",
+    "query": "2024년 3분기 NaverGFA 광고비",
+    "table": "advertising",
+    "category": "platform_cost",
+    "status": "OK",
+    "time": 24.1,
+    "answer_len": 562,
+    "answer_preview": "### 📊 2024년 3분기 NaverGFA 광고비 분석  #### 요약  2024년 3분기(7월 1일 ~ 9월 30일) 동안의 NaverGFA 광고비는 **0원**으로 집계되었습니다. 이는 해당 기간 동안 NaverGFA 채널을 통한 광고 집행이 없었거나, 관련 데이터가 시스템에 기록되지 않았음을 의미합니다.  #### 분석 및 인사이트  *   **광고"
+  },
+  {
+    "id": "AD-017",
+    "query": "올해 SingleONE 광고 집행 비용 알려줘",
+    "table": "advertising",
+    "category": "platform_cost",
+    "status": "OK",
+    "time": 34.6,
+    "answer_len": 466,
+    "answer_preview": "### 📊 2026년 SingleONE 광고 집행 비용 현황  #### 요약  ⚠️ 2026년은 현재 3월 6일까지의 데이터만 존재합니다 (오늘: 2026년 03월 06일). 2026년 현재까지 SingleONE 광고 집행 비용은 **약 3.58억원**입니다.  #### 분석 및 인사이트  *   2026년 3월 6일 현재 SingleONE 광고에 총 35"
+  },
+  {
+    "id": "AD-018",
+    "query": "작년 카카오모먼트에 쓴 광고비 총액",
+    "table": "advertising",
+    "category": "platform_cost",
+    "status": "OK",
+    "time": 29.1,
+    "answer_len": 402,
+    "answer_preview": "### 📊 2025년 카카오모먼트 광고비 총액  #### 요약  2025년 한 해 동안 카카오모먼트에 집행된 총 광고비는 **1,391만원**입니다.  #### 분석 및 인사이트  *   2025년 카카오모먼트 광고비 총액은 **13,908,317원**으로 집계되었습니다. 이는 작년 한 해 동안 카카오모먼트 채널에 투자된 전체 광고 비용을 나타냅니다. * "
+  },
+  {
+    "id": "AD-019",
+    "query": "2025년 AmazonAds에 집행한 총 비용",
+    "table": "advertising",
+    "category": "platform_cost",
+    "status": "OK",
+    "time": 42.2,
+    "answer_len": 491,
+    "answer_preview": "# 2025년 Amazon Ads 총 광고 비용  2025년 한 해 동안 아마존(Amazon)에 집행된 총 광고 비용은 **약 686억 달러(약 89조 원)**입니다.  ## 주요 세부 내역  | 항목 | 수치 | |---|---| | **연간 총 광고 수익** | **680억 달러 돌파** (686억 달러 이상) | | **4분기 광고 매출** | **2"
+  },
+  {
+    "id": "AD-020",
+    "query": "2024년 1월 TikTok 광고비",
+    "table": "advertising",
+    "category": "platform_cost",
+    "status": "OK",
+    "time": 32.7,
+    "answer_len": 387,
+    "answer_preview": "### 📊 2024년 1월 TikTok 광고비 분석  #### 요약  2024년 1월 TikTok 광고비는 총 **6,341,947원**으로 집계되었습니다.  #### 분석 및 인사이트  *   2024년 1월 한 달간 TikTok 채널에 집행된 광고비는 **6,341,947원**입니다. *   `> 해당 데이터는 2024년 1월의 TikTok 광고 활동에"
+  },
+  {
+    "id": "AD-021",
+    "query": "2025년 3월 Facebook 광고비",
+    "table": "advertising",
+    "category": "platform_cost",
+    "status": "OK",
+    "time": 32.0,
+    "answer_len": 461,
+    "answer_preview": "### 📊 2025년 3월 Facebook 광고비 현황  #### 요약  2025년 3월 Facebook 광고비는 총 **5억 9,286만 6,383원**으로 집계되었습니다.  #### 분석 및 인사이트  *   2025년 3월 한 달간 Facebook 광고에 **5억 9,286만 6,383원**이 지출되었습니다. 이는 월별 광고비로 볼 때 상당한 규모의 "
+  },
+  {
+    "id": "AD-022",
+    "query": "2024년 6월 Google 광고비 알려줘",
+    "table": "advertising",
+    "category": "platform_cost",
+    "status": "OK",
+    "time": 26.3,
+    "answer_len": 314,
+    "answer_preview": "### 📊 2024년 6월 Google 광고비 분석  #### 요약  2024년 6월 Google 광고비는 총 **1,145,804원**으로 집계되었습니다.  #### 분석 및 인사이트  *   2024년 6월 한 달간 Google 광고 채널에 **1,145,804원**이 지출되었습니다. *   > 해당 금액은 2024년 6월 Google 광고 활동에 대한"
+  },
+  {
+    "id": "AD-023",
+    "query": "2025년 9월 Shopee 광고 집행비",
+    "table": "advertising",
+    "category": "platform_cost",
+    "status": "OK",
+    "time": 30.2,
+    "answer_len": 491,
+    "answer_preview": "### 📊 2025년 9월 Shopee 광고 집행비 분석  #### 요약  2025년 9월 한 달간 Shopee 광고 집행비는 **약 3억 4,718만원**으로 집계되었습니다. 이는 해당 기간 동안 Shopee 플랫폼에 대한 상당한 마케팅 투자를 나타냅니다.  #### 상세 데이터  (단일 수치이므로 상세 데이터 섹션은 생략합니다.)  #### 분석 및 인"
+  },
+  {
+    "id": "AD-024",
+    "query": "2024년 12월 네이버 검색 광고비",
+    "table": "advertising",
+    "category": "platform_cost",
+    "status": "OK",
+    "time": 19.9,
+    "answer_len": 434,
+    "answer_preview": "### 📊 2024년 12월 네이버 검색 광고비 현황  #### 요약  2024년 12월 네이버 검색 광고비는 총 **4,746,896원**으로 집계되었습니다. 이는 해당 월에 네이버 검색 채널을 통해 집행된 광고 비용의 합계입니다.  #### 분석 및 인사이트  *   2024년 12월 한 달간 네이버 검색 광고에 **4,746,896원**이 지출되었습니"
+  },
+  {
+    "id": "AD-025",
+    "query": "2025년 5월 NaverGFA 비용",
+    "table": "advertising",
+    "category": "platform_cost",
+    "status": "OK",
+    "time": 33.6,
+    "answer_len": 755,
+    "answer_preview": "# 2025년 5월 네이버 GFA (성과형 디스플레이 광고) 비용  네이버 GFA는 **실시간 입찰 방식**으로 비용이 결정되므로, 고정된 단가는 없으며 광고 성과와 경쟁 상황에 따라 유동적으로 변동됩니다.  ---  ## 과금 방식  | 방식 | 설명 | |------|------| | **CPC (클릭당 과금)** | 사용자가 광고를 클릭할 때마다 비용"
+  },
+  {
+    "id": "AD-026",
+    "query": "2024년 8월 SingleONE 비용 합계",
+    "table": "advertising",
+    "category": "platform_cost",
+    "status": "OK",
+    "time": 26.5,
+    "answer_len": 477,
+    "answer_preview": "### 📊 2024년 8월 SingleONE 비용 합계 분석  #### 요약  2024년 8월 SingleONE의 총 비용은 **0원**으로 집계되었습니다. 이는 해당 기간 동안 SingleONE 관련 비용 발생이 없었거나 데이터에 기록되지 않았음을 의미합니다.  #### 분석 및 인사이트  *   2024년 8월에는 SingleONE과 관련된 비용이 발생"
+  },
+  {
+    "id": "AD-027",
+    "query": "2025년 7월 카카오모먼트 광고비",
+    "table": "advertising",
+    "category": "platform_cost",
+    "status": "OK",
+    "time": 23.3,
+    "answer_len": 440,
+    "answer_preview": "### 📊 2025년 7월 카카오모먼트 광고비 분석  #### 요약  2025년 7월 카카오모먼트 광고비는 총 **1,906,030원**으로 집계되었습니다.  #### 분석 및 인사이트  *   2025년 7월 한 달간 카카오모먼트 채널에 **1,906,030원**의 광고비가 지출되었습니다. *   > 이 광고비는 특정 캠페인이나 마케팅 목표 달성을 위해 "
+  },
+  {
+    "id": "AD-028",
+    "query": "2024년 11월 AmazonAds 비용",
+    "table": "advertising",
+    "category": "platform_cost",
+    "status": "OK",
+    "time": 42.0,
+    "answer_len": 925,
+    "answer_preview": "# 2024년 11월 Amazon Ads 비용 요약  2024년 11월은 연말 쇼핑 시즌(특히 블랙 프라이데이)의 영향으로 광고 비용이 크게 상승한 시기입니다.  ---  ## 주요 지표  | 항목 | 수치 | 비고 | |------|------|------| | **블랙 프라이데이 CPC** | **$1.89** | 2023년 대비 **9.9% 증가** "
+  },
+  {
+    "id": "AD-029",
+    "query": "2025년 TikTok 광고비 월별 추이",
+    "table": "advertising",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 23.7,
+    "answer_len": 1223,
+    "answer_preview": "### 📊 2025년 TikTok 광고비 월별 추이 분석  #### 요약  2025년 TikTok 광고비는 총 **약 102.7억원**을 기록했습니다. 특히 연말인 11월과 12월에 광고비가 크게 증가하여, 11월에 **약 34.7억원**으로 연중 최고치를 달성했습니다. 이는 연초 대비 약 10배 이상 증가한 수치입니다.  #### 상세 데이터  | 월  "
+  },
+  {
+    "id": "AD-030",
+    "query": "Facebook 2024년 월별 광고비 추이 보여줘",
+    "table": "advertising",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 27.0,
+    "answer_len": 1326,
+    "answer_preview": "### 📊 2024년 Facebook 월별 광고비 추이 분석  #### 요약  2024년 Facebook 광고비는 총 **약 20.21억원**을 기록했습니다. 특히 연말 쇼핑 시즌의 영향으로 11월과 12월에 광고비 지출이 급증하여, 11월에는 **약 8.55억원**으로 연중 최고치를 기록했으며, 12월에는 **약 6.85억원**이 집행되었습니다. 이는 연"
+  },
+  {
+    "id": "AD-031",
+    "query": "Google 광고비 2025년 월별 트렌드",
+    "table": "advertising",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 56.9,
+    "answer_len": 4184,
+    "answer_preview": "### 📈 Google 광고비 2025년 월별 트렌드 분석  #### 요약  2025년 SKIN1004의 Google 광고 채널 매출은 **약 37.19억원**을 기록했으며, 상반기 감소 추세 후 하반기 11월에 **약 6.72억원**으로 연중 최고치를 달성했습니다. 이는 AI 및 모바일 광고 성장에 힘입어 전반적으로 견조한 성장세를 보인 2025년 Goo"
+  },
+  {
+    "id": "AD-032",
+    "query": "Shopee 2024년 월별 광고비 변화",
+    "table": "advertising",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 37.1,
+    "answer_len": 1440,
+    "answer_preview": "### 📊 Shopee 2024년 월별 광고비 변화 분석  #### 요약  2024년 Shopee의 월별 광고비는 연초 대비 연말에 크게 증가하는 추세를 보였습니다. 연간 총 광고비는 **약 17.9억원**을 기록했으며, 특히 4분기(10월~12월)에 광고비가 집중적으로 집행되었습니다. 가장 낮은 광고비는 5월의 **7,584만원**이었고, 가장 높은 광고"
+  },
+  {
+    "id": "AD-033",
+    "query": "네이버 검색 2025년 월별 광고비 추이",
+    "table": "advertising",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 27.0,
+    "answer_len": 1263,
+    "answer_preview": "### 📊 2025년 네이버 검색 광고비 월별 추이 분석  #### 요약  2025년 네이버 검색 광고비는 총 **5,866만원**을 기록했습니다. 월별로는 **8월이 약 1,176만원**으로 가장 높은 광고비를 집행했으며, **5월은 0원**으로 가장 낮은 수치를 보였습니다. 전반적으로 월별 광고비 지출에 큰 변동성이 관찰됩니다.  #### 상세 데이터 "
+  },
+  {
+    "id": "AD-034",
+    "query": "NaverGFA 2024년 월별 광고비 트렌드",
+    "table": "advertising",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 48.6,
+    "answer_len": 2216,
+    "answer_preview": "### 📈 NaverGFA 2024년 월별 광고비 트렌드 분석  #### 요약  2024년 SKIN1004의 NaverGFA 월별 광고비는 **총 245,738원**으로 집계되었으며, 이는 **2024년 3월에만 집중적으로 발생**했습니다. 나머지 11개월 동안은 NaverGFA 광고비 지출이 전혀 없었습니다. 2024년 국내 온라인 광고 시장이 전년 대비"
+  },
+  {
+    "id": "AD-035",
+    "query": "SingleONE 2025년 광고비 월별 변화 추이",
+    "table": "advertising",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 42.1,
+    "answer_len": 1278,
+    "answer_preview": "### 📊 SingleONE 2025년 월별 광고비 변화 추이 분석  #### 요약  2025년 SingleONE의 총 광고비는 약 **12.73억원**으로 집계되었습니다. 월별 광고비는 큰 변동성을 보였으며, 특히 **11월에 약 3.61억원**으로 가장 높은 광고비를 기록하며 연간 지출의 상당 부분을 차지했습니다.  #### 상세 데이터 | 월 | Si"
+  },
+  {
+    "id": "AD-036",
+    "query": "카카오모먼트 2024년 월별 광고비 추이",
+    "table": "advertising",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 27.8,
+    "answer_len": 1435,
+    "answer_preview": "### 📊 2024년 카카오모먼트 월별 광고비 추이 분석  #### 요약  2024년 카카오모먼트 총 광고비는 **1,337만 3,605원**으로 집계되었습니다. 특히, 1분기(1월~3월)에 광고비 지출이 집중되었으며, **3월에 484만 7,224원**으로 가장 높은 광고비를 기록했습니다. 5월부터 7월까지, 그리고 10월부터 12월까지는 광고비 지출이 "
+  },
+  {
+    "id": "AD-037",
+    "query": "AmazonAds 2025년 월별 비용 추이 보여줘",
+    "table": "advertising",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 32.0,
+    "answer_len": 1070,
+    "answer_preview": "### 📊 2025년 AmazonAds 월별 비용 추이  #### 요약  2025년 AmazonAds 총 비용은 **약 91.08억원**으로 집계되었습니다. 연초(1월~3월)에는 비용이 발생하지 않았으나, 4월부터 지출이 시작되어 하반기에 크게 증가했으며, 특히 **11월에 2,473만원**으로 연중 가장 높은 비용을 기록했습니다.  #### 상세 데이터 "
+  },
+  {
+    "id": "AD-038",
+    "query": "2025년 전체 플랫폼 월별 광고비 추이",
+    "table": "advertising",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 39.7,
+    "answer_len": 3094,
+    "answer_preview": "### 📊 2025년 전체 플랫폼 월별 광고비 추이 분석  #### 요약  2025년 전체 플랫폼 광고비는 총 **약 229.3억원**을 기록했습니다. 월별 광고비는 연초 약 10억원대에서 시작하여 연말에 크게 증가하는 추세를 보였으며, 특히 **11월에 약 58.9억원으로 연중 최고치**를 기록했습니다. 주요 광고비 지출 플랫폼은 TikTok과 Faceb"
+  },
+  {
+    "id": "AD-039",
+    "query": "TikTok 광고비가 가장 많았던 달은?",
+    "table": "advertising",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 32.2,
+    "answer_len": 468,
+    "answer_preview": "### 📊 TikTok 광고비 최대 지출 월 분석  #### 요약  TikTok 광고비가 가장 많았던 달은 **2025년 11월**로 확인되었습니다. 해당 월의 총 TikTok 광고비는 **약 34.7억원**에 달했습니다.  #### 분석 및 인사이트  *   2025년 11월에 TikTok 광고비 지출이 가장 높았던 것은 연말 쇼핑 시즌(블랙프라이데이, "
+  },
+  {
+    "id": "AD-040",
+    "query": "Facebook 광고비 전월 대비 증감 추이",
+    "table": "advertising",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 20.6,
+    "answer_len": 747,
+    "answer_preview": "### 📊 Facebook 광고비 전월 대비 증감 추이 분석  #### 요약  ⚠️ 2026년 3월 데이터는 현재 6일까지의 집계이며, 2월 대비 Facebook 광고비가 크게 감소했습니다. 2026년 2월 Facebook 광고비는 약 **12.9억원**이었으나, 3월(6일 기준)에는 약 **3.3억원**으로 약 **74.1%** 감소했습니다.  #### "
+  },
+  {
+    "id": "AD-041",
+    "query": "2025년 1분기 Google 광고비 월별 추이",
+    "table": "advertising",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 36.2,
+    "answer_len": 811,
+    "answer_preview": "### 📊 2025년 1분기 Google 광고비 월별 추이  #### 요약  2025년 1분기 Google 광고비는 총 **약 2.3억원** (230,794,902원)을 기록했습니다. 월별 추이를 살펴보면, 1월 **6,549만원**에서 시작하여 매월 꾸준히 증가하여 3월에는 **8,847만원**으로 분기 최고치를 달성했습니다.  #### 상세 데이터 | "
+  },
+  {
+    "id": "AD-042",
+    "query": "Shopee 광고비 분기별 추이",
+    "table": "advertising",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 45.6,
+    "answer_len": 2634,
+    "answer_preview": "### 📊 Shopee 광고비 분기별 추이 분석  #### 요약  Shopee 광고비는 2021년 1분기부터 집행되기 시작하여 꾸준히 증가하는 추세를 보였습니다. 특히 2024년부터는 급격한 성장을 기록하며, **2025년 4분기**에 **약 13.9억원**으로 역대 최고 광고비를 기록했습니다. 2026년 1분기(현재 분기)에는 **약 12.5억원**이 집"
+  },
+  {
+    "id": "AD-043",
+    "query": "인도네시아 TikTok ROAS 얼마야?",
+    "table": "advertising",
+    "category": "roas",
+    "status": "OK",
+    "time": 32.2,
+    "answer_len": 790,
+    "answer_preview": "### 📊 인도네시아 TikTok ROAS 분석 결과  #### 요약  인도네시아 TikTok 채널의 ROAS(광고 수익률)를 계산한 결과, **데이터 부족으로 인해 현재 ROAS를 산출할 수 없습니다.** 이는 2019년 1월 1일부터 현재(2026년 3월 6일)까지의 조회 기간 동안 인도네시아 TikTok 채널에서 광고 비용 또는 매출 데이터가 기록되지"
+  },
+  {
+    "id": "AD-044",
+    "query": "필리핀 Facebook ROAS",
+    "table": "advertising",
+    "category": "roas",
+    "status": "OK",
+    "time": 20.4,
+    "answer_len": 563,
+    "answer_preview": "### 📊 필리핀 Facebook ROAS 분석 결과  #### 요약  현재 데이터를 기준으로 필리핀 Facebook ROAS는 **계산할 수 없습니다.** 이는 필리핀 지역의 Facebook 광고 비용 또는 전환 가치 데이터가 존재하지 않거나, ROAS를 계산할 수 없는 상태이기 때문입니다.  #### 분석 및 인사이트  *   현재 시스템에 기록된 데이"
+  },
+  {
+    "id": "AD-045",
+    "query": "태국 Shopee ROAS 알려줘",
+    "table": "advertising",
+    "category": "roas",
+    "status": "OK",
+    "time": 30.4,
+    "answer_len": 667,
+    "answer_preview": "### 📊 태국 Shopee ROAS 분석  #### 요약  요청하신 태국 Shopee의 ROAS(광고 수익률)는 현재 **데이터 부족으로 계산할 수 없습니다.** 이는 2019년 1월 1일부터 현재까지의 기간 동안 태국 Shopee 채널에서 매출(GMV) 또는 광고 비용(Expense) 데이터가 존재하지 않거나, 광고 비용이 0이어서 ROAS 산출이 불가"
+  },
+  {
+    "id": "AD-046",
+    "query": "베트남 Google ROAS",
+    "table": "advertising",
+    "category": "roas",
+    "status": "OK",
+    "time": 18.4,
+    "answer_len": 251,
+    "answer_preview": "해당 조건에 맞는 데이터가 없습니다.  SQL 쿼리에서 `Country = 'Vietnam'`으로 필터링했지만, `Country` 컬럼의 유효 값 목록에는 '베트남'으로 저장되어 있습니다. 따라서 'Vietnam'이라는 값으로는 데이터를 찾을 수 없습니다.  **다음과 같이 질문해 보세요:**  *   베트남 Google ROAS를 알려주세요. *   모든"
+  },
+  {
+    "id": "AD-047",
+    "query": "말레이시아 TikTok 광고 수익률",
+    "table": "advertising",
+    "category": "roas",
+    "status": "OK",
+    "time": 22.0,
+    "answer_len": 377,
+    "answer_preview": "해당 값은 존재하지 않습니다.  SQL에서 사용된 필터 조건 `Country = 'Malaysia'`가 문제입니다. `Country` 컬럼의 유효 값 목록을 보면 국가명이 한국어로 저장되어 있습니다. SQL 쿼리에서는 영어인 'Malaysia'를 사용했기 때문에 일치하는 데이터를 찾지 못했습니다.  **가장 유사한 값 추천:** `말레이시아` (한국어)  "
+  },
+  {
+    "id": "AD-048",
+    "query": "싱가포르 Facebook ROAS 분석",
+    "table": "advertising",
+    "category": "roas",
+    "status": "OK",
+    "time": 31.7,
+    "answer_len": 400,
+    "answer_preview": "싱가포르의 Facebook ROAS 데이터가 존재하지 않습니다.  SQL 쿼리에서 `Country = 'Singapore'` 조건이 사용되었으나, 현재 데이터셋에는 싱가포르에 대한 Facebook 광고 데이터가 없거나, ROAS 계산에 필요한 `Facebook_Cost` 또는 `Facebook_Omni_purchase_conversion_value_shar"
+  },
+  {
+    "id": "AD-049",
+    "query": "일본 AmazonAds ROAS",
+    "table": "advertising",
+    "category": "roas",
+    "status": "OK",
+    "time": 19.9,
+    "answer_len": 395,
+    "answer_preview": "해당 조건의 데이터가 없습니다.  SQL에서 `Country` 필터 조건에 문제가 있습니다. `Country` 컬럼의 유효 값은 한국어인 '일본'이지만, SQL 쿼리에서는 영어인 `'Japan'`을 사용했습니다. 이로 인해 일치하는 데이터가 없어 0행이 반환되었습니다.  **가장 유사한 값 추천:** `Country = '일본'`으로 수정하여 쿼리를 다시 "
+  },
+  {
+    "id": "AD-050",
+    "query": "한국 네이버 검색 광고 ROAS",
+    "table": "advertising",
+    "category": "roas",
+    "status": "OK",
+    "time": 33.5,
+    "answer_len": 742,
+    "answer_preview": "### 📊 한국 네이버 검색 광고 ROAS 현황 (데이터 없음)  #### 요약  2019년 1월 1일부터 현재(2026년 3월 6일)까지의 한국 네이버 검색 광고 데이터를 조회한 결과, 해당 기간 동안 유효한 광고 비용 및 전환 가치 데이터가 확인되지 않아 **ROAS를 계산할 수 없습니다.**  #### 분석 및 인사이트  *   **데이터 부재:** "
+  },
+  {
+    "id": "AD-051",
+    "query": "한국 카카오모먼트 ROAS",
+    "table": "advertising",
+    "category": "roas",
+    "status": "OK",
+    "time": 19.8,
+    "answer_len": 551,
+    "answer_preview": "### 📊 한국 카카오모먼트 ROAS 분석 결과  #### 요약  한국 카카오모먼트의 ROAS(광고수익률)를 분석한 결과, 현재 **데이터가 존재하지 않거나 계산할 수 없는 상태**입니다. 이는 카카오모먼트 관련 구매 금액 또는 광고 비용 데이터가 없거나, 광고 비용이 0이어서 ROAS 계산이 불가능했기 때문일 수 있습니다.  #### 분석 및 인사이트  "
+  },
+  {
+    "id": "AD-052",
+    "query": "미국 Google 광고 ROAS 알려줘",
+    "table": "advertising",
+    "category": "roas",
+    "status": "OK",
+    "time": 18.8,
+    "answer_len": 710,
+    "answer_preview": "### 📊 미국 Google 광고 ROAS 분석 결과  #### 요약  2019년 1월 1일부터 현재(2026년 3월 6일)까지의 데이터를 기준으로, 미국 Google 광고의 ROAS는 **계산할 수 없습니다.** 이는 해당 기간 동안 미국 Google 광고의 총 비용 또는 총 전환 가치 데이터가 존재하지 않거나 0이었기 때문일 수 있습니다.  #### 분"
+  },
+  {
+    "id": "AD-053",
+    "query": "2025년 TikTok ROAS 추이",
+    "table": "advertising",
+    "category": "roas",
+    "status": "OK",
+    "time": 33.2,
+    "answer_len": 1229,
+    "answer_preview": "### 📊 2025년 TikTok ROAS 월별 추이 분석  #### 요약  2025년 TikTok ROAS는 상반기에 높은 성과를 보였으나, 하반기 들어 점차 감소하는 추세를 나타냈습니다. 특히 **4월에 8.11**로 최고 ROAS를 기록한 반면, **11월에는 2.23**으로 최저치를 기록하며 연말에 가까워질수록 효율이 크게 저하된 모습을 보였습니다."
+  },
+  {
+    "id": "AD-054",
+    "query": "2024년 Facebook ROAS 월별 변화",
+    "table": "advertising",
+    "category": "roas",
+    "status": "OK",
+    "time": 26.8,
+    "answer_len": 1471,
+    "answer_preview": "### 📊 2024년 Facebook ROAS 월별 변화 분석  #### 요약  2024년 Facebook ROAS는 연초 낮은 수준에서 시작하여 연말에 크게 개선되는 뚜렷한 상승 추세를 보였습니다. 특히 **11월에 ROAS 1.51**로 연중 최고치를 기록했으며, 연간 총 페이스북 광고 비용은 약 **20.33억원**, 총 매출은 약 **24.61억원*"
+  },
+  {
+    "id": "AD-055",
+    "query": "플랫폼별 ROAS 비교",
+    "table": "advertising",
+    "category": "roas",
+    "status": "OK",
+    "time": 49.6,
+    "answer_len": 1366,
+    "answer_preview": "### 📊 플랫폼별 ROAS 비교 분석  #### 요약  전체 기간(2019년 1월 1일 ~ 2026년 3월 6일) 동안 플랫폼별 ROAS를 비교한 결과, **SingleONE**이 **12.30**으로 가장 높은 효율을 보였습니다. 반면, KakaoMoments는 0.00으로 가장 낮은 ROAS를 기록했습니다. Shopee와 TikTok은 각각 약 681"
+  },
+  {
+    "id": "AD-056",
+    "query": "ROAS가 가장 높은 플랫폼은?",
+    "table": "advertising",
+    "category": "roas",
+    "status": "OK",
+    "time": 24.3,
+    "answer_len": 377,
+    "answer_preview": "안녕하세요. 요청하신 **ROAS가 가장 높은 플랫폼** 데이터를 현재 조회하지 못했습니다.  좀 더 정확한 결과를 위해 **조건을 구체적으로 지정**해 주시면 다시 조회를 시도해 보겠습니다.  ---  ### 💡 이렇게 질문해 보시면 좋습니다  1. **\"2024년 4분기 기준, 국가별 ROAS가 가장 높은 광고 플랫폼은?\"** 2. **\"2025년 1~"
+  },
+  {
+    "id": "AD-057",
+    "query": "국가별 전체 광고 ROAS 순위",
+    "table": "advertising",
+    "category": "roas",
+    "status": "WARN",
+    "time": 65.7,
+    "answer_len": 1679,
+    "answer_preview": "### 📊 국가별 전체 광고 ROAS 순위  #### 요약  전체 광고 ROAS(광고 투자 수익률) 분석 결과, **호주**가 **7.42**로 가장 높은 효율을 보였습니다. 이어서 **일본(7.31)**, **필리핀(6.27)**, **인도네시아(6.22)** 순으로 높은 ROAS를 기록하며 광고 투자 대비 높은 수익을 창출하고 있습니다. 반면, 한국과 "
+  },
+  {
+    "id": "AD-058",
+    "query": "2025년 1분기 TikTok ROAS",
+    "table": "advertising",
+    "category": "roas",
+    "status": "OK",
+    "time": 16.5,
+    "answer_len": 526,
+    "answer_preview": "### 📊 2025년 1분기 TikTok ROAS 분석  #### 요약  2025년 1분기 TikTok 광고 채널의 ROAS(광고 수익률)는 **7.40**을 기록했습니다. 이는 TikTok 광고에 1원 지출 시 평균 7.40원의 매출이 발생했음을 의미합니다.  #### 분석 및 인사이트  *   **높은 광고 효율성**: 2025년 1분기 TikTok 광"
+  },
+  {
+    "id": "AD-059",
+    "query": "Shopee 광고 ROAS 국가별 비교",
+    "table": "advertising",
+    "category": "roas",
+    "status": "OK",
+    "time": 21.1,
+    "answer_len": 1053,
+    "answer_preview": "### 📊 Shopee 광고 ROAS 국가별 비교 분석  #### 요약  Shopee 광고 ROAS 분석 결과, **인도네시아**가 **9.03**으로 가장 높은 효율을 보이며 전체 국가 중 압도적인 성과를 기록했습니다. 필리핀(8.74)과 싱가포르(7.44)가 그 뒤를 이어 높은 ROAS를 달성했으며, 베트남과 말레이시아는 상대적으로 낮은 ROAS를 보였"
+  },
+  {
+    "id": "AD-060",
+    "query": "NaverGFA ROAS 분석해줘",
+    "table": "advertising",
+    "category": "roas",
+    "status": "OK",
+    "time": 28.6,
+    "answer_len": 621,
+    "answer_preview": "### 📊 NaverGFA 광고 효율 분석 결과  #### 요약  NaverGFA 광고는 2019년 1월 1일부터 현재까지 총 **약 1억 2,721만원**의 광고비를 집행하여 **약 7,568만원**의 매출을 발생시켰습니다. 이에 따른 ROAS(광고 수익률)는 **0.59**로, 투자 대비 수익이 낮은 것으로 분석됩니다.  #### 분석 및 인사이트  *"
+  },
+  {
+    "id": "AD-061",
+    "query": "SingleONE 광고 수익률",
+    "table": "advertising",
+    "category": "roas",
+    "status": "OK",
+    "time": 19.3,
+    "answer_len": 591,
+    "answer_preview": "### 📊 SingleONE 광고 수익률 분석  #### 요약  2019년 1월 1일부터 현재까지의 데이터를 기준으로 SingleONE의 광고 수익률(ROAS)은 **12.30**으로 집계되었습니다. 이는 광고 비용 1원당 약 12.30원의 매출이 발생했음을 의미합니다.  #### 분석 및 인사이트  *   **높은 광고 효율성**: SingleONE은 광"
+  },
+  {
+    "id": "AD-062",
+    "query": "AmazonAds ROAS 월별 추이",
+    "table": "advertising",
+    "category": "roas",
+    "status": "OK",
+    "time": 43.9,
+    "answer_len": 584,
+    "answer_preview": "## 📊 AmazonAds 월별 ROAS 추이 분석  #### 요약  AmazonAds 월별 ROAS(광고수익률) 추이 분석 결과, 2019년 1월부터 2026년 2월까지 총 144개월의 데이터가 확인되었습니다. 전체 기간 동안 AmazonAds를 통해 발생한 총 매출은 **약 1조 3,974억원**에 달합니다. 가장 최근 데이터인 **2026년 2월의 R"
+  },
+  {
+    "id": "AD-063",
+    "query": "국가별 TikTok 광고비 비교",
+    "table": "advertising",
+    "category": "country_comparison",
+    "status": "OK",
+    "time": 38.0,
+    "answer_len": 1084,
+    "answer_preview": "### 📊 국가별 TikTok 광고비 현황 분석  #### 요약  2019년 1월 1일부터 2026년 3월 6일까지의 데이터에 따르면, TikTok 광고비 지출이 가장 높은 국가는 **인도네시아**로 약 **77.1억원**을 기록했습니다. 다음으로는 **미국**이 약 **56.9억원**으로 뒤를 이었으며, 필리핀과 말레이시아가 각각 약 24.4억원과 약 1"
+  },
+  {
+    "id": "AD-064",
+    "query": "국가별 Facebook 광고비 비교해줘",
+    "table": "advertising",
+    "category": "country_comparison",
+    "status": "OK",
+    "time": 24.4,
+    "answer_len": 1287,
+    "answer_preview": "### 📊 국가별 Facebook 광고비 현황 분석  #### 요약  2019년 1월 1일부터 2026년 3월 6일까지의 데이터를 기준으로, 총 12개 국가의 Facebook 광고비를 비교한 결과, **인도네시아**가 약 **48.6억원**으로 가장 높은 광고비를 지출했습니다. 이어서 **미국**이 약 **41.9억원**, **한국**이 약 **26.4억원"
+  },
+  {
+    "id": "AD-065",
+    "query": "국가별 Google 광고비 비교",
+    "table": "advertising",
+    "category": "country_comparison",
+    "status": "OK",
+    "time": 35.0,
+    "answer_len": 1073,
+    "answer_preview": "### 📊 국가별 Google 광고비 현황 분석  #### 요약  제공된 데이터에 따르면, Google 광고비 지출이 가장 높은 국가는 **미국**으로 약 **11.7억원**을 기록했습니다. 다음으로는 **한국**이 약 **2.6억원**으로 두 번째로 높은 지출을 보였습니다. 총 12개 국가의 Google 광고비가 분석되었으며, 이 중 캐나다, 러시아, 호"
+  },
+  {
+    "id": "AD-066",
+    "query": "국가별 Shopee 광고비 순위",
+    "table": "advertising",
+    "category": "country_comparison",
+    "status": "OK",
+    "time": 19.9,
+    "answer_len": 1085,
+    "answer_preview": "### 📊 국가별 Shopee 광고비 현황  #### 요약  전체 국가 중 인도네시아의 Shopee 광고비가 **약 47.1억원**으로 압도적인 1위를 차지했습니다. 이어서 필리핀이 **약 15.0억원**, 싱가포르가 **약 11.5억원**으로 뒤를 이으며 상위 3개 국가가 전체 광고비의 대부분을 차지하고 있습니다.  #### 상세 데이터 | 순위 | 국가"
+  },
+  {
+    "id": "AD-067",
+    "query": "국가별 전체 광고비 비교",
+    "table": "advertising",
+    "category": "country_comparison",
+    "status": "OK",
+    "time": 32.4,
+    "answer_len": 1240,
+    "answer_preview": "### 📊 국가별 전체 광고비 현황  #### 요약  전체 광고비 분석 결과, **인도네시아**가 약 **174.3억원**으로 가장 높은 광고비를 지출했으며, 다음으로 **미국**이 약 **141.9억원**을 기록하며 주요 광고 시장으로 나타났습니다. 필리핀, 말레이시아, 한국, 일본, 싱가포르가 그 뒤를 이었으며, 러시아와 캐나다는 광고비 지출이 없는 것"
+  },
+  {
+    "id": "AD-068",
+    "query": "인도네시아 vs 태국 TikTok 광고비 비교",
+    "table": "advertising",
+    "category": "country_comparison",
+    "status": "OK",
+    "time": 15.9,
+    "answer_len": 384,
+    "answer_preview": "제공된 SQL 쿼리에서 사용된 'Indonesia' 및 'Thailand' 값은 데이터에 존재하지 않습니다.  SQL 쿼리의 `Country` 필터 조건이 문제였습니다. 데이터의 `Country` 컬럼은 '인도네시아', '태국'과 같이 한국어 국가명을 사용하지만, SQL 쿼리에서는 영어 국가명('Indonesia', 'Thailand')을 사용했습니다. 따"
+  },
+  {
+    "id": "AD-069",
+    "query": "필리핀 vs 베트남 Facebook 광고비",
+    "table": "advertising",
+    "category": "country_comparison",
+    "status": "OK",
+    "time": 18.7,
+    "answer_len": 375,
+    "answer_preview": "요청하신 조건에 해당하는 데이터가 없습니다.  **문제 설명 및 추천:** SQL 쿼리에서 `Country` 필터에 'Philippines', 'Vietnam' (영어)을 사용했지만, `Country` 컬럼에는 '필리핀', '베트남' (한국어)으로 저장되어 있습니다. 이로 인해 일치하는 데이터를 찾지 못했습니다. `Country` 필터 조건을 `Countr"
+  },
+  {
+    "id": "AD-070",
+    "query": "동남아 국가별 Shopee 광고비 순위",
+    "table": "advertising",
+    "category": "country_comparison",
+    "status": "OK",
+    "time": 39.3,
+    "answer_len": 424,
+    "answer_preview": "해당 SQL 쿼리에서 사용된 국가명은 존재하지 않습니다.  SQL 쿼리의 `Country` 필터 조건에 사용된 'Indonesia', 'Malaysia', 'Philippines', 'Singapore', 'Thailand', 'Vietnam'은 유효한 컬럼 값 목록에 있는 한국어 국가명과 일치하지 않습니다. `Country` 컬럼은 '인도네시아', '말레"
+  },
+  {
+    "id": "AD-071",
+    "query": "한국 vs 일본 광고비 비교",
+    "table": "advertising",
+    "category": "country_comparison",
+    "status": "OK",
+    "time": 25.3,
+    "answer_len": 349,
+    "answer_preview": "쿼리에서 사용된 'South Korea' 값은 존재하지 않습니다.  SQL 쿼리의 `WHERE Country IN ('South Korea', 'Japan')` 조건에 문제가 있습니다. `Country` 컬럼의 유효한 값은 한국어입니다. 'South Korea' 대신 '한국'을, 'Japan' 대신 '일본'을 사용해야 합니다.  따라서 `WHERE Coun"
+  },
+  {
+    "id": "AD-072",
+    "query": "미국 광고비 총액",
+    "table": "advertising",
+    "category": "country_comparison",
+    "status": "OK",
+    "time": 44.5,
+    "answer_len": 724,
+    "answer_preview": "### 📊 미국 광고비 총액 분석 결과  #### 요약  2019년 1월 1일부터 현재(2026년 3월 6일)까지의 미국 광고비 총액을 조회한 결과, **집계된 광고비 데이터가 존재하지 않거나 모든 광고 채널의 비용이 'null'로 기록되어 총액을 확인할 수 없습니다.**  #### 분석 및 인사이트  *   **데이터 부재 또는 누락:** 2019년 1월"
+  },
+  {
+    "id": "AD-073",
+    "query": "2025년 국가별 TikTok 광고비 순위",
+    "table": "advertising",
+    "category": "country_comparison",
+    "status": "OK",
+    "time": 19.9,
+    "answer_len": 1155,
+    "answer_preview": "### 📊 2025년 국가별 TikTok 광고비 순위 분석  #### 요약  2025년 TikTok 광고비는 인도네시아가 약 **42.4억원**으로 가장 높았으며, 미국이 약 **41.2억원**으로 그 뒤를 이었습니다. 필리핀은 약 **13.3억원**으로 3위를 차지하며 상위권을 형성했습니다. 반면, 한국을 포함한 여러 국가에서는 2025년 TikTok 광"
+  },
+  {
+    "id": "AD-074",
+    "query": "2024년 국가별 Facebook 광고비 분포",
+    "table": "advertising",
+    "category": "country_comparison",
+    "status": "OK",
+    "time": 28.8,
+    "answer_len": 1096,
+    "answer_preview": "### 📊 2024년 국가별 Facebook 광고비 분석  #### 요약  2024년 Facebook 광고비 지출은 **미국**이 약 **11.89억원**으로 압도적인 1위를 차지했습니다. 이어서 인도네시아가 약 3.78억원, 필리핀이 약 1.99억원으로 뒤를 이었으며, 한국은 약 1.53억원으로 4위를 기록했습니다. 말레이시아, 베트남, 캐나다, 러시아,"
+  },
+  {
+    "id": "AD-075",
+    "query": "인도네시아 전체 플랫폼 광고비 합계",
+    "table": "advertising",
+    "category": "country_comparison",
+    "status": "OK",
+    "time": 24.8,
+    "answer_len": 510,
+    "answer_preview": "### 📊 인도네시아 전체 플랫폼 광고비 조회 결과  #### 요약  인도네시아의 전체 플랫폼 광고비 합계는 현재 조회된 데이터가 **없습니다.** 이는 해당 국가에 대한 광고비 데이터가 존재하지 않거나, 모든 광고 플랫폼의 비용이 0으로 기록되었음을 의미합니다.  #### 분석 및 인사이트  *   현재 데이터베이스에서 인도네시아 국가에 해당하는 광고비 "
+  },
+  {
+    "id": "AD-076",
+    "query": "태국 전체 광고비",
+    "table": "advertising",
+    "category": "country_comparison",
+    "status": "OK",
+    "time": 30.9,
+    "answer_len": 664,
+    "answer_preview": "### 📊 태국 전체 광고비 현황  #### 요약  태국 전체 광고비 조회 결과, 현재 집계된 광고비가 **없습니다**. 이는 태국 관련 광고 데이터가 존재하지 않거나, 모든 광고비 항목이 누락되어 있음을 의미합니다.  #### 분석 및 인사이트  *   BigQuery `integrated_advertising_data` 테이블에서 `Country = '"
+  },
+  {
+    "id": "AD-077",
+    "query": "베트남 광고비 플랫폼별 분석",
+    "table": "advertising",
+    "category": "country_comparison",
+    "status": "OK",
+    "time": 22.8,
+    "answer_len": 590,
+    "answer_preview": "### 📊 베트남 광고비 플랫폼별 분석 결과  #### 요약  2026년 03월 06일 기준으로 베트남 지역의 광고비 플랫폼별 데이터를 조회한 결과, **TikTok, Facebook, Shopee, Google, Naver Search, Naver GFA, SingleONE, Kakao Moments, Amazon Ads 등 모든 플랫폼에서 광고비 데이터"
+  },
+  {
+    "id": "AD-078",
+    "query": "말레이시아 2025년 광고비 총액",
+    "table": "advertising",
+    "category": "country_comparison",
+    "status": "OK",
+    "time": 18.8,
+    "answer_len": 587,
+    "answer_preview": "### 📊 말레이시아 2025년 광고비 총액 분석  #### 요약  2025년 말레이시아 광고비 총액은 **데이터가 존재하지 않습니다.** BigQuery 조회 결과, 해당 기간에 대한 광고비 합계가 `null`로 반환되었습니다. 이는 2025년 말레이시아에서 광고 집행이 없었거나, 관련 데이터가 시스템에 기록되지 않았음을 의미합니다.  #### 분석 및 "
+  },
+  {
+    "id": "AD-079",
+    "query": "싱가포르 광고비 월별 추이",
+    "table": "advertising",
+    "category": "country_comparison",
+    "status": "OK",
+    "time": 34.4,
+    "answer_len": 331,
+    "answer_preview": "해당 값은 존재하지 않습니다.  SQL에서 `Country` 필터 조건으로 'Singapore'를 사용했지만, `Country` 컬럼의 유효한 값은 한국어로 저장되어 있습니다. 제공된 유효 값 목록에 'Singapore'는 없으며, '싱가포르'가 존재합니다. 따라서 'Singapore' 조건으로는 데이터를 찾을 수 없었습니다. 가장 유사한 값은 '싱가포르'"
+  },
+  {
+    "id": "AD-080",
+    "query": "일본 광고비 플랫폼별 비교",
+    "table": "advertising",
+    "category": "country_comparison",
+    "status": "OK",
+    "time": 26.4,
+    "answer_len": 861,
+    "answer_preview": "### 📊 일본 광고비 플랫폼별 비교 분석  #### 요약  현재 조회된 데이터에 따르면, 일본 시장의 광고비는 **모든 플랫폼에서 집계되지 않았습니다.** 이는 해당 기간 동안 일본 시장에서 광고 집행이 없었거나, 관련 데이터가 아직 시스템에 반영되지 않았음을 시사합니다.  #### 상세 데이터 | 플랫폼       | 광고비 (KRW) | |:-----"
+  },
+  {
+    "id": "AD-081",
+    "query": "2025년 1월 플랫폼별 총 광고비",
+    "table": "advertising",
+    "category": "platform_comparison",
+    "status": "OK",
+    "time": 29.6,
+    "answer_len": 954,
+    "answer_preview": "### 📊 2025년 1월 플랫폼별 총 광고비 분석  #### 요약  2025년 1월 총 광고비는 약 **10.67억원**으로 집계되었습니다. 이 중 **페이스북**이 약 3.73억원으로 가장 높은 비중을 차지했으며, **쇼피**가 약 3.09억원, **틱톡**이 약 2.94억원으로 그 뒤를 이어 주요 광고 채널로 활용되었습니다.  #### 상세 데이터  "
+  },
+  {
+    "id": "AD-082",
+    "query": "2024년 3월 플랫폼별 광고비 비교",
+    "table": "advertising",
+    "category": "platform_comparison",
+    "status": "OK",
+    "time": 39.2,
+    "answer_len": 1127,
+    "answer_preview": "### 📊 2024년 3월 플랫폼별 광고비 분석  #### 요약  2024년 3월 총 광고비는 약 **5.1억원**으로 집계되었습니다. 이 중 **아마존 광고(Amazon Ads)**가 약 **3.3억원**으로 가장 높은 비중을 차지했으며, **쇼피(Shopee)**가 약 **1.0억원**으로 그 뒤를 이었습니다. 두 플랫폼이 전체 광고비의 약 84%를 차"
+  },
+  {
+    "id": "AD-083",
+    "query": "2025년 6월 플랫폼별 광고비",
+    "table": "advertising",
+    "category": "platform_comparison",
+    "status": "OK",
+    "time": 30.0,
+    "answer_len": 1080,
+    "answer_preview": "### 📊 2025년 6월 플랫폼별 광고비 현황  #### 요약  2025년 6월 총 광고비는 **약 14.53억원**으로 집계되었습니다. 이 중 **페이스북**과 **틱톡**이 각각 약 4.69억원, 약 4.37억원으로 가장 큰 비중을 차지했으며, 쇼피(Shopee)가 약 3.56억원으로 그 뒤를 이었습니다.  #### 상세 데이터  2025년 6월 플랫"
+  },
+  {
+    "id": "AD-084",
+    "query": "2024년 9월 플랫폼별 광고비 순위",
+    "table": "advertising",
+    "category": "platform_comparison",
+    "status": "OK",
+    "time": 43.9,
+    "answer_len": 1215,
+    "answer_preview": "### 📊 2024년 9월 플랫폼별 광고비 순위 분석  #### 요약  2024년 9월 광고비 지출에서 **TikTok**이 약 **2.2억원**으로 가장 높은 비중을 차지하며 1위를 기록했습니다. 이어서 **Shopee**가 약 **1.4억원**으로 2위, **AmazonAds**가 **6,534만원**으로 3위를 차지했습니다. 상위 3개 플랫폼이 전체 "
+  },
+  {
+    "id": "AD-085",
+    "query": "2025년 12월 플랫폼별 광고비 비교",
+    "table": "advertising",
+    "category": "platform_comparison",
+    "status": "OK",
+    "time": 48.1,
+    "answer_len": 1011,
+    "answer_preview": "### 📊 2025년 12월 플랫폼별 광고비 분석  #### 요약  2025년 12월 광고비 지출 분석 결과, **TikTok**이 약 **23.0억원**으로 가장 높은 광고비를 기록했습니다. 다음으로는 Facebook이 약 11.3억원, Shopee가 약 5.1억원으로 뒤를 이었으며, Kakao Moments는 해당 월에 광고비 지출이 없었습니다. 상위 "
+  },
+  {
+    "id": "AD-086",
+    "query": "광고비가 가장 많은 플랫폼은?",
+    "table": "advertising",
+    "category": "platform_comparison",
+    "status": "OK",
+    "time": 44.5,
+    "answer_len": 570,
+    "answer_preview": "### 📊 전체 기간 광고비 지출 최다 플랫폼 분석  #### 요약  2026년 3월 6일 기준, 전체 기간 동안 광고비 지출이 가장 많았던 플랫폼은 **TikTok**으로, 총 **약 174.6억원**을 기록했습니다.  #### 분석 및 인사이트  *   **TikTok의 압도적인 광고비 지출:** 분석 결과, TikTok이 다른 모든 플랫폼 대비 가장 "
+  },
+  {
+    "id": "AD-087",
+    "query": "2025년 플랫폼별 총 광고비 순위",
+    "table": "advertising",
+    "category": "platform_comparison",
+    "status": "OK",
+    "time": 33.9,
+    "answer_len": 1166,
+    "answer_preview": "### 📊 2025년 플랫폼별 총 광고비 순위 분석  #### 요약  2025년 총 광고비는 **TikTok**이 약 **102.7억원**으로 압도적인 1위를 차지했습니다. **Facebook**이 약 **70.9억원**으로 2위, **Shopee**가 약 **42.2억원**으로 3위를 기록하며, 상위 3개 플랫폼이 전체 광고비의 상당 부분을 차지하는 것으"
+  },
+  {
+    "id": "AD-088",
+    "query": "2024년 플랫폼별 광고비 비중",
+    "table": "advertising",
+    "category": "platform_comparison",
+    "status": "OK",
+    "time": 44.2,
+    "answer_len": 1456,
+    "answer_preview": "### 📊 2024년 플랫폼별 광고비 비중 분석  #### 요약  2024년 총 광고비는 **약 80.9억원**으로 집계되었습니다. 이 중 TikTok이 **28.79%**로 가장 높은 비중을 차지했으며, Facebook이 **26.34%**, Shopee가 **21.32%**, Amazon Ads가 **18.64%**로 뒤를 이었습니다. 상위 4개 플랫폼"
+  },
+  {
+    "id": "AD-089",
+    "query": "TikTok vs Facebook 광고비 비교",
+    "table": "advertising",
+    "category": "platform_comparison",
+    "status": "OK",
+    "time": 34.7,
+    "answer_len": 831,
+    "answer_preview": "### 📊 주요 광고 플랫폼별 광고비 분석: TikTok vs Facebook (2019년 1월 이후)  #### 요약  2019년 1월 1일부터 2026년 3월 6일까지의 광고비 데이터를 분석한 결과, TikTok과 Facebook에 대한 총 광고비 지출은 유사한 수준을 보였습니다. 이 기간 동안 TikTok에는 **약 174.59억원**, Faceboo"
+  },
+  {
+    "id": "AD-090",
+    "query": "Google vs 네이버 광고비 비교",
+    "table": "advertising",
+    "category": "platform_comparison",
+    "status": "OK",
+    "time": 35.5,
+    "answer_len": 749,
+    "answer_preview": "### 📊 Google vs. 네이버 광고비 비교 분석  #### 요약  전체 광고 집행 기간 동안 Google 광고비는 **약 21.3억원**으로, 네이버 광고비 **약 3.4억원** 대비 약 6.2배 높은 지출을 보였습니다. 이는 Google 채널에 대한 마케팅 투자가 네이버보다 훨씬 집중되었음을 시사합니다.  #### 상세 데이터  | 광고 채널 | "
+  },
+  {
+    "id": "AD-091",
+    "query": "Shopee vs TikTok 광고비 비교",
+    "table": "advertising",
+    "category": "platform_comparison",
+    "status": "WARN",
+    "time": 61.4,
+    "answer_len": 759,
+    "answer_preview": "### 📊 Shopee vs TikTok 누적 광고비 비교  #### 요약  2019년 1월 1일부터 현재까지의 누적 광고비 데이터를 분석한 결과, TikTok 광고비가 Shopee 광고비보다 **약 2.1배** 높은 것으로 나타났습니다. 총 **TikTok 누적 광고비는 약 174.6억원**이며, **Shopee 누적 광고비는 약 81.8억원**입니다. "
+  },
+  {
+    "id": "AD-092",
+    "query": "국내 플랫폼(네이버, 카카오) vs 해외 플랫폼 광고비",
+    "table": "advertising",
+    "category": "platform_comparison",
+    "status": "OK",
+    "time": 36.6,
+    "answer_len": 950,
+    "answer_preview": "### 📊 국내 vs 해외 플랫폼 광고비 분석 (2019년 1월 1일 이후 누적)  #### 요약  2019년 1월 1일부터 현재까지의 광고비 분석 결과, 해외 플랫폼 광고비가 국내 플랫폼 광고비보다 압도적으로 높은 것으로 나타났습니다. 총 **약 480.41억원**이 해외 플랫폼 광고에 집행되었으며, 국내 플랫폼 광고에는 **약 3.88억원**이 사용되었"
+  },
+  {
+    "id": "AD-093",
+    "query": "2025년 상반기 플랫폼별 광고비",
+    "table": "advertising",
+    "category": "platform_comparison",
+    "status": "OK",
+    "time": 39.2,
+    "answer_len": 1233,
+    "answer_preview": "### 📊 2025년 상반기 플랫폼별 광고비 분석 보고서  #### 요약  2025년 상반기(1월 1일 ~ 6월 30일) 동안 집행된 총 광고비는 **약 76.8억원**으로 집계되었습니다. 이 중 **Facebook**이 약 28.6억원으로 가장 높은 비중을 차지했으며, **TikTok** (약 20.0억원)과 **Shopee** (약 18.8억원)가 그 "
+  },
+  {
+    "id": "AD-094",
+    "query": "2024년 하반기 플랫폼별 광고비",
+    "table": "advertising",
+    "category": "platform_comparison",
+    "status": "OK",
+    "time": 34.7,
+    "answer_len": 910,
+    "answer_preview": "### 📊 2024년 하반기 플랫폼별 광고비 현황  #### 요약  2024년 하반기(7월~12월) 총 광고비는 **약 57.7억원**으로 집계되었습니다. 이 중 **틱톡(약 20.8억원)**, **페이스북(약 18.3억원)**, **쇼피(약 11.8억원)**가 전체 광고비의 대부분을 차지하며 주요 광고 플랫폼으로 활용되었습니다.  #### 상세 데이터  "
+  },
+  {
+    "id": "AD-095",
+    "query": "TikTok 클릭률 알려줘",
+    "table": "advertising",
+    "category": "ctr",
+    "status": "OK",
+    "time": 25.0,
+    "answer_len": 422,
+    "answer_preview": "### 📊 TikTok 클릭률 현황 보고서  #### 요약  현재까지의 TikTok 채널 클릭률(CTR)은 **1.45%**로 집계되었습니다. 이 수치는 TikTok 광고 캠페인의 전반적인 효율성을 나타내는 핵심 지표입니다.  #### 분석 및 인사이트  *   현재 TikTok 채널의 클릭률은 1.45%로 확인되었습니다. 이는 TikTok 광고 노출 대비"
+  },
+  {
+    "id": "AD-096",
+    "query": "Facebook CTR 분석",
+    "table": "advertising",
+    "category": "ctr",
+    "status": "OK",
+    "time": 49.1,
+    "answer_len": 3100,
+    "answer_preview": "📊 Facebook CTR 분석 보고서 (2019년 1월 ~ 2020년 8월)  #### 요약  2019년 1월부터 2020년 8월까지의 Facebook CTR 분석 결과, 초기 6개월간 광고 활동이 없었으며, 2019년 7월부터 2020년 8월까지 총 **2.67억**회의 노출과 **184만**회의 클릭을 통해 평균 **0.69%**의 CTR을 기록했습니"
+  },
+  {
+    "id": "AD-097",
+    "query": "Google 광고 클릭률",
+    "table": "advertising",
+    "category": "ctr",
+    "status": "OK",
+    "time": 38.4,
+    "answer_len": 597,
+    "answer_preview": "### 📊 Google 광고 클릭률 분석  #### 요약  현재까지의 Google 광고 클릭률(CTR)은 **1.24%**로 집계되었습니다. 이는 Google 광고 노출 대비 클릭이 발생한 비율을 나타냅니다.  #### 분석 및 인사이트  *   **광고 효율성 지표:** 클릭률(CTR)은 광고가 사용자에게 얼마나 매력적이고 관련성이 높은지를 나타내는 중요"
+  },
+  {
+    "id": "AD-098",
+    "query": "Shopee 광고 CTR",
+    "table": "advertising",
+    "category": "ctr",
+    "status": "OK",
+    "time": 35.9,
+    "answer_len": 660,
+    "answer_preview": "### 📊 Shopee 광고 통합 CTR 현황  #### 요약  2019년 1월 1일부터 현재(2026년 3월 6일)까지의 Shopee 광고 통합 클릭률(CTR)은 **2.81%**로 집계되었습니다. 이 수치는 해당 기간 동안의 전체 광고 노출 대비 클릭 전환율을 나타냅니다.  #### 분석 및 인사이트  *   **CTR의 의미**: 클릭률(CTR)은 광"
+  },
+  {
+    "id": "AD-099",
+    "query": "네이버 검색 광고 클릭률",
+    "table": "advertising",
+    "category": "ctr",
+    "status": "OK",
+    "time": 30.5,
+    "answer_len": 593,
+    "answer_preview": "### 📊 네이버 검색 광고 클릭률 현황  #### 요약  2019년 1월 1일부터 오늘(2026년 3월 6일)까지의 네이버 검색 광고 클릭률은 **1.09%**로 집계되었습니다. 이는 해당 기간 동안 네이버 검색 광고 노출 수 대비 클릭이 발생한 비율을 나타냅니다.  #### 분석 및 인사이트  *   네이버 검색 광고의 전반적인 클릭률은 약 1.09% "
+  },
+  {
+    "id": "AD-100",
+    "query": "NaverGFA 클릭률 분석",
+    "table": "advertising",
+    "category": "ctr",
+    "status": "OK",
+    "time": 33.9,
+    "answer_len": 653,
+    "answer_preview": "### 📊 NaverGFA 클릭률 분석 보고서  #### 요약  NaverGFA 광고 계정 'skin1004korea'의 전체 기간(2019년 1월 1일 이후) 클릭률은 **0.305%**로 나타났습니다. 이는 총 **298,946회**의 클릭과 **97,874,447회**의 노출을 기반으로 합니다.  #### 분석 및 인사이트  *   **기준 CTR 확"
+  },
+  {
+    "id": "AD-101",
+    "query": "SingleONE 클릭률",
+    "table": "advertising",
+    "category": "ctr",
+    "status": "OK",
+    "time": 27.3,
+    "answer_len": 678,
+    "answer_preview": "### 📊 SingleONE 캠페인 클릭률 분석  #### 요약  2019년 1월 1일부터 현재(2026년 3월 6일)까지 집계된 SingleONE 캠페인의 전체 클릭률(CTR)은 **0.83%**로 나타났습니다.  #### 분석 및 인사이트  *   **전체 기간 클릭률:** SingleONE 캠페인은 2019년 1월 1일부터 2026년 3월 6일까지의 "
+  },
+  {
+    "id": "AD-102",
+    "query": "카카오모먼트 CTR",
+    "table": "advertising",
+    "category": "ctr",
+    "status": "OK",
+    "time": 25.6,
+    "answer_len": 513,
+    "answer_preview": "### 📊 카카오모먼트 전체 CTR 분석 결과  #### 요약  2019년 1월 1일부터 현재까지의 데이터를 기준으로, 카카오모먼트의 전체 CTR(클릭률)은 **0.39%**로 나타났습니다. 이는 광고 노출 대비 클릭이 발생한 비율을 의미합니다.  #### 분석 및 인사이트  *   **전반적인 CTR 수준**: 카카오모먼트의 전체 CTR은 **0.39%*"
+  },
+  {
+    "id": "AD-103",
+    "query": "AmazonAds 클릭률",
+    "table": "advertising",
+    "category": "ctr",
+    "status": "OK",
+    "time": 29.9,
+    "answer_len": 480,
+    "answer_preview": "### 📊 AmazonAds 클릭률 분석  #### 요약  2019년 1월 1일부터 현재까지의 AmazonAds 전체 클릭률은 **0.93%**로 집계되었습니다.  #### 분석 및 인사이트  *   AmazonAds의 전체 클릭률은 0.93%로 나타났습니다. 이는 광고가 노출된 횟수 대비 사용자가 광고를 클릭한 비율을 의미합니다. *   클릭률(CTR)은"
+  },
+  {
+    "id": "AD-104",
+    "query": "플랫폼별 CTR 비교",
+    "table": "advertising",
+    "category": "ctr",
+    "status": "OK",
+    "time": 49.4,
+    "answer_len": 1267,
+    "answer_preview": "### 📊 플랫폼별 클릭률(CTR) 비교 분석  #### 요약  전체 플랫폼의 클릭률(CTR)을 비교한 결과, **Shopee**가 **2.81%**로 가장 높은 효율을 보였습니다. 반면, Naver GFA(0.31%)와 Kakao Moments(0.39%)는 상대적으로 낮은 CTR을 기록했습니다.  #### 상세 데이터  | 플랫폼          | C"
+  },
+  {
+    "id": "AD-105",
+    "query": "2025년 TikTok CTR 추이",
+    "table": "advertising",
+    "category": "ctr",
+    "status": "OK",
+    "time": 36.8,
+    "answer_len": 1195,
+    "answer_preview": "### 📊 2025년 TikTok CTR 월별 추이 분석  #### 요약  2025년 TikTok CTR(클릭률)은 상반기에 비교적 높은 성과를 보였으나, 하반기에는 급격히 하락하는 추이를 나타냈습니다. 특히 **3월에 4.47%로 연중 최고 CTR**을 기록한 반면, **9월에는 0.02%로 연중 최저 CTR**을 기록하며 큰 격차를 보였습니다. 전반적으"
+  },
+  {
+    "id": "AD-106",
+    "query": "2024년 Facebook CTR 월별 변화",
+    "table": "advertising",
+    "category": "ctr",
+    "status": "OK",
+    "time": 35.2,
+    "answer_len": 1199,
+    "answer_preview": "### 📊 2024년 Facebook CTR 월별 변화 분석  #### 요약  2024년 Facebook 광고의 월별 클릭률(CTR)은 **0.38%에서 2.49%** 사이의 변동을 보였습니다. 특히 **4월(2.46%)과 5월(2.49%)**에 가장 높은 CTR을 기록하며 상반기에 강세를 보였으나, 하반기에는 상대적으로 낮은 수준을 유지했습니다.  ###"
+  },
+  {
+    "id": "AD-107",
+    "query": "CTR이 가장 높은 플랫폼",
+    "table": "advertising",
+    "category": "ctr",
+    "status": "OK",
+    "time": 43.5,
+    "answer_len": 473,
+    "answer_preview": "### 📊 CTR이 가장 높은 플랫폼 분석  #### 요약  현재 데이터 기준으로 CTR(클릭률)이 가장 높은 플랫폼은 **Shopee**이며, 해당 플랫폼의 CTR은 **2.11%**로 나타났습니다.  #### 분석 및 인사이트  *   Shopee는 전체 광고 플랫폼 중 가장 높은 CTR을 기록하여, 광고 노출 대비 사용자 클릭 유도에 가장 효과적인 플"
+  },
+  {
+    "id": "AD-108",
+    "query": "국가별 TikTok CTR 비교",
+    "table": "advertising",
+    "category": "ctr",
+    "status": "OK",
+    "time": 34.8,
+    "answer_len": 1773,
+    "answer_preview": "### 📊 국가별 TikTok CTR 비교 분석  #### 요약  TikTok 캠페인 성과 분석 결과, **필리핀**이 **3.40%**로 가장 높은 클릭률(CTR)을 기록하며 탁월한 성과를 보였습니다. 일본(2.59%)과 인도네시아(1.99%)가 그 뒤를 이었으며, 여러 국가에서는 TikTok 캠페인 데이터가 없거나 CTR이 0%로 나타나 추가적인 확인이"
+  },
+  {
+    "id": "AD-109",
+    "query": "인도네시아 Facebook 클릭률",
+    "table": "advertising",
+    "category": "ctr",
+    "status": "OK",
+    "time": 36.2,
+    "answer_len": 657,
+    "answer_preview": "### 📊 인도네시아 Facebook 클릭률 분석  #### 요약  2019년 1월 1일부터 현재(2026년 3월 6일)까지의 데이터를 기준으로 인도네시아 Facebook의 클릭률(CTR)을 분석한 결과, **클릭률이 `null`로 나타났습니다.** 이는 해당 기간 동안 인도네시아 Facebook 광고의 노출수(Impressions) 또는 클릭수(Link "
+  },
+  {
+    "id": "AD-110",
+    "query": "태국 Google 광고 CTR",
+    "table": "advertising",
+    "category": "ctr",
+    "status": "OK",
+    "time": 32.4,
+    "answer_len": 795,
+    "answer_preview": "### 📊 태국 Google 광고 CTR 분석 결과  #### 요약  현재 태국 Google 광고의 CTR(클릭률)은 **집계되지 않았습니다**. 이는 태국 지역에서 Google 광고 노출(Impressions)이 없었거나, 노출 및 클릭(Clicks) 데이터가 모두 존재하지 않아 CTR을 계산할 수 없음을 의미합니다.  #### 분석 및 인사이트  *  "
+  },
+  {
+    "id": "AD-111",
+    "query": "2025년 1분기 플랫폼별 CTR",
+    "table": "advertising",
+    "category": "ctr",
+    "status": "OK",
+    "time": 52.5,
+    "answer_len": 1348,
+    "answer_preview": "### 📊 2025년 1분기 플랫폼별 CTR 분석  #### 요약  2025년 1분기 동안 플랫폼별 CTR을 분석한 결과, **TikTok**이 **3.46%**로 가장 높은 클릭률을 기록하며 뛰어난 사용자 참여도를 보였습니다. 이어서 Shopee가 2.81%, Google이 2.37%로 높은 CTR을 나타냈습니다. 반면, Kakao Moments와 Nav"
+  },
+  {
+    "id": "AD-112",
+    "query": "Shopee 광고 국가별 클릭률 순위",
+    "table": "advertising",
+    "category": "ctr",
+    "status": "OK",
+    "time": 30.2,
+    "answer_len": 1244,
+    "answer_preview": "### 📊 Shopee 광고 국가별 클릭률(CTR) 순위 분석  #### 요약  Shopee 광고 국가별 클릭률(CTR) 분석 결과, **베트남**이 **2.34%**로 가장 높은 CTR을 기록하며 광고 효율성 측면에서 선두를 차지했습니다. 다음으로는 싱가포르(2.25%)와 인도네시아(2.16%)가 높은 CTR을 보였습니다.  #### 상세 데이터  | 순"
+  },
+  {
+    "id": "AD-113",
+    "query": "TikTok 전환수 알려줘",
+    "table": "advertising",
+    "category": "conversion",
+    "status": "OK",
+    "time": 18.8,
+    "answer_len": 495,
+    "answer_preview": "### 📊 TikTok 전환수 현황  #### 요약  2019년 1월 1일부터 2026년 3월 6일 현재까지 집계된 TikTok 총 전환수는 **5,263,445**건입니다.  #### 분석 및 인사이트  *   **누적 전환수 규모:** 2019년부터 현재까지 TikTok을 통해 발생한 전환수가 500만 건을 넘어선 것은 해당 채널이 SKIN1004의 마"
+  },
+  {
+    "id": "AD-114",
+    "query": "Facebook 전환수",
+    "table": "advertising",
+    "category": "conversion",
+    "status": "OK",
+    "time": 20.4,
+    "answer_len": 658,
+    "answer_preview": "### 📊 Facebook 총 전환수 현황  #### 요약  2019년 1월 1일부터 현재(2026년 3월 6일)까지의 데이터를 기준으로, Facebook을 통해 발생한 총 전환수는 **1,966,894건**으로 집계되었습니다. 이는 Facebook 채널이 장기간에 걸쳐 비즈니스 성과에 상당한 기여를 했음을 보여줍니다.  #### 분석 및 인사이트  *  "
+  },
+  {
+    "id": "AD-115",
+    "query": "Google 광고 전환수",
+    "table": "advertising",
+    "category": "conversion",
+    "status": "OK",
+    "time": 32.2,
+    "answer_len": 440,
+    "answer_preview": "### 📊 Google 광고 전환수 분석  #### 요약  2019년 1월 1일부터 2026년 3월 6일까지 집계된 Google 광고 전환수는 총 **364,922건**입니다.  #### 분석 및 인사이트  *   제공된 데이터는 2019년 1월 1일부터 2026년 3월 6일까지의 Google 광고 전환수를 포괄하며, 이는 약 7년 2개월에 걸친 장기적인 "
+  },
+  {
+    "id": "AD-116",
+    "query": "Shopee 광고 전환수",
+    "table": "advertising",
+    "category": "conversion",
+    "status": "OK",
+    "time": 33.0,
+    "answer_len": 524,
+    "answer_preview": "### 📊 Shopee 광고 총 전환수 분석  #### 요약  2019년 1월 1일부터 2026년 3월 6일 현재까지의 Shopee 광고 총 전환수는 **5,089,644**건으로 집계되었습니다. 이는 Shopee 플랫폼을 통한 고객 유치 성과가 매우 높음을 보여줍니다.  #### 분석 및 인사이트  *   Shopee 광고 채널의 누적 전환수가 5백만 건"
+  },
+  {
+    "id": "AD-117",
+    "query": "네이버 검색 광고 전환수",
+    "table": "advertising",
+    "category": "conversion",
+    "status": "OK",
+    "time": 20.6,
+    "answer_len": 504,
+    "answer_preview": "### 📊 네이버 검색 광고 총 전환수 현황  #### 요약  2019년 1월 1일부터 2026년 3월 6일까지의 기간 동안 네이버 검색 광고를 통해 발생한 총 전환수는 **60,473건**입니다.  #### 분석 및 인사이트  *   제공된 데이터에 따르면, 2019년 1월 1일부터 현재(2026년 3월 6일)까지 네이버 검색 광고는 총 60,473건의 "
+  },
+  {
+    "id": "AD-118",
+    "query": "NaverGFA 전환수",
+    "table": "advertising",
+    "category": "conversion",
+    "status": "OK",
+    "time": 27.9,
+    "answer_len": 484,
+    "answer_preview": "### 📊 NaverGFA 총 전환수 분석  #### 요약  현재까지 집계된 NaverGFA의 총 전환수는 **2,269건**입니다. 이는 NaverGFA 광고 캠페인이 실제 구매로 이어지고 있음을 보여주는 중요한 성과 지표입니다.  #### 분석 및 인사이트  *   NaverGFA를 통해 총 **2,269건**의 전환이 발생하여, 해당 광고 채널이 고객"
+  },
+  {
+    "id": "AD-119",
+    "query": "SingleONE 전환수",
+    "table": "advertising",
+    "category": "conversion",
+    "status": "OK",
+    "time": 28.2,
+    "answer_len": 453,
+    "answer_preview": "### 📊 SingleONE 총 전환수 분석  #### 요약  2019년 1월 1일부터 2026년 3월 6일 현재까지 집계된 SingleONE의 총 전환수는 **287,134회**입니다.  #### 분석 및 인사이트  *   **누적 성과 지표:** 2019년 1월 1일 이후 SingleONE과 관련된 마케팅 및 판매 활동의 누적 전환 성과를 보여주는 중요"
+  },
+  {
+    "id": "AD-120",
+    "query": "카카오모먼트 구매수",
+    "table": "advertising",
+    "category": "conversion",
+    "status": "OK",
+    "time": 35.8,
+    "answer_len": 573,
+    "answer_preview": "# 카카오모먼트 구매수  **구매수**는 카카오모먼트 광고를 통해 발생한 **실제 구매 건수**를 의미하며, 광고 성과를 측정하는 핵심 지표입니다.  ---  ## 구매수 측정 방식  - 웹사이트나 앱에 **픽셀 & SDK**(추적 코드)를 설치하여 광고를 통한 사용자의 구매 행동을 추적합니다. - 이를 통해 카카오 광고로 발생한 **회원가입 수, 상품 구"
+  },
+  {
+    "id": "AD-121",
+    "query": "AmazonAds 구매수",
+    "table": "advertising",
+    "category": "conversion",
+    "status": "OK",
+    "time": 30.0,
+    "answer_len": 658,
+    "answer_preview": "# 아마존 광고(Amazon Ads) 구매 수 핵심 지표  아마존 광고의 구매 성과를 측정하는 핵심 지표는 다음과 같습니다.  ---  ## 📊 주요 지표  | 지표 | 설명 | |---|---| | **주문 (Orders)** | 광고 클릭 후 발생한 총 주문 건수 | | **판매 (Sales)** | 광고를 통해 발생한 총 매출액 | | **전환율 (C"
+  },
+  {
+    "id": "AD-122",
+    "query": "플랫폼별 전환수 비교",
+    "table": "advertising",
+    "category": "conversion",
+    "status": "OK",
+    "time": 46.8,
+    "answer_len": 1134,
+    "answer_preview": "### 📊 플랫폼별 전환수 비교  #### 요약  전체 플랫폼 전환수를 비교한 결과, **TikTok**이 **5,263,445건**으로 가장 높은 전환수를 기록했으며, **Shopee**가 **5,089,644건**으로 그 뒤를 이었습니다. 이 두 플랫폼이 전체 전환의 약 91% 이상을 차지하며 압도적인 성과를 보인 반면, Kakao Moments는 0건"
+  },
+  {
+    "id": "AD-123",
+    "query": "2025년 TikTok 전환수 추이",
+    "table": "advertising",
+    "category": "conversion",
+    "status": "OK",
+    "time": 33.9,
+    "answer_len": 1158,
+    "answer_preview": "### 📊 2025년 TikTok 전환수 월별 추이 분석  #### 요약  2025년 TikTok 전환수는 연간 총 **3,316,189건**을 기록하며 꾸준한 성장세를 보였습니다. 특히 연말에 급격한 증가세를 나타내, 12월에는 **907,287건**으로 연중 최고치를 달성했습니다. 이는 연초인 1월의 **137,544건** 대비 약 6.6배 증가한 수치"
+  },
+  {
+    "id": "AD-124",
+    "query": "2024년 Facebook 전환수 월별 변화",
+    "table": "advertising",
+    "category": "conversion",
+    "status": "OK",
+    "time": 36.2,
+    "answer_len": 1182,
+    "answer_preview": "### 📊 2024년 Facebook 월별 전환수 변화 분석  #### 요약  2024년 Facebook 전환수는 연초 **10,044건**에서 시작하여 연말 **75,953건**으로 크게 증가하며 한 해 동안 꾸준한 성장세를 보였습니다. 특히 4분기(10월~12월)에 급격한 증가를 기록하며, 2024년 총 **344,229건**의 Facebook 전환수를"
+  },
+  {
+    "id": "AD-125",
+    "query": "전환수가 가장 높은 플랫폼",
+    "table": "advertising",
+    "category": "conversion",
+    "status": "OK",
+    "time": 49.9,
+    "answer_len": 684,
+    "answer_preview": "### 📊 전환수가 가장 높은 플랫폼 분석  #### 요약  2019년 1월 1일부터 현재(2026년 3월 6일)까지의 데이터를 기준으로 분석한 결과, **TikTok**이 총 **5,263,445건**의 전환수를 기록하며 가장 높은 성과를 보인 플랫폼으로 확인되었습니다.  #### 분석 및 인사이트  *   **TikTok의 압도적인 전환 성과:** Ti"
+  },
+  {
+    "id": "AD-126",
+    "query": "국가별 TikTok 전환수 비교",
+    "table": "advertising",
+    "category": "conversion",
+    "status": "OK",
+    "time": 34.7,
+    "answer_len": 1115,
+    "answer_preview": "### 📊 국가별 TikTok 전환수 현황 분석  #### 요약  TikTok 전환수는 **인도네시아**가 **3,418,369건**으로 압도적인 1위를 차지했으며, 필리핀이 1,274,312건으로 그 뒤를 이었습니다. 상위 2개국을 제외한 다른 국가들은 전환수가 현저히 낮거나 **0건**을 기록했습니다.  #### 상세 데이터 | Country | tot"
+  },
+  {
+    "id": "AD-127",
+    "query": "인도네시아 Shopee 전환수",
+    "table": "advertising",
+    "category": "conversion",
+    "status": "OK",
+    "time": 30.1,
+    "answer_len": 490,
+    "answer_preview": "### 📊 인도네시아 Shopee 전환수 분석 결과  #### 요약  인도네시아 Shopee 채널의 전환수를 조회한 결과, 현재 데이터에서 해당 조건에 맞는 전환수 데이터가 **존재하지 않습니다.**  #### 분석 및 인사이트  *   현재 조회된 데이터셋(`integrated_advertising_data`)에서는 인도네시아 Shopee 채널에 대한 전"
+  },
+  {
+    "id": "AD-128",
+    "query": "태국 Facebook 구매 전환수",
+    "table": "advertising",
+    "category": "conversion",
+    "status": "OK",
+    "time": 42.1,
+    "answer_len": 689,
+    "answer_preview": "### 📊 태국 Facebook 구매 전환수 현황  #### 요약  2026년 03월 06일 기준, 태국에서 발생한 Facebook 웹사이트 구매 전환수는 **0건**으로 집계되었습니다. 현재 데이터에서는 태국 Facebook 채널을 통한 직접적인 구매 전환 기록을 찾을 수 없습니다.  #### 분석 및 인사이트  *   **Facebook 웹사이트 구매 "
+  },
+  {
+    "id": "AD-129",
+    "query": "2025년 1분기 플랫폼별 전환수",
+    "table": "advertising",
+    "category": "conversion",
+    "status": "OK",
+    "time": 39.5,
+    "answer_len": 1180,
+    "answer_preview": "### 📊 2025년 1분기 플랫폼별 전환수 분석  #### 요약  2025년 1분기 동안 총 **1,180,530건**의 전환이 발생했습니다. 이 중 **Shopee가 555,125건**으로 가장 높은 전환수를 기록했으며, **TikTok이 497,053건**으로 그 뒤를 이었습니다. 두 플랫폼이 전체 전환의 대부분을 차지하며 압도적인 성과를 보였습니다."
+  },
+  {
+    "id": "AD-130",
+    "query": "CPA가 가장 낮은 플랫폼은?",
+    "table": "advertising",
+    "category": "conversion",
+    "status": "OK",
+    "time": 33.3,
+    "answer_len": 467,
+    "answer_preview": "CPA(전환당비용)가 가장 낮은 플랫폼은 **특정하기 어렵습니다.** CPA는 고정된 값이 아니라 다양한 변수에 따라 크게 달라지기 때문입니다.  ## CPA에 영향을 미치는 주요 변수  1. **업종 및 제품 특성** 2. **타겟 고객층** 3. **광고 소재의 매력도** 4. **랜딩 페이지 최적화 수준** 5. **입찰 전략**  ## 플랫폼별 참고"
+  },
+  {
+    "id": "AD-131",
+    "query": "플랫폼별 전환 단가 비교",
+    "table": "advertising",
+    "category": "conversion",
+    "status": "OK",
+    "time": 43.9,
+    "answer_len": 1123,
+    "answer_preview": "### 📊 플랫폼별 전환 단가 비교 분석  #### 요약  전환 단가 분석 결과, **Shopee**가 **1,576원**으로 가장 효율적인 플랫폼으로 나타났습니다. 반면, **Naver GFA**는 **53,672원**으로 가장 높은 전환 단가를 보였습니다. KakaoMoments는 전환 단가 데이터가 없어 추가 확인이 필요합니다.  #### 상세 데이터"
+  },
+  {
+    "id": "AD-132",
+    "query": "2025년 TikTok 노출수 추이",
+    "table": "advertising",
+    "category": "impressions",
+    "status": "OK",
+    "time": 28.6,
+    "answer_len": 1208,
+    "answer_preview": "### 📊 2025년 TikTok 노출수 추이 분석  #### 요약  2025년 TikTok 총 노출수는 **2,844,438,794**회로 집계되었습니다. 월별 노출수는 큰 변동성을 보였으며, **11월에 568,005,213회로 최고치**를 기록했으나, **10월에는 5,692,447회로 급격히 감소**하는 특이점이 관찰되었습니다.  #### 상세 데이"
+  },
+  {
+    "id": "AD-133",
+    "query": "Facebook 2024년 노출수 월별 추이",
+    "table": "advertising",
+    "category": "impressions",
+    "status": "OK",
+    "time": 32.8,
+    "answer_len": 1448,
+    "answer_preview": "### 📊 2024년 Facebook 노출수 월별 추이 분석  #### 요약  2024년 Facebook 노출수는 연초 대비 연말에 크게 증가하는 추세를 보였습니다. 특히 **11월과 12월에 폭발적인 증가**를 기록하며 연간 총 노출수의 상당 부분을 차지했습니다. 2024년 연간 총 Facebook 노출수는 **733,896,402건**이었으며, 가장 높"
+  },
+  {
+    "id": "AD-134",
+    "query": "Google 광고 2025년 노출수",
+    "table": "advertising",
+    "category": "impressions",
+    "status": "OK",
+    "time": 29.4,
+    "answer_len": 435,
+    "answer_preview": "### 📊 2025년 Google 광고 노출수 현황  #### 요약  2025년 한 해 동안 Google 광고를 통해 발생한 총 노출수는 **64,857,468회**입니다. 이는 Google 광고가 사용자들에게 매우 광범위하게 노출되었음을 보여줍니다.  #### 분석 및 인사이트  *   2025년 Google 광고는 약 6천 4백만 회 이상의 노출을 기록"
+  },
+  {
+    "id": "AD-135",
+    "query": "Shopee 2024년 노출수 추이",
+    "table": "advertising",
+    "category": "impressions",
+    "status": "OK",
+    "time": 38.0,
+    "answer_len": 1087,
+    "answer_preview": "### 📊 Shopee 2024년 월별 노출수 추이 분석  #### 요약  2024년 Shopee 총 노출수는 **568,369,332회**를 기록했습니다. 특히 하반기로 갈수록 노출수가 크게 증가하여, 12월에는 **124,135,470회**로 연중 최고치를 달성했습니다. 이는 연초 대비 약 4배 이상 증가한 수치입니다.  #### 상세 데이터 | 월 |"
+  },
+  {
+    "id": "AD-136",
+    "query": "네이버 검색 광고 노출수",
+    "table": "advertising",
+    "category": "impressions",
+    "status": "OK",
+    "time": 31.2,
+    "answer_len": 436,
+    "answer_preview": "### 📊 네이버 검색 광고 총 노출수 분석  #### 요약  2019년 1월 1일 이후 현재까지 SKIN1004의 네이버 검색 광고 총 노출수는 **44,016,242회**입니다.  #### 분석 및 인사이트  *   **광범위한 도달:** 2019년 1월 1일 이후 누적된 4천 4백만 회 이상의 노출수는 SKIN1004가 네이버 검색 채널에서 광범위한 "
+  },
+  {
+    "id": "AD-137",
+    "query": "NaverGFA 2025년 노출수 추이",
+    "table": "advertising",
+    "category": "impressions",
+    "status": "OK",
+    "time": 37.6,
+    "answer_len": 1182,
+    "answer_preview": "### 📊 2025년 NaverGFA 노출수 추이 분석  #### 요약  2025년 NaverGFA 총 노출수는 **90,220,343회**를 기록했습니다. 특히 10월에 **22,723,010회**로 연중 최고 노출수를 달성하며, 하반기(7월~12월)에 노출이 집중적으로 이루어진 것으로 나타났습니다.  #### 상세 데이터 | 월      | 총 노출수 "
+  },
+  {
+    "id": "AD-138",
+    "query": "SingleONE 노출수 월별 변화",
+    "table": "advertising",
+    "category": "impressions",
+    "status": "OK",
+    "time": 45.7,
+    "answer_len": 1453,
+    "answer_preview": "### 📊 SingleONE 노출수 월별 변화 분석 보고서  #### 요약  제공된 데이터 프리뷰(2019년 1월 ~ 2020년 8월)에 따르면, SingleONE 노출수는 해당 기간 동안 **0**으로 기록되었습니다. 전체 데이터는 144개월에 걸쳐 존재하지만, 현재 분석은 상위 20개월의 프리뷰를 기반으로 합니다.  #### 상세 데이터  아래 표는 2"
+  },
+  {
+    "id": "AD-139",
+    "query": "카카오모먼트 노출수",
+    "table": "advertising",
+    "category": "impressions",
+    "status": "OK",
+    "time": 33.2,
+    "answer_len": 375,
+    "answer_preview": "### 📊 카카오모먼트 총 노출수  #### 요약  2019년 1월 1일부터 현재까지 집계된 카카오모먼트의 총 노출수는 **110,480,019회**입니다.  #### 분석 및 인사이트  *   해당 수치는 2019년 1월 1일 이후 SKIN1004의 카카오모먼트 광고가 사용자에게 노출된 총 횟수를 나타냅니다. *   이는 카카오모먼트 채널을 통한 광고 도"
+  },
+  {
+    "id": "AD-140",
+    "query": "AmazonAds 노출수 추이",
+    "table": "advertising",
+    "category": "impressions",
+    "status": "OK",
+    "time": 50.2,
+    "answer_len": 2095,
+    "answer_preview": "### 📊 AmazonAds 월별 노출수 추이 분석  #### 요약  ⚠️ 2026년 03월 06일 기준, AmazonAds 노출수 데이터는 2019년 1월부터 2030년 12월까지 총 144개월의 기록을 포함하고 있습니다. (일부 기간은 미래 데이터 포함) 분석 결과, 2019년 1월부터 2020년 8월까지 약 20개월간 AmazonAds 노출수는 **0"
+  },
+  {
+    "id": "AD-141",
+    "query": "플랫폼별 노출수 비교",
+    "table": "advertising",
+    "category": "impressions",
+    "status": "OK",
+    "time": 48.2,
+    "answer_len": 1172,
+    "answer_preview": "### 📊 플랫폼별 총 노출수 비교 분석  #### 요약  전체 기간 동안 플랫폼별 노출수를 비교한 결과, **Facebook이 약 110.1억 회**로 압도적인 노출수를 기록하며 가장 높은 비중을 차지했습니다. 다음으로는 **TikTok이 약 50.5억 회**로 뒤를 이었으며, 전체 노출수는 약 197.6억 회에 달합니다.  #### 상세 데이터 | 플랫"
+  },
+  {
+    "id": "AD-142",
+    "query": "2025년 전체 광고 노출수",
+    "table": "advertising",
+    "category": "impressions",
+    "status": "OK",
+    "time": 43.2,
+    "answer_len": 541,
+    "answer_preview": "### 📊 2025년 전체 광고 노출수 현황  #### 요약  2025년 한 해 동안 SKIN1004의 전체 광고 노출수는 **9,614,371,823회**를 기록했습니다. 이는 TikTok, Facebook, Shopee, Google, NaverSearch, NaverGFA, SingleONE, KakaoMoments, AmazonAds 등 다양한 플랫"
+  },
+  {
+    "id": "AD-143",
+    "query": "노출수가 가장 많은 플랫폼",
+    "table": "advertising",
+    "category": "impressions",
+    "status": "OK",
+    "time": 44.1,
+    "answer_len": 603,
+    "answer_preview": "### 📊 노출수가 가장 많은 플랫폼 분석 보고서  #### 요약  전체 기간 동안 가장 많은 노출수를 기록한 플랫폼은 **Facebook**으로 나타났습니다. Facebook은 총 **11,011,245,892회**의 노출수를 달성하며 다른 플랫폼들을 크게 앞섰습니다.  #### 분석 및 인사이트  *   **Facebook의 압도적인 노출 점유율**: "
+  },
+  {
+    "id": "AD-144",
+    "query": "국가별 TikTok 노출수",
+    "table": "advertising",
+    "category": "impressions",
+    "status": "OK",
+    "time": 34.4,
+    "answer_len": 1170,
+    "answer_preview": "### 📊 국가별 TikTok 노출수 현황  #### 요약  인도네시아가 **25억 3,617만회**로 가장 높은 TikTok 노출수를 기록했으며, 미국이 **17억 6,947만회**로 그 뒤를 이었습니다. 이 두 국가가 전체 노출수의 대부분을 차지하며 TikTok 마케팅의 핵심 시장임을 보여줍니다. 필리핀 또한 **5억 8,047만회**로 높은 노출수를 "
+  },
+  {
+    "id": "AD-145",
+    "query": "인도네시아 Facebook 노출수",
+    "table": "advertising",
+    "category": "impressions",
+    "status": "OK",
+    "time": 31.2,
+    "answer_len": 492,
+    "answer_preview": "### 📊 인도네시아 Facebook 노출수 분석  #### 요약  인도네시아의 Facebook 노출수 데이터를 조회한 결과, 현재 집계된 노출수가 **없습니다**. 이는 해당 국가 및 채널에 대한 데이터가 존재하지 않거나, 모든 값이 누락(null)되었음을 의미합니다.  #### 분석 및 인사이트  *   인도네시아 Facebook 노출수에 대한 데이터가"
+  },
+  {
+    "id": "AD-146",
+    "query": "2025년 1분기 Google 노출수",
+    "table": "advertising",
+    "category": "impressions",
+    "status": "OK",
+    "time": 25.0,
+    "answer_len": 426,
+    "answer_preview": "### 📊 2025년 1분기 Google 노출수 분석  #### 요약  2025년 1분기 Google 노출수는 총 **15,397,575회**를 기록했습니다.  #### 분석 및 인사이트  *   2025년 1분기 동안 Google 채널을 통한 노출수가 1,500만 회 이상으로 집계되어, 해당 기간 동안 Google 광고가 사용자들에게 광범위하게 도달했음을"
+  },
+  {
+    "id": "AD-147",
+    "query": "CPM이 가장 낮은 플랫폼은?",
+    "table": "advertising",
+    "category": "impressions",
+    "status": "OK",
+    "time": 31.3,
+    "answer_len": 525,
+    "answer_preview": "# CPM이 가장 낮은 광고 플랫폼  ## 소셜 미디어 플랫폼 CPM 비교  | 플랫폼 | 평균 CPM | 비고 | |---|---|---| | **X (구 트위터)** | **$1.20** | 2023년 12월 기준, 광고주 이탈로 인한 급감 가능성 | | **스냅챗 (Snapchat)** | **$3.03** | 2024년 초 기준 | | 페이스북 | "
+  },
+  {
+    "id": "AD-148",
+    "query": "플랫폼별 CPM 비교",
+    "table": "advertising",
+    "category": "impressions",
+    "status": "OK",
+    "time": 45.4,
+    "answer_len": 1120,
+    "answer_preview": "### 📊 플랫폼별 CPM 비교 분석  #### 요약  전체 광고 플랫폼 중 **Amazon Ads**의 CPM이 **47,962원**으로 압도적으로 가장 높게 나타났습니다. 반면, **Kakao Moments**는 **393원**으로 가장 낮은 CPM을 기록하며 효율적인 노출 비용을 보였습니다. 그 외 플랫폼들은 1,000원에서 5,000원 사이의 CPM"
+  },
+  {
+    "id": "AD-149",
+    "query": "TikTok 광고비 대비 매출",
+    "table": "advertising",
+    "category": "cost_vs_revenue",
+    "status": "OK",
+    "time": 29.3,
+    "answer_len": 651,
+    "answer_preview": "### 📊 TikTok 광고 성과 분석  #### 요약  2019년 1월 1일부터 현재(2026년 3월 6일)까지의 TikTok 광고 성과를 분석한 결과, 총 광고비는 **약 174.6억원**을 기록했으며, 이를 통해 **약 658.2억원**의 매출을 달성하여 **3.77**의 높은 ROAS를 보였습니다. 이는 TikTok 광고가 투자 대비 매우 효과적인 "
+  },
+  {
+    "id": "AD-150",
+    "query": "Facebook 광고비 대비 매출 분석",
+    "table": "advertising",
+    "category": "cost_vs_revenue",
+    "status": "OK",
+    "time": 21.6,
+    "answer_len": 652,
+    "answer_preview": "### 📊 Facebook 광고 성과 분석 보고서  #### 요약  2019년 1월 1일부터 현재(2026년 3월 6일)까지의 Facebook 광고 데이터를 분석한 결과, 총 광고비는 약 **169.9억원**이었으며, 이를 통해 발생한 총 매출은 약 **130.6억원**으로 집계되었습니다. 광고 투자 수익률(ROAS)은 약 **0.77**을 기록하여, 투자"
+  },
+  {
+    "id": "AD-151",
+    "query": "Google 광고비 대비 전환 매출",
+    "table": "advertising",
+    "category": "cost_vs_revenue",
+    "status": "OK",
+    "time": 34.1,
+    "answer_len": 455,
+    "answer_preview": "### 📊 Google 광고 성과 분석  #### 요약  현재까지 집계된 데이터에 따르면, Google 광고에 **약 21.3억원**을 집행하여 **약 62.4억원**의 전환 매출을 달성했습니다. 이는 투자 대비 **293.5%**의 높은 광고수익률(ROAS)을 기록한 결과입니다.  #### 분석 및 인사이트  *   Google 광고는 투자 대비 매우 높"
+  },
+  {
+    "id": "AD-152",
+    "query": "Shopee 광고비 대비 GMV",
+    "table": "advertising",
+    "category": "cost_vs_revenue",
+    "status": "OK",
+    "time": 41.0,
+    "answer_len": 1431,
+    "answer_preview": "### 📊 Shopee 국가별 광고비 및 GMV 성과 분석  #### 요약  이번 분석은 Shopee 플랫폼을 통한 **6개 국가**의 광고비(Shopee_Expense_KRW) 대비 총 GMV(Shopee_GMV_KRW) 성과를 보여줍니다. **인도네시아**가 약 **425.6억원**의 가장 높은 GMV와 약 **47.1억원**의 광고비를 기록하며 **9"
+  },
+  {
+    "id": "AD-153",
+    "query": "네이버 검색 광고비 대비 전환 매출",
+    "table": "advertising",
+    "category": "cost_vs_revenue",
+    "status": "OK",
+    "time": 34.2,
+    "answer_len": 561,
+    "answer_preview": "### 📊 네이버 검색 광고 성과 분석  #### 요약  네이버 검색 광고는 총 **약 2.17억원**의 광고비를 집행하여 **약 18.51억원**의 전환 매출을 달성했습니다. 이는 **852.6%**의 높은 광고수익률(ROAS)을 기록한 것으로, 투자 대비 매우 효율적인 성과를 보여주고 있습니다.  #### 분석 및 인사이트  *   **높은 광고수익률("
+  },
+  {
+    "id": "AD-154",
+    "query": "NaverGFA 광고비 대비 매출",
+    "table": "advertising",
+    "category": "cost_vs_revenue",
+    "status": "OK",
+    "time": 30.7,
+    "answer_len": 554,
+    "answer_preview": "### 📊 NaverGFA 광고비 및 매출 현황 분석  #### 요약  네이버 GFA 광고에 총 **약 1.27억원**을 집행하여 **7,570만원**의 매출을 달성했습니다. 이에 따른 광고수익률(ROAS)은 **59.5%**로 나타났습니다.  #### 분석 및 인사이트  *   네이버 GFA 광고의 ROAS가 59.5%로, 투자한 광고비 대비 매출이 낮은"
+  },
+  {
+    "id": "AD-155",
+    "query": "SingleONE 광고비 대비 매출",
+    "table": "advertising",
+    "category": "cost_vs_revenue",
+    "status": "OK",
+    "time": 31.0,
+    "answer_len": 648,
+    "answer_preview": "### 📊 SingleONE 광고비 대비 매출 분석  #### 요약  2019년 1월 1일부터 현재까지의 데이터를 기준으로, SingleONE은 총 **약 17.6억원**의 광고비를 집행하여 **약 216.8억원**의 매출을 달성했습니다. 이는 광고비 대비 매출액을 나타내는 광고수익률(ROAS)이 **12.3배**에 달하는 매우 높은 성과입니다.  ####"
+  },
+  {
+    "id": "AD-156",
+    "query": "카카오모먼트 광고비 대비 구매 금액",
+    "table": "advertising",
+    "category": "cost_vs_revenue",
+    "status": "OK",
+    "time": 20.4,
+    "answer_len": 825,
+    "answer_preview": "### 📊 카카오모먼트 광고비 및 구매 금액 분석  #### 요약  2019년 1월 1일부터 현재(2026년 3월 6일)까지 카카오모먼트 광고에 **총 43,464,812원**이 집행되었으나, 해당 광고 채널을 통한 구매 금액은 **0원**으로 집계되었습니다. 이에 따라 카카오모먼트 광고의 ROAS(광고비 대비 구매 금액)는 **0%**입니다.  #### "
+  },
+  {
+    "id": "AD-157",
+    "query": "AmazonAds 광고비 대비 매출",
+    "table": "advertising",
+    "category": "cost_vs_revenue",
+    "status": "OK",
+    "time": 20.2,
+    "answer_len": 595,
+    "answer_preview": "### 📊 AmazonAds 광고비 대비 매출 분석  #### 요약  AmazonAds 광고 활동의 전체 기간 동안 총 광고비는 **약 32.8억원**을 기록했으며, 이를 통해 **약 139.7억원**의 매출을 달성했습니다. 광고비 대비 매출액(ROAS)은 **4.26**으로, 투자 대비 높은 성과를 보였습니다.  #### 분석 및 인사이트  *   Ama"
+  },
+  {
+    "id": "AD-158",
+    "query": "플랫폼별 광고비 대비 매출 비교",
+    "table": "advertising",
+    "category": "cost_vs_revenue",
+    "status": "OK",
+    "time": 50.2,
+    "answer_len": 1841,
+    "answer_preview": "### 📊 플랫폼별 광고비 대비 매출 비교 분석  #### 요약  전체 플랫폼 중 **Shopee**가 약 **681.5억원**의 가장 높은 매출을 기록했으며, **TikTok**이 약 **658.2억원**으로 그 뒤를 이었습니다. ROAS(광고비 대비 매출액) 측면에서는 **SingleONE**이 **12.30**으로 가장 효율적인 성과를 보였으며, **"
+  },
+  {
+    "id": "AD-159",
+    "query": "2025년 TikTok 광고비 vs 매출 추이",
+    "table": "advertising",
+    "category": "cost_vs_revenue",
+    "status": "OK",
+    "time": 44.6,
+    "answer_len": 2000,
+    "answer_preview": "### 📊 2025년 TikTok 광고비 및 매출 추이 분석  #### 요약  2025년 TikTok 광고비는 총 **약 102.7억원**이 집행되었으며, 이를 통해 총 **약 369.6억원**의 매출을 달성했습니다. 연간 평균 ROAS(광고수익률)는 **3.60**을 기록했습니다. 특히 11월과 12월에 광고비와 매출이 크게 증가했으나, ROAS는 연중 "
+  },
+  {
+    "id": "AD-160",
+    "query": "2024년 Facebook 광고비 vs 매출 월별 비교",
+    "table": "advertising",
+    "category": "cost_vs_revenue",
+    "status": "OK",
+    "time": 25.3,
+    "answer_len": 2080,
+    "answer_preview": "### 📊 2024년 Facebook 광고비 및 매출 월별 비교 분석  #### 요약  2024년 한 해 동안 Facebook 광고에 **약 20.3억원**을 지출하여 **약 66.5억원**의 매출을 달성했습니다. 전체 ROAS(광고수익률)는 **327.26%**를 기록했습니다. 특히 11월과 12월에 광고비와 매출이 급증하며 연말 성과를 견인했으나, 해당"
+  },
+  {
+    "id": "AD-161",
+    "query": "광고 효율이 가장 높은 플랫폼은?",
+    "table": "advertising",
+    "category": "cost_vs_revenue",
+    "status": "OK",
+    "time": 53.5,
+    "answer_len": 1602,
+    "answer_preview": "### 📊 광고 효율(ROAS) 분석 보고서 (2019년 1월 1일 이후 전체 기간)  #### 요약  2019년 1월 1일 이후 전체 기간 동안의 광고 효율(ROAS) 분석 결과, **SingleONE** 플랫폼이 **12.30**으로 가장 높은 효율을 보였습니다. SingleONE은 약 **17.6억원**의 광고 비용으로 약 **216.8억원**의 매출"
+  },
+  {
+    "id": "AD-162",
+    "query": "국가별 광고비 대비 매출 분석",
+    "table": "advertising",
+    "category": "cost_vs_revenue",
+    "status": "OK",
+    "time": 47.1,
+    "answer_len": 2067,
+    "answer_preview": "### 📊 국가별 광고비 대비 매출(ROAS) 분석 보고서  #### 요약  전체 국가 중 인도네시아가 약 **174.3억원**의 가장 높은 광고비를 집행했으며, 약 **1,084.1억원**의 매출을 달성하여 **6.22**의 ROAS를 기록했습니다. ROAS 효율 측면에서는 호주(**7.42**), 일본(**7.31**), 필리핀(**6.27**)이 가장"
+  },
+  {
+    "id": "AD-163",
+    "query": "인도네시아 TikTok 광고비 대비 매출",
+    "table": "advertising",
+    "category": "cost_vs_revenue",
+    "status": "OK",
+    "time": 28.5,
+    "answer_len": 445,
+    "answer_preview": "해당 조건에 맞는 데이터가 존재하지 않습니다.  SQL에서 사용된 `Country` 필터 조건인 'Indonesia'가 문제입니다. `Country` 컬럼에는 '미국', '인도네시아', '말레이시아' 등 한국어 국가명이 저장되어 있습니다. 'Indonesia' 대신 **'인도네시아'**로 조건을 변경하여 다시 시도해 보세요.  비슷한 데이터를 조회할 수 있"
+  },
+  {
+    "id": "AD-164",
+    "query": "2025년 전체 광고비 총합",
+    "table": "advertising",
+    "category": "total_cost",
+    "status": "OK",
+    "time": 27.4,
+    "answer_len": 488,
+    "answer_preview": "### 📊 2025년 전체 광고비 총합 분석  #### 요약  2025년 한 해 동안 집행된 전체 광고비 총합은 **약 240.3억원**으로 집계되었습니다. 이 금액은 TikTok, Facebook, Shopee, Google, Naver 검색 및 GFA, SingleONE, Kakao Moments, Amazon Ads 등 다양한 플랫폼의 광고비를 합산한"
+  },
+  {
+    "id": "AD-165",
+    "query": "2024년 전체 광고비",
+    "table": "advertising",
+    "category": "total_cost",
+    "status": "OK",
+    "time": 27.0,
+    "answer_len": 814,
+    "answer_preview": "### 📊 2024년 전체 광고비 현황  #### 요약  2024년 한 해 동안의 총 광고비는 **약 80.9억원**으로 집계되었습니다. 이는 TikTok, Facebook, Shopee, Google, NaverSearch, NaverGFA, SingleONE, KakaoMoments, AmazonAds 등 다양한 광고 채널을 통해 지출된 총액입니다.  "
+  },
+  {
+    "id": "AD-166",
+    "query": "2025년 상반기 전체 광고비",
+    "table": "advertising",
+    "category": "total_cost",
+    "status": "OK",
+    "time": 30.3,
+    "answer_len": 616,
+    "answer_preview": "### 📊 2025년 상반기 전체 광고비 현황  #### 요약  2025년 상반기(1월 1일 ~ 6월 30일) 동안 집행된 전체 광고비는 **약 76.8억원**으로 집계되었습니다. 이는 해당 기간 동안 SKIN1004의 마케팅 활동에 대한 총 투자 규모를 나타냅니다.  #### 상세 데이터  (단일 수치이므로 상세 데이터 섹션은 생략합니다.)  #### 분"
+  },
+  {
+    "id": "AD-167",
+    "query": "2024년 하반기 전체 광고비 합계",
+    "table": "advertising",
+    "category": "total_cost",
+    "status": "OK",
+    "time": 27.0,
+    "answer_len": 554,
+    "answer_preview": "### 📊 2024년 하반기 전체 광고비 합계 분석  #### 요약  2024년 하반기(7월 1일 ~ 12월 31일) 동안 SKIN1004의 전체 광고비 합계는 **약 57.71억원**으로 집계되었습니다. 이는 다양한 광고 채널을 통해 집행된 총 광고 비용입니다.  #### 분석 및 인사이트  *   2024년 하반기 동안 SKIN1004는 TikTok, "
+  },
+  {
+    "id": "AD-168",
+    "query": "2025년 1분기 전체 광고비",
+    "table": "advertising",
+    "category": "total_cost",
+    "status": "OK",
+    "time": 30.0,
+    "answer_len": 481,
+    "answer_preview": "### 📊 2025년 1분기 전체 광고비 분석  #### 요약  2025년 1분기 전체 광고비는 약 **37.2억원**으로 집계되었습니다. 이는 TikTok, Facebook, Shopee, Google, NaverSearch, NaverGFA, SingleONE, KakaoMoments, Amazon Ads 등 다양한 채널에서 집행된 광고비의 총합입니다."
+  },
+  {
+    "id": "AD-169",
+    "query": "2024년 4분기 전체 광고비",
+    "table": "advertising",
+    "category": "total_cost",
+    "status": "OK",
+    "time": 24.3,
+    "answer_len": 481,
+    "answer_preview": "### 📊 2024년 4분기 전체 광고비 분석  #### 요약  2024년 4분기(10월~12월) 동안 집행된 전체 광고비는 **약 43.0억원**으로 집계되었습니다. 이는 TikTok, Facebook, Shopee, Google, Naver 검색/GFA, SingleONE, Kakao Moments, Amazon Ads 등 모든 통합 광고 채널의 비용을"
+  },
+  {
+    "id": "AD-170",
+    "query": "2025년 1월 전체 광고비 합계",
+    "table": "advertising",
+    "category": "total_cost",
+    "status": "OK",
+    "time": 37.2,
+    "answer_len": 448,
+    "answer_preview": "### 📊 2025년 1월 전체 광고비 합계  #### 요약  2025년 1월 한 달간 SKIN1004의 전체 광고비는 약 **10.67억원**으로 집계되었습니다.  #### 분석 및 인사이트  *   2025년 1월에 총 10억 원이 넘는 광고비가 지출되었으며, 이는 해당 기간 동안 활발한 마케팅 활동이 이루어졌음을 보여줍니다. *   다양한 채널(Tik"
+  },
+  {
+    "id": "AD-171",
+    "query": "월별 전체 광고비 추이",
+    "table": "advertising",
+    "category": "total_cost",
+    "status": "OK",
+    "time": 48.6,
+    "answer_len": 1763,
+    "answer_preview": "### 📊 월별 전체 광고비 추이 분석 (2019년 1월 ~ 2020년 8월 프리뷰)  #### 요약  제공된 2019년 1월부터 2020년 8월까지의 월별 전체 광고비 데이터(전체 144개월 중 20개월 프리뷰)에 따르면, 광고비는 2019년 중반부터 급격히 증가하여 2020년 5월에 **약 2.65억원**으로 최고치를 기록했습니다. 초기 5개월간은 광고"
+  },
+  {
+    "id": "AD-172",
+    "query": "2024년 대비 2025년 광고비 증감률",
+    "table": "advertising",
+    "category": "total_cost",
+    "status": "OK",
+    "time": 43.1,
+    "answer_len": 912,
+    "answer_preview": "### 📊 2024년 대비 2025년 광고비 증감률 분석  #### 요약  2025년 총 광고비는 약 **240.30억원**으로, 2024년 총 광고비 약 **80.90억원** 대비 **197.03%** 증가했습니다. 이는 2024년에 비해 2025년에 광고비 지출이 약 3배 가까이 급증했음을 의미합니다.  #### 상세 데이터  | 구분 | 2024년 총"
+  },
+  {
+    "id": "AD-173",
+    "query": "광고비가 가장 많이 집행된 달은?",
+    "table": "advertising",
+    "category": "total_cost",
+    "status": "WARN",
+    "time": 62.5,
+    "answer_len": 1009,
+    "answer_preview": "### 📊 월별 광고비 집행 현황 분석  #### 요약  광고비가 가장 많이 집행된 달은 **2025년 11월**로, 총 **약 58.9억원**이 집행되었습니다. 이는 분석된 전체 기간 중 가장 높은 광고비 지출입니다. 2026년 3월 데이터는 현재 6일까지의 집계이므로, 해당 월의 전체 광고비는 더 높을 수 있으며 다른 월과 직접 비교 시 유의해야 합니다"
+  },
+  {
+    "id": "AD-174",
+    "query": "2025년 TikTok 인도네시아 광고비 월별 추이",
+    "table": "advertising",
+    "category": "combined",
+    "status": "OK",
+    "time": 32.7,
+    "answer_len": 343,
+    "answer_preview": "해당 조건에 맞는 데이터가 존재하지 않습니다.  SQL 쿼리에서 `EXTRACT(YEAR FROM Date) = 2025` 조건이 문제의 원인으로 보입니다. 일반적으로 광고 데이터는 과거 또는 현재 시점의 실적을 기록하므로, 아직 도래하지 않은 2025년 데이터는 존재하지 않을 가능성이 높습니다. `Country = 'Indonesia'` 값은 유효한 값 "
+  },
+  {
+    "id": "AD-175",
+    "query": "2024년 Facebook 태국 광고비 및 전환수",
+    "table": "advertising",
+    "category": "combined",
+    "status": "OK",
+    "time": 35.3,
+    "answer_len": 390,
+    "answer_preview": "### 📊 2024년 Facebook 태국 광고비 및 전환수 조회 결과  #### 요약  2024년 Facebook 태국 광고비 및 전환수 데이터를 조회한 결과, 해당 기간 및 채널에 대한 데이터가 존재하지 않습니다.  #### 분석 및 인사이트  *   2024년 태국 Facebook 채널의 광고비(Facebook_Cost) 및 웹사이트 구매 전환수(Fa"
+  },
+  {
+    "id": "AD-176",
+    "query": "2025년 Google 미국 ROAS",
+    "table": "advertising",
+    "category": "combined",
+    "status": "OK",
+    "time": 27.5,
+    "answer_len": 723,
+    "answer_preview": "### 📊 2025년 Google 미국 ROAS 분석 결과  #### 요약  2025년 Google 미국 ROAS는 **데이터를 찾을 수 없거나 계산할 수 없습니다.** 이는 해당 기간 동안 Google 광고 비용 또는 전환 가치 데이터가 존재하지 않거나, 조회된 데이터가 없기 때문일 수 있습니다.  #### 분석 및 인사이트  *   **데이터 부재 확인"
+  },
+  {
+    "id": "AD-177",
+    "query": "2024년 Shopee 베트남 광고비 대비 GMV",
+    "table": "advertising",
+    "category": "combined",
+    "status": "OK",
+    "time": 24.3,
+    "answer_len": 496,
+    "answer_preview": "### 📊 2024년 Shopee 베트남 광고비 및 GMV 현황  #### 요약  2024년 Shopee 베트남 채널의 광고비(Shopee_Expense_KRW) 및 GMV(Shopee_GMV_KRW) 데이터를 조회한 결과, 해당 기간에 대한 정보가 **존재하지 않습니다.**  #### 분석 및 인사이트  *   2024년 Shopee 베트남 채널에 대한 "
+  },
+  {
+    "id": "AD-178",
+    "query": "인도네시아 TikTok vs Facebook 광고비 비교",
+    "table": "advertising",
+    "category": "combined",
+    "status": "OK",
+    "time": 27.8,
+    "answer_len": 575,
+    "answer_preview": "### 📊 인도네시아 TikTok 및 Facebook 광고비 비교 분석  #### 요약  인도네시아 시장에서 TikTok과 Facebook의 광고비 데이터는 현재 **조회되지 않습니다.** 두 플랫폼 모두 광고비 지출 내역이 없어 비교 분석이 어렵습니다.  #### 상세 데이터 | 플랫폼 | 광고비 | |:---|---:| | TikTok | 데이터 없음 "
+  },
+  {
+    "id": "AD-179",
+    "query": "태국 Shopee vs TikTok ROAS 비교",
+    "table": "advertising",
+    "category": "combined",
+    "status": "OK",
+    "time": 38.0,
+    "answer_len": 919,
+    "answer_preview": "### 📊 태국 Shopee 및 TikTok ROAS 비교 분석 (데이터 부족)  #### 요약  태국 시장에서 Shopee와 TikTok 플랫폼의 ROAS(광고 수익률)를 비교 분석한 결과, **두 플랫폼 모두 ROAS를 계산할 수 없었습니다.** 이는 광고 비용 또는 매출 데이터가 누락되었거나 0으로 기록되어 `SAFE_DIVIDE` 함수가 `null`"
+  },
+  {
+    "id": "AD-180",
+    "query": "2025년 1분기 인도네시아 전체 플랫폼 광고비",
+    "table": "advertising",
+    "category": "combined",
+    "status": "OK",
+    "time": 31.8,
+    "answer_len": 508,
+    "answer_preview": "### 📊 2025년 1분기 인도네시아 전체 플랫폼 광고비 분석 결과  #### 요약  2025년 1분기 인도네시아 전체 플랫폼 광고비 조회 결과, 해당 기간에 대한 **데이터가 존재하지 않습니다.** 따라서 집계된 광고비는 **0원**입니다.  #### 분석 및 인사이트  *   **데이터 부재 확인:** 2025년 1분기 인도네시아 지역의 통합 광고 데"
+  },
+  {
+    "id": "AD-181",
+    "query": "필리핀 Facebook 광고 노출수 및 클릭수",
+    "table": "advertising",
+    "category": "combined",
+    "status": "OK",
+    "time": 36.0,
+    "answer_len": 511,
+    "answer_preview": "### 📊 필리핀 Facebook 광고 노출수 및 클릭수 분석  #### 요약  현재 조회된 데이터에 따르면, 필리핀 Facebook 광고의 노출수 및 클릭수는 **집계된 데이터가 없습니다.** (모두 `null` 값으로 확인됨). 이는 해당 지표에 대한 데이터가 존재하지 않거나, 아직 시스템에 반영되지 않았음을 의미합니다.  #### 분석 및 인사이트  "
+  },
+  {
+    "id": "AD-182",
+    "query": "말레이시아 Google 전환수 월별 추이",
+    "table": "advertising",
+    "category": "combined",
+    "status": "OK",
+    "time": 31.2,
+    "answer_len": 392,
+    "answer_preview": "요청하신 조건에 해당하는 데이터가 존재하지 않습니다. SQL에 사용된 'Malaysia' 값은 유효한 값 목록에 없습니다.  SQL 쿼리의 `WHERE Country = 'Malaysia'` 조건이 문제입니다. `Country` 컬럼의 유효한 값 목록에는 'Malaysia'가 없으며, 대신 '말레이시아'가 존재합니다. 따라서 `Country = '말레이시아"
+  },
+  {
+    "id": "AD-183",
+    "query": "싱가포르 TikTok 광고 성과 요약",
+    "table": "advertising",
+    "category": "combined",
+    "status": "OK",
+    "time": 34.0,
+    "answer_len": 656,
+    "answer_preview": "### 📊 싱가포르 TikTok 광고 성과 요약 (데이터 없음)  #### 요약  **싱가포르 지역의 TikTok 광고 성과 데이터는 현재 조회되지 않습니다.** 실행된 쿼리 결과, TikTok 광고 비용, 노출, 클릭, 전환, 매출 등 모든 지표가 `null`로 확인되어, 해당 조건에 맞는 데이터가 존재하지 않거나 집계되지 않았습니다.  #### 분석 및"
+  },
+  {
+    "id": "AD-184",
+    "query": "2025년 베트남 전체 광고비 및 전환수",
+    "table": "advertising",
+    "category": "combined",
+    "status": "OK",
+    "time": 38.3,
+    "answer_len": 738,
+    "answer_preview": "### 📊 2025년 베트남 전체 광고비 및 전환수 조회 결과  #### 요약  2025년 베트남 지역의 전체 광고비와 전환수 데이터는 현재 조회되지 않습니다. 실행된 쿼리 결과, 해당 기간 및 국가에 대한 광고비와 전환수 모두 **데이터가 없는 것(null)**으로 확인되었습니다.  #### 상세 데이터  (조회된 데이터가 없어 해당 섹션은 생략합니다.)"
+  },
+  {
+    "id": "AD-185",
+    "query": "일본 AmazonAds 광고비 및 ROAS",
+    "table": "advertising",
+    "category": "combined",
+    "status": "OK",
+    "time": 34.4,
+    "answer_len": 362,
+    "answer_preview": "현재 SQL 쿼리 조건으로는 조회되는 데이터가 없습니다.  SQL 쿼리의 `WHERE Country = 'Japan'` 조건이 문제입니다. `Country` 컬럼은 국가명을 한국어로 저장하고 있으며, 유효 값 목록에 따르면 '일본'으로 입력해야 합니다. 현재 쿼리에서는 영어 'Japan'을 사용하고 있어 일치하는 데이터가 없습니다. 'Japan' 대신 '일"
+  },
+  {
+    "id": "AD-186",
+    "query": "한국 네이버 검색 + NaverGFA 합산 광고비",
+    "table": "advertising",
+    "category": "combined",
+    "status": "OK",
+    "time": 36.9,
+    "answer_len": 581,
+    "answer_preview": "### 📊 한국 네이버 검색 및 NaverGFA 합산 광고비 현황  #### 요약  한국 내 네이버 검색 및 NaverGFA 합산 광고비는 현재 **데이터가 존재하지 않거나 집계할 수 없는 상태**입니다. 조회된 결과에 따르면, 해당 광고 채널의 비용 데이터가 유효하지 않거나 기록되지 않은 것으로 확인됩니다.  #### 분석 및 인사이트  *   현재 조회"
+  },
+  {
+    "id": "AD-187",
+    "query": "한국 카카오모먼트 + SingleONE 합산 광고비",
+    "table": "advertising",
+    "category": "combined",
+    "status": "OK",
+    "time": 33.8,
+    "answer_len": 699,
+    "answer_preview": "### 📊 한국 카카오모먼트 및 SingleONE 합산 광고비 분석  #### 요약  2019년 1월 1일 이후 한국에서 카카오모먼트와 SingleONE의 합산 광고비는 **데이터가 존재하지 않거나 0으로 집계**되었습니다. 현재 조회된 데이터로는 해당 기간 동안 한국에서 두 채널의 광고비 내역을 확인할 수 없습니다.  #### 분석 및 인사이트  *   "
+  },
+  {
+    "id": "AD-188",
+    "query": "2025년 3월 인도네시아 TikTok 광고 성과",
+    "table": "advertising",
+    "category": "combined",
+    "status": "OK",
+    "time": 29.6,
+    "answer_len": 529,
+    "answer_preview": "### 📊 2025년 3월 인도네시아 TikTok 광고 성과 분석  #### 요약  2025년 3월 인도네시아 TikTok 광고 성과 데이터는 **현재 조회되지 않습니다.** 요청하신 기간 및 국가, 채널에 대한 데이터가 시스템에 존재하지 않거나 집계되지 않았습니다.  #### 분석 및 인사이트  *   **데이터 부재 확인:** 2025년 3월 인도네시아"
+  },
+  {
+    "id": "AD-189",
+    "query": "2024년 6월 태국 Facebook 광고 성과",
+    "table": "advertising",
+    "category": "combined",
+    "status": "OK",
+    "time": 43.0,
+    "answer_len": 599,
+    "answer_preview": "### 📊 2024년 6월 태국 Facebook 광고 성과 조회 결과  #### 요약  2024년 6월 태국 Facebook 광고 성과를 조회한 결과, 해당 기간에 대한 데이터가 존재하지 않습니다. 요청하신 모든 지표(총 Facebook 광고 비용, 총 노출수, 총 링크 클릭수, 총 웹사이트 구매, 총 웹사이트 구매 전환 가치)가 **null**로 확인되었"
+  },
+  {
+    "id": "AD-190",
+    "query": "TikTok 광고주별 광고비 순위",
+    "table": "advertising",
+    "category": "advertiser",
+    "status": "OK",
+    "time": 42.4,
+    "answer_len": 1695,
+    "answer_preview": "### 📊 TikTok 광고주별 누적 광고비 순위 (2019년 1월 1일 이후)  #### 요약  2019년 1월 1일부터 현재(2026년 3월 6일)까지의 TikTok 광고비 집계 결과, **'[IDN] SKIN1004_Shop'**이 약 **76.1억원**으로 가장 높은 광고비를 지출했으며, **'[USA] SKIN1004'**가 약 **55.3억원**"
+  },
+  {
+    "id": "AD-191",
+    "query": "Facebook 계정별 광고비 비교",
+    "table": "advertising",
+    "category": "advertiser",
+    "status": "OK",
+    "time": 42.5,
+    "answer_len": 1851,
+    "answer_preview": "### 📊 Facebook 계정별 누적 광고비 현황  #### 요약  전체 Facebook 계정 중 **'[SK-US]Shopify-자사몰'**이 약 **40.4억원**으로 가장 높은 누적 광고비를 지출했습니다. 총 59개의 Facebook 계정에서 광고비가 발생했으며, 상위 3개 계정([SK-US]Shopify-자사몰, [SK-ID]Shopee-Local"
+  },
+  {
+    "id": "AD-192",
+    "query": "Google 계정별 광고비",
+    "table": "advertising",
+    "category": "advertiser",
+    "status": "OK",
+    "time": 48.3,
+    "answer_len": 2159,
+    "answer_preview": "### 📊 Google 계정별 총 광고비 현황  #### 요약  2019년 1월 1일부터 현재(2026년 3월 6일)까지의 Google 계정별 총 광고비는 **약 21.3억원**으로 집계되었습니다. 이 중 'SKIN1004 USA' 계정이 **약 11.6억원**을 지출하며 전체의 절반 이상을 차지했고, 다음으로 'SKIN1004 Korea'가 **약 2.5"
+  },
+  {
+    "id": "AD-193",
+    "query": "Shopee 숍별 광고비 순위",
+    "table": "advertising",
+    "category": "advertiser",
+    "status": "OK",
+    "time": 53.1,
+    "answer_len": 1661,
+    "answer_preview": "### 📊 Shopee 숍별 누적 광고비 순위  #### 요약  2019년 1월 1일부터 현재(2026년 3월 6일)까지의 Shopee 숍별 누적 광고비 분석 결과, 'skin1004officialstore'가 약 **46.2억원**으로 압도적인 1위를 차지했습니다. 상위 3개 숍('skin1004officialstore', 'skin1004_ph', 's"
+  },
+  {
+    "id": "AD-194",
+    "query": "네이버 검색 계정별 광고비",
+    "table": "advertising",
+    "category": "advertiser",
+    "status": "OK",
+    "time": 18.9,
+    "answer_len": 1077,
+    "answer_preview": "### 📊 네이버 검색 계정별 총 광고비 현황  #### 요약  네이버 검색 광고비 분석 결과, 'skin1004k' 계정이 약 **1.93억원**으로 가장 높은 광고비를 지출했습니다. 다음으로 'zombiebeauty' 계정이 **2,456만원**을 지출하며 뒤를 이었습니다. 전체적으로 'skin1004k' 계정에 광고비 지출이 집중되어 있음을 확인할 수"
+  },
+  {
+    "id": "AD-195",
+    "query": "NaverGFA 계정별 광고비 비교",
+    "table": "advertising",
+    "category": "advertiser",
+    "status": "OK",
+    "time": 18.5,
+    "answer_len": 951,
+    "answer_preview": "### 📊 NaverGFA 계정별 광고비 현황 분석  #### 요약  2019년 1월 1일부터 현재(2026년 3월 6일)까지 NaverGFA 광고비는 'skin1004korea' 계정에서 **약 1.27억원**이 집행되어 대부분의 광고 활동이 해당 계정을 통해 이루어졌습니다. 다른 계정에서는 유의미한 광고비 집행이 확인되지 않았습니다.  #### 상세 데"
+  },
+  {
+    "id": "AD-196",
+    "query": "TikTok 광고주별 ROAS 순위",
+    "table": "advertising",
+    "category": "advertiser",
+    "status": "OK",
+    "time": 50.5,
+    "answer_len": 2245,
+    "answer_preview": "### 📊 TikTok 광고주별 ROAS 순위 분석  #### 요약  TikTok 광고주별 ROAS(광고 수익률) 분석 결과, 'SKIN1004 Indonesia 2nd Acc'가 **24.07**로 가장 높은 ROAS를 기록하며 압도적인 광고 효율성을 보였습니다. 상위 3개 광고주는 모두 6.45 이상의 높은 ROAS를 나타냈으며, 특히 인도네시아 계정들"
+  },
+  {
+    "id": "AD-197",
+    "query": "Facebook 계정별 전환수 비교",
+    "table": "advertising",
+    "category": "advertiser",
+    "status": "OK",
+    "time": 26.0,
+    "answer_len": 1462,
+    "answer_preview": "### 📊 Facebook 계정별 전환수 현황 분석  #### 요약  2026년 03월 06일 기준으로, 전체 59개 Facebook 계정 중 'SKIN1004-KR' 계정이 **84,990건**으로 가장 높은 전환수를 기록했습니다. 이어서 '[SK-US]Shopify-자사몰'이 **69,393건**으로 두 번째로 높은 성과를 보였으며, 이 두 계정이 전체"
+  },
+  {
+    "id": "AD-198",
+    "query": "Shopee 숍별 GMV 순위",
+    "table": "advertising",
+    "category": "advertiser",
+    "status": "OK",
+    "time": 46.4,
+    "answer_len": 1750,
+    "answer_preview": "### 📊 Shopee 숍별 GMV 순위  #### 요약  2019년 1월 1일부터 현재(2026년 3월 6일)까지의 누적 데이터 기준으로, Shopee 숍별 GMV 순위 분석 결과, 'skin1004officialstore'가 약 **419.8억원**의 GMV로 압도적인 1위를 차지했습니다. 이어서 'skin1004_ph'가 약 **121.8억원**으로 "
+  },
+  {
+    "id": "AD-199",
+    "query": "Google 계정별 CTR 비교",
+    "table": "advertising",
+    "category": "advertiser",
+    "status": "OK",
+    "time": 25.2,
+    "answer_len": 2421,
+    "answer_preview": "### 📊 Google 계정별 클릭률(CTR) 비교 분석  #### 요약  Google 계정별 클릭률(CTR) 분석 결과, 'Commonlabs Malaysia Mall' 계정이 **10.53%**로 압도적으로 가장 높은 CTR을 기록했습니다. 다음으로는 'SKIN1004 _Malaysia_Shopee'가 **3.35%**, 'SKIN1004 Philipp"
+  },
+  {
+    "id": "AD-200",
+    "query": "카카오모먼트 계정별 광고비",
+    "table": "advertising",
+    "category": "advertiser",
+    "status": "OK",
+    "time": 29.8,
+    "answer_len": 768,
+    "answer_preview": "### 📊 카카오모먼트 계정별 광고비 분석  #### 요약  2019년 1월 1일부터 현재(2026년 3월 6일)까지 카카오모먼트 광고비는 총 **43,464,812원**이 집행되었습니다. 이 중 대부분은 '스킨1004' 계정에서 발생했으며, 다른 계정의 광고비는 집계되지 않았습니다.  #### 상세 데이터 | 카카오모먼트 계정명 | 총 광고비 (원) | "
+  },
+  {
+    "id": "AD-201",
+    "query": "AmazonAds 계정별 광고비 순위",
+    "table": "advertising",
+    "category": "advertiser",
+    "status": "OK",
+    "time": 46.9,
+    "answer_len": 1028,
+    "answer_preview": "### 📊 AmazonAds 계정별 광고비 순위 분석  #### 요약  AmazonAds 계정별 광고비 분석 결과, **'skin1004amazon' 계정이 약 27.30억원**으로 가장 높은 광고비를 집행하며 압도적인 1위를 차지했습니다. 다음으로 'FOR_FOREIGNER' 계정이 약 4.17억원, 'skin1004auamz' 계정이 약 1.34억원을 "
+  },
+  {
+    "id": "AD-202",
+    "query": "SingleONE 계정별 광고비",
+    "table": "advertising",
+    "category": "advertiser",
+    "status": "OK",
+    "time": 43.1,
+    "answer_len": 553,
+    "answer_preview": "### 📊 SingleONE 계정별 광고비 현황  #### 요약  현재 데이터 기준, SingleONE 계정 중 **SKIN1004 OFFICIAL** 계정의 총 광고비는 **약 17.6억원**으로 집계되었습니다. 이는 현재 데이터에서 유일하게 광고비가 확인된 SingleONE 계정입니다.  #### 분석 및 인사이트  *   **단일 계정 집중:** 현재"
+  },
+  {
+    "id": "AD-203",
+    "query": "TikTok 광고주별 노출수 TOP 10",
+    "table": "advertising",
+    "category": "advertiser",
+    "status": "OK",
+    "time": 45.0,
+    "answer_len": 1514,
+    "answer_preview": "### 📊 TikTok 광고주별 노출수 TOP 10 분석  #### 요약  TikTok 광고주 중 **[IDN] SKIN1004_Shop**이 **약 24.8억회**의 노출수로 압도적인 1위를 차지했습니다. 이어서 **[USA] SKIN1004**가 **약 17.5억회**의 노출수로 2위를 기록하며, 상위 2개 광고주가 전체 노출수의 상당 부분을 차지하는 "
+  },
+  {
+    "id": "AD-204",
+    "query": "Facebook 계정별 클릭수 순위",
+    "table": "advertising",
+    "category": "advertiser",
+    "status": "OK",
+    "time": 44.8,
+    "answer_len": 2038,
+    "answer_preview": "### 📊 Facebook 계정별 총 클릭수 순위  #### 요약  전체 Facebook 계정 중 **[SK-ID]Shopee-Local-2** 계정이 총 **30,278,089** 클릭으로 압도적인 1위를 차지했습니다. 2위인 \"(X)SKIN1004_Shopee_ID(구버전)\" 계정의 **16,694,792** 클릭과도 큰 격차를 보이며, 상위 계정들이 "
+  },
+  {
+    "id": "AD-205",
+    "query": "2025년 TikTok 클릭수 합계",
+    "table": "advertising",
+    "category": "clicks",
+    "status": "OK",
+    "time": 28.6,
+    "answer_len": 421,
+    "answer_preview": "### 📊 2025년 TikTok 총 클릭수 분석  #### 요약  2025년 한 해 동안 TikTok 채널의 총 클릭수는 **32,217,440회**로 집계되었습니다.  #### 분석 및 인사이트  *   2025년 TikTok 채널에서 **3천 2백만 회 이상의 클릭**이 발생하여, 해당 플랫폼을 통한 사용자 참여 및 트래픽 유입이 매우 활발했음을 보여"
+  },
+  {
+    "id": "AD-206",
+    "query": "Facebook 2024년 링크 클릭수",
+    "table": "advertising",
+    "category": "clicks",
+    "status": "OK",
+    "time": 28.6,
+    "answer_len": 453,
+    "answer_preview": "### 📊 2024년 Facebook 링크 클릭수 분석  #### 요약  2024년 한 해 동안 Facebook을 통한 총 링크 클릭수는 **8,357,719회**로 집계되었습니다. 이는 Facebook 채널의 사용자 참여도를 나타내는 중요한 지표입니다.  #### 분석 및 인사이트  *   2024년 Facebook 링크 클릭수는 **8,357,719회*"
+  },
+  {
+    "id": "AD-207",
+    "query": "Google 광고 클릭수 월별 추이",
+    "table": "advertising",
+    "category": "clicks",
+    "status": "OK",
+    "time": 46.0,
+    "answer_len": 1220,
+    "answer_preview": "### 📊 Google 광고 클릭수 월별 추이 분석 보고서  #### 요약  2019년 1월부터 2020년 8월까지의 Google 광고 클릭수 월별 추이를 분석한 결과, **모든 기간 동안 월별 Google 광고 클릭수가 0으로 집계**되었습니다. 현재 2026년 3월 6일 기준으로 제공된 데이터는 2020년 8월까지만 포함되어 있어 최신 추이를 파악하기 "
+  },
+  {
+    "id": "AD-208",
+    "query": "Shopee 클릭수 국가별 비교",
+    "table": "advertising",
+    "category": "clicks",
+    "status": "OK",
+    "time": 29.1,
+    "answer_len": 1324,
+    "answer_preview": "### 📊 Shopee 국가별 총 클릭수 비교 분석 (2019년 1월 1일 이후)  #### 요약  2019년 1월 1일부터 현재까지의 Shopee 클릭수 데이터를 분석한 결과, **인도네시아**가 총 **38,640,627회**의 클릭수로 압도적인 1위를 차지했습니다. 이어서 **필리핀**이 **24,314,993회**로 2위를 기록했으며, 싱가포르와 말"
+  },
+  {
+    "id": "AD-209",
+    "query": "네이버 검색 클릭수 추이",
+    "table": "advertising",
+    "category": "clicks",
+    "status": "OK",
+    "time": 44.9,
+    "answer_len": 1555,
+    "answer_preview": "### 📊 네이버 검색 클릭수 월별 추이 분석 (2019년 1월 ~ 2020년 8월 프리뷰 기준)  #### 요약  제공된 데이터 프리뷰에 따르면, **2019년 1월부터 2020년 8월까지의 네이버 검색 클릭수는 모든 월에서 0으로 집계**되었습니다. 전체 데이터는 총 144개월의 기록을 포함하며, 프리뷰에 나타나지 않은 기간에는 클릭수가 발생했을 가능성"
+  },
+  {
+    "id": "AD-210",
+    "query": "NaverGFA 클릭수 월별 변화",
+    "table": "advertising",
+    "category": "clicks",
+    "status": "OK",
+    "time": 59.1,
+    "answer_len": 1850,
+    "answer_preview": "### 📊 NaverGFA 클릭수 월별 변화 분석  #### 요약  NaverGFA 클릭수는 **2019년 1월부터 2020년 8월까지 0**을 기록하며 광고 활동이 없었으나, **2020년 9월 이후**부터 클릭이 발생하기 시작했습니다. 실제 데이터가 존재하는 2026년 2월까지의 기간 동안, 월별 클릭수는 최소 **779회**에서 최대 **80,680회"
+  },
+  {
+    "id": "AD-211",
+    "query": "플랫폼별 클릭수 비교",
+    "table": "advertising",
+    "category": "clicks",
+    "status": "OK",
+    "time": 38.6,
+    "answer_len": 1152,
+    "answer_preview": "### 📊 주요 플랫폼별 총 클릭수 비교 분석  #### 요약  전체 플랫폼 중 **Facebook**이 **98,340,215** 클릭으로 가장 높은 클릭수를 기록하며 사용자 유입에 가장 큰 기여를 했습니다. 이어서 **TikTok**이 **73,341,324** 클릭, **Shopee**가 **67,958,617** 클릭으로 뒤를 이었으며, 이 세 플랫"
+  },
+  {
+    "id": "AD-212",
+    "query": "클릭수가 가장 많은 플랫폼은?",
+    "table": "advertising",
+    "category": "clicks",
+    "status": "OK",
+    "time": 46.5,
+    "answer_len": 835,
+    "answer_preview": "### 📊 플랫폼별 총 클릭수 분석  #### 요약  전체 플랫폼 중 **Facebook**이 **98,340,215** 클릭으로 가장 많은 클릭수를 기록했습니다. 이는 두 번째로 높은 TikTok 클릭수(73,341,324)보다 약 2,500만 건 이상 많은 수치입니다.  #### 상세 데이터 | 플랫폼 | 총 클릭수 | |:---|---:| | Face"
+  },
+  {
+    "id": "AD-213",
+    "query": "CPC가 가장 낮은 플랫폼",
+    "table": "advertising",
+    "category": "clicks",
+    "status": "OK",
+    "time": 31.5,
+    "answer_len": 329,
+    "answer_preview": "검색 결과에 따르면, 주요 디지털 광고 플랫폼 중 **CPC(클릭당 비용)가 가장 낮은 플랫폼은 트위터(X)**입니다.  | 플랫폼 | 평균 CPC | |---|---| | **트위터(X)** | **$0.38** | | 구글 검색 | $0.67 ~ $2.32 | | 아마존 | $0.89 | | 페이스북 | $0.97 ~ $1.35 | | 인스타그램 | $"
+  },
+  {
+    "id": "AD-214",
+    "query": "플랫폼별 CPC 비교",
+    "table": "advertising",
+    "category": "clicks",
+    "status": "OK",
+    "time": 47.0,
+    "answer_len": 1193,
+    "answer_preview": "### 📊 플랫폼별 CPC 비교 분석  #### 요약  전체 플랫폼의 평균 CPC는 약 784.66원이며, **Amazon Ads가 5,134.51원**으로 가장 높은 CPC를 기록했습니다. 반면, **Kakao Moments는 99.89원**으로 가장 낮은 CPC를 보여 플랫폼별 클릭당 비용에 큰 차이가 있음을 확인할 수 있습니다.  #### 상세 데이터"
+  },
+  {
+    "id": "AD-215",
+    "query": "2025년 TikTok CPC 추이",
+    "table": "advertising",
+    "category": "clicks",
+    "status": "OK",
+    "time": 39.8,
+    "answer_len": 1160,
+    "answer_preview": "### 📊 2025년 TikTok CPC(클릭당 비용) 추이 분석  #### 요약  2025년 TikTok CPC는 상반기 동안 비교적 안정적인 수준을 유지했으나, **7월부터 급격히 상승**하기 시작하여 하반기에 매우 높은 수준을 기록했습니다. 특히 **10월에는 연중 최고치인 10,883.63**을 기록했으며, 연중 최저 CPC는 3월의 **39.44*"
+  },
+  {
+    "id": "AD-216",
+    "query": "인도네시아 TikTok 클릭수",
+    "table": "advertising",
+    "category": "clicks",
+    "status": "OK",
+    "time": 22.1,
+    "answer_len": 621,
+    "answer_preview": "### 📊 인도네시아 TikTok 클릭수 분석  #### 요약  현재 데이터셋에서는 인도네시아의 TikTok 클릭수 데이터가 존재하지 않습니다. 조회 결과 **null** 값이 반환되었습니다.  #### 분석 및 인사이트  *   **데이터 부재 확인:** BigQuery 실행 결과 `total_tiktok_clicks` 값이 `null`로 나타나, 현재 "
+  },
+  {
+    "id": "AD-217",
+    "query": "태국 Facebook 링크 클릭수",
+    "table": "advertising",
+    "category": "clicks",
+    "status": "OK",
+    "time": 31.7,
+    "answer_len": 360,
+    "answer_preview": "안녕하세요. 요청하신 **태국 Facebook 링크 클릭수** 데이터를 조회하지 못했습니다.  좀 더 구체적인 조건을 추가해 주시면 정확한 데이터를 찾는 데 도움이 됩니다. 아래 예시를 참고해 주세요.  **질문 예시:** 1. **\"2024년 12월 태국 Facebook 광고 링크 클릭수 알려줘\"** (기간 명시) 2. **\"태국 Facebook 캠페인별"
+  },
+  {
+    "id": "AD-218",
+    "query": "2025년 전체 플랫폼 클릭수 합계",
+    "table": "advertising",
+    "category": "clicks",
+    "status": "OK",
+    "time": 27.1,
+    "answer_len": 513,
+    "answer_preview": "### 📊 2025년 전체 플랫폼 클릭수 합계 분석  #### 요약  2025년 한 해 동안 TikTok, Facebook, Shopee, Google, NaverSearch, NaverGFA, SingleONE, KakaoMoments, AmazonAds 등 모든 통합 광고 플랫폼에서 발생한 총 클릭수는 **103,775,631회**입니다.  #### 분"
+  },
+  {
+    "id": "AD-219",
+    "query": "TikTok 결제 완료 건수",
+    "table": "advertising",
+    "category": "conversion_value",
+    "status": "OK",
+    "time": 32.5,
+    "answer_len": 728,
+    "answer_preview": "# TikTok 결제 관련 현황  TikTok의 **결제 완료 건수** 자체는 공식적으로 공개되지 않았습니다. 다만, 소비자 지출 및 인앱 구매 매출을 통해 규모를 파악할 수 있습니다.  ---  ## 주요 지표  | 구분 | 수치 | |---|---| | **누적 소비자 지출** (2024.8 기준) | **150억 달러**(약 19조 6,800억 원) "
+  },
+  {
+    "id": "AD-220",
+    "query": "TikTok 결제 완료 금액 합계",
+    "table": "advertising",
+    "category": "conversion_value",
+    "status": "OK",
+    "time": 31.1,
+    "answer_len": 478,
+    "answer_preview": "### 📊 TikTok 결제 완료 금액 합계 분석  #### 요약  TikTok 채널의 총 결제 완료 금액은 **약 658.21억원**으로 집계되었습니다. 이는 SKIN1004의 TikTok 채널을 통한 누적 결제 완료 금액을 나타냅니다.  #### 분석 및 인사이트  *   TikTok 채널을 통한 결제 완료 금액은 **약 658.21억원**으로, 이는 "
+  },
+  {
+    "id": "AD-221",
+    "query": "Facebook 구매 전환 금액",
+    "table": "advertising",
+    "category": "conversion_value",
+    "status": "OK",
+    "time": 36.3,
+    "answer_len": 491,
+    "answer_preview": "### 📊 Facebook 구매 전환 금액 분석 보고서  #### 요약  현재까지 집계된 Facebook 채널의 총 구매 전환 금액은 **약 423.8억원**입니다. 이는 Facebook을 통한 고객 구매 유입이 매우 활발하게 이루어졌음을 보여줍니다.  #### 분석 및 인사이트  *   Facebook 채널을 통한 구매 전환이 매우 활발하게 발생하고 있으"
+  },
+  {
+    "id": "AD-222",
+    "query": "Facebook 웹사이트 구매수",
+    "table": "advertising",
+    "category": "conversion_value",
+    "status": "OK",
+    "time": 30.4,
+    "answer_len": 465,
+    "answer_preview": "### 📊 Facebook 웹사이트 총 구매수 현황  #### 요약  2019년 1월 1일부터 2026년 3월 6일까지의 기간 동안 Facebook 웹사이트를 통해 발생한 총 구매수는 **174,018건**으로 집계되었습니다.  #### 분석 및 인사이트  *   해당 수치는 2019년 1월 1일부터 현재(2026년 3월 6일)까지 Facebook 웹사이트"
+  },
+  {
+    "id": "AD-223",
+    "query": "Shopee GMV 합계",
+    "table": "advertising",
+    "category": "conversion_value",
+    "status": "OK",
+    "time": 32.2,
+    "answer_len": 554,
+    "answer_preview": "### 📊 Shopee GMV 합계 분석 보고서  #### 요약  Shopee 채널의 전체 GMV(Gross Merchandise Volume) 합계는 **약 681.5억원**으로 확인되었습니다. 이 수치는 SKIN1004가 Shopee 플랫폼에서 달성한 누적 매출 성과를 나타냅니다.  #### 분석 및 인사이트  *   본 데이터는 `integrated_"
+  },
+  {
+    "id": "AD-224",
+    "query": "Google 전환 금액 합계",
+    "table": "advertising",
+    "category": "conversion_value",
+    "status": "OK",
+    "time": 24.4,
+    "answer_len": 500,
+    "answer_preview": "### 📊 총 Google 전환 금액 분석  #### 요약  2019년 1월 1일부터 2026년 3월 6일까지의 누적 Google 전환 금액은 **약 62.4억원**으로 집계되었습니다. 이는 SKIN1004의 Google 광고 활동이 해당 기간 동안 상당한 규모의 전환 가치를 창출했음을 보여줍니다.  #### 분석 및 인사이트  *   Google 광고를 "
+  },
+  {
+    "id": "AD-225",
+    "query": "네이버 검색 전환 금액",
+    "table": "advertising",
+    "category": "conversion_value",
+    "status": "OK",
+    "time": 24.3,
+    "answer_len": 365,
+    "answer_preview": "### 📊 네이버 검색 전환 금액 분석 보고서  #### 요약  네이버 검색 채널을 통해 발생한 총 전환 금액은 **약 18.5억원**으로 집계되었습니다.  #### 분석 및 인사이트  *   네이버 검색 채널이 현재까지 상당한 규모의 전환 가치를 창출하고 있음을 보여줍니다. *   이 전환 금액은 네이버 검색 광고 및 유기적 검색(SEO) 활동의 효과를 "
+  },
+  {
+    "id": "AD-226",
+    "query": "NaverGFA 구매 전환 매출",
+    "table": "advertising",
+    "category": "conversion_value",
+    "status": "OK",
+    "time": 35.7,
+    "answer_len": 388,
+    "answer_preview": "### 📊 네이버GFA 구매 전환 매출 현황  #### 요약  네이버GFA 채널의 총 구매 전환 매출은 **75,704,940원**으로 집계되었습니다.  #### 분석 및 인사이트  *   제공된 데이터에 따르면, 네이버GFA 채널은 총 7천 5백만원을 상회하는 구매 전환 매출에 기여했습니다. *   이는 SKIN1004의 마케팅 활동 중 네이버GFA 채널"
+  },
+  {
+    "id": "AD-227",
+    "query": "SingleONE 매출 합계",
+    "table": "advertising",
+    "category": "conversion_value",
+    "status": "OK",
+    "time": 36.4,
+    "answer_len": 519,
+    "answer_preview": "### 📊 SingleONE 제품 총 매출 분석  #### 요약  SingleONE 제품의 총 매출은 **약 216.8억원**으로 집계되었습니다. 이는 SingleONE 제품이 상당한 규모의 매출을 기록하고 있음을 보여줍니다.  #### 분석 및 인사이트  *   SingleONE 제품은 현재까지 누적 **약 216.8억원**의 매출을 달성하며, SKIN1"
+  },
+  {
+    "id": "AD-228",
+    "query": "카카오모먼트 구매 금액",
+    "table": "advertising",
+    "category": "conversion_value",
+    "status": "OK",
+    "time": 32.3,
+    "answer_len": 710,
+    "answer_preview": "# 카카오모먼트 광고 구매 금액 안내  카카오모먼트의 광고 구매 금액은 **고정되어 있지 않으며**, 실시간 입찰 방식에 따라 결정됩니다.  ---  ## 주요 과금 방식  | 과금 방식 | 설명 | 최소 입찰가 | |---|---|---| | **CPC** (클릭당 과금) | 광고 클릭 시 비용 발생 | **10원 이상** | | **CPV** (동영상 "
+  },
+  {
+    "id": "AD-229",
+    "query": "AmazonAds 구매 금액 합계",
+    "table": "advertising",
+    "category": "conversion_value",
+    "status": "OK",
+    "time": 32.9,
+    "answer_len": 374,
+    "answer_preview": "### 📊 AmazonAds 총 구매 금액  #### 요약  2019년 1월 1일부터 현재까지의 AmazonAds 총 구매 금액은 약 **139.7억원**으로 집계되었습니다.  #### 분석 및 인사이트  *   AmazonAds를 통한 구매 금액이 약 139.7억원에 달하며, 이는 Amazon 채널이 SKIN1004의 전체 마케팅 및 매출에서 상당한 비중"
+  },
+  {
+    "id": "AD-230",
+    "query": "플랫폼별 전환 매출 비교",
+    "table": "advertising",
+    "category": "conversion_value",
+    "status": "OK",
+    "time": 56.3,
+    "answer_len": 1382,
+    "answer_preview": "### 📊 플랫폼별 전환 매출 비교 분석  #### 요약  전체 플랫폼의 전환 매출은 약 **1,908.6억원**을 기록했습니다. 이 중 Shopee가 약 **681.5억원**으로 가장 높은 매출을 달성했으며, TikTok이 약 **658.2억원**으로 그 뒤를 이어 두 플랫폼이 전체 매출의 상당 부분을 차지하며 성장을 견인하고 있습니다.  #### 상세 "
+  },
+  {
+    "id": "AD-231",
+    "query": "전환 매출이 가장 높은 플랫폼",
+    "table": "advertising",
+    "category": "conversion_value",
+    "status": "OK",
+    "time": 44.5,
+    "answer_len": 572,
+    "answer_preview": "### 📊 전환 매출 최상위 플랫폼 분석  #### 요약  2019년 1월 1일부터 현재까지의 누적 데이터 분석 결과, **Shopee** 플랫폼이 약 **681.5억원**의 전환 매출을 기록하며 가장 높은 성과를 보였습니다.  #### 분석 및 인사이트  *   **Shopee의 독보적인 성과**: Shopee가 다른 모든 플랫폼을 통틀어 가장 높은 전환"
+  },
+  {
+    "id": "AD-232",
+    "query": "2025년 TikTok 결제 완료 금액 추이",
+    "table": "advertising",
+    "category": "conversion_value",
+    "status": "OK",
+    "time": 34.6,
+    "answer_len": 1231,
+    "answer_preview": "### 📊 2025년 TikTok 결제 완료 금액 월별 추이 분석  #### 요약  2025년 TikTok 결제 완료 금액은 총 **약 369.6억원**을 기록했습니다. 특히 연말인 11월과 12월에 크게 증가하여, 11월에는 **약 77.4억원**으로 연중 최고치를 달성했습니다.  #### 상세 데이터  2025년 TikTok 결제 완료 금액의 월별 추이"
+  },
+  {
+    "id": "AD-233",
+    "query": "2024년 Facebook 구매 전환 금액 월별 추이",
+    "table": "advertising",
+    "category": "conversion_value",
+    "status": "OK",
+    "time": 33.4,
+    "answer_len": 1423,
+    "answer_preview": "### 📊 2024년 Facebook 구매 전환 금액 월별 추이 분석  #### 요약  2024년 Facebook 구매 전환 금액은 연초 **약 2.43억원**에서 시작하여 연말 **약 13.55억원**으로 크게 성장하며 전반적으로 우상향 추세를 보였습니다. 특히 4분기(10월~12월)에 급격한 상승세를 기록하며 연간 총 **약 66.05억원**의 구매 전"
+  },
+  {
+    "id": "AD-234",
+    "query": "국가별 Shopee GMV 순위",
+    "table": "advertising",
+    "category": "conversion_value",
+    "status": "OK",
+    "time": 37.4,
+    "answer_len": 1097,
+    "answer_preview": "### 📊 국가별 Shopee GMV 순위 분석  #### 요약  Shopee GMV(Gross Merchandise Volume)는 **인도네시아**가 약 **426.16억원**으로 압도적인 1위를 차지했습니다. 필리핀이 약 **131.59억원**으로 2위, 싱가포르가 약 **85.84억원**으로 3위를 기록하며 동남아시아 시장의 강세가 두드러집니다.  "
+  },
+  {
+    "id": "AD-235",
+    "query": "2025년 4월 TikTok 인도네시아 광고비",
+    "table": "advertising",
+    "category": "specific_period",
+    "status": "OK",
+    "time": 28.1,
+    "answer_len": 433,
+    "answer_preview": "### 📊 2025년 4월 TikTok 인도네시아 광고비 분석  #### 요약  2025년 4월 TikTok 인도네시아 광고비는 **집계된 데이터가 없습니다.**  #### 분석 및 인사이트  *   2025년 4월 인도네시아 TikTok 광고비 조회 결과, `null` 값이 반환되어 해당 기간 동안의 광고비 데이터가 존재하지 않거나 집계되지 않았음을 의미"
+  },
+  {
+    "id": "AD-236",
+    "query": "2024년 10월 Facebook 필리핀 전환수",
+    "table": "advertising",
+    "category": "specific_period",
+    "status": "OK",
+    "time": 26.3,
+    "answer_len": 728,
+    "answer_preview": "### 📊 2024년 10월 Facebook 필리핀 전환수 분석  #### 요약  2024년 10월 Facebook 필리핀 채널의 전환수는 **데이터가 확인되지 않았습니다.** 해당 기간 동안 `Facebook_Website_purchases` 지표에서 전환 활동이 기록되지 않았거나, 관련 데이터가 존재하지 않는 것으로 보입니다.  #### 분석 및 인사이"
+  },
+  {
+    "id": "AD-237",
+    "query": "2025년 2월 Google 미국 노출수",
+    "table": "advertising",
+    "category": "specific_period",
+    "status": "OK",
+    "time": 33.2,
+    "answer_len": 459,
+    "answer_preview": "### 📊 2025년 2월 Google 미국 노출수 분석  #### 요약  2025년 2월 Google 미국 노출수에 대한 데이터를 조회한 결과, 해당 기간의 노출수 데이터가 **존재하지 않습니다.** 따라서 요청하신 기간에 대한 구체적인 노출수 정보는 확인할 수 없습니다.  #### 분석 및 인사이트  *   데이터 부재로 인해 2025년 2월 Googl"
+  },
+  {
+    "id": "AD-238",
+    "query": "2024년 7월 Shopee 태국 GMV",
+    "table": "advertising",
+    "category": "specific_period",
+    "status": "OK",
+    "time": 42.9,
+    "answer_len": 467,
+    "answer_preview": "### 📊 2024년 7월 Shopee 태국 GMV 조회 결과  #### 요약  2024년 7월 Shopee 태국 GMV는 현재 데이터베이스에서 **조회되지 않습니다.** 해당 기간에 대한 GMV 데이터가 존재하지 않거나, 아직 집계되지 않았을 수 있습니다.  #### 분석 및 인사이트  *   **데이터 부재 확인:** 2024년 7월 태국 Shopee "
+  },
+  {
+    "id": "AD-239",
+    "query": "2025년 8월 네이버 검색 광고비",
+    "table": "advertising",
+    "category": "specific_period",
+    "status": "OK",
+    "time": 29.8,
+    "answer_len": 391,
+    "answer_preview": "### 📊 2025년 8월 네이버 검색 광고비 분석  #### 요약  2025년 8월 한 달간 네이버 검색 광고비는 총 **11,759,572원**으로 집계되었습니다.  #### 분석 및 인사이트  *   2025년 8월 네이버 검색 광고에 약 1천 1백 7십 5만원이 집행되었습니다. *   이 광고비는 해당 월의 전체 마케팅 예산 및 다른 채널의 광고비와"
+  },
+  {
+    "id": "AD-240",
+    "query": "2024년 5월 NaverGFA 클릭수",
+    "table": "advertising",
+    "category": "specific_period",
+    "status": "OK",
+    "time": 27.1,
+    "answer_len": 480,
+    "answer_preview": "### 📊 2024년 5월 NaverGFA 클릭수 분석  #### 요약  2024년 5월 NaverGFA 클릭수는 **0**건으로 집계되었습니다. 해당 기간 동안 NaverGFA를 통한 클릭 활동이 없었던 것으로 보입니다.  #### 분석 및 인사이트  *   2024년 5월 한 달간 NaverGFA 클릭수가 0건으로 확인됩니다. 이는 해당 기간 동안 Na"
+  },
+  {
+    "id": "AD-241",
+    "query": "2025년 11월 카카오모먼트 구매수",
+    "table": "advertising",
+    "category": "specific_period",
+    "status": "OK",
+    "time": 26.5,
+    "answer_len": 476,
+    "answer_preview": "2025년 11월 카카오모먼트의 **'구매수'** 특정 수치는 외부에 공개되지 않아 확인할 수 없습니다. 이는 카카오의 내부 영업 데이터에 해당합니다.  ---  ### 참고: 2025년 4분기(10~12월) 카카오 톡비즈 부문 실적  2025년 11월이 포함된 4분기 전반적인 성과는 다음과 같습니다.  | 항목 | 수치 | 전년 동기 대비 | |---|-"
+  },
+  {
+    "id": "AD-242",
+    "query": "2024년 2월 AmazonAds 광고비",
+    "table": "advertising",
+    "category": "specific_period",
+    "status": "OK",
+    "time": 15.6,
+    "answer_len": 431,
+    "answer_preview": "### 📊 2024년 2월 AmazonAds 광고비 현황  #### 요약  2024년 2월 한 달간 AmazonAds 광고비는 총 **68,605,192원**으로 집계되었습니다. 이는 해당 기간 AmazonAds 채널에 대한 전체 광고 지출액입니다.  #### 분석 및 인사이트  *   2024년 2월 AmazonAds 광고비는 **68,605,192원**"
+  },
+  {
+    "id": "AD-243",
+    "query": "2025년 10월 SingleONE 매출",
+    "table": "advertising",
+    "category": "specific_period",
+    "status": "OK",
+    "time": 37.0,
+    "answer_len": 370,
+    "answer_preview": "### 📊 2025년 10월 SingleONE 매출 현황  #### 요약  2025년 10월 SingleONE 제품의 총 매출은 **88,171,767원**을 기록했습니다.  #### 분석 및 인사이트  *   2025년 10월 SingleONE 제품의 매출은 약 8천 8백만원 수준으로 집계되었습니다. *   > 해당 매출 수치에 대한 심층적인 분석을 위해"
+  },
+  {
+    "id": "AD-244",
+    "query": "2024년 1월~3월 TikTok 인도네시아 광고비 합계",
+    "table": "advertising",
+    "category": "specific_period",
+    "status": "OK",
+    "time": 29.3,
+    "answer_len": 504,
+    "answer_preview": "### 📊 2024년 1월~3월 TikTok 인도네시아 광고비 합계  #### 요약  2024년 1월부터 3월까지 인도네시아 TikTok 광고비 합계는 **데이터가 존재하지 않습니다.** 조회된 기간 동안 해당 채널 및 국가에 대한 광고비 데이터가 기록되지 않았거나, 모든 값이 `null`로 집계되었습니다.  #### 분석 및 인사이트  *   요청하신 2"
+  },
+  {
+    "id": "AD-245",
+    "query": "2025년 4월~6월 Facebook 태국 전환수",
+    "table": "advertising",
+    "category": "specific_period",
+    "status": "OK",
+    "time": 32.6,
+    "answer_len": 489,
+    "answer_preview": "### 📊 2025년 4월~6월 Facebook 태국 전환수 분석  #### 요약  2025년 4월부터 6월까지 Facebook 채널을 통한 태국 웹사이트 전환수는 **0건**으로 집계되었습니다. 해당 기간 동안 Facebook 태국 캠페인에서 웹사이트 구매로 이어진 전환 데이터가 확인되지 않습니다.  #### 분석 및 인사이트  *   2025년 2분기("
+  },
+  {
+    "id": "AD-246",
+    "query": "2024년 상반기 Google 일본 ROAS",
+    "table": "advertising",
+    "category": "specific_period",
+    "status": "OK",
+    "time": 24.0,
+    "answer_len": 716,
+    "answer_preview": "### 📊 2024년 상반기 Google 일본 ROAS 분석  #### 요약  2024년 상반기(1월 1일 ~ 6월 30일) Google 일본 채널의 ROAS 데이터는 **확인되지 않습니다.** 이는 해당 기간 동안 Google 일본 채널에서 광고 비용 또는 전환 가치 데이터가 집계되지 않았기 때문일 수 있습니다.  #### 분석 및 인사이트  *   **"
+  },
+  {
+    "id": "AD-247",
+    "query": "2025년 하반기 Shopee 말레이시아 광고비",
+    "table": "advertising",
+    "category": "specific_period",
+    "status": "OK",
+    "time": 33.2,
+    "answer_len": 559,
+    "answer_preview": "### 📊 2025년 하반기 Shopee 말레이시아 광고비 분석  #### 요약  2025년 하반기(2025년 7월 1일 ~ 2025년 12월 31일) 동안 Shopee 말레이시아 채널의 광고비 데이터는 **조회되지 않습니다.** 해당 기간에 대한 광고비 지출 내역이 현재 시스템에 기록되어 있지 않거나, 데이터가 아직 업데이트되지 않았을 수 있습니다.  #"
+  },
+  {
+    "id": "AD-248",
+    "query": "최근 3개월 TikTok 광고 성과",
+    "table": "advertising",
+    "category": "specific_period",
+    "status": "OK",
+    "time": 55.6,
+    "answer_len": 1619,
+    "answer_preview": "### 📊 최근 3개월 TikTok 광고 성과 분석  #### 요약  2025년 12월부터 2026년 2월까지 최근 3개월간 TikTok 광고 총 비용은 **약 56.8억원**을 집행했으며, 총 전환 가치는 **약 150.3억원**을 달성했습니다. 이 기간 동안 평균 ROAS는 **2.64**를 기록했습니다. 2026년 3월은 현재까지 (3월 6일 기준) "
+  },
+  {
+    "id": "AD-249",
+    "query": "최근 6개월 Facebook 광고비 추이",
+    "table": "advertising",
+    "category": "specific_period",
+    "status": "OK",
+    "time": 33.6,
+    "answer_len": 1242,
+    "answer_preview": "### 📊 최근 6개월 Facebook 광고비 추이  #### 요약  ⚠️ 2026년 3월은 현재 6일까지만 데이터가 집계되었습니다 (오늘: 2026년 03월 06일). 최근 6개월(2025년 9월 ~ 2026년 3월) 동안의 Facebook 광고비는 월별 변동성이 크게 나타났습니다. 특히 **2025년 11월에 약 13.2억원으로 가장 높은 광고비**를 "
+  },
+  {
+    "id": "AD-250",
+    "query": "TikTok 인도네시아 광고 성과 요약",
+    "table": "advertising",
+    "category": "summary",
+    "status": "OK",
+    "time": 21.7,
+    "answer_len": 720,
+    "answer_preview": "### 📊 TikTok 인도네시아 광고 성과 요약  #### 요약  TikTok 인도네시아 광고 성과 데이터를 조회한 결과, 현재 **조회 가능한 데이터가 없습니다.** 이는 해당 기간 동안 TikTok 인도네시아 광고 집행이 없었거나, 관련 데이터가 아직 시스템에 통합되지 않았을 수 있습니다.  #### 분석 및 인사이트  *   **데이터 부재 확인:*"
+  },
+  {
+    "id": "AD-251",
+    "query": "Facebook 태국 광고 성과 리포트",
+    "table": "advertising",
+    "category": "summary",
+    "status": "OK",
+    "time": 16.9,
+    "answer_len": 314,
+    "answer_preview": "해당 값은 존재하지 않습니다.  SQL에서 `Country = 'Thailand'` 필터 조건을 사용했지만, `Country` 컬럼에는 '태국'과 같은 한국어 값이 저장되어 있습니다. 따라서 'Thailand' 값으로는 데이터를 찾을 수 없습니다. 'Thailand' 대신 **'태국'**으로 변경하여 다시 시도해 보세요.  비슷한 데이터를 조회할 수 있는 "
+  },
+  {
+    "id": "AD-252",
+    "query": "Google 미국 광고 성과 분석",
+    "table": "advertising",
+    "category": "summary",
+    "status": "OK",
+    "time": 39.4,
+    "answer_len": 760,
+    "answer_preview": "### 📊 Google 미국 광고 성과 분석 결과  #### 요약  Google 미국 광고 성과 분석을 요청하셨으나, 현재 조회된 데이터에서는 **Google 미국 광고에 대한 성과 데이터가 존재하지 않습니다.** 모든 지표(총 비용, 노출수, 클릭수, 전환수, 전환 가치 등)가 `null`로 확인되어 분석을 진행할 수 없습니다.  #### 분석 및 인사이"
+  },
+  {
+    "id": "AD-253",
+    "query": "Shopee 동남아 광고 성과 요약",
+    "table": "advertising",
+    "category": "summary",
+    "status": "OK",
+    "time": 52.2,
+    "answer_len": 510,
+    "answer_preview": "### 📊 Shopee 동남아 광고 성과 요약 (데이터 없음)  #### 요약  현재 조회된 데이터에 따르면, 요청하신 Shopee 동남아시아 광고 성과 데이터는 존재하지 않습니다. 2019년 1월 1일 이후 인도네시아, 말레이시아, 필리핀, 싱가포르, 태국, 베트남 국가의 Shopee 광고 관련 지표(비용, GMV, 노출, 클릭, 전환 등)가 **모두 N"
+  },
+  {
+    "id": "AD-254",
+    "query": "네이버 광고 전체 성과 요약",
+    "table": "advertising",
+    "category": "summary",
+    "status": "OK",
+    "time": 33.8,
+    "answer_len": 710,
+    "answer_preview": "### 📊 네이버 광고 전체 성과 요약  #### 요약  네이버 광고는 2019년 1월 1일부터 현재(2026년 3월 6일)까지 총 **약 3.44억원**의 비용을 집행하여 **약 19.27억원**의 전환 가치를 창출했습니다. 이 기간 동안 **559.60%**의 높은 ROAS(광고 수익률)를 기록하며 매우 효율적인 성과를 보였습니다.  #### 분석 및 "
+  },
+  {
+    "id": "AD-255",
+    "query": "2025년 전체 광고 성과 리포트",
+    "table": "advertising",
+    "category": "summary",
+    "status": "OK",
+    "time": 54.4,
+    "answer_len": 666,
+    "answer_preview": "### 📊 2025년 통합 광고 성과 리포트  #### 요약  2025년 한 해 동안의 통합 광고 성과 분석 결과, 총 광고 비용은 **약 240.3억원**을 집행했으며, 이를 통해 **약 886.4억원**의 전환 매출을 달성했습니다. 전체 ROAS(광고 투자 수익률)는 **3.69배**를 기록하며 효율적인 광고 집행을 보여주었습니다. 총 노출수는 96억 "
+  },
+  {
+    "id": "AD-256",
+    "query": "2024년 연간 광고 성과 분석",
+    "table": "advertising",
+    "category": "summary",
+    "status": "OK",
+    "time": 51.1,
+    "answer_len": 1505,
+    "answer_preview": "### 📊 2024년 연간 광고 성과 분석 보고서  #### 요약  2024년 총 광고 비용은 **약 80.9억원**이었으며, 이를 통해 **약 474.2억원**의 총 광고 매출을 달성했습니다. 전체 ROAS는 **586%**로 매우 높은 성과를 보였습니다. 특히 Shopee, TikTok, Google, SingleONE 플랫폼이 높은 ROAS를 달성하며"
+  },
+  {
+    "id": "AD-257",
+    "query": "인도네시아 전체 광고 성과 분석",
+    "table": "advertising",
+    "category": "summary",
+    "status": "OK",
+    "time": 45.6,
+    "answer_len": 798,
+    "answer_preview": "### 📊 인도네시아 전체 광고 성과 분석  #### 요약  ⚠️ 현재 조회된 데이터에 따르면, **인도네시아 전체 광고 성과에 대한 데이터가 존재하지 않습니다.** 모든 지표에서 `null` 값이 반환되어 분석을 진행할 수 없습니다.  #### 분석 및 인사이트  *   **데이터 부재 확인:** 실행된 쿼리 결과에서 인도네시아 국가에 해당하는 모든 광고"
+  },
+  {
+    "id": "AD-258",
+    "query": "태국 2025년 광고 성과 요약",
+    "table": "advertising",
+    "category": "summary",
+    "status": "OK",
+    "time": 47.3,
+    "answer_len": 396,
+    "answer_preview": "해당 조건의 데이터가 없습니다. SQL에 사용된 'Thailand' 값은 유효 값 목록에 존재하지 않습니다.  SQL에서 사용된 필터 조건 중 `Country = 'Thailand'`가 문제입니다. 데이터베이스의 `Country` 컬럼은 '태국'과 같이 한국어 값을 사용합니다. SQL에서 영어 'Thailand'를 사용했기 때문에 일치하는 데이터를 찾지 못"
+  },
+  {
+    "id": "AD-259",
+    "query": "베트남 광고 성과 리포트",
+    "table": "advertising",
+    "category": "summary",
+    "status": "OK",
+    "time": 45.1,
+    "answer_len": 297,
+    "answer_preview": "해당 조건에 맞는 데이터가 없습니다. SQL에 사용된 'Vietnam' 값은 존재하지 않습니다.  SQL에서 `Country = 'Vietnam'` 필터 조건이 문제였습니다. `Country` 컬럼에는 'Vietnam' 대신 '베트남'으로 데이터가 저장되어 있습니다. '베트남'으로 조건을 변경하여 다시 시도해 주세요.  비슷한 데이터를 조회할 수 있는 대안"
+  },
+  {
+    "id": "AD-260",
+    "query": "한국 광고 성과 전체 요약",
+    "table": "advertising",
+    "category": "summary",
+    "status": "WARN",
+    "time": 60.3,
+    "answer_len": 654,
+    "answer_preview": "### 📊 한국 광고 성과 전체 요약 (데이터 없음)  #### 요약  요청하신 기간(2019년 1월 1일 이후) 동안의 **한국 광고 성과 데이터가 조회되지 않았습니다.** 현재 시스템에 집계된 한국 광고 관련 데이터가 없어 전체적인 성과 요약을 제공하기 어렵습니다.  #### 분석 및 인사이트  *   **데이터 부재 확인:** 2019년 1월 1일부터"
+  },
+  {
+    "id": "AD-261",
+    "query": "일본 광고 성과 분석 리포트",
+    "table": "advertising",
+    "category": "summary",
+    "status": "WARN",
+    "time": 68.2,
+    "answer_len": 262,
+    "answer_preview": "해당 조건의 데이터가 없습니다. SQL에서 사용된 'Japan' 값은 존재하지 않습니다.  SQL에서 `Country = 'Japan'` 필터 조건이 문제였습니다. `Country` 컬럼은 국가명을 한국어로 저장하고 있으며, 'Japan' 대신 '일본'을 사용해야 합니다.  비슷한 데이터를 조회할 수 있는 대안 질문: *   일본 광고 성과 분석 리포트 보"
+  },
+  {
+    "id": "AD-262",
+    "query": "미국 광고 성과 요약해줘",
+    "table": "advertising",
+    "category": "summary",
+    "status": "OK",
+    "time": 44.5,
+    "answer_len": 558,
+    "answer_preview": "### 📊 미국 광고 성과 요약  #### 요약  현재 조회된 데이터에 따르면, **미국(USA) 광고 성과에 대한 집계된 데이터가 존재하지 않습니다.** 모든 광고 비용, 노출수, 클릭수, 광고 매출 지표가 0 또는 null로 확인됩니다.  #### 분석 및 인사이트  *   **데이터 부재**: BigQuery에서 'USA' 국가에 대한 광고 성과 데이"
+  },
+  {
+    "id": "AD-263",
+    "query": "필리핀 광고 성과 분석",
+    "table": "advertising",
+    "category": "summary",
+    "status": "OK",
+    "time": 37.2,
+    "answer_len": 727,
+    "answer_preview": "### 📊 필리핀 광고 성과 분석 보고서  #### 요약  사용자님께서 요청하신 필리핀 광고 성과 분석 결과, 현재 조회된 데이터에서는 **필리핀 국가에 대한 광고 성과 데이터가 존재하지 않습니다.** TikTok, Facebook, Shopee, Google 등 모든 광고 채널에서 비용, 노출, 클릭, 전환, 매출 등 어떠한 지표도 집계되지 않았습니다. "
+  },
+  {
+    "id": "AD-264",
+    "query": "TikTok 전체 국가 광고 성과 비교",
+    "table": "advertising",
+    "category": "summary",
+    "status": "OK",
+    "time": 56.3,
+    "answer_len": 1576,
+    "answer_preview": "### 📊 TikTok 전체 국가 광고 성과 비교 분석  #### 요약  TikTok 광고 성과 분석 결과, **인도네시아**가 약 **374.0억원**의 매출을 기록하며 가장 높은 총 매출을 달성했습니다. 반면, **필리핀**은 약 **157.1억원**의 매출과 함께 **6.43**의 가장 높은 ROAS를 기록하며 효율적인 성과를 보였습니다. 미국은 약 "
+  },
+  {
+    "id": "AD-265",
+    "query": "전환율이 가장 높은 국가와 플랫폼 조합",
+    "table": "advertising",
+    "category": "ranking",
+    "status": "WARN",
+    "time": 88.0,
+    "answer_len": 3047,
+    "answer_preview": "### 📈 전환율이 가장 높은 국가와 플랫폼 조합 분석  #### 요약  SKIN1004의 내부 데이터 분석 결과, 전환율이 가장 높은 국가와 플랫폼 조합은 **미국** 시장의 **TikTok (33.09%)**, **Google (21.08%)**, 그리고 **Amazon Ads (20.34%)**로 나타났습니다. 특히 TikTok은 외부 정보에서 제시하"
+  },
+  {
+    "id": "AD-266",
+    "query": "광고비 TOP 5 국가",
+    "table": "advertising",
+    "category": "ranking",
+    "status": "OK",
+    "time": 57.0,
+    "answer_len": 1052,
+    "answer_preview": "### 📊 광고비 지출 TOP 5 국가 현황  #### 요약  전체 광고비 지출에서 인도네시아가 약 **174.3억원**으로 가장 높은 비중을 차지하며 1위를 기록했습니다. 그 뒤를 이어 미국이 약 **141.9억원**으로 2위를 차지했으며, 필리핀, 말레이시아, 한국 순으로 광고비 지출이 많았습니다.  #### 상세 데이터  | 국가       | 총 광"
+  },
+  {
+    "id": "AD-267",
+    "query": "ROAS TOP 5 플랫폼-국가 조합",
+    "table": "advertising",
+    "category": "ranking",
+    "status": "WARN",
+    "time": 65.4,
+    "answer_len": 1307,
+    "answer_preview": "### 📊 ROAS TOP 5 플랫폼-국가 조합 분석  #### 요약  전체 기간(2019년 1월 1일 이후) 동안 ROAS가 가장 높았던 플랫폼-국가 조합은 **일본 SingleONE**으로, **12.30**의 압도적인 ROAS를 기록했습니다. 상위 5개 조합 중 **3개**가 Shopee 플랫폼에서 발생하여 동남아시아 시장에서의 Shopee의 높은 효"
+  },
+  {
+    "id": "AD-268",
+    "query": "CTR TOP 5 플랫폼",
+    "table": "advertising",
+    "category": "ranking",
+    "status": "WARN",
+    "time": 62.3,
+    "answer_len": 1006,
+    "answer_preview": "### 📊 플랫폼별 CTR TOP 5 분석 보고서  #### 요약  전체 기간(2019년 1월 1일 이후) 동안의 광고 플랫폼별 CTR(클릭률) 분석 결과, **Shopee가 2.81%**로 가장 높은 CTR을 기록하며 1위를 차지했습니다. 이어서 TikTok이 1.45%, Google이 1.24%로 높은 클릭률을 보였습니다.  #### 상세 데이터 | 플"
+  },
+  {
+    "id": "AD-269",
+    "query": "CPC가 가장 비싼 플랫폼 TOP 3",
+    "table": "advertising",
+    "category": "ranking",
+    "status": "OK",
+    "time": 41.0,
+    "answer_len": 1049,
+    "answer_preview": "### 📊 CPC가 가장 비싼 플랫폼 TOP 3 분석  #### 요약  현재까지의 데이터를 기준으로 CPC(클릭당 비용)가 가장 비싼 플랫폼은 **AmazonAds**로, 클릭당 **862.20원**의 비용이 발생하고 있습니다. 그 뒤를 이어 NaverSearch가 451.03원, SingleONE이 443.63원으로 높은 CPC를 기록했습니다.  ####"
+  },
+  {
+    "id": "AD-270",
+    "query": "CPM이 가장 비싼 국가 TOP 5",
+    "table": "advertising",
+    "category": "ranking",
+    "status": "OK",
+    "time": 36.7,
+    "answer_len": 919,
+    "answer_preview": "### 📊 CPM이 가장 비싼 국가 TOP 5 분석  #### 요약  조회된 데이터에 따르면, 광고 CPM(Cost Per Mille, 1,000회 노출당 비용)이 가장 비싼 국가는 **싱가포르**로, **8,613.59**를 기록했습니다. 이어서 미국, 호주, 한국, 말레이시아가 높은 CPM을 보였습니다.  #### 상세 데이터 | 국가       | C"
+  },
+  {
+    "id": "AD-271",
+    "query": "전환수 TOP 10 국가-플랫폼",
+    "table": "advertising",
+    "category": "ranking",
+    "status": "OK",
+    "time": 39.5,
+    "answer_len": 1224,
+    "answer_preview": "### 📊 전환수 TOP 10 국가-플랫폼 분석  #### 요약  전환수 기준 TOP 10 국가-플랫폼 조합을 분석한 결과, **인도네시아의 TikTok**이 **3,418,369건**으로 가장 높은 전환수를 기록했습니다. 인도네시아는 TikTok, Shopee, Facebook 플랫폼을 통해 전체 TOP 10 중 3개 순위를 차지하며 압도적인 전환 성과를"
+  },
+  {
+    "id": "AD-272",
+    "query": "광고 클릭수 TOP 5 플랫폼",
+    "table": "advertising",
+    "category": "ranking",
+    "status": "OK",
+    "time": 57.1,
+    "answer_len": 976,
+    "answer_preview": "### 📊 광고 클릭수 TOP 5 플랫폼 분석  #### 요약  전체 기간(2019년 1월 1일 이후) 동안 광고 클릭수 기준으로 **Facebook**이 **98,340,215회**로 가장 많은 클릭수를 기록하며 1위를 차지했습니다. 이어서 **TikTok**이 73,341,324회, **Shopee**가 67,958,617회로 상위권을 형성하며 높은 광"
+  },
+  {
+    "id": "AD-273",
+    "query": "노출수 TOP 5 플랫폼",
+    "table": "advertising",
+    "category": "ranking",
+    "status": "OK",
+    "time": 51.8,
+    "answer_len": 998,
+    "answer_preview": "### 📊 노출수 TOP 5 플랫폼 분석 보고서  #### 요약  전체 기간 동안 노출수 기준 TOP 5 플랫폼 중 **Facebook**이 **110억 회** 이상의 노출수로 압도적인 1위를 차지했습니다. 그 뒤를 이어 **TikTok**이 **50억 회** 이상, **Shopee**가 **24억 회** 이상의 노출수를 기록하며 상위권을 형성했습니다.  "
+  },
+  {
+    "id": "AD-274",
+    "query": "전환 매출 TOP 5 플랫폼",
+    "table": "advertising",
+    "category": "ranking",
+    "status": "OK",
+    "time": 46.0,
+    "answer_len": 1083,
+    "answer_preview": "### 📊 전환 매출 TOP 5 플랫폼 분석  #### 요약  전체 기간 동안의 전환 매출 분석 결과, **Shopee**가 약 **681.51억원**으로 가장 높은 전환 매출을 기록하며 1위를 차지했습니다. 이어서 TikTok이 약 **658.21억원**, Facebook이 약 **554.39억원**으로 상위권을 형성했습니다. 상위 3개 플랫폼이 전체 전"
+  },
+  {
+    "id": "AD-275",
+    "query": "2025년 TikTok vs 2024년 TikTok 광고비 비교",
+    "table": "advertising",
+    "category": "yoy",
+    "status": "OK",
+    "time": 29.9,
+    "answer_len": 924,
+    "answer_preview": "### 📊 2024년 대비 2025년 TikTok 광고비 분석  #### 요약  2025년 TikTok 광고비는 **약 102.68억원**으로 집계되어, 2024년 **약 23.30억원** 대비 **약 79.39억원(340.79%) 증가**했습니다. 이는 TikTok 채널에 대한 광고 투자가 전년 대비 매우 공격적으로 확대되었음을 보여줍니다.  #### 상"
+  },
+  {
+    "id": "AD-276",
+    "query": "Facebook 광고비 전년 대비 증감",
+    "table": "advertising",
+    "category": "yoy",
+    "status": "OK",
+    "time": 35.2,
+    "answer_len": 929,
+    "answer_preview": "### 📊 Facebook 광고비 전년 대비 증감 분석  #### 요약  ⚠️ 2026년 데이터는 현재 3월 6일까지의 집계입니다. 2026년 3월 6일 기준 Facebook 광고비는 **약 22.90억원**으로, 2025년 전체 Facebook 광고비 **약 70.87억원** 대비 **약 47.97억원 (67.69%) 감소**했습니다. 이 감소는 2026"
+  },
+  {
+    "id": "AD-277",
+    "query": "Google 광고비 YoY 비교",
+    "table": "advertising",
+    "category": "yoy",
+    "status": "OK",
+    "time": 31.8,
+    "answer_len": 924,
+    "answer_preview": "### 📊 Google 광고비 전년 대비(YoY) 비교 (1월-3월)  #### 요약  ⚠️ 2026년은 현재 3월 6일까지의 데이터가 반영되었습니다. 2026년 1월부터 3월까지의 Google 광고비는 전년 동기 대비 **15.55% 증가**했습니다. 2026년 해당 기간 Google 광고비는 **약 2.67억원**으로, 2025년 동기 **약 2.31억"
+  },
+  {
+    "id": "AD-278",
+    "query": "Shopee 광고비 전년 대비 변화",
+    "table": "advertising",
+    "category": "yoy",
+    "status": "OK",
+    "time": 38.0,
+    "answer_len": 768,
+    "answer_preview": "### 📊 Shopee 광고비 전년 대비 변화 분석 (2025년 vs 2026년 1월 1일 ~ 3월 6일)  #### 요약  2026년 1월 1일부터 3월 6일까지의 Shopee 광고비는 **약 12.5억원**으로 집계되었습니다. 이는 전년 동기(2025년 1월 1일 ~ 3월 6일)의 **약 6.3억원** 대비 **97.0% 증가**한 수치로, 약 2배 가"
+  },
+  {
+    "id": "AD-279",
+    "query": "전체 광고비 전년 동기 대비",
+    "table": "advertising",
+    "category": "yoy",
+    "status": "OK",
+    "time": 44.0,
+    "answer_len": 918,
+    "answer_preview": "### 📊 전체 광고비 전년 동기 대비 분석 (2026년 3월 6일 기준)  #### 요약  2026년 3월 6일 기준 전체 광고비는 **약 90.92억원**으로 집계되었습니다. 이는 전년 동기(2025년 3월 6일 기준 약 25.90억원) 대비 **약 65.02억원 (251.05%) 증가**한 수치로, 전년 대비 광고 집행 규모가 크게 확대되었음을 보여줍"
+  },
+  {
+    "id": "AD-280",
+    "query": "TikTok ROAS 전년 대비 변화",
+    "table": "advertising",
+    "category": "yoy",
+    "status": "OK",
+    "time": 35.3,
+    "answer_len": 599,
+    "answer_preview": "# 데이터 조회 안내  안녕하세요. 요청하신 **TikTok ROAS 전년 대비 변화** 관련 내부 데이터를 조회하지 못했습니다.  좀 더 정확한 결과를 위해 **조건을 구체적으로 지정**해 주시면 다시 조회를 시도해 보겠습니다.  ---  ## 💡 이렇게 질문해 보시면 좋습니다  1. **\"2024년 vs 2023년 TikTok Shop 미국 채널의 월별"
+  },
+  {
+    "id": "AD-281",
+    "query": "Facebook 전환수 전년 대비 증감",
+    "table": "advertising",
+    "category": "yoy",
+    "status": "OK",
+    "time": 41.5,
+    "answer_len": 760,
+    "answer_preview": "### 📊 페이스북 전환수 전년 동기 대비 분석 (2026년 1월-3월)  #### 요약  2026년 1월부터 3월까지의 페이스북 전환수는 전년 동기 대비 **73.46% 감소**했습니다. 2025년 동기간 **16,483건**이었던 전환수는 2026년 동기간 **4,374건**으로 크게 줄어들었습니다.  #### 상세 데이터 | 연도 | 기간 | 페이스북"
+  },
+  {
+    "id": "AD-282",
+    "query": "2025년 1분기 vs 2024년 1분기 전체 광고비",
+    "table": "advertising",
+    "category": "yoy",
+    "status": "OK",
+    "time": 28.3,
+    "answer_len": 813,
+    "answer_preview": "### 📊 2025년 1분기 vs 2024년 1분기 전체 광고비 비교 분석  #### 요약  2025년 1분기 전체 광고비는 약 **37.16억원**으로 집계되어, 2024년 1분기 약 **9.59억원** 대비 **287.5%** 증가했습니다. 이는 전년 동기 대비 약 **27.57억원**이 증가한 수치로, 광고비 지출이 크게 확대되었음을 보여줍니다.  #"
+  },
+  {
+    "id": "AD-283",
+    "query": "인도네시아 광고비 전년 대비 비교",
+    "table": "advertising",
+    "category": "yoy",
+    "status": "OK",
+    "time": 36.4,
+    "answer_len": 279,
+    "answer_preview": "해당 조건에 맞는 데이터가 존재하지 않습니다.  SQL에서 사용된 필터 조건 중 날짜(년도) 조건이 문제입니다. 2025년 또는 2026년 데이터는 아직 집계되지 않았거나 존재하지 않기 때문에 0행이 조회되었습니다. 'Country' 값인 'Indonesia'는 유효한 값입니다.  비슷한 데이터를 조회할 수 있는 대안 질문은 다음과 같습니다: *   인도네"
+  },
+  {
+    "id": "AD-284",
+    "query": "태국 광고비 YoY 증감률",
+    "table": "advertising",
+    "category": "yoy",
+    "status": "OK",
+    "time": 40.5,
+    "answer_len": 299,
+    "answer_preview": "해당 조건의 데이터가 존재하지 않습니다. SQL에 사용된 'Thailand' 값은 유효 값 목록에 존재하지 않습니다.  SQL 쿼리에서 `Country` 필터 조건으로 'Thailand'를 사용했지만, 유효한 국가 목록에는 '태국'으로 저장되어 있습니다. 따라서 'Thailand' 조건으로는 데이터를 찾을 수 없습니다.  비슷한 데이터를 조회할 수 있는 대"
+  },
+  {
+    "id": "AD-285",
+    "query": "TikTok 광고비 중 인도네시아 비중은?",
+    "table": "advertising",
+    "category": "ratio",
+    "status": "OK",
+    "time": 36.8,
+    "answer_len": 585,
+    "answer_preview": "### 📊 TikTok 광고비 중 인도네시아 비중 분석  #### 요약  현재 데이터 기준, TikTok 광고비 중 인도네시아가 차지하는 비중은 **0.0%**입니다. 이는 현재까지 인도네시아에서 TikTok 광고 집행 내역이 없거나, 데이터에 반영되지 않았음을 의미합니다.  #### 분석 및 인사이트  *   **인도네시아 TikTok 광고비 미집행:**"
+  },
+  {
+    "id": "AD-286",
+    "query": "Facebook 광고비에서 태국이 차지하는 비율",
+    "table": "advertising",
+    "category": "ratio",
+    "status": "OK",
+    "time": 22.7,
+    "answer_len": 484,
+    "answer_preview": "### 📊 Facebook 광고비 중 태국 비중 분석  #### 요약  현재 데이터에 따르면, 전체 Facebook 광고비에서 태국이 차지하는 비중은 **0.0%**입니다. 이는 태국에 대한 Facebook 광고비 지출이 없거나 매우 미미한 수준임을 나타냅니다.  #### 분석 및 인사이트  *   태국은 현재 집계된 전체 Facebook 광고비에서 **0"
+  },
+  {
+    "id": "AD-287",
+    "query": "전체 광고비 중 TikTok 비중",
+    "table": "advertising",
+    "category": "ratio",
+    "status": "OK",
+    "time": 25.3,
+    "answer_len": 528,
+    "answer_preview": "### 📊 전체 광고비 중 TikTok 비중 분석  #### 요약  전체 광고비에서 TikTok이 차지하는 비중은 **34.78%**입니다. 이는 TikTok이 전체 광고 지출에서 상당한 부분을 차지하고 있음을 보여줍니다.  #### 분석 및 인사이트  *   TikTok은 전체 광고 채널 중 약 35%에 가까운 비중을 차지하며, 주요 마케팅 채널로서의 중"
+  },
+  {
+    "id": "AD-288",
+    "query": "전체 광고비 중 Facebook 비중은?",
+    "table": "advertising",
+    "category": "ratio",
+    "status": "OK",
+    "time": 39.1,
+    "answer_len": 501,
+    "answer_preview": "### 📊 전체 광고비 중 Facebook 비중 분석  #### 요약  현재까지 집계된 전체 광고비 중 Facebook이 차지하는 비중은 **33.85%**입니다. 이는 Facebook이 전체 광고 채널 중 상당한 부분을 차지하고 있음을 보여줍니다.  #### 분석 및 인사이트  *   Facebook의 광고비 비중이 30%를 초과하여, SKIN1004의 "
+  },
+  {
+    "id": "AD-289",
+    "query": "국가별 광고비 비중 분석",
+    "table": "advertising",
+    "category": "ratio",
+    "status": "OK",
+    "time": 55.4,
+    "answer_len": 1911,
+    "answer_preview": "### 📊 국가별 광고비 비중 분석  #### 요약  전체 광고비는 약 **501.0억원**으로 집계되었습니다. 이 중 인도네시아가 약 **174.3억원**으로 전체 광고비의 **34.8%**를 차지하며 가장 높은 비중을 보였습니다. 다음으로 미국이 약 **141.9억원**으로 **28.3%**를 차지하며 주요 광고 지출 국가로 나타났습니다. 상위 2개 국"
+  },
+  {
+    "id": "AD-290",
+    "query": "플랫폼별 광고비 비중 파이차트",
+    "table": "advertising",
+    "category": "ratio",
+    "status": "OK",
+    "time": 46.7,
+    "answer_len": 1365,
+    "answer_preview": "### 📊 플랫폼별 총 광고비 현황  #### 요약  전체 광고비는 **약 501.9억원**으로 집계되었으며, 이 중 **TikTok_Cost**가 약 174.6억원으로 전체의 **34.79%**를 차지하며 가장 큰 비중을 보였습니다. 다음으로는 **Facebook_Cost**가 약 170.0억원(33.85%)으로 뒤를 이으며, 두 플랫폼이 전체 광고비의 "
+  },
+  {
+    "id": "AD-291",
+    "query": "인도네시아 광고비 중 TikTok 비중",
+    "table": "advertising",
+    "category": "ratio",
+    "status": "OK",
+    "time": 34.9,
+    "answer_len": 507,
+    "answer_preview": "### 📊 인도네시아 광고비 중 TikTok 비중 분석 불가 (데이터 없음)  #### 요약  인도네시아 광고비 중 TikTok 비중을 분석한 결과, 현재 조회 가능한 데이터에서 **인도네시아의 TikTok 광고비 및 전체 광고비에 대한 정보가 확인되지 않습니다.** 따라서 TikTok 광고비의 비중을 산출할 수 없습니다.  #### 분석 및 인사이트  *"
+  },
+  {
+    "id": "AD-292",
+    "query": "한국 광고비 중 네이버 비중",
+    "table": "advertising",
+    "category": "ratio",
+    "status": "OK",
+    "time": 34.3,
+    "answer_len": 675,
+    "answer_preview": "### 📊 한국 광고비 중 네이버 비중 분석 결과  #### 요약  제공된 데이터로는 한국 광고비 중 네이버의 비중을 계산할 수 없습니다. SQL 실행 결과, 네이버 광고비 비중이 **null**로 나타났습니다. 이는 한국 광고 데이터 내에서 네이버 광고 비용 또는 전체 광고 비용이 존재하지 않거나 0으로 집계되어 비중 계산이 불가능함을 의미합니다.  ##"
+  },
+  {
+    "id": "AD-293",
+    "query": "동남아 광고비가 전체에서 차지하는 비율",
+    "table": "advertising",
+    "category": "ratio",
+    "status": "OK",
+    "time": 40.5,
+    "answer_len": 704,
+    "answer_preview": "### 📊 전체 광고비 대비 동남아시아 광고비 비율 분석  #### 요약  제공된 데이터에 따르면, 동남아시아 6개국(인도네시아, 말레이시아, 필리핀, 싱가포르, 베트남, 태국)의 광고비는 전체 광고비에서 **0.0%**의 비중을 차지하고 있습니다. 이는 현재 데이터상 해당 국가들에서 광고비 지출이 없거나, 관련 데이터가 집계되지 않았음을 시사합니다.  #"
+  },
+  {
+    "id": "AD-294",
+    "query": "디지털 광고 전체 현황 분석해줘",
+    "table": "advertising",
+    "category": "general",
+    "status": "OK",
+    "time": 40.0,
+    "answer_len": 579,
+    "answer_preview": "### 📊 디지털 광고 전체 현황 분석 보고서  #### 요약  전체 디지털 광고 캠페인의 총 광고비는 **약 501.9억원**을 집행하여, **약 1,908.6억원**의 전환 가치를 달성했습니다. 이로 인해 **380.26%**의 ROAS와 **1.27%**의 CTR을 기록하며 전반적으로 효율적인 성과를 보였습니다.  #### 분석 및 인사이트  *   "
+  },
+  {
+    "id": "AD-295",
+    "query": "광고 데이터 있는 날짜 범위가 어떻게 돼?",
+    "table": "advertising",
+    "category": "general",
+    "status": "OK",
+    "time": 37.0,
+    "answer_len": 766,
+    "answer_preview": "### 📊 광고 데이터 날짜 범위 분석  #### 요약  광고 데이터는 **2019년 01월 01일**부터 **2030년 12월 31일**까지의 날짜 범위를 포함하고 있습니다. ⚠️ 현재 날짜(2026년 03월 06일)를 기준으로 데이터의 마지막 날짜가 미래 시점인 **2030년 12월 31일**로 확인됩니다. 이는 데이터베이스에 미래 계획 또는 예산 관련"
+  },
+  {
+    "id": "AD-296",
+    "query": "광고 데이터에 어떤 국가들이 있어?",
+    "table": "advertising",
+    "category": "general",
+    "status": "OK",
+    "time": 16.7,
+    "answer_len": 742,
+    "answer_preview": "### 📊 광고 데이터 내 포함된 국가 현황  #### 요약  현재 광고 데이터에는 총 **12개** 국가의 정보가 포함되어 있습니다. 이들 국가는 아시아, 북미, 오세아니아 등 다양한 지역에 분포되어 있습니다.  #### 상세 데이터  광고 데이터에 포함된 국가 목록은 다음과 같습니다.  | 국가       | | :--------- | | 대만     "
+  },
+  {
+    "id": "AD-297",
+    "query": "광고 데이터에 어떤 플랫폼들이 있어?",
+    "table": "advertising",
+    "category": "general",
+    "status": "OK",
+    "time": 36.3,
+    "answer_len": 1127,
+    "answer_preview": "### 📊 운영 중인 광고 플랫폼 및 총 비용 현황  #### 요약  SKIN1004는 2019년 1월 1일부터 현재(2026년 3월 6일)까지 총 9개의 광고 플랫폼을 운영하며 비용을 집행했습니다. 이 중 **TikTok**이 약 **174.6억원**으로 가장 많은 비용을 차지했으며, 다음으로 **Facebook**이 약 **169.9억원**, **Sho"
+  },
+  {
+    "id": "AD-298",
+    "query": "가장 최근 광고 데이터 날짜는?",
+    "table": "advertising",
+    "category": "general",
+    "status": "OK",
+    "time": 30.7,
+    "answer_len": 450,
+    "answer_preview": "### 📊 가장 최근 광고 데이터 날짜  #### 요약  가장 최근 광고 데이터는 **2030년 12월 31일**로 확인되었습니다. 이는 오늘 날짜(2026년 03월 06일)보다 미래의 날짜이므로, 데이터의 정확성 및 입력 오류 여부 확인이 필요합니다.  #### 분석 및 인사이트  *   현재 조회된 광고 데이터 중 가장 최근 날짜는 **2030년 12월"
+  },
+  {
+    "id": "AD-299",
+    "query": "2025년 광고 데이터 건수",
+    "table": "advertising",
+    "category": "general",
+    "status": "OK",
+    "time": 40.0,
+    "answer_len": 396,
+    "answer_preview": "### 📊 2025년 광고 데이터 총 건수  #### 요약  2025년 한 해 동안 집계된 광고 데이터는 총 **71,621건**입니다.  #### 분석 및 인사이트  *   2025년 한 해 동안 **71,621건**의 광고 데이터가 기록되었습니다. 이는 연간 광고 활동의 전반적인 규모를 보여줍니다. *   `> ` 이 데이터 건수는 2025년 SKIN1"
+  },
+  {
+    "id": "AD-300",
+    "query": "전체 광고 데이터 레코드 수",
+    "table": "advertising",
+    "category": "general",
+    "status": "OK",
+    "time": 31.8,
+    "answer_len": 436,
+    "answer_preview": "### 📊 전체 광고 데이터 레코드 현황  #### 요약  현재 통합 광고 데이터에 기록된 전체 레코드 수는 총 **868,229건**입니다. 이는 SKIN1004의 광고 활동에 대한 방대한 데이터를 축적하고 있음을 보여줍니다.  #### 분석 및 인사이트  *   **데이터 볼륨:** 86만 건이 넘는 레코드는 광고 캠페인의 다양한 접점과 이벤트를 포괄적"
+  }
+]

@@ -1,0 +1,1502 @@
+[
+  {
+    "id": "V2_RT-001",
+    "query": "우리 회사 스마트스토어 제품별 후기 수 알려줘 확인 가능한가요?",
+    "category": "review_count"
+  },
+  {
+    "id": "V2_RT-002",
+    "query": "궁금한데 스마트스토아 리뷰 가장 많은 제품은?",
+    "category": "top_reviewed"
+  },
+  {
+    "id": "V2_RT-003",
+    "query": "스마트스토어 최근 리뷰 보여줘 알고 싶어",
+    "category": "recent_reviews"
+  },
+  {
+    "id": "V2_RT-004",
+    "query": "간단하게 스마트스토어 Madagascar Centella Ampoule 리뷰 수",
+    "category": "product_review"
+  },
+  {
+    "id": "V2_RT-005",
+    "query": "스마트스토어 SKIN1004 전체 리부 수 궁금해 몇이야?",
+    "category": "total_count"
+  },
+  {
+    "id": "V2_RT-006",
+    "query": "스마트스토어 월별 리뷰 수 추이 가르쳐줘",
+    "category": "monthly_trend"
+  },
+  {
+    "id": "V2_RT-007",
+    "query": "스마트스토어 최근 10건 리뷰데이터",
+    "category": "recent_n"
+  },
+  {
+    "id": "V2_RT-008",
+    "query": "스마트스토어 2025년 1월 리뷰 부탁 몇이야?",
+    "category": "date_range"
+  },
+  {
+    "id": "V2_RT-009",
+    "query": "스마트스토어 Centella Ampoule 최신 평가 내용",
+    "category": "review_content"
+  },
+  {
+    "id": "V2_RT-010",
+    "query": "스마트스토어 브랜드별 리뷰 수 비교 알려주세요",
+    "category": "brand_review"
+  },
+  {
+    "id": "V2_RT-011",
+    "query": "스마트스토어에서 Tone Brightening Capsule Serum 평가 몇 개야?",
+    "category": "product_review"
+  },
+  {
+    "id": "V2_RT-012",
+    "query": "혹시 스마스토 리뷰 최근 30일 추이 어때?",
+    "category": "monthly_trend"
+  },
+  {
+    "id": "V2_RT-013",
+    "query": "스마트스토어 Centella Soothing Cream 리뷰데이터 알려줘",
+    "category": "product_review"
+  },
+  {
+    "id": "V2_RT-014",
+    "query": "스마트스토어에서 가장 최근에 등록된 리뷰는 몇이야?",
+    "category": "recent_reviews"
+  },
+  {
+    "id": "V2_RT-015",
+    "query": "스마트스토아 리뷰 수 월별 변화 차트 어때?",
+    "category": "monthly_trend"
+  },
+  {
+    "id": "V2_RT-016",
+    "query": "스마트스토어 SKIN1004 리뷰 총 몇 건이야은 어떤가요?",
+    "category": "total_count"
+  },
+  {
+    "id": "V2_RT-017",
+    "query": "빠르게 스마트스토어 Centella Cleansing Oil 리뷰 수 알려주세요",
+    "category": "product_review"
+  },
+  {
+    "id": "V2_RT-018",
+    "query": "혹시 스마트스토어 최근 5건 후기 내용 보여줄 수 있나요",
+    "category": "recent_n"
+  },
+  {
+    "id": "V2_RT-019",
+    "query": "스마트스토어 2025년 평가 수 총합",
+    "category": "date_range"
+  },
+  {
+    "id": "V2_RT-020",
+    "query": "참고로 스마트스토어 제품별 후기 순위",
+    "category": "review_count"
+  },
+  {
+    "id": "V2_RT-021",
+    "query": "스마트스토어 피부고민별 후기 분석",
+    "category": "skin_concern"
+  },
+  {
+    "id": "V2_RT-022",
+    "query": "스마트스토어 skin_concern 별 리뷰 수 확인 부탁드립니다",
+    "category": "skin_concern"
+  },
+  {
+    "id": "V2_RT-023",
+    "query": "스마트스토어 피부고민 중 가장 많이 언급된 것은 확인 가능한가요?",
+    "category": "skin_concern"
+  },
+  {
+    "id": "V2_RT-024",
+    "query": "정확한 스마트스토어 리뷰에서 피부 트러블 관련 리뷰",
+    "category": "skin_concern"
+  },
+  {
+    "id": "V2_RT-025",
+    "query": "우리 회사 스마트스토어 피부고민별 제품 리뷰 교차 분석",
+    "category": "skin_concern"
+  },
+  {
+    "id": "V2_RT-026",
+    "query": "잠깐, 스마트스토어 리뷰 가장 적은 제품은 어때?",
+    "category": "review_count"
+  },
+  {
+    "id": "V2_RT-027",
+    "query": "스마트스토어 2024년 12월 리뷰 보여줄래?",
+    "category": "date_range"
+  },
+  {
+    "id": "V2_RT-028",
+    "query": "스마트스토어 최근 20건 리뷰 조회 어떻게 되나요?",
+    "category": "recent_n"
+  },
+  {
+    "id": "V2_RT-029",
+    "query": "스마트스토어 Madagascar Centella Ampoule 최신 리부 몇이야?",
+    "category": "review_content"
+  },
+  {
+    "id": "V2_RT-030",
+    "query": "스마스토 채널별 리뷰 수",
+    "category": "review_count"
+  },
+  {
+    "id": "V2_RT-031",
+    "query": "스마트스토어 2025년 2월 리뷰 몇 건이야",
+    "category": "date_range"
+  },
+  {
+    "id": "V2_RT-032",
+    "query": "간단하게 스마스토 평가 데이터 전체 건수 알려줘",
+    "category": "total_count"
+  },
+  {
+    "id": "V2_RT-033",
+    "query": "스마트스토어 Centella Ampoule 후기 각 월 추이",
+    "category": "monthly_trend"
+  },
+  {
+    "id": "V2_RT-034",
+    "query": "스마스토에서 리뷰 최근 50건 알고 싶어 알 수 있을까요?",
+    "category": "recent_n"
+  },
+  {
+    "id": "V2_RT-035",
+    "query": "스마트스토어 리뷰 제품명별 분류 궁금해",
+    "category": "review_count"
+  },
+  {
+    "id": "V2_RT-036",
+    "query": "스마트스토어 Tone Brightening Capsule Serum 최신 리뷰데이터 내용",
+    "category": "review_content"
+  },
+  {
+    "id": "V2_RT-037",
+    "query": "정확한 스마스토 전체 리뷰 중 최근 7일 리뷰 부탁",
+    "category": "recent_reviews"
+  },
+  {
+    "id": "V2_RT-038",
+    "query": "혹시 스마트스토어 리뷰 수집 날짜 기준 최신순 정렬 부탁",
+    "category": "recent_reviews"
+  },
+  {
+    "id": "V2_RT-039",
+    "query": "스마트스토어 2025년 3월 후기 있어?",
+    "category": "date_range"
+  },
+  {
+    "id": "V2_RT-040",
+    "query": "스마트스토어 리뷰 브랜드 SKIN1004만 필터링 알려주세요",
+    "category": "brand_review"
+  },
+  {
+    "id": "V2_RT-041",
+    "query": "간단하게 스마트스토어 최근 100건 리뷰 데이터 부탁",
+    "category": "recent_n"
+  },
+  {
+    "id": "V2_RT-042",
+    "query": "스마트스토어 Centella Soothing Cream 후기 내용 알려줘",
+    "category": "review_content"
+  },
+  {
+    "id": "V2_RT-043",
+    "query": "잠깐, 스마트스토어 월별 리뷰 건수 통계",
+    "category": "monthly_trend"
+  },
+  {
+    "id": "V2_RT-044",
+    "query": "스마트스토어 리부 제품별 비율",
+    "category": "review_count"
+  },
+  {
+    "id": "V2_RT-045",
+    "query": "스마트스토어 2024년 평가 수",
+    "category": "date_range"
+  },
+  {
+    "id": "V2_RT-046",
+    "query": "스마트스토어 리뷰 원문과 한국어 번역 같이 보여줘 알려줄래?",
+    "category": "review_content"
+  },
+  {
+    "id": "V2_RT-047",
+    "query": "스마트스토어 Centella Cleansing Oil 최신 리뷰데이터",
+    "category": "review_content"
+  },
+  {
+    "id": "V2_RT-048",
+    "query": "정확한 스마트스토어 후기 최근 한 달 몇 건?",
+    "category": "recent_reviews"
+  },
+  {
+    "id": "V2_RT-049",
+    "query": "스마트스토어 제품별 리뷰 수 TOP 5 알려주시면 감사하겠습니다",
+    "category": "top_reviewed"
+  },
+  {
+    "id": "V2_RT-050",
+    "query": "요즘 스마트스토아 리뷰 날짜별 분포 확인 부탁드립니다",
+    "category": "monthly_trend"
+  },
+  {
+    "id": "V2_RT-051",
+    "query": "요즘 스마트스토어 피부고민 건성 관련 리뷰 확인 가능한가요?",
+    "category": "skin_concern"
+  },
+  {
+    "id": "V2_RT-052",
+    "query": "스마스토 피부고민별 리뷰 추이 알려주세요",
+    "category": "skin_concern"
+  },
+  {
+    "id": "V2_RT-053",
+    "query": "스마트스토어 피부고민 민감성 후기 몇 건?",
+    "category": "skin_concern"
+  },
+  {
+    "id": "V2_RT-054",
+    "query": "정확한 스마트스토어 skin_concern 목록 보여줘",
+    "category": "skin_concern"
+  },
+  {
+    "id": "V2_RT-055",
+    "query": "스마트스토어 피부고민별 제품 추천 리부 확인 부탁드립니다",
+    "category": "skin_concern"
+  },
+  {
+    "id": "V2_RT-056",
+    "query": "스마트스토어 1분기 2025년 리뷰 수",
+    "category": "date_range"
+  },
+  {
+    "id": "V2_RT-057",
+    "query": "스마트스토아 최근 평가 3건만 보여줄 수 있어?",
+    "category": "recent_n"
+  },
+  {
+    "id": "V2_RT-058",
+    "query": "궁금한데 스마트스토어 Madagascar Centella Ampoule 리뷰데이터 몇 개 있어?",
+    "category": "product_review"
+  },
+  {
+    "id": "V2_RT-059",
+    "query": "스마트스토어 리뷰 수집일 기준 정렬 좀 알려줘",
+    "category": "recent_reviews"
+  },
+  {
+    "id": "V2_RT-060",
+    "query": "스마트스토어 전체 리뷰 데이터 수?",
+    "category": "total_count"
+  },
+  {
+    "id": "V2_RT-061",
+    "query": "스마트스토어에서 리뷰 가장 많이 달린 제품 TOP 3 어떻게 되나요?",
+    "category": "top_reviewed"
+  },
+  {
+    "id": "V2_RT-062",
+    "query": "스마트스토어 리뷰 2025년 월별 건수",
+    "category": "monthly_trend"
+  },
+  {
+    "id": "V2_RT-063",
+    "query": "참고로 스마트스토어 Centella Ampoule 후기 한국어 번역 보여줘 확인해줘",
+    "category": "review_content"
+  },
+  {
+    "id": "V2_RT-064",
+    "query": "확인 좀 해줘 스마트스토어 후기 제품명에 Centella 포함된 것만",
+    "category": "product_review"
+  },
+  {
+    "id": "V2_RT-065",
+    "query": "스마트스토어 2024년 11월 리부 데이터",
+    "category": "date_range"
+  },
+  {
+    "id": "V2_RT-066",
+    "query": "스마트스토어 리뷰 수 상위 10개 제품 보여줘",
+    "category": "top_reviewed"
+  },
+  {
+    "id": "V2_RT-067",
+    "query": "요즘 스마트스토어 최근 리뷰 15건 내용",
+    "category": "recent_n"
+  },
+  {
+    "id": "V2_RT-068",
+    "query": "스마트스토어 리뷰 한국어 번역 최근 것?",
+    "category": "review_content"
+  },
+  {
+    "id": "V2_RT-069",
+    "query": "스마트스토어 제품 평가 분석해줘",
+    "category": "review_count"
+  },
+  {
+    "id": "V2_RT-070",
+    "query": "참고로 스마트스토어 SKIN1004 브랜드 평가 전체 보여주세요",
+    "category": "brand_review"
+  },
+  {
+    "id": "V2_RT-071",
+    "query": "잠깐, 스마트스토어 리뷰 2025년 상반기 데이터",
+    "category": "date_range"
+  },
+  {
+    "id": "V2_RT-072",
+    "query": "스마스토 리뷰 건수 추세 그래프 부탁 몇이야?",
+    "category": "monthly_trend"
+  },
+  {
+    "id": "V2_RT-073",
+    "query": "스마트스토어 최근 리뷰데이터 원문 보여줘 빨리",
+    "category": "review_content"
+  },
+  {
+    "id": "V2_RT-074",
+    "query": "스마스토 Tone Brightening Capsule Serum 리뷰 수 트렌드 알려주세요",
+    "category": "product_review"
+  },
+  {
+    "id": "V2_RT-075",
+    "query": "스마트스토어 평가 수집일 최신 데이터",
+    "category": "recent_reviews"
+  },
+  {
+    "id": "V2_RT-076",
+    "query": "간단하게 스마트스토어 2025년 2월 리부 내용 좀 알려줘",
+    "category": "date_range"
+  },
+  {
+    "id": "V2_RT-077",
+    "query": "스마스토 전체 리뷰 건수 합계 좀",
+    "category": "total_count"
+  },
+  {
+    "id": "V2_RT-078",
+    "query": "스마트스토어 제품별 최근 리뷰 1건씩 확인 부탁드립니다",
+    "category": "review_content"
+  },
+  {
+    "id": "V2_RT-079",
+    "query": "스마트스토어 리뷰데이터 날짜 범위 알려줘",
+    "category": "date_range"
+  },
+  {
+    "id": "V2_RT-080",
+    "query": "스마트스토어 평가 수 가장 적은 제품은",
+    "category": "review_count"
+  },
+  {
+    "id": "V2_RT-081",
+    "query": "스마트스토어 피부고민 지성 리부 수 알려주세요",
+    "category": "skin_concern"
+  },
+  {
+    "id": "V2_RT-082",
+    "query": "스마트스토어 피부고민별 월별 추이 확인 부탁드립니다",
+    "category": "skin_concern"
+  },
+  {
+    "id": "V2_RT-083",
+    "query": "스마트스토아 피부고민 모공 관련 리뷰",
+    "category": "skin_concern"
+  },
+  {
+    "id": "V2_RT-084",
+    "query": "확인 좀 해줘 스마트스토어 피부고민 TOP 5",
+    "category": "skin_concern"
+  },
+  {
+    "id": "V2_RT-085",
+    "query": "잠깐, 스마트스토어 피부고민 여드름 리뷰 내용",
+    "category": "skin_concern"
+  },
+  {
+    "id": "V2_RT-086",
+    "query": "빠르게 스마트스토어 Centella Cleansing Oil 후기 몇 건?",
+    "category": "product_review"
+  },
+  {
+    "id": "V2_RT-087",
+    "query": "스마트스토어 최근 한 주간 후기",
+    "category": "recent_reviews"
+  },
+  {
+    "id": "V2_RT-088",
+    "query": "스마트스토어 리뷰데이터 각 월 증감 추이",
+    "category": "monthly_trend"
+  },
+  {
+    "id": "V2_RT-089",
+    "query": "스마트스토어 2024년 10월 후기데이터 수 확인 부탁드립니다",
+    "category": "date_range"
+  },
+  {
+    "id": "V2_RT-090",
+    "query": "스마트스토어 제품 평가 상위 알려줘",
+    "category": "top_reviewed"
+  },
+  {
+    "id": "V2_RT-091",
+    "query": "참고로 스마트스토어 Madagascar Centella Ampoule 리뷰 원문",
+    "category": "review_content"
+  },
+  {
+    "id": "V2_RT-092",
+    "query": "스마트스토어 최근 리뷰데이터 25건 부탁 부탁드려요",
+    "category": "recent_n"
+  },
+  {
+    "id": "V2_RT-093",
+    "query": "요즘 스마트스토어 리뷰데이터 데이터 채널 정보 확인 부탁드립니다",
+    "category": "review_count"
+  },
+  {
+    "id": "V2_RT-094",
+    "query": "궁금한데 스마트스토어 2025년 전체 후기 수 알려주세요",
+    "category": "date_range"
+  },
+  {
+    "id": "V2_RT-095",
+    "query": "스마트스토어 Centella Soothing Cream 평가 수 변화",
+    "category": "product_review"
+  },
+  {
+    "id": "V2_RT-096",
+    "query": "스마트스토어 리뷰데이터 원문과 번역문 대비",
+    "category": "review_content"
+  },
+  {
+    "id": "V2_RT-097",
+    "query": "스마트스토어 상품별 리뷰 비율 차트",
+    "category": "review_count"
+  },
+  {
+    "id": "V2_RT-098",
+    "query": "스마트스토어 리뷰데이터 최근 2주간 데이터",
+    "category": "recent_reviews"
+  },
+  {
+    "id": "V2_RT-099",
+    "query": "참고로 스마트스토어 리뷰 총 건수와 제품 수 보여줘",
+    "category": "total_count"
+  },
+  {
+    "id": "V2_RT-100",
+    "query": "스마트스토어 2024년 하반기 리부",
+    "category": "date_range"
+  },
+  {
+    "id": "V2_RT-101",
+    "query": "우리 회사 스마트스토어 리뷰데이터 수 기준 제품 순위표 알려주세요",
+    "category": "top_reviewed"
+  },
+  {
+    "id": "V2_RT-102",
+    "query": "스마트스토어 최근 리뷰 내용 요약해줘 부탁드려요",
+    "category": "review_content"
+  },
+  {
+    "id": "V2_RT-103",
+    "query": "궁금한데 스마트스토어 월별 리뷰 수 평균",
+    "category": "monthly_trend"
+  },
+  {
+    "id": "V2_RT-104",
+    "query": "궁금한데 스마트스토어 리뷰 제품명 목록",
+    "category": "review_count"
+  },
+  {
+    "id": "V2_RT-105",
+    "query": "스마트스토어 2025년 1월 리뷰 내용 보여줄래 알려주세요",
+    "category": "review_content"
+  },
+  {
+    "id": "V2_RT-106",
+    "query": "스마트스토어에서 Centella 제품 리뷰 전체 알려주세요",
+    "category": "product_review"
+  },
+  {
+    "id": "V2_RT-107",
+    "query": "스마트스토어 리부 최신 데이터 날짜가 언제야",
+    "category": "recent_reviews"
+  },
+  {
+    "id": "V2_RT-108",
+    "query": "스마트스토어 2024년 9월 리뷰 건수 알려주시면 감사하겠습니다",
+    "category": "date_range"
+  },
+  {
+    "id": "V2_RT-109",
+    "query": "참고로 스마트스토어 리뷰데이터 주간 트렌드 확인해줘 알 수 있을까요?",
+    "category": "monthly_trend"
+  },
+  {
+    "id": "V2_RT-110",
+    "query": "잠깐, 스마트스토어 SKIN1004 리뷰만 알려줘",
+    "category": "brand_review"
+  },
+  {
+    "id": "V2_RT-111",
+    "query": "스마트스토어 피부고민 건조 관련 후기 보여줄래?",
+    "category": "skin_concern"
+  },
+  {
+    "id": "V2_RT-112",
+    "query": "스마스토 피부고민별 제품별 후기 수 몇이야?",
+    "category": "skin_concern"
+  },
+  {
+    "id": "V2_RT-113",
+    "query": "스마트스토어 피부고민 색소침착 리뷰 좀 확인 가능한가요?",
+    "category": "skin_concern"
+  },
+  {
+    "id": "V2_RT-114",
+    "query": "확인 좀 해줘 스마트스토어 skin_concern 데이터 분석",
+    "category": "skin_concern"
+  },
+  {
+    "id": "V2_RT-115",
+    "query": "스마트스토어 피부고민 주름 관련 리뷰데이터 수",
+    "category": "skin_concern"
+  },
+  {
+    "id": "V2_RT-116",
+    "query": "스마트스토어 최근 리뷰 7건 한국어로 알려주세요",
+    "category": "recent_n"
+  },
+  {
+    "id": "V2_RT-117",
+    "query": "스마트스토어 Tone Brightening Capsule Serum 리뷰 원문 알려주시면 감사하겠습니다",
+    "category": "review_content"
+  },
+  {
+    "id": "V2_RT-118",
+    "query": "스마트스토어 리뷰 상품별 최신 날짜은 어떤가요?",
+    "category": "recent_reviews"
+  },
+  {
+    "id": "V2_RT-119",
+    "query": "참고로 스마스토 후기 분기별 추이 알려주세요",
+    "category": "monthly_trend"
+  },
+  {
+    "id": "V2_RT-120",
+    "query": "스마트스토어 전체 평가 중 2025년 비율",
+    "category": "date_range"
+  },
+  {
+    "id": "V2_RT-121",
+    "query": "스마트스토어 리뷰 어떤 제품이 있나요",
+    "category": "review_count"
+  },
+  {
+    "id": "V2_RT-122",
+    "query": "요즘 스마트스토어 리뷰 수집 동향 알려줘",
+    "category": "total_count"
+  },
+  {
+    "id": "V2_RT-123",
+    "query": "스마트스토어 최근 후기 중 Centella Ampoule 관련",
+    "category": "product_review"
+  },
+  {
+    "id": "V2_RT-124",
+    "query": "스마트스토어 2025년 1월~2월 리뷰 확인 가능한가요?",
+    "category": "date_range"
+  },
+  {
+    "id": "V2_RT-125",
+    "query": "스마스토 후기 수 증가율",
+    "category": "monthly_trend"
+  },
+  {
+    "id": "V2_RT-126",
+    "query": "스마트스토아 제품별 최신 리뷰 내용 정리",
+    "category": "review_content"
+  },
+  {
+    "id": "V2_RT-127",
+    "query": "스마트스토어 리뷰 데이터에서 브랜드 종류 좀 알려줘",
+    "category": "brand_review"
+  },
+  {
+    "id": "V2_RT-128",
+    "query": "스마트스토어 최근 평가 40건 보여줄래 어때?",
+    "category": "recent_n"
+  },
+  {
+    "id": "V2_RT-129",
+    "query": "스마트스토어 Madagascar Centella Ampoule 월별 후기 수",
+    "category": "product_review"
+  },
+  {
+    "id": "V2_RT-130",
+    "query": "스마트스토어 리부 최다 제품 TOP 7",
+    "category": "top_reviewed"
+  },
+  {
+    "id": "V2_RT-131",
+    "query": "스마트스토어 2024년 후기 총 건수",
+    "category": "date_range"
+  },
+  {
+    "id": "V2_RT-132",
+    "query": "궁금한데 스마트스토어 리뷰 번역 데이터 최근 것 알려주세요",
+    "category": "review_content"
+  },
+  {
+    "id": "V2_RT-133",
+    "query": "스마트스토어 Centella Soothing Cream 리뷰 원문 알려줘",
+    "category": "review_content"
+  },
+  {
+    "id": "V2_RT-134",
+    "query": "스마트스토어 리뷰데이터 수 상품별 내림차순 확인 가능한가요?",
+    "category": "review_count"
+  },
+  {
+    "id": "V2_RT-135",
+    "query": "스마트스토어 최근 리뷰데이터 날짜 확인",
+    "category": "recent_reviews"
+  },
+  {
+    "id": "V2_RT-136",
+    "query": "요즘 스마스토 2024년 8월 리부",
+    "category": "date_range"
+  },
+  {
+    "id": "V2_RT-137",
+    "query": "스마트스토어 리뷰 총합 몇 건이야? 빨리",
+    "category": "total_count"
+  },
+  {
+    "id": "V2_RT-138",
+    "query": "스마트스토어 Centella Cleansing Oil 리뷰 내용 얼마임?",
+    "category": "review_content"
+  },
+  {
+    "id": "V2_RT-139",
+    "query": "스마트스토아 리뷰 제품 수 몇 개야",
+    "category": "review_count"
+  },
+  {
+    "id": "V2_RT-140",
+    "query": "스마트스토어 월별 리뷰데이터 추이 분석해줘",
+    "category": "monthly_trend"
+  },
+  {
+    "id": "V2_RT-141",
+    "query": "간단하게 스마트스토어 피부고민 홍조 리뷰 수 확인 가능한가요?",
+    "category": "skin_concern"
+  },
+  {
+    "id": "V2_RT-142",
+    "query": "스마트스토어 피부고민별 비율 차트 확인 부탁드립니다",
+    "category": "skin_concern"
+  },
+  {
+    "id": "V2_RT-143",
+    "query": "스마트스토어 피부고민 아토피 관련 평가",
+    "category": "skin_concern"
+  },
+  {
+    "id": "V2_RT-144",
+    "query": "스마트스토어 피부고민 각질 평가 내용 보여줘 확인 가능한가요?",
+    "category": "skin_concern"
+  },
+  {
+    "id": "V2_RT-145",
+    "query": "스마스토 피부고민별 제품 선호도",
+    "category": "skin_concern"
+  },
+  {
+    "id": "V2_RT-146",
+    "query": "스마트스토어 리뷰에서 가장 오래된 리뷰는 부탁드려요",
+    "category": "date_range"
+  },
+  {
+    "id": "V2_RT-147",
+    "query": "스마트스토어 리뷰 최근 60건 데이터 확인 부탁드립니다",
+    "category": "recent_n"
+  },
+  {
+    "id": "V2_RT-148",
+    "query": "스마트스토어 Centella Ampoule 리뷰 건수 월간 알고 싶어",
+    "category": "product_review"
+  },
+  {
+    "id": "V2_RT-149",
+    "query": "혹시 스마스토 리뷰 최근 3개월 변동 어떻게 되나요?",
+    "category": "monthly_trend"
+  },
+  {
+    "id": "V2_RT-150",
+    "query": "스마트스토어 리뷰데이터 데이터 전체 상황",
+    "category": "total_count"
+  },
+  {
+    "id": "V2_RT-151",
+    "query": "스마트스토어 SKIN1004 브랜드 리뷰 수 추이 얼마임?",
+    "category": "brand_review"
+  },
+  {
+    "id": "V2_RT-152",
+    "query": "스마트스토어 리뷰데이터 중 최근 것부터 정렬해서 보여줄 수 있어?",
+    "category": "recent_reviews"
+  },
+  {
+    "id": "V2_RT-153",
+    "query": "스마트스토어 2024년 7월 평가 데이터",
+    "category": "date_range"
+  },
+  {
+    "id": "V2_RT-154",
+    "query": "스마트스토어 제품 기준 리뷰 수 표로 보여줄래 어떻게 되나요?",
+    "category": "review_count"
+  },
+  {
+    "id": "V2_RT-155",
+    "query": "스마트스토어 리뷰데이터 원문 언어별 분포",
+    "category": "review_content"
+  },
+  {
+    "id": "V2_RT-156",
+    "query": "스마트스토어 최근 후기 요약",
+    "category": "recent_reviews"
+  },
+  {
+    "id": "V2_RT-157",
+    "query": "스마트스토어 Tone Brightening Capsule Serum 리뷰 있어 부탁드려요",
+    "category": "product_review"
+  },
+  {
+    "id": "V2_RT-158",
+    "query": "스마트스토어 리뷰 2025년 3월 데이터 있어 부탁드려요",
+    "category": "date_range"
+  },
+  {
+    "id": "V2_RT-159",
+    "query": "스마트스토아 리뷰 수 TOP 제품 비율",
+    "category": "top_reviewed"
+  },
+  {
+    "id": "V2_RT-160",
+    "query": "간단하게 스마트스토어 제품 리뷰 수 비교 차트 알려주세요",
+    "category": "review_count"
+  },
+  {
+    "id": "V2_RT-161",
+    "query": "스마트스토어 최근 리뷰 12건 알려주시면 감사하겠습니다",
+    "category": "recent_n"
+  },
+  {
+    "id": "V2_RT-162",
+    "query": "스마트스토어 평가 수집일과 리뷰 작성일 차이",
+    "category": "date_range"
+  },
+  {
+    "id": "V2_RT-163",
+    "query": "스마트스토어 Madagascar Centella Ampoule 한국어 리뷰데이터",
+    "category": "review_content"
+  },
+  {
+    "id": "V2_RT-164",
+    "query": "스마트스토어 리뷰 주별 통계 어떻게 되나요?",
+    "category": "monthly_trend"
+  },
+  {
+    "id": "V2_RT-165",
+    "query": "잠깐, 스마트스토어 리뷰 데이터 날짜 범위",
+    "category": "date_range"
+  },
+  {
+    "id": "V2_RT-166",
+    "query": "스마트스토어 최다 리뷰 제품 말해줘",
+    "category": "top_reviewed"
+  },
+  {
+    "id": "V2_RT-167",
+    "query": "스마트스토어 후기 전체 목록",
+    "category": "total_count"
+  },
+  {
+    "id": "V2_RT-168",
+    "query": "스마트스토어 Centella Ampoule 후기 최근 5건 알려주세요",
+    "category": "recent_n"
+  },
+  {
+    "id": "V2_RT-169",
+    "query": "스마트스토어 2025년 월별 리뷰 건수 대조 빨리?",
+    "category": "monthly_trend"
+  },
+  {
+    "id": "V2_RT-170",
+    "query": "스마트스토어 리부에서 Soothing Cream 검색 좀 알려줘",
+    "category": "product_review"
+  },
+  {
+    "id": "V2_RT-171",
+    "query": "스마트스토어 피부고민 복합성 피부 평가 좀 알려줘",
+    "category": "skin_concern"
+  },
+  {
+    "id": "V2_RT-172",
+    "query": "정확한 스마트스토어 피부고민 자극 관련 리뷰 수",
+    "category": "skin_concern"
+  },
+  {
+    "id": "V2_RT-173",
+    "query": "스마트스토어 피부고민별 최근 리뷰 알려주세요",
+    "category": "skin_concern"
+  },
+  {
+    "id": "V2_RT-174",
+    "query": "스마트스토어 skin_concern 종류별 건수 표 알려주세요",
+    "category": "skin_concern"
+  },
+  {
+    "id": "V2_RT-175",
+    "query": "간단하게 스마트스토어 피부고민 블랙헤드 리뷰데이터",
+    "category": "skin_concern"
+  },
+  {
+    "id": "V2_RT-176",
+    "query": "스마트스토어 리뷰 최근 한 달 건수 확인 가능한가요?",
+    "category": "recent_reviews"
+  },
+  {
+    "id": "V2_RT-177",
+    "query": "스마트스토어 후기 번역 품질 확인",
+    "category": "review_content"
+  },
+  {
+    "id": "V2_RT-178",
+    "query": "스마트스토어 평가 수 연도별 대조",
+    "category": "date_range"
+  },
+  {
+    "id": "V2_RT-179",
+    "query": "요즘 스마트스토어 제품별 평가 트렌드 부탁드려요",
+    "category": "monthly_trend"
+  },
+  {
+    "id": "V2_RT-180",
+    "query": "스마트스토어 전체 평가 수 현황 알려주세요",
+    "category": "total_count"
+  },
+  {
+    "id": "V2_RT-181",
+    "query": "스마트스토어 후기 중 Cleansing Oil 관련",
+    "category": "product_review"
+  },
+  {
+    "id": "V2_RT-182",
+    "query": "정확한 스마트스토어 최근 리뷰 30건 한국어 번역 확인 부탁드립니다",
+    "category": "recent_n"
+  },
+  {
+    "id": "V2_RT-183",
+    "query": "궁금한데 스마트스토어 후기 데이터 수집 주기는 부탁드려요",
+    "category": "total_count"
+  },
+  {
+    "id": "V2_RT-184",
+    "query": "정확한 스마트스토어 2024년 4분기 리뷰 수 좀",
+    "category": "date_range"
+  },
+  {
+    "id": "V2_RT-185",
+    "query": "우리 회사 스마트스토어 리뷰 제품명 중복 제거 목록 좀",
+    "category": "review_count"
+  },
+  {
+    "id": "V2_RT-186",
+    "query": "정확한 스마트스토어 평가 월별 평균 건수 확인 부탁드립니다",
+    "category": "monthly_trend"
+  },
+  {
+    "id": "V2_RT-187",
+    "query": "스마트스토어 최근 수집된 리뷰 알려줘",
+    "category": "recent_reviews"
+  },
+  {
+    "id": "V2_RT-188",
+    "query": "스마트스토어 Centella Ampoule 리뷰 원문 10건 알려주세요",
+    "category": "review_content"
+  },
+  {
+    "id": "V2_RT-189",
+    "query": "스마트스토어 리뷰 수 가장 많은 달은 알려주시면 감사하겠습니다",
+    "category": "monthly_trend"
+  },
+  {
+    "id": "V2_RT-190",
+    "query": "스마트스토어 리뷰 2024년 전체 요약 정리해줘 알 수 있을까요?",
+    "category": "date_range"
+  },
+  {
+    "id": "V2_RT-191",
+    "query": "스마트스토어에서 SKIN1004 리뷰 제일 많은 제품 어때?",
+    "category": "top_reviewed"
+  },
+  {
+    "id": "V2_RT-192",
+    "query": "스마트스토어 리뷰데이터 최신 데이터 확인해줘",
+    "category": "recent_reviews"
+  },
+  {
+    "id": "V2_RT-193",
+    "query": "스마트스토어 리뷰 collected_date 기준 최근 데이터",
+    "category": "recent_reviews"
+  },
+  {
+    "id": "V2_RT-194",
+    "query": "간단하게 스마트스토어 제품별 리뷰 건수와 비중 부탁드려요",
+    "category": "review_count"
+  },
+  {
+    "id": "V2_RT-195",
+    "query": "간단하게 스마트스토어 2025년 신규 리뷰 수",
+    "category": "date_range"
+  },
+  {
+    "id": "V2_RT-196",
+    "query": "참고로 스마트스토어 리뷰 데이터 컬럼 정보 확인 가능한가요?",
+    "category": "total_count"
+  },
+  {
+    "id": "V2_RT-197",
+    "query": "스마트스토어 Madagascar Centella Ampoule 리뷰 트렌드 정리해주세요",
+    "category": "product_review"
+  },
+  {
+    "id": "V2_RT-198",
+    "query": "스마트스토어 최근 리뷰데이터 8건",
+    "category": "recent_n"
+  },
+  {
+    "id": "V2_RT-199",
+    "query": "요즘 스마트스토어 평가 작성일 기준 최신순 어떻게 되나요?",
+    "category": "recent_reviews"
+  },
+  {
+    "id": "V2_RT-200",
+    "query": "확인 좀 해줘 스마트스토어 후기 제품별 각 월 교차 분석 확인 가능한가요?",
+    "category": "monthly_trend"
+  },
+  {
+    "id": "V2_RT-201",
+    "query": "스마트스토어 피부고민 탄력 관련 리뷰 알 수 있을까요?",
+    "category": "skin_concern"
+  },
+  {
+    "id": "V2_RT-202",
+    "query": "스마트스토어 피부고민별 제품 평가 분포",
+    "category": "skin_concern"
+  },
+  {
+    "id": "V2_RT-203",
+    "query": "스마트스토어 피부고민 미백 관련 리뷰데이터 수",
+    "category": "skin_concern"
+  },
+  {
+    "id": "V2_RT-204",
+    "query": "스마트스토어 skin_concern 데이터 전체 알려줘",
+    "category": "skin_concern"
+  },
+  {
+    "id": "V2_RT-205",
+    "query": "스마트스토어 피부고민 트러블 리뷰 내용 알려주세요",
+    "category": "skin_concern"
+  },
+  {
+    "id": "V2_RT-206",
+    "query": "요즘 스마트스토어 2025년 2월 리뷰 내용 전부 알려주세요",
+    "category": "date_range"
+  },
+  {
+    "id": "V2_RT-207",
+    "query": "정확한 스마트스토어 리뷰 Centella 키워드 검색",
+    "category": "product_review"
+  },
+  {
+    "id": "V2_RT-208",
+    "query": "스마트스토어 평가 한국어 번역본만 보여줘",
+    "category": "review_content"
+  },
+  {
+    "id": "V2_RT-209",
+    "query": "스마트스토어 상품별 최근 후기 날짜",
+    "category": "recent_reviews"
+  },
+  {
+    "id": "V2_RT-210",
+    "query": "스마트스토어 후기 수 월 평균은?",
+    "category": "monthly_trend"
+  },
+  {
+    "id": "V2_RT-211",
+    "query": "궁금한데 스마트스토어 전체 리뷰 건수 흐름 차트",
+    "category": "total_count"
+  },
+  {
+    "id": "V2_RT-212",
+    "query": "스마트스토어 Soothing Cream 후기 최근 3건",
+    "category": "recent_n"
+  },
+  {
+    "id": "V2_RT-213",
+    "query": "스마트스토어 2024년 6월 평가 데이터 있어?",
+    "category": "date_range"
+  },
+  {
+    "id": "V2_RT-214",
+    "query": "스마트스토어 리뷰 상품별 통계 요약",
+    "category": "review_count"
+  },
+  {
+    "id": "V2_RT-215",
+    "query": "요즘 스마트스토어 평가 가장 최근 작성된 것 좀 봐줘",
+    "category": "recent_reviews"
+  },
+  {
+    "id": "V2_RT-216",
+    "query": "스마트스토어 Centella Ampoule 리뷰 번역 보여줄 수 있어 얼마임?",
+    "category": "review_content"
+  },
+  {
+    "id": "V2_RT-217",
+    "query": "정확한 스마트스토아 리뷰 데이터 연도별 건수",
+    "category": "date_range"
+  },
+  {
+    "id": "V2_RT-218",
+    "query": "스마트스토어 리뷰데이터 TOP 5 제품 리스트 어때?",
+    "category": "top_reviewed"
+  },
+  {
+    "id": "V2_RT-219",
+    "query": "스마트스토어 최근 2개월 평가 건수 좀 알려줘",
+    "category": "recent_reviews"
+  },
+  {
+    "id": "V2_RT-220",
+    "query": "스마트스토어 후기 원문으로 된 것만 보여주세요",
+    "category": "review_content"
+  },
+  {
+    "id": "V2_RT-221",
+    "query": "스마트스토어 2024년 3분기 리뷰 알려주세요",
+    "category": "date_range"
+  },
+  {
+    "id": "V2_RT-222",
+    "query": "스마트스토어 후기 제품 카테고리별 분류",
+    "category": "review_count"
+  },
+  {
+    "id": "V2_RT-223",
+    "query": "스마트스토어 리뷰 최근 90건 궁금해 확인 가능한가요?",
+    "category": "recent_n"
+  },
+  {
+    "id": "V2_RT-224",
+    "query": "스마트스토어 리뷰 브랜드 필터링 후 건수 부탁드려요",
+    "category": "brand_review"
+  },
+  {
+    "id": "V2_RT-225",
+    "query": "간단하게 스마트스토어 Centella Cleansing Oil 달별 리뷰 좀",
+    "category": "product_review"
+  },
+  {
+    "id": "V2_RT-226",
+    "query": "스마트스토어 평가 review_date 기준 분석",
+    "category": "monthly_trend"
+  },
+  {
+    "id": "V2_RT-227",
+    "query": "혹시 스마트스토어 전체 데이터 행 수 알려줘 어떻게 되나요?",
+    "category": "total_count"
+  },
+  {
+    "id": "V2_RT-228",
+    "query": "스마트스토어 최근 리뷰데이터 중 긍정적인 것",
+    "category": "review_content"
+  },
+  {
+    "id": "V2_RT-229",
+    "query": "스마트스토어 2024년 5월 후기 확인 가능한가요?",
+    "category": "date_range"
+  },
+  {
+    "id": "V2_RT-230",
+    "query": "스마트스토어 리뷰데이터 수 기준 상위 제품",
+    "category": "top_reviewed"
+  },
+  {
+    "id": "V2_RT-231",
+    "query": "스마트스토어 피부고민 보습 관련 리뷰데이터 어떻게 되나요?",
+    "category": "skin_concern"
+  },
+  {
+    "id": "V2_RT-232",
+    "query": "스마트스토어 피부고민별 리뷰 수 차트은 어떤가요?",
+    "category": "skin_concern"
+  },
+  {
+    "id": "V2_RT-233",
+    "query": "스마트스토어 피부고민 진정 관련 리뷰 보여주세요",
+    "category": "skin_concern"
+  },
+  {
+    "id": "V2_RT-234",
+    "query": "우리 회사 스마트스토어 skin_concern 필드 값 종류",
+    "category": "skin_concern"
+  },
+  {
+    "id": "V2_RT-235",
+    "query": "스마트스토어 피부고민별 Centella Ampoule 리뷰은 어떤가요?",
+    "category": "skin_concern"
+  },
+  {
+    "id": "V2_RT-236",
+    "query": "혹시 스마트스토어 리뷰 수집 날짜 기준 통계 궁금해 알려주세요",
+    "category": "monthly_trend"
+  },
+  {
+    "id": "V2_RT-237",
+    "query": "스마스토 리뷰 제품별 최신 리뷰 요약 부탁",
+    "category": "review_content"
+  },
+  {
+    "id": "V2_RT-238",
+    "query": "스마트스토어 2024년 상반기 리뷰 건수 좀 알려줘",
+    "category": "date_range"
+  },
+  {
+    "id": "V2_RT-239",
+    "query": "확인 좀 해줘 스마트스토어 평가 데이터 전체 요약 통계 좀 알려줘",
+    "category": "total_count"
+  },
+  {
+    "id": "V2_RT-240",
+    "query": "스마트스토어 최근 평가 전체 보여줘 좀 봐줘",
+    "category": "recent_reviews"
+  },
+  {
+    "id": "V2_RT-241",
+    "query": "스마트스토어 후기 중 Madagascar Centella Ampoule 비율 알려주시면 감사하겠습니다",
+    "category": "product_review"
+  },
+  {
+    "id": "V2_RT-242",
+    "query": "스마트스토어 리뷰 날짜별 건수 차트 몇이야?",
+    "category": "monthly_trend"
+  },
+  {
+    "id": "V2_RT-243",
+    "query": "스마트스토어 Centella Ampoule 관련 리뷰 전부은 어떤가요?",
+    "category": "product_review"
+  },
+  {
+    "id": "V2_RT-244",
+    "query": "참고로 스마트스토어 최근 리뷰 200건 데이터",
+    "category": "recent_n"
+  },
+  {
+    "id": "V2_RT-245",
+    "query": "스마트스토어 리뷰 상품별 점유율 알려주시면 감사하겠습니다",
+    "category": "review_count"
+  },
+  {
+    "id": "V2_RT-246",
+    "query": "스마스토 2분기 2024년 후기 수 알려주세요",
+    "category": "date_range"
+  },
+  {
+    "id": "V2_RT-247",
+    "query": "혹시 스마트스토어 리뷰 최근 순 정렬 보여줘",
+    "category": "recent_reviews"
+  },
+  {
+    "id": "V2_RT-248",
+    "query": "궁금한데 스마트스토어 Tone Brightening Serum 리뷰데이터 건수 어떻게 되나요?",
+    "category": "product_review"
+  },
+  {
+    "id": "V2_RT-249",
+    "query": "스마트스토어 후기 수 전년 대비 변화 어때?",
+    "category": "monthly_trend"
+  },
+  {
+    "id": "V2_RT-250",
+    "query": "스마트스토어 리뷰데이터 한국어 번역 최근 20건",
+    "category": "review_content"
+  },
+  {
+    "id": "V2_RT-251",
+    "query": "스마트스토어 리뷰 데이터 행 건수 알려주세요",
+    "category": "total_count"
+  },
+  {
+    "id": "V2_RT-252",
+    "query": "스마트스토어 1월 2024년 후기 데이터 알려주세요",
+    "category": "date_range"
+  },
+  {
+    "id": "V2_RT-253",
+    "query": "스마트스토어 후기 제일 많은 월은?",
+    "category": "monthly_trend"
+  },
+  {
+    "id": "V2_RT-254",
+    "query": "스마트스토어 제품 기준 리뷰 수 차트 그려줘 알려줄래 알려주세요",
+    "category": "review_count"
+  },
+  {
+    "id": "V2_RT-255",
+    "query": "참고로 스마트스토어 최근 수집 리뷰 날짜",
+    "category": "recent_reviews"
+  },
+  {
+    "id": "V2_RT-256",
+    "query": "스마트스토어 Centella 관련 제품 리뷰 합계 확인 부탁드립니다",
+    "category": "product_review"
+  },
+  {
+    "id": "V2_RT-257",
+    "query": "스마트스토어 리뷰 월 단위 집계은 어떤가요?",
+    "category": "monthly_trend"
+  },
+  {
+    "id": "V2_RT-258",
+    "query": "스마트스토어 후기 원문 내용 최신 5건",
+    "category": "review_content"
+  },
+  {
+    "id": "V2_RT-259",
+    "query": "스마트스토어 평가 2024년 4월 데이터",
+    "category": "date_range"
+  },
+  {
+    "id": "V2_RT-260",
+    "query": "스마트스토어 SKIN1004 후기 수 총합",
+    "category": "brand_review"
+  },
+  {
+    "id": "V2_RT-261",
+    "query": "궁금한데 스마트스토어 피부고민 노화 관련 리뷰데이터",
+    "category": "skin_concern"
+  },
+  {
+    "id": "V2_RT-262",
+    "query": "스마트스토어 피부고민별 Soothing Cream 평가",
+    "category": "skin_concern"
+  },
+  {
+    "id": "V2_RT-263",
+    "query": "스마스토 피부고민 가려움 리뷰 수 좀 봐줘",
+    "category": "skin_concern"
+  },
+  {
+    "id": "V2_RT-264",
+    "query": "혹시 스마트스토어 skin_concern TOP 10",
+    "category": "skin_concern"
+  },
+  {
+    "id": "V2_RT-265",
+    "query": "간단하게 스마트스토어 피부고민별 매월 리뷰 건수",
+    "category": "skin_concern"
+  },
+  {
+    "id": "V2_RT-266",
+    "query": "우리 회사 스마트스토어 리뷰데이터 가장 최근 수집된 제품",
+    "category": "recent_reviews"
+  },
+  {
+    "id": "V2_RT-267",
+    "query": "스마트스토어 후기 제품명별 건수 정리",
+    "category": "review_count"
+  },
+  {
+    "id": "V2_RT-268",
+    "query": "확인 좀 해줘 스마트스토어 Centella Soothing Cream 최근 리뷰 내용?",
+    "category": "review_content"
+  },
+  {
+    "id": "V2_RT-269",
+    "query": "잠깐, 스마트스토어 후기 2024년 3월 건수 알려주시면 감사하겠습니다",
+    "category": "date_range"
+  },
+  {
+    "id": "V2_RT-270",
+    "query": "스마트스토어 리뷰 월별 제품별 크로스탭 부탁드려요",
+    "category": "monthly_trend"
+  },
+  {
+    "id": "V2_RT-271",
+    "query": "스마트스토어 리뷰 전체 데이터 개수 좀 확인 가능한가요?",
+    "category": "total_count"
+  },
+  {
+    "id": "V2_RT-272",
+    "query": "스마스토 리뷰에서 Cleansing 키워드 검색",
+    "category": "product_review"
+  },
+  {
+    "id": "V2_RT-273",
+    "query": "스마트스토어 최근 리뷰 내용 한국어로 보여줘 알려주시면 감사하겠습니다",
+    "category": "review_content"
+  },
+  {
+    "id": "V2_RT-274",
+    "query": "스마트스토어 리뷰 TOP 10 제품 어때?",
+    "category": "top_reviewed"
+  },
+  {
+    "id": "V2_RT-275",
+    "query": "참고로 스마트스토어 2024년 2월 리뷰 몇이야?",
+    "category": "date_range"
+  },
+  {
+    "id": "V2_RT-276",
+    "query": "정확한 스마트스토어 리뷰 collected_date 별 건수 좀 알려줘",
+    "category": "monthly_trend"
+  },
+  {
+    "id": "V2_RT-277",
+    "query": "스마트스토어 후기 최근 것 review_date 기준 얼마임?",
+    "category": "recent_reviews"
+  },
+  {
+    "id": "V2_RT-278",
+    "query": "간단하게 스마트스토어 리뷰 채널 목록 알려줘 보여줘",
+    "category": "review_count"
+  },
+  {
+    "id": "V2_RT-279",
+    "query": "스마트스토어 리뷰 제품별 번역 리뷰 보여줄래 몇이야?",
+    "category": "review_content"
+  },
+  {
+    "id": "V2_RT-280",
+    "query": "간단하게 스마트스토어 리뷰 2025년 달별 누적",
+    "category": "monthly_trend"
+  },
+  {
+    "id": "V2_RT-281",
+    "query": "스마트스토어 전체 리뷰 현황 요약 알려주세요",
+    "category": "total_count"
+  },
+  {
+    "id": "V2_RT-282",
+    "query": "빠르게 스마트스토어 후기 최근 150건",
+    "category": "recent_n"
+  },
+  {
+    "id": "V2_RT-283",
+    "query": "스마트스토어 Madagascar Centella Ampoule 리뷰 전체 건수 몇이야?",
+    "category": "product_review"
+  },
+  {
+    "id": "V2_RT-284",
+    "query": "스마트스토어 리뷰 각 제품 최다 리뷰 월",
+    "category": "monthly_trend"
+  },
+  {
+    "id": "V2_RT-285",
+    "query": "스마트스토어 리부 데이터 최초 수집일 정리해줘",
+    "category": "date_range"
+  },
+  {
+    "id": "V2_RT-286",
+    "query": "스마트스토어에서 리뷰 수 증가 추세야? 궁금해",
+    "category": "monthly_trend"
+  },
+  {
+    "id": "V2_RT-287",
+    "query": "스마트스토어 리뷰데이터 최근 데이터 요약해줘",
+    "category": "recent_reviews"
+  },
+  {
+    "id": "V2_RT-288",
+    "query": "스마트스토어 Tone Brightening 제품 리뷰데이터 몇 건?",
+    "category": "product_review"
+  },
+  {
+    "id": "V2_RT-289",
+    "query": "스마트스토어 리뷰 제품 종류 몇 개야 부탁드려요",
+    "category": "review_count"
+  },
+  {
+    "id": "V2_RT-290",
+    "query": "스마트스토어 리뷰 번역문 최근 순 확인 가능한가요?",
+    "category": "review_content"
+  },
+  {
+    "id": "V2_RT-291",
+    "query": "정확한 스마트스토어 피부고민 모든 종류 리스트 정리해줘",
+    "category": "skin_concern"
+  },
+  {
+    "id": "V2_RT-292",
+    "query": "스마트스토어 피부고민별 Cleansing Oil 리뷰 알려주세요",
+    "category": "skin_concern"
+  },
+  {
+    "id": "V2_RT-293",
+    "query": "스마트스토어 피부고민 수분 관련 평가 수 좀은 어떤가요?",
+    "category": "skin_concern"
+  },
+  {
+    "id": "V2_RT-294",
+    "query": "스마트스토어 skin_concern 필드 분석 리포트 어떻게 되나요?",
+    "category": "skin_concern"
+  },
+  {
+    "id": "V2_RT-295",
+    "query": "스마트스토아 피부고민별 후기 비율",
+    "category": "skin_concern"
+  },
+  {
+    "id": "V2_RT-296",
+    "query": "요즘 스마트스토어 리뷰 전체 건수는 몇 개 알려주시면 감사하겠습니다",
+    "category": "total_count"
+  },
+  {
+    "id": "V2_RT-297",
+    "query": "스마트스토어 후기 제품 TOP 리스트",
+    "category": "top_reviewed"
+  },
+  {
+    "id": "V2_RT-298",
+    "query": "참고로 스마트스토어 리뷰 최신 데이터 전체 확인 부탁드려요",
+    "category": "recent_reviews"
+  },
+  {
+    "id": "V2_RT-299",
+    "query": "스마트스토어 리뷰 전체 현재 상태 리포트 좀 알려줘",
+    "category": "total_count"
+  },
+  {
+    "id": "V2_RT-300",
+    "query": "스마트스토어 피부고민별 전체 리뷰데이터 상황 요약",
+    "category": "skin_concern"
+  }
+]

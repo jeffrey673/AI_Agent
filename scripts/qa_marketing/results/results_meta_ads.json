@@ -1,0 +1,3002 @@
+[
+  {
+    "id": "MT-001",
+    "query": "브랜드별 활성 메타 광고 수 알려줘",
+    "table": "meta_ads",
+    "category": "active_ads",
+    "status": "OK",
+    "time": 34.4,
+    "answer_len": 1510,
+    "answer_preview": "### 📊 브랜드별 활성 메타 광고 현황  #### 요약  2026년 3월 6일 기준으로, 가장 많은 활성 메타 광고를 운영하는 브랜드는 **skintific**으로 **388,608개**의 광고를 보유하고 있습니다. 그 뒤를 **glad2glow(241,068개)**, **medicube(155,021개)**가 잇고 있으며, 총 27개 브랜드의 활성 메타"
+  },
+  {
+    "id": "MT-002",
+    "query": "국가별 메타 광고 수",
+    "table": "meta_ads",
+    "category": "country_distribution",
+    "status": "OK",
+    "time": 38.2,
+    "answer_len": 651,
+    "answer_preview": "해당 조건으로는 조회되는 데이터가 없습니다.  SQL에서 사용된 필터 조건 중 `WHERE brand LIKE '%SKIN1004%'` 부분이 문제일 가능성이 높습니다. `meta data_test` 테이블의 `brand` 컬럼에 'SKIN1004'를 포함하는 데이터가 없거나, 브랜드 이름이 다른 방식으로 저장되어 있을 수 있습니다.  예를 들어, 다음과 "
+  },
+  {
+    "id": "MT-003",
+    "query": "메타 광고 유형별 분포",
+    "table": "meta_ads",
+    "category": "ad_type",
+    "status": "OK",
+    "time": 54.5,
+    "answer_len": 2742,
+    "answer_preview": "### 📊 메타 광고 유형별 분포 분석  #### 요약  메타 광고 유형별 분포를 분석한 결과, **Official_Ad**가 **Partnership_Ad**보다 전반적으로 높은 광고 수를 기록하며 메타 광고 집행의 주류를 이루고 있습니다. 가장 많은 광고가 집행된 조합은 Official_Ad 유형에서 'FACEBOOK, INSTAGRAM, AUDIENC"
+  },
+  {
+    "id": "MT-004",
+    "query": "게시 플랫폼별 메타 광고 수",
+    "table": "meta_ads",
+    "category": "platform",
+    "status": "WARN",
+    "time": 63.1,
+    "answer_len": 2923,
+    "answer_preview": "### 📊 게시 플랫폼별 메타 광고 수 분석 보고서  #### 요약  메타 플랫폼에서 집행된 광고는 제공된 상위 20개 플랫폼 데이터 기준으로 총 **1,302,088건**으로 집계되었습니다. 가장 많은 광고가 집행된 플랫폼 조합은 `['FACEBOOK', 'INSTAGRAM', 'AUDIENCE_NETWORK', 'THREADS']`로 **387,820건"
+  },
+  {
+    "id": "MT-005",
+    "query": "페이지별 메타 광고 수",
+    "table": "meta_ads",
+    "category": "page_analysis",
+    "status": "OK",
+    "time": 29.4,
+    "answer_len": 1551,
+    "answer_preview": "### 📊 페이지별 메타 광고 집행 현황 분석  #### 요약  2026년 3월 6일 기준, 메타 광고는 총 **244개**의 고유 페이지에서 집행되었으며, 'Skintific Co' 페이지가 **150,798건**으로 가장 많은 광고를 집행했습니다. 상위 3개 페이지인 'Skintific Co', 'Glad 2 Glow Indonesia', 'Skinti"
+  },
+  {
+    "id": "MT-006",
+    "query": "활성/비활성 메타 광고 비율",
+    "table": "meta_ads",
+    "category": "active_vs_inactive",
+    "status": "OK",
+    "time": 47.4,
+    "answer_len": 927,
+    "answer_preview": "### 📊 메타 광고 활성/비활성 현황 분석  #### 요약  현재 메타 광고는 총 **1,315,308개** 중 **99.57%**가 활성 상태이며, 비활성 광고는 **0.01%**에 불과합니다. 나머지 **0.42%**는 활성 또는 비활성으로 명확히 분류되지 않은 광고로 파악됩니다. 이는 대부분의 광고가 정상적으로 운영되고 있음을 시사합니다.  ####"
+  },
+  {
+    "id": "MT-007",
+    "query": "한국 SKIN1004 메타 광고",
+    "table": "meta_ads",
+    "category": "country_brand",
+    "status": "OK",
+    "time": 23.5,
+    "answer_len": 83,
+    "answer_preview": "고객님, 문의하신 '한국 SKIN1004 메타 광고'에 대한 CS 데이터를 찾지 못했습니다.  --- **출처:** CS 데이터베이스 검색 결과 없음"
+  },
+  {
+    "id": "MT-008",
+    "query": "최근 메타 광고 보여줘",
+    "table": "meta_ads",
+    "category": "recent_ads",
+    "status": "OK",
+    "time": 49.8,
+    "answer_len": 2874,
+    "answer_preview": "### 📊 최근 메타 광고 현황 보고서  #### 요약  사용자님의 요청에 따라 조회된 **50개**의 가장 최근 메타 광고는 모두 **2026년 3월 5일**에 시작되었으며, 현재 **활성 상태**로 집행 중입니다. Skintific, Anua, Abib, SKIN1004, COSRX 등 다양한 브랜드가 태국, 일본, 미국, 호주, 필리핀, 멕시코, 영국"
+  },
+  {
+    "id": "MT-009",
+    "query": "메타 광고 아카이브 분석",
+    "table": "meta_ads",
+    "category": "ad_archive",
+    "status": "OK",
+    "time": 55.6,
+    "answer_len": 2905,
+    "answer_preview": "### 📊 메타 광고 아카이브 플랫폼 및 광고 유형별 분석 보고서  #### 요약  제공된 메타 광고 아카이브 데이터 프리뷰 분석 결과, 아카이브 내에서 가장 많은 광고가 집행된 조합은 **'FACEBOOK, INSTAGRAM, AUDIENCE_NETWORK, THREADS' 플랫폼의 Official_Ad**로 **총 254,751건**의 광고가 존재하며,"
+  },
+  {
+    "id": "MT-010",
+    "query": "전체 메타 광고 수",
+    "table": "meta_ads",
+    "category": "total_count",
+    "status": "OK",
+    "time": 29.8,
+    "answer_len": 526,
+    "answer_preview": "### 📊 전체 메타 광고 현황  #### 요약  현재까지 집계된 메타 광고의 총 개수는 **150,857개**입니다. 이는 SKIN1004가 메타 플랫폼을 통해 진행한 광범위한 마케팅 활동의 규모를 보여줍니다.  #### 분석 및 인사이트  *   **광범위한 광고 활동:** 총 **150,857개**의 고유한 메타 광고는 SKIN1004가 메타 플랫폼("
+  },
+  {
+    "id": "MT-011",
+    "query": "메타 광고 중 현재 활성인 것 몇 개야?",
+    "table": "meta_ads",
+    "category": "active_ads",
+    "status": "OK",
+    "time": 29.3,
+    "answer_len": 449,
+    "answer_preview": "### 📊 현재 활성 중인 메타 광고 수  #### 요약  2026년 03월 06일 기준으로 현재 메타 광고 중 활성 상태인 광고는 총 **1,309,608개**입니다.  #### 분석 및 인사이트  *   **대규모 광고 운영:** 130만 개가 넘는 활성 광고 수는 SKIN1004가 메타 플랫폼에서 매우 광범위하고 적극적인 광고 캠페인을 운영하고 있음을"
+  },
+  {
+    "id": "MT-012",
+    "query": "미국 메타 광고 수는?",
+    "table": "meta_ads",
+    "category": "country_distribution",
+    "status": "OK",
+    "time": 28.7,
+    "answer_len": 399,
+    "answer_preview": "### 📊 미국 메타 광고 현황  #### 요약  2026년 03월 06일 기준, 미국 내 메타 광고 수는 총 **99,502개**입니다.  #### 분석 및 인사이트  *   해당 수치는 미국 시장에서 Meta 플랫폼을 통해 운영되고 있는 광고의 현재 규모를 나타냅니다. *   `> 99,502개의 광고 수는 미국 시장에서 Meta 플랫폼이 활발하게 활용"
+  },
+  {
+    "id": "MT-013",
+    "query": "메타 광고 타입 종류 알려줘",
+    "table": "meta_ads",
+    "category": "ad_type",
+    "status": "OK",
+    "time": 25.9,
+    "answer_len": 542,
+    "answer_preview": "### 📊 메타 광고 타입 종류 분석  #### 요약  메타 광고는 현재 **2가지** 주요 타입으로 운영되고 있습니다. 이는 'Official_Ad'와 'Partnership_Ad'입니다.  #### 상세 데이터 | 광고 타입        | | :--------------- | | Official_Ad      | | Partnership_Ad   | "
+  },
+  {
+    "id": "MT-014",
+    "query": "Facebook 플랫폼 메타 광고 수",
+    "table": "meta_ads",
+    "category": "platform",
+    "status": "OK",
+    "time": 31.5,
+    "answer_len": 483,
+    "answer_preview": "### 📊 Facebook 플랫폼 메타 광고 현황  #### 요약  사용자님의 요청에 따라 Facebook 플랫폼의 메타 광고 수를 조회한 결과, 현재 데이터셋에서 해당 조건에 부합하는 광고는 **0**건으로 확인되었습니다.  #### 분석 및 인사이트  *   현재 조회된 데이터셋에는 `publisher_platform`이 'FACEBOOK'인 메타 광고"
+  },
+  {
+    "id": "MT-015",
+    "query": "메타 광고 페이지 목록",
+    "table": "meta_ads",
+    "category": "page_analysis",
+    "status": "OK",
+    "time": 35.8,
+    "answer_len": 2073,
+    "answer_preview": "### 📊 메타 광고 페이지 목록 분석 보고서  #### 요약  현재 데이터베이스에서 조회된 메타 광고 페이지는 총 **244개**입니다. 이 페이지 목록에는 다양한 스킨케어 브랜드, 글로벌 및 지역 전자상거래 플랫폼, 그리고 특정 전문가 페이지 등이 포함되어 있으며, 특히 뷰티 및 스킨케어 관련 페이지의 비중이 높게 나타났습니다.  #### 상세 데이터 "
+  },
+  {
+    "id": "MT-016",
+    "query": "비활성 메타 광고 수",
+    "table": "meta_ads",
+    "category": "active_vs_inactive",
+    "status": "OK",
+    "time": 22.2,
+    "answer_len": 446,
+    "answer_preview": "### 📊 비활성 메타 광고 현황  #### 요약  현재 SKIN1004의 메타 광고 중 **110개**가 비활성 상태인 것으로 확인되었습니다.  #### 분석 및 인사이트  *   **비활성 광고 현황 파악**: 현재 운영 중이 아닌 메타 광고의 총 개수를 명확히 파악할 수 있습니다. *   **운영 효율성 점검 필요**:     > 비활성 광고가 의도된"
+  },
+  {
+    "id": "MT-017",
+    "query": "일본 SKIN1004 메타 광고 있어?",
+    "table": "meta_ads",
+    "category": "country_brand",
+    "status": "OK",
+    "time": 18.1,
+    "answer_len": 92,
+    "answer_preview": "고객님, 문의하신 '일본 SKIN1004 메타 광고'에 대한 내용은 현재 CS 데이터베이스에서 찾을 수 없습니다.  해당 질문에 대한 CS 데이터를 찾지 못했습니다."
+  },
+  {
+    "id": "MT-018",
+    "query": "최근 시작된 메타 광고",
+    "table": "meta_ads",
+    "category": "recent_ads",
+    "status": "OK",
+    "time": 53.2,
+    "answer_len": 397,
+    "answer_preview": "# 데이터 조회 안내  안녕하세요. 요청하신 **메타 광고** 관련 데이터를 조회하지 못했습니다.  좀 더 구체적인 조건을 포함해 주시면 정확한 데이터를 찾는 데 도움이 됩니다. 아래 항목들을 참고하여 질문을 다시 작성해 보시겠어요?  > **구체화하면 좋은 항목:** 기간, 국가/지역, 캠페인명, 제품명, 지표(ROAS·CTR·지출액 등)  ---  ##"
+  },
+  {
+    "id": "MT-019",
+    "query": "메타 광고 아카이브 ID 목록",
+    "table": "meta_ads",
+    "category": "ad_archive",
+    "status": "OK",
+    "time": 56.0,
+    "answer_len": 1458,
+    "answer_preview": "### 📊 메타 광고 아카이브 ID 목록 조회 결과  #### 요약  오늘 날짜(2026년 03월 06일) 기준으로 조회된 메타 광고 아카이브 ID는 총 **9,999개**의 고유한 값을 포함하고 있습니다. 이 중 `null` 값이 **1개** 발견되었습니다. 현재 결과는 10,000행으로 제한되어 있으며, 이는 전체 데이터의 일부일 수 있습니다.  ###"
+  },
+  {
+    "id": "MT-020",
+    "query": "메타 광고 데이터 전체 건수",
+    "table": "meta_ads",
+    "category": "total_count",
+    "status": "OK",
+    "time": 31.8,
+    "answer_len": 342,
+    "answer_preview": "### 📊 메타 광고 데이터 전체 건수 분석  #### 요약  현재까지 집계된 메타 광고 데이터의 전체 건수는 **1,315,308건**입니다.  #### 분석 및 인사이트  *   메타 광고 데이터는 현재 **130만 건 이상** 축적되어 있습니다. *   이는 광고 성과 분석 및 트렌드 파악을 위한 충분한 기반 데이터를 제공합니다. *   > 이처럼 방"
+  },
+  {
+    "id": "MT-021",
+    "query": "SKIN1004 활성 메타 광고 리스트",
+    "table": "meta_ads",
+    "category": "active_ads",
+    "status": "OK",
+    "time": 28.2,
+    "answer_len": 94,
+    "answer_preview": "고객님, 문의하신 SKIN1004 활성 메타 광고 리스트에 대한 정보는 현재 CS 데이터베이스에서 찾을 수 없습니다.  해당 질문에 대한 CS 데이터를 찾지 못했습니다."
+  },
+  {
+    "id": "MT-022",
+    "query": "태국 메타 광고 수",
+    "table": "meta_ads",
+    "category": "country_distribution",
+    "status": "OK",
+    "time": 29.3,
+    "answer_len": 385,
+    "answer_preview": "해당 조건에 맞는 데이터가 존재하지 않습니다.  SQL 쿼리에서 `country_name` 필터 조건으로 '태국'을 사용하셨습니다. '태국'은 유효한 국가명 목록에 포함되어 있지만, 현재 `skin1004-319714.ad_data.meta data_test` 테이블에는 `country_name`이 '태국'인 데이터가 존재하지 않습니다.  비슷한 데이터를 "
+  },
+  {
+    "id": "MT-023",
+    "query": "메타 광고 유형 비율 차트",
+    "table": "meta_ads",
+    "category": "ad_type",
+    "status": "OK",
+    "time": 33.6,
+    "answer_len": 314,
+    "answer_preview": "SKIN1004 브랜드에 대한 데이터가 존재하지 않습니다.  SQL에서 사용된 `brand LIKE '%SKIN1004%'` 필터 조건이 문제의 원인입니다. `brand` 필드에 'SKIN1004'라는 브랜드가 없거나, 다른 이름으로 저장되어 있을 수 있습니다. `brand` 필드의 정확한 유효 값을 확인해 보시겠어요?  비슷한 데이터를 조회할 수 있는 대"
+  },
+  {
+    "id": "MT-024",
+    "query": "Instagram 플랫폼 광고 수",
+    "table": "meta_ads",
+    "category": "platform",
+    "status": "OK",
+    "time": 46.7,
+    "answer_len": 464,
+    "answer_preview": "### 📊 SKIN1004 Instagram 플랫폼 광고 현황  #### 요약  SKIN1004 브랜드의 Instagram 플랫폼 광고는 현재 조회된 데이터에서 **0건**으로 확인되었습니다.  #### 분석 및 인사이트  *   현재 `ad_data.meta data_test` 데이터셋 내에서 SKIN1004 브랜드로 집행된 Instagram 플랫폼 광고"
+  },
+  {
+    "id": "MT-025",
+    "query": "가장 광고 많은 페이지는?",
+    "table": "meta_ads",
+    "category": "page_analysis",
+    "status": "WARN",
+    "time": 84.9,
+    "answer_len": 1306,
+    "answer_preview": "### 📊 가장 많은 광고를 집행한 페이지 분석  #### 요약  현재 데이터 기준으로 가장 많은 광고를 집행한 페이지는 **Skintific Co**로, 총 **150,798개**의 광고를 집행했습니다. 그 뒤를 이어 Glad 2 Glow Indonesia가 133,946개, Skintific -Malaysia가 121,312개의 광고를 집행하며 상위권을"
+  },
+  {
+    "id": "MT-026",
+    "query": "활성 광고 비율 알려줘",
+    "table": "meta_ads",
+    "category": "active_vs_inactive",
+    "status": "OK",
+    "time": 39.8,
+    "answer_len": 714,
+    "answer_preview": "### 📊 SKIN1004 활성 광고 비율 분석  #### 요약  최신 수집일 기준으로 SKIN1004 브랜드의 활성 광고 비율은 **확인 불가**합니다. 이는 해당 조건에 맞는 광고 데이터가 존재하지 않거나, 총 광고 수가 0이기 때문입니다.  #### 분석 및 인사이트  *   **데이터 부재 확인**: 쿼리 실행 결과 `active_ad_ratio`가"
+  },
+  {
+    "id": "MT-027",
+    "query": "베트남 메타 광고",
+    "table": "meta_ads",
+    "category": "country_brand",
+    "status": "WARN",
+    "time": 74.9,
+    "answer_len": 429,
+    "answer_preview": "해당 조건의 데이터가 없습니다. SQL 쿼리에 사용된 `country_name = 'Vietnam'` 조건의 'Vietnam' 값은 유효한 국가 목록(한국어 값)에 존재하지 않습니다.  SQL 쿼리의 `country_name` 필터 조건이 문제입니다. `country_name` 컬럼은 '미국', '베트남' 등 한국어 국가명을 사용해야 합니다. 하지만 쿼리에"
+  },
+  {
+    "id": "MT-028",
+    "query": "이번 달 시작된 메타 광고",
+    "table": "meta_ads",
+    "category": "recent_ads",
+    "status": "OK",
+    "time": 54.0,
+    "answer_len": 1876,
+    "answer_preview": "### 📊 2026년 3월 시작된 메타 광고 현황  #### 요약  ⚠️ 2026년 3월은 현재 3월 1일부터 3월 4일까지의 데이터만 존재합니다 (오늘: 2026년 03월 06일). 2026년 3월에 시작된 메타 광고는 **총 10,000건**이 조회되었으며, 이 광고들은 현재 모두 활성 상태(`is_active: True`)입니다. 광고는 **15개 국"
+  },
+  {
+    "id": "MT-029",
+    "query": "메타 광고 스냅샷 데이터",
+    "table": "meta_ads",
+    "category": "ad_archive",
+    "status": "WARN",
+    "time": 88.6,
+    "answer_len": 1330,
+    "answer_preview": "### 📊 메타 광고 스냅샷 데이터 보고서 (2026년 03월 06일 기준)  #### 요약  2026년 03월 06일 기준으로 수집된 메타 광고 스냅샷 데이터 분석 결과, 총 **10,000건**의 광고 스냅샷이 확인되었습니다. 이 데이터는 **16개 국가**, **25개 브랜드**, **103개 페이지**에서 운영된 **8,777개의 고유 광고 ID**"
+  },
+  {
+    "id": "MT-030",
+    "query": "메타 광고 총 몇 건?",
+    "table": "meta_ads",
+    "category": "total_count",
+    "status": "OK",
+    "time": 48.2,
+    "answer_len": 521,
+    "answer_preview": "### 📊 메타 광고 총 건수 분석  #### 요약  현재까지 집계된 메타 광고의 총 건수는 **1,315,308건**입니다. 이는 `meta data_test` 테이블에 기록된 모든 광고 데이터를 합산한 결과입니다.  #### 상세 데이터  (단일 수치이므로 상세 데이터 섹션은 생략합니다.)  #### 분석 및 인사이트  *   **방대한 광고 데이터 규"
+  },
+  {
+    "id": "MT-031",
+    "query": "브랜드별 활성 광고 비교",
+    "table": "meta_ads",
+    "category": "active_ads",
+    "status": "OK",
+    "time": 58.8,
+    "answer_len": 1602,
+    "answer_preview": "### 📊 브랜드별 활성 광고 현황 비교  #### 요약  2026년 3월 6일 기준, 활성 광고 수가 가장 많은 브랜드는 **skintific**으로 **388,608개**의 광고를 운영하고 있습니다. 그 뒤를 이어 **glad2glow**가 **241,068개**, **medicube**가 **155,021개**의 활성 광고를 보유하며 상위권을 차지했습"
+  },
+  {
+    "id": "MT-032",
+    "query": "국가 코드별 메타 광고 분포",
+    "table": "meta_ads",
+    "category": "country_distribution",
+    "status": "OK",
+    "time": 43.0,
+    "answer_len": 744,
+    "answer_preview": "해당 조건으로는 조회된 데이터가 없습니다.  **문제 설명:** SQL에 사용된 필터 조건 중 `brand LIKE '%SKIN1004%'`에 해당하는 데이터가 없거나, `country_code` 컬럼에 유효한 국가 코드가 존재하지 않을 수 있습니다.  참고로 제공해주신 '유효한 컬럼 값' 목록은 `Country` (국가명)에 대한 한국어 값이며, SQL에"
+  },
+  {
+    "id": "MT-033",
+    "query": "메타 광고 ad_type 별 건수",
+    "table": "meta_ads",
+    "category": "ad_type",
+    "status": "OK",
+    "time": 31.7,
+    "answer_len": 858,
+    "answer_preview": "### 📊 메타 광고 ad_type별 건수 현황  #### 요약  메타 광고의 ad_type별 건수를 분석한 결과, **Official_Ad**가 **873,014건**으로 가장 많은 비중을 차지했습니다. 이어서 Partnership_Ad는 **442,294건**을 기록하며 두 번째로 많은 건수를 보였습니다. Official_Ad가 Partnership_A"
+  },
+  {
+    "id": "MT-034",
+    "query": "publisher_platform 별 광고 통계",
+    "table": "meta_ads",
+    "category": "platform",
+    "status": "OK",
+    "time": 57.9,
+    "answer_len": 3251,
+    "answer_preview": "### 📊 광고 플랫폼(publisher_platform)별 광고 통계 분석  #### 요약  제공된 상위 20개 광고 플랫폼 조합 데이터에 따르면, 총 **1,306,688**개의 광고 중 **1,301,988**개가 활성 상태로, 전반적으로 **99.64%**의 높은 활성률을 보였습니다. 가장 많은 광고를 집행한 플랫폼 조합은 `['FACEBOOK', "
+  },
+  {
+    "id": "MT-035",
+    "query": "page_name 별 활성 광고 수",
+    "table": "meta_ads",
+    "category": "page_analysis",
+    "status": "WARN",
+    "time": 69.3,
+    "answer_len": 1768,
+    "answer_preview": "### 📊 page_name 별 활성 광고 수 분석 보고서  #### 요약  총 **244개**의 `page_name`에 대한 활성 광고 수를 분석한 결과, 'Skintific Co'가 **150,798개**로 가장 많은 활성 광고를 운영하고 있습니다. 이어서 'Glad 2 Glow Indonesia'가 **133,946개**, 'Skintific -Mal"
+  },
+  {
+    "id": "MT-036",
+    "query": "종료된 메타 광고 수",
+    "table": "meta_ads",
+    "category": "active_vs_inactive",
+    "status": "OK",
+    "time": 28.5,
+    "answer_len": 491,
+    "answer_preview": "### 📊 종료된 메타 광고 현황  #### 요약  현재까지 집계된 종료된 메타 광고는 총 **110개**입니다. 이는 더 이상 활성화 상태가 아닌 광고의 총 수를 나타냅니다.  #### 상세 데이터  (단일 수치이므로 상세 데이터 섹션은 생략합니다.)  #### 분석 및 인사이트  *   현재 운영 중이지 않은 메타 광고의 총 수를 명확하게 파악할 수 있"
+  },
+  {
+    "id": "MT-037",
+    "query": "인도네시아 SKIN1004 광고",
+    "table": "meta_ads",
+    "category": "country_brand",
+    "status": "OK",
+    "time": 28.0,
+    "answer_len": 98,
+    "answer_preview": "고객님, 문의하신 '인도네시아 SKIN1004 광고'에 대한 CS 데이터는 현재 저희 데이터베이스에서 찾을 수 없습니다.  **출처:** CS 데이터베이스 검색 결과 (10건)"
+  },
+  {
+    "id": "MT-038",
+    "query": "최근 7일 시작된 메타 광고",
+    "table": "meta_ads",
+    "category": "recent_ads",
+    "status": "OK",
+    "time": 30.3,
+    "answer_len": 446,
+    "answer_preview": "# 데이터 조회 안내  안녕하세요. 요청하신 **최근 7일 메타 광고** 관련 데이터를 조회하지 못했습니다.  좀 더 구체적인 조건을 포함해 주시면 정확한 데이터를 찾는 데 도움이 됩니다. 아래 항목들을 참고해 질문을 다시 작성해 보시겠어요?  > **구체화하면 좋은 항목:** 국가/지역, 광고 캠페인명, 지표(ROAS·CTR·CPC·노출수 등), 정확한 "
+  },
+  {
+    "id": "MT-039",
+    "query": "메타 광고 URL 목록",
+    "table": "meta_ads",
+    "category": "ad_archive",
+    "status": "OK",
+    "time": 54.9,
+    "answer_len": 802,
+    "answer_preview": "### 📊 메타 광고 URL 목록 (2026년 03월 06일 기준)  #### 요약  2026년 03월 06일 기준으로 수집된 메타 광고 URL 목록입니다. 총 **10,000건**의 광고 데이터가 조회되었으며, 이 중 **179개**의 고유한 URL이 확인되었습니다. 이 광고들은 **16개** 국가의 **25개** 브랜드에서 운영되고 있으며, 모두 현재 "
+  },
+  {
+    "id": "MT-040",
+    "query": "메타 광고 데이터 전체 요약",
+    "table": "meta_ads",
+    "category": "total_count",
+    "status": "OK",
+    "time": 41.2,
+    "answer_len": 1440,
+    "answer_preview": "### 📊 메타 광고 데이터 브랜드별 전체 요약  #### 요약  메타 광고 데이터 분석 결과, **skintific** 브랜드가 총 **388,711개**의 광고를 집행하며 가장 활발한 마케팅 활동을 보이고 있습니다. 대부분의 상위 브랜드들은 광고의 **99% 이상**을 활성 상태로 유지하며, 평균적으로 **10개 내외의 국가**와 **10개 이상의 퍼블"
+  },
+  {
+    "id": "MT-041",
+    "query": "현재 활성 상태인 메타 광고 목록",
+    "table": "meta_ads",
+    "category": "active_ads",
+    "status": "OK",
+    "time": 53.8,
+    "answer_len": 4910,
+    "answer_preview": "### 📊 2026년 2월 10일 기준 활성 메타 광고 목록 분석  #### 요약  **⚠️ 2026년 3월 6일 현재, 활성 메타 광고 데이터는 2026년 2월 10일까지 수집된 정보를 기반으로 합니다.** 총 **10,000개**의 활성 메타 광고가 조회되었으며, 이는 10개 국가에서 24개 브랜드, 103개 페이지를 통해 집행되고 있습니다. 주로 'O"
+  },
+  {
+    "id": "MT-042",
+    "query": "국가별 메타 광고 비율 차트",
+    "table": "meta_ads",
+    "category": "country_distribution",
+    "status": "OK",
+    "time": 29.7,
+    "answer_len": 1772,
+    "answer_preview": "### 📊 국가별 메타 광고 활성 비율 현황  #### 요약  2026년 3월 6일 기준 국가별 메타 광고 활성 비율을 분석한 결과, 대부분의 국가에서 **98% 이상의 매우 높은 활성 광고 비율**을 보였습니다. 특히 한국은 **99.94%**로 가장 높은 활성도를 기록했으며, 인도네시아(99.93%), 미국(99.90%) 등 주요 광고 집행 국가들도 높"
+  },
+  {
+    "id": "MT-043",
+    "query": "메타 광고 유형 중 가장 많은 것은?",
+    "table": "meta_ads",
+    "category": "ad_type",
+    "status": "OK",
+    "time": 26.7,
+    "answer_len": 644,
+    "answer_preview": "### 📊 메타 광고 유형별 현황 분석  #### 요약  메타 광고 유형 중 **Official_Ad**가 총 **873,014**건으로 가장 많은 비중을 차지하고 있습니다. 이는 Partnership_Ad(442,294건)보다 약 2배 많은 수치입니다.  #### 상세 데이터 | 광고 유형 | 광고 건수 | |:----------|----------:| "
+  },
+  {
+    "id": "MT-044",
+    "query": "Messenger 플랫폼 광고 있어?",
+    "table": "meta_ads",
+    "category": "platform",
+    "status": "OK",
+    "time": 28.9,
+    "answer_len": 456,
+    "answer_preview": "### 📊 Messenger 플랫폼 광고 현황  #### 요약  현재 조회된 데이터에 따르면 Messenger 플랫폼에서 운영 중인 광고는 **없습니다**.  #### 상세 데이터  (단일 수치이므로 생략)  #### 분석 및 인사이트  *   현재 `publisher_platform`이 'MESSENGER'로 분류된 광고 데이터는 존재하지 않습니다. * "
+  },
+  {
+    "id": "MT-045",
+    "query": "페이지별 광고 수 순위",
+    "table": "meta_ads",
+    "category": "page_analysis",
+    "status": "OK",
+    "time": 31.6,
+    "answer_len": 349,
+    "answer_preview": "해당 조건의 데이터가 없습니다.  SQL에서 사용된 `brand LIKE '%SKIN1004%'` 필터 조건이 문제입니다. `skin1004-319714.ad_data.meta data_test` 테이블에 'SKIN1004' 브랜드에 해당하는 데이터가 없거나, `brand` 필드의 값이 정확히 일치하지 않을 수 있습니다. `brand` 필드의 유효한 값 목"
+  },
+  {
+    "id": "MT-046",
+    "query": "is_active가 true인 광고 수",
+    "table": "meta_ads",
+    "category": "active_vs_inactive",
+    "status": "OK",
+    "time": 39.9,
+    "answer_len": 392,
+    "answer_preview": "### 📊 활성 광고 수 현황  #### 요약  현재 `is_active` 상태가 TRUE인 광고는 총 **1,309,608**개로 집계되었습니다.  #### 분석 및 인사이트  *   **운영 규모 파악:** 130만 개 이상의 활성 광고는 SKIN1004의 광범위한 마케팅 활동 및 운영 규모를 보여줍니다. *   **데이터 활용:** 이 수치는 현재 운"
+  },
+  {
+    "id": "MT-047",
+    "query": "필리핀 메타 광고 현황",
+    "table": "meta_ads",
+    "category": "country_brand",
+    "status": "OK",
+    "time": 54.9,
+    "answer_len": 510,
+    "answer_preview": "해당 조건에 맞는 데이터가 존재하지 않습니다.  SQL에서 사용된 필터 조건 중 `country_name = '필리핀'`은 유효한 값입니다. 하지만 `brand LIKE '%SKIN1004%'` 조건과 결합했을 때, 필리핀에서 'SKIN1004' 브랜드의 메타 광고 데이터가 없거나 해당 브랜드명이 정확히 일치하지 않아 결과가 없는 것으로 보입니다. `bra"
+  },
+  {
+    "id": "MT-048",
+    "query": "최근 30일 신규 메타 광고",
+    "table": "meta_ads",
+    "category": "recent_ads",
+    "status": "OK",
+    "time": 54.6,
+    "answer_len": 576,
+    "answer_preview": "# 데이터 조회 안내  안녕하세요. 요청하신 **최근 30일 신규 메타 광고** 관련 데이터를 조회하지 못했습니다.  좀 더 정확한 결과를 위해 **조건을 구체적으로** 지정해 주시면 다시 조회해 드리겠습니다.  ---  ## 💡 이렇게 질문해 보세요  > **1.** \"최근 30일간 신규로 집행된 **메타 광고 캠페인 목록**과 각 캠페인별 **지출 금액"
+  },
+  {
+    "id": "MT-049",
+    "query": "메타 광고 아카이브 ID별 상세 정보",
+    "table": "meta_ads",
+    "category": "ad_archive",
+    "status": "OK",
+    "time": 37.7,
+    "answer_len": 2366,
+    "answer_preview": "### 📊 2026년 3월 7일 메타 광고 아카이브 상세 정보  #### 요약  ⚠️ 현재 데이터는 2026년 3월 7일 하루 동안 수집된 메타 광고 아카이브 정보만을 포함합니다. 총 **500건**의 메타 광고 아카이브 레코드가 조회되었으며, 이 중 **391개**의 고유한 광고 아카이브 ID가 확인되었습니다. 조회된 광고는 모두 활성 상태이며, `Off"
+  },
+  {
+    "id": "MT-050",
+    "query": "메타 광고 데이터 행 수",
+    "table": "meta_ads",
+    "category": "total_count",
+    "status": "OK",
+    "time": 29.5,
+    "answer_len": 449,
+    "answer_preview": "### 📊 메타 광고 데이터 총 행 수 분석 보고서  #### 요약  현재 BigQuery에 저장된 메타 광고 데이터의 총 행 수는 **1,315,308**건입니다. 이는 메타 광고 활동에 대한 방대한 양의 기록이 축적되어 있음을 나타냅니다.  #### 분석 및 인사이트  *   현재 `skin1004-319714.ad_data.meta data_test`"
+  },
+  {
+    "id": "MT-051",
+    "query": "활성 메타 광고 국가별 분포",
+    "table": "meta_ads",
+    "category": "active_ads",
+    "status": "WARN",
+    "time": 60.9,
+    "answer_len": 1488,
+    "answer_preview": "### 📊 활성 메타 광고 국가별 분포 현황  #### 요약  2026년 3월 6일 기준, 활성 메타 광고는 인도네시아에서 **377,396**개로 가장 많았으며, 말레이시아가 **250,880**개, 대한민국이 **184,084**개로 그 뒤를 이었습니다. 전체 활성 광고 중 상위 3개 국가가 차지하는 비중이 높아, 특정 아시아 국가들에 광고 활동이 집중"
+  },
+  {
+    "id": "MT-052",
+    "query": "country_name 별 광고 건수",
+    "table": "meta_ads",
+    "category": "country_distribution",
+    "status": "OK",
+    "time": 32.1,
+    "answer_len": 1369,
+    "answer_preview": "### 📊 국가별 광고 건수 현황  #### 요약  2026년 3월 6일 기준, 전체 16개 국가 중 인도네시아가 **377,664건**으로 가장 많은 광고 건수를 기록했습니다. 말레이시아와 대한민국이 그 뒤를 이어 각각 **251,657건**과 **184,196건**을 기록하며 상위 3개국에 포함되었습니다.  #### 상세 데이터 | country_nam"
+  },
+  {
+    "id": "MT-053",
+    "query": "비디오 유형 메타 광고 수",
+    "table": "meta_ads",
+    "category": "ad_type",
+    "status": "WARN",
+    "time": 67.5,
+    "answer_len": 520,
+    "answer_preview": "### 📊 메타 광고 비디오 유형 현황  #### 요약  현재까지 집계된 메타 광고 데이터에 따르면, 'video' 키워드를 포함하는 비디오 유형 광고는 총 **1,309,718**건으로 확인되었습니다. 이는 SKIN1004의 메타 광고 전략에서 비디오 콘텐츠가 상당한 비중을 차지하고 있음을 보여줍니다.  #### 분석 및 인사이트  *   현재까지 수집된"
+  },
+  {
+    "id": "MT-054",
+    "query": "Audience Network 광고 있어?",
+    "table": "meta_ads",
+    "category": "platform",
+    "status": "OK",
+    "time": 25.6,
+    "answer_len": 448,
+    "answer_preview": "### 📊 Audience Network 광고 현황  #### 요약  현재 조회된 광고 데이터에 따르면, Audience Network 플랫폼을 통한 광고는 **존재하지 않습니다**.  #### 분석 및 인사이트  *   현재 SKIN1004의 광고 데이터베이스에서 'Audience Network'를 게시 플랫폼으로 사용하는 광고는 발견되지 않았습니다. *"
+  },
+  {
+    "id": "MT-055",
+    "query": "SKIN1004 페이지 광고 수",
+    "table": "meta_ads",
+    "category": "page_analysis",
+    "status": "OK",
+    "time": 19.7,
+    "answer_len": 91,
+    "answer_preview": "고객님, 문의하신 \"SKIN1004 페이지 광고 수\"에 대한 정보는 현재 CS 데이터베이스에서 찾을 수 없습니다. 해당 질문에 대한 CS 데이터를 찾지 못했습니다."
+  },
+  {
+    "id": "MT-056",
+    "query": "활성/비활성 광고 건수 비교",
+    "table": "meta_ads",
+    "category": "active_vs_inactive",
+    "status": "WARN",
+    "time": 65.7,
+    "answer_len": 1601,
+    "answer_preview": "### 📊 브랜드별 활성/비활성 광고 건수 비교 분석  #### 요약  2026년 3월 6일 기준, 전체 **27개 브랜드**의 광고 데이터를 분석한 결과, 대부분의 브랜드에서 활성 광고가 압도적으로 많고 비활성 광고는 매우 적거나 없는 것으로 나타났습니다. 특히 **skintific** 브랜드가 **388,608건**의 활성 광고로 가장 많았으며, **g"
+  },
+  {
+    "id": "MT-057",
+    "query": "말레이시아 SKIN1004 메타 광고",
+    "table": "meta_ads",
+    "category": "country_brand",
+    "status": "OK",
+    "time": 18.0,
+    "answer_len": 94,
+    "answer_preview": "고객님, 문의하신 '말레이시아 SKIN1004 메타 광고'에 대한 내용은 현재 CS 데이터베이스에서 찾을 수 없습니다. 해당 질문에 대한 CS 데이터를 찾지 못했습니다."
+  },
+  {
+    "id": "MT-058",
+    "query": "최근 시작된 광고 10건",
+    "table": "meta_ads",
+    "category": "recent_ads",
+    "status": "OK",
+    "time": 55.2,
+    "answer_len": 2646,
+    "answer_preview": "### 📊 2026년 3월 6일 기준 최근 시작된 광고 10건 현황  #### 요약  2026년 3월 6일 현재, 최근 시작된 광고 **10건**은 모두 Anua Japan 페이지에서 집행된 공식 광고로 확인되었습니다. 이 광고들은 모두 **2026년 3월 6일**에 시작되었으며, 일본 시장을 대상으로 페이스북, 인스타그램 등 다양한 플랫폼에서 활발히 운영"
+  },
+  {
+    "id": "MT-059",
+    "query": "메타 광고 end_date 분석",
+    "table": "meta_ads",
+    "category": "ad_archive",
+    "status": "OK",
+    "time": 44.0,
+    "answer_len": 1989,
+    "answer_preview": "### 📊 메타 광고 종료일(end_date) 기준 광고 현황 분석  #### 요약  메타 광고 종료일(end_date) 분석 결과, 2025년 하반기부터 2026년 초까지 종료되는 광고 캠페인이 급증한 것으로 나타났습니다. 특히 **2026년 1월**에 종료되는 광고 수가 **412,621개**로 가장 많았으며, 2025년 11월부터 2026년 2월까지 "
+  },
+  {
+    "id": "MT-060",
+    "query": "메타 광고 전체 현황 리포트",
+    "table": "meta_ads",
+    "category": "total_count",
+    "status": "WARN",
+    "time": 69.8,
+    "answer_len": 3229,
+    "answer_preview": "### 📊 메타 광고 전체 현황 리포트  #### 요약  전체 메타 광고 현황을 분석한 결과, **인도네시아의 glad2glow 브랜드**가 **10,481개**의 가장 많은 고유 광고 소재를 운영하며 가장 활발한 활동을 보였습니다. 전반적으로 동남아시아 국가(인도네시아, 말레이시아, 태국)와 브랜드(glad2glow, skintific)가 메타 광고를 적"
+  },
+  {
+    "id": "MT-061",
+    "query": "브랜드별 is_active 광고 수",
+    "table": "meta_ads",
+    "category": "active_ads",
+    "status": "OK",
+    "time": 42.4,
+    "answer_len": 993,
+    "answer_preview": "### 📊 브랜드별 활성 광고 수 현황  #### 요약  현재 가장 많은 활성 광고를 운영하는 브랜드는 **skintific**으로, 총 **388,608개**의 광고를 보유하고 있습니다. 이어서 **glad2glow(241,068개)**와 **medicube(155,021개)**가 높은 활성 광고 수를 기록하며 상위권을 차지했습니다. 상위 3개 브랜드의 "
+  },
+  {
+    "id": "MT-062",
+    "query": "싱가포르 메타 광고 수",
+    "table": "meta_ads",
+    "category": "country_distribution",
+    "status": "OK",
+    "time": 47.9,
+    "answer_len": 586,
+    "answer_preview": "### 📊 싱가포르 SKIN1004 메타 광고 현황  #### 요약  현재 조회된 데이터에 따르면, 싱가포르에서 **SKIN1004 브랜드의 메타 광고는 존재하지 않습니다.**  #### 분석 및 인사이트  *   **광고 부재 확인:** 현재 `meta data_test` 데이터셋에서는 싱가포르 지역에서 SKIN1004 브랜드로 집행된 메타 광고가 전혀 "
+  },
+  {
+    "id": "MT-063",
+    "query": "이미지 유형 메타 광고",
+    "table": "meta_ads",
+    "category": "ad_type",
+    "status": "OK",
+    "time": 35.1,
+    "answer_len": 2675,
+    "answer_preview": "### 📊 메타 광고 유형 및 플랫폼별 현황 분석 (이미지 유형 정보 제외)  #### 요약  제공된 데이터에는 '이미지 유형'에 대한 정보가 포함되어 있지 않으며, 대신 광고 유형(`ad_type`)과 게시자 플랫폼(`publisher_platform`) 조합에 따른 메타 광고 현황을 분석했습니다. 지난 1년간 **Official_Ad**와 **Partn"
+  },
+  {
+    "id": "MT-064",
+    "query": "플랫폼별 활성 광고 수",
+    "table": "meta_ads",
+    "category": "platform",
+    "status": "OK",
+    "time": 50.9,
+    "answer_len": 3115,
+    "answer_preview": "### 📊 플랫폼별 활성 광고 수 분석  #### 요약  2026년 3월 6일 기준, 가장 많은 활성 광고가 집행되고 있는 플랫폼 조합은 **FACEBOOK, INSTAGRAM, AUDIENCE_NETWORK, THREADS**로 **387,814**개에 달합니다. 이어서 **FACEBOOK, INSTAGRAM, AUDIENCE_NETWORK, MESSEN"
+  },
+  {
+    "id": "MT-065",
+    "query": "페이지별 비활성 광고 수",
+    "table": "meta_ads",
+    "category": "page_analysis",
+    "status": "OK",
+    "time": 29.9,
+    "answer_len": 1070,
+    "answer_preview": "### 📊 페이지별 비활성 광고 현황 분석  #### 요약  2026년 3월 6일 기준으로, 'SkintificOfficial' 페이지에서 가장 많은 **83개**의 비활성 광고가 확인되었습니다. 이는 전체 비활성 광고의 상당 부분을 차지하며, 다음으로 'SkintificShop' 페이지에서 **15개**의 비활성 광고가 집계되었습니다.  #### 상세 데"
+  },
+  {
+    "id": "MT-066",
+    "query": "is_active false인 광고 리스트",
+    "table": "meta_ads",
+    "category": "active_vs_inactive",
+    "status": "WARN",
+    "time": 71.7,
+    "answer_len": 62115,
+    "answer_preview": "### 📊 비활성 광고 리스트 분석 보고서  #### 요약  사용자 질문에 따라 현재 비활성 상태(`is_active = FALSE`)인 광고 리스트를 분석한 결과, 총 **110건**의 광고가 조회되었습니다. 이 광고들은 모두 **2025년 1월 1일부터 2025년 4월 4일 사이에 시작되어 2025년 3월 28일까지 종료된 광고**들로, 오늘 날짜(20"
+  },
+  {
+    "id": "MT-067",
+    "query": "대만 메타 광고 현황",
+    "table": "meta_ads",
+    "category": "country_brand",
+    "status": "OK",
+    "time": 36.0,
+    "answer_len": 395,
+    "answer_preview": "해당 조건의 데이터가 없습니다. SQL에 사용된 'Taiwan' 값은 유효한 국가 목록에 존재하지 않습니다.  SQL 쿼리의 `country_name = 'Taiwan'` 조건이 문제의 원인입니다. `country_name` 컬럼은 '미국', '인도네시아', '말레이시아', '필리핀', '일본', '중국', '한국', '태국', '베트남', '싱가포르', "
+  },
+  {
+    "id": "MT-068",
+    "query": "최근 메타 광고 5건 보여줘",
+    "table": "meta_ads",
+    "category": "recent_ads",
+    "status": "OK",
+    "time": 56.1,
+    "answer_len": 268,
+    "answer_preview": "### 📊 최근 메타 광고 5건 현황  #### 요약  2026년 03월 06일 기준으로 수집된 메타 광고 **5건**이 확인되었습니다. 이 광고들은 모두 'Partnership_Ad' 유형이며, 주로 **태국(3건), 싱가포르(1건), 인도네시아(1건)** 등 동남아시아 국가에서 집행되고 있습니다.  #### 상세 데이터 | collect_date | c"
+  },
+  {
+    "id": "MT-069",
+    "query": "메타 광고 start_date 기준 정렬",
+    "table": "meta_ads",
+    "category": "ad_archive",
+    "status": "WARN",
+    "time": 68.4,
+    "answer_len": 2210,
+    "answer_preview": "### 📊 메타 광고 데이터: 시작일(start_date) 기준 정렬 결과  #### 요약  사용자님의 요청에 따라 메타 광고 데이터를 `start_date_formatted` 기준으로 정렬한 결과, 총 **10,000건**의 데이터가 조회되었습니다. 조회된 데이터의 상위 결과에서는 **시작일(start_date_formatted)이 기록되지 않은(null"
+  },
+  {
+    "id": "MT-070",
+    "query": "메타 광고 데이터 수집 현황",
+    "table": "meta_ads",
+    "category": "total_count",
+    "status": "OK",
+    "time": 38.5,
+    "answer_len": 1690,
+    "answer_preview": "### 📊 메타 광고 데이터 일별 수집 현황  #### 요약  메타 광고 데이터는 **2025년 11월 20일부터 2026년 3월 6일까지 총 99일**에 걸쳐 꾸준히 수집되었습니다. 가장 최근 수집일인 **2026년 3월 6일**에는 **17,669건**의 광고 데이터가 수집되었으며, 일별 수집량은 **최소 10,556건에서 최대 17,952건** 사이를"
+  },
+  {
+    "id": "MT-071",
+    "query": "활성 광고 중 가장 오래된 것",
+    "table": "meta_ads",
+    "category": "active_ads",
+    "status": "OK",
+    "time": 25.8,
+    "answer_len": 1042,
+    "answer_preview": "### 📊 활성 광고 중 가장 오래된 광고 정보  #### 요약  현재 활성 상태인 광고 중 가장 오래된 광고는 **2022년 09월 26일**에 시작된 **Medicube** 브랜드의 광고입니다. 이 광고는 **미국** 시장을 대상으로 하며, 페이스북, 인스타그램 등 다양한 플랫폼에서 **약 3년 5개월 이상** 활성 상태를 유지하고 있습니다.  ####"
+  },
+  {
+    "id": "MT-072",
+    "query": "국가별 활성 메타 광고 수",
+    "table": "meta_ads",
+    "category": "country_distribution",
+    "status": "OK",
+    "time": 29.7,
+    "answer_len": 1196,
+    "answer_preview": "### 📊 국가별 활성 메타 광고 현황  #### 요약  2026년 3월 6일 기준으로 전체 활성 메타 광고 수는 총 **1,380,210개**이며, 이 중 인도네시아가 **377,396개**로 가장 많은 비중을 차지하고 있습니다. 말레이시아가 250,880개로 2위, 대한민국이 184,084개로 3위를 기록했습니다.  #### 상세 데이터  | 국가명 |"
+  },
+  {
+    "id": "MT-073",
+    "query": "메타 광고 ad_type 목록",
+    "table": "meta_ads",
+    "category": "ad_type",
+    "status": "OK",
+    "time": 22.8,
+    "answer_len": 548,
+    "answer_preview": "### 📊 메타 광고 ad_type 목록  #### 요약  메타 광고에서 사용되는 `ad_type`은 총 **2가지**입니다. 이는 **Official_Ad**와 **Partnership_Ad**로 구성됩니다.  #### 상세 데이터 | ad_type        | | :------------- | | Official_Ad    | | Partnershi"
+  },
+  {
+    "id": "MT-074",
+    "query": "Facebook과 Instagram 광고 수 비교",
+    "table": "meta_ads",
+    "category": "platform",
+    "status": "OK",
+    "time": 32.1,
+    "answer_len": 485,
+    "answer_preview": "문의하신 조건(Facebook, Instagram)에 해당하는 데이터가 존재하지 않습니다.  SQL 쿼리에서 `publisher_platform` 필터 조건으로 사용된 'FACEBOOK'과 'INSTAGRAM' 값이 테이블 내에 존재하지 않는 것으로 보입니다. `publisher_platform` 컬럼의 실제 유효 값 목록을 확인해 보시는 것이 좋습니다. "
+  },
+  {
+    "id": "MT-075",
+    "query": "광고 가장 많은 페이지 TOP 5",
+    "table": "meta_ads",
+    "category": "page_analysis",
+    "status": "OK",
+    "time": 29.2,
+    "answer_len": 1155,
+    "answer_preview": "### 📊 광고 집행 페이지 TOP 5 분석 보고서  #### 요약  현재까지 가장 많은 광고를 집행한 페이지는 **Glad 2 Glow Indonesia**로, 총 **20,973개**의 광고를 운영하고 있습니다. 그 뒤를 이어 Skintific Co.가 **14,623개**, Skintific -Malaysia가 **12,691개**의 광고를 집행하며 "
+  },
+  {
+    "id": "MT-076",
+    "query": "활성 광고 비율 차트",
+    "table": "meta_ads",
+    "category": "active_vs_inactive",
+    "status": "WARN",
+    "time": 62.8,
+    "answer_len": 3487,
+    "answer_preview": "### 📊 플랫폼별 활성 광고 비율 현황  #### 요약  2026년 3월 6일 기준으로 분석한 결과, 대부분의 광고 플랫폼 조합에서 활성 광고 비율이 매우 높게 나타났습니다. 특히 `['FACEBOOK', 'INSTAGRAM', 'AUDIENCE_NETWORK', 'THREADS']` 조합은 가장 많은 광고 수(**387,820개**)를 보유하며 **99"
+  },
+  {
+    "id": "MT-077",
+    "query": "호주 SKIN1004 메타 광고 있어?",
+    "table": "meta_ads",
+    "category": "country_brand",
+    "status": "OK",
+    "time": 30.2,
+    "answer_len": 95,
+    "answer_preview": "고객님, 문의하신 '호주 SKIN1004 메타 광고'에 대한 정보는 현재 사내 CS 데이터베이스에서 찾을 수 없습니다.  해당 질문에 대한 CS 데이터를 찾지 못했습니다."
+  },
+  {
+    "id": "MT-078",
+    "query": "최근 2주간 시작된 메타 광고",
+    "table": "meta_ads",
+    "category": "recent_ads",
+    "status": "WARN",
+    "time": 66.9,
+    "answer_len": 1953,
+    "answer_preview": "### 📊 최근 2주간 시작된 메타 광고 현황 분석 보고서  #### 요약  사용자님께서 요청하신 최근 2주간(2026년 2월 20일 ~ 3월 6일) 시작된 메타 광고 데이터 중, **2026년 3월 1일부터 3월 5일까지** 시작된 광고 **총 10,000건**이 확인되었습니다. 이 중 **5,520개**의 고유 광고 ID가 있으며, 'Official_A"
+  },
+  {
+    "id": "MT-079",
+    "query": "메타 광고 collect_date 분석",
+    "table": "meta_ads",
+    "category": "ad_archive",
+    "status": "OK",
+    "time": 43.7,
+    "answer_len": 2728,
+    "answer_preview": "### 📊 메타 광고 수집일자별 현황 분석  #### 요약  오늘 날짜(2026년 3월 6일) 기준으로 메타 광고 수집 현황을 분석한 결과, **총 74개의 고유 수집일자**에 대한 데이터가 존재합니다. 조회 결과가 10,000행 제한에 도달하고 `collect_date` 기준으로 내림차순 정렬되어 있어, 제공된 프리뷰는 **2026년 3월 6일자**에 수"
+  },
+  {
+    "id": "MT-080",
+    "query": "메타 광고 테이블 전체 데이터 수",
+    "table": "meta_ads",
+    "category": "total_count",
+    "status": "OK",
+    "time": 26.0,
+    "answer_len": 546,
+    "answer_preview": "### 📊 메타 광고 테이블 전체 데이터 수 현황  #### 요약  메타 광고 테이블의 전체 데이터 수는 **1,315,308**건입니다. 이 데이터는 메타 광고 활동의 규모를 파악하고 향후 분석의 기초 자료로 활용될 수 있습니다.  #### 분석 및 인사이트  *   메타 광고 테이블에는 총 130만 건이 넘는 데이터가 축적되어 있습니다. 이는 메타 플랫"
+  },
+  {
+    "id": "MT-081",
+    "query": "SKIN1004 활성 광고 국가 분포",
+    "table": "meta_ads",
+    "category": "active_ads",
+    "status": "OK",
+    "time": 21.7,
+    "answer_len": 97,
+    "answer_preview": "고객님, 문의하신 SKIN1004의 활성 광고 국가 분포에 대한 정보는 현재 사내 CS 데이터베이스에서 찾을 수 없습니다.  해당 질문에 대한 CS 데이터를 찾지 못했습니다."
+  },
+  {
+    "id": "MT-082",
+    "query": "유럽 국가 메타 광고 수",
+    "table": "meta_ads",
+    "category": "country_distribution",
+    "status": "OK",
+    "time": 26.1,
+    "answer_len": 504,
+    "answer_preview": "요청하신 조건에 해당하는 데이터가 없습니다. SQL에 사용된 국가 값 중 '독일'을 제외한 대부분의 유럽 국가들은 유효한 값 목록에 존재하지 않습니다.  SQL에서 사용된 `country_name` 필터 조건에 문제가 있습니다. 제공된 유효 값 목록에는 '독일'만 유럽 국가로 포함되어 있으며, '프랑스', '영국', '이탈리아' 등 다른 유럽 국가들은 존재"
+  },
+  {
+    "id": "MT-083",
+    "query": "메타 광고 유형별 활성 비율",
+    "table": "meta_ads",
+    "category": "ad_type",
+    "status": "OK",
+    "time": 57.6,
+    "answer_len": 966,
+    "answer_preview": "### 📊 메타 광고 유형별 활성 비율 분석  #### 요약  메타 광고 유형 중 **Official_Ad**가 **99.99%**의 활성 비율로 가장 높은 효율을 보였습니다. Partnership_Ad 또한 98.72%의 높은 활성 비율을 기록했습니다.  #### 상세 데이터  | 광고 유형      | 총 광고 수 | 활성 광고 수 | 활성 비율 | |"
+  },
+  {
+    "id": "MT-084",
+    "query": "플랫폼별 광고 비율 차트",
+    "table": "meta_ads",
+    "category": "platform",
+    "status": "OK",
+    "time": 42.3,
+    "answer_len": 1381,
+    "answer_preview": "### 📊 플랫폼별 총 광고 비용 및 비율 분석  #### 요약  2019년 1월 1일부터 현재까지의 총 광고 비용은 **약 502.9억원**으로 집계되었습니다. 이 중 **TikTok이 약 174.6억원(34.71%)**으로 가장 높은 비중을 차지했으며, **Facebook이 약 170.0억원(33.79%)**으로 그 뒤를 이었습니다. 이 두 플랫폼이 전"
+  },
+  {
+    "id": "MT-085",
+    "query": "page_name 종류 몇 개야?",
+    "table": "meta_ads",
+    "category": "page_analysis",
+    "status": "OK",
+    "time": 29.7,
+    "answer_len": 390,
+    "answer_preview": "검색 정보를 기준으로, **page_name**의 종류는 크게 두 가지 맥락에서 나뉩니다.  ### 1. 위키(Wiki) 시스템 기준 — **3개** | 종류 | 설명 | |---|---| | **Pagename** | 네임스페이스를 제외한 고유 이름 | | **Full Pagename** | 네임스페이스를 포함한 전체 이름 | | **PAGENAMEE**"
+  },
+  {
+    "id": "MT-086",
+    "query": "최근 종료된 메타 광고",
+    "table": "meta_ads",
+    "category": "active_vs_inactive",
+    "status": "WARN",
+    "time": 66.9,
+    "answer_len": 2358,
+    "answer_preview": "### 📊 최근 3개월간 종료된 메타 광고 현황  #### 요약  오늘(2026년 03월 06일) 기준으로 지난 3개월간 **총 99건**의 메타 광고가 종료되었습니다. 이 중 상위 프리뷰 데이터에 따르면 **대부분**은 'skintific' 브랜드의 'Partnership_Ad' 유형으로, 주로 **호주**에서 집행된 것으로 분석됩니다. 가장 최근에 종료"
+  },
+  {
+    "id": "MT-087",
+    "query": "중국 메타 광고 데이터",
+    "table": "meta_ads",
+    "category": "country_brand",
+    "status": "OK",
+    "time": 41.5,
+    "answer_len": 393,
+    "answer_preview": "해당 조건(중국, SKIN1004)에 맞는 메타 광고 데이터는 현재 조회되지 않습니다.  SQL에서 사용된 필터 조건 중 `country_name = '중국'`과 `brand LIKE '%SKIN1004%'`의 조합에 해당하는 데이터가 현재 테이블에 없는 것으로 보입니다. '중국'은 유효한 국가 값입니다만, 'SKIN1004' 브랜드가 중국에서 메타 광고를"
+  },
+  {
+    "id": "MT-088",
+    "query": "2025년 시작된 메타 광고 수",
+    "table": "meta_ads",
+    "category": "recent_ads",
+    "status": "OK",
+    "time": 20.4,
+    "answer_len": 389,
+    "answer_preview": "### 📊 2025년 메타 광고 시작 수  #### 요약  2025년에 시작된 메타 광고 수는 총 **717,601건**입니다.  #### 분석 및 인사이트  *   2025년 한 해 동안 70만 건이 넘는 메타 광고가 시작되어 매우 활발한 광고 집행이 이루어졌음을 알 수 있습니다. *   `> 이 수치는 특정 기간 동안의 마케팅 활동 규모를 파악하는 중요"
+  },
+  {
+    "id": "MT-089",
+    "query": "메타 광고 snapshot 데이터 보여줘",
+    "table": "meta_ads",
+    "category": "ad_archive",
+    "status": "OK",
+    "time": 46.7,
+    "answer_len": 436,
+    "answer_preview": "### 📊 2026년 3월 7일 메타 광고 스냅샷 데이터 분석  #### 요약  2026년 3월 7일 기준, 총 **500건**의 메타 광고 스냅샷 데이터가 조회되었습니다. 이 데이터는 **16개 국가**에서 **10개 브랜드**에 걸쳐 집행된 광고를 포함하며, 모든 광고는 현재 **활성 상태(is_active: True)**입니다. 광고 유형은 `Offi"
+  },
+  {
+    "id": "MT-090",
+    "query": "메타 광고 수 합계",
+    "table": "meta_ads",
+    "category": "total_count",
+    "status": "OK",
+    "time": 27.6,
+    "answer_len": 513,
+    "answer_preview": "### 📊 메타 광고 총합 현황  #### 요약  현재까지 집계된 메타 광고의 총합은 **1,315,308개**입니다. 이는 SKIN1004가 메타 플랫폼을 통해 운영해 온 광고 캠페인의 방대한 규모를 보여줍니다.  #### 분석 및 인사이트  *   **방대한 광고 운영 규모:** 130만 개가 넘는 메타 광고 수는 SKIN1004가 메타 플랫폼(페이스북"
+  },
+  {
+    "id": "MT-091",
+    "query": "활성 메타 광고 유형별 분포",
+    "table": "meta_ads",
+    "category": "active_ads",
+    "status": "OK",
+    "time": 43.5,
+    "answer_len": 2638,
+    "answer_preview": "### 📊 활성 메타 광고 유형 및 플랫폼 조합별 분포 분석  #### 요약  2026년 3월 6일 기준, 활성 메타 광고는 총 **1,307,654건** (제공된 상위 20개 데이터 기준)으로 집계되었습니다. 이 중 'Official_Ad'가 **871,416건**으로 전체의 약 66.6%를 차지하며 가장 높은 비중을 보였습니다. 가장 많은 광고가 집행된"
+  },
+  {
+    "id": "MT-092",
+    "query": "동남아시아 국가 메타 광고",
+    "table": "meta_ads",
+    "category": "country_distribution",
+    "status": "OK",
+    "time": 47.0,
+    "answer_len": 741,
+    "answer_preview": "해당 조건에 맞는 데이터가 존재하지 않습니다. SQL에 사용된 국가 중 '미얀마', '캄보디아', '라오스', '브루나이'는 유효한 국가 목록에 존재하지 않습니다.  SQL의 `WHERE` 절에 사용된 국가 조건이 문제입니다. 제공된 유효한 컬럼 값 목록을 확인한 결과, '미얀마', '캄보디아', '라오스', '브루나이'는 데이터베이스에 존재하지 않는 값입"
+  },
+  {
+    "id": "MT-093",
+    "query": "캐러셀 유형 메타 광고 수",
+    "table": "meta_ads",
+    "category": "ad_type",
+    "status": "OK",
+    "time": 40.2,
+    "answer_len": 395,
+    "answer_preview": "### 📊 캐러셀 유형 메타 광고 현황  #### 요약  오늘(2026년 03월 06일) 기준으로 조회된 메타 플랫폼의 캐러셀 유형 광고는 총 **1,619개**입니다.  #### 분석 및 인사이트  *   메타 플랫폼에서 캐러셀 유형 광고가 총 1,619개 운영 중임을 확인했습니다. *   캐러셀 광고는 여러 제품이나 서비스의 특징을 한 번에 보여주거나,"
+  },
+  {
+    "id": "MT-094",
+    "query": "멀티 플랫폼 게시 광고",
+    "table": "meta_ads",
+    "category": "platform",
+    "status": "OK",
+    "time": 36.9,
+    "answer_len": 3719,
+    "answer_preview": "### 📊 멀티 플랫폼 게시 광고 현황 분석  #### 요약  2026년 3월 6일 기준, 전체 **1,327,647**건의 광고 중 **99.42%**에 해당하는 **1,319,967**건의 광고가 활성 상태로 게시되어 있습니다. 가장 많은 광고가 게시된 플랫폼 조합은 **['FACEBOOK', 'INSTAGRAM', 'AUDIENCE_NETWORK', "
+  },
+  {
+    "id": "MT-095",
+    "query": "페이지별 최근 광고 보여줘",
+    "table": "meta_ads",
+    "category": "page_analysis",
+    "status": "OK",
+    "time": 39.5,
+    "answer_len": 341,
+    "answer_preview": "해당 조건의 데이터가 없습니다.  SQL에서 사용된 `brand` 필터 조건(`brand LIKE '%SKIN1004%'`)에 해당하는 데이터가 존재하지 않는 것으로 보입니다. `SKIN1004` 브랜드의 광고 데이터가 없거나, 브랜드명이 다르게 저장되어 있을 수 있습니다. 유효한 브랜드명 목록이 없으므로, 정확한 브랜드명을 확인해 보시는 것이 좋습니다. "
+  },
+  {
+    "id": "MT-096",
+    "query": "end_date 지난 광고 수",
+    "table": "meta_ads",
+    "category": "active_vs_inactive",
+    "status": "OK",
+    "time": 43.0,
+    "answer_len": 367,
+    "answer_preview": "### 📊 종료일이 지난 광고 현황  #### 요약  2026년 03월 06일 기준으로, 종료일이 지난 광고는 **0개**로 확인되었습니다. 이는 현재 운영 중이거나 향후 종료될 예정인 광고만 존재함을 의미합니다.  #### 분석 및 인사이트  *   현재 시스템에 등록된 모든 광고는 아직 종료되지 않았거나, 종료일이 미래로 설정되어 있습니다. *   이는"
+  },
+  {
+    "id": "MT-097",
+    "query": "캐나다 SKIN1004 메타 광고",
+    "table": "meta_ads",
+    "category": "country_brand",
+    "status": "OK",
+    "time": 16.1,
+    "answer_len": 96,
+    "answer_preview": "고객님, 문의하신 '캐나다 SKIN1004 메타 광고'에 대한 정보는 현재 사내 CS 데이터베이스에서 찾을 수 없습니다.  해당 질문에 대한 CS 데이터를 찾지 못했습니다."
+  },
+  {
+    "id": "MT-098",
+    "query": "최근 3개월 메타 광고 추이",
+    "table": "meta_ads",
+    "category": "recent_ads",
+    "status": "OK",
+    "time": 38.9,
+    "answer_len": 973,
+    "answer_preview": "### 📊 최근 3개월 메타 광고 추이 분석  #### 요약  최근 3개월간 메타 광고는 총 광고 수와 활성 광고 수 모두 변동을 보였습니다. 특히 **2026년 1월**에 **총 398,733개**의 광고로 가장 높은 수치를 기록했으며, **2026년 3월은 현재까지 총 102,687개**의 광고가 집계되었습니다. (⚠️ 2026년 3월 데이터는 3월 6"
+  },
+  {
+    "id": "MT-099",
+    "query": "메타 광고 URL 분석",
+    "table": "meta_ads",
+    "category": "ad_archive",
+    "status": "OK",
+    "time": 25.6,
+    "answer_len": 3812,
+    "answer_preview": "### 📊 메타 광고 URL 분석 보고서 (2025년 3월 7일 ~ 2026년 3월 7일)  #### 요약  지난 1년간(2025년 3월 7일 ~ 2026년 3월 7일) 메타 광고 URL 분석 결과, 총 **436개**의 고유 URL, **27개**의 브랜드, **16개** 국가에서 광고 활동이 집계되었습니다. 가장 많은 광고 수를 기록한 URL은 인도네시"
+  },
+  {
+    "id": "MT-100",
+    "query": "메타 광고 데이터 요약 통계",
+    "table": "meta_ads",
+    "category": "total_count",
+    "status": "OK",
+    "time": 42.0,
+    "answer_len": 3386,
+    "answer_preview": "### 📊 메타 광고 플랫폼별 요약 통계  #### 요약  가장 많은 메타 광고가 집행된 플랫폼 조합은 **FACEBOOK, INSTAGRAM, AUDIENCE_NETWORK, THREADS**로 총 **387,820개**의 광고가 있었으며, 이 중 **387,814개**가 활성 상태였습니다. 전반적으로 대부분의 플랫폼 조합에서 매우 높은 활성 광고 비율을"
+  },
+  {
+    "id": "MT-101",
+    "query": "활성 광고 페이지별 분포",
+    "table": "meta_ads",
+    "category": "active_ads",
+    "status": "OK",
+    "time": 48.5,
+    "answer_len": 1904,
+    "answer_preview": "### 📊 활성 광고 페이지별 분포  #### 요약  활성 광고 페이지별 분포를 분석한 결과, 현재 **244개**의 고유 페이지에서 활성 광고가 집행되고 있습니다. 이 중 'Skintific Co' 페이지가 **150,798개**로 가장 많은 활성 광고를 보유하고 있으며, 'Glad 2 Glow Indonesia' (133,946개), 'Skintific"
+  },
+  {
+    "id": "MT-102",
+    "query": "아시아 국가별 메타 광고 수",
+    "table": "meta_ads",
+    "category": "country_distribution",
+    "status": "OK",
+    "time": 34.5,
+    "answer_len": 1291,
+    "answer_preview": "제공된 SQL 쿼리는 지정된 조건에 맞는 데이터를 찾지 못했습니다. SQL 쿼리에 사용된 'Taiwan', 'India', 'Hong Kong', 'United Arab Emirates', 'Saudi Arabia', 'Turkey'는 유효한 국가 목록에 존재하지 않습니다.  **문제점 및 해결 방안:**  SQL 쿼리의 `country_name` 필터 조"
+  },
+  {
+    "id": "MT-103",
+    "query": "메타 광고 유형 중 비디오 비율",
+    "table": "meta_ads",
+    "category": "ad_type",
+    "status": "OK",
+    "time": 53.0,
+    "answer_len": 788,
+    "answer_preview": "### 📊 메타 광고 유형별 비디오 광고 비율 분석  #### 요약  현재 조회된 메타 광고 데이터에서 비디오 광고 유형의 비율은 **0.0%**로 나타났습니다. 이는 분석 대상 기간 동안 'video' 키워드를 포함하는 광고 유형이 집행되지 않았거나, 광고 유형 분류에 해당 키워드가 포함되지 않았음을 의미합니다.  #### 분석 및 인사이트  *   **"
+  },
+  {
+    "id": "MT-104",
+    "query": "Instagram 전용 광고 수",
+    "table": "meta_ads",
+    "category": "platform",
+    "status": "OK",
+    "time": 50.7,
+    "answer_len": 443,
+    "answer_preview": "### 📊 Instagram 전용 광고 수 현황  #### 요약  현재 데이터에 따르면, Instagram 전용 광고 수는 **0**건으로 확인되었습니다. 이는 현재 조회된 데이터에서 Instagram을 퍼블리셔 플랫폼으로 사용하는 광고 집행이 없음을 의미합니다.  #### 분석 및 인사이트  *   현재 데이터 기준으로는 Instagram 플랫폼을 통한 "
+  },
+  {
+    "id": "MT-105",
+    "query": "페이지별 활성 광고 비율",
+    "table": "meta_ads",
+    "category": "page_analysis",
+    "status": "OK",
+    "time": 50.7,
+    "answer_len": 1908,
+    "answer_preview": "### 📊 페이지별 활성 광고 비율 분석  #### 요약  2019년 1월 1일 이후 데이터를 기준으로 분석한 결과, 전체 **245개** 페이지 중 **100%**의 활성 광고 비율을 보이는 페이지가 다수 확인되었습니다. 특히 상위 20개 페이지는 모두 등록된 모든 광고를 활성 상태로 유지하고 있으며, 이는 전반적으로 높은 수준의 광고 관리 효율성을 보여"
+  },
+  {
+    "id": "MT-106",
+    "query": "활성 광고 vs 종료 광고 수 비교",
+    "table": "meta_ads",
+    "category": "active_vs_inactive",
+    "status": "OK",
+    "time": 37.9,
+    "answer_len": 973,
+    "answer_preview": "### 📊 광고 활성 상태별 현황 분석  #### 요약  현재 광고 데이터에 따르면, 총 **1,315,308개**의 광고 중 **1,309,608개**가 활성 상태이며, 이는 전체의 약 99.57%를 차지합니다. 종료된 광고는 **110개**로 매우 적은 비중을 보이며, **5,590개**의 광고는 활성 상태가 명확히 정의되지 않은(null) 상태로 확인"
+  },
+  {
+    "id": "MT-107",
+    "query": "영국 메타 광고 현황",
+    "table": "meta_ads",
+    "category": "country_brand",
+    "status": "WARN",
+    "time": 72.3,
+    "answer_len": 2151,
+    "answer_preview": "### 📊 영국 메타 광고 현황 분석 보고서 (상위 20건 프리뷰 기준)  #### 요약  2026년 3월 6일 기준, 영국 메타 광고 현황은 제공된 상위 20건의 프리뷰 데이터에서 **총 8,031건**의 활성 광고를 집계합니다. 이 중 **약 79.1%**에 해당하는 6,351건이 공식 광고(Official_Ad)이며, **약 20.9%**인 1,680"
+  },
+  {
+    "id": "MT-108",
+    "query": "이번 주 시작된 메타 광고",
+    "table": "meta_ads",
+    "category": "recent_ads",
+    "status": "OK",
+    "time": 29.4,
+    "answer_len": 470,
+    "answer_preview": "# 데이터 조회 안내  안녕하세요. 요청하신 **이번 주 시작된 메타 광고** 관련 데이터를 조회하지 못했습니다.  좀 더 정확한 결과를 위해 **조건을 구체적으로** 지정해 주시면 다시 조회해 드리겠습니다.  ---  ## 💡 이렇게 질문해 보세요  1. **\"이번 주(6/9~6/15) 새로 시작된 메타 광고 캠페인 목록을 알려줘\"**    — 정확한 기"
+  },
+  {
+    "id": "MT-109",
+    "query": "메타 광고 아카이브 번호 기준 정렬",
+    "table": "meta_ads",
+    "category": "ad_archive",
+    "status": "WARN",
+    "time": 62.5,
+    "answer_len": 4110,
+    "answer_preview": "### 📊 메타 광고 아카이브 번호 기준 정렬 현황  #### 요약  메타 광고 데이터를 아카이브 번호(`ad_archive_id`) 기준으로 정렬한 결과, 총 **10,000건**의 데이터가 조회되었습니다. 조회된 모든 데이터는 현재 활성 상태(`is_active: True`)인 것으로 요약되었으나, 상위 결과 프리뷰에서는 `is_active` 필드가 `"
+  },
+  {
+    "id": "MT-110",
+    "query": "메타 광고 전체 건수와 활성 건수",
+    "table": "meta_ads",
+    "category": "total_count",
+    "status": "OK",
+    "time": 42.4,
+    "answer_len": 641,
+    "answer_preview": "### 📊 메타 광고 전체 및 활성 건수 현황  #### 요약  현재까지 집계된 메타 광고의 전체 건수는 **1,315,308건**이며, 이 중 **1,309,608건**이 활성 상태인 것으로 확인되었습니다. 이는 전체 광고의 약 **99.57%**에 해당하는 높은 활성률을 보여줍니다.  #### 상세 데이터 | 구분 | 건수 | |:---|---:| | "
+  },
+  {
+    "id": "MT-111",
+    "query": "활성 메타 광고 최근 시작된 순",
+    "table": "meta_ads",
+    "category": "active_ads",
+    "status": "WARN",
+    "time": 65.5,
+    "answer_len": 922,
+    "answer_preview": "### 📊 최근 시작된 활성 메타 광고 현황  #### 요약  오늘 날짜 기준 (2026년 03월 06일), 최근 시작된 활성 메타 광고 **10,000건**이 조회되었습니다. 이 광고들은 **2026년 03월 01일부터 2026년 03월 05일** 사이에 시작되었으며, 가장 최근에 시작된 광고들은 **2026년 03월 05일**에 집중되어 있습니다. 총 "
+  },
+  {
+    "id": "MT-112",
+    "query": "북미 국가 메타 광고",
+    "table": "meta_ads",
+    "category": "country_distribution",
+    "status": "OK",
+    "time": 59.3,
+    "answer_len": 2904,
+    "answer_preview": "### 📊 북미 국가 메타 광고 현황 분석 (캐나다 중심)  #### 요약  제공된 데이터 프리뷰를 기반으로 북미 국가(미국, 캐나다) 메타 광고 현황을 분석한 결과, 프리뷰 데이터는 **캐나다**의 광고 활동에 집중되어 있었습니다. 캐나다에서는 총 **23,079**개의 메타 광고가 확인되었으며, 이 중 **23,027**개가 활성 상태로 **99.77%"
+  },
+  {
+    "id": "MT-113",
+    "query": "메타 광고 유형별 국가 분포",
+    "table": "meta_ads",
+    "category": "ad_type",
+    "status": "OK",
+    "time": 53.7,
+    "answer_len": 2297,
+    "answer_preview": "### 📊 메타 광고 유형별 국가 분포 분석  #### 요약  메타 광고 데이터 분석 결과, **Partnership_Ad**는 인도네시아에서 **238,157건**으로 가장 높은 비중을 차지했으며, **Official_Ad**는 말레이시아에서 **207,843건**으로 가장 활발하게 집행되었습니다. 전체적으로 인도네시아, 말레이시아, 한국 등 아시아 국가"
+  },
+  {
+    "id": "MT-114",
+    "query": "Facebook 전용 광고 수",
+    "table": "meta_ads",
+    "category": "platform",
+    "status": "OK",
+    "time": 37.3,
+    "answer_len": 593,
+    "answer_preview": "### 📊 Facebook 전용 광고 수 분석  #### 요약  현재 데이터셋에서 **Facebook 플랫폼에만 게재된 광고는 총 0건**으로 확인되었습니다. 이는 조회된 기간 동안 Facebook 전용 광고가 없거나, 데이터에 해당 정보가 포함되어 있지 않음을 의미합니다.  #### 분석 및 인사이트  *   **Facebook 전용 광고 부재:** 현재"
+  },
+  {
+    "id": "MT-115",
+    "query": "SKIN1004 페이지 활성 광고 리스트",
+    "table": "meta_ads",
+    "category": "page_analysis",
+    "status": "OK",
+    "time": 30.1,
+    "answer_len": 96,
+    "answer_preview": "고객님, 문의하신 'SKIN1004 페이지 활성 광고 리스트'에 대한 정보는 현재 CS 데이터베이스에서 찾을 수 없습니다. 해당 질문에 대한 CS 데이터를 찾지 못했습니다."
+  },
+  {
+    "id": "MT-116",
+    "query": "비활성 광고 종료일 분석",
+    "table": "meta_ads",
+    "category": "active_vs_inactive",
+    "status": "OK",
+    "time": 45.7,
+    "answer_len": 2701,
+    "answer_preview": "### 📊 비활성 광고 종료일 분석 보고서  #### 요약  2025년 11월 24일부터 2026년 3월 2일까지의 비활성 광고 종료일 데이터를 분석한 결과, 총 **110개**의 비활성 광고가 확인되었습니다. 가장 최근에 종료된 비활성 광고는 2026년 3월 2일 아랍에미리트의 'unknown' 브랜드 광고 **1건**입니다. 특히, **2026년 2월 "
+  },
+  {
+    "id": "MT-117",
+    "query": "독일 SKIN1004 메타 광고 있어?",
+    "table": "meta_ads",
+    "category": "country_brand",
+    "status": "OK",
+    "time": 25.9,
+    "answer_len": 84,
+    "answer_preview": "고객님, 문의하신 '독일 SKIN1004 메타 광고'에 대한 정보는 현재 CS 데이터베이스에서 찾을 수 없습니다.  해당 정보가 CS DB에 없습니다."
+  },
+  {
+    "id": "MT-118",
+    "query": "최근 start_date 기준 광고 20건",
+    "table": "meta_ads",
+    "category": "recent_ads",
+    "status": "WARN",
+    "time": 64.1,
+    "answer_len": 404,
+    "answer_preview": "### 📊 최근 시작일 기준 광고 20건 분석  #### 요약  최근 `start_date` 기준으로 조회된 광고 **20건**은 모두 **2026년 03월 06일**에 시작되었습니다. 이 광고들은 **Anua (13건)**와 **Abib (7건)** 두 브랜드에서 집행되었으며, 각각 **일본 (13건)**과 **미국 (7건)** 시장을 대상으로 합니다. "
+  },
+  {
+    "id": "MT-119",
+    "query": "메타 광고 end_date 있는 것만",
+    "table": "meta_ads",
+    "category": "ad_archive",
+    "status": "OK",
+    "time": 50.0,
+    "answer_len": 2181,
+    "answer_preview": "### 📊 종료일이 설정된 메타 광고 데이터 분석  #### 요약  사용자님의 요청에 따라 종료일(`end_date_formatted`)이 명시된 메타 광고 데이터 **10,000건**을 조회했습니다. 이 데이터는 **26개 브랜드**의 **15개 국가**에서 집행된 광고를 포함하며, `Official_Ad`와 `Partnership_Ad` 두 가지 유형으"
+  },
+  {
+    "id": "MT-120",
+    "query": "메타 광고 데이터 컬럼 정보",
+    "table": "meta_ads",
+    "category": "total_count",
+    "status": "OK",
+    "time": 57.9,
+    "answer_len": 2010,
+    "answer_preview": "### 📊 메타 광고 데이터 컬럼 정보 분석 보고서  #### 요약  본 보고서는 `skin1004-319714.ad_data.meta data_test` 테이블에 저장된 메타 광고 데이터의 컬럼 정보를 제공합니다. 주요 컬럼으로는 광고 수집일, 국가 정보, 브랜드, 페이지 이름, 광고 유형, 고유 ID, 광고 상세 스냅샷, 활성 상태, 광고 기간 및 게시"
+  },
+  {
+    "id": "MT-121",
+    "query": "활성 광고 브랜드별 국가별 교차 분석",
+    "table": "meta_ads",
+    "category": "active_ads",
+    "status": "OK",
+    "time": 49.7,
+    "answer_len": 1617,
+    "answer_preview": "### 📊 활성 광고 브랜드 및 국가별 현황 분석  #### 요약  2026년 3월 6일 기준, 활성 광고는 총 166개의 브랜드-국가 조합에서 집계되었으며, 특히 **인도네시아 시장**과 **Skintific, Glad2glow 브랜드**가 가장 높은 활성 광고 수를 기록하고 있습니다. Skintific은 인도네시아에서 **148,124개**, Glad2"
+  },
+  {
+    "id": "MT-122",
+    "query": "country_code KR 광고 수",
+    "table": "meta_ads",
+    "category": "country_distribution",
+    "status": "OK",
+    "time": 28.4,
+    "answer_len": 374,
+    "answer_preview": "### 📊 한국(KR) 광고 수 현황  #### 요약  현재까지 집계된 한국(KR)의 총 광고 수는 **184,196**건입니다. 단일 수치이므로 상세 데이터 표는 생략됩니다.  #### 분석 및 인사이트  *   한국 시장에서 **18만 건 이상의 광고가 집계**된 것은 SKIN1004의 활발한 마케팅 활동을 보여줍니다. *   `> 이 수치는 한국 시장"
+  },
+  {
+    "id": "MT-123",
+    "query": "메타 광고 유형별 플랫폼별 분석",
+    "table": "meta_ads",
+    "category": "ad_type",
+    "status": "OK",
+    "time": 32.5,
+    "answer_len": 338,
+    "answer_preview": "요청하신 조건에 해당하는 데이터가 존재하지 않습니다.  SQL에서 사용된 `brand LIKE '%SKIN1004%'` 필터 조건에 해당하는 브랜드 데이터가 현재 테이블에 없는 것으로 보입니다. `brand` 컬럼에 'SKIN1004'라는 이름이 정확히 존재하지 않거나, 다른 이름으로 저장되어 있을 수 있습니다.  비슷한 데이터를 조회할 수 있는 대안 질문"
+  },
+  {
+    "id": "MT-124",
+    "query": "플랫폼별 비활성 광고 수",
+    "table": "meta_ads",
+    "category": "platform",
+    "status": "OK",
+    "time": 33.6,
+    "answer_len": 1405,
+    "answer_preview": "### 📊 플랫폼별 비활성 광고 현황 분석  #### 요약  2026년 03월 06일 기준으로 총 **110개**의 비활성 광고가 확인되었습니다. 이 중 **103개**의 비활성 광고가 FACEBOOK, INSTAGRAM, AUDIENCE_NETWORK, MESSENGER, THREADS를 포함하는 플랫폼 조합에서 발생하여 가장 높은 비중을 차지했습니다. "
+  },
+  {
+    "id": "MT-125",
+    "query": "페이지별 광고 유형 분포",
+    "table": "meta_ads",
+    "category": "page_analysis",
+    "status": "OK",
+    "time": 37.3,
+    "answer_len": 2031,
+    "answer_preview": "### 📊 페이지별 광고 유형 분포 분석  #### 요약  제공된 데이터에 따르면 총 244개의 고유 페이지에서 2가지 광고 유형(Official_Ad, Partnership_Ad)의 분포를 분석한 결과, 'Partnership_Ad' 유형이 특정 페이지에서 매우 높은 광고 수를 기록하며 상위권을 차지했습니다. 가장 많은 광고 수를 기록한 페이지는 \"Ski"
+  },
+  {
+    "id": "MT-126",
+    "query": "활성 광고 중 가장 최근 시작된 것",
+    "table": "meta_ads",
+    "category": "active_vs_inactive",
+    "status": "OK",
+    "time": 50.0,
+    "answer_len": 2042,
+    "answer_preview": "### 📊 활성 광고 중 가장 최근 시작된 광고 현황  #### 요약  활성 광고 중 가장 최근에 시작된 광고는 **2026년 03월 06일**에 시작된 광고들로 확인되었습니다. 총 **10개**의 광고가 이 날짜에 시작되었으며, 모두 **Anua** 브랜드의 **Anua Japan** 페이지에서 **일본** 시장을 대상으로 집행된 공식 광고입니다.  ##"
+  },
+  {
+    "id": "MT-127",
+    "query": "프랑스 메타 광고 데이터",
+    "table": "meta_ads",
+    "category": "country_brand",
+    "status": "OK",
+    "time": 31.3,
+    "answer_len": 317,
+    "answer_preview": "해당 조건의 데이터가 없습니다. SQL에 사용된 'France' 값은 유효한 국가 목록에 존재하지 않습니다.  SQL 쿼리에서 `WHERE country_name = 'France'` 조건이 문제였습니다. 제공된 유효한 국가 목록에는 'France'가 포함되어 있지 않습니다. 유럽 국가 중에서는 '독일'이 유효한 값으로 존재합니다.  비슷한 데이터를 조회할"
+  },
+  {
+    "id": "MT-128",
+    "query": "2024년 시작된 메타 광고 수",
+    "table": "meta_ads",
+    "category": "recent_ads",
+    "status": "OK",
+    "time": 23.3,
+    "answer_len": 335,
+    "answer_preview": "### 📊 2024년 시작된 메타 광고 현황  #### 요약  2024년에 시작된 메타 광고는 총 **7,810개**입니다.  #### 분석 및 인사이트  *   2024년 한 해 동안 **7,810개**의 메타 광고가 시작되어, 메타 플랫폼을 통한 활발한 마케팅 활동이 이루어졌음을 알 수 있습니다. *   이는 SKIN1004가 메타 채널을 중요한 광고 "
+  },
+  {
+    "id": "MT-129",
+    "query": "메타 광고 start_date와 end_date 분석",
+    "table": "meta_ads",
+    "category": "ad_archive",
+    "status": "OK",
+    "time": 35.0,
+    "answer_len": 656,
+    "answer_preview": "# 데이터 조회 안내  안녕하세요. 요청하신 **메타 광고 start_date와 end_date 분석** 관련 데이터를 조회하지 못했습니다.  질문이 다소 넓은 범위여서 정확한 데이터를 찾기 어려웠을 수 있습니다. 아래와 같이 **조건을 좀 더 구체적으로** 지정해 주시면 원활한 조회가 가능합니다.  ---  ## 💡 이렇게 질문을 바꿔보세요  | 구체화 "
+  },
+  {
+    "id": "MT-130",
+    "query": "메타 광고 총 데이터 행 수",
+    "table": "meta_ads",
+    "category": "total_count",
+    "status": "OK",
+    "time": 33.4,
+    "answer_len": 439,
+    "answer_preview": "### 📊 메타 광고 총 데이터 행 수 분석  #### 요약  메타 광고 데이터의 총 행 수는 **1,315,308**건입니다. 이는 현재 BigQuery에 저장된 메타 광고 데이터의 전체 규모를 나타냅니다.  #### 분석 및 인사이트  *   `skin1004-319714.ad_data.meta data_test` 테이블에 저장된 메타 광고 데이터의 총"
+  },
+  {
+    "id": "MT-131",
+    "query": "활성 광고 중 Facebook 게시 건수",
+    "table": "meta_ads",
+    "category": "active_ads",
+    "status": "OK",
+    "time": 34.5,
+    "answer_len": 591,
+    "answer_preview": "### 📊 활성 Facebook 광고 게시 현황  #### 요약  현재 활성 상태인 Facebook 광고 게시 건수는 **0건**입니다. 이는 BigQuery에 기록된 데이터 기준으로 Facebook 플랫폼에서 운영 중인 활성 광고가 없음을 의미합니다.  #### 분석 및 인사이트  *   **활성 Facebook 광고 없음 확인**: 현재 Facebook"
+  },
+  {
+    "id": "MT-132",
+    "query": "country_code US 광고 수",
+    "table": "meta_ads",
+    "category": "country_distribution",
+    "status": "OK",
+    "time": 37.1,
+    "answer_len": 439,
+    "answer_preview": "### 📊 미국(US) 지역 광고 수 현황  #### 요약  현재 미국(US) 지역에서 집계된 고유 광고 수는 총 **11,067개**입니다. 이는 미국 시장 내 SKIN1004의 활발한 광고 활동 규모를 나타냅니다.  #### 분석 및 인사이트  *   미국(US) 시장에서 **11,067개**의 고유 광고가 집계되어, 해당 지역에서 상당한 규모의 광고 "
+  },
+  {
+    "id": "MT-133",
+    "query": "메타 광고 유형 이미지 vs 비디오",
+    "table": "meta_ads",
+    "category": "ad_type",
+    "status": "OK",
+    "time": 58.5,
+    "answer_len": 884,
+    "answer_preview": "### 📊 메타 광고 유형별 현황 (공식 vs 파트너십)  #### 요약  ⚠️ 사용자님께서 문의하신 '이미지' 및 '비디오' 광고 유형에 대한 데이터는 현재 `ad_type` 컬럼에서 확인되지 않습니다. 대신, 현재 조회된 메타 광고 유형 데이터는 'Official_Ad'와 'Partnership_Ad'로 구분됩니다. 전체 **1,315,308건**의 광"
+  },
+  {
+    "id": "MT-134",
+    "query": "플랫폼 종류 목록",
+    "table": "meta_ads",
+    "category": "platform",
+    "status": "OK",
+    "time": 43.9,
+    "answer_len": 774,
+    "answer_preview": "# 플랫폼 종류 목록  플랫폼은 기능과 목적에 따라 다양하게 분류됩니다.  ---  ## 1. 디지털 플랫폼  | 종류 | 설명 | 예시 | |------|------|------| | **소셜 미디어 플랫폼** | 콘텐츠를 생성·공유하며 소통하는 공간 | 페이스북, 인스타그램, X(구 트위터), 틱톡 | | **검색 엔진** | 인터넷의 방대한 정보를 검"
+  },
+  {
+    "id": "MT-135",
+    "query": "가장 활발한 페이지 알려줘",
+    "table": "meta_ads",
+    "category": "page_analysis",
+    "status": "WARN",
+    "time": 60.9,
+    "answer_len": 395,
+    "answer_preview": "2026년 1월 기준, 월간 방문자 수 기준 **가장 활발한 웹사이트 TOP 5**는 다음과 같습니다.  | 순위 | 웹사이트 | 월간 방문자 수 | |------|----------|---------------| | 1 | **Google** | 약 **948억** 명 | | 2 | **YouTube** | 약 **497억** 명 | | 3 | **Fac"
+  },
+  {
+    "id": "MT-136",
+    "query": "end_date가 없는 활성 광고",
+    "table": "meta_ads",
+    "category": "active_vs_inactive",
+    "status": "OK",
+    "time": 58.6,
+    "answer_len": 345,
+    "answer_preview": "요청하신 조건(end_date가 없는 활성 광고)에 해당하는 데이터는 현재 존재하지 않습니다.  SQL 쿼리에서 `is_active = TRUE`와 `end_date IS NULL` 두 조건을 동시에 만족하는 행이 없기 때문에 결과가 0행으로 나왔습니다. 이는 활성 상태이면서 종료일이 설정되지 않은 광고가 없음을 의미합니다.  다음과 같은 질문으로 비슷한 "
+  },
+  {
+    "id": "MT-137",
+    "query": "스페인 SKIN1004 메타 광고",
+    "table": "meta_ads",
+    "category": "country_brand",
+    "status": "OK",
+    "time": 15.5,
+    "answer_len": 97,
+    "answer_preview": "고객님, 문의하신 '스페인 SKIN1004 메타 광고'에 대한 CS 데이터는 현재 저희 데이터베이스에서 찾을 수 없습니다.  해당 질문에 대한 CS 데이터를 찾지 못했습니다."
+  },
+  {
+    "id": "MT-138",
+    "query": "최근 1개월 시작된 광고 수",
+    "table": "meta_ads",
+    "category": "recent_ads",
+    "status": "OK",
+    "time": 41.8,
+    "answer_len": 448,
+    "answer_preview": "### 📊 최근 1개월 시작된 광고 수 현황  #### 요약  최근 1개월(2026년 02월 06일 ~ 2026년 03월 06일) 동안 **34,057개**의 새로운 광고가 시작되었습니다.  #### 분석 및 인사이트  *   지난 한 달간 SKIN1004는 활발하게 새로운 광고 캠페인을 시작했음을 알 수 있습니다. *   `> 이 광고들이 어떤 채널(예:"
+  },
+  {
+    "id": "MT-139",
+    "query": "메타 광고 수집일 기준 최신 데이터",
+    "table": "meta_ads",
+    "category": "ad_archive",
+    "status": "WARN",
+    "time": 66.7,
+    "answer_len": 601,
+    "answer_preview": "**📊 2026년 3월 6일 메타 광고 최신 데이터 현황**  #### 요약  2026년 3월 6일(오늘) 기준으로 수집된 메타 광고 최신 데이터는 총 **10,000건**이며, 모든 광고는 현재 **활성 상태(is_active: True)**입니다. 이 데이터는 **16개 국가**에서 **25개 브랜드**의 광고를 포함하고 있으며, `Official_Ad"
+  },
+  {
+    "id": "MT-140",
+    "query": "메타 광고 전체 현황 요약해줘",
+    "table": "meta_ads",
+    "category": "total_count",
+    "status": "OK",
+    "time": 49.1,
+    "answer_len": 842,
+    "answer_preview": "### 📊 메타 광고 전체 현황 요약  #### 요약  현재 총 **1,309,718개**의 메타 광고가 운영되고 있으며, 이 중 **1,309,608개**가 활성 상태로 집행되고 있습니다. 이는 **16개** 국가에서 **27개** 브랜드에 걸쳐 광범위하게 진행되고 있음을 나타냅니다.  #### 상세 데이터  | 항목 | 수치 | | :----------"
+  },
+  {
+    "id": "MT-141",
+    "query": "활성 광고 국가 TOP 5",
+    "table": "meta_ads",
+    "category": "active_ads",
+    "status": "OK",
+    "time": 30.7,
+    "answer_len": 896,
+    "answer_preview": "### 📊 활성 광고 국가 TOP 5 현황  #### 요약  2026년 3월 6일 기준, 활성 광고 수가 가장 많은 국가는 **인도네시아**로 총 **377,396개**의 활성 광고를 운영하고 있습니다. 상위 5개 국가 중 동남아시아 국가들이 강세를 보이며, 인도네시아는 2위인 말레이시아보다 약 12만 개 이상 많은 광고를 운영 중입니다.  #### 상세 "
+  },
+  {
+    "id": "MT-142",
+    "query": "country_code JP 광고 현황",
+    "table": "meta_ads",
+    "category": "country_distribution",
+    "status": "OK",
+    "time": 58.9,
+    "answer_len": 3386,
+    "answer_preview": "### 📊 일본(JP) 광고 현황 분석 보고서  #### 요약  일본(JP)의 광고 현황을 분석한 결과, 총 **50,072개**의 광고가 운영 중이며, 모든 광고가 현재 활성 상태인 것으로 확인되었습니다. 가장 많은 광고는 'FACEBOOK, INSTAGRAM, AUDIENCE_NETWORK, MESSENGER, THREADS' 플랫폼에서 집행된 파트너십"
+  },
+  {
+    "id": "MT-143",
+    "query": "메타 광고 유형별 건수 표",
+    "table": "meta_ads",
+    "category": "ad_type",
+    "status": "OK",
+    "time": 36.5,
+    "answer_len": 888,
+    "answer_preview": "### 📊 메타 광고 유형별 건수 현황  #### 요약  메타 광고 유형별 건수를 분석한 결과, **Official_Ad**가 **873,014건**으로 가장 많은 비중을 차지했습니다. 이어서 **Partnership_Ad**가 **442,294건**을 기록하며 두 번째로 높은 건수를 보였습니다. Official_Ad가 Partnership_Ad 대비 약 "
+  },
+  {
+    "id": "MT-144",
+    "query": "각 플랫폼별 활성 광고 비율",
+    "table": "meta_ads",
+    "category": "platform",
+    "status": "OK",
+    "time": 55.6,
+    "answer_len": 4209,
+    "answer_preview": "### 📊 플랫폼별 활성 광고 비율 분석  #### 요약  제공된 데이터에 따르면, 대부분의 플랫폼에서 활성 광고 비율이 **100%**에 달하며, 가장 낮은 비율을 보이는 플랫폼도 **99.97%** 이상으로 매우 높은 활성률을 유지하고 있습니다. 이는 전반적으로 광고 운영 및 관리가 매우 효율적으로 이루어지고 있음을 시사합니다.  #### 상세 데이터 "
+  },
+  {
+    "id": "MT-145",
+    "query": "페이지별 국가별 교차 분석",
+    "table": "meta_ads",
+    "category": "page_analysis",
+    "status": "WARN",
+    "time": 60.0,
+    "answer_len": 2879,
+    "answer_preview": "### 📊 국가별/채널별(페이지별) 매출 교차 분석 보고서  #### 요약  2019년 1월 1일부터 2026년 3월 6일까지의 데이터를 분석한 결과, 전체 매출은 **약 1조 3,767억원**이며, 총 판매 수량은 **1억 9,342만개**를 기록했습니다. 가장 높은 매출을 기록한 조합은 **글로벌_플랫폼의 SK_B2B_Domestic 채널**로 약 1,"
+  },
+  {
+    "id": "MT-146",
+    "query": "활성 광고 총 수와 비율",
+    "table": "meta_ads",
+    "category": "active_vs_inactive",
+    "status": "OK",
+    "time": 41.0,
+    "answer_len": 646,
+    "answer_preview": "### 📊 SKIN1004 브랜드 활성 광고 현황  #### 요약  SKIN1004 브랜드에 대한 광고 데이터를 조회한 결과, 현재 **활성 광고 및 전체 광고 수가 존재하지 않습니다.** 따라서 활성 광고 비율 또한 산출할 수 없습니다.  #### 분석 및 인사이트  *   **데이터 부재:** `ad_data.meta data_test` 테이블에서 'S"
+  },
+  {
+    "id": "MT-147",
+    "query": "이탈리아 메타 광고 있어?",
+    "table": "meta_ads",
+    "category": "country_brand",
+    "status": "OK",
+    "time": 34.3,
+    "answer_len": 434,
+    "answer_preview": "### 📊 이탈리아 SKIN1004 메타 광고 현황  #### 요약  현재 조회된 데이터에 따르면, 이탈리아에서 SKIN1004 브랜드의 메타 광고는 **존재하지 않습니다**.  #### 분석 및 인사이트  *   현재 데이터 기준, 이탈리아 시장에서 SKIN1004 브랜드의 메타 광고 집행은 없는 것으로 확인되었습니다. *   `> 이탈리아 시장에 대한 "
+  },
+  {
+    "id": "MT-148",
+    "query": "2025년 1월 시작된 메타 광고",
+    "table": "meta_ads",
+    "category": "recent_ads",
+    "status": "WARN",
+    "time": 64.1,
+    "answer_len": 2307,
+    "answer_preview": "### 📊 2025년 1월 시작 메타 광고 현황 분석  #### 요약  2025년 1월에 시작된 메타 광고는 총 **614건**이 조회되었으며, 이는 **12개**의 고유 광고 캠페인(ad_archive_id)에 해당합니다. 오늘 날짜(2026년 3월 6일) 기준으로 조회된 모든 광고는 **활성 상태**를 유지하고 있으며, Medicube, Celimax,"
+  },
+  {
+    "id": "MT-149",
+    "query": "메타 광고 데이터 날짜 범위",
+    "table": "meta_ads",
+    "category": "ad_archive",
+    "status": "OK",
+    "time": 42.2,
+    "answer_len": 492,
+    "answer_preview": "### 📊 메타 광고 데이터 조회 기간  #### 요약  메타 광고 데이터는 **2025년 11월 20일**부터 **2026년 03월 06일**까지의 기간을 포함하고 있습니다. 이는 현재까지 수집된 모든 메타 광고 데이터의 전체 범위를 나타냅니다.  #### 상세 데이터 | 시작일       | 종료일       | | :----------- | :----"
+  },
+  {
+    "id": "MT-150",
+    "query": "메타 광고 데이터 전체 분석",
+    "table": "meta_ads",
+    "category": "total_count",
+    "status": "WARN",
+    "time": 71.9,
+    "answer_len": 1866,
+    "answer_preview": "### 📊 메타 광고 데이터 전체 현황 분석  #### 요약  전체 메타 광고 데이터를 분석한 결과, 총 **27개** 브랜드가 **21개**의 다양한 퍼블리셔 플랫폼 조합을 통해 광고를 집행하고 있습니다. 특히 `skintific`, `glad2glow`, `medicube` 브랜드가 광고 집행량 상위권을 차지하며 활발한 활동을 보이고 있으며, 대부분의 "
+  },
+  {
+    "id": "MT-151",
+    "query": "활성 광고 가장 많은 국가",
+    "table": "meta_ads",
+    "category": "active_ads",
+    "status": "OK",
+    "time": 40.4,
+    "answer_len": 467,
+    "answer_preview": "### 📊 활성 광고 최다 국가 분석  #### 요약  2026년 3월 6일 기준, **인도네시아**가 **377,396개**의 활성 광고를 보유하며 가장 많은 활성 광고를 운영하고 있는 국가로 확인되었습니다.  #### 분석 및 인사이트  *   **인도네시아 시장의 중요성**: 인도네시아는 현재 가장 많은 활성 광고를 운영하고 있는 국가로, SKIN10"
+  },
+  {
+    "id": "MT-152",
+    "query": "country_code TH 광고 수",
+    "table": "meta_ads",
+    "category": "country_distribution",
+    "status": "OK",
+    "time": 26.8,
+    "answer_len": 445,
+    "answer_preview": "### 📊 태국(TH) 광고 수 현황  #### 요약  2026년 03월 06일 기준으로 태국(TH)의 총 광고 수는 **125,282**건으로 집계되었습니다.  #### 분석 및 인사이트  *   **태국 시장의 광고 활동:** 태국(TH)에서 총 125,282건의 광고가 확인되어, 해당 시장에서 활발한 광고 활동이 이루어지고 있음을 알 수 있습니다. *"
+  },
+  {
+    "id": "MT-153",
+    "query": "메타 광고 유형 분류 기준",
+    "table": "meta_ads",
+    "category": "ad_type",
+    "status": "OK",
+    "time": 38.4,
+    "answer_len": 680,
+    "answer_preview": "### 📊 메타 광고 유형 분류 현황  #### 요약  현재 데이터에 따르면, 메타 광고 유형은 크게 **2가지**로 분류됩니다: Official_Ad와 Partnership_Ad. 이는 광고 캠페인의 주체 또는 성격에 따라 구분되는 것으로 보입니다.  #### 상세 데이터 | 광고 유형 | |:----------| | Official_Ad | | Part"
+  },
+  {
+    "id": "MT-154",
+    "query": "플랫폼 조합별 광고 수",
+    "table": "meta_ads",
+    "category": "platform",
+    "status": "OK",
+    "time": 54.6,
+    "answer_len": 2823,
+    "answer_preview": "### 📊 플랫폼 조합별 광고 수 분석  #### 요약  2019년 1월 1일부터 현재까지 집계된 광고 데이터에 따르면, 가장 많은 광고가 집행된 플랫폼 조합은 `['FACEBOOK', 'INSTAGRAM', 'AUDIENCE_NETWORK', 'THREADS']`으로 **56,993**건을 기록했습니다. 다음으로 `['FACEBOOK', 'INSTAGRA"
+  },
+  {
+    "id": "MT-155",
+    "query": "페이지별 광고 유형별 건수",
+    "table": "meta_ads",
+    "category": "page_analysis",
+    "status": "OK",
+    "time": 24.6,
+    "answer_len": 2145,
+    "answer_preview": "### 📊 페이지별 광고 유형별 광고 건수 분석  #### 요약  총 244개의 페이지와 2가지 광고 유형(Official_Ad, Partnership_Ad)에 대한 분석 결과, **Skintific Co의 Partnership_Ad**가 **118,835건**으로 가장 많은 광고 건수를 기록했습니다. 전체 328개의 고유한 페이지-광고 유형 조합 중 상위"
+  },
+  {
+    "id": "MT-156",
+    "query": "비활성 광고 비율 알려줘",
+    "table": "meta_ads",
+    "category": "active_vs_inactive",
+    "status": "OK",
+    "time": 31.1,
+    "answer_len": 445,
+    "answer_preview": "### 📊 비활성 광고 비율 현황  #### 요약  오늘 날짜 기준으로 전체 광고 중 비활성 광고의 비율은 **0.0084%**로 매우 낮은 수준입니다. 이는 대부분의 광고가 활성 상태로 효율적으로 운영되고 있음을 시사합니다.  #### 분석 및 인사이트  *   전체 광고 중 비활성 광고의 비율이 **0.0084%**로 매우 낮게 나타났습니다. 이는 대부"
+  },
+  {
+    "id": "MT-157",
+    "query": "브라질 SKIN1004 메타 광고",
+    "table": "meta_ads",
+    "category": "country_brand",
+    "status": "OK",
+    "time": 16.3,
+    "answer_len": 97,
+    "answer_preview": "고객님, 문의하신 '브라질 SKIN1004 메타 광고'에 대한 CS 데이터는 현재 사내 데이터베이스에서 찾을 수 없습니다.  해당 질문에 대한 CS 데이터를 찾지 못했습니다."
+  },
+  {
+    "id": "MT-158",
+    "query": "2025년 2월 시작된 메타 광고",
+    "table": "meta_ads",
+    "category": "recent_ads",
+    "status": "OK",
+    "time": 42.2,
+    "answer_len": 326,
+    "answer_preview": "**2025년 2월 시작된 메타 광고 현황 분석 보고서**  #### 요약  2025년 2월에 시작된 메타 광고는 총 **879건**이며, 현재(2026년 3월 6일 기준) **모든 광고가 활성 상태**로 운영되고 있습니다. 이 광고들은 일본, 말레이시아, 필리핀, 대한민국, 미국 등 5개국에서 더모리퍼블릭, 글래드투글로우, 메디큐브, 스킨티픽 4개 브랜드"
+  },
+  {
+    "id": "MT-159",
+    "query": "메타 광고 end_date 분포",
+    "table": "meta_ads",
+    "category": "ad_archive",
+    "status": "WARN",
+    "time": 73.5,
+    "answer_len": 1568,
+    "answer_preview": "### 📊 메타 광고 종료일 분포 분석  #### 요약  본 보고서는 2025년에 종료된 메타 광고의 종료일 분포를 분석합니다. 데이터는 총 **157개의 고유한 종료일**을 포함하며, 가장 이른 종료일은 **2025년 1월 28일**, 가장 늦은 종료일은 **2025년 10월 17일**로 확인되었습니다. 특히 **2025년 9월 30일**에는 **21개*"
+  },
+  {
+    "id": "MT-160",
+    "query": "메타 광고 수 추이",
+    "table": "meta_ads",
+    "category": "total_count",
+    "status": "OK",
+    "time": 36.6,
+    "answer_len": 932,
+    "answer_preview": "### 📊 메타 광고 수 월별 추이  #### 요약  ⚠️ 2026년 3월 데이터는 현재 6일까지의 집계이며, 월말까지 증가할 수 있습니다. 메타 광고 수는 2025년 11월 **49,984건**에서 12월 **397,892건**으로 급증한 후, 2026년 1월 **398,733건**으로 최고치를 기록했습니다. 이후 2월에는 소폭 감소했으나 여전히 높은 수"
+  },
+  {
+    "id": "MT-161",
+    "query": "활성 광고 플랫폼별 분포",
+    "table": "meta_ads",
+    "category": "active_ads",
+    "status": "OK",
+    "time": 39.9,
+    "answer_len": 380,
+    "answer_preview": "해당 조건에 맞는 데이터가 존재하지 않습니다.  SQL에서 사용된 필터 조건 중 `brand LIKE '%SKIN1004%'`가 문제일 수 있습니다. `meta data_test` 테이블에 'SKIN1004'를 포함하는 브랜드명의 활성 광고 데이터가 없거나, 브랜드명이 정확히 일치하지 않을 수 있습니다. 정확한 브랜드명을 확인해 보시거나, 다른 브랜드명으로"
+  },
+  {
+    "id": "MT-162",
+    "query": "country_code VN 광고 현황",
+    "table": "meta_ads",
+    "category": "country_distribution",
+    "status": "OK",
+    "time": 52.4,
+    "answer_len": 598,
+    "answer_preview": "### 📊 베트남(VN) 광고 현황 분석  #### 요약  2026년 03월 06일 기준으로 베트남(VN)에서는 총 **10,077개**의 광고가 수집되었으며, 이 중 **9,231개**가 현재 활성 상태인 것으로 확인되었습니다. 이는 수집된 광고의 약 **91.6%**가 활성화되어 있음을 의미합니다.  #### 상세 데이터  (단일 요약 데이터이므로 상세"
+  },
+  {
+    "id": "MT-163",
+    "query": "메타 광고 ad_type 중 가장 적은 것",
+    "table": "meta_ads",
+    "category": "ad_type",
+    "status": "OK",
+    "time": 37.3,
+    "answer_len": 407,
+    "answer_preview": "### 📊 메타 광고 유형별 최소 발생 건수 분석  #### 요약  메타 광고 ad_type 중 가장 적게 발생한 유형은 **Partnership_Ad**이며, 총 **442,294**건 발생했습니다.  #### 분석 및 인사이트  *   Partnership_Ad는 다른 메타 광고 유형에 비해 활용 빈도가 낮은 것으로 나타났습니다. 이는 특정 캠페인 목적"
+  },
+  {
+    "id": "MT-164",
+    "query": "publisher_platform 목록 알려줘",
+    "table": "meta_ads",
+    "category": "platform",
+    "status": "OK",
+    "time": 54.8,
+    "answer_len": 1052,
+    "answer_preview": "# 주요 퍼블리셔 플랫폼 목록  ## 1. 디지털 콘텐츠 및 웹사이트 제작  | 플랫폼 | 설명 | |---|---| | **워드프레스 (WordPress)** | 웹사이트, 블로그, 포트폴리오 등 다양한 온라인 콘텐츠를 제작·관리할 수 있는 오픈소스 CMS | | **어도비 익스피리언스 매니저 (Adobe Experience Manager)** | 웹사이"
+  },
+  {
+    "id": "MT-165",
+    "query": "페이지별 최신 광고 날짜",
+    "table": "meta_ads",
+    "category": "page_analysis",
+    "status": "OK",
+    "time": 59.2,
+    "answer_len": 1174,
+    "answer_preview": "### 📊 페이지별 최신 광고 수집 날짜 현황  #### 요약  총 **245개** 페이지의 최신 광고 수집 날짜를 확인한 결과, 모든 페이지의 최신 광고 수집 날짜가 **2026년 03월 06일**로 확인되었습니다. 이는 오늘 날짜와 일치하며, 모든 페이지에서 광고가 활발히 집행되고 있거나 데이터 수집이 정상적으로 이루어지고 있음을 시사합니다.  ####"
+  },
+  {
+    "id": "MT-166",
+    "query": "최근 종료된 광고 리스트",
+    "table": "meta_ads",
+    "category": "active_vs_inactive",
+    "status": "WARN",
+    "time": 77.7,
+    "answer_len": 890,
+    "answer_preview": "### 📊 최근 3개월 내 종료된 광고 리스트  #### 요약  2026년 3월 6일 기준, 최근 3개월(2025년 12월 6일 ~ 2026년 3월 6일) 동안 수집된 데이터 중 **총 99건**의 종료된 광고가 확인되었습니다. 이 중 가장 최근에 종료된 광고는 **2026년 2월 28일**에 집행이 중단되었으며, 주로 **호주(Australia)**와 *"
+  },
+  {
+    "id": "MT-167",
+    "query": "멕시코 메타 광고 데이터",
+    "table": "meta_ads",
+    "category": "country_brand",
+    "status": "OK",
+    "time": 39.7,
+    "answer_len": 379,
+    "answer_preview": "해당 조건의 데이터가 없습니다. SQL에 사용된 국가명 'Mexico'는 유효한 값 목록에 존재하지 않습니다.  SQL에서 `country_name = 'Mexico'` 조건이 문제였습니다. 제공된 유효한 국가명 목록(미국, 인도네시아, 말레이시아, 필리핀, 일본, 중국, 한국, 태국, 베트남, 싱가포르, 호주, 독일 등)에 'Mexico'는 포함되어 있지"
+  },
+  {
+    "id": "MT-168",
+    "query": "최근 시작된 광고 start_date 순",
+    "table": "meta_ads",
+    "category": "recent_ads",
+    "status": "OK",
+    "time": 59.8,
+    "answer_len": 2638,
+    "answer_preview": "### 📊 최근 시작된 광고 현황 (2026년 3월 1일 ~ 3월 5일)  #### 요약  2026년 3월 6일 기준, 최근 시작된 광고는 **2026년 3월 1일부터 3월 5일까지 총 10,000건**이 조회되었습니다. 이 중 가장 최근인 **3월 5일에 시작된 광고가 대부분**을 차지하며, 총 106개의 고유 페이지에서 'Official_Ad'와 'Pa"
+  },
+  {
+    "id": "MT-169",
+    "query": "메타 광고 collect_date 최신 데이터",
+    "table": "meta_ads",
+    "category": "ad_archive",
+    "status": "OK",
+    "time": 32.6,
+    "answer_len": 493,
+    "answer_preview": "### 📊 메타 광고 데이터 최종 수집일 확인  #### 요약  메타 광고 데이터의 최종 `collect_date`는 **2026년 03월 06일**로 확인되었습니다. 이는 메타 광고 데이터가 **오늘 날짜 기준으로 최신 상태**로 업데이트되어 있음을 의미합니다.  #### 분석 및 인사이트  *   **데이터 최신성 확보**: 메타 광고 데이터의 `col"
+  },
+  {
+    "id": "MT-170",
+    "query": "메타 광고 데이터 건수 합계",
+    "table": "meta_ads",
+    "category": "total_count",
+    "status": "OK",
+    "time": 27.2,
+    "answer_len": 369,
+    "answer_preview": "### 📊 메타 광고 데이터 총 건수  #### 요약  현재까지 수집된 메타 광고 데이터의 총 건수는 **1,315,308건**입니다.  #### 분석 및 인사이트  *   총 130만 건 이상의 메타 광고 데이터가 수집되어 관리되고 있습니다. *   `> 이 데이터는 메타 광고 활동의 전반적인 규모를 파악하고, 향후 광고 성과 분석 및 최적화를 위한 중요"
+  },
+  {
+    "id": "MT-171",
+    "query": "활성 광고 유형별 국가별 분석",
+    "table": "meta_ads",
+    "category": "active_ads",
+    "status": "OK",
+    "time": 31.9,
+    "answer_len": 507,
+    "answer_preview": "요청하신 조건에 해당하는 활성 광고 데이터가 없습니다.  SQL에서 사용된 필터 조건인 `is_active = TRUE` (활성 광고)와 `brand LIKE '%SKIN1004%'` (SKIN1004 브랜드)를 모두 만족하는 데이터가 현재 테이블에 존재하지 않습니다.  다음 사항을 확인해 보세요: *   **브랜드명:** `brand` 컬럼에 'SKIN1"
+  },
+  {
+    "id": "MT-172",
+    "query": "country_code ID 광고 수",
+    "table": "meta_ads",
+    "category": "country_distribution",
+    "status": "OK",
+    "time": 31.9,
+    "answer_len": 1116,
+    "answer_preview": "### 📊 국가별 고유 광고(ID) 수 현황  #### 요약  BigQuery 분석 결과, 총 16개 국가에서 집계된 고유 광고(ID) 수 중 **인도네시아(ID)가 44,258개**로 가장 많은 광고 수를 기록했습니다. 이는 두 번째로 많은 말레이시아(MY)의 27,035개보다 약 1.6배 높은 수치입니다.  #### 상세 데이터 | 국가 코드 | 광고 "
+  },
+  {
+    "id": "MT-173",
+    "query": "메타 광고 유형별 최근 추이",
+    "table": "meta_ads",
+    "category": "ad_type",
+    "status": "WARN",
+    "time": 62.4,
+    "answer_len": 2301,
+    "answer_preview": "### 📊 메타 광고 유형별 최근 추이 분석 (2025년 11월 ~ 2026년 3월)  #### 요약  ⚠️ 2026년 3월 데이터는 3월 6일 기준 일부만 반영된 수치입니다. 최근 5개월간(2025년 11월 ~ 2026년 3월) 메타 광고는 Official_Ad와 Partnership_Ad 두 가지 유형으로 운영되었으며, **Official_Ad가 전체 "
+  },
+  {
+    "id": "MT-174",
+    "query": "각 플랫폼 광고 수 차트",
+    "table": "meta_ads",
+    "category": "platform",
+    "status": "OK",
+    "time": 57.0,
+    "answer_len": 1138,
+    "answer_preview": "### 📊 플랫폼별 총 광고 노출 수 현황 (2019년 1월 1일 ~ 2026년 3월 6일)  #### 요약  전체 기간(2019년 1월 1일 ~ 2026년 3월 6일) 동안 **Facebook**이 **약 110.1억회**의 노출수로 압도적인 1위를 차지하며 가장 많은 광고 노출을 기록했습니다. 그 뒤를 **TikTok(약 50.5억회)**과 **Shop"
+  },
+  {
+    "id": "MT-175",
+    "query": "페이지 수 몇 개야?",
+    "table": "meta_ads",
+    "category": "page_analysis",
+    "status": "OK",
+    "time": 41.1,
+    "answer_len": 198,
+    "answer_preview": "입력하신 내용만으로는 **어떤 대상의 페이지 수**를 말씀하시는지 파악하기 어렵습니다.  예를 들어 아래와 같이 구체적으로 질문해 주시면 정확하게 안내드릴 수 있습니다.  - \"○○ 보고서 페이지 수가 몇 쪽이야?\" - \"○○ 제품 카탈로그 페이지 수 알려줘\" - \"사내 ○○ 문서가 몇 페이지야?\"  확인하고 싶은 **문서·자료명**을 함께 알려주세요!"
+  },
+  {
+    "id": "MT-176",
+    "query": "활성 상태 변경 내역",
+    "table": "meta_ads",
+    "category": "active_vs_inactive",
+    "status": "OK",
+    "time": 42.8,
+    "answer_len": 84,
+    "answer_preview": "입력하신 내용을 이해하기 어렵습니다. SKIN1004 업무와 관련하여 매출 조회, 사내 문서 검색, 일정 확인 등 궁금한 점을 문장으로 질문해 주세요."
+  },
+  {
+    "id": "MT-177",
+    "query": "인도 SKIN1004 메타 광고 있어?",
+    "table": "meta_ads",
+    "category": "country_brand",
+    "status": "OK",
+    "time": 30.4,
+    "answer_len": 100,
+    "answer_preview": "고객님, 문의하신 SKIN1004의 인도 메타 광고 진행 여부에 대한 정보는 현재 저희 CS 데이터베이스에서 찾을 수 없습니다.  해당 질문에 대한 CS 데이터를 찾지 못했습니다."
+  },
+  {
+    "id": "MT-178",
+    "query": "2025년 3월 메타 광고 데이터",
+    "table": "meta_ads",
+    "category": "recent_ads",
+    "status": "OK",
+    "time": 34.3,
+    "answer_len": 445,
+    "answer_preview": "요청하신 2025년 3월 메타 광고 데이터는 존재하지 않습니다.  SQL 쿼리에서 `collect_date` 필드의 연도 조건(`EXTRACT(YEAR FROM collect_date) = 2025`)과 월 조건(`EXTRACT(MONTH FROM collect_date) = 3`)이 미래 시점을 가리키고 있어 데이터가 조회되지 않았습니다. 현재는 2024"
+  },
+  {
+    "id": "MT-179",
+    "query": "메타 광고 start_date 기준 통계",
+    "table": "meta_ads",
+    "category": "ad_archive",
+    "status": "OK",
+    "time": 51.6,
+    "answer_len": 2473,
+    "answer_preview": "### 📊 메타 광고 시작일 기준 월별 통계  #### 요약  메타 광고 시작일 기준 월별 통계를 분석한 결과, **2022년 9월부터 2024년 9월까지의 데이터(총 20개 월)**에 대한 프리뷰가 확인되었습니다. 전체 조회 결과는 38행이나, 현재 제공된 프리뷰 데이터(20행)를 기준으로 보면, 이 기간 동안 시작된 고유 광고 아카이브 수는 **98개*"
+  },
+  {
+    "id": "MT-180",
+    "query": "메타 광고 전체 수 알려줘",
+    "table": "meta_ads",
+    "category": "total_count",
+    "status": "OK",
+    "time": 21.9,
+    "answer_len": 279,
+    "answer_preview": "### 📊 메타 광고 전체 현황  #### 요약  현재까지 집계된 메타 광고의 총 수는 **1,315,308개**입니다.  #### 분석 및 인사이트  *   현재까지 집행된 메타 광고의 총 규모를 파악할 수 있습니다. *   `> 이 수치는 SKIN1004가 메타 플랫폼을 통해 매우 활발하게 광고 활동을 진행하고 있음을 보여줍니다. 향후 캠페인 성과 분석"
+  },
+  {
+    "id": "MT-181",
+    "query": "활성 광고 중 Instagram 게시 건수",
+    "table": "meta_ads",
+    "category": "active_ads",
+    "status": "OK",
+    "time": 52.9,
+    "answer_len": 397,
+    "answer_preview": "### 📊 활성 광고 중 SKIN1004 인스타그램 게시 건수  #### 요약  현재 활성 상태인 SKIN1004 브랜드의 인스타그램 광고 게시물은 **0건**입니다. 이는 현재 운영 중인 인스타그램 광고가 없음을 의미합니다.  #### 분석 및 인사이트  *   현재 SKIN1004 브랜드의 인스타그램 플랫폼에서 활성화된 광고 게시물이 없는 것으로 확인됩"
+  },
+  {
+    "id": "MT-182",
+    "query": "country_code MY 광고 데이터",
+    "table": "meta_ads",
+    "category": "country_distribution",
+    "status": "OK",
+    "time": 47.6,
+    "answer_len": 353,
+    "answer_preview": "SQL 쿼리에 사용된 'Malaysia' 값은 'Country' 컬럼에 존재하지 않습니다.  제공된 유효 값 목록에 따르면, 'Country' 컬럼의 값은 한국어로 저장되어 있습니다. SQL 쿼리에서 사용된 'Malaysia'는 영어이며, 유효 값 목록에는 '말레이시아'가 있습니다. 따라서 `WHERE Country = 'Malaysia'` 조건을 `WHE"
+  },
+  {
+    "id": "MT-183",
+    "query": "메타 광고 유형별 페이지별 분석",
+    "table": "meta_ads",
+    "category": "ad_type",
+    "status": "OK",
+    "time": 28.7,
+    "answer_len": 2395,
+    "answer_preview": "### 📊 메타 광고 유형별 페이지 분석 보고서  #### 요약  메타 광고 데이터를 분석한 결과, 총 2가지 광고 유형(`Official_Ad`, `Partnership_Ad`)과 244개의 고유 페이지에서 **328개의 광고 유형-페이지 조합**이 확인되었습니다. 가장 많은 광고가 집행된 조합은 **Partnership_Ad 유형의 'Skintific "
+  },
+  {
+    "id": "MT-184",
+    "query": "플랫폼별 브랜드별 광고 수",
+    "table": "meta_ads",
+    "category": "platform",
+    "status": "OK",
+    "time": 41.2,
+    "answer_len": 3114,
+    "answer_preview": "### 📊 플랫폼별 브랜드별 광고 수 분석  #### 요약  2026년 3월 6일 기준으로 플랫폼별 브랜드별 광고 수를 분석한 결과, 총 **27개 브랜드**와 **21개 플랫폼 조합**에서 광고가 집행되었습니다. 가장 많은 광고 수를 기록한 조합은 `['FACEBOOK', 'INSTAGRAM', 'AUDIENCE_NETWORK', 'THREADS']` 플"
+  },
+  {
+    "id": "MT-185",
+    "query": "페이지별 브랜드별 광고 분포",
+    "table": "meta_ads",
+    "category": "page_analysis",
+    "status": "OK",
+    "time": 41.3,
+    "answer_len": 2015,
+    "answer_preview": "### 📊 페이지별 브랜드별 광고 분포 분석  #### 요약  전체 244개의 고유 페이지와 27개의 고유 브랜드에 걸쳐 광고가 분포되어 있으며, **Skintific Co (브랜드: skintific)** 페이지가 **150,798건**으로 가장 많은 광고를 집행하고 있습니다. 상위 광고 집행은 주로 Skintific, Glad2Glow, Medicube"
+  },
+  {
+    "id": "MT-186",
+    "query": "is_active 값별 건수",
+    "table": "meta_ads",
+    "category": "active_vs_inactive",
+    "status": "OK",
+    "time": 35.5,
+    "answer_len": 516,
+    "answer_preview": "`is_active` 값별 건수는 데이터베이스에서 **특정 데이터의 활성/비활성 상태별 개수**를 의미합니다.  ---  ## is_active 값별 건수 정의  | 값 | 의미 | 설명 | |---|---|---| | **`is_active = True (1)`** | 활성 상태 | 현재 사용 중인 데이터의 총 건수 | | **`is_active = Fa"
+  },
+  {
+    "id": "MT-187",
+    "query": "러시아 메타 광고 현황",
+    "table": "meta_ads",
+    "category": "country_brand",
+    "status": "OK",
+    "time": 31.4,
+    "answer_len": 450,
+    "answer_preview": "요청하신 조건에 해당하는 데이터가 없습니다. SQL 쿼리에 사용된 `country_name` 값인 'Russia'는 유효한 값 목록에 존재하지 않습니다.  문제는 SQL 쿼리의 `country_name` 필터 조건입니다. `country_name` 컬럼은 국가명을 '미국', '한국', '독일'과 같이 한국어로 저장하고 있습니다. 따라서 'Russia' 대신"
+  },
+  {
+    "id": "MT-188",
+    "query": "최근 광고 20건 보여줘",
+    "table": "meta_ads",
+    "category": "recent_ads",
+    "status": "WARN",
+    "time": 63.8,
+    "answer_len": 366,
+    "answer_preview": "### 📊 최근 광고 20건 현황  #### 요약  2026년 03월 06일 기준으로 수집된 최근 광고 **20건**은 모두 **Partnership_Ad** 유형으로 확인되었습니다. 이 광고들은 주로 싱가포르(**7건**), 태국(**6건**), 말레이시아(**5건**) 등 동남아시아 국가에 집중되어 있으며, 인도네시아(**2건**)에서도 집행되었습니다."
+  },
+  {
+    "id": "MT-189",
+    "query": "메타 광고 아카이브 데이터 분석",
+    "table": "meta_ads",
+    "category": "ad_archive",
+    "status": "OK",
+    "time": 58.6,
+    "answer_len": 2103,
+    "answer_preview": "### 📊 메타 광고 아카이브 현황 분석  #### 요약  2026년 03월 06일 기준으로 메타 광고 아카이브 데이터를 분석한 결과, 총 27개 브랜드에 걸쳐 **214개**의 브랜드-게시자 플랫폼 조합이 확인되었습니다. 가장 많은 광고를 보유한 조합은 **skintific** 브랜드의 `['FACEBOOK', 'INSTAGRAM', 'AUDIENCE_N"
+  },
+  {
+    "id": "MT-190",
+    "query": "메타 광고 테이블 데이터 요약",
+    "table": "meta_ads",
+    "category": "total_count",
+    "status": "OK",
+    "time": 43.9,
+    "answer_len": 887,
+    "answer_preview": "### 📊 메타 광고 데이터 현황 요약  #### 요약  현재 메타 광고 테이블에는 총 **1,315,308개**의 광고 데이터가 존재하며, 이 중 **1,309,608개** (약 99.56%)가 활성 상태인 것으로 확인됩니다. 이 데이터는 27개의 고유 브랜드와 16개 국가에서 2가지 유형의 광고가 21개 퍼블리셔 플랫폼을 통해 운영되고 있음을 보여줍니다"
+  },
+  {
+    "id": "MT-191",
+    "query": "활성 광고 최근 시작된 10건",
+    "table": "meta_ads",
+    "category": "active_ads",
+    "status": "OK",
+    "time": 41.3,
+    "answer_len": 3316,
+    "answer_preview": "### 📊 활성 광고 최근 시작된 10건 분석  #### 요약  최근 시작된 활성 광고 10건은 모두 **2026년 3월 6일**에 시작된 일본 Anua 브랜드의 공식 광고입니다. 이 광고들은 Anua Japan 페이지를 통해 운영되고 있으며, 동일한 조건으로 집행되고 있습니다.  #### 상세 데이터  최근 시작된 활성 광고 10건의 상세 내역은 다음과 "
+  },
+  {
+    "id": "MT-192",
+    "query": "country_code SG 광고 수",
+    "table": "meta_ads",
+    "category": "country_distribution",
+    "status": "OK",
+    "time": 38.8,
+    "answer_len": 392,
+    "answer_preview": "### 📊 싱가포르(SG) 광고 수 현황  #### 요약  싱가포르(SG) 국가 코드에 해당하는 총 광고 수는 **71,862**건으로 집계되었습니다.  #### 상세 데이터  (단일 수치이므로 생략)  #### 분석 및 인사이트  *   싱가포르(SG) 국가 코드에 대한 광고 데이터가 총 71,862건 존재합니다. *   이는 해당 데이터셋 내에서 싱가포"
+  },
+  {
+    "id": "MT-193",
+    "query": "메타 광고 유형 통계 요약",
+    "table": "meta_ads",
+    "category": "ad_type",
+    "status": "WARN",
+    "time": 63.3,
+    "answer_len": 3798,
+    "answer_preview": "### 📊 메타 광고 유형별 통계 요약  #### 요약  제공된 데이터에 따르면, 메타 광고는 크게 **Official_Ad**와 **Partnership_Ad** 두 가지 유형으로 운영되고 있습니다. 전체 광고 중 **Official_Ad**가 약 **87만 1천 건**으로 가장 큰 비중을 차지하며, **Partnership_Ad**는 약 **44만 1천"
+  },
+  {
+    "id": "MT-194",
+    "query": "플랫폼별 국가별 교차 분석",
+    "table": "meta_ads",
+    "category": "platform",
+    "status": "OK",
+    "time": 38.5,
+    "answer_len": 2566,
+    "answer_preview": "### 📊 SK 및 CL 브랜드 플랫폼별 국가별 매출 교차 분석 보고서  #### 요약  2019년 1월 1일부터 현재(2026년 3월 6일)까지 SK 및 CL 브랜드의 플랫폼별 국가별 매출을 분석한 결과, 총 매출은 **약 1조 749억원**을 기록했으며, 총 판매 수량은 **1억 8,793만개**에 달합니다. 가장 높은 매출을 기록한 조합은 **SK_B"
+  },
+  {
+    "id": "MT-195",
+    "query": "페이지별 광고 수 내림차순 정렬",
+    "table": "meta_ads",
+    "category": "page_analysis",
+    "status": "OK",
+    "time": 32.6,
+    "answer_len": 1876,
+    "answer_preview": "### 📊 페이지별 광고 수 현황  #### 요약  사용자님의 요청에 따라 페이지별 광고 수를 내림차순으로 정렬한 결과, 총 244개의 고유 페이지 중 'Skintific Co'가 **150,798개**의 광고를 집행하며 가장 많은 광고를 보유하고 있는 것으로 나타났습니다. 그 뒤를 이어 'Glad 2 Glow Indonesia'가 **133,946개**,"
+  },
+  {
+    "id": "MT-196",
+    "query": "활성 vs 비활성 광고 차트",
+    "table": "meta_ads",
+    "category": "active_vs_inactive",
+    "status": "OK",
+    "time": 37.7,
+    "answer_len": 352,
+    "answer_preview": "요청하신 조건(브랜드: SKIN1004)에 해당하는 데이터가 존재하지 않아 결과가 0행으로 나왔습니다.  SQL 쿼리에서 `brand` 필터 조건이 'SKIN1004'로 설정되어 있는데, 이 조건에 해당하는 데이터가 없거나, 데이터베이스에 'SKIN1004' 브랜드 자체가 존재하지 않는 것으로 보입니다. 현재 유효한 브랜드 목록을 알 수 없어 정확한 값을 "
+  },
+  {
+    "id": "MT-197",
+    "query": "터키 SKIN1004 메타 광고",
+    "table": "meta_ads",
+    "category": "country_brand",
+    "status": "OK",
+    "time": 16.5,
+    "answer_len": 95,
+    "answer_preview": "고객님, 문의하신 '터키 SKIN1004 메타 광고'에 대한 정보는 현재 사내 CS 데이터베이스에서 찾을 수 없습니다.  해당 질문에 대한 CS 데이터를 찾지 못했습니다."
+  },
+  {
+    "id": "MT-198",
+    "query": "최근 2개월 신규 광고",
+    "table": "meta_ads",
+    "category": "recent_ads",
+    "status": "WARN",
+    "time": 68.0,
+    "answer_len": 1040,
+    "answer_preview": "### 📊 2026년 3월 6일 기준 최근 2개월 내 수집된 활성 광고 현황  #### 요약  2026년 3월 6일 기준으로 최근 2개월 내 수집된 **총 10,000건**의 활성 광고 데이터가 확인되었습니다. 이 광고들은 **2024년 11월 1일부터 2026년 2월 25일** 사이에 시작되었으며, `Official_Ad`와 `Partnership_Ad`"
+  },
+  {
+    "id": "MT-199",
+    "query": "메타 광고 데이터 날짜 분석",
+    "table": "meta_ads",
+    "category": "ad_archive",
+    "status": "OK",
+    "time": 32.4,
+    "answer_len": 1273,
+    "answer_preview": "### 📊 월별 메타 광고 집행 현황 분석  #### 요약  메타 광고 데이터 분석 결과, 2025년 11월부터 2026년 3월까지 총 **130만 건 이상의 광고**가 집행되었습니다. 특히 2025년 12월과 2026년 1월에 각각 **약 39만 6천 건, 39만 7천 건**으로 가장 많은 광고가 집행되었으며, 모든 기간에 걸쳐 광고 활성화율은 매우 높게"
+  },
+  {
+    "id": "MT-200",
+    "query": "메타 광고 전체 데이터 현황",
+    "table": "meta_ads",
+    "category": "total_count",
+    "status": "OK",
+    "time": 35.7,
+    "answer_len": 1057,
+    "answer_preview": "### 📊 메타 광고 전체 데이터 현황 분석 보고서  #### 요약  2025년 11월 20일부터 2026년 3월 6일까지 수집된 메타 광고 데이터를 분석한 결과, 총 **150,857개**의 고유 광고가 확인되었습니다. 이 기간 동안 활동 중인 광고 기록은 총 **1,309,608건**에 달하며, **27개**의 고유 브랜드가 **16개** 국가에서 **"
+  },
+  {
+    "id": "MT-201",
+    "query": "활성 광고만 국가별 집계",
+    "table": "meta_ads",
+    "category": "active_ads",
+    "status": "OK",
+    "time": 22.2,
+    "answer_len": 1679,
+    "answer_preview": "### 📊 국가별 활성 광고 현황 분석  #### 요약  2026년 3월 6일 기준, 활성 광고 수는 **총 1,380,208개**로 집계되었습니다. 이 중 인도네시아가 **377,396개**로 가장 많은 활성 광고를 보유하고 있으며, 말레이시아(**250,880개**)와 대한민국(**184,084개**)이 그 뒤를 이었습니다.  #### 상세 데이터 | "
+  },
+  {
+    "id": "MT-202",
+    "query": "country_code PH 광고 현황",
+    "table": "meta_ads",
+    "category": "country_distribution",
+    "status": "OK",
+    "time": 43.5,
+    "answer_len": 373,
+    "answer_preview": "SQL 쿼리에 사용된 'Philippines' 값은 Country 컬럼의 유효 값 목록에 존재하지 않아 해당 조건의 데이터가 없습니다.  SQL 쿼리의 `WHERE Country = 'Philippines'` 조건이 문제입니다. `Country` 컬럼은 '미국', '필리핀'과 같이 한국어 값으로 저장되어 있습니다. 따라서 'Philippines' 대신 '필"
+  },
+  {
+    "id": "MT-203",
+    "query": "메타 광고 유형별 활성/비활성 비교",
+    "table": "meta_ads",
+    "category": "ad_type",
+    "status": "OK",
+    "time": 42.0,
+    "answer_len": 1398,
+    "answer_preview": "### 📊 메타 광고 유형별 활성/비활성 현황 비교  #### 요약  2026년 3월 6일 기준, 메타 광고는 **Official_Ad**와 **Partnership_Ad** 두 가지 주요 유형으로 운영되고 있습니다. 전체 광고 중 **Official_Ad**가 총 **873,014**개로 가장 많았으며, 이 중 **872,974**개가 활성 상태를 유지하"
+  },
+  {
+    "id": "MT-204",
+    "query": "플랫폼별 최근 광고",
+    "table": "meta_ads",
+    "category": "platform",
+    "status": "OK",
+    "time": 52.7,
+    "answer_len": 1175,
+    "answer_preview": "### 📊 2026년 3월 (현재까지) 플랫폼별 광고 비용 현황  #### 요약  2026년 3월 6일 기준, 플랫폼별 광고 비용은 총 **약 11.0억원**을 기록했습니다. 이 중 **TikTok이 약 3.7억원**으로 가장 높은 비중을 차지했으며, **Facebook(약 3.3억원)**과 **Shopee(약 2.2억원)**가 그 뒤를 이었습니다. Nav"
+  },
+  {
+    "id": "MT-205",
+    "query": "페이지별 국가 분포 보여줘",
+    "table": "meta_ads",
+    "category": "page_analysis",
+    "status": "WARN",
+    "time": 67.8,
+    "answer_len": 352,
+    "answer_preview": "죄송합니다. **페이지별 국가 분포** 데이터는 SKIN1004 내부 분석 도구(예: Google Analytics 등)에서 확인할 수 있는 비공개 정보로, 현재 제가 접근할 수 있는 데이터에 포함되어 있지 않습니다.  해당 정보를 확인하시려면 다음 방법을 권장드립니다:  1. **Google Analytics** — 행동 > 사이트 콘텐츠 > 모든 페이지"
+  },
+  {
+    "id": "MT-206",
+    "query": "최근 비활성화된 광고 수",
+    "table": "meta_ads",
+    "category": "active_vs_inactive",
+    "status": "WARN",
+    "time": 65.4,
+    "answer_len": 448,
+    "answer_preview": "### 📊 최근 3개월 비활성화 광고 현황  #### 요약  2025년 12월 6일부터 2026년 3월 6일까지 최근 3개월 동안 총 **42개**의 광고가 비활성화되었습니다.  #### 분석 및 인사이트  *   최근 3개월간 비활성화된 광고는 총 42개로 집계되었습니다. 이는 2025년 12월 6일부터 2026년 3월 6일까지의 데이터를 기준으로 합니다"
+  },
+  {
+    "id": "MT-207",
+    "query": "남아프리카공화국 메타 광고",
+    "table": "meta_ads",
+    "category": "country_brand",
+    "status": "OK",
+    "time": 24.6,
+    "answer_len": 375,
+    "answer_preview": "해당 조건의 데이터가 없습니다. SQL에 사용된 `country_name` 값인 'South Africa'는 존재하지 않습니다.  SQL에서 사용된 필터 조건 중 `country_name = 'South Africa'`가 문제의 원인입니다. 유효한 국가 목록에 'South Africa'는 포함되어 있지 않습니다. 현재 데이터베이스에는 미국, 인도네시아, 말"
+  },
+  {
+    "id": "MT-208",
+    "query": "start_date 기준 최근 광고 50건",
+    "table": "meta_ads",
+    "category": "recent_ads",
+    "status": "OK",
+    "time": 37.9,
+    "answer_len": 1206,
+    "answer_preview": "### 📊 2026년 3월 6일 기준 최근 시작된 광고 50건 현황  #### 요약  2026년 3월 6일(오늘)을 시작일로 하는 **총 50건**의 광고가 조회되었습니다. 이 광고들은 주로 **COSRX, Anua, SKIN1004** 브랜드에 집중되어 있으며, **미국, 일본, 필리핀** 등 다양한 국가에서 활발하게 집행되고 있습니다. 모든 광고는 'O"
+  },
+  {
+    "id": "MT-209",
+    "query": "메타 광고 아카이브 최근 데이터",
+    "table": "meta_ads",
+    "category": "ad_archive",
+    "status": "OK",
+    "time": 49.4,
+    "answer_len": 2161,
+    "answer_preview": "### 📊 메타 광고 아카이브 최근 데이터 분석 보고서  #### 요약  2026년 03월 06일 기준으로 수집된 메타 광고 아카이브 데이터 분석 결과, 총 **10,000건**의 활성 광고가 확인되었습니다. 이 광고들은 **16개 국가**에서 **25개 브랜드**에 걸쳐 집행되고 있으며, `Official_Ad`와 `Partnership_Ad` 두 가지 "
+  },
+  {
+    "id": "MT-210",
+    "query": "메타 광고 데이터 총 행 수",
+    "table": "meta_ads",
+    "category": "total_count",
+    "status": "OK",
+    "time": 32.8,
+    "answer_len": 420,
+    "answer_preview": "### 📊 메타 광고 데이터 총 행 수 분석  #### 요약  메타 광고 데이터의 총 행 수는 **1,315,308**건으로 확인되었습니다.  #### 분석 및 인사이트  *   **데이터 볼륨 확인**: 메타 광고 데이터는 130만 건 이상의 방대한 양으로 구성되어 있어, 다양한 광고 캠페인 및 성과 지표를 분석하기에 충분한 데이터 규모를 가지고 있습니다"
+  },
+  {
+    "id": "MT-211",
+    "query": "활성 광고 페이지별 TOP 3",
+    "table": "meta_ads",
+    "category": "active_ads",
+    "status": "OK",
+    "time": 32.1,
+    "answer_len": 977,
+    "answer_preview": "### 📊 활성 광고 페이지 TOP 3 현황  #### 요약  2026년 3월 6일 기준, 활성 광고 수가 가장 많은 페이지는 **Skintific Co**로 총 **150,798개**의 활성 광고를 운영하고 있습니다. 이어서 Glad 2 Glow Indonesia가 **133,946개**로 2위, Skintific -Malaysia가 **121,312개*"
+  },
+  {
+    "id": "MT-212",
+    "query": "국가별 광고 수 TOP 10",
+    "table": "meta_ads",
+    "category": "country_distribution",
+    "status": "OK",
+    "time": 27.0,
+    "answer_len": 1189,
+    "answer_preview": "### 📊 국가별 광고 수 TOP 10 현황  #### 요약  2026년 3월 6일 기준, 인도네시아가 **377,396개**의 광고 수로 가장 많은 광고를 집행하며 1위를 차지했습니다. 말레이시아가 **250,880개**로 2위, 대한민국이 **184,084개**로 3위를 기록하며 아시아 국가들이 광고 집행 상위권을 주도하고 있습니다.  #### 상세 데"
+  },
+  {
+    "id": "MT-213",
+    "query": "메타 광고 유형 종류 수",
+    "table": "meta_ads",
+    "category": "ad_type",
+    "status": "OK",
+    "time": 39.6,
+    "answer_len": 466,
+    "answer_preview": "### 📊 메타 광고 유형 종류 수 분석  #### 요약  현재 메타 플랫폼에서 운영 중인 광고 유형은 총 **2가지**로 파악됩니다.  #### 분석 및 인사이트  *   현재 데이터에 따르면 메타 광고 유형은 2가지로 파악됩니다. 이는 광고 전략의 집중도를 나타내거나, `ad_type` 컬럼이 광고 유형을 광범위하게 분류하고 있을 가능성을 시사합니다. "
+  },
+  {
+    "id": "MT-214",
+    "query": "플랫폼 수 몇 개야?",
+    "table": "meta_ads",
+    "category": "platform",
+    "status": "OK",
+    "time": 36.0,
+    "answer_len": 326,
+    "answer_preview": "'플랫폼'의 범위에 따라 다르지만, **국내 디지털 플랫폼 기업** 기준으로는 다음과 같습니다.  - **2021년 과학기술정보통신부 부가통신사업 실태조사** 기준, 국내 디지털 플랫폼 기업은 **1,078개**로 집계되었습니다. - 여기에는 중개 플랫폼과 플랫폼 인프라를 대표 서비스로 제공하는 기업이 포함됩니다.  다만, '플랫폼'이라는 용어는 **온라인"
+  },
+  {
+    "id": "MT-215",
+    "query": "페이지별 광고 시작일 분석",
+    "table": "meta_ads",
+    "category": "page_analysis",
+    "status": "OK",
+    "time": 39.1,
+    "answer_len": 353,
+    "answer_preview": "해당 조건에 맞는 데이터가 없습니다. `brand` 필드에 'SKIN1004'를 포함하는 값은 존재하지 않습니다.  SQL 쿼리에서 `brand` 필드의 조건 `LIKE '%SKIN1004%'`이 문제로 보입니다. `brand` 필드에 'SKIN1004'를 포함하는 값이 존재하지 않아 0행이 반환되었습니다. `brand` 필드의 실제 값들을 확인해 보시는 "
+  },
+  {
+    "id": "MT-216",
+    "query": "활성 광고 수 추이 변화",
+    "table": "meta_ads",
+    "category": "active_vs_inactive",
+    "status": "OK",
+    "time": 31.2,
+    "answer_len": 982,
+    "answer_preview": "### 📊 활성 광고 수 추이 분석  #### 요약  ⚠️ 2026년 3월 데이터는 현재 6일까지의 집계이므로 전체 월을 반영하지 않습니다. 활성 광고 수는 2025년 11월 **49,818개**에서 시작하여 12월에 **396,255개**로 급증한 후, 2026년 1월 **396,990개**로 최고치를 기록했습니다. 이후 2월에는 **364,210개**로"
+  },
+  {
+    "id": "MT-217",
+    "query": "사우디아라비아 메타 광고 있어?",
+    "table": "meta_ads",
+    "category": "country_brand",
+    "status": "OK",
+    "time": 33.1,
+    "answer_len": 519,
+    "answer_preview": "### 📊 사우디아라비아 SKIN1004 메타 광고 현황  #### 요약  현재 SKIN1004 브랜드는 사우디아라비아 지역에서 메타 플랫폼을 통한 광고를 **집행하고 있지 않습니다**. 조회된 메타 광고 수는 **0건**입니다.  #### 분석 및 인사이트  *   현재 데이터에 따르면, SKIN1004 브랜드는 사우디아라비아 시장에서 메타 광고를 통해 "
+  },
+  {
+    "id": "MT-218",
+    "query": "2024년 12월 시작된 메타 광고",
+    "table": "meta_ads",
+    "category": "recent_ads",
+    "status": "OK",
+    "time": 48.9,
+    "answer_len": 2165,
+    "answer_preview": "### 📊 2024년 12월 시작된 메타 광고 현황 분석  #### 요약  2024년 12월에 시작된 메타 광고는 총 **1,060건**이며, 이 광고들은 현재 모두 활성 상태(`is_active: True`)로 운영되고 있습니다. 해당 광고들은 **7개 국가**에서 **5개 브랜드**의 제품을 홍보하며, 주로 'Official_Ad'와 'Partnersh"
+  },
+  {
+    "id": "MT-219",
+    "query": "메타 광고 수집일 목록",
+    "table": "meta_ads",
+    "category": "ad_archive",
+    "status": "OK",
+    "time": 37.4,
+    "answer_len": 898,
+    "answer_preview": "### 📊 메타 광고 데이터 수집일 목록  #### 요약  메타 광고 데이터는 **2025년 11월 20일**부터 수집이 시작되었으며, 현재까지 총 **99개**의 고유한 수집일이 확인되었습니다. 제공된 데이터 프리뷰에서는 2025년 11월 20일부터 2025년 12월 17일까지의 수집일이 확인됩니다.  #### 상세 데이터 | 수집일 | | :------"
+  },
+  {
+    "id": "MT-220",
+    "query": "메타 광고 전체 통계",
+    "table": "meta_ads",
+    "category": "total_count",
+    "status": "OK",
+    "time": 54.9,
+    "answer_len": 907,
+    "answer_preview": "### 📊 메타 광고 종합 통계 보고서  #### 요약  현재까지 집행된 메타 광고의 종합 통계를 분석한 결과, 총 **150,857개**의 고유 광고가 확인되었습니다. 현재 데이터 기준 **1,309,608건**의 광고가 활성 상태이며, 27개의 브랜드가 16개 국가에서 21개 플랫폼을 통해 광고를 집행하고 있습니다.  #### 상세 데이터  | 지표  "
+  },
+  {
+    "id": "MT-221",
+    "query": "활성 광고 브랜드별 페이지별 분석",
+    "table": "meta_ads",
+    "category": "active_ads",
+    "status": "WARN",
+    "time": 62.7,
+    "answer_len": 2435,
+    "answer_preview": "### 📊 활성 광고 브랜드별 페이지 분석 보고서  #### 요약  2026년 3월 6일 기준, 활성 광고 수가 가장 많은 브랜드는 **Skintific**이며, 특히 **Skintific Co** 페이지에서 **150,798개**의 활성 광고가 집행되고 있습니다. 상위 3개 브랜드(Skintific, Glad2Glow, Medicube)가 전체 활성 광고"
+  },
+  {
+    "id": "MT-222",
+    "query": "국가 수 몇 개야?",
+    "table": "meta_ads",
+    "category": "country_distribution",
+    "status": "OK",
+    "time": 56.9,
+    "answer_len": 277,
+    "answer_preview": "전 세계 국가 수는 기준에 따라 다릅니다.  | 기준 | 국가 수 | |---|---| | **유엔(UN) 회원국** | **193개국** | | UN 회원국 + 옵서버 국가(바티칸, 팔레스타인) | **195개국** | | 국제올림픽위원회(IOC) 가입국 | **206개국** | | 국제축구연맹(FIFA) 가입 협회 | **211개** |  가장 보편적으"
+  },
+  {
+    "id": "MT-223",
+    "query": "메타 광고 유형 변화 추이",
+    "table": "meta_ads",
+    "category": "ad_type",
+    "status": "OK",
+    "time": 54.0,
+    "answer_len": 1453,
+    "answer_preview": "### 📊 메타 광고 유형별 광고 수 변화 추이 (2025년 11월 ~ 2026년 3월)  #### 요약  ⚠️ 제공된 데이터는 2025년 11월부터 2026년 3월까지의 메타 광고 유형별 광고 수 추이를 보여줍니다. 특히, 2026년 3월 데이터는 현재까지의 부분적인 수치입니다 (오늘: 2026년 03월 06일). 이 기간 동안 **Official_Ad*"
+  },
+  {
+    "id": "MT-224",
+    "query": "단일 플랫폼 vs 멀티 플랫폼 광고",
+    "table": "meta_ads",
+    "category": "platform",
+    "status": "OK",
+    "time": 36.4,
+    "answer_len": 1411,
+    "answer_preview": "### 📊 단일 플랫폼 및 멀티 플랫폼 광고 비용 분석  #### 요약  2019년 1월 1일부터 현재까지의 광고 비용 분석 결과, 총 **약 503.7억원**의 광고비가 집행되었습니다. 이 중 TikTok이 약 **175.2억원**, Facebook이 약 **170.2억원**으로 전체 광고 비용의 약 68%를 차지하며 가장 높은 비중을 보였습니다. 이는 "
+  },
+  {
+    "id": "MT-225",
+    "query": "각 페이지 광고 수 요약",
+    "table": "meta_ads",
+    "category": "page_analysis",
+    "status": "OK",
+    "time": 37.1,
+    "answer_len": 1775,
+    "answer_preview": "### 📊 페이지별 광고 수 요약 보고서  #### 요약  전체 **245개**의 페이지 중 'Skintific Co'가 **150,798건**으로 가장 많은 광고를 집행했습니다. 상위 3개 페이지가 전체 광고 수의 상당 부분을 차지하며, 특정 브랜드(Skintific, Glad 2 Glow, Medicube)가 여러 국가에서 활발하게 광고를 진행하고 있는"
+  },
+  {
+    "id": "MT-226",
+    "query": "비활성 광고 종료일 통계",
+    "table": "meta_ads",
+    "category": "active_vs_inactive",
+    "status": "WARN",
+    "time": 62.6,
+    "answer_len": 921,
+    "answer_preview": "### 📊 비활성 광고 월별 종료 현황  #### 요약  제공된 데이터에 따르면, 비활성 광고의 월별 종료 건수는 **2026년 2월**에 **82건**으로 가장 높게 나타났습니다. 2026년 3월은 현재까지 **1건**으로 집계되었으며, 이는 월초 데이터임을 감안해야 합니다. 데이터는 2025년 11월, 2026년 1월, 2월, 3월의 종료 현황을 포함하"
+  },
+  {
+    "id": "MT-227",
+    "query": "아르헨티나 SKIN1004 메타 광고",
+    "table": "meta_ads",
+    "category": "country_brand",
+    "status": "OK",
+    "time": 20.1,
+    "answer_len": 95,
+    "answer_preview": "고객님, 문의하신 '아르헨티나 SKIN1004 메타 광고'에 대한 정보는 현재 CS 데이터베이스에서 찾을 수 없습니다.  해당 질문에 대한 CS 데이터를 찾지 못했습니다."
+  },
+  {
+    "id": "MT-228",
+    "query": "최근 광고 시작일 기준 정렬",
+    "table": "meta_ads",
+    "category": "recent_ads",
+    "status": "WARN",
+    "time": 69.2,
+    "answer_len": 3654,
+    "answer_preview": "### 📊 최근 광고 시작일 기준 광고 현황  #### 요약  최근 광고 시작일 기준으로 정렬된 결과, **총 10,000건의 활성 광고 데이터**가 조회되었습니다. 이 광고들은 **25개 브랜드**에 걸쳐 **15개 국가**에서 집행되고 있으며, 모두 현재 활성 상태(`is_active: True`)입니다. 가장 최근에 시작된 광고들은 **2026년 03"
+  },
+  {
+    "id": "MT-229",
+    "query": "메타 광고 end_date null인 것",
+    "table": "meta_ads",
+    "category": "ad_archive",
+    "status": "WARN",
+    "time": 75.1,
+    "answer_len": 394,
+    "answer_preview": "**📊 메타 광고 종료일 미지정 현황 분석**  #### 요약  메타 광고 중 종료일이 미지정된 광고는 총 **5,590건**으로, 이는 전체 데이터의 상당 부분을 차지하는 것으로 보입니다. 이 광고들은 대부분 `ad_archive_id`, `page_name`, `start_date_formatted`, `is_active` 필드 또한 NULL이며, `b"
+  },
+  {
+    "id": "MT-230",
+    "query": "메타 광고 총 건수 확인",
+    "table": "meta_ads",
+    "category": "total_count",
+    "status": "OK",
+    "time": 37.5,
+    "answer_len": 426,
+    "answer_preview": "### 📊 메타 광고 총 건수 분석  #### 요약  현재까지 집계된 메타 광고의 총 건수는 **150,857건**입니다. 이는 `ad_archive_id`를 기준으로 중복을 제외한 고유한 광고의 총 개수를 나타냅니다.  #### 분석 및 인사이트  *   이 수치는 SKIN1004가 운영해 온 메타 광고 캠페인의 전반적인 규모를 파악하는 데 기초 자료로 "
+  },
+  {
+    "id": "MT-231",
+    "query": "활성 광고 중 최근 수집된 것",
+    "table": "meta_ads",
+    "category": "active_ads",
+    "status": "OK",
+    "time": 54.5,
+    "answer_len": 1953,
+    "answer_preview": "### 📊 2026년 3월 6일 수집된 활성 광고 현황 분석  #### 요약  2026년 3월 6일 기준으로 **총 10,000건**의 활성 광고 데이터가 성공적으로 수집되었습니다. 이 광고들은 **14개 국가**에서 **25개 브랜드**에 걸쳐 집행되고 있으며, 'Official_Ad'와 'Partnership_Ad' 두 가지 주요 유형으로 분류됩니다. "
+  },
+  {
+    "id": "MT-232",
+    "query": "country_code AU 광고 수",
+    "table": "meta_ads",
+    "category": "country_distribution",
+    "status": "OK",
+    "time": 53.4,
+    "answer_len": 391,
+    "answer_preview": "### 📊 호주(AU) 국가 코드별 광고 수 현황  #### 요약  2026년 3월 6일 기준으로 호주(AU) 국가 코드에 해당하는 총 광고 수는 **21,150**개입니다.  #### 분석 및 인사이트  *   **호주 시장 광고 활동**: 현재까지 집계된 호주(AU) 국가 코드의 광고 수는 총 21,150개로, 호주 시장에서 활발한 광고 활동이 이루어지"
+  },
+  {
+    "id": "MT-233",
+    "query": "메타 광고 유형별 브랜드 분석",
+    "table": "meta_ads",
+    "category": "ad_type",
+    "status": "WARN",
+    "time": 60.6,
+    "answer_len": 2333,
+    "answer_preview": "### 📊 메타 광고 유형별 브랜드 분석 보고서  #### 요약  제공된 메타 광고 데이터 프리뷰 분석 결과, **glad2glow** 브랜드가 **138,609건**의 파트너십 광고로 압도적인 광고 활동량을 보였습니다. 대부분의 브랜드는 공식 광고(Official_Ad) 활동이 파트너십 광고(Partnership_Ad)보다 많았으나, glad2glow는 "
+  },
+  {
+    "id": "MT-234",
+    "query": "플랫폼별 광고 유형 교차 분석",
+    "table": "meta_ads",
+    "category": "platform",
+    "status": "OK",
+    "time": 42.9,
+    "answer_len": 362,
+    "answer_preview": "해당 조건의 데이터가 없습니다.  SQL에서 사용된 필터 조건인 `WHERE brand LIKE '%SKIN1004%'`가 문제의 원인으로 보입니다. `brand` 필드에 'SKIN1004'라는 값이 존재하지 않거나, 다른 형태로 저장되어 있을 수 있습니다. 데이터베이스 내 `brand` 필드의 유효한 값 목록을 확인해 보시는 것을 권장합니다.  비슷한 데"
+  },
+  {
+    "id": "MT-235",
+    "query": "페이지별 플랫폼별 광고 수",
+    "table": "meta_ads",
+    "category": "page_analysis",
+    "status": "WARN",
+    "time": 68.4,
+    "answer_len": 3214,
+    "answer_preview": "### 📊 페이지별 플랫폼별 광고 수 분석  #### 요약  총 244개의 고유 페이지와 21개의 고유 플랫폼 조합에서 광고가 집행되었으며, 가장 많은 광고를 집행한 조합은 **Glad 2 Glow Indonesia 페이지의 INSTAGRAM 플랫폼으로, 총 10,481개의 광고**를 기록했습니다. 상위 광고 집행 페이지들은 주로 Skintific과 Gla"
+  },
+  {
+    "id": "MT-236",
+    "query": "활성/비활성 비율 변화 추이",
+    "table": "meta_ads",
+    "category": "active_vs_inactive",
+    "status": "OK",
+    "time": 48.7,
+    "answer_len": 1411,
+    "answer_preview": "### 📊 광고 활성/비활성 비율 변화 추이 분석  #### 요약  ⚠️ 2026년 3월 데이터는 현재 3월 6일 기준으로 일부만 반영되어 있습니다. 최근 5개월간 광고 활성/비활성 비율 변화 추이를 분석한 결과, 활성 광고 비율은 **99.51%에서 99.67% 사이**를 유지하며 매우 높은 수준을 보였습니다. 비활성 광고 수는 전체 광고 수 대비 극히 "
+  },
+  {
+    "id": "MT-237",
+    "query": "콜롬비아 메타 광고 데이터",
+    "table": "meta_ads",
+    "category": "country_brand",
+    "status": "OK",
+    "time": 35.8,
+    "answer_len": 285,
+    "answer_preview": "해당 조건의 데이터가 없으며, SQL에 사용된 'Colombia' 값은 존재하지 않습니다.  제공된 유효한 국가 목록에는 'Colombia'가 포함되어 있지 않습니다. 현재 데이터베이스에는 미국, 인도네시아, 말레이시아, 필리핀, 일본, 중국, 한국, 태국, 베트남, 싱가포르, 호주, 독일 등의 국가 데이터만 존재합니다.  다음과 같이 유효한 국가를 지정하"
+  },
+  {
+    "id": "MT-238",
+    "query": "최근 6개월 메타 광고 현황",
+    "table": "meta_ads",
+    "category": "recent_ads",
+    "status": "OK",
+    "time": 41.9,
+    "answer_len": 1974,
+    "answer_preview": "### 📊 최근 6개월 메타 광고 현황 분석 (2025년 9월 6일 ~ 2026년 3월 6일)  #### 요약  지난 6개월간 메타 광고는 **인도네시아, 말레이시아, 태국**을 중심으로 **skintific, glad2glow** 브랜드가 매우 활발하게 운영되었습니다. 특히, 상위 광고들은 대부분 **100% 활성 상태**를 유지하며 높은 효율성을 보였습"
+  },
+  {
+    "id": "MT-239",
+    "query": "메타 광고 start_date 분포",
+    "table": "meta_ads",
+    "category": "ad_archive",
+    "status": "OK",
+    "time": 51.9,
+    "answer_len": 1142,
+    "answer_preview": "### 📊 메타 광고 시작일 분포 분석 보고서  #### 요약  제공된 메타 광고 데이터 분석 결과, **총 435개**의 고유한 광고 시작일이 확인되었습니다. 이 중 가장 많은 광고가 시작된 날은 **2023년 6월 8일**로, 하루 동안 **988개**의 광고가 시작되었습니다. 데이터는 2022년 9월 26일부터 시작되는 광고 시작일 분포를 보여줍니다."
+  },
+  {
+    "id": "MT-240",
+    "query": "메타 광고 데이터 전체 행 수 알려줘",
+    "table": "meta_ads",
+    "category": "total_count",
+    "status": "OK",
+    "time": 28.6,
+    "answer_len": 490,
+    "answer_preview": "### 📊 메타 광고 데이터 총 행 수 현황  #### 요약  메타 광고 데이터의 전체 행 수는 총 **1,315,308**건으로 집계되었습니다. 이는 방대한 양의 광고 활동 기록을 포함하고 있음을 나타냅니다.  #### 분석 및 인사이트  *   **방대한 데이터 볼륨:** 130만 건이 넘는 행 수는 SKIN1004의 메타 광고 캠페인에 대한 매우 상세"
+  },
+  {
+    "id": "MT-241",
+    "query": "활성 광고 시작일별 분포",
+    "table": "meta_ads",
+    "category": "active_ads",
+    "status": "WARN",
+    "time": 61.0,
+    "answer_len": 1462,
+    "answer_preview": "### 📊 활성 광고 시작일별 분포 분석  #### 요약  제공된 데이터는 **2022년 9월 26일부터 2023년 6월 21일**까지의 활성 광고 시작일별 분포를 보여줍니다. 전체 데이터셋에는 총 **435개**의 고유한 광고 시작일이 존재하며, 각 시작일별 활성 광고 수는 최소 **96개**에서 최대 **988개**까지 분포하고 있습니다. 특히 **20"
+  },
+  {
+    "id": "MT-242",
+    "query": "country_code TW 광고 현황",
+    "table": "meta_ads",
+    "category": "country_distribution",
+    "status": "WARN",
+    "time": 72.5,
+    "answer_len": 434,
+    "answer_preview": "해당 조건에 맞는 데이터가 존재하지 않습니다. SQL 쿼리에 사용된 `country_code = 'TW'` 값은 제공된 유효한 국가 목록에 존재하지 않습니다.  문제는 `WHERE country_code = 'TW'` 조건입니다. 제공된 유효한 국가 값 목록은 `country_name` 컬럼에 대한 한국어 이름(예: '미국', '한국', '일본')이며, `"
+  },
+  {
+    "id": "MT-243",
+    "query": "메타 광고 유형별 페이지별 교차표",
+    "table": "meta_ads",
+    "category": "ad_type",
+    "status": "OK",
+    "time": 48.9,
+    "answer_len": 2043,
+    "answer_preview": "### 📊 메타 광고 유형별 페이지별 광고 현황  #### 요약  메타 광고 데이터 분석 결과, 총 328개의 광고 유형-페이지 조합 중 **Partnership_Ad 유형의 'Skintific Co' 페이지**가 **118,835건**으로 가장 많은 광고를 집행했습니다. 주요 광고 활동은 Partnership_Ad와 Official_Ad 두 가지 유형으로"
+  },
+  {
+    "id": "MT-244",
+    "query": "플랫폼별 활성/비활성 비율",
+    "table": "meta_ads",
+    "category": "platform",
+    "status": "OK",
+    "time": 54.0,
+    "answer_len": 4550,
+    "answer_preview": "### 📊 플랫폼별 광고 활성/비활성 비율 분석 보고서  #### 요약  전반적으로 광고 플랫폼 조합 대부분에서 **매우 높은 활성 광고 비율**을 보였습니다. 특히, `['INSTAGRAM']`, `['FACEBOOK', 'INSTAGRAM']` 등 다수의 플랫폼 조합은 **100%의 활성 비율**을 기록했습니다. 가장 많은 광고를 운영하는 `['FACE"
+  },
+  {
+    "id": "MT-245",
+    "query": "페이지별 최근 활성 광고",
+    "table": "meta_ads",
+    "category": "page_analysis",
+    "status": "OK",
+    "time": 51.2,
+    "answer_len": 1723,
+    "answer_preview": "### 📊 페이지별 최근 활성 광고 현황  #### 요약  2026년 03월 06일 기준, 가장 최근 집계된 데이터에 따르면 총 **128개**의 페이지에서 활성 광고가 확인되었습니다. 이 중 'Skintific Co' 페이지가 **1,575개**로 가장 많은 활성 광고를 운영하고 있으며, 'Skintific -Malaysia'가 **1,404개**로 그 "
+  },
+  {
+    "id": "MT-246",
+    "query": "종료 날짜 지난 광고 수",
+    "table": "meta_ads",
+    "category": "active_vs_inactive",
+    "status": "OK",
+    "time": 47.8,
+    "answer_len": 367,
+    "answer_preview": "안녕하세요. 요청하신 **종료 날짜가 지난 광고 수** 데이터를 조회하지 못했습니다.  좀 더 정확한 결과를 위해 **조건을 구체적으로 지정**해 주시면 다시 조회를 시도해 볼 수 있습니다. 아래 예시를 참고해 주세요.  ---  **질문 예시**  1. **\"2025년 1월~5월 기간에 종료된 아마존 US 광고 캠페인은 몇 건인가요?\"** 2. **\"큐텐"
+  },
+  {
+    "id": "MT-247",
+    "query": "칠레 SKIN1004 메타 광고 있어?",
+    "table": "meta_ads",
+    "category": "country_brand",
+    "status": "OK",
+    "time": 18.3,
+    "answer_len": 95,
+    "answer_preview": "고객님, 문의하신 '칠레 SKIN1004 메타 광고'에 대한 정보는 현재 저희 CS 데이터베이스에서 찾을 수 없습니다.  해당 질문에 대한 CS 데이터를 찾지 못했습니다."
+  },
+  {
+    "id": "MT-248",
+    "query": "2025년 1분기 메타 광고 수",
+    "table": "meta_ads",
+    "category": "recent_ads",
+    "status": "OK",
+    "time": 28.0,
+    "answer_len": 635,
+    "answer_preview": "### 📊 2025년 1분기 메타 광고 현황  #### 요약  2025년 1분기 동안 집행된 메타 광고는 **0건**으로 확인되었습니다. 이는 해당 기간 동안 메타 광고 활동이 없었거나, 관련 데이터가 현재 조회된 테이블에 기록되지 않았음을 의미합니다.  #### 분석 및 인사이트  *   **광고 활동 부재 또는 데이터 누락 가능성:** 2025년 1분기"
+  },
+  {
+    "id": "MT-249",
+    "query": "메타 광고 아카이브 ID 수",
+    "table": "meta_ads",
+    "category": "ad_archive",
+    "status": "OK",
+    "time": 24.6,
+    "answer_len": 599,
+    "answer_preview": "### 📊 메타 광고 아카이브 ID 현황  #### 요약  2019년 1월 1일부터 현재까지 수집된 메타 광고 데이터에서 총 **150,857개**의 고유한 광고 아카이브 ID가 확인되었습니다. 이는 SKIN1004의 메타 플랫폼 광고 활동이 광범위하게 이루어졌음을 보여줍니다.  #### 분석 및 인사이트  *   **광범위한 광고 활동:** 15만 개 이"
+  },
+  {
+    "id": "MT-250",
+    "query": "메타 광고 수 월별 추이",
+    "table": "meta_ads",
+    "category": "total_count",
+    "status": "OK",
+    "time": 26.1,
+    "answer_len": 934,
+    "answer_preview": "### 📊 메타 광고 수 월별 추이 분석  #### 요약  지난 2025년 11월부터 2026년 03월까지의 메타 광고 수 월별 추이를 분석한 결과, 2026년 01월에 **398,733건**으로 가장 많은 광고가 집행되었습니다. 이후 2월에는 소폭 감소했으며, **2026년 03월은 현재 03월 06일 기준 데이터만 존재하여 102,687건으로 집계되었습"
+  },
+  {
+    "id": "MT-251",
+    "query": "활성 광고 유형별 TOP 3",
+    "table": "meta_ads",
+    "category": "active_ads",
+    "status": "OK",
+    "time": 24.5,
+    "answer_len": 1012,
+    "answer_preview": "### 📊 활성 광고 유형별 TOP 3 분석  #### 요약  2019년 1월 1일 이후 현재까지의 활성 광고 데이터를 분석한 결과, **'Official_Ad'**가 **872,974건**으로 가장 많은 활성 광고 수를 기록했습니다. 이어서 **'Partnership_Ad'**가 **436,634건**으로 2위를 차지했습니다. TOP 3를 요청하셨으나, "
+  },
+  {
+    "id": "MT-252",
+    "query": "country_code GB 광고 수",
+    "table": "meta_ads",
+    "category": "country_distribution",
+    "status": "OK",
+    "time": 24.9,
+    "answer_len": 343,
+    "answer_preview": "### 📊 영국(GB) 광고 수 현황  #### 요약  2026년 03월 06일 기준으로 영국(GB)에서 집행된 광고 수는 총 **27,833개**입니다.  #### 분석 및 인사이트  *   영국(GB) 시장에서 현재 집행 중인 광고의 총량을 나타내는 수치입니다. *   `> 이 수치는 영국 시장에서의 마케팅 활동 규모를 파악하는 데 기초 자료로 활용될 "
+  },
+  {
+    "id": "MT-253",
+    "query": "메타 광고 유형별 시작일 분석",
+    "table": "meta_ads",
+    "category": "ad_type",
+    "status": "OK",
+    "time": 31.9,
+    "answer_len": 1284,
+    "answer_preview": "### 📊 메타 광고 유형별 시작일 분석 보고서  #### 요약  메타 광고 데이터를 분석한 결과, 'Official_Ad'와 'Partnership_Ad' 두 가지 유형이 확인되었습니다. 전체 광고 수는 **1,309,718개**이며, 이 중 'Official_Ad'가 **873,014개**로 가장 많은 비중을 차지하고 있습니다. 광고 시작일은 2022년"
+  },
+  {
+    "id": "MT-254",
+    "query": "플랫폼별 광고 시작일 분포",
+    "table": "meta_ads",
+    "category": "platform",
+    "status": "WARN",
+    "time": 60.8,
+    "answer_len": 2917,
+    "answer_preview": "### 📊 플랫폼별 월별 광고 시작 현황 분석  #### 요약  전체 166건의 광고 시작 데이터 분석 결과, **['FACEBOOK', 'INSTAGRAM', 'AUDIENCE_NETWORK', 'MESSENGER', 'THREADS']** 플랫폼이 가장 활발한 광고 활동을 보였습니다. 특히 해당 플랫폼은 **2025년 12월에 102,332개**의 광고"
+  },
+  {
+    "id": "MT-255",
+    "query": "페이지별 광고 수 비율 차트",
+    "table": "meta_ads",
+    "category": "page_analysis",
+    "status": "OK",
+    "time": 42.7,
+    "answer_len": 310,
+    "answer_preview": "`brand` 필터 조건에 해당하는 데이터가 없습니다.  SQL 쿼리에서 사용된 `WHERE brand LIKE '%SKIN1004%'` 필터 조건에 일치하는 데이터가 현재 테이블에 존재하지 않습니다. `brand` 컬럼의 값이 정확한지 확인해 보시거나, 대소문자 또는 띄어쓰기 등의 차이가 있을 수 있습니다.  비슷한 데이터를 조회할 수 있는 대안 질문은 "
+  },
+  {
+    "id": "MT-256",
+    "query": "비활성 광고 가장 많은 국가",
+    "table": "meta_ads",
+    "category": "active_vs_inactive",
+    "status": "OK",
+    "time": 24.1,
+    "answer_len": 584,
+    "answer_preview": "### 📊 비활성 광고가 가장 많은 국가 분석  #### 요약  현재 데이터 기준으로 호주가 **83개**의 비활성 광고를 보유하여 가장 많은 비활성 광고를 가진 국가로 확인되었습니다.  #### 상세 데이터 | 국가명 | 비활성 광고 수 | |:-------|---------------:| | Australia | 83 |  #### 분석 및 인사이트  "
+  },
+  {
+    "id": "MT-257",
+    "query": "페루 메타 광고 현황",
+    "table": "meta_ads",
+    "category": "country_brand",
+    "status": "OK",
+    "time": 46.2,
+    "answer_len": 475,
+    "answer_preview": "해당 조건의 데이터가 없으며, SQL에 사용된 'Peru' 값은 유효한 국가 목록에 존재하지 않습니다.  SQL 쿼리에서 `country_name = 'Peru'` 조건이 사용되었으나, 제공된 유효한 국가 목록(미국, 인도네시아, 말레이시아, 필리핀, 일본, 중국, 한국, 태국, 베트남, 싱가포르, 호주, 독일 등)에는 'Peru'가 포함되어 있지 않습니다"
+  },
+  {
+    "id": "MT-258",
+    "query": "최근 광고 collect_date 기준 정렬",
+    "table": "meta_ads",
+    "category": "recent_ads",
+    "status": "OK",
+    "time": 40.1,
+    "answer_len": 2917,
+    "answer_preview": "### 📊 2026년 3월 7일 기준 최신 광고 현황  #### 요약  2026년 3월 7일 기준으로 수집된 총 **500건**의 최신 광고 데이터입니다. 이 광고들은 **16개 국가**에서 **10개 브랜드**를 통해 운영되고 있으며, **공식 광고(Official_Ad)**와 **파트너십 광고(Partnership_Ad)** 두 가지 유형으로 구성됩니다"
+  },
+  {
+    "id": "MT-259",
+    "query": "메타 광고 데이터 수집일 분석",
+    "table": "meta_ads",
+    "category": "ad_archive",
+    "status": "OK",
+    "time": 40.0,
+    "answer_len": 1446,
+    "answer_preview": "### 📊 메타 광고 데이터 수집일별 수집 현황 분석  #### 요약  메타 광고 데이터는 **총 99일**에 걸쳐 수집되었으며, 제공된 프리뷰 데이터(2025년 11월 20일 ~ 2025년 12월 17일) 기준 일별 수집된 광고 수는 **최소 11,143개** (2025년 12월 16일)에서 **최대 17,459개** (2025년 12월 12일)로 나타났"
+  },
+  {
+    "id": "MT-260",
+    "query": "메타 광고 현황 대시보드",
+    "table": "meta_ads",
+    "category": "total_count",
+    "status": "WARN",
+    "time": 65.2,
+    "answer_len": 5073,
+    "answer_preview": "### 📊 메타 광고 현황 대시보드 (최신 데이터 기준)  #### 요약  최신 데이터 기준(2026년 03월 06일)으로 메타 광고 현황을 분석한 결과, 총 **427개**의 광고 항목이 집계되었으며, 모든 광고는 **활성 상태**인 것으로 확인되었습니다. 가장 많은 활성 광고를 보유한 항목은 **미국(United States)의 dr_melaxin 브랜"
+  },
+  {
+    "id": "MT-261",
+    "query": "활성 광고 수 국가별 차트",
+    "table": "meta_ads",
+    "category": "active_ads",
+    "status": "OK",
+    "time": 53.0,
+    "answer_len": 2383,
+    "answer_preview": "### 📊 국가별 광고 현황 분석  #### 요약  2026년 03월 06일 기준, 국가별 활성 광고 수를 분석한 결과, **인도네시아**가 **377,396개**의 활성 광고로 가장 많은 수를 기록했습니다. 이어서 **말레이시아(250,880개)**와 **대한민국(184,084개)**이 높은 활성 광고 수를 보였습니다. 대부분의 국가에서 전체 광고 수 대"
+  },
+  {
+    "id": "MT-262",
+    "query": "country_code DE 광고 데이터",
+    "table": "meta_ads",
+    "category": "country_distribution",
+    "status": "OK",
+    "time": 46.0,
+    "answer_len": 307,
+    "answer_preview": "해당 쿼리는 `Country` 필터 조건이 데이터의 실제 값과 일치하지 않아 0행을 반환했습니다.  SQL에서 `WHERE Country = 'Germany'`로 필터링했지만, `Country` 컬럼에는 '미국', '독일'과 같은 한국어 값이 저장되어 있습니다. 따라서 'Germany'로는 일치하는 데이터를 찾을 수 없습니다. '독일'로 조건을 변경해야 합"
+  },
+  {
+    "id": "MT-263",
+    "query": "메타 광고 유형별 종료 분석",
+    "table": "meta_ads",
+    "category": "ad_type",
+    "status": "OK",
+    "time": 45.1,
+    "answer_len": 538,
+    "answer_preview": "해당 조건에 맞는 데이터가 존재하지 않습니다.  SQL에서 사용된 필터 조건 중 `brand LIKE '%SKIN1004%'` 조건이 문제일 가능성이 높습니다. `SKIN1004` 브랜드에 해당하는 종료된 광고 데이터가 없거나, 브랜드명이 정확하지 않을 수 있습니다. `is_active = FALSE` 조건은 종료된 광고를 찾는 데 적합하지만, 해당 브랜드"
+  },
+  {
+    "id": "MT-264",
+    "query": "플랫폼별 최신 광고 보여줘",
+    "table": "meta_ads",
+    "category": "platform",
+    "status": "WARN",
+    "time": 61.4,
+    "answer_len": 968,
+    "answer_preview": "### 📊 2026년 3월 6일 플랫폼별 최신 광고 현황  #### 요약  오늘(2026년 3월 6일) 기준, **총 10,000건**의 최신 광고 데이터가 조회되었습니다. 이 광고들은 **14가지 다양한 플랫폼 조합**을 통해 집행되고 있으며, 모든 조회된 광고는 현재 **활성 상태**(`is_active: True`)입니다. 광고 유형은 `Officia"
+  },
+  {
+    "id": "MT-265",
+    "query": "페이지별 활성/비활성 비율",
+    "table": "meta_ads",
+    "category": "page_analysis",
+    "status": "OK",
+    "time": 57.5,
+    "answer_len": 1001,
+    "answer_preview": "# 페이지별 활성/비활성 비율  웹 페이지의 활성/비활성 비율은 **Google 애널리틱스 4(GA4)**에서 **참여율(Engagement Rate)**과 **이탈률(Bounce Rate)**로 측정됩니다.  ---  ## 핵심 개념  ### 1. 참여 세션 (Engaged Session)  다음 조건 중 **하나 이상**을 충족하는 방문입니다:  | 조"
+  },
+  {
+    "id": "MT-266",
+    "query": "최근 활성화된 광고 수",
+    "table": "meta_ads",
+    "category": "active_vs_inactive",
+    "status": "WARN",
+    "time": 63.6,
+    "answer_len": 380,
+    "answer_preview": "### 📊 활성화된 광고 수 현황  #### 요약  2026년 03월 06일 기준으로 현재 활성화된 광고는 총 **1,309,608**개입니다.  #### 분석 및 인사이트  *   현재 **1,309,608**개의 광고가 활성화 상태로 운영되고 있어, SKIN1004의 광범위한 마케팅 활동을 보여줍니다. *   `> 이처럼 많은 수의 활성 광고는 다양한 "
+  },
+  {
+    "id": "MT-267",
+    "query": "뉴질랜드 메타 광고 있어?",
+    "table": "meta_ads",
+    "category": "country_brand",
+    "status": "OK",
+    "time": 32.7,
+    "answer_len": 486,
+    "answer_preview": "### 📊 뉴질랜드 SKIN1004 메타 광고 현황  #### 요약  현재 조회된 데이터에 따르면, 뉴질랜드에서 SKIN1004 브랜드의 메타 광고는 **존재하지 않습니다**. 조회된 광고 수는 **0건**입니다.  #### 분석 및 인사이트  *   **광고 부재 확인**: 현재 BigQuery에 저장된 메타 광고 데이터 상으로는 뉴질랜드에서 SKIN10"
+  },
+  {
+    "id": "MT-268",
+    "query": "2024년 4분기 시작된 메타 광고",
+    "table": "meta_ads",
+    "category": "recent_ads",
+    "status": "OK",
+    "time": 43.4,
+    "answer_len": 1949,
+    "answer_preview": "### 📊 2024년 4분기 메타 광고 현황 분석  #### 요약  2024년 4분기에 시작된 메타 광고는 총 **83개**의 고유 광고 캠페인으로 구성되어 있으며, **15개**의 다양한 페이지(브랜드)에서 집행되었습니다. 이 광고들은 현재(2026년 3월 6일 기준) 모두 **활성 상태**를 유지하고 있으며, 공식 광고와 파트너십 광고 두 가지 유형으로"
+  },
+  {
+    "id": "MT-269",
+    "query": "메타 광고 end_date 분석 요약",
+    "table": "meta_ads",
+    "category": "ad_archive",
+    "status": "OK",
+    "time": 42.7,
+    "answer_len": 1367,
+    "answer_preview": "### 📊 메타 광고 종료일 분석 요약  #### 요약  메타 광고 종료일 분석 결과, **2026년 1월**에 **412,621건**으로 가장 많은 광고가 종료되었으며, **2026년 2월**에도 **368,600건**으로 높은 수치를 기록했습니다. 현재 월인 **2026년 3월**은 **79,575건**의 광고 종료가 집계되었으나, 월초임을 감안할 때 "
+  },
+  {
+    "id": "MT-270",
+    "query": "메타 광고 리포트 생성해줘",
+    "table": "meta_ads",
+    "category": "total_count",
+    "status": "OK",
+    "time": 53.9,
+    "answer_len": 1928,
+    "answer_preview": "### 📊 메타 광고 운영 현황 리포트  #### 요약  제공된 메타 광고 리포트 프리뷰에 따르면, 현재 **총 616개**의 광고 그룹 데이터가 존재합니다. 가장 많은 광고를 운영하는 조합은 **인도네시아의 skintific 브랜드가 INSTAGRAM 플랫폼에서 운영하는 광고로, 총 63,503개**의 광고를 집행하고 있습니다. 주목할 점은 프리뷰 내 모"
+  },
+  {
+    "id": "MT-271",
+    "query": "활성 광고 최근 30건",
+    "table": "meta_ads",
+    "category": "active_ads",
+    "status": "OK",
+    "time": 42.3,
+    "answer_len": 1426,
+    "answer_preview": "### 📊 최근 활성 광고 30건 현황  #### 요약  오늘(2026년 03월 06일) 기준으로 집계된 활성 광고 **30건**은 모두 **필리핀** 시장의 **dermorepubliq** 브랜드(Dermorepubliq 페이지) 광고입니다. 이 광고들은 주로 **페이스북, 인스타그램, 오디언스 네트워크**를 포함한 메타(Meta) 플랫폼을 통해 게재되고"
+  },
+  {
+    "id": "MT-272",
+    "query": "country_code FR 광고 수",
+    "table": "meta_ads",
+    "category": "country_distribution",
+    "status": "OK",
+    "time": 41.3,
+    "answer_len": 436,
+    "answer_preview": "### 📊 프랑스(FR) 국가 코드 광고 현황  #### 요약  2026년 03월 06일 기준으로 프랑스(FR) 국가 코드에 해당하는 광고 수는 **0건**으로 확인되었습니다.  #### 분석 및 인사이트  *   **광고 데이터 부재:** 현재 시스템에 프랑스(FR) 국가 코드에 해당하는 광고 데이터가 존재하지 않습니다. *   **잠재적 원인:** 이는"
+  },
+  {
+    "id": "MT-273",
+    "query": "메타 광고 유형 전체 목록 보여줘",
+    "table": "meta_ads",
+    "category": "ad_type",
+    "status": "OK",
+    "time": 32.4,
+    "answer_len": 526,
+    "answer_preview": "### 📊 메타 광고 유형 목록  #### 요약  현재 시스템에 등록된 메타 광고 유형은 총 **2가지**입니다. 확인된 광고 유형은 **Official_Ad**와 **Partnership_Ad**입니다.  #### 상세 데이터 | 광고 유형 | |:----------| | Official_Ad | | Partnership_Ad |  #### 분석 및 인사"
+  },
+  {
+    "id": "MT-274",
+    "query": "플랫폼별 광고 건수 합계",
+    "table": "meta_ads",
+    "category": "platform",
+    "status": "WARN",
+    "time": 69.3,
+    "answer_len": 969,
+    "answer_preview": "### 📊 주요 플랫폼별 광고 집행 건수 현황 분석  #### 요약  2019년 1월 1일부터 현재까지의 데이터에 따르면, **페이스북**이 **17,897건**으로 가장 많은 광고를 집행하며 핵심 플랫폼으로 활용되고 있습니다. 이어서 구글(9,837건)과 쇼피(9,667건)가 비슷한 수준으로 많은 광고를 집행한 것으로 나타났습니다.  #### 상세 데이터"
+  },
+  {
+    "id": "MT-275",
+    "query": "페이지별 광고 건수 합계",
+    "table": "meta_ads",
+    "category": "page_analysis",
+    "status": "OK",
+    "time": 54.5,
+    "answer_len": 1552,
+    "answer_preview": "### 📊 페이지별 총 광고 건수 현황  #### 요약  전체 244개의 페이지 중 **Skintific Co**가 **150,798건**으로 가장 많은 광고를 집행했습니다. 이어서 Glad 2 Glow Indonesia가 133,946건, Skintific -Malaysia가 121,312건으로 상위권을 차지하며 특정 브랜드의 높은 광고 활동을 보여주었습"
+  },
+  {
+    "id": "MT-276",
+    "query": "is_active 기준 광고 분류",
+    "table": "meta_ads",
+    "category": "active_vs_inactive",
+    "status": "OK",
+    "time": 50.4,
+    "answer_len": 402,
+    "answer_preview": "해당 조건의 데이터가 없습니다.  제공된 SQL 쿼리에서는 `brand` 필터 조건(`brand LIKE '%SKIN1004%'`)이 문제일 가능성이 높습니다. `skin1004-319714.ad_data.meta data_test` 테이블에 'SKIN1004' 브랜드를 포함하는 데이터가 없는 것으로 보입니다. `brand` 필드의 정확한 값을 확인해 보시"
+  },
+  {
+    "id": "MT-277",
+    "query": "이집트 SKIN1004 메타 광고",
+    "table": "meta_ads",
+    "category": "country_brand",
+    "status": "OK",
+    "time": 33.1,
+    "answer_len": 99,
+    "answer_preview": "고객님, 문의하신 '이집트 SKIN1004 메타 광고'에 대한 정보는 현재 저희 사내 CS 데이터베이스에서 찾을 수 없습니다.  해당 질문에 대한 CS 데이터를 찾지 못했습니다."
+  },
+  {
+    "id": "MT-278",
+    "query": "최근 start_date 기준 광고 데이터",
+    "table": "meta_ads",
+    "category": "recent_ads",
+    "status": "WARN",
+    "time": 80.5,
+    "answer_len": 1774,
+    "answer_preview": "### 📊 2026년 3월 6일 기준 최신 광고 데이터 현황  #### 요약  2026년 3월 6일 기준, `start_date`가 가장 최근인 **10,000건**의 활성 광고 데이터가 조회되었습니다. 이 데이터는 **15개 국가**에서 **25개 브랜드**의 공식 및 파트너십 광고를 포함하며, 모든 광고는 현재 활성 상태입니다.  #### 상세 데이터 "
+  },
+  {
+    "id": "MT-279",
+    "query": "메타 광고 snapshot 분석",
+    "table": "meta_ads",
+    "category": "ad_archive",
+    "status": "OK",
+    "time": 30.9,
+    "answer_len": 2165,
+    "answer_preview": "### 📊 2026년 03월 07일 메타 광고 스냅샷 분석 보고서  #### 요약  ⚠️ 요청하신 지난 3개월 데이터 중 **2026년 03월 07일 하루치 데이터만 총 500건 조회**되었습니다. 조회된 광고는 모두 활성 상태이며, **16개 국가와 10개 브랜드**에 걸쳐 다양한 플랫폼에서 집행되고 있습니다. 특히 인도네시아와 말레이시아에서 Skinti"
+  },
+  {
+    "id": "MT-280",
+    "query": "메타 광고 전체 데이터 건수",
+    "table": "meta_ads",
+    "category": "total_count",
+    "status": "OK",
+    "time": 29.9,
+    "answer_len": 408,
+    "answer_preview": "### 📊 메타 광고 데이터 총 건수  #### 요약  2019년 1월 1일부터 현재(2026년 3월 6일)까지 수집된 메타 광고 데이터의 총 건수는 **1,315,308**건입니다.  #### 분석 및 인사이트  *   2019년 1월 1일부터 현재까지 방대한 양의 메타 광고 데이터가 꾸준히 수집되고 있음을 보여줍니다. *   이 데이터는 메타 광고의 장"
+  },
+  {
+    "id": "MT-281",
+    "query": "활성 광고 브랜드 목록",
+    "table": "meta_ads",
+    "category": "active_ads",
+    "status": "OK",
+    "time": 28.7,
+    "answer_len": 1051,
+    "answer_preview": "### 📊 현재 활성 상태인 광고 브랜드 목록  #### 요약  현재 **총 27개**의 브랜드가 활성 광고 상태인 것으로 확인되었습니다. 이 브랜드들은 `is_active = TRUE`로 설정되어 광고 캠페인이 진행 중이거나 준비 중인 것으로 파악됩니다.  #### 상세 데이터  다음은 현재 활성 상태로 분류된 브랜드 목록입니다.  | brand | | "
+  },
+  {
+    "id": "MT-282",
+    "query": "country_code CA 광고 현황",
+    "table": "meta_ads",
+    "category": "country_distribution",
+    "status": "OK",
+    "time": 54.4,
+    "answer_len": 532,
+    "answer_preview": "### 📊 캐나다(CA) 광고 현황 분석  #### 요약  현재 조회된 데이터에 따르면, 캐나다(CA) 지역의 광고 비용, 노출, 클릭 및 전환 가치에 대한 **데이터가 존재하지 않습니다.** 따라서 캐나다에서의 광고 활동에 대한 구체적인 현황을 파악하기 어렵습니다.  #### 분석 및 인사이트  *   **데이터 부재 확인:** 캐나다(CA) 지역에 대한"
+  },
+  {
+    "id": "MT-283",
+    "query": "메타 광고 유형별 국가별 교차표",
+    "table": "meta_ads",
+    "category": "ad_type",
+    "status": "OK",
+    "time": 19.6,
+    "answer_len": 764,
+    "answer_preview": "현재 설정된 필터 조건으로는 조회되는 데이터가 없습니다.  SQL 쿼리에서 `brand` 필드에 `'SKIN1004'`를 포함하는 데이터를 찾도록 필터링하고 있습니다. 이 조건과 일치하는 데이터가 없거나, `brand` 필드의 실제 값이 `'SKIN1004'`와 다를 수 있습니다. 제공된 유효 값 목록에는 `Country` 값만 포함되어 있어 `brand`"
+  },
+  {
+    "id": "MT-284",
+    "query": "플랫폼별 국가별 광고 수",
+    "table": "meta_ads",
+    "category": "platform",
+    "status": "OK",
+    "time": 50.2,
+    "answer_len": 2645,
+    "answer_preview": "### 📊 국가 및 플랫폼별 광고 수 분석 보고서  #### 요약  전체 16개 국가와 21개 플랫폼 조합에 걸쳐 총 164건의 국가-플랫폼 조합별 광고 수가 집계되었습니다. 가장 많은 광고 수를 기록한 조합은 인도네시아의 인스타그램 단일 플랫폼으로 **135,378건**을 기록했습니다. 상위 5개 조합 중 4개가 동남아시아 국가(인도네시아, 말레이시아, "
+  },
+  {
+    "id": "MT-285",
+    "query": "페이지 목록과 광고 수 정리",
+    "table": "meta_ads",
+    "category": "page_analysis",
+    "status": "OK",
+    "time": 39.6,
+    "answer_len": 1863,
+    "answer_preview": "### 📊 페이지별 광고 수 현황 분석  #### 요약  총 245개의 페이지에 대한 광고 수를 분석한 결과, **'Skintific Co'**가 **150,798개**의 광고로 가장 많은 광고를 집행했으며, 이어서 **'Glad 2 Glow Indonesia'**가 **133,946개**로 두 번째를 차지했습니다. 상위 3개 페이지가 전체 광고 수에서 상"
+  },
+  {
+    "id": "MT-286",
+    "query": "활성 광고 시작일 통계",
+    "table": "meta_ads",
+    "category": "active_vs_inactive",
+    "status": "OK",
+    "time": 40.3,
+    "answer_len": 427,
+    "answer_preview": "# 데이터 조회 안내  안녕하세요. 요청하신 **활성 광고 시작일 통계** 데이터를 조회하지 못했습니다.  좀 더 구체적인 조건을 포함하여 질문해 주시면 정확한 데이터를 찾는 데 도움이 됩니다. 아래 항목들을 명시해 주시면 좋습니다:  > **기간** · **국가/마켓** · **광고 채널(플랫폼)** · **제품명 또는 캠페인명**  ---  ### 💡 "
+  },
+  {
+    "id": "MT-287",
+    "query": "폴란드 메타 광고 데이터",
+    "table": "meta_ads",
+    "category": "country_brand",
+    "status": "OK",
+    "time": 51.6,
+    "answer_len": 1268,
+    "answer_preview": "### 📊 폴란드 메타 광고 현황 분석  #### 요약  폴란드 메타 광고 데이터 분석 결과, 총 **2,743개**의 광고가 확인되었습니다. 이 중 'la_roche_posay' 브랜드의 공식 광고(Official_Ad)가 **2,048개**로 전체의 약 74.7%를 차지하며 압도적인 비중을 보였습니다.  #### 상세 데이터 | 브랜드 | 광고 유형 |"
+  },
+  {
+    "id": "MT-288",
+    "query": "2024년 하반기 시작된 메타 광고",
+    "table": "meta_ads",
+    "category": "recent_ads",
+    "status": "OK",
+    "time": 39.3,
+    "answer_len": 1364,
+    "answer_preview": "### 📊 2024년 하반기 메타 광고 현황 분석 (2024년 12월 25일 ~ 12월 29일 데이터 기준)  #### 요약  ⚠️ 2024년 하반기(7월 1일 ~ 12월 31일) 메타 광고를 조회했으나, 실제 데이터는 **2024년 12월 25일부터 12월 29일 사이에 시작된 광고**만 포함되어 있습니다. 이 기간 동안 **총 5,619건**의 메타 광"
+  },
+  {
+    "id": "MT-289",
+    "query": "메타 광고 URL 도메인 분석",
+    "table": "meta_ads",
+    "category": "ad_archive",
+    "status": "OK",
+    "time": 26.8,
+    "answer_len": 621,
+    "answer_preview": "### 📊 메타 광고 URL 도메인 분석 결과  #### 요약  메타 광고 URL 분석 결과, 전체 광고 중 **1,315,308건**이 'www.facebook.com' 도메인을 사용하는 것으로 나타났습니다. 이는 분석된 모든 광고 URL 중 가장 높은 비중을 차지합니다.  #### 상세 데이터 | 도메인 | 광고 수 | |:---|---:| | www."
+  },
+  {
+    "id": "MT-290",
+    "query": "메타 광고 수 현황 요약",
+    "table": "meta_ads",
+    "category": "total_count",
+    "status": "OK",
+    "time": 54.7,
+    "answer_len": 1806,
+    "answer_preview": "### 📊 메타 광고 현황 요약  #### 요약  최신 데이터 기준으로 총 25개 브랜드의 메타 광고 현황을 분석한 결과, 'skintific'이 **3,844개**의 광고로 가장 많은 광고를 운영하고 있습니다. 상위 5개 브랜드(skintific, glad2glow, medicube, dr_melaxin, skin1004)가 전체 광고의 상당 부분을 차지"
+  },
+  {
+    "id": "MT-291",
+    "query": "활성 광고 collect_date 최신 데이터",
+    "table": "meta_ads",
+    "category": "active_ads",
+    "status": "OK",
+    "time": 60.0,
+    "answer_len": 2033,
+    "answer_preview": "### 📊 2026년 3월 6일 기준 활성 광고 현황  #### 요약  2026년 3월 6일 기준으로 수집된 **10,000개**의 활성 광고 데이터를 분석했습니다. 이 데이터는 **14개 국가**에서 **25개 브랜드**의 광고를 포함하며, 주로 'Official_Ad'와 'Partnership_Ad' 두 가지 유형으로 운영되고 있습니다. 모든 광고는 현"
+  },
+  {
+    "id": "MT-292",
+    "query": "국가별 광고 비율 분석",
+    "table": "meta_ads",
+    "category": "country_distribution",
+    "status": "OK",
+    "time": 50.6,
+    "answer_len": 1911,
+    "answer_preview": "### 📊 국가별 광고 성과 분석 보고서  #### 요약  전체 국가 중 인도네시아가 약 **174.3억원**으로 가장 높은 광고비를 지출했으며, 약 **1,084.1억원**의 광고 매출을 기록했습니다. 광고 효율(ROAS) 측면에서는 호주(약 **741.79%**)와 일본(약 **731.12%**)이 가장 우수한 성과를 보였습니다. 반면, 한국(약 **7"
+  },
+  {
+    "id": "MT-293",
+    "query": "메타 광고 유형별 비율 분석",
+    "table": "meta_ads",
+    "category": "ad_type",
+    "status": "OK",
+    "time": 39.9,
+    "answer_len": 308,
+    "answer_preview": "해당 조건의 데이터가 없습니다.  SQL에서 사용된 `brand` 필터 조건인 `SKIN1004`에 해당하는 데이터가 없습니다. `brand` 필드에 `SKIN1004`라는 브랜드가 존재하지 않거나, 대소문자 또는 띄어쓰기 등의 차이로 인해 검색되지 않았을 수 있습니다. 정확한 브랜드명을 확인해 보시는 것을 권장합니다.  비슷한 데이터를 조회할 수 있는 대"
+  },
+  {
+    "id": "MT-294",
+    "query": "플랫폼별 광고 비율 분석",
+    "table": "meta_ads",
+    "category": "platform",
+    "status": "WARN",
+    "time": 83.0,
+    "answer_len": 2010,
+    "answer_preview": "### 📊 플랫폼별 광고비 지출 및 효율 분석 (2019년 1월 ~ 2026년 3월)  #### 요약  2019년 1월 1일부터 2026년 3월 6일까지의 통합 광고 데이터 분석 결과, 총 광고비는 **약 501.9억원**이 지출되었습니다. 이 중 **TikTok이 약 174.6억원(34.79%)**으로 가장 높은 비중을 차지했으며, **Facebook이 "
+  },
+  {
+    "id": "MT-295",
+    "query": "페이지별 광고 현황 리포트",
+    "table": "meta_ads",
+    "category": "page_analysis",
+    "status": "OK",
+    "time": 52.8,
+    "answer_len": 2078,
+    "answer_preview": "### 📊 페이지별 광고 현황 분석 보고서  #### 요약  2026년 3월 6일 기준, 총 **246**개의 페이지-브랜드 조합(고유 페이지명 **244**개, 고유 브랜드 **27**개)에 대한 광고 현황을 분석한 결과, 대부분의 페이지에서 매우 높은 광고 활성화율을 보였습니다. 특히 'Skintific Co' 페이지는 **150,798**개의 가장 많"
+  },
+  {
+    "id": "MT-296",
+    "query": "활성/비활성 광고 전체 요약",
+    "table": "meta_ads",
+    "category": "active_vs_inactive",
+    "status": "OK",
+    "time": 29.9,
+    "answer_len": 766,
+    "answer_preview": "### 📊 광고 활성 상태별 현황  #### 요약  현재 기준, 전체 광고 중 **1,309,608개**의 광고가 활성 상태로 운영되고 있으며, 이는 전체 광고의 압도적인 대다수를 차지합니다. 비활성 광고는 110개로 매우 적은 비중을 보이며, 5,590개의 광고는 활성 상태가 명확히 정의되지 않은(null) 상태로 확인되었습니다.  #### 상세 데이터 "
+  },
+  {
+    "id": "MT-297",
+    "query": "스위스 SKIN1004 메타 광고 있어?",
+    "table": "meta_ads",
+    "category": "country_brand",
+    "status": "OK",
+    "time": 28.1,
+    "answer_len": 96,
+    "answer_preview": "고객님, 문의하신 '스위스 SKIN1004 메타 광고'에 대한 정보는 현재 사내 CS 데이터베이스에서 찾을 수 없습니다.  해당 질문에 대한 CS 데이터를 찾지 못했습니다."
+  },
+  {
+    "id": "MT-298",
+    "query": "최근 메타 광고 전체 보여줘",
+    "table": "meta_ads",
+    "category": "recent_ads",
+    "status": "OK",
+    "time": 46.5,
+    "answer_len": 1599,
+    "answer_preview": "### 📊 2026년 3월 6일 기준 메타 광고 현황 보고서  #### 요약  오늘(2026년 3월 6일) 기준으로 수집된 **총 10,000개**의 메타 광고 데이터가 확인되었습니다. 이 광고들은 모두 현재 **활성(is_active: True)** 상태이며, **16개 국가**에서 **25개 브랜드**가 'Official_Ad' 또는 'Partnersh"
+  },
+  {
+    "id": "MT-299",
+    "query": "메타 광고 아카이브 전체 현황",
+    "table": "meta_ads",
+    "category": "ad_archive",
+    "status": "OK",
+    "time": 55.8,
+    "answer_len": 3460,
+    "answer_preview": "### 📊 메타 광고 아카이브 전체 현황 분석 보고서  #### 요약  메타 광고 아카이브에는 총 **616개**의 광고 그룹이 존재하며, 이들은 **27개** 브랜드, **16개** 국가, **21개** 퍼블리셔 플랫폼에 걸쳐 있습니다. 현재 조회된 상위 광고 그룹들은 모두 활성 상태를 유지하고 있으며, 특히 `skintific`과 `glad2glow` "
+  },
+  {
+    "id": "MT-300",
+    "query": "메타 광고 전체 현황 리포트",
+    "table": "meta_ads",
+    "category": "total_count",
+    "status": "OK",
+    "time": 56.9,
+    "answer_len": 1785,
+    "answer_preview": "### 📊 메타 광고 전체 현황 분석 보고서  #### 요약  현재까지 집계된 메타 광고 데이터에 따르면, **총 16개 국가, 27개 브랜드, 21개 퍼블리셔 플랫폼**에서 광고가 운영되고 있습니다. 가장 많은 고유 광고를 운영하는 조합은 **인도네시아의 glad2glow 브랜드가 인스타그램 플랫폼에서 집행한 광고로, 총 10,481개의 고유 광고**를 "
+  }
+]

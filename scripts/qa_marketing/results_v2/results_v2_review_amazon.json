@@ -1,0 +1,3001 @@
+[
+  {
+    "id": "V2_RA-001",
+    "query": "아마존 상품별 리뷰 수 확인해주세요",
+    "table": "review_amazon",
+    "category": "review_count",
+    "status": "OK",
+    "time": 46.2,
+    "answer_len": 1442,
+    "answer_preview": "### 📊 SKIN1004 아마존 상품별 리뷰 현황 분석 보고서  #### 요약  2026년 3월 7일 기준으로 SKIN1004 브랜드의 아마존 상품별 리뷰 데이터를 분석한 결과, 총 **23개**의 상품에 대한 리뷰가 확인되었습니다. 이 중 가장 많은 리뷰를 받은 상품은 \"센텔라 에어핏 선크림 라이트\"로, **213개**의 리뷰를 기록하며 가장 높은 고객"
+  },
+  {
+    "id": "V2_RA-002",
+    "query": "혹시 Amazon 리뷰 가장 많은 제품은?",
+    "table": "review_amazon",
+    "category": "top_reviewed",
+    "status": "OK",
+    "time": 42.6,
+    "answer_len": 434,
+    "answer_preview": "### 📊 Amazon 리뷰 최다 제품 현황  #### 요약  2025년 3월 7일부터 현재(2026년 3월 7일)까지 Amazon에서 가장 많은 리뷰를 받은 제품은 **센텔라 에어핏 선크림 라이트**로, 총 **213개**의 리뷰를 기록했습니다.  #### 분석 및 인사이트  *   **센텔라 에어핏 선크림 라이트**는 지난 1년간 Amazon에서 가장 "
+  },
+  {
+    "id": "V2_RA-003",
+    "query": "궁금한데 아마존 최근 리뷰 알려줘",
+    "table": "review_amazon",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 30.6,
+    "answer_len": 1993,
+    "answer_preview": "### 📊 SKIN1004 아마존 최근 리뷰 분석  #### 요약  2026년 2월 16일부터 2월 27일까지 SKIN1004 브랜드의 아마존 리뷰 **50건**을 분석한 결과, 제품의 보습력, 진정 효과, 순한 사용감에 대한 긍정적인 평가가 주를 이루었습니다. 가장 최근 리뷰는 **2026년 2월 27일**에 작성되었으며, 특히 '센텔라 앰플 폼'과 '프"
+  },
+  {
+    "id": "V2_RA-004",
+    "query": "Amazon Madagascar Centella Ampoule 후기 수",
+    "table": "review_amazon",
+    "category": "product_review",
+    "status": "OK",
+    "time": 47.3,
+    "answer_len": 110,
+    "answer_preview": "Amazon에서 SKIN1004 마다가스카르 센텔라 앰플은 2024년 10월 4일 기준 **18,000개 이상의 리뷰**를 기록하고 있습니다.  *(출처: Google 검색 결과 / Amazon)*"
+  },
+  {
+    "id": "V2_RA-005",
+    "query": "참고로 아마존 SKIN1004 전체 후기 수",
+    "table": "review_amazon",
+    "category": "total_count",
+    "status": "OK",
+    "time": 19.9,
+    "answer_len": 95,
+    "answer_preview": "고객님, 문의하신 '아마존 SKIN1004 전체 후기 수'에 대한 정보는 현재 CS 데이터베이스에서 찾을 수 없습니다.  해당 질문에 대한 CS 데이터를 찾지 못했습니다."
+  },
+  {
+    "id": "V2_RA-006",
+    "query": "우리 회사 아마존 월별 리뷰 수 추이 알려줘",
+    "table": "review_amazon",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 21.9,
+    "answer_len": 1156,
+    "answer_preview": "### 📊 SKIN1004 아마존 월별 리뷰 수 추이 분석  #### 요약  SKIN1004의 아마존 월별 리뷰 수는 지난 1년간(2025년 3월 ~ 2026년 2월) **총 2,286건**을 기록하며 전반적으로 증가하는 추세를 보였습니다. 특히 2026년 1월에 **322건**으로 가장 많은 리뷰 수를 기록했으며, 2025년 3월의 **62건** 대비 크"
+  },
+  {
+    "id": "V2_RA-007",
+    "query": "요즘 Amazon 최근 10건 평가",
+    "table": "review_amazon",
+    "category": "recent_n",
+    "status": "OK",
+    "time": 31.9,
+    "answer_len": 1002,
+    "answer_preview": "# 아마존(Amazon) 최근 평가 요약  검색 정보를 기반으로 최근 아마존에 대한 주요 평가 포인트를 정리하면 다음과 같습니다.  ---  ## 긍정적 평가  | # | 항목 | 내용 | |---|------|------| | 1 | **애널리스트 컨센서스** | 다수 애널리스트가 **'강력 매수(Strong Buy)'** 등급 유지 | | 2 | **목"
+  },
+  {
+    "id": "V2_RA-008",
+    "query": "아마죤 2025년 1월 후기은 어떤가요?",
+    "table": "review_amazon",
+    "category": "date_range",
+    "status": "OK",
+    "time": 23.4,
+    "answer_len": 736,
+    "answer_preview": "# 아마존 2025년 1월 평가  2025년 1월은 아마존의 **2024년 4분기 실적**에 포함되는 시기로, 해당 분기 실적은 매우 긍정적이었습니다.  ## 2024년 4분기 주요 실적  | 항목 | 실적 | 월가 예상치 | 비고 | |------|------|------------|------| | **매출** | **1,700억 달러** | 1,662"
+  },
+  {
+    "id": "V2_RA-009",
+    "query": "확인 좀 해줘 Amazon Centella Ampoule 최신 후기 내용 알려주시면 감사하겠습니다",
+    "table": "review_amazon",
+    "category": "review_content",
+    "status": "OK",
+    "time": 23.7,
+    "answer_len": 670,
+    "answer_preview": "# 아마존 센텔라 앰플(SKIN1004 마다가스카르 센텔라 앰플) 최신 후기 요약  ---  ## ✅ 긍정적 후기  | 항목 | 주요 내용 | |------|-----------| | **진정 효과** | 민감성·여드름성·홍조 피부의 붉은 기와 자극 진정에 효과적, 피부 장벽 강화 및 트러블 회복에 도움 | | **가벼운 질감** | 물처럼 묽은 제형으로 "
+  },
+  {
+    "id": "V2_RA-010",
+    "query": "확인 좀 해줘 아마존 브랜드별 평가 수 대비 좀 봐줘",
+    "table": "review_amazon",
+    "category": "brand_review",
+    "status": "OK",
+    "time": 32.1,
+    "answer_len": 497,
+    "answer_preview": "안녕하세요! 요청하신 **아마존 브랜드별 평가 수** 관련 데이터를 조회하지 못했습니다.  좀 더 정확한 데이터를 찾아드릴 수 있도록, 아래 항목들을 구체적으로 알려주시면 감사하겠습니다:  - **기간** (예: 2024년 1분기, 최근 3개월 등) - **국가/마켓플레이스** (예: 미국, 일본, 독일 등) - **비교 대상 브랜드** (예: 특정 경쟁 "
+  },
+  {
+    "id": "V2_RA-011",
+    "query": "아마존에서 Tone Brightening Capsule Serum 후기데이터 몇 개야? 알고 싶어",
+    "table": "review_amazon",
+    "category": "product_review",
+    "status": "OK",
+    "time": 31.2,
+    "answer_len": 664,
+    "answer_preview": "### 📊 아마존 Tone Brightening Capsule Serum 후기 데이터 조회 결과  #### 요약  ⚠️ 사용자님께서 문의하신 'Tone Brightening Capsule Serum'에 대한 아마존 후기 데이터는 **0건**으로 확인되었습니다. 이는 실행된 쿼리가 'Tone Brightening Ampoule' 제품명으로 필터링되었기 때문일"
+  },
+  {
+    "id": "V2_RA-012",
+    "query": "Amazon 리뷰데이터 최근 30일 추이",
+    "table": "review_amazon",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 29.9,
+    "answer_len": 462,
+    "answer_preview": "# 데이터 조회 안내  안녕하세요. 요청하신 **Amazon 리뷰 데이터 최근 30일 추이**를 현재 조회하지 못했습니다.  좀 더 정확한 데이터를 찾을 수 있도록, 아래 항목을 구체적으로 지정해 주시면 도움이 됩니다:  > **국가(마켓플레이스)** · **특정 제품명(ASIN)** · **조회 기간** · **확인하고 싶은 지표(평점 변화, 리뷰 건수,"
+  },
+  {
+    "id": "V2_RA-013",
+    "query": "아마존 Centella Soothing Cream 리뷰 보여줘 보여줘",
+    "table": "review_amazon",
+    "category": "product_review",
+    "status": "OK",
+    "time": 30.7,
+    "answer_len": 287,
+    "answer_preview": "해당 조건의 데이터가 없습니다.  SQL에서 `review_date >= '2025-03-07'` 조건이 문제입니다. 이 날짜는 미래를 지정하고 있어 현재 존재하는 리뷰를 조회할 수 없습니다. 과거 날짜를 지정하거나 날짜 조건을 제거해야 합니다.  비슷한 데이터를 조회할 수 있는 대안 질문은 다음과 같습니다: *   아마존 SKIN1004 센텔라 수딩 크림"
+  },
+  {
+    "id": "V2_RA-014",
+    "query": "Amazon에서 가장 최근에 등록된 평가는?",
+    "table": "review_amazon",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 33.5,
+    "answer_len": 233,
+    "answer_preview": "현재 제공된 정보에는 아마존에서 SKIN1004 제품에 대해 **가장 최근에 등록된 개별 평가(리뷰)의 구체적인 내용이나 날짜**가 포함되어 있지 않습니다.  제가 확인할 수 있는 것은 아마존의 **AI 기반 리뷰 요약 기능 도입** 동향에 대한 일반적인 정보뿐입니다.  최근 등록된 리뷰를 확인하시려면 **아마존 상품 페이지에서 리뷰를 \"Most recen"
+  },
+  {
+    "id": "V2_RA-015",
+    "query": "아마존 리뷰 수 매월 변화 차트?",
+    "table": "review_amazon",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 33.8,
+    "answer_len": 1283,
+    "answer_preview": "### 📊 SKIN1004 아마존 월별 리뷰 수 변화 추이  #### 요약  2025년 3월부터 2026년 2월까지 SKIN1004 브랜드의 아마존 월별 리뷰 수는 전반적으로 **지속적인 증가 추세**를 보였습니다. 해당 기간 동안 총 **2,209개**의 리뷰가 집계되었으며, **2025년 3월 78개**에서 시작하여 **2026년 1월 322개**로 최"
+  },
+  {
+    "id": "V2_RA-016",
+    "query": "궁금한데 Amazon SKIN1004 리뷰 총 몇 건이야? 알고 싶어 부탁드려요",
+    "table": "review_amazon",
+    "category": "total_count",
+    "status": "OK",
+    "time": 36.3,
+    "answer_len": 495,
+    "answer_preview": "### 📊 Amazon SKIN1004 최근 1년간 리뷰 현황  #### 요약  ⚠️ 현재 데이터는 2025년 3월 7일부터 2026년 3월 7일까지 수집된 리뷰를 기준으로 합니다. 이 기간 동안 Amazon에서 수집된 SKIN1004 브랜드의 총 리뷰 수는 **2,770건**으로 집계되었습니다.  #### 분석 및 인사이트  *   지난 1년간 (2025"
+  },
+  {
+    "id": "V2_RA-017",
+    "query": "간단하게 아마존 Centella Cleansing Oil 평가 수 어떻게 되나요?",
+    "table": "review_amazon",
+    "category": "product_review",
+    "status": "OK",
+    "time": 36.7,
+    "answer_len": 447,
+    "answer_preview": "안녕하세요! 아마존 Centella Cleansing Oil의 평가 수에 대해 조회를 시도했으나, **해당 데이터를 조회하지 못했습니다.**  조금 더 구체적인 조건을 포함하여 질문해 주시면 정확한 데이터를 찾는 데 도움이 됩니다.  ---  **💡 질문 예시:**  1. **\"2024년 12월 아마존 US에서 Madagascar Centella Clean"
+  },
+  {
+    "id": "V2_RA-018",
+    "query": "혹시 Amazon 최근 5건 리부 내용 보여줘 부탁",
+    "table": "review_amazon",
+    "category": "recent_n",
+    "status": "OK",
+    "time": 32.4,
+    "answer_len": 557,
+    "answer_preview": "# 아마존 최근 주요 인수 5건  아래는 최근 검색 정보를 기반으로 정리한 아마존의 최근 인수 기업 목록입니다.  | 순번 | 기업명 | 인수 시기 | 분야 | |:---:|---|---|---| | 1 | **Axio (액시오)** | 2025년 9월 | 온라인 대출 플랫폼 (판매 시점 금융) | | 2 | **Bee (비)** | 2025년 7월 | 웨"
+  },
+  {
+    "id": "V2_RA-019",
+    "query": "아마존 2025년 리뷰 수 총합 확인 가능한가요?",
+    "table": "review_amazon",
+    "category": "date_range",
+    "status": "OK",
+    "time": 34.8,
+    "answer_len": 410,
+    "answer_preview": "안녕하세요! 요청하신 **아마존 2025년 리뷰 수 총합** 데이터를 조회하지 못했습니다.  좀 더 정확한 결과를 위해 아래와 같이 **조건을 구체적으로 지정**해 주시면 다시 조회해 드리겠습니다.  - **국가/마켓플레이스** (예: 미국, 일본, 독일 등) - **특정 기간** (예: 2025년 1월~3월) - **제품명 또는 ASIN** (예: 마다가"
+  },
+  {
+    "id": "V2_RA-020",
+    "query": "간단하게 Amazon 제품별 리뷰 순위",
+    "table": "review_amazon",
+    "category": "review_count",
+    "status": "OK",
+    "time": 49.3,
+    "answer_len": 1440,
+    "answer_preview": "### 📊 Amazon SKIN1004 제품별 리뷰 순위 (2025년 3월 7일 ~ 2026년 3월 7일)  #### 요약  지난 1년간(2025년 3월 7일 ~ 2026년 3월 7일) Amazon에서 SKIN1004 제품 중 **센텔라 에어핏 선크림 라이트**가 총 **213개**의 리뷰를 기록하며 가장 높은 순위를 차지했습니다. 전체 23개 제품 중 제"
+  },
+  {
+    "id": "V2_RA-021",
+    "query": "아마존 후기 가장 적은 제품은?",
+    "table": "review_amazon",
+    "category": "review_count",
+    "status": "OK",
+    "time": 32.2,
+    "answer_len": 506,
+    "answer_preview": "### 📊 SKIN1004 제품 중 아마존 후기가 가장 적은 제품 분석  #### 요약  SKIN1004 브랜드 제품 중 아마존에서 가장 적은 후기를 받은 제품은 **센텔라 크림**으로 확인되었습니다. 이 제품은 총 **82개**의 후기를 기록했습니다.  #### 분석 및 인사이트  *   SKIN1004 제품 중 센텔라 크림이 아마존에서 가장 적은 후기("
+  },
+  {
+    "id": "V2_RA-022",
+    "query": "Amazon 2024년 12월 리뷰 보여줄래 어떻게 되나요?",
+    "table": "review_amazon",
+    "category": "date_range",
+    "status": "OK",
+    "time": 34.5,
+    "answer_len": 589,
+    "answer_preview": "# 📋 데이터 조회 안내  안녕하세요! 요청하신 **Amazon 2024년 12월 리뷰 데이터**를 조회하지 못했습니다.  좀 더 구체적인 조건을 포함하여 질문해 주시면 정확한 데이터를 찾는 데 도움이 됩니다.  ---  ## 💡 이렇게 질문해 보시면 어떨까요?  > **예시 1)** \"Amazon **US** 2024년 12월 **마다가스카르 센텔라 앰플"
+  },
+  {
+    "id": "V2_RA-023",
+    "query": "궁금한데 아마존 최근 20건 리뷰 조회",
+    "table": "review_amazon",
+    "category": "recent_n",
+    "status": "WARN",
+    "time": 60.4,
+    "answer_len": 89201,
+    "answer_preview": "📊 아마존 SKIN1004 브랜드 최근 20건 리뷰 분석  #### 요약  2026년 2월 23일부터 2월 27일까지의 **SKIN1004 아마존 리뷰 총 20건**을 분석한 결과입니다. 대부분의 리뷰는 제품의 보습력, 진정 효과, 사용감에 대해 긍정적인 평가를 보였으며, 특히 '프로바이오시카 바쿠치올 아이 크림'과 '센텔라 앰플' 등 여러 제품이 좋은 반"
+  },
+  {
+    "id": "V2_RA-024",
+    "query": "Amazon Madagascar Centella Ampoule 최신 리뷰데이터",
+    "table": "review_amazon",
+    "category": "review_content",
+    "status": "OK",
+    "time": 39.5,
+    "answer_len": 673,
+    "answer_preview": "요청하신 조건에 해당하는 리뷰 데이터가 존재하지 않습니다.  SQL에서 사용된 필터 조건 중 `brand LIKE '%SKIN1004%'`와 `product_name LIKE '%Centella%Ampoule%'`을 동시에 만족하는 데이터가 `Amazon_Review` 테이블에 없습니다. 이는 다음 중 하나의 이유일 수 있습니다:  *   **브랜드 (Br"
+  },
+  {
+    "id": "V2_RA-025",
+    "query": "아마존 채널별 평가 수",
+    "table": "review_amazon",
+    "category": "review_count",
+    "status": "OK",
+    "time": 31.6,
+    "answer_len": 461,
+    "answer_preview": "### 📊 SKIN1004 아마존 채널 평가 수 (2025년 3월 7일 ~ 2026년 3월 7일)  #### 요약  지난 1년간(2025년 3월 7일 ~ 2026년 3월 7일) SKIN1004 브랜드의 아마존 채널에서 수집된 총 평가 수는 **2,770건**입니다.  #### 분석 및 인사이트  *   **아마존 채널의 활발한 고객 참여**: 지난 1년간 "
+  },
+  {
+    "id": "V2_RA-026",
+    "query": "요즘 Amazon 2025년 2월 리뷰 몇 건이야? 좀 봐줘",
+    "table": "review_amazon",
+    "category": "date_range",
+    "status": "OK",
+    "time": 35.4,
+    "answer_len": 444,
+    "answer_preview": "안녕하세요! 😊  요청하신 **Amazon 2025년 2월 리뷰 데이터**를 조회하지 못했습니다.  좀 더 정확한 결과를 위해 아래 정보를 구체적으로 포함하여 다시 질문해 주시면 감사하겠습니다:  > **국가(마켓플레이스)**, **특정 제품명**, **기간 범위** 등을 명시해 주시면 조회 정확도가 높아집니다.  ---  ### 💡 질문 예시  1. **"
+  },
+  {
+    "id": "V2_RA-027",
+    "query": "amazon 리뷰 데이터 전체 건수 알려주세요",
+    "table": "review_amazon",
+    "category": "total_count",
+    "status": "OK",
+    "time": 26.5,
+    "answer_len": 402,
+    "answer_preview": "### 📊 Amazon 리뷰 데이터 전체 건수 현황  #### 요약  현재 조회된 Amazon 리뷰 데이터의 총 건수는 **2,770건**입니다. 이는 Amazon 플랫폼에 등록된 전체 리뷰의 수를 나타냅니다.  #### 분석 및 인사이트  *   제공된 데이터는 Amazon 리뷰 데이터셋의 총 규모를 파악하는 데 기초 자료로 활용될 수 있습니다. *   "
+  },
+  {
+    "id": "V2_RA-028",
+    "query": "Amazon Centella Ampoule 리뷰데이터 매월 변화",
+    "table": "review_amazon",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 40.3,
+    "answer_len": 689,
+    "answer_preview": "# 데이터 조회 안내  안녕하세요. 요청하신 **Centella Ampoule의 Amazon 리뷰 데이터 매월 변화**를 현재 조회하지 못했습니다.  ---  ## 💡 더 구체적으로 질문해 주시면 정확한 데이터를 찾는 데 도움이 됩니다  아래 항목들을 포함하여 다시 질문해 보시겠어요?  | 구체화 항목 | 예시 | |------------|------| |"
+  },
+  {
+    "id": "V2_RA-029",
+    "query": "아마존에서 리뷰 최근 50건 정리해줘",
+    "table": "review_amazon",
+    "category": "recent_n",
+    "status": "OK",
+    "time": 46.4,
+    "answer_len": 2903,
+    "answer_preview": "### 📊 아마존 SKIN1004 최신 리뷰 50건 분석 (2026년 2월 16일 ~ 2월 27일)  #### 요약  2026년 2월 16일부터 2월 27일까지 아마존에서 수집된 SKIN1004 제품의 최신 리뷰 **50건**을 분석한 결과, 전반적으로 높은 만족도를 보였습니다. 특히 **'프로바이오시카 바쿠치올 아이 크림'**과 **'센텔라 앰플'**이 "
+  },
+  {
+    "id": "V2_RA-030",
+    "query": "잠깐, Amazon 리뷰 제품명별 분류 부탁드려요",
+    "table": "review_amazon",
+    "category": "review_count",
+    "status": "OK",
+    "time": 41.4,
+    "answer_len": 1453,
+    "answer_preview": "### 📊 Amazon SKIN1004 제품별 리뷰 현황 (2025년 3월 7일 ~ 2026년 3월 7일)  #### 요약  지난 1년간(2025년 3월 7일 ~ 2026년 3월 7일) Amazon에서 수집된 SKIN1004 제품 리뷰를 분석한 결과, **'센텔라 에어핏 선크림 라이트'**가 총 **213건**의 리뷰로 가장 많은 관심을 받았습니다. 이어서"
+  },
+  {
+    "id": "V2_RA-031",
+    "query": "아마존 Tone Brightening Capsule Serum 최신 리뷰데이터 내용 알려주세요",
+    "table": "review_amazon",
+    "category": "review_content",
+    "status": "OK",
+    "time": 28.5,
+    "answer_len": 490,
+    "answer_preview": "요청하신 조건에 해당하는 리뷰 데이터가 존재하지 않습니다.  SQL 쿼리에서 `product_name` 필터 조건이 사용자 질문과 일치하지 않아 데이터가 조회되지 않았습니다. 사용자께서는 'Tone Brightening Capsule **Serum**'을 요청하셨으나, 쿼리에서는 'Tone_Brightening%**Ampoule**%'로 검색하여 제품명이 "
+  },
+  {
+    "id": "V2_RA-032",
+    "query": "Amazon 전체 리뷰데이터 중 최근 7일 리뷰 좀 부탁드려요",
+    "table": "review_amazon",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 32.4,
+    "answer_len": 565,
+    "answer_preview": "# 데이터 조회 안내  안녕하세요. 요청하신 **Amazon 전체 최근 7일 리뷰 데이터**를 현재 조회하지 못했습니다.  좀 더 정확한 결과를 위해 **조건을 구체적으로 지정**해 주시면 다시 조회를 시도해 보겠습니다.  ---  ## 💡 이렇게 질문해 보시면 좋아요  > **1.** \"Amazon **US**에서 최근 7일간 등록된 **마다가스카르 센텔"
+  },
+  {
+    "id": "V2_RA-033",
+    "query": "아마죤 리뷰 수집 날짜 기준 최신순 정렬 어떻게 되나요?",
+    "table": "review_amazon",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 54.9,
+    "answer_len": 88122,
+    "answer_preview": "### 📊 SKIN1004 아마존 리뷰 수집 날짜 기준 최신순 정렬 결과  #### 요약  SKIN1004 브랜드에 대한 아마존 리뷰를 수집 날짜 기준으로 최신순 정렬한 결과, **총 50건**의 리뷰가 조회되었습니다. 가장 최근에 수집된 리뷰는 **2026년 03월 02일**에 수집된 데이터이며, 다양한 제품에 대한 리뷰를 포함하고 있습니다.  #### "
+  },
+  {
+    "id": "V2_RA-034",
+    "query": "Amazon 2025년 3월 리뷰데이터 있어",
+    "table": "review_amazon",
+    "category": "date_range",
+    "status": "OK",
+    "time": 19.7,
+    "answer_len": 474,
+    "answer_preview": "안녕하세요! 😊  요청하신 **Amazon 2025년 3월 리뷰 데이터**를 현재 조회하지 못했습니다.  좀 더 구체적인 조건을 알려주시면 정확한 데이터를 찾는 데 도움이 됩니다. 아래 항목들을 포함해 주시면 좋겠습니다:  > **국가** (미국, 일본, 독일 등) / **특정 제품명** / **조회 항목** (별점 분포, 리뷰 건수, 키워드 분석 등)  "
+  },
+  {
+    "id": "V2_RA-035",
+    "query": "아마존 리뷰 브랜드 SKIN1004만 필터링 얼마임?",
+    "table": "review_amazon",
+    "category": "brand_review",
+    "status": "OK",
+    "time": 29.0,
+    "answer_len": 524,
+    "answer_preview": "### 📊 아마존 SKIN1004 브랜드 리뷰 총 개수 (2025년 3월 7일 이후)  #### 요약  2025년 3월 7일부터 오늘(2026년 3월 7일)까지 아마존에서 수집된 SKIN1004 브랜드의 총 리뷰 수는 **2,770개**입니다.  #### 분석 및 인사이트  *   제공된 데이터는 지난 1년간(2025년 3월 7일 ~ 2026년 3월 7일)"
+  },
+  {
+    "id": "V2_RA-036",
+    "query": "Amazon 최근 100건 리뷰 데이터 몇이야?",
+    "table": "review_amazon",
+    "category": "recent_n",
+    "status": "OK",
+    "time": 38.8,
+    "answer_len": 2213,
+    "answer_preview": "### 📊 Amazon SKIN1004 최근 100건 리뷰 데이터 분석  #### 요약  SKIN1004 브랜드의 Amazon 최근 100건 리뷰 데이터를 분석한 결과, **2026년 2월 12일부터 2026년 2월 27일까지**의 리뷰가 포함되어 있습니다. 총 **100건**의 최신 리뷰를 통해 다양한 제품에 대한 사용자들의 생생한 피드백을 확인할 수 있"
+  },
+  {
+    "id": "V2_RA-037",
+    "query": "아마존 Centella Soothing Cream 리뷰 내용 보여줘 알려주시면 감사하겠습니다",
+    "table": "review_amazon",
+    "category": "review_content",
+    "status": "OK",
+    "time": 33.5,
+    "answer_len": 503,
+    "answer_preview": "해당 조건에 맞는 데이터가 존재하지 않습니다. 특히 `product_name` 필터에 사용된 'Soothing_Cream' 값은 존재하지 않을 가능성이 높습니다.  SQL에서 사용된 `product_name` 필터 조건 `'%Centella%Soothing_Cream%'`에 문제가 있습니다. 데이터베이스에 저장된 제품명에는 언더바(`_`) 대신 공백(` `"
+  },
+  {
+    "id": "V2_RA-038",
+    "query": "Amazon 월별 리뷰 건수 통계 어떻게 되나요?",
+    "table": "review_amazon",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 44.1,
+    "answer_len": 473,
+    "answer_preview": "안녕하세요. 요청하신 **Amazon 월별 리뷰 건수 통계** 데이터를 현재 조회하지 못했습니다.  좀 더 정확한 결과를 위해 아래와 같이 **조건을 구체적으로 지정**해 주시면 다시 조회해 드리겠습니다.  ---  ### 💡 이런 정보를 추가해 주시면 좋습니다 - **기간** — 조회하고 싶은 연도 또는 월 범위 - **국가/마켓플레이스** — Amazo"
+  },
+  {
+    "id": "V2_RA-039",
+    "query": "아마존 후기 제품 기준 비율 알 수 있을까요?",
+    "table": "review_amazon",
+    "category": "review_count",
+    "status": "OK",
+    "time": 31.7,
+    "answer_len": 2431,
+    "answer_preview": "### 📊 아마존 SKIN1004 제품별 후기 비율 분석 (2025년 3월 7일 ~ 2026년 3월 7일)  #### 요약  지난 1년간(2025년 3월 7일 ~ 2026년 3월 7일) 아마존에서 SKIN1004 브랜드 제품에 대한 후기 데이터를 분석한 결과, 총 23개 제품 중 '센텔라 에어핏 선크림 라이트'가 **213건**의 후기로 전체 후기의 **7"
+  },
+  {
+    "id": "V2_RA-040",
+    "query": "우리 회사 Amazon 2024년 후기 수 알려주세요",
+    "table": "review_amazon",
+    "category": "date_range",
+    "status": "OK",
+    "time": 34.7,
+    "answer_len": 216,
+    "answer_preview": "2024년 SKIN1004의 Amazon 후기 수에 대한 정보를 확인할 수 없습니다.  공개된 검색 결과에서도 아마존은 개별 브랜드나 전체 플랫폼의 연간 총 리뷰 수를 공식적으로 발표하지 않는 것으로 확인됩니다.  정확한 수치는 **사내 Amazon Seller Central(또는 Vendor Central) 대시보드**나 **이커머스 담당 부서**에 문의"
+  },
+  {
+    "id": "V2_RA-041",
+    "query": "아마존 평가 원문과 한국어 번역 같이 보여줄래?",
+    "table": "review_amazon",
+    "category": "review_content",
+    "status": "WARN",
+    "time": 69.7,
+    "answer_len": 17801,
+    "answer_preview": "### 📊 SKIN1004 아마존 최신 고객 평가 (원문 및 한국어 번역)  #### 요약  SKIN1004 브랜드의 아마존 고객 평가 중 **최신 50건**의 원문과 한국어 번역을 제공합니다. 조회된 리뷰는 **2026년 2월 16일부터 2026년 2월 27일** 사이에 작성되었으며, 다양한 제품에 대한 긍정적인 피드백이 주를 이룹니다.  #### 상세 "
+  },
+  {
+    "id": "V2_RA-042",
+    "query": "Amazon Centella Cleansing Oil 최신 리뷰 부탁드려요",
+    "table": "review_amazon",
+    "category": "review_content",
+    "status": "OK",
+    "time": 54.7,
+    "answer_len": 415,
+    "answer_preview": "해당 조건의 데이터가 없습니다.  SQL에서 사용된 `product_name` 필터 조건 `'%Centella%Cleansing_Oil%'`에 해당하는 제품은 존재하지 않습니다. 특히, `Cleansing_Oil`과 같이 언더스코어(`_`)가 포함된 제품명은 데이터베이스에 없으며, 일반적으로 제품명에는 공백(space)이 사용됩니다. 가장 유사한 제품명은 "
+  },
+  {
+    "id": "V2_RA-043",
+    "query": "아마존 리뷰데이터 최근 한 달 몇 건?",
+    "table": "review_amazon",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 41.5,
+    "answer_len": 420,
+    "answer_preview": "### 📊 아마존 리뷰 데이터 최근 한 달 현황  #### 요약  2026년 2월 7일부터 2026년 3월 7일까지 최근 한 달간 아마존 리뷰 데이터는 총 **154건**으로 집계되었습니다.  #### 분석 및 인사이트  *   최근 한 달간 154건의 리뷰가 발생하여 고객들이 제품에 대해 활발하게 피드백을 제공하고 있음을 알 수 있습니다. *   이 리뷰"
+  },
+  {
+    "id": "V2_RA-044",
+    "query": "Amazon 상품별 리뷰 수 TOP 5",
+    "table": "review_amazon",
+    "category": "top_reviewed",
+    "status": "OK",
+    "time": 37.9,
+    "answer_len": 1128,
+    "answer_preview": "### 📊 Amazon SKIN1004 상품별 리뷰 수 TOP 5 현황  #### 요약  2026년 3월 7일 기준, Amazon에서 SKIN1004 브랜드 상품 중 가장 많은 리뷰를 받은 제품은 **'센텔라 에어핏 선크림 라이트'**로, 총 **213개**의 리뷰를 기록했습니다. 이어서 '센텔라 라이트 클렌징 오일'이 144개, '포어마이징 퀵 클레이 스"
+  },
+  {
+    "id": "V2_RA-045",
+    "query": "잠깐, 아마죤 평가 날짜별 분포",
+    "table": "review_amazon",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 50.8,
+    "answer_len": 472,
+    "answer_preview": "질문하신 내용을 조금 더 명확히 확인하고 싶습니다.  혹시 **아마존(Amazon) 분기별 실적 발표일**을 말씀하시는 건가요? 만약 그렇다면, 2025년 회계연도 기준 일정은 다음과 같습니다.  | 분기 | 해당 기간 | 실적 발표일 | |------|-----------|-------------| | **1분기** | 2025년 1월~3월 | **202"
+  },
+  {
+    "id": "V2_RA-046",
+    "query": "Amazon 2025년 1분기 리뷰 수 부탁드려요",
+    "table": "review_amazon",
+    "category": "date_range",
+    "status": "OK",
+    "time": 59.8,
+    "answer_len": 445,
+    "answer_preview": "안녕하세요, 요청하신 **Amazon 2025년 1분기 리뷰 수** 데이터를 조회하지 못했습니다.  좀 더 정확한 결과를 위해 아래와 같이 **조건을 구체적으로** 지정해 주시면 다시 조회해 드리겠습니다.  ---  **📌 구체적으로 지정하면 좋은 항목** - **국가/마켓플레이스** (예: Amazon US, Amazon JP 등) - **특정 제품명 또"
+  },
+  {
+    "id": "V2_RA-047",
+    "query": "잠깐, 아마존 최근 후기 3건만 보여줄 수 있어 확인 가능한가요?",
+    "table": "review_amazon",
+    "category": "recent_n",
+    "status": "OK",
+    "time": 37.9,
+    "answer_len": 1457,
+    "answer_preview": "### 📊 아마존 SKIN1004 최근 후기 3건 분석  #### 요약  SKIN1004의 아마존 최신 후기 **3건**은 모두 **2026년 2월 27일**에 작성되었으며, 아이 크림, 클렌징 폼, 보습 크림 등 다양한 제품에 대한 긍정적인 평가를 담고 있습니다. 사용자들은 제품의 수분 공급, 빠른 흡수, 유연성 및 보습 장벽 기능에 만족감을 표현했습니다"
+  },
+  {
+    "id": "V2_RA-048",
+    "query": "Amazon Madagascar Centella Ampoule 리뷰데이터 몇 개 있어",
+    "table": "review_amazon",
+    "category": "product_review",
+    "status": "OK",
+    "time": 59.4,
+    "answer_len": 610,
+    "answer_preview": "안녕하세요! 😊  요청하신 **Amazon Madagascar Centella Ampoule 리뷰 데이터**를 조회하지 못했습니다.  좀 더 정확한 결과를 위해 **조건을 구체적으로** 지정해 주시면 다시 조회해 드리겠습니다.  ---  ### 💡 이렇게 질문해 보시면 좋아요  1. **\"Amazon US에서 Madagascar Centella Asiati"
+  },
+  {
+    "id": "V2_RA-049",
+    "query": "아마존 리뷰 수집일 기준 정렬 알려주시면 감사하겠습니다",
+    "table": "review_amazon",
+    "category": "recent_reviews",
+    "status": "WARN",
+    "time": 64.4,
+    "answer_len": 3713,
+    "answer_preview": "### 📊 SKIN1004 아마존 리뷰 수집일 기준 최신순 정렬 보고서  #### 요약  SKIN1004 브랜드의 아마존 리뷰를 수집일 기준 최신순으로 정렬한 결과입니다. 총 **50건**의 리뷰가 조회되었으며, 가장 최근에 수집된 리뷰는 **2026년 03월 02일**에 수집된 리뷰들입니다. 이 리뷰들은 주로 2026년 1월 중순부터 2월 말까지 작성된 "
+  },
+  {
+    "id": "V2_RA-050",
+    "query": "빠르게 Amazon 전체 리뷰 데이터 수 알려주시면 감사하겠습니다",
+    "table": "review_amazon",
+    "category": "total_count",
+    "status": "OK",
+    "time": 36.8,
+    "answer_len": 682,
+    "answer_preview": "### 📊 Amazon 리뷰 데이터 수 (2025년 3월 7일 이후 수집 기준)  #### 요약  ⚠️ 사용자님께서 요청하신 '전체' Amazon 리뷰 데이터와 달리, 현재 조회된 데이터는 **2025년 3월 7일 이후 수집된 리뷰**에 대한 정보입니다. 해당 기간 동안 수집된 Amazon 리뷰 데이터는 총 **2,770개**입니다.  #### 분석 및 인"
+  },
+  {
+    "id": "V2_RA-051",
+    "query": "궁금한데 아마존에서 평가 가장 많이 달린 제품 TOP 3 알려주시면 감사하겠습니다",
+    "table": "review_amazon",
+    "category": "top_reviewed",
+    "status": "OK",
+    "time": 36.3,
+    "answer_len": 946,
+    "answer_preview": "### 📊 아마존 SKIN1004 브랜드 제품별 최다 평가 TOP 3  #### 요약  2026년 3월 7일 기준, 아마존에서 SKIN1004 브랜드 제품 중 가장 많은 평가를 받은 제품은 **'센텔라 에어핏 선크림 라이트'**로 총 **213개**의 평가를 기록했습니다. 이어서 '센텔라 라이트 클렌징 오일'이 144개, '포어마이징 퀵 클레이 스틱 마스크"
+  },
+  {
+    "id": "V2_RA-052",
+    "query": "Amazon 2025년 리뷰데이터 월별 건수",
+    "table": "review_amazon",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 23.8,
+    "answer_len": 521,
+    "answer_preview": "# 데이터 조회 안내  안녕하세요. 요청하신 **Amazon 2025년 리뷰 데이터 월별 건수**를 현재 데이터베이스에서 조회하지 못했습니다.  ---  ## 💡 더 정확한 결과를 위해 아래 정보를 추가해 주시면 도움이 됩니다  - **국가/마켓플레이스** (예: Amazon US, Amazon JP 등) - **특정 제품명 또는 ASIN** - **조회 "
+  },
+  {
+    "id": "V2_RA-053",
+    "query": "아마존 Centella Ampoule 리뷰 한국어 번역 보여줘 부탁드려요",
+    "table": "review_amazon",
+    "category": "review_content",
+    "status": "OK",
+    "time": 41.2,
+    "answer_len": 368,
+    "answer_preview": "요청하신 조건에 해당하는 아마존 센텔라 앰플 리뷰 데이터를 찾을 수 없습니다.  현재 데이터베이스에는 'SKIN1004' 브랜드의 'Centella Ampoule' 제품에 대한 아마존 리뷰 데이터가 존재하지 않습니다. 이는 'SKIN1004' 브랜드에 해당 제품이 없거나, 제품명이 정확히 일치하지 않아 검색되지 않았을 수 있습니다.  비슷한 데이터를 조회할"
+  },
+  {
+    "id": "V2_RA-054",
+    "query": "Amazon 리뷰데이터 제품명에 Centella 포함된 것만",
+    "table": "review_amazon",
+    "category": "product_review",
+    "status": "OK",
+    "time": 19.7,
+    "answer_len": 399,
+    "answer_preview": "요청하신 조건에 해당하는 데이터가 없습니다.  SQL 쿼리의 `collect_date >= '2025-03-07'` 조건이 문제인 것으로 보입니다. `collect_date`는 데이터 수집일을 의미하는데, 2025년 3월 7일은 미래 날짜이므로 해당 날짜 이후에 수집된 데이터는 현재 존재하지 않습니다. 이 조건을 현재 또는 과거 날짜로 변경해야 합니다.  "
+  },
+  {
+    "id": "V2_RA-055",
+    "query": "amazon 2024년 11월 리뷰 데이터 얼마임?",
+    "table": "review_amazon",
+    "category": "date_range",
+    "status": "OK",
+    "time": 38.7,
+    "answer_len": 581,
+    "answer_preview": "안녕하세요! 요청하신 **Amazon 2024년 11월 리뷰 데이터**를 현재 조회하지 못했습니다.  좀 더 정확한 데이터를 찾을 수 있도록, 조건을 구체적으로 지정해 주시면 도움이 됩니다.  ---  **📌 다음과 같이 질문을 구체화해 보세요:**  1. **\"Amazon US에서 2024년 11월 마다가스카르 센텔라 토너의 리뷰 건수는 얼마야?\"** 2"
+  },
+  {
+    "id": "V2_RA-056",
+    "query": "Amazon 평가 수 상위 10개 제품",
+    "table": "review_amazon",
+    "category": "top_reviewed",
+    "status": "OK",
+    "time": 31.4,
+    "answer_len": 928,
+    "answer_preview": "# 아마존(Amazon) 평가 수 상위 10개 제품  아마존에서 리뷰 수가 많은 것으로 알려진 제품들은 다음과 같습니다. (순위는 실시간 변동될 수 있습니다.)  | 순위 | 제품명 | 리뷰 수 | |:---:|------|------:| | 1 | **Beckham Collection Pillows** (벡햄 컬렉션 베개) | **251,000+** | "
+  },
+  {
+    "id": "V2_RA-057",
+    "query": "아마존 최근 후기 15건 내용 얼마임?",
+    "table": "review_amazon",
+    "category": "recent_n",
+    "status": "OK",
+    "time": 51.2,
+    "answer_len": 3953,
+    "answer_preview": "### 📊 아마존 SKIN1004 최근 후기 15건 분석  #### 요약  SKIN1004 브랜드의 아마존 최근 후기 **15건**을 분석한 결과, **2026년 2월 24일부터 2월 27일**까지의 리뷰에서 전반적으로 매우 긍정적인 평가가 지배적이었습니다. 사용자들은 제품의 뛰어난 수분 공급, 진정 효과, 순한 사용감 및 빠른 흡수력을 높이 평가했으며, "
+  },
+  {
+    "id": "V2_RA-058",
+    "query": "Amazon 후기 한국어 번역 최근 것",
+    "table": "review_amazon",
+    "category": "review_content",
+    "status": "OK",
+    "time": 46.9,
+    "answer_len": 604,
+    "answer_preview": "## 아마존 후기 한국어 번역 기능 현황  아마존은 자사 웹사이트에서 **AI 기반 번역 서비스('Amazon Translate')**를 통해 상품 후기를 포함한 콘텐츠의 한국어 번역을 제공하고 있습니다.  ### 주요 내용  | 항목 | 내용 | |------|------| | **한국어 지원 시작** | 2019년부터 웹사이트 언어 설정에 한국어 추가 "
+  },
+  {
+    "id": "V2_RA-059",
+    "query": "아마존 제품 리뷰데이터 분석 좀해줘",
+    "table": "review_amazon",
+    "category": "review_count",
+    "status": "OK",
+    "time": 39.4,
+    "answer_len": 1555,
+    "answer_preview": "### 📊 아마존 SKIN1004 제품 리뷰 현황 분석 (2025년 3월 7일 ~ 2026년 3월 7일)  #### 요약  지난 1년간(2025년 3월 7일 ~ 2026년 3월 7일) 아마존에서 SKIN1004 브랜드 제품 중 가장 많은 리뷰를 받은 제품은 **센텔라 에어핏 선크림 라이트**로 총 **213개**의 리뷰를 기록했습니다. 상위 10개 제품 모"
+  },
+  {
+    "id": "V2_RA-060",
+    "query": "Amazon SKIN1004 브랜드 리뷰 전체 알려줘 확인 부탁드립니다",
+    "table": "review_amazon",
+    "category": "brand_review",
+    "status": "OK",
+    "time": 42.1,
+    "answer_len": 1418,
+    "answer_preview": "### 📊 Amazon SKIN1004 브랜드 최신 리뷰 분석 보고서  #### 요약  이 보고서는 Amazon SKIN1004 브랜드에 대한 **총 1,000건**의 최신 리뷰를 분석한 결과입니다. 조회된 리뷰는 **2025년 3월 7일 이후 수집된 데이터 중 가장 최근에 작성된 리뷰**들이며, **2026년 2월 12일부터 2026년 2월 27일까지의 "
+  },
+  {
+    "id": "V2_RA-061",
+    "query": "아마존 리뷰 2025년 상반기 데이터 알려주세요",
+    "table": "review_amazon",
+    "category": "date_range",
+    "status": "OK",
+    "time": 25.6,
+    "answer_len": 1273,
+    "answer_preview": "### 📊 2025년 상반기 아마존 SKIN1004 제품별 리뷰 현황  #### 요약  2025년 상반기(1월 1일 ~ 6월 30일) 동안 SKIN1004 브랜드의 아마존 리뷰는 총 **496건**으로 집계되었습니다. 이 중 '센텔라 에어핏 선크림 라이트'가 **59건**의 리뷰로 가장 많은 관심을 받았습니다.  #### 상세 데이터 | product_na"
+  },
+  {
+    "id": "V2_RA-062",
+    "query": "Amazon 리뷰 건수 추이 그래프 알려주시면 감사하겠습니다",
+    "table": "review_amazon",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 31.1,
+    "answer_len": 844,
+    "answer_preview": "### 📊 SKIN1004 Amazon 월별 리뷰 건수 추이  #### 요약  SKIN1004 브랜드의 아마존 리뷰 건수는 2026년 1월 **2,341건**을 기록한 후, 2월 **410건**, 3월 **19건**으로 감소 추세를 보였습니다. ⚠️ 2026년 3월 데이터는 현재 8일까지의 부분 집계이므로, 월말까지의 전체 리뷰 건수는 더 증가할 수 있습니"
+  },
+  {
+    "id": "V2_RA-063",
+    "query": "아마존 최근 리뷰 원문 보여줄 수 있나요",
+    "table": "review_amazon",
+    "category": "review_content",
+    "status": "OK",
+    "time": 50.4,
+    "answer_len": 93528,
+    "answer_preview": "### 📊 SKIN1004 아마존 최근 리뷰 원문 분석  #### 요약  SKIN1004 브랜드의 아마존 최근 리뷰 **50개** 원문을 조회했습니다. 해당 리뷰들은 **2026년 2월 16일부터 2월 27일까지** 작성되었으며, 다양한 제품에 대한 사용자들의 긍정적 및 일부 부정적 피드백을 포함하고 있습니다. 특히, 보습, 진정, 순한 사용감에 대한 만족"
+  },
+  {
+    "id": "V2_RA-064",
+    "query": "Amazon Tone Brightening Capsule Serum 리뷰 수 흐름?",
+    "table": "review_amazon",
+    "category": "product_review",
+    "status": "OK",
+    "time": 28.1,
+    "answer_len": 476,
+    "answer_preview": "안녕하세요, 요청하신 **Amazon Tone Brightening Capsule Serum 리뷰 수 흐름** 데이터를 현재 조회하지 못했습니다.  좀 더 구체적인 조건을 포함하여 질문해 주시면 정확한 데이터를 찾는 데 도움이 됩니다. 아래 예시를 참고해 주세요:  ---  **💡 질문 예시**  1. **\"Amazon US에서 Tone Brightenin"
+  },
+  {
+    "id": "V2_RA-065",
+    "query": "아마존 후기 수집일 최신 데이터",
+    "table": "review_amazon",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 54.7,
+    "answer_len": 381,
+    "answer_preview": "### 📊 SKIN1004 아마존 최신 수집 후기 분석  #### 요약  SKIN1004 브랜드의 아마존 후기 중 **2026년 03월 02일**에 수집된 최신 데이터를 포함하여 총 50건의 후기가 확인되었습니다. 이 후기들은 주로 2026년 2월 말에 작성된 것으로, '프로바이오시카 바쿠치올 아이 크림', '프로바이오시카 인텐시브 앰플', '센텔라 앰플'"
+  },
+  {
+    "id": "V2_RA-066",
+    "query": "잠깐, Amazon 2025년 2월 리부 내용 알려주세요",
+    "table": "review_amazon",
+    "category": "date_range",
+    "status": "OK",
+    "time": 35.1,
+    "answer_len": 328,
+    "answer_preview": "2025년 2월 아마존 프라임 비디오에서 **'리부트(Reboot)'로 명시된 작품은 현재까지 확인되지 않습니다.**  다만, 기존 시리즈의 **새로운 시즌**으로 돌아오는 작품들은 다음과 같습니다:  | 작품명 | 공개일 | 비고 | |---|---|---| | **인빈시블 시즌 3** | 2월 6일 | 애니메이션 시리즈 | | **리처 시즌 3** | "
+  },
+  {
+    "id": "V2_RA-067",
+    "query": "우리 회사 아마존 전체 리뷰 건수 합계",
+    "table": "review_amazon",
+    "category": "total_count",
+    "status": "OK",
+    "time": 35.5,
+    "answer_len": 689,
+    "answer_preview": "### 📊 SKIN1004 아마존 리뷰 건수 현황 (지난 1년간)  #### 요약  지난 1년간 (2025년 3월 8일 ~ 2026년 3월 8일) SKIN1004 브랜드의 아마존 리뷰 총 건수는 **2,770건**으로 집계되었습니다. 이는 SQL 쿼리에 명시된 수집일 기준 필터(`collect_date >= '2025-03-08'`)에 따라 조회된 결과입니"
+  },
+  {
+    "id": "V2_RA-068",
+    "query": "Amazon 제품별 최근 리뷰 1건씩 좀",
+    "table": "review_amazon",
+    "category": "review_content",
+    "status": "OK",
+    "time": 33.5,
+    "answer_len": 497,
+    "answer_preview": "안녕하세요! 요청하신 Amazon 제품별 최근 리뷰 데이터를 조회하지 못했습니다.  좀 더 정확한 결과를 위해 **조건을 구체적으로 지정**해 주시면 다시 조회해 드리겠습니다.  ---  **💡 다음과 같이 질문을 구체화해 보세요:**  1. **\"Amazon US에서 마다가스카르 센텔라 토너의 최근 리뷰 1건을 보여줘\"** 2. **\"Amazon Japa"
+  },
+  {
+    "id": "V2_RA-069",
+    "query": "아마존 리부 날짜 범위 체크해줘 부탁드려요",
+    "table": "review_amazon",
+    "category": "date_range",
+    "status": "OK",
+    "time": 50.5,
+    "answer_len": 520,
+    "answer_preview": "### 📊 아마존 리뷰 데이터 날짜 범위 분석  #### 요약  아마존 리뷰 데이터는 **2019년 11월 23일**부터 **2026년 2월 27일**까지의 기간을 포함하고 있습니다. 이는 현재까지 수집된 아마존 리뷰 데이터의 전체 날짜 범위입니다.  #### 상세 데이터  (단순 수치 1개만 반환되는 경우이므로 이 섹션은 생략합니다.)  #### 분석 및"
+  },
+  {
+    "id": "V2_RA-070",
+    "query": "Amazon 리뷰 수 가장 적은 제품은? 빨리 확인 부탁드립니다",
+    "table": "review_amazon",
+    "category": "review_count",
+    "status": "OK",
+    "time": 31.6,
+    "answer_len": 498,
+    "answer_preview": "### 📊 Amazon SKIN1004 제품별 리뷰 현황  #### 요약  2026년 3월 8일 기준, SKIN1004 브랜드 제품 중 Amazon에서 가장 적은 리뷰 수를 기록한 제품은 **센텔라 크림**이며, 총 **82개**의 리뷰를 보유하고 있습니다.  #### 분석 및 인사이트  *   SKIN1004 제품 중 Amazon에서 리뷰 수가 가장 적은"
+  },
+  {
+    "id": "V2_RA-071",
+    "query": "아마존 Centella Cleansing Oil 리뷰 몇 건 알려주세요",
+    "table": "review_amazon",
+    "category": "product_review",
+    "status": "OK",
+    "time": 35.8,
+    "answer_len": 668,
+    "answer_preview": "### 📊 아마존 Centella Cleansing Oil 리뷰 현황 (2025년 3월 8일 이후)  #### 요약  2025년 3월 8일부터 현재(2026년 3월 8일)까지 아마존에서 **SKIN1004 Centella Cleansing Oil** 제품에 대해 수집된 리뷰는 **0건**입니다.  #### 분석 및 인사이트  *   **리뷰 미수집:** 지"
+  },
+  {
+    "id": "V2_RA-072",
+    "query": "Amazon 최근 한 주간 후기",
+    "table": "review_amazon",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 52.8,
+    "answer_len": 639,
+    "answer_preview": "아마존에서의 SKIN1004 제품에 대한 최근 한 주간 후기에 대해서는 구체적인 데이터를 가지고 있지 않습니다.  다만, 제공된 검색 정보에 따르면 아마존 리뷰와 관련하여 최근 주요 동향은 다음과 같습니다:  ---  ### 아마존 리뷰 관련 최근 동향  | 구분 | 내용 | |------|------| | **가짜 리뷰 문제** | 아마존 리뷰의 **42"
+  },
+  {
+    "id": "V2_RA-073",
+    "query": "참고로 아마존 리부 월별 증감 추이",
+    "table": "review_amazon",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 35.7,
+    "answer_len": 445,
+    "answer_preview": "# 데이터 조회 안내  안녕하세요. 요청하신 **아마존 리뷰 월별 증감 추이** 데이터를 조회하지 못했습니다.  좀 더 정확한 결과를 위해 아래 항목을 구체적으로 지정해 주시면 다시 조회해 드리겠습니다.  > **구체화하면 좋은 항목**  > - **기간** (예: 2024년 1월~12월)  > - **국가/마켓플레이스** (예: 미국, 일본 등)  > -"
+  },
+  {
+    "id": "V2_RA-074",
+    "query": "Amazon 2024년 10월 평가 수 알려주세요",
+    "table": "review_amazon",
+    "category": "date_range",
+    "status": "OK",
+    "time": 34.1,
+    "answer_len": 212,
+    "answer_preview": "2024년 10월 아마존의 **평가 수(리뷰 수)**에 대한 구체적인 정보는 현재 확인되지 않습니다.  혹시 아래 중 찾으시는 정보가 있으신지 확인 부탁드립니다:  1. **SKIN1004 제품**의 아마존 내 리뷰/평가 수 2. **아마존 전체 플랫폼**의 리뷰 통계 3. **아마존 기업 자체**의 신용등급·기업 평가  구체적으로 알려주시면 관련 정보를 "
+  },
+  {
+    "id": "V2_RA-075",
+    "query": "아마존 제품 리뷰 순위 알려줘 확인 부탁드립니다",
+    "table": "review_amazon",
+    "category": "top_reviewed",
+    "status": "OK",
+    "time": 42.3,
+    "answer_len": 1638,
+    "answer_preview": "### 📊 아마존 SKIN1004 제품 리뷰 순위 (2025년 3월 8일 이후)  #### 요약  최근 1년간(2025년 3월 8일 ~ 2026년 3월 8일) 아마존에서 SKIN1004 제품 중 가장 많은 리뷰를 받은 제품은 **\"센텔라 에어핏 선크림 라이트\"**로 총 **213**개의 리뷰를 기록했습니다. 이어서 \"센텔라 라이트 클렌징 오일\"이 144개,"
+  },
+  {
+    "id": "V2_RA-076",
+    "query": "Amazon Madagascar Centella Ampoule 후기 원문",
+    "table": "review_amazon",
+    "category": "review_content",
+    "status": "OK",
+    "time": 30.1,
+    "answer_len": 335,
+    "answer_preview": "아마존에서의 마다가스카르 센텔라 앰플 후기 **원문(영문 리뷰 등)**은 제가 보유하고 있지 않습니다. 제공된 검색 정보는 후기를 **요약한 내용**만 포함하고 있어, 개별 리뷰어의 원문 텍스트를 그대로 전달해 드리기 어렵습니다.  **원문 후기를 확인하시려면:**  1. **Amazon.com** → 제품 페이지 → \"Customer Reviews\" 섹션"
+  },
+  {
+    "id": "V2_RA-077",
+    "query": "아마존 최근 평가 25건",
+    "table": "review_amazon",
+    "category": "recent_n",
+    "status": "OK",
+    "time": 59.9,
+    "answer_len": 73210,
+    "answer_preview": "### 📊 아마존 SKIN1004 브랜드 최근 평가 25건 분석  #### 요약  2026년 2월 20일부터 2월 27일까지의 SKIN1004 아마존 브랜드 최근 평가 **25건**을 분석한 결과, 대부분의 제품이 뛰어난 보습력, 진정 효과, 빠른 흡수력, 순한 사용감으로 긍정적인 평가를 받았습니다. 특히 '프로바이오시카 바쿠치올 아이 크림'과 '센텔라 앰"
+  },
+  {
+    "id": "V2_RA-078",
+    "query": "Amazon 리뷰데이터 데이터 채널 정보",
+    "table": "review_amazon",
+    "category": "review_count",
+    "status": "OK",
+    "time": 31.6,
+    "answer_len": 578,
+    "answer_preview": "### 📊 아마존 리뷰 데이터 채널 및 브랜드 정보  #### 요약  2025년 3월 8일 이후 수집된 아마존 리뷰 데이터를 분석한 결과, **Amazon** 채널에서 **SKIN1004** 브랜드의 리뷰 정보가 확인되었습니다. 현재 조회된 데이터 기준으로는 다른 채널이나 브랜드는 발견되지 않았습니다.  #### 상세 데이터 | 채널 | 브랜드 | |:--"
+  },
+  {
+    "id": "V2_RA-079",
+    "query": "아마죤 2025년 전체 리뷰 수 알려주세요",
+    "table": "review_amazon",
+    "category": "date_range",
+    "status": "OK",
+    "time": 47.0,
+    "answer_len": 461,
+    "answer_preview": "### 📊 아마존 2025년 총 리뷰 수 분석  #### 요약  2025년 아마존 플랫폼에서 발생한 총 리뷰 수는 **1,759건**입니다. 이는 해당 연도 동안 고객들이 남긴 모든 제품 리뷰를 합산한 결과입니다.  #### 분석 및 인사이트  *   2025년 한 해 동안 아마존에서 **1,759건**의 리뷰가 발생했습니다. 이는 고객들의 제품에 대한 관"
+  },
+  {
+    "id": "V2_RA-080",
+    "query": "Amazon Centella Soothing Cream 후기 수 변화?",
+    "table": "review_amazon",
+    "category": "product_review",
+    "status": "WARN",
+    "time": 68.7,
+    "answer_len": 589,
+    "answer_preview": "# 스킨1004 마다가스카르 센텔라 수딩 크림 — 플랫폼별 리뷰 수 현황  ## 주요 플랫폼별 리뷰 수  | 플랫폼 | 리뷰 수 | |---|---| | **Picky** | **1,527개** | | **iHerb** | **908개** | | **월마트** | **449개** | | **LOOKFANTASTIC** | **420개** | | **화해**"
+  },
+  {
+    "id": "V2_RA-081",
+    "query": "아마존 리뷰 원문과 번역문 견줘봐",
+    "table": "review_amazon",
+    "category": "review_content",
+    "status": "OK",
+    "time": 45.6,
+    "answer_len": 11777,
+    "answer_preview": "### 📊 SKIN1004 아마존 리뷰 원문 및 번역문 비교 분석  #### 요약  최근 **50건**의 SKIN1004 아마존 리뷰 원문과 번역문을 비교 분석한 결과, 전반적으로 번역 품질이 매우 우수하여 원문의 의미와 뉘앙스를 잘 전달하고 있습니다. 특히, 제품의 특징과 사용 경험에 대한 상세한 설명이 한국어로 자연스럽게 번역되어 고객들이 제품 정보를 "
+  },
+  {
+    "id": "V2_RA-082",
+    "query": "Amazon 제품별 리뷰 비율 차트은 어떤가요?",
+    "table": "review_amazon",
+    "category": "review_count",
+    "status": "OK",
+    "time": 42.9,
+    "answer_len": 1544,
+    "answer_preview": "### 📊 Amazon SKIN1004 제품별 리뷰 현황 분석  #### 요약  지난 1년간(2025년 3월 8일 ~ 2026년 3월 8일) Amazon에서 SKIN1004 브랜드의 **총 23개 제품**에 대한 **2,752건**의 리뷰가 수집되었습니다. 이 중 '센텔라 에어핏 선크림 라이트'가 **213건**으로 가장 많은 리뷰를 기록하며 최다 리뷰 제"
+  },
+  {
+    "id": "V2_RA-083",
+    "query": "아마존 리뷰데이터 최근 2주간 데이터 좀 봐줘",
+    "table": "review_amazon",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 58.6,
+    "answer_len": 1618,
+    "answer_preview": "### 📊 아마존 리뷰 데이터 (2026년 2월 22일 ~ 3월 8일 수집분)  #### 요약  2026년 2월 22일부터 3월 8일까지 아마존에서 수집된 리뷰 데이터는 총 **29건**입니다. 이 리뷰들은 2026년 2월 19일부터 2월 27일 사이에 작성되었습니다. 수집된 리뷰들을 분석한 결과, 제품의 보습력, 진정 효과, 사용감 등에 대한 긍정적인 평"
+  },
+  {
+    "id": "V2_RA-084",
+    "query": "Amazon 리뷰 총 건수와 제품 수 어떻게 되나요?",
+    "table": "review_amazon",
+    "category": "total_count",
+    "status": "OK",
+    "time": 30.1,
+    "answer_len": 471,
+    "answer_preview": "### 📊 Amazon 리뷰 현황 분석  #### 요약  현재 Amazon 플랫폼에는 총 **2,770건**의 리뷰가 등록되어 있으며, 이는 **23개**의 고유 제품에 대한 리뷰입니다.  #### 분석 및 인사이트  *   **리뷰 활동 활발성**: 총 2,770건의 리뷰는 Amazon 플랫폼에서 제품에 대한 사용자들의 활발한 관심과 참여를 보여줍니다. "
+  },
+  {
+    "id": "V2_RA-085",
+    "query": "아마존 2024년 하반기 리뷰 알려주세요",
+    "table": "review_amazon",
+    "category": "date_range",
+    "status": "OK",
+    "time": 56.3,
+    "answer_len": 3589,
+    "answer_preview": "### 📊 아마존 2024년 하반기 SKIN1004 제품 리뷰 분석  #### 요약  2024년 하반기(7월 1일 ~ 12월 31일) 아마존에서 SKIN1004 제품에 대한 총 **152건**의 리뷰가 수집되었으며, 이는 **14개**의 고유 제품에 대한 것입니다. 전반적으로 제품의 보습, 진정, 피부 개선 효과에 대한 긍정적인 평가가 많았으나, 일부 제품"
+  },
+  {
+    "id": "V2_RA-086",
+    "query": "Amazon 리부 수 기준 제품 순위표 좀 좀 알려줘",
+    "table": "review_amazon",
+    "category": "top_reviewed",
+    "status": "OK",
+    "time": 33.0,
+    "answer_len": 1393,
+    "answer_preview": "### 📊 SKIN1004 Amazon 제품별 리뷰 수 순위 (2026년 03월 08일 기준)  #### 요약  SKIN1004 브랜드의 Amazon 제품 중 리뷰 수가 가장 많은 제품은 **센텔라 에어핏 선크림 라이트**로, 총 **213개**의 리뷰를 기록했습니다. 이어서 센텔라 라이트 클렌징 오일이 144개, 포어마이징 퀵 클레이 스틱 마스크가 137"
+  },
+  {
+    "id": "V2_RA-087",
+    "query": "아마존 최근 리뷰 내용 요약해줘 알 수 있을까요?",
+    "table": "review_amazon",
+    "category": "review_content",
+    "status": "WARN",
+    "time": 68.2,
+    "answer_len": 55489,
+    "answer_preview": "### 📊 SKIN1004 아마존 최근 리뷰 분석 보고서  #### 요약  2026년 2월 16일부터 2월 27일까지의 SKIN1004 아마존 리뷰 **50건**을 분석한 결과, 전반적으로 **매우 긍정적인 고객 반응**을 보였습니다. 특히, 제품들은 **뛰어난 보습력, 진정 효과, 민감성 피부 적합성**으로 높은 평가를 받았으며, 가볍고 끈적임 없는 사용"
+  },
+  {
+    "id": "V2_RA-088",
+    "query": "Amazon 각 월 리부 수 평균",
+    "table": "review_amazon",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 33.7,
+    "answer_len": 495,
+    "answer_preview": "### 📊 Amazon SKIN1004 월별 리뷰 수 평균 분석  #### 요약  2025년 3월 8일부터 2026년 3월 7일까지의 Amazon SKIN1004 브랜드 월별 리뷰 수는 평균 **923.3개**로 집계되었습니다. 이는 해당 기간 동안 SKIN1004 제품이 Amazon에서 꾸준히 고객 피드백을 받고 있음을 보여줍니다.  #### 분석 및 인"
+  },
+  {
+    "id": "V2_RA-089",
+    "query": "참고로 아마존 리뷰 제품명 목록 보여줘",
+    "table": "review_amazon",
+    "category": "review_count",
+    "status": "OK",
+    "time": 42.4,
+    "answer_len": 1224,
+    "answer_preview": "### 📊 SKIN1004 아마존 리뷰 제품명 목록  #### 요약  2025년 3월 8일 이후 수집된 SKIN1004 브랜드의 아마존 리뷰에서 **총 23개**의 고유한 제품명이 확인되었습니다. 이 제품들은 센텔라, 포어마이징, 프로바이오시카 등 SKIN1004의 다양한 스킨케어 라인업을 포함하고 있습니다.  #### 상세 데이터  총 23개의 제품명 중"
+  },
+  {
+    "id": "V2_RA-090",
+    "query": "Amazon 2025년 1월 리뷰 내용 보여줄 수 있어?",
+    "table": "review_amazon",
+    "category": "review_content",
+    "status": "OK",
+    "time": 28.0,
+    "answer_len": 468,
+    "answer_preview": "안녕하세요! 요청하신 **Amazon 2025년 1월 리뷰 데이터**를 조회하지 못했습니다.  좀 더 구체적인 조건을 포함하여 질문해 주시면 정확한 데이터를 찾는 데 도움이 됩니다. 아래 예시를 참고해 주세요:  ---  **💡 질문 예시**  1. **\"Amazon US에서 2025년 1월 마다가스카르 센텔라 토너의 리뷰 요약을 보여줘\"**    → 국가"
+  },
+  {
+    "id": "V2_RA-091",
+    "query": "아마존에서 Centella 제품 리뷰 전체 알려주세요",
+    "table": "review_amazon",
+    "category": "product_review",
+    "status": "OK",
+    "time": 28.1,
+    "answer_len": 473,
+    "answer_preview": "해당 조건에 맞는 데이터가 존재하지 않습니다.  SQL 쿼리에서 `collect_date >= '2025-03-08'` 조건이 문제였습니다. 2025년 3월 8일은 미래 날짜이므로, 해당 날짜 이후에 수집된 리뷰 데이터는 현재 존재하지 않습니다. 또한, `brand LIKE '%SKIN1004%'` 조건은 아마존의 모든 Centella 제품이 아닌 SKIN"
+  },
+  {
+    "id": "V2_RA-092",
+    "query": "Amazon 리뷰 최신 데이터 날짜가 언제야",
+    "table": "review_amazon",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 24.8,
+    "answer_len": 472,
+    "answer_preview": "### 📊 Amazon 리뷰 데이터 최신 업데이트 현황  #### 요약  Amazon 리뷰 데이터의 **최신 수집 날짜는 2026년 03월 02일**입니다. 이는 오늘(2026년 03월 08일) 기준으로 6일 전까지의 리뷰 정보가 반영되어 있음을 의미합니다.  #### 분석 및 인사이트  *   **최신성 유지**: Amazon 리뷰 데이터는 2026년 0"
+  },
+  {
+    "id": "V2_RA-093",
+    "query": "아마죤 2024년 9월 후기 건수",
+    "table": "review_amazon",
+    "category": "date_range",
+    "status": "OK",
+    "time": 27.9,
+    "answer_len": 207,
+    "answer_preview": "2024년 9월 아마존의 후기 건수에 대한 구체적인 통계는 공개적으로 확인되지 않았습니다.  현재 검색 가능한 자료에서는 해당 수치를 찾을 수 없으며, 아마존은 월별 후기 건수를 외부에 별도로 공개하지 않고 있습니다.  **SKIN1004 제품의 아마존 후기 건수**를 확인하고 싶으신 거라면, 구체적으로 어떤 제품인지 알려주시면 내부 데이터에서 확인을 도와"
+  },
+  {
+    "id": "V2_RA-094",
+    "query": "우리 회사 Amazon 후기 주간 트렌드",
+    "table": "review_amazon",
+    "category": "monthly_trend",
+    "status": "WARN",
+    "time": 62.3,
+    "answer_len": 1151,
+    "answer_preview": "# SKIN1004 Amazon 리뷰 주간 트렌드  최근 아마존 리뷰 환경의 주요 트렌드를 SKIN1004 관점에서 정리하면 다음과 같습니다.  ---  ## 1. 플랫폼 환경 변화  | 트렌드 | 핵심 내용 | SKIN1004 시사점 | |---|---|---| | **AI 기반 가짜 리뷰 단속 강화** | 아마존이 AI로 가짜 리뷰를 정교하게 탐지 중 "
+  },
+  {
+    "id": "V2_RA-095",
+    "query": "아마존 SKIN1004 평가만 보여줘",
+    "table": "review_amazon",
+    "category": "brand_review",
+    "status": "OK",
+    "time": 17.6,
+    "answer_len": 93,
+    "answer_preview": "고객님, 문의하신 '아마존 SKIN1004 평가'에 대한 정보는 현재 사내 CS 데이터베이스에서 찾을 수 없습니다.  해당 질문에 대한 CS 데이터를 찾지 못했습니다."
+  },
+  {
+    "id": "V2_RA-096",
+    "query": "Amazon 최근 평가 7건 한국어로",
+    "table": "review_amazon",
+    "category": "recent_n",
+    "status": "WARN",
+    "time": 67.0,
+    "answer_len": 1077,
+    "answer_preview": "# 아마존(Amazon) 최근 평가 요약 7건  ---  ## 1. 2025년 4분기 실적 발표 (2026.02.05) - 4분기 매출 **2,134억 달러** (전년 동기 대비 **14% 증가**, 시장 예상치 상회) - 주당순이익(EPS) **1.95달러** (예상치 소폭 하회) - **AWS 매출 24% 급증** → 13분기 만에 최고 성장률 - 광고"
+  },
+  {
+    "id": "V2_RA-097",
+    "query": "아마존 Tone Brightening Capsule Serum 리뷰데이터 원문",
+    "table": "review_amazon",
+    "category": "review_content",
+    "status": "OK",
+    "time": 33.2,
+    "answer_len": 597,
+    "answer_preview": "해당 조건의 데이터가 없습니다.  SQL에서 사용된 필터 조건 중 다음 두 가지가 문제로 보입니다: *   **수집일 (`collect_date`)**: `collect_date >= '2025-03-08'` 조건은 미래 날짜를 지정하고 있어, 현재 시점에서는 해당 조건을 만족하는 데이터가 존재할 수 없습니다. *   **제품명 (`product_name`"
+  },
+  {
+    "id": "V2_RA-098",
+    "query": "Amazon 리뷰 제품별 최신 날짜 좀 봐줘 확인 부탁드립니다",
+    "table": "review_amazon",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 32.4,
+    "answer_len": 1913,
+    "answer_preview": "### 📊 SKIN1004 Amazon 제품별 최신 리뷰 날짜 분석  #### 요약  SKIN1004 브랜드의 Amazon 제품별 최신 리뷰 날짜를 확인한 결과, 가장 최근 리뷰는 **2026년 2월 27일**에 작성되었으며, '센텔라 앰플 폼', '프로바이오시카 바쿠치올 아이 크림', '센텔라 크림' 세 가지 제품이 해당 날짜에 최신 리뷰를 기록했습니다."
+  },
+  {
+    "id": "V2_RA-099",
+    "query": "아마존 리부 분기별 추이은 어떤가요?",
+    "table": "review_amazon",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 31.3,
+    "answer_len": 430,
+    "answer_preview": "안녕하세요! 요청하신 **아마존 리뷰 분기별 추이** 데이터를 현재 조회하지 못했습니다.  좀 더 정확한 결과를 위해 **조건을 구체적으로 지정**해 주시면 다시 조회해 드리겠습니다. 아래 예시를 참고해 주세요.  ---  **💡 질문 예시**  1. **\"2024년 아마존 US에서 마다가스카르 센텔라 앰플의 분기별 리뷰 수 추이를 알려줘\"** 2. **\""
+  },
+  {
+    "id": "V2_RA-100",
+    "query": "Amazon 전체 후기 중 2025년 비율 몇이야?",
+    "table": "review_amazon",
+    "category": "date_range",
+    "status": "OK",
+    "time": 18.6,
+    "answer_len": 138,
+    "answer_preview": "2025년 아마존 전체 후기 중 2025년 후기가 차지하는 비율에 대한 공식 통계는 **공개된 바 없습니다.**  아마존은 연도별 리뷰 비율과 같은 세부 데이터를 외부에 공개하지 않으며, 현재 확인 가능한 자료에서도 해당 수치를 찾을 수 없습니다."
+  },
+  {
+    "id": "V2_RA-101",
+    "query": "아마존 평가 어떤 제품이 있어?",
+    "table": "review_amazon",
+    "category": "review_count",
+    "status": "OK",
+    "time": 21.9,
+    "answer_len": 384,
+    "answer_preview": "안녕하세요! 😊  아마존 관련 제품 평가 데이터를 조회하려 했으나, **요청하신 데이터를 조회하지 못했습니다.**  질문을 조금 더 구체적으로 해주시면 정확한 데이터를 찾는 데 도움이 됩니다. 아래 항목들을 포함해 주세요:  > **기간 / 국가(마켓플레이스) / 제품명** 등을 특정해 주시면 좋습니다.  ---  ### 💡 질문 예시  1. **\"2024"
+  },
+  {
+    "id": "V2_RA-102",
+    "query": "간단하게 Amazon 평가 수집 현황 알려줘",
+    "table": "review_amazon",
+    "category": "total_count",
+    "status": "OK",
+    "time": 27.2,
+    "answer_len": 471,
+    "answer_preview": "## 아마존 리뷰 수집 현황 요약  아마존은 리뷰 신뢰도를 높이기 위해 **공식 채널 운영 + 허위 리뷰 강력 제재**를 병행하고 있습니다.  ### 공식 리뷰 수집 방법  | 채널 | 내용 | |---|---| | **리뷰 요청 기능** | 셀러 센트럴에서 배송 완료 후 **5~30일 이내** 구매자에게 표준화된 리뷰 요청 이메일 발송 | | **Amaz"
+  },
+  {
+    "id": "V2_RA-103",
+    "query": "아마존 최근 리뷰데이터 중 Centella Ampoule 관련 부탁드려요",
+    "table": "review_amazon",
+    "category": "product_review",
+    "status": "OK",
+    "time": 25.7,
+    "answer_len": 462,
+    "answer_preview": "요청하신 조건에 해당하는 데이터가 없습니다.  브랜드 조건(`brand LIKE '%SKIN1004%'`)은 적절해 보이나, 제품명 조건(`product_name LIKE '%Centella%Ampoule%'`)이 문제일 수 있습니다. 데이터베이스에 저장된 제품명이 'Centella Ampoule'과 정확히 일치하지 않거나, 다른 단어가 포함되어 있을 수 "
+  },
+  {
+    "id": "V2_RA-104",
+    "query": "Amazon 2025년 1월~2월 리뷰 어떻게 되나요?",
+    "table": "review_amazon",
+    "category": "date_range",
+    "status": "OK",
+    "time": 28.7,
+    "answer_len": 486,
+    "answer_preview": "안녕하세요! 요청하신 **Amazon 2025년 1월~2월 리뷰 데이터**를 조회하지 못했습니다.  좀 더 정확한 결과를 위해 **조건을 구체적으로** 지정해 주시면 다시 조회해 드리겠습니다. 예를 들어 아래와 같은 항목을 명시해 주시면 도움이 됩니다:  - **국가/마켓플레이스** (예: Amazon US, Amazon JP 등) - **특정 제품명** "
+  },
+  {
+    "id": "V2_RA-105",
+    "query": "아마존 리뷰데이터 수 증가율은 어떤가요?",
+    "table": "review_amazon",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 28.0,
+    "answer_len": 466,
+    "answer_preview": "안녕하세요! 아마존 리뷰 데이터 수 증가율에 대해 조회를 시도했으나, **요청하신 데이터를 조회하지 못했습니다.**  좀 더 구체적인 조건을 포함하여 질문해 주시면 정확한 데이터를 찾는 데 도움이 됩니다. 아래 항목들을 명시해 주시면 좋습니다:  - **기간** (예: 특정 월, 분기, 연도 등) - **국가/마켓플레이스** (예: 미국, 일본, 독일 등)"
+  },
+  {
+    "id": "V2_RA-106",
+    "query": "빠르게 Amazon 제품별 최신 리뷰 내용 정리 정리해줘",
+    "table": "review_amazon",
+    "category": "review_content",
+    "status": "OK",
+    "time": 40.4,
+    "answer_len": 4192,
+    "answer_preview": "### 📊 SKIN1004 Amazon 최신 제품별 리뷰 요약  #### 요약  **2026년 2월 16일부터 2월 27일까지**의 SKIN1004 Amazon 제품 리뷰 **50건**을 분석한 결과, 전반적으로 제품에 대한 높은 만족도를 보였습니다. 특히, **보습, 진정, 피부 개선 효과**에 대한 긍정적인 피드백이 두드러졌으며, 다양한 제품 라인에서 "
+  },
+  {
+    "id": "V2_RA-107",
+    "query": "간단하게 amazon 리뷰 데이터에서 브랜드 종류",
+    "table": "review_amazon",
+    "category": "brand_review",
+    "status": "OK",
+    "time": 21.0,
+    "answer_len": 358,
+    "answer_preview": "### 📊 아마존 리뷰 데이터 내 브랜드 종류 분석  #### 요약  아마존 리뷰 데이터에서 확인된 브랜드는 **SKIN1004** 단 한 종류입니다.  #### 분석 및 인사이트  *   현재 조회된 아마존 리뷰 데이터셋은 **SKIN1004** 브랜드에 대한 정보만을 포함하고 있습니다. *   이는 해당 데이터셋이 특정 브랜드(SKIN1004)의 아마존"
+  },
+  {
+    "id": "V2_RA-108",
+    "query": "Amazon 최근 후기 40건 알려줘 부탁드려요",
+    "table": "review_amazon",
+    "category": "recent_n",
+    "status": "OK",
+    "time": 15.7,
+    "answer_len": 284,
+    "answer_preview": "죄송합니다. **Amazon 최신 후기 40건을 직접 제공해 드리기 어렵습니다.**  현재 저의 검색 기능으로는 실시간으로 업데이트되는 Amazon 개별 사용자 후기에 접근할 수 없습니다.  ## 확인 방법 안내  1. **Amazon 웹사이트/앱** → SKIN1004 제품 페이지 → **\"Customer Reviews\"** 탭에서 최신순 정렬 2. **"
+  },
+  {
+    "id": "V2_RA-109",
+    "query": "아마존 Madagascar Centella Ampoule 월별 리뷰 수 알려주세요",
+    "table": "review_amazon",
+    "category": "product_review",
+    "status": "OK",
+    "time": 35.6,
+    "answer_len": 647,
+    "answer_preview": "요청하신 조건에 해당하는 데이터가 없습니다.  SQL 쿼리 결과가 0행인 이유는 `product_name` 필터 조건 때문일 가능성이 높습니다. 'Madagascar Centella Ampoule'이라는 정확한 제품명으로 최근 1년간 아마존에 등록된 리뷰가 없거나, 제품명이 다르게 저장되어 있을 수 있습니다. SKIN1004의 '마다가스카르 센텔라 앰플'은"
+  },
+  {
+    "id": "V2_RA-110",
+    "query": "우리 회사 Amazon 리부 최다 제품 TOP 7",
+    "table": "review_amazon",
+    "category": "top_reviewed",
+    "status": "OK",
+    "time": 30.6,
+    "answer_len": 1043,
+    "answer_preview": "### 📊 Amazon 리뷰 최다 제품 TOP 7 (지난 1년간)  #### 요약  지난 1년간(2025년 3월 8일 ~ 2026년 3월 8일) Amazon에서 SKIN1004 제품 중 가장 많은 리뷰를 받은 제품은 **센텔라 에어핏 선크림 라이트**로, 총 **213개**의 리뷰를 기록했습니다. TOP 7 제품들은 모두 100개 이상의 리뷰를 확보하며 활"
+  },
+  {
+    "id": "V2_RA-111",
+    "query": "아마존 2024년 후기 총 건수 부탁",
+    "table": "review_amazon",
+    "category": "date_range",
+    "status": "OK",
+    "time": 31.1,
+    "answer_len": 607,
+    "answer_preview": "### 📊 아마존 2024년 SKIN1004 브랜드 총 후기 건수  #### 요약  2024년 한 해 동안 아마존에서 SKIN1004 브랜드에 대해 작성된 총 후기 건수는 **215건**으로 집계되었습니다. 이는 해당 기간 동안 고객의 제품 관심도와 피드백 수준을 나타내는 지표입니다.  #### 상세 데이터  (단일 수치이므로 상세 데이터 섹션은 생략합니다"
+  },
+  {
+    "id": "V2_RA-112",
+    "query": "요즘 Amazon 리뷰 번역 데이터 최근 것 좀 알려줘",
+    "table": "review_amazon",
+    "category": "review_content",
+    "status": "OK",
+    "time": 43.8,
+    "answer_len": 11787,
+    "answer_preview": "### 📊 SKIN1004 Amazon 최근 리뷰 번역 데이터 보고서  #### 요약  2026년 2월 16일부터 2026년 2월 27일까지의 SKIN1004 브랜드 Amazon 리뷰 데이터 **총 50건**이 조회되었습니다. 최근 리뷰들은 전반적으로 제품의 **보습력, 진정 효과, 가벼운 사용감, 빠른 흡수력**에 대해 긍정적인 평가를 보였습니다. 특히 "
+  },
+  {
+    "id": "V2_RA-113",
+    "query": "아마존 Centella Soothing Cream 리뷰데이터 원문 보여줘",
+    "table": "review_amazon",
+    "category": "review_content",
+    "status": "OK",
+    "time": 37.3,
+    "answer_len": 488,
+    "answer_preview": "해당 조건의 데이터가 없습니다.  SQL 쿼리에서 `product_name` 필터 조건이 문제였습니다. `product_name LIKE '%Centella_Soothing_Cream%'`에서 `_`는 SQL에서 한 글자 와일드카드로 사용됩니다. 따라서 실제 제품명에 공백이 있는 `Centella Soothing Cream`이나 `Madagascar Cen"
+  },
+  {
+    "id": "V2_RA-114",
+    "query": "Amazon 리뷰데이터 수 각 제품 내림차순",
+    "table": "review_amazon",
+    "category": "review_count",
+    "status": "OK",
+    "time": 23.4,
+    "answer_len": 1876,
+    "answer_preview": "### 📊 SKIN1004 Amazon 제품별 리뷰 수 현황  #### 요약  SKIN1004 브랜드의 Amazon 리뷰 데이터를 분석한 결과, 총 23개 제품 중 '센텔라 에어핏 선크림 라이트'가 **213개**의 리뷰를 기록하며 가장 많은 관심을 받았습니다. 상위 20개 제품 모두 100개 이상의 리뷰를 확보했으며, 주로 센텔라, 포어마이징, 프로바이오"
+  },
+  {
+    "id": "V2_RA-115",
+    "query": "아마존 최근 리뷰 날짜 확인 알 수 있을까요?",
+    "table": "review_amazon",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 22.4,
+    "answer_len": 2754,
+    "answer_preview": "### 📊 SKIN1004 아마존 최근 리뷰 날짜 현황  #### 요약  SKIN1004 브랜드의 아마존 최신 리뷰는 **2026년 02월 27일**에 작성되었습니다. 이 날짜에는 '센텔라 앰플 폼', '프로바이오시카 바쿠치올 아이 크림', '센텔라 크림' 등 총 3건의 리뷰가 확인되었습니다. 오늘 날짜(2026년 03월 08일) 기준으로 약 1주 전까지 "
+  },
+  {
+    "id": "V2_RA-116",
+    "query": "확인 좀 해줘 Amazon 2024년 8월 리뷰",
+    "table": "review_amazon",
+    "category": "date_range",
+    "status": "OK",
+    "time": 41.0,
+    "answer_len": 2920,
+    "answer_preview": "## 📊 2024년 8월 Amazon SKIN1004 제품 리뷰 현황  #### 요약  2024년 8월 한 달간 Amazon에서 SKIN1004 제품에 대한 총 **15건**의 리뷰가 확인되었습니다. 주요 제품으로는 프로바이오시카 인텐시브 앰플, 히알루시카 블루 세럼, 센텔라 에어핏 선크림 라이트 등이 있었으며, 전반적으로 긍정적인 평가가 많았으나 일부 제"
+  },
+  {
+    "id": "V2_RA-117",
+    "query": "아마존 리뷰 총합 몇 건이야 확인 부탁드립니다",
+    "table": "review_amazon",
+    "category": "total_count",
+    "status": "OK",
+    "time": 35.5,
+    "answer_len": 416,
+    "answer_preview": "### 📊 아마존 SKIN1004 리뷰 현황  #### 요약  2025년 3월 8일 이후 수집된 SKIN1004 브랜드의 아마존 리뷰는 총 **2,770건**입니다. 이는 특정 기간 동안의 리뷰 수집 현황을 나타냅니다.  #### 분석 및 인사이트  *   해당 데이터는 2025년 3월 8일부터 오늘(2026년 3월 8일)까지 수집된 SKIN1004 브랜드"
+  },
+  {
+    "id": "V2_RA-118",
+    "query": "Amazon Centella Cleansing Oil 후기 내용",
+    "table": "review_amazon",
+    "category": "review_content",
+    "status": "OK",
+    "time": 43.7,
+    "answer_len": 707,
+    "answer_preview": "# 스킨1004 마다가스카르 센텔라 라이트 클렌징 오일 후기 요약  아마존 채널에 한정된 후기는 확인되지 않으나, 해당 제품에 대한 전반적인 후기를 정리하면 다음과 같습니다.  ---  ## ✅ 긍정적 후기  | 항목 | 내용 | |------|------| | **가벼운 사용감** | 오일 특유의 무겁고 끈적이는 느낌이 적어 사용감이 가볍다는 평이 다수 "
+  },
+  {
+    "id": "V2_RA-119",
+    "query": "아마존 후기 제품 수 몇 개야?",
+    "table": "review_amazon",
+    "category": "review_count",
+    "status": "OK",
+    "time": 29.9,
+    "answer_len": 432,
+    "answer_preview": "### 📊 아마존 SKIN1004 후기 제품 현황  #### 요약  현재 아마존에 등록된 SKIN1004 브랜드 제품 중 고객 후기가 있는 제품은 총 **23개**입니다.  #### 분석 및 인사이트  *   아마존에서 SKIN1004 브랜드의 후기 보유 제품 수를 파악했습니다. 이 수치는 고객들에게 노출되고 후기가 작성된 제품의 종류를 나타냅니다. *  "
+  },
+  {
+    "id": "V2_RA-120",
+    "query": "Amazon 달별 리뷰 변화 분석 좀 확인 가능한가요?",
+    "table": "review_amazon",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 44.1,
+    "answer_len": 888,
+    "answer_preview": "### 📊 Amazon SKIN1004 월별 리뷰 변화 분석  #### 요약  ⚠️ 2026년 1월부터 3월 8일까지의 Amazon SKIN1004 리뷰 데이터를 분석한 결과, 월별 리뷰 수가 급격히 감소하는 추세를 보였습니다. 1월에 **2,341건**이었던 리뷰 수는 2월에 **410건**으로 크게 줄었으며, 3월(8일 기준)에는 **19건**으로 더욱"
+  },
+  {
+    "id": "V2_RA-121",
+    "query": "요즘 아마존 후기에서 가장 오래된 리뷰는?",
+    "table": "review_amazon",
+    "category": "date_range",
+    "status": "OK",
+    "time": 31.2,
+    "answer_len": 780,
+    "answer_preview": "### 📊 SKIN1004 아마존 후기 중 가장 오래된 리뷰 분석  #### 요약  SKIN1004 제품의 아마존 후기 중 현재 데이터에서 가장 오래된 리뷰는 **2019년 11월 23일**에 작성된 '센텔라 토닝 토너' 제품의 리뷰입니다. 해당 리뷰는 제품이 SKIN1004 마스크와 함께 사용될 때 효과가 좋다고 언급하고 있습니다.  #### 상세 데이터"
+  },
+  {
+    "id": "V2_RA-122",
+    "query": "참고로 Amazon 리뷰 최근 60건 데이터 빨리",
+    "table": "review_amazon",
+    "category": "recent_n",
+    "status": "WARN",
+    "time": 62.5,
+    "answer_len": 4908,
+    "answer_preview": "### 📊 SKIN1004 Amazon 최근 60건 리뷰 분석 보고서  #### 요약  SKIN1004 브랜드의 Amazon 최신 리뷰 **60건**을 분석한 결과, 해당 리뷰들은 **2026년 02월 15일**부터 **2026년 02월 27일**까지 작성되었습니다. 전반적으로 제품의 보습력, 진정 효과, 순한 사용감, 그리고 가성비에 대한 긍정적인 평가가"
+  },
+  {
+    "id": "V2_RA-123",
+    "query": "아마존 Centella Ampoule 리뷰 건수 월별 알려주세요",
+    "table": "review_amazon",
+    "category": "product_review",
+    "status": "OK",
+    "time": 41.5,
+    "answer_len": 523,
+    "answer_preview": "안녕하세요, 요청하신 **아마존 Centella Ampoule 리뷰 건수 월별 데이터**를 조회하지 못했습니다.  좀 더 정확한 결과를 위해 아래 정보를 구체적으로 포함하여 다시 질문해 주시면 감사하겠습니다.  - **조회 기간** (예: 2024년 1월~12월, 최근 6개월 등) - **아마존 마켓플레이스** (예: 미국, 일본, 독일 등) - **정확한"
+  },
+  {
+    "id": "V2_RA-124",
+    "query": "Amazon 리뷰 최근 3개월 추세 부탁 부탁드려요",
+    "table": "review_amazon",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 38.5,
+    "answer_len": 893,
+    "answer_preview": "### 📊 Amazon 리뷰 최근 3개월 추세 분석 (2026년 1월 ~ 3월)  #### 요약  Amazon 리뷰의 최근 3개월(2026년 1월 ~ 3월) 추세는 급격한 감소세를 보이고 있습니다. 2026년 1월 **2,341**건으로 정점을 찍은 후, 2월에는 **410**건으로 크게 줄었으며, 3월(8일 기준)에는 **19**건으로 더욱 감소했습니다."
+  },
+  {
+    "id": "V2_RA-125",
+    "query": "우리 회사 아마존 리뷰 데이터 전체 현황 알려주세요",
+    "table": "review_amazon",
+    "category": "total_count",
+    "status": "OK",
+    "time": 37.5,
+    "answer_len": 537,
+    "answer_preview": "### 📊 SKIN1004 아마존 리뷰 현황 (2025년 03월 08일 이후)  #### 요약  ⚠️ 사용자의 '전체 현황' 요청에도 불구하고, 현재 조회된 데이터는 **2025년 03월 08일부터 2026년 03월 08일(오늘)까지**의 SKIN1004 아마존 리뷰 데이터입니다. 이 기간 동안 SKIN1004 브랜드의 아마존 리뷰는 총 **2,770**건"
+  },
+  {
+    "id": "V2_RA-126",
+    "query": "Amazon SKIN1004 브랜드 리뷰 수 추이 궁금해 어때?",
+    "table": "review_amazon",
+    "category": "brand_review",
+    "status": "OK",
+    "time": 36.9,
+    "answer_len": 476,
+    "answer_preview": "안녕하세요! 😊  요청하신 **Amazon SKIN1004 브랜드 리뷰 수 추이** 데이터를 현재 조회하지 못했습니다.  좀 더 정확한 데이터를 찾아드릴 수 있도록, 아래 항목을 구체적으로 알려주시면 도움이 됩니다:  - **기간** (예: 최근 3개월, 2024년 1월~6월 등) - **국가/마켓플레이스** (예: Amazon US, Amazon JP 등"
+  },
+  {
+    "id": "V2_RA-127",
+    "query": "amazon 리뷰 중 최근 것부터 정렬해서 보여줘 확인 부탁드립니다",
+    "table": "review_amazon",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 57.3,
+    "answer_len": 4819,
+    "answer_preview": "### 📊 SKIN1004 아마존 최신 리뷰 분석 (2026년 2월)  #### 요약  SKIN1004 브랜드의 아마존 리뷰 중 **가장 최근 50건**을 조회했습니다. 조회된 리뷰는 **2026년 2월 16일부터 2026년 2월 27일까지**의 기간에 작성되었으며, 주로 제품의 보습력, 진정 효과, 순한 사용감에 대한 긍정적인 평가가 많았습니다.  ###"
+  },
+  {
+    "id": "V2_RA-128",
+    "query": "Amazon 2024년 7월 리뷰 데이터 알려주시면 감사하겠습니다",
+    "table": "review_amazon",
+    "category": "date_range",
+    "status": "OK",
+    "time": 46.7,
+    "answer_len": 2376,
+    "answer_preview": "### 📊 Amazon 2024년 7월 SKIN1004 제품 리뷰 데이터 분석  #### 요약  2024년 7월 한 달간 Amazon에서 SKIN1004 제품에 대한 **총 11건**의 리뷰가 확인되었습니다. 주요 제품으로는 '프로바이오시카 에센스 토너'와 '센텔라 에어핏 선크림 라이트'가 각각 3건으로 가장 많은 리뷰를 기록했으며, 전반적으로 제품의 보습"
+  },
+  {
+    "id": "V2_RA-129",
+    "query": "궁금한데 아마존 제품별 평가 수 표로 보여줄래",
+    "table": "review_amazon",
+    "category": "review_count",
+    "status": "OK",
+    "time": 51.1,
+    "answer_len": 1450,
+    "answer_preview": "### 📊 SKIN1004 아마존 제품별 평가 수 현황  #### 요약  SKIN1004 제품 중 아마존에서 가장 많은 평가를 받은 제품은 **센텔라 에어핏 선크림 라이트**로 **213개**의 평가를 기록했습니다. 총 23개 제품 중 상위 20개 제품의 평가 수는 최소 **105개**에서 최대 **213개**로, 전반적으로 고른 평가 분포를 보입니다.  "
+  },
+  {
+    "id": "V2_RA-130",
+    "query": "Amazon 리뷰 원문 언어별 분포 얼마임?",
+    "table": "review_amazon",
+    "category": "review_content",
+    "status": "OK",
+    "time": 51.9,
+    "answer_len": 1852,
+    "answer_preview": "### 📊 ⚠️ Amazon 리뷰 언어별 분포는 제공된 데이터로 확인할 수 없습니다. (대신, 제품별 리뷰 수 현황을 안내드립니다.)  #### 요약  사용자님께서 요청하신 Amazon 리뷰 원문 언어별 분포는 현재 제공된 BigQuery 실행 결과에 포함되어 있지 않아 분석이 어렵습니다. 제공된 데이터는 Amazon 제품별 리뷰 수 현황을 보여주고 있으며"
+  },
+  {
+    "id": "V2_RA-131",
+    "query": "아마존 최근 후기 요약",
+    "table": "review_amazon",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 43.8,
+    "answer_len": 1495,
+    "answer_preview": "### 📊 SKIN1004 아마존 최근 고객 후기 요약  #### 요약  SKIN1004의 아마존 최근 고객 후기(2026년 2월 16일 ~ 2월 27일) **총 50건**을 분석한 결과, 전반적으로 제품의 보습력, 진정 효과, 가벼운 사용감에 대한 긍정적인 평가가 많았습니다. 특히 '프로바이오시카 바쿠치올 아이 크림'과 '센텔라 앰플 폼'이 가장 많은 후"
+  },
+  {
+    "id": "V2_RA-132",
+    "query": "Amazon Tone Brightening Capsule Serum 리뷰 있어 얼마임?",
+    "table": "review_amazon",
+    "category": "product_review",
+    "status": "OK",
+    "time": 35.9,
+    "answer_len": 472,
+    "answer_preview": "안녕하세요! 😊  요청하신 **Amazon Tone Brightening Capsule Serum** 관련 리뷰 및 가격 데이터를 현재 **조회하지 못했습니다.**  질문을 조금 더 구체적으로 해주시면 정확한 데이터를 찾는 데 도움이 됩니다. 아래 예시를 참고해 주세요!  ---  **💡 질문 예시**  1. **\"2025년 5월 Amazon US에서 To"
+  },
+  {
+    "id": "V2_RA-133",
+    "query": "amazon 리뷰데이터 2025년 3월 데이터 있어",
+    "table": "review_amazon",
+    "category": "date_range",
+    "status": "OK",
+    "time": 57.9,
+    "answer_len": 4741,
+    "answer_preview": "### 📊 SKIN1004 아마존 2025년 3월 리뷰 데이터 분석  #### 요약  2025년 3월 한 달간 SKIN1004 브랜드의 아마존 리뷰 데이터는 총 **78건**이 조회되었습니다. 이 데이터는 다양한 제품에 대한 사용자들의 솔직한 피드백을 담고 있으며, 긍정적 및 부정적 의견이 모두 포함되어 있습니다.  #### 상세 데이터  아래는 2025년"
+  },
+  {
+    "id": "V2_RA-134",
+    "query": "잠깐, Amazon 리뷰 수 TOP 제품 비율 어때?",
+    "table": "review_amazon",
+    "category": "top_reviewed",
+    "status": "OK",
+    "time": 25.1,
+    "answer_len": 1656,
+    "answer_preview": "### 📊 Amazon 리뷰 수 TOP 제품 비율 분석  #### 요약  2026년 3월 8일 기준, SKIN1004 브랜드의 Amazon 리뷰 데이터를 분석한 결과, **총 2,770개**의 리뷰 중 상위 10개 제품이 전체 리뷰의 약 **49.44%**를 차지하고 있습니다. 특히 '센텔라 에어핏 선크림 라이트' 제품이 **213개**의 리뷰로 가장 많았"
+  },
+  {
+    "id": "V2_RA-135",
+    "query": "궁금한데 아마존 제품 후기 수 비교 차트 알려주세요",
+    "table": "review_amazon",
+    "category": "review_count",
+    "status": "OK",
+    "time": 35.5,
+    "answer_len": 449,
+    "answer_preview": "# 데이터 조회 안내  안녕하세요! 요청하신 **아마존 제품 후기 수 비교 데이터**를 현재 조회하지 못했습니다.  좀 더 정확한 결과를 위해 아래 항목을 구체적으로 지정해 주시면 다시 조회해 드리겠습니다:  - **국가** (예: 미국, 일본, 독일 등) - **기간** (예: 2024년 1분기, 최근 6개월 등) - **비교 대상 제품** (예: 특정 "
+  },
+  {
+    "id": "V2_RA-136",
+    "query": "Amazon 최근 후기 12건 어떻게 되나요?",
+    "table": "review_amazon",
+    "category": "recent_n",
+    "status": "OK",
+    "time": 17.0,
+    "answer_len": 309,
+    "answer_preview": "죄송합니다. 현재 아마존의 최근 후기 12건에 대한 정보를 확인할 수 없습니다.  아마존에는 수많은 상품이 있으며, 각 상품 페이지에 실시간으로 후기가 등록되기 때문에 특정 후기 12건을 조회하여 전달드리기 어려운 상황입니다.  보다 정확한 확인을 위해 아래 정보를 알려주시면 도움이 될 수 있습니다:  - **특정 제품명** (예: 마다가스카르 센텔라 토닝"
+  },
+  {
+    "id": "V2_RA-137",
+    "query": "빠르게 아마존 리뷰 수집일과 리뷰 작성일 차이 확인 부탁드립니다",
+    "table": "review_amazon",
+    "category": "date_range",
+    "status": "OK",
+    "time": 41.5,
+    "answer_len": 2378,
+    "answer_preview": "### 📊 아마존 리뷰 수집일과 작성일 차이 분석 (SKIN1004)  #### 요약  최근 수집된 SKIN1004 아마존 리뷰 50건을 분석한 결과, 리뷰 수집일과 작성일 간의 차이는 최소 **3일**에서 최대 **7일**로 나타났습니다. 이는 대부분의 리뷰가 작성 후 **1주일 이내**에 효율적으로 수집되고 있음을 시사합니다.  #### 상세 데이터  "
+  },
+  {
+    "id": "V2_RA-138",
+    "query": "Amazon Madagascar Centella Ampoule 한국어 평가 어떻게 되나요?",
+    "table": "review_amazon",
+    "category": "review_content",
+    "status": "OK",
+    "time": 23.7,
+    "answer_len": 578,
+    "answer_preview": "# 스킨1004 마다가스카르 센텔라 앰플 한국어 평가 요약  한국 소비자들 사이에서 주로 **피부 진정 효과**로 긍정적인 평가를 받고 있습니다. 특히 민감성·여드름성 피부 사용자들의 만족도가 높습니다.  ---  ## 주요 평가 항목  | 항목 | 평가 내용 | |------|-----------| | **피부 진정** | 민감하고 자극받은 피부 진정에 "
+  },
+  {
+    "id": "V2_RA-139",
+    "query": "아마존 리뷰데이터 주별 통계",
+    "table": "review_amazon",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 34.1,
+    "answer_len": 939,
+    "answer_preview": "### 📊 2026년 아마존 주별 리뷰 통계  #### 요약  ⚠️ 2025년 3월 8일 이후의 아마존 리뷰 통계를 요청하셨으나, 현재 제공된 데이터는 2026년 02, 07, 08, 09주차에 대한 정보만 포함하고 있습니다. 이 기간 동안 총 **2,770건**의 리뷰가 집계되었으며, 특히 2026년 02주차에 **2,341건**의 리뷰가 집중적으로 발생"
+  },
+  {
+    "id": "V2_RA-140",
+    "query": "요즘 Amazon 리뷰데이터 데이터 날짜 범위 정리해줘",
+    "table": "review_amazon",
+    "category": "date_range",
+    "status": "OK",
+    "time": 33.9,
+    "answer_len": 498,
+    "answer_preview": "### 📊 Amazon 리뷰 데이터 수집 날짜 범위  #### 요약  최근 Amazon 리뷰 데이터는 **2026년 01월 15일**부터 **2026년 03월 02일**까지 수집된 정보를 포함하고 있습니다. 이는 오늘(2026년 03월 08일) 기준으로 약 6일 전까지의 데이터입니다.  #### 분석 및 인사이트  *   제공된 Amazon 리뷰 데이터는 "
+  },
+  {
+    "id": "V2_RA-141",
+    "query": "아마죤 최다 후기 제품 알려줘 알려주시면 감사하겠습니다",
+    "table": "review_amazon",
+    "category": "top_reviewed",
+    "status": "OK",
+    "time": 36.2,
+    "answer_len": 877,
+    "answer_preview": "# 아마존 최다 후기 제품  아마존에서 꾸준히 많은 후기를 기록하고 있는 대표 제품들을 카테고리별로 정리해 드립니다.  ---  ## 전자제품 및 액세서리 | 제품 | 후기 수 | |------|---------| | **Echo Dot (3세대)** | **90만 개 이상** | | **Fire TV Stick** | **17만 ~ 69만 개 이상** ("
+  },
+  {
+    "id": "V2_RA-142",
+    "query": "우리 회사 Amazon 리뷰 전체 목록 부탁드려요",
+    "table": "review_amazon",
+    "category": "total_count",
+    "status": "OK",
+    "time": 47.6,
+    "answer_len": 11591,
+    "answer_preview": "📊 Amazon 리뷰 목록 분석 보고서  #### 요약  사용자님의 요청에 따라 최근 **1,000건**의 Amazon 리뷰 목록을 분석했습니다. 조회된 리뷰는 모두 **SKIN1004** 브랜드 제품에 대한 것이며, `CommonLabs` 브랜드 리뷰는 이번 조회 결과에 포함되지 않았습니다. 해당 리뷰들은 **2026년 2월 12일부터 2026년 2월 2"
+  },
+  {
+    "id": "V2_RA-143",
+    "query": "아마존 Centella Ampoule 리뷰 최근 5건 알고 싶어",
+    "table": "review_amazon",
+    "category": "recent_n",
+    "status": "OK",
+    "time": 29.6,
+    "answer_len": 480,
+    "answer_preview": "해당 조건에 맞는 아마존 Centella Ampoule 리뷰는 찾을 수 없습니다.  SQL 쿼리 결과가 0행인 주된 원인은 `product_name` 필터 조건이 너무 구체적일 수 있습니다. 데이터베이스에 'Centella'와 'Ampoule'을 모두 포함하는 제품명이 없거나, 다른 이름으로 등록되어 있을 가능성이 있습니다. SKIN1004 브랜드의 아마존"
+  },
+  {
+    "id": "V2_RA-144",
+    "query": "잠깐, Amazon 2025년 월간 후기 건수 대비 알고 싶어 몇이야?",
+    "table": "review_amazon",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 29.7,
+    "answer_len": 374,
+    "answer_preview": "아마존의 **2025년 월간 후기(리뷰) 건수**에 대한 구체적인 통계는 현재 공개된 자료에서 확인되지 않습니다.  아마존은 분기별 매출, 영업이익 등 재무 데이터는 공시하지만, **월별 리뷰 건수**와 같은 세부 사용자 활동 지표는 외부에 공개하지 않고 있습니다.  해당 데이터가 필요하시다면 아래 방법을 참고해 주세요:  1. **아마존 셀러 센트럴** "
+  },
+  {
+    "id": "V2_RA-145",
+    "query": "확인 좀 해줘 아마존 리뷰에서 Soothing Cream 검색",
+    "table": "review_amazon",
+    "category": "product_review",
+    "status": "OK",
+    "time": 33.8,
+    "answer_len": 955,
+    "answer_preview": "### 📊 아마존 'Soothing Cream' 관련 최근 1년간 리뷰 현황  #### 요약  지난 1년간 아마존에서 'Soothing Cream' 키워드로 검색된 SKIN1004 브랜드의 리뷰는 **총 1건**입니다. 해당 리뷰는 **2026년 01월 19일**에 작성된 **센텔라 수딩 크림**에 대한 것으로, 제품의 가벼운 질감, 빠른 흡수력, 그리고 "
+  },
+  {
+    "id": "V2_RA-146",
+    "query": "Amazon 리뷰 최근 한 달 건수 확인 가능한가요?",
+    "table": "review_amazon",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 41.8,
+    "answer_len": 450,
+    "answer_preview": "### 📊 Amazon SKIN1004 최근 한 달 리뷰 현황  #### 요약  SKIN1004 브랜드의 아마존 리뷰는 최근 한 달간 총 **154건** 발생했습니다. 이는 2026년 02월 08일부터 2026년 03월 08일까지의 데이터를 기준으로 합니다.  #### 분석 및 인사이트  *   최근 한 달간 아마존에서 SKIN1004 브랜드에 대한 리뷰가"
+  },
+  {
+    "id": "V2_RA-147",
+    "query": "요즘 아마존 후기 번역 품질 확인 빨리",
+    "table": "review_amazon",
+    "category": "review_content",
+    "status": "OK",
+    "time": 56.2,
+    "answer_len": 6846,
+    "answer_preview": "### 📊 SKIN1004 아마존 최신 후기 번역 품질 분석  #### 요약  SKIN1004 브랜드의 아마존 최신 후기 **50건**에 대한 번역 품질을 확인한 결과, **2026년 02월 16일부터 02월 27일까지**의 리뷰들이 대체로 자연스럽고 정확하게 번역되었습니다. 특히, 영어 외 스페인어 원문 리뷰도 매끄럽게 번역되어 다양한 언어에 대한 처리 "
+  },
+  {
+    "id": "V2_RA-148",
+    "query": "간단하게 Amazon 리뷰 수 연도별 비교",
+    "table": "review_amazon",
+    "category": "date_range",
+    "status": "OK",
+    "time": 33.0,
+    "answer_len": 981,
+    "answer_preview": "### 📊 SKIN1004 Amazon 리뷰 수 연도별 비교 분석  #### 요약  ⚠️ 2026년은 현재 3월 8일까지의 데이터만 반영되었습니다. SKIN1004 브랜드의 아마존 리뷰 수는 2019년부터 꾸준히 증가하는 추세를 보였으며, 특히 2025년에 **1,759건**으로 가장 많은 리뷰가 집계되었습니다. 2026년에도 현재까지 **551건**의 리"
+  },
+  {
+    "id": "V2_RA-149",
+    "query": "아마존 제품별 리뷰 트렌드 빨리?",
+    "table": "review_amazon",
+    "category": "monthly_trend",
+    "status": "WARN",
+    "time": 89.6,
+    "answer_len": 3855,
+    "answer_preview": "### 📈 아마존 제품별 리뷰 트렌드 분석  #### 요약  SKIN1004의 아마존 매출은 지난 1년간 **약 63.1억원**을 기록하며 견조한 성장세를 보이고 있으며, 특히 **SK_Centella_Ampoule_100ml**이 2026년 2월 **약 3.01억원**의 매출로 선두를 달리고 있습니다. 이러한 긍정적인 매출 흐름 속에서 아마존은 AI 기반"
+  },
+  {
+    "id": "V2_RA-150",
+    "query": "Amazon 전체 리뷰 수 현황 알려주세요",
+    "table": "review_amazon",
+    "category": "total_count",
+    "status": "OK",
+    "time": 31.7,
+    "answer_len": 578,
+    "answer_preview": "### 📊 Amazon SKIN1004 브랜드 리뷰 수 현황  #### 요약  ⚠️ 사용자님께서 문의하신 'Amazon 전체 리뷰 수'와 달리, 현재 데이터는 **2025년 3월 8일 이후 수집된 SKIN1004 브랜드의 Amazon 리뷰 수**를 기준으로 분석되었습니다. 해당 기간 동안 SKIN1004 브랜드의 Amazon 리뷰 수는 총 **2,770개*"
+  },
+  {
+    "id": "V2_RA-151",
+    "query": "잠깐, amazon 리뷰 중 Cleansing Oil 관련 알려주세요",
+    "table": "review_amazon",
+    "category": "product_review",
+    "status": "WARN",
+    "time": 65.4,
+    "answer_len": 675,
+    "answer_preview": "해당 조건으로 조회된 데이터가 없습니다.  SQL 쿼리의 필터 조건 중 다음 부분이 문제의 원인으로 보입니다:  *   **`collect_date >= '2025-03-08'`**: `collect_date`는 데이터 수집일인데, 2025년 3월 8일은 미래 날짜이므로 해당 날짜 이후에 수집된 데이터는 현재 존재하지 않습니다. 이 조건을 제거하거나 과거 "
+  },
+  {
+    "id": "V2_RA-152",
+    "query": "Amazon 최근 후기 30건 한국어 번역",
+    "table": "review_amazon",
+    "category": "recent_n",
+    "status": "OK",
+    "time": 47.7,
+    "answer_len": 455,
+    "answer_preview": "죄송합니다. 아마존의 최근 후기 30건을 실시간으로 조회하여 한국어로 번역해 드리는 것은 현재 제가 지원할 수 없는 기능입니다.  ### 이유 - 아마존 리뷰는 **실시간으로 계속 업데이트**되며, 저는 아마존 사이트에 직접 접속하여 데이터를 가져올 수 없습니다. - 검색 시스템을 통해서도 해당 정보를 확인할 수 없었습니다.  ### 대안 방법  1. **"
+  },
+  {
+    "id": "V2_RA-153",
+    "query": "아마존 리뷰 데이터 수집 주기는 알려주시면 감사하겠습니다",
+    "table": "review_amazon",
+    "category": "total_count",
+    "status": "OK",
+    "time": 41.4,
+    "answer_len": 888,
+    "answer_preview": "### 📊 아마존 리뷰 데이터 수집 주기 분석 보고서  #### 요약  최근 1년간 아마존 리뷰 데이터 수집 주기는 **정해진 패턴 없이 불규칙적**으로 이루어졌습니다. 가장 빈번하게 관찰된 수집 간격은 없으며, **4일, 6일, 36일**의 간격이 각각 한 번씩 확인되었습니다.  #### 상세 데이터  지난 1년간 아마존 리뷰 데이터 수집 간격은 다음과 "
+  },
+  {
+    "id": "V2_RA-154",
+    "query": "혹시 Amazon 2024년 4분기 후기 수 보여줘",
+    "table": "review_amazon",
+    "category": "date_range",
+    "status": "OK",
+    "time": 52.5,
+    "answer_len": 377,
+    "answer_preview": "아마존의 2024년 4분기 실적 보고서에는 **고객 리뷰(후기) 수가 공개되지 않습니다.**  분기별 실적 발표는 매출, 이익 등 재무 지표 중심으로 구성되어 있어, 리뷰 수와 같은 비재무적 데이터는 포함되지 않습니다.  참고로 2024년 4분기 아마존의 주요 재무 실적은 다음과 같습니다:  | 항목 | 실적 | 전년 동기 대비 | |------|-----"
+  },
+  {
+    "id": "V2_RA-155",
+    "query": "확인 좀 해줘 아마존 후기 제품명 중복 제거 목록 알려주시면 감사하겠습니다",
+    "table": "review_amazon",
+    "category": "review_count",
+    "status": "OK",
+    "time": 39.1,
+    "answer_len": 1207,
+    "answer_preview": "### 📊 아마존 후기 SKIN1004 제품명 중복 제거 목록  #### 요약  오늘 날짜(2026년 03월 08일) 기준, 아마존 후기 데이터에서 중복을 제거한 SKIN1004 브랜드 제품명은 **총 23개**입니다. 이 목록은 아마존에서 언급되는 SKIN1004 제품 라인업을 파악하는 데 활용될 수 있습니다.  #### 상세 데이터  아마존 후기 데이터"
+  },
+  {
+    "id": "V2_RA-156",
+    "query": "Amazon 리뷰 월별 평균 건수 부탁드려요",
+    "table": "review_amazon",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 38.7,
+    "answer_len": 583,
+    "answer_preview": "### 📊 Amazon 월별 평균 리뷰 건수 분석  #### 요약  2025년 3월부터 2026년 2월까지의 Amazon 리뷰 데이터를 분석한 결과, 월별 평균 리뷰 건수는 **184.1건**으로 집계되었습니다. 이는 지난 1년간 Amazon에서 꾸준히 고객 피드백이 발생하고 있음을 보여줍니다.  #### 분석 및 인사이트  *   **꾸준한 고객 피드백*"
+  },
+  {
+    "id": "V2_RA-157",
+    "query": "정확한 amazon 최근 수집된 리뷰 보여줄 수 있어",
+    "table": "review_amazon",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 56.1,
+    "answer_len": 1901,
+    "answer_preview": "📊 SKIN1004 아마존 최신 리뷰 50건 분석  #### 요약  SKIN1004 브랜드의 아마존 최신 리뷰 **50건**을 분석한 결과, **2026년 1월 18일**부터 **2026년 2월 27일**까지의 리뷰가 수집되었습니다. 전반적으로 제품의 **보습력, 진정 효과, 가벼운 사용감**에 대한 긍정적인 평가가 많았으며, 특히 '프로바이오시카' 및 '"
+  },
+  {
+    "id": "V2_RA-158",
+    "query": "Amazon Centella Ampoule 리뷰데이터 원문 10건",
+    "table": "review_amazon",
+    "category": "review_content",
+    "status": "OK",
+    "time": 27.4,
+    "answer_len": 311,
+    "answer_preview": "해당 조건의 데이터가 없습니다.  SQL에서 `brand` 필터로 'SKIN1004'를, `product_name` 필터로 'Centella Ampoule'을 사용했습니다. 이 두 조건에 모두 일치하는 데이터가 현재 테이블에 존재하지 않는 것으로 보입니다.  다음과 같이 질문하시면 비슷한 데이터를 조회할 수 있습니다: *   아마존에서 판매되는 센텔라 앰플"
+  },
+  {
+    "id": "V2_RA-159",
+    "query": "간단하게 아마존 리뷰 수 가장 많은 달은 부탁드려요",
+    "table": "review_amazon",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 34.5,
+    "answer_len": 537,
+    "answer_preview": "### 📊 SKIN1004 아마존 리뷰 수가 가장 많았던 달 분석  #### 요약  SKIN1004 브랜드의 아마존 리뷰 데이터를 분석한 결과, **2026년 1월**이 **322개**의 리뷰로 가장 많은 리뷰 수를 기록했습니다. 이는 특정 시기에 리뷰 활동이 집중되었음을 시사합니다.  #### 분석 및 인사이트  *   **리뷰 활동 집중:** 2026년"
+  },
+  {
+    "id": "V2_RA-160",
+    "query": "Amazon 리뷰 2024년 전체 요약은 어떤가요?",
+    "table": "review_amazon",
+    "category": "date_range",
+    "status": "OK",
+    "time": 33.3,
+    "answer_len": 1427,
+    "answer_preview": "### 📊 2024년 SKIN1004 Amazon 리뷰 요약  #### 요약  2024년 한 해 동안 SKIN1004 브랜드의 Amazon 리뷰 데이터를 분석한 결과, 총 **14개** 제품에 대한 리뷰가 집계되었습니다. 가장 많은 리뷰를 받은 제품은 **\"센텔라 에어핏 선크림 라이트\"**로, **38개**의 리뷰를 기록하며 전체 리뷰를 주도했습니다.  #"
+  },
+  {
+    "id": "V2_RA-161",
+    "query": "아마존에서 SKIN1004 리뷰 제일 많은 제품 알려줄래?",
+    "table": "review_amazon",
+    "category": "top_reviewed",
+    "status": "OK",
+    "time": 36.5,
+    "answer_len": 778,
+    "answer_preview": "### 📊 아마존 SKIN1004 제품별 최근 1년간 리뷰 현황  #### 요약  아마존에서 SKIN1004 제품 중 최근 1년간(2025년 3월 8일 ~ 2026년 3월 8일) 가장 많은 리뷰를 받은 제품은 **센텔라 에어핏 선크림 라이트**입니다. 이 제품은 총 **213개**의 리뷰를 기록하며 가장 높은 고객 관심을 받았습니다.  #### 상세 데이터"
+  },
+  {
+    "id": "V2_RA-162",
+    "query": "Amazon 후기 최신 데이터 확인해줘",
+    "table": "review_amazon",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 32.0,
+    "answer_len": 2205,
+    "answer_preview": "### 📊 SKIN1004 Amazon 최신 고객 후기 현황  #### 요약  2026년 03월 08일 기준으로 조회된 SKIN1004 브랜드의 Amazon 최신 고객 후기 데이터는 **총 50건**이며, 가장 최근 후기는 **2026년 02월 27일**에 작성되었습니다. 전반적으로 제품의 수분 공급, 진정 효과, 가벼운 사용감에 대한 긍정적인 평가가 많았"
+  },
+  {
+    "id": "V2_RA-163",
+    "query": "아마존 평가 collect_date 기준 최근 데이터",
+    "table": "review_amazon",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 53.2,
+    "answer_len": 2429,
+    "answer_preview": "### 📊 SKIN1004 아마존 최신 평가 수집 현황  #### 요약  최근 수집된 SKIN1004 아마존 평가 **50건**을 분석한 결과, 가장 최신 데이터는 **2026년 03월 02일**에 수집된 평가입니다. 이 평가들은 다양한 제품에 대한 고객들의 생생한 피드백을 담고 있으며, 대부분 긍정적인 반응을 보입니다.  #### 상세 데이터  SKIN1"
+  },
+  {
+    "id": "V2_RA-164",
+    "query": "Amazon 제품별 평가 건수와 비중 어떻게 되나요?",
+    "table": "review_amazon",
+    "category": "review_count",
+    "status": "OK",
+    "time": 43.7,
+    "answer_len": 1662,
+    "answer_preview": "### 📊 Amazon SKIN1004 제품별 평가 건수 및 비중 분석  #### 요약  SKIN1004 브랜드의 Amazon 제품별 총 평가 건수는 **2,770건**이며, 총 **23개**의 제품에 대한 평가가 집계되었습니다. 이 중 '센텔라 에어핏 선크림 라이트' 제품이 **213건**의 평가로 가장 많은 비중(약 **7.69%**)을 차지하며 가장 "
+  },
+  {
+    "id": "V2_RA-165",
+    "query": "아마존 2025년 신규 후기 수",
+    "table": "review_amazon",
+    "category": "date_range",
+    "status": "OK",
+    "time": 32.7,
+    "answer_len": 518,
+    "answer_preview": "안녕하세요. 요청하신 **아마존 2025년 신규 후기 수** 데이터를 조회하지 못했습니다.  좀 더 정확한 결과를 위해 **조건을 구체적으로** 지정해 주시면 다시 조회해 드리겠습니다.  ---  **💡 이렇게 질문해 보시면 좋습니다**  1. **\"아마존 US에서 마다가스카르 센텔라 토너 제품의 2025년 1월~5월 신규 후기 수 알려줘\"** 2. **\""
+  },
+  {
+    "id": "V2_RA-166",
+    "query": "Amazon 리뷰 데이터 컬럼 정보 확인 부탁드립니다",
+    "table": "review_amazon",
+    "category": "total_count",
+    "status": "OK",
+    "time": 31.7,
+    "answer_len": 638,
+    "answer_preview": "# 데이터 조회 안내  안녕하세요. 요청하신 **Amazon 리뷰 데이터 컬럼 정보**를 현재 데이터베이스에서 조회하지 못했습니다.  ---  ## 💡 더 구체적으로 질문해 주시면 도움이 됩니다  Amazon 리뷰 데이터는 **마켓플레이스(국가)**, **제품**, **기간** 등에 따라 테이블 구조나 조회 범위가 달라질 수 있습니다. 아래 정보를 포함하여"
+  },
+  {
+    "id": "V2_RA-167",
+    "query": "아마존 Madagascar Centella Ampoule 리뷰 추이 어떻게 되나요?",
+    "table": "review_amazon",
+    "category": "product_review",
+    "status": "OK",
+    "time": 37.6,
+    "answer_len": 502,
+    "answer_preview": "안녕하세요! 아마존 Madagascar Centella Ampoule의 리뷰 추이에 대해 내부 데이터를 조회하려 했으나, **해당 데이터를 조회하지 못했습니다.**  좀 더 구체적인 조건을 포함하여 질문해 주시면 정확한 데이터를 찾는 데 도움이 됩니다. 아래 예시를 참고해 주세요:  ---  **💡 질문 예시**  1. **\"2024년 1월~12월 아마존 "
+  },
+  {
+    "id": "V2_RA-168",
+    "query": "Amazon 최근 리뷰 8건 확인 부탁드립니다",
+    "table": "review_amazon",
+    "category": "recent_n",
+    "status": "OK",
+    "time": 39.0,
+    "answer_len": 2157,
+    "answer_preview": "### 📊 Amazon 최근 리뷰 8건 분석 보고서  #### 요약  2026년 2월 25일부터 2월 27일까지의 SKIN1004 Amazon 리뷰 **8건**을 확인한 결과, 대부분의 제품이 보습력, 진정 효과, 좋은 사용감, 그리고 가성비 측면에서 긍정적인 평가를 받았습니다. 다만, '티트리카 BHA 폼' 제품에서는 접촉성 피부염 발생이라는 부정적인 피"
+  },
+  {
+    "id": "V2_RA-169",
+    "query": "아마존 리뷰데이터 작성일 기준 최신순",
+    "table": "review_amazon",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 37.7,
+    "answer_len": 5136,
+    "answer_preview": "### 📊 SKIN1004 아마존 최신 리뷰 현황  #### 요약  ⚠️ 현재 데이터는 2026년 02월 27일까지의 리뷰를 포함하고 있습니다 (오늘: 2026년 03월 08일). SKIN1004 브랜드의 아마존 최신 리뷰 **50건**을 분석한 결과, 가장 최근 리뷰는 **2026년 02월 27일**에 작성되었습니다. 이 데이터는 2026년 02월 16일"
+  },
+  {
+    "id": "V2_RA-170",
+    "query": "Amazon 리뷰 제품별 월별 교차 살펴봐줘 부탁",
+    "table": "review_amazon",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 32.3,
+    "answer_len": 438,
+    "answer_preview": "# 데이터 조회 안내  안녕하세요! 요청하신 **Amazon 리뷰 제품별 월별 교차 데이터**를 조회하지 못했습니다.  조건을 좀 더 구체적으로 지정해 주시면 정확한 데이터를 찾는 데 도움이 됩니다. 아래 항목들을 포함해 주세요:  > **기간** · **국가(마켓플레이스)** · **제품명/라인** · **확인하고 싶은 지표(리뷰 수, 평점 등)**  -"
+  },
+  {
+    "id": "V2_RA-171",
+    "query": "아마존 2025년 2월 후기 내용 전부 몇이야?",
+    "table": "review_amazon",
+    "category": "date_range",
+    "status": "OK",
+    "time": 34.1,
+    "answer_len": 396,
+    "answer_preview": "### 📊 아마존 2025년 2월 SKIN1004 브랜드 후기 현황  #### 요약  2025년 2월 한 달간 아마존에서 SKIN1004 브랜드에 대한 후기는 총 **55개**로 집계되었습니다.  #### 분석 및 인사이트  *   2025년 2월 아마존에서 SKIN1004 브랜드에 대한 후기는 총 55건으로 확인되었습니다. *   > 이 수치는 해당 기간"
+  },
+  {
+    "id": "V2_RA-172",
+    "query": "참고로 Amazon 리뷰 Centella 키워드 검색 보여줘",
+    "table": "review_amazon",
+    "category": "product_review",
+    "status": "OK",
+    "time": 50.6,
+    "answer_len": 1801,
+    "answer_preview": "### 📊 SKIN1004 아마존 센텔라 키워드 최신 리뷰 20건 분석  #### 요약  SKIN1004 브랜드의 아마존 센텔라 키워드 관련 최신 리뷰 50건 중 **제공된 상위 20건의 프리뷰 데이터**를 분석한 결과, 전반적으로 **피부 진정, 수분 공급, 순한 사용감**에 대한 긍정적인 평가가 많았습니다. 특히 **센텔라 앰플**이 가장 많은 리뷰를 "
+  },
+  {
+    "id": "V2_RA-173",
+    "query": "아마존 리뷰 한국어 번역본만 보여줘 알 수 있을까요?",
+    "table": "review_amazon",
+    "category": "review_content",
+    "status": "OK",
+    "time": 52.3,
+    "answer_len": 95400,
+    "answer_preview": "### 📊 아마존 SKIN1004 제품 한국어 번역 리뷰 목록  #### 요약  사용자님의 요청에 따라 최근 1년간 수집된 SKIN1004 브랜드의 아마존 한국어 번역 리뷰 **총 50건**을 조회했습니다. 이 리뷰들은 2026년 2월 15일부터 2월 27일까지 작성된 것으로, 다양한 SKIN1004 제품에 대한 고객들의 상세한 피드백을 포함하고 있습니다."
+  },
+  {
+    "id": "V2_RA-174",
+    "query": "Amazon 제품별 최근 리뷰 날짜 알려주세요",
+    "table": "review_amazon",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 47.8,
+    "answer_len": 1563,
+    "answer_preview": "### 📊 SKIN1004 Amazon 제품별 최근 리뷰 날짜 분석  #### 요약  SKIN1004 브랜드의 Amazon 제품별 최근 리뷰 날짜를 분석한 결과, **총 23개** 제품에 대한 리뷰 데이터가 확인되었습니다. 가장 최근 리뷰는 **2026년 2월 27일**에 작성되었으며, '센텔라 크림', '센텔라 앰플 폼', '프로바이오시카 바쿠치올 아이 "
+  },
+  {
+    "id": "V2_RA-175",
+    "query": "확인 좀 해줘 아마존 리뷰데이터 수 월 평균은?",
+    "table": "review_amazon",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 41.8,
+    "answer_len": 457,
+    "answer_preview": "### 📊 SKIN1004 아마존 월 평균 리뷰 수 분석  #### 요약  지난 1년간(2025년 3월 8일 ~ 2026년 3월 7일) SKIN1004 브랜드의 아마존 월 평균 리뷰 수는 **182.75개**로 집계되었습니다. 이는 해당 기간 동안 매월 평균적으로 약 183개의 리뷰가 발생했음을 의미합니다.  #### 분석 및 인사이트  *   해당 수치는"
+  },
+  {
+    "id": "V2_RA-176",
+    "query": "Amazon 전체 후기 건수 추이 차트",
+    "table": "review_amazon",
+    "category": "total_count",
+    "status": "OK",
+    "time": 56.7,
+    "answer_len": 2595,
+    "answer_preview": "### 📊 Amazon SKIN1004 브랜드 후기 건수 월별 추이 (2019년 11월 ~ 2026년 2월)  #### 요약  SKIN1004 브랜드의 Amazon 후기 건수는 2024년부터 꾸준히 증가하여 2025년과 2026년 초에 **급격한 성장세**를 보였습니다. 최근 1년간 수집된 총 후기 건수는 **2,986건**이며, **2026년 1월에 32"
+  },
+  {
+    "id": "V2_RA-177",
+    "query": "아마존 Soothing Cream 리뷰 최근 3건 알려줄래?",
+    "table": "review_amazon",
+    "category": "recent_n",
+    "status": "OK",
+    "time": 42.5,
+    "answer_len": 353,
+    "answer_preview": "요청하신 조건에 맞는 데이터가 없습니다.  SQL 쿼리에서 브랜드 조건이 'SKIN1004'로 설정되어 있지만, 사용자 질문에는 특정 브랜드가 명시되지 않았습니다. '아마존 Soothing Cream'이 특정 브랜드를 지칭하는 것이 아니라면, 이 브랜드 조건이 문제일 수 있습니다.  다음과 같이 다시 질문해 주시면 데이터를 조회할 수 있습니다: *   SK"
+  },
+  {
+    "id": "V2_RA-178",
+    "query": "Amazon 2024년 6월 리뷰데이터 데이터 있어?",
+    "table": "review_amazon",
+    "category": "date_range",
+    "status": "OK",
+    "time": 49.7,
+    "answer_len": 484,
+    "answer_preview": "안녕하세요! 요청하신 **Amazon 2024년 6월 리뷰 데이터**를 현재 조회하지 못했습니다.  좀 더 구체적인 조건을 포함하여 질문해 주시면 정확한 데이터를 찾는 데 도움이 됩니다. 아래 예시를 참고해 주세요:  ---  **💡 질문 예시**  1. **\"Amazon US에서 2024년 6월 마다가스카르 센텔라 토닝 토너의 리뷰 데이터를 보여줘\"** "
+  },
+  {
+    "id": "V2_RA-179",
+    "query": "아마죤 리뷰 제품별 통계 요약",
+    "table": "review_amazon",
+    "category": "review_count",
+    "status": "OK",
+    "time": 22.3,
+    "answer_len": 604,
+    "answer_preview": "# 데이터 조회 안내  안녕하세요. 요청하신 **아마존 리뷰 제품별 통계 요약** 데이터를 현재 조회하지 못했습니다.  ---  ## 💡 더 구체적으로 질문해 주시면 정확한 데이터를 찾는 데 도움이 됩니다  아래 항목들을 포함하여 질문을 다시 작성해 보시겠어요?  | 구체화 항목 | 예시 | |------------|------| | **기간** | 202"
+  },
+  {
+    "id": "V2_RA-180",
+    "query": "Amazon 평가 가장 최근 작성된 것",
+    "table": "review_amazon",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 35.4,
+    "answer_len": 228,
+    "answer_preview": "질문하신 내용이 다소 모호하여 정확히 어떤 정보를 원하시는지 확인이 필요합니다.  아래 중 어떤 내용을 찾고 계신지 알려주시겠어요?  1. **SKIN1004 제품**에 대한 아마존 최신 고객 리뷰(상품평) 2. **아마존 플랫폼 자체**에 대한 최근 평가·보고서 3. **아마존 셀러 계정**의 최근 성과 평가(퍼포먼스 리포트) 4. 기타 다른 내용  구체"
+  },
+  {
+    "id": "V2_RA-181",
+    "query": "궁금한데 amazon Centella Ampoule 리뷰 번역 보여줘",
+    "table": "review_amazon",
+    "category": "review_content",
+    "status": "OK",
+    "time": 35.7,
+    "answer_len": 437,
+    "answer_preview": "요청하신 조건(SKIN1004 브랜드의 아마존 센텔라 앰플)에 해당하는 리뷰 데이터는 현재 존재하지 않습니다.  SQL 쿼리에서 `brand LIKE '%SKIN1004%'`와 `product_name LIKE '%Centella%Ampoule%'` 조건을 동시에 필터링한 결과, 해당 조합의 데이터가 발견되지 않았습니다. 이는 `Amazon_Review` "
+  },
+  {
+    "id": "V2_RA-182",
+    "query": "Amazon 평가 데이터 연도별 건수",
+    "table": "review_amazon",
+    "category": "date_range",
+    "status": "OK",
+    "time": 37.9,
+    "answer_len": 466,
+    "answer_preview": "안녕하세요. 요청하신 **Amazon 평가 데이터 연도별 건수**를 현재 데이터베이스에서 조회하지 못했습니다.  좀 더 구체적인 조건을 추가해 주시면 정확한 데이터를 찾는 데 도움이 됩니다. 아래 예시를 참고해 주세요.  ---  **💡 질문 예시**  1. **\"Amazon US에서 2023년~2024년 연도별 리뷰(평가) 건수를 알려줘\"**    → 국"
+  },
+  {
+    "id": "V2_RA-183",
+    "query": "아마존 후기 TOP 5 제품 리스트",
+    "table": "review_amazon",
+    "category": "top_reviewed",
+    "status": "OK",
+    "time": 32.1,
+    "answer_len": 1096,
+    "answer_preview": "### 📊 아마존 SKIN1004 제품별 후기 TOP 5 현황 (2025년 3월 8일 ~ 2026년 3월 8일)  #### 요약  지난 1년간 아마존에서 SKIN1004 제품 중 가장 많은 후기를 받은 제품은 **센텔라 에어핏 선크림 라이트**로, 총 **213개**의 후기를 기록했습니다. 이 외에도 클렌징 오일, 스틱 마스크, 앰플 등 다양한 카테고리의 "
+  },
+  {
+    "id": "V2_RA-184",
+    "query": "간단하게 Amazon 최근 2개월 리뷰데이터 건수",
+    "table": "review_amazon",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 31.2,
+    "answer_len": 496,
+    "answer_preview": "# 데이터 조회 안내  안녕하세요. 요청하신 **Amazon 최근 2개월 리뷰 데이터 건수**를 현재 조회하지 못했습니다.  좀 더 구체적인 조건을 추가해 주시면 정확한 데이터를 찾는 데 도움이 됩니다.  ---  ## 💡 이렇게 질문해 보시면 좋아요  1. **\"Amazon US에서 2025년 4월~5월 마다가스카르 센텔라 토너의 리뷰 건수를 알려줘\"**"
+  },
+  {
+    "id": "V2_RA-185",
+    "query": "아마존 후기 원문 영어로 된 것만",
+    "table": "review_amazon",
+    "category": "review_content",
+    "status": "WARN",
+    "time": 73.3,
+    "answer_len": 434,
+    "answer_preview": "### 📊 아마존 SKIN1004 브랜드 후기 원문 분석 (언어 필터링 미적용)  #### 요약  총 **1,000건**의 SKIN1004 브랜드 아마존 후기 원문이 조회되었습니다. 조회된 후기는 2026년 2월 12일부터 2026년 2월 27일까지 작성된 것이며, **사용자 요청과 달리 언어 필터링이 적용되지 않아 영어 외 다른 언어(예: 스페인어) 후기"
+  },
+  {
+    "id": "V2_RA-186",
+    "query": "Amazon 2024년 3분기 평가",
+    "table": "review_amazon",
+    "category": "date_range",
+    "status": "OK",
+    "time": 25.8,
+    "answer_len": 975,
+    "answer_preview": "# 아마존 2024년 3분기 실적 평가  아마존은 2024년 3분기에 시장 예상치를 크게 상회하는 호실적을 기록하며, **AI 사업 강화**와 **비용 효율화**의 성과를 입증했습니다.  ---  ## 주요 실적 요약  | 항목 | 실적 | 전년 동기 대비 | |------|------|----------------| | **매출** | 1,589억 달러 "
+  },
+  {
+    "id": "V2_RA-187",
+    "query": "아마존 리뷰 제품 카테고리별 분류 어때?",
+    "table": "review_amazon",
+    "category": "review_count",
+    "status": "WARN",
+    "time": 62.2,
+    "answer_len": 441,
+    "answer_preview": "안녕하세요! 😊  아마존 리뷰의 제품 카테고리별 분류 데이터를 조회하려 했으나, **현재 해당 데이터를 조회하지 못했습니다.**  질문을 조금 더 구체적으로 해주시면 정확한 데이터를 찾는 데 도움이 됩니다. 아래 항목들을 포함해 보세요:  > **기간** / **국가(마켓플레이스)** / **특정 제품명 또는 라인** / **분류 기준** 등  ---  #"
+  },
+  {
+    "id": "V2_RA-188",
+    "query": "Amazon 리뷰 최근 90건 알려주시면 감사하겠습니다",
+    "table": "review_amazon",
+    "category": "recent_n",
+    "status": "OK",
+    "time": 43.5,
+    "answer_len": 1454,
+    "answer_preview": "### 📊 SKIN1004 Amazon 최근 90건 리뷰 분석  #### 요약  SKIN1004 브랜드의 아마존 리뷰 **90건**을 분석한 결과, **2026년 2월 12일부터 2026년 2월 27일까지**의 리뷰가 수집되었습니다. 전반적으로 제품의 **보습력, 진정 효과, 가벼운 사용감, 빠른 흡수력**에 대한 긍정적인 평가가 많았으며, 특히 '프로바이"
+  },
+  {
+    "id": "V2_RA-189",
+    "query": "아마존 리뷰데이터 브랜드 필터링 후 건수",
+    "table": "review_amazon",
+    "category": "brand_review",
+    "status": "OK",
+    "time": 52.2,
+    "answer_len": 509,
+    "answer_preview": "### 📊 아마존 SKIN1004 브랜드 리뷰 건수 현황  #### 요약  2025년 3월 8일부터 오늘(2026년 3월 8일)까지 아마존에서 'SKIN1004' 브랜드와 관련된 리뷰는 총 **2,770건**으로 집계되었습니다.  #### 분석 및 인사이트  *   본 데이터는 2025년 3월 8일부터 2026년 3월 8일(오늘)까지 약 1년간 아마존 플랫"
+  },
+  {
+    "id": "V2_RA-190",
+    "query": "Amazon Centella Cleansing Oil 매월 리뷰 얼마임?",
+    "table": "review_amazon",
+    "category": "product_review",
+    "status": "WARN",
+    "time": 68.5,
+    "answer_len": 437,
+    "answer_preview": "안녕하세요! 😊  요청하신 **Centella Cleansing Oil**의 월별 리뷰 데이터를 현재 **조회하지 못했습니다.**  조금 더 구체적인 조건을 알려주시면 정확한 데이터를 찾는 데 도움이 됩니다.  ---  ### 💡 아래와 같이 질문을 구체화해 보시겠어요?  1. **\"Amazon US에서 Centella Cleansing Oil의 2024년"
+  },
+  {
+    "id": "V2_RA-191",
+    "query": "아마존 평가 review_date 기준 분석 확인 부탁드립니다",
+    "table": "review_amazon",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 39.0,
+    "answer_len": 1307,
+    "answer_preview": "### 📊 아마존 SKIN1004 브랜드 월별 평가(리뷰) 현황 분석  #### 요약  지난 1년간(2025년 3월 ~ 2026년 2월) 아마존에서 SKIN1004 브랜드에 대한 총 리뷰 수는 **2,183건**으로 집계되었습니다. 특히, 2026년 1월에 **322건**으로 가장 많은 리뷰가 발생하며 꾸준한 성장세를 보였습니다.  #### 상세 데이터 |"
+  },
+  {
+    "id": "V2_RA-192",
+    "query": "Amazon 전체 데이터 행 수 알려줘 확인 가능한가요?",
+    "table": "review_amazon",
+    "category": "total_count",
+    "status": "OK",
+    "time": 28.5,
+    "answer_len": 437,
+    "answer_preview": "### 📊 Amazon 리뷰 데이터 총 행 수 분석  #### 요약  현재 `Amazon_Review` 테이블에 저장된 Amazon 전체 데이터 행 수는 총 **2,770**개입니다. 이는 현재 BigQuery에 적재된 Amazon 리뷰 데이터의 전체 볼륨을 나타냅니다.  #### 분석 및 인사이트  *   현재 BigQuery의 `Amazon_Review"
+  },
+  {
+    "id": "V2_RA-193",
+    "query": "아마존 최근 리뷰 중 긍정적인 것 알려주세요",
+    "table": "review_amazon",
+    "category": "review_content",
+    "status": "OK",
+    "time": 55.9,
+    "answer_len": 2952,
+    "answer_preview": "### 📊 아마존 SKIN1004 최근 리뷰 분석 (긍정적 피드백 중심)  #### 요약  2026년 2월 16일부터 2월 27일까지의 아마존 SKIN1004 제품 리뷰 **50건**을 분석한 결과, **대부분의 리뷰가 긍정적인 내용**을 담고 있는 것으로 확인되었습니다. 특히 '센텔라 앰플 폼', '히알루시카 모이스쳐 크림', '프로바이오시카 바쿠치올 아"
+  },
+  {
+    "id": "V2_RA-194",
+    "query": "참고로 Amazon 2024년 5월 리뷰",
+    "table": "review_amazon",
+    "category": "date_range",
+    "status": "OK",
+    "time": 38.8,
+    "answer_len": 451,
+    "answer_preview": "# 데이터 조회 안내  안녕하세요. 요청하신 **Amazon 2024년 5월 리뷰** 관련 데이터를 조회하지 못했습니다.  좀 더 구체적인 조건을 포함하여 질문해 주시면 정확한 데이터를 찾는 데 도움이 됩니다. 아래 항목들을 명시해 주세요:  > **국가(마켓플레이스)** · **특정 제품명(ASIN)** · **조회 항목(리뷰 수, 평점, 리뷰 내용 등)"
+  },
+  {
+    "id": "V2_RA-195",
+    "query": "아마존 리뷰데이터 수 기준 상위 제품",
+    "table": "review_amazon",
+    "category": "top_reviewed",
+    "status": "OK",
+    "time": 52.5,
+    "answer_len": 1477,
+    "answer_preview": "### 📊 SKIN1004 아마존 리뷰 수 기준 상위 제품 분석  #### 요약  SKIN1004 브랜드의 아마존 리뷰 데이터를 분석한 결과, '센텔라 에어핏 선크림 라이트'가 **213개**의 리뷰로 가장 많은 리뷰 수를 기록하며 최상위 제품으로 나타났습니다. 상위 23개 제품 모두 100개 이상의 리뷰를 보유하고 있어, SKIN1004 제품들이 아마존에"
+  },
+  {
+    "id": "V2_RA-196",
+    "query": "확인 좀 해줘 Amazon 리뷰 수집 날짜 기준 통계",
+    "table": "review_amazon",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 35.0,
+    "answer_len": 962,
+    "answer_preview": "### 📊 Amazon SKIN1004 리뷰 수집 날짜별 통계  #### 요약  Amazon SKIN1004 브랜드의 리뷰 수집 날짜별 통계에 따르면, **2026년 1월 15일**에 **2,341건**의 리뷰가 수집되어 가장 높은 일별 수집량을 기록했습니다. 이후 2월과 3월 초에는 수집량이 크게 감소하는 추세를 보였습니다.  #### 상세 데이터 | 수"
+  },
+  {
+    "id": "V2_RA-197",
+    "query": "아마존 리뷰 제품별 최신 리뷰 요약 어때?",
+    "table": "review_amazon",
+    "category": "review_content",
+    "status": "WARN",
+    "time": 61.9,
+    "answer_len": 1821,
+    "answer_preview": "## 📊 아마존 SKIN1004 제품별 최신 리뷰 요약  #### 요약  2026년 02월 16일부터 2026년 02월 27일까지의 **SKIN1004 아마존 최신 리뷰 50건**을 분석한 결과, 고객들은 전반적으로 제품의 **보습력, 진정 효과, 순한 사용감**에 높은 만족도를 보였습니다. 특히 **프로바이오시카 바쿠치올 아이 크림**과 **센텔라 앰플 "
+  },
+  {
+    "id": "V2_RA-198",
+    "query": "Amazon 2024년 상반기 리뷰 건수?",
+    "table": "review_amazon",
+    "category": "date_range",
+    "status": "OK",
+    "time": 57.1,
+    "answer_len": 367,
+    "answer_preview": "### 📊 Amazon 2024년 상반기 리뷰 건수 분석  #### 요약  2024년 상반기(1월 1일 ~ 6월 30일) 동안 Amazon에서 발생한 총 리뷰 건수는 **63건**입니다.  #### 상세 데이터  *(단일 수치이므로 상세 데이터 섹션은 생략합니다.)*  #### 분석 및 인사이트  *   2024년 상반기 Amazon 플랫폼에서 총 63건의"
+  },
+  {
+    "id": "V2_RA-199",
+    "query": "아마존 평가 데이터 전체 요약 통계",
+    "table": "review_amazon",
+    "category": "total_count",
+    "status": "OK",
+    "time": 27.4,
+    "answer_len": 1439,
+    "answer_preview": "### 📊 SKIN1004 아마존 제품별 리뷰 수 요약 (2025년 3월 8일 ~ 2026년 3월 8일)  #### 요약  지난 1년간(2025년 3월 8일 ~ 2026년 3월 8일) SKIN1004 브랜드의 아마존 평가 데이터를 분석한 결과, 총 **23개 제품**에 대한 **2,652건**의 리뷰가 집계되었습니다. 이 중 '센텔라 에어핏 선크림 라이트'"
+  },
+  {
+    "id": "V2_RA-200",
+    "query": "Amazon 최근 리뷰 전체 보여줘 부탁드려요",
+    "table": "review_amazon",
+    "category": "recent_reviews",
+    "status": "WARN",
+    "time": 66.0,
+    "answer_len": 5098,
+    "answer_preview": "### 📊 Amazon SKIN1004 제품 최근 리뷰 현황  #### 요약  2026년 2월 16일부터 2026년 2월 27일까지의 SKIN1004 브랜드 제품에 대한 Amazon 최근 리뷰 **총 50건**을 확인했습니다. 가장 최근 리뷰는 **2026년 2월 27일**에 작성되었으며, 다양한 제품군에 걸쳐 긍정적인 평가가 주를 이루고 있습니다.  ##"
+  },
+  {
+    "id": "V2_RA-201",
+    "query": "아마존 리뷰 중 Madagascar Centella Ampoule 비율 빨리은 어떤가요?",
+    "table": "review_amazon",
+    "category": "product_review",
+    "status": "OK",
+    "time": 44.3,
+    "answer_len": 771,
+    "answer_preview": "### 📊 아마존 리뷰 내 SKIN1004 마다가스카르 센텔라 앰플 비율 분석  #### 요약  최근 1년간(2025년 03월 08일 ~ 2026년 03월 08일) 아마존 리뷰 데이터 분석 결과, SKIN1004의 'Madagascar Centella Ampoule' 제품에 대한 리뷰 비율은 **0.0%**로 나타났습니다. 이는 해당 기간 동안 관련 리뷰가"
+  },
+  {
+    "id": "V2_RA-202",
+    "query": "Amazon 리부 날짜별 건수 차트",
+    "table": "review_amazon",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 59.6,
+    "answer_len": 1766,
+    "answer_preview": "### 📊 Amazon SKIN1004 브랜드 날짜별 리뷰 건수 분석  #### 요약  ⚠️ 현재 데이터는 2025년 03월 08일부터 2026년 02월 11일까지의 Amazon SKIN1004 브랜드 리뷰 건수를 포함하며, 오늘 날짜(2026년 03월 08일) 기준 최근 약 한 달간의 데이터는 포함되어 있지 않습니다. 이 기간 동안 **총 350일**의 "
+  },
+  {
+    "id": "V2_RA-203",
+    "query": "아마존 Centella Ampoule 관련 리뷰 전부 알고 싶어 확인 부탁드립니다",
+    "table": "review_amazon",
+    "category": "product_review",
+    "status": "OK",
+    "time": 36.6,
+    "answer_len": 361,
+    "answer_preview": "죄송합니다. 현재 SQL 쿼리 조건에 해당하는 데이터는 존재하지 않습니다.  SQL 쿼리에서 `collect_date >= '2025-03-08'` 조건이 문제로 보입니다. 이 조건은 2025년 3월 8일 이후에 수집된 데이터를 조회하도록 설정되어 있어, 현재 시점에서는 해당 조건에 맞는 데이터가 존재하지 않습니다.  비슷한 데이터를 조회할 수 있는 대안 "
+  },
+  {
+    "id": "V2_RA-204",
+    "query": "Amazon 최근 평가 200건 데이터",
+    "table": "review_amazon",
+    "category": "recent_n",
+    "status": "OK",
+    "time": 53.7,
+    "answer_len": 1318,
+    "answer_preview": "### 📊 SKIN1004 Amazon 최근 평가 200건 분석 보고서  #### 요약  본 보고서는 2026년 2월 12일부터 2026년 2월 27일까지 Amazon에 등록된 SKIN1004 제품의 **가장 최근 평가 200건**을 분석한 결과입니다. 이 평가들은 **총 23개**의 고유한 제품에 대해 작성되었으며, **15개**의 고유한 날짜에 걸쳐 사"
+  },
+  {
+    "id": "V2_RA-205",
+    "query": "아마죤 리뷰 각 제품 점유율",
+    "table": "review_amazon",
+    "category": "review_count",
+    "status": "OK",
+    "time": 44.0,
+    "answer_len": 2553,
+    "answer_preview": "### 📊 아마존 SKIN1004 제품별 리뷰 점유율 분석 (지난 1년)  #### 요약  지난 1년간(2025년 3월 8일 ~ 2026년 3월 8일) 아마존에서 수집된 SKIN1004 브랜드 제품 리뷰 중 **'센텔라 에어핏 선크림 라이트'**가 전체 리뷰의 **7.69%**를 차지하며 가장 높은 점유율을 보였습니다. 총 23개 제품의 리뷰 점유율을 분석"
+  },
+  {
+    "id": "V2_RA-206",
+    "query": "Amazon 2024년 2분기 리뷰 수 확인 부탁드립니다",
+    "table": "review_amazon",
+    "category": "date_range",
+    "status": "OK",
+    "time": 37.5,
+    "answer_len": 542,
+    "answer_preview": "### 📊 Amazon 2024년 2분기 SKIN1004 리뷰 수 분석  #### 요약  2024년 2분기(4월 1일 ~ 6월 30일) 동안 Amazon에서 SKIN1004 브랜드의 리뷰 수는 총 **41개**로 집계되었습니다.  #### 분석 및 인사이트  *   **총 리뷰 수 확인**: 2024년 2분기 동안 Amazon에서 SKIN1004 제품에 대"
+  },
+  {
+    "id": "V2_RA-207",
+    "query": "아마죤 리뷰 최근 순 정렬 보여줘 알려주시면 감사하겠습니다",
+    "table": "review_amazon",
+    "category": "recent_reviews",
+    "status": "WARN",
+    "time": 62.0,
+    "answer_len": 2147,
+    "answer_preview": "### 📊 SKIN1004 아마존 최신 리뷰 분석  #### 요약  사용자님의 요청에 따라 SKIN1004 브랜드의 아마존 최신 리뷰 **50건**을 분석한 결과입니다. 가장 최근 리뷰는 **2026년 2월 27일**까지 수집되었으며, 센텔라 앰플 폼, 프로바이오시카 바쿠치올 아이 크림, 히알루시카 모이스쳐 크림 등 다양한 제품에 대한 긍정적인 피드백이 주"
+  },
+  {
+    "id": "V2_RA-208",
+    "query": "Amazon Tone Brightening Serum 리뷰데이터 건수",
+    "table": "review_amazon",
+    "category": "product_review",
+    "status": "OK",
+    "time": 43.6,
+    "answer_len": 604,
+    "answer_preview": "### 📊 Amazon Tone Brightening Ampoule 리뷰 데이터 건수  #### 요약  Amazon에서 **SKIN1004 Tone Brightening Ampoule** 제품에 대한 리뷰 데이터는 현재 **0건**으로 확인되었습니다.  #### 분석 및 인사이트  *   **리뷰 데이터 부재**: 현재 조회된 데이터에 따르면, Amazon"
+  },
+  {
+    "id": "V2_RA-209",
+    "query": "아마존 리뷰데이터 수 전년 대비 변화 보여줘",
+    "table": "review_amazon",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 57.5,
+    "answer_len": 1021,
+    "answer_preview": "### 📊 SKIN1004 아마존 리뷰 수 전년 대비 변화 분석  #### 요약  ⚠️ 2026년 데이터는 현재 3월 8일까지의 부분적인 데이터입니다. (오늘: 2026년 03월 08일) SKIN1004 브랜드의 아마존 리뷰 수는 2026년 현재까지 **551건**으로 집계되었습니다. 이는 2025년 전체 리뷰 수인 **1,759건**과 비교했을 때 **6"
+  },
+  {
+    "id": "V2_RA-210",
+    "query": "Amazon 평가 한국어 번역 최근 20건 보여주세요",
+    "table": "review_amazon",
+    "category": "review_content",
+    "status": "WARN",
+    "time": 62.8,
+    "answer_len": 406,
+    "answer_preview": "죄송합니다. 현재 SKIN1004 제품의 Amazon 최신 리뷰 한국어 번역 20건을 제공할 수 있는 데이터를 보유하고 있지 않습니다.  **확인된 사항:** - 실시간 Amazon 리뷰 데이터에 직접 접근할 수 없습니다. - 별도로 번역된 최신 리뷰 20건을 모아 제공하는 소스도 현재 없습니다.  **대안으로 안내드립니다:**  1. **Amazon 사이"
+  },
+  {
+    "id": "V2_RA-211",
+    "query": "아마존 리뷰데이터 데이터 행 건수",
+    "table": "review_amazon",
+    "category": "total_count",
+    "status": "OK",
+    "time": 35.2,
+    "answer_len": 432,
+    "answer_preview": "### 📊 아마존 리뷰 데이터 총 행 건수  #### 요약  2026년 03월 08일 기준으로, 아마존 리뷰 데이터는 총 **2,770**개의 행을 보유하고 있습니다. 이는 현재 데이터베이스에 저장된 개별 아마존 리뷰의 전체 건수를 나타냅니다.  #### 분석 및 인사이트  *   현재 아마존 리뷰 데이터셋에는 **2,770**개의 리뷰가 기록되어 있습니다"
+  },
+  {
+    "id": "V2_RA-212",
+    "query": "Amazon 2024년 1월 후기 데이터 알려주시면 감사하겠습니다",
+    "table": "review_amazon",
+    "category": "date_range",
+    "status": "OK",
+    "time": 48.3,
+    "answer_len": 5259,
+    "answer_preview": "### 📊 Amazon 2024년 1월 SKIN1004 제품 후기 분석  #### 요약  2024년 1월 Amazon에서 SKIN1004 제품에 대한 후기는 총 **8건**이 확인되었습니다. 이 중 **5건**이 '히알루시카 블루 세럼'에 대한 후기로, 해당 제품이 가장 많은 관심을 받은 것으로 나타났습니다. 전반적으로 제품의 보습력, 흡수력, 피부 개선 "
+  },
+  {
+    "id": "V2_RA-213",
+    "query": "아마존 리부 최다 월은?",
+    "table": "review_amazon",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 37.3,
+    "answer_len": 392,
+    "answer_preview": "안녕하세요! 요청하신 아마존 리뷰 관련 데이터를 조회하지 못했습니다.  좀 더 정확한 결과를 위해 **조건을 구체적으로** 지정해 주시면 다시 조회해 드리겠습니다.  ---  **💡 다음과 같이 질문을 바꿔보시면 좋습니다:**  1. **\"2024년 아마존 US에서 리뷰가 가장 많이 달린 월은?\"** 2. **\"아마존 JP에서 마다가스카르 센텔라 토너의 월"
+  },
+  {
+    "id": "V2_RA-214",
+    "query": "Amazon 제품 기준 리뷰데이터 수 차트 그려줘",
+    "table": "review_amazon",
+    "category": "review_count",
+    "status": "OK",
+    "time": 38.9,
+    "answer_len": 1387,
+    "answer_preview": "### 📊 Amazon SKIN1004 제품별 리뷰 수 현황  #### 요약  지난 1년간(2025년 3월 8일 ~ 2026년 3월 8일) Amazon에서 SKIN1004 제품에 대한 리뷰 데이터를 분석한 결과, **'센텔라 에어핏 선크림 라이트'가 총 213건**으로 가장 많은 리뷰를 기록했습니다. 상위 20개 제품 모두 100건 이상의 리뷰를 확보하며 "
+  },
+  {
+    "id": "V2_RA-215",
+    "query": "아마존 최근 수집 평가 날짜",
+    "table": "review_amazon",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 31.5,
+    "answer_len": 334,
+    "answer_preview": "### 📊 아마존 최근 수집 평가 날짜  #### 요약  아마존 리뷰 데이터의 **최근 수집 평가 날짜는 2026년 03월 02일**입니다.  #### 분석 및 인사이트  *   아마존 리뷰 데이터는 **2026년 03월 02일**까지의 정보가 반영되어 있습니다. *   오늘 날짜(2026년 03월 08일) 기준으로, 데이터는 약 6일 전까지 수집된 상태입"
+  },
+  {
+    "id": "V2_RA-216",
+    "query": "Amazon Centella 관련 제품 리뷰데이터 합계",
+    "table": "review_amazon",
+    "category": "product_review",
+    "status": "OK",
+    "time": 37.2,
+    "answer_len": 603,
+    "answer_preview": "### 📊 Amazon Centella 관련 제품 리뷰 현황  #### 요약  2025년 3월 8일부터 오늘(2026년 3월 8일)까지의 아마존 리뷰 데이터에서 SKIN1004 브랜드의 Centella 관련 제품에 대한 리뷰는 **0건**으로 확인되었습니다.  #### 분석 및 인사이트  *   조회된 기간(2025년 3월 8일 ~ 2026년 3월 8일) "
+  },
+  {
+    "id": "V2_RA-217",
+    "query": "아마존 리뷰 월 단위 집계 어떻게 되나요?",
+    "table": "review_amazon",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 54.5,
+    "answer_len": 1813,
+    "answer_preview": "### 📊 SKIN1004 아마존 리뷰 월별 집계 현황 (2025년 3월 8일 이후 수집된 데이터 기준)  #### 요약  제공된 데이터는 2025년 3월 8일 이후 수집된 SKIN1004 브랜드의 아마존 리뷰를 월별로 집계한 결과입니다. 해당 기간 수집된 리뷰들의 실제 작성일은 **2019년 11월부터 2022년 5월까지** 분포하며, 총 **64개 월*"
+  },
+  {
+    "id": "V2_RA-218",
+    "query": "요즘 Amazon 리뷰 원문 내용 최신 5건",
+    "table": "review_amazon",
+    "category": "review_content",
+    "status": "OK",
+    "time": 49.1,
+    "answer_len": 2247,
+    "answer_preview": "### 📊 SKIN1004 Amazon 최신 리뷰 5건  #### 요약  최근 **2026년 2월 26일부터 27일**까지 작성된 SKIN1004 Amazon 리뷰 **5건**이 확인되었습니다. 이 리뷰들은 주로 제품의 보습력, 사용감, 진정 효과에 대한 긍정적인 평가를 담고 있으며, 다양한 제품군에서 만족도가 높게 나타났습니다.  #### 상세 데이터  "
+  },
+  {
+    "id": "V2_RA-219",
+    "query": "아마존 후기 2024년 4월 데이터",
+    "table": "review_amazon",
+    "category": "date_range",
+    "status": "OK",
+    "time": 42.0,
+    "answer_len": 456,
+    "answer_preview": "# 데이터 조회 안내  안녕하세요. 요청하신 **아마존 후기 2024년 4월 데이터**를 조회하지 못했습니다.  좀 더 구체적인 조건을 포함하여 질문해 주시면 정확한 데이터를 찾는 데 도움이 됩니다. 아래 항목들을 참고하여 질문을 다시 작성해 보시겠어요?  > **구체화할 수 있는 항목:** 국가(마켓플레이스), 제품명/ASIN, 별점 범위, 조회 목적(긍"
+  },
+  {
+    "id": "V2_RA-220",
+    "query": "Amazon SKIN1004 평가 수 총합",
+    "table": "review_amazon",
+    "category": "brand_review",
+    "status": "OK",
+    "time": 21.2,
+    "answer_len": 93,
+    "answer_preview": "고객님, 문의하신 \"Amazon SKIN1004 평가 수 총합\"에 대한 정보는 현재 사내 CS 데이터베이스에서 찾을 수 없습니다.  해당 정보가 CS DB에 없습니다."
+  },
+  {
+    "id": "V2_RA-221",
+    "query": "아마존 리뷰데이터 가장 최근 수집된 제품",
+    "table": "review_amazon",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 39.1,
+    "answer_len": 1320,
+    "answer_preview": "### 📊 아마존 리뷰 데이터 최신 수집 제품 현황  #### 요약  아마존 리뷰 데이터 중 가장 최근에 수집된 날짜는 **2026년 03월 02일**이며, 해당 날짜에 총 **19개**의 제품 리뷰 데이터가 수집되었습니다. 이는 오늘(2026년 03월 08일) 기준으로 **6일 전** 데이터입니다. 이 중 중복을 제외한 **15개**의 고유 제품이 확인되"
+  },
+  {
+    "id": "V2_RA-222",
+    "query": "빠르게 Amazon 리뷰 제품명별 건수 정리",
+    "table": "review_amazon",
+    "category": "review_count",
+    "status": "OK",
+    "time": 41.0,
+    "answer_len": 1580,
+    "answer_preview": "### 📊 SKIN1004 Amazon 리뷰 제품별 건수 현황 (2025년 3월 8일 ~ 2026년 3월 8일)  #### 요약  지난 1년간(2025년 3월 8일 ~ 2026년 3월 8일) SKIN1004 브랜드의 아마존 리뷰 데이터를 분석한 결과, 총 23개 제품에 대한 리뷰가 집계되었습니다. 이 중 '센텔라 에어핏 선크림 라이트'가 **213건**으로"
+  },
+  {
+    "id": "V2_RA-223",
+    "query": "참고로 아마존 Centella Soothing Cream 최근 리뷰데이터 내용 확인해줘",
+    "table": "review_amazon",
+    "category": "review_content",
+    "status": "WARN",
+    "time": 60.2,
+    "answer_len": 509,
+    "answer_preview": "해당 조건에 맞는 아마존 리뷰 데이터가 없습니다.  SQL에서 사용된 제품명 필터 조건(`product_name LIKE '%Centella%Soothing%Cream%'`)이 문제인 것으로 보입니다. SKIN1004 브랜드의 'Centella Soothing Cream' 제품이 아마존 리뷰 데이터에 없거나, 데이터베이스에 등록된 제품명이 다를 수 있습니다"
+  },
+  {
+    "id": "V2_RA-224",
+    "query": "Amazon 후기 2024년 3월 건수 확인 가능한가요?",
+    "table": "review_amazon",
+    "category": "date_range",
+    "status": "WARN",
+    "time": 66.7,
+    "answer_len": 352,
+    "answer_preview": "**2024년 3월 아마존 후기 총 건수는 확인이 불가합니다.**  주요 이유는 다음과 같습니다:  1. **아마존 비공개 정책** — 아마존은 월별 후기(리뷰) 개수 등 세부 데이터를 공개적으로 발표하지 않습니다. 2. **공식 보고서 미포함** — 아마존 연례 보고서 등 공식 발표 자료에도 월별 후기 통계는 포함되어 있지 않습니다. 3. **서드파티 도"
+  },
+  {
+    "id": "V2_RA-225",
+    "query": "아마존 리뷰 월별 제품별 크로스탭 좀 알려줘",
+    "table": "review_amazon",
+    "category": "monthly_trend",
+    "status": "WARN",
+    "time": 76.9,
+    "answer_len": 1444,
+    "answer_preview": "### 📊 SKIN1004 아마존 월별 제품별 리뷰 현황 (2025년 3월 ~ 2026년 2월)  #### 요약  지난 1년간(2025년 3월 ~ 2026년 2월) SKIN1004 브랜드의 아마존 제품 리뷰는 총 **236건의 월별 제품별 리뷰 기록**으로 집계되었습니다. 이 기간 동안 **12개월**에 걸쳐 **23가지**의 고유한 제품에 대한 리뷰가 발"
+  },
+  {
+    "id": "V2_RA-226",
+    "query": "Amazon 리뷰 전체 데이터 개수 좀 알려줘",
+    "table": "review_amazon",
+    "category": "total_count",
+    "status": "OK",
+    "time": 43.0,
+    "answer_len": 521,
+    "answer_preview": "### 📊 Amazon 리뷰 데이터 현황 (2025년 3월 8일 이후 수집분)  #### 요약  ⚠️ 사용자 질문은 '전체' Amazon 리뷰 개수였으나, 제공된 데이터는 2025년 3월 8일 이후 수집된 리뷰 데이터입니다. 해당 기간 동안 **2,770**건의 Amazon 리뷰가 확인되었습니다.  #### 분석 및 인사이트  *   제공된 데이터는 202"
+  },
+  {
+    "id": "V2_RA-227",
+    "query": "궁금한데 아마존 후기에서 Cleansing 키워드 검색",
+    "table": "review_amazon",
+    "status": "OK",
+    "time": 19.8,
+    "answer_len": 542,
+    "answer_preview": "안녕하세요! 😊  아마존 후기에서 **\"Cleansing\" 키워드 관련 데이터를 조회하지 못했습니다.**  좀 더 정확한 결과를 위해 **조건을 구체적으로 지정**해 주시면 다시 조회해 드리겠습니다. 아래 항목들을 참고해 주세요:  - **국가** (예: 미국, 일본, 독일 등) - **기간** (예: 2024년 1월~6월, 최근 3개월 등) - **특정 "
+  },
+  {
+    "id": "V2_RA-228",
+    "query": "정확한 Amazon 최근 리뷰 내용 한국어로 보여줘 어떻게 되나요?",
+    "table": "review_amazon",
+    "category": "review_content",
+    "status": "OK",
+    "time": 43.3,
+    "answer_len": 2476,
+    "answer_preview": "### 📊 SKIN1004 Amazon 최신 리뷰 내용 분석  #### 요약  SKIN1004 브랜드의 Amazon 최신 리뷰 50건을 분석한 결과, **2026년 2월 16일부터 2월 27일까지**의 리뷰가 확인되었습니다. 사용자들은 주로 제품의 뛰어난 보습력, 피부 진정 효과, 가벼운 사용감 및 빠른 흡수력에 대해 긍정적으로 평가하고 있으며, 특히 '센"
+  },
+  {
+    "id": "V2_RA-229",
+    "query": "참고로 아마존 후기데이터 TOP 10 제품",
+    "table": "review_amazon",
+    "category": "top_reviewed",
+    "status": "OK",
+    "time": 36.8,
+    "answer_len": 612,
+    "answer_preview": "# 📋 데이터 조회 안내  안녕하세요. 요청하신 **아마존 후기 데이터 TOP 10 제품** 정보를 현재 데이터베이스에서 조회하지 못했습니다.  ---  ## 💡 더 정확한 결과를 위해 아래 항목을 구체적으로 지정해 주시면 도움이 됩니다.  | 구체화 항목 | 예시 | |------------|------| | **기간** | 2024년 1분기, 최근 3개"
+  },
+  {
+    "id": "V2_RA-230",
+    "query": "참고로 Amazon 2024년 2월 리뷰 궁금해",
+    "table": "review_amazon",
+    "category": "date_range",
+    "status": "OK",
+    "time": 37.8,
+    "answer_len": 1067,
+    "answer_preview": "### 📊 SKIN1004 Amazon 2024년 2월 리뷰 현황  #### 요약  2024년 2월 Amazon에서 SKIN1004 브랜드에 대한 리뷰는 총 **4건**이 조회되었습니다. 주요 제품은 '센텔라 토닝 토너'와 '히알루시카 블루 세럼'이었으며, 제품에 대한 긍정적인 평가와 함께 일부 부정적인 피드백(알레르기 반응, 포장 문제)도 확인되었습니다."
+  },
+  {
+    "id": "V2_RA-231",
+    "query": "아마존 리뷰데이터 collect_date 별 건수",
+    "table": "review_amazon",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 44.3,
+    "answer_len": 966,
+    "answer_preview": "### 📊 아마존 리뷰 데이터 수집일별 건수 현황  #### 요약  제공된 데이터에 따르면, 2026년 1월 15일부터 2026년 3월 2일까지의 아마존 리뷰 수집일별 건수는 총 **2,770건**입니다. 이 중 2026년 1월 15일에 **2,341건**의 리뷰가 수집되어 가장 높은 수치를 기록했습니다. ⚠️ 현재 데이터는 2026년 3월 2일까지의 정보"
+  },
+  {
+    "id": "V2_RA-232",
+    "query": "잠깐, Amazon 리뷰 최근 것 review_date 기준 정리해줘",
+    "table": "review_amazon",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 49.2,
+    "answer_len": 3860,
+    "answer_preview": "### 📊 SKIN1004 Amazon 최근 리뷰 분석  #### 요약  오늘(2026년 03월 08일) 기준으로, 2026년 2월 16일부터 2월 27일까지의 SKIN1004 Amazon 리뷰 **50건**을 분석했습니다. 대부분의 리뷰는 제품의 보습력, 진정 효과, 순한 사용감에 대해 긍정적인 평가를 보였으며, 특히 '센텔라 앰플 폼', '프로바이오시카"
+  },
+  {
+    "id": "V2_RA-233",
+    "query": "아마존 후기 채널 목록 알려줘 어떻게 되나요?",
+    "table": "review_amazon",
+    "category": "review_count",
+    "status": "OK",
+    "time": 34.7,
+    "answer_len": 440,
+    "answer_preview": "### 📊 아마존 후기 채널 목록  #### 요약  현재 조회된 아마존 후기 채널은 **Amazon** 하나입니다. 이는 `Review_Data.Amazon_Review` 테이블에 기록된 모든 후기가 'Amazon' 채널로 분류되어 있음을 나타냅니다.  #### 분석 및 인사이트  *   아마존 후기 데이터에서 유일하게 식별된 채널은 'Amazon'입니다."
+  },
+  {
+    "id": "V2_RA-234",
+    "query": "Amazon 리뷰 제품별 번역 리뷰 보여주세요",
+    "table": "review_amazon",
+    "category": "review_content",
+    "status": "OK",
+    "time": 55.4,
+    "answer_len": 3817,
+    "answer_preview": "### 📊 SKIN1004 Amazon 제품별 최신 번역 리뷰  #### 요약  사용자님의 요청에 따라 SKIN1004 브랜드의 Amazon 리뷰 중 최신 **50건**의 번역된 리뷰를 분석했습니다. 전반적으로 제품의 보습력, 진정 효과, 가벼운 사용감 및 빠른 흡수력에 대한 긍정적인 피드백이 많았으며, 특히 '센텔라 앰플', '프로바이오시카 바쿠치올 아이"
+  },
+  {
+    "id": "V2_RA-235",
+    "query": "아마죤 리뷰 2025년 각 월 누적 알려주세요",
+    "table": "review_amazon",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 45.9,
+    "answer_len": 423,
+    "answer_preview": "안녕하세요! 요청하신 **아마존 리뷰 2025년 월별 누적 데이터**를 조회하지 못했습니다.  좀 더 정확한 결과를 위해 아래 정보를 구체적으로 지정해 주시면 다시 조회해 드리겠습니다:  - **국가** (예: 미국, 일본, 독일 등) - **특정 제품명** (예: 마다가스카르 센텔라 톤크림 등) - **조회 항목** (리뷰 건수, 평점, 특정 키워드 등)"
+  },
+  {
+    "id": "V2_RA-236",
+    "query": "Amazon 전체 후기 동향 요약",
+    "table": "review_amazon",
+    "category": "total_count",
+    "status": "WARN",
+    "time": 61.1,
+    "answer_len": 939,
+    "answer_preview": "# 아마존 리뷰 시스템 최신 동향 요약  ## 1. AI 기반 리뷰 관리 강화  | 영역 | 내용 | |------|------| | **리뷰 요약** | AI가 장문 리뷰를 자동 요약 → 쇼핑객이 제품 평가를 빠르게 파악 | | **가짜 리뷰 차단** | 2023년 기준 **2억 5천만 개 이상** 의심 리뷰 차단, 유도 업체에 법적 조치 |  ---  "
+  },
+  {
+    "id": "V2_RA-237",
+    "query": "아마존 후기 최근 150건",
+    "table": "review_amazon",
+    "category": "recent_n",
+    "status": "OK",
+    "time": 45.7,
+    "answer_len": 1584,
+    "answer_preview": "### 📊 아마존 SKIN1004 최근 150건 리뷰 분석  #### 요약  2026년 02월 12일부터 2026년 02월 27일까지의 아마존 SKIN1004 제품 후기 **총 150건**을 분석한 결과, **23개**의 다양한 제품에 대한 리뷰가 수집되었습니다. 가장 최근 리뷰는 2026년 02월 27일에 작성되었으며, 전반적으로 제품의 보습, 진정, 사"
+  },
+  {
+    "id": "V2_RA-238",
+    "query": "잠깐, Amazon Madagascar Centella Ampoule 리뷰 전체 건수",
+    "table": "review_amazon",
+    "category": "product_review",
+    "status": "OK",
+    "time": 51.3,
+    "answer_len": 796,
+    "answer_preview": "### 📊 Amazon 마다가스카르 센텔라 앰플 최근 리뷰 현황  #### 요약  ⚠️ 2025년 3월 8일 이후 수집된 Amazon 마다가스카르 센텔라 앰플 리뷰 데이터는 현재 **0건**으로 확인됩니다. 이는 해당 기간 동안 새로운 리뷰가 없거나, 데이터 수집 범위에 포함되지 않았음을 의미합니다. 전체 기간에 대한 리뷰 건수는 현재 조회된 데이터에 포함"
+  },
+  {
+    "id": "V2_RA-239",
+    "query": "아마존 리뷰데이터 제품 기준 최다 리뷰 월 알려줄래?",
+    "table": "review_amazon",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 50.4,
+    "answer_len": 1813,
+    "answer_preview": "### 📊 SKIN1004 아마존 제품별 최다 리뷰 발생 월 분석  #### 요약  SKIN1004 제품 중 최근 1년간(2025년 3월 8일 ~ 2026년 3월 8일) 수집된 아마존 리뷰 데이터를 분석한 결과, **'센텔라 라이트 클렌징 오일'**이 **2025년 11월**에 **59건**으로 가장 많은 리뷰를 기록했습니다. 대부분의 제품은 2025년 하"
+  },
+  {
+    "id": "V2_RA-240",
+    "query": "Amazon 후기 데이터 최초 수집일",
+    "table": "review_amazon",
+    "category": "date_range",
+    "status": "OK",
+    "time": 42.6,
+    "answer_len": 418,
+    "answer_preview": "### 📊 Amazon 후기 데이터 최초 수집일  #### 요약  Amazon 후기 데이터는 **2026년 01월 15일**에 최초로 수집되었습니다. 이는 현재 시스템에 기록된 Amazon 후기 데이터의 가장 오래된 수집 시점입니다.  #### 분석 및 인사이트  *   Amazon 후기 데이터 수집은 2026년 1월 중순부터 시작되었음을 명확히 알 수 있"
+  },
+  {
+    "id": "V2_RA-241",
+    "query": "amazon에서 리뷰 수 증가 추세야은 어떤가요?",
+    "table": "review_amazon",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 26.5,
+    "answer_len": 1172,
+    "answer_preview": "### 📊 아마존 SKIN1004 월별 리뷰 수 증가 추세 분석  #### 요약  지난 1년간(2025년 3월 ~ 2026년 2월) 아마존에서 SKIN1004 브랜드의 월별 리뷰 수는 전반적으로 **강력한 증가 추세**를 보였습니다. 2025년 3월 **62**개에서 시작하여 2026년 1월에는 **322**개로 최고치를 기록했으며, 2026년 2월에는 *"
+  },
+  {
+    "id": "V2_RA-242",
+    "query": "Amazon 리뷰 최근 데이터 요약해줘 부탁드려요",
+    "table": "review_amazon",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 54.0,
+    "answer_len": 2078,
+    "answer_preview": "### 📊 Amazon SKIN1004 제품 최근 1년간 리뷰 현황  #### 요약  지난 1년간(2025년 3월 8일 ~ 2026년 3월 8일) Amazon에서 SKIN1004 브랜드 제품에 대한 리뷰 데이터를 분석한 결과, 총 **23개** 제품에서 **2,682건**의 리뷰가 수집되었습니다. 이 중 '센텔라 에어핏 선크림 라이트'가 **213건**으로"
+  },
+  {
+    "id": "V2_RA-243",
+    "query": "아마존 Tone Brightening 제품 후기 몇 건?",
+    "table": "review_amazon",
+    "category": "product_review",
+    "status": "OK",
+    "time": 39.7,
+    "answer_len": 562,
+    "answer_preview": "### 📊 아마존 SKIN1004 Tone Brightening 제품 후기 현황  #### 요약  현재 조회된 데이터에 따르면, 아마존에서 'Tone Brightening' 제품명과 'SKIN1004' 브랜드를 포함하는 제품에 대한 후기는 **0건**으로 확인되었습니다.  #### 분석 및 인사이트  *   **후기 미확인:** 현재 데이터베이스에서 사용자"
+  },
+  {
+    "id": "V2_RA-244",
+    "query": "Amazon 리뷰 제품 종류 몇 개인가요",
+    "table": "review_amazon",
+    "category": "review_count",
+    "status": "OK",
+    "time": 37.8,
+    "answer_len": 529,
+    "answer_preview": "### 📊 아마존 SKIN1004 브랜드 제품 종류 현황  #### 요약  SKIN1004 브랜드의 아마존 리뷰 데이터를 분석한 결과, 현재 **23개**의 고유한 제품 종류가 확인되었습니다. 이는 아마존에서 SKIN1004 브랜드로 판매되고 고객 리뷰가 작성된 제품의 다양성을 나타냅니다.  #### 상세 데이터  (단일 수치이므로 상세 데이터 섹션은 생략"
+  },
+  {
+    "id": "V2_RA-245",
+    "query": "아마존 평가 번역문 최근 순",
+    "table": "review_amazon",
+    "category": "review_content",
+    "status": "OK",
+    "time": 45.6,
+    "answer_len": 11877,
+    "answer_preview": "### 📊 SKIN1004 아마존 최신 고객 평가 (2026년 2월)  #### 요약  SKIN1004 브랜드의 아마존 최신 고객 평가 **총 50건**이 조회되었습니다. 가장 최근 평가는 **2026년 2월 27일**에 작성되었으며, 주로 제품의 보습력, 진정 효과, 가벼운 사용감에 대한 긍정적인 피드백이 많았습니다.  #### 상세 데이터  아래는 조회"
+  },
+  {
+    "id": "V2_RA-246",
+    "query": "Amazon 2024년 1분기 리뷰데이터 데이터",
+    "table": "review_amazon",
+    "category": "date_range",
+    "status": "OK",
+    "time": 49.8,
+    "answer_len": 1594,
+    "answer_preview": "### 📊 Amazon 2024년 1분기 SKIN1004 리뷰 데이터 분석  #### 요약  2024년 1분기(1월 1일 ~ 3월 31일) 동안 Amazon에서 SKIN1004 브랜드 제품에 대한 총 **22건**의 리뷰가 수집되었습니다. 리뷰는 주로 긍정적인 피드백과 함께 일부 제품에서 유통기한, 포장 문제, 그리고 특정 성분에 대한 피부 민감성 반응 등"
+  },
+  {
+    "id": "V2_RA-247",
+    "query": "아마존 후기 전체 건수 차트",
+    "table": "review_amazon",
+    "category": "total_count",
+    "status": "OK",
+    "time": 41.5,
+    "answer_len": 536,
+    "answer_preview": "### 📊 아마존 SKIN1004 후기 건수 현황 (2025.03.08 ~ 2026.03.08)  #### 요약  ⚠️ 2025년 03월 08일부터 2026년 03월 08일까지의 아마존 SKIN1004 후기 데이터 분석 결과, 총 **2,770건**의 후기가 확인되었습니다. 이는 지난 1년간 아마존에서 SKIN1004 브랜드에 대해 작성된 고객 후기의 총합"
+  },
+  {
+    "id": "V2_RA-248",
+    "query": "Amazon 리뷰 상품별 비교 분석",
+    "table": "review_amazon",
+    "category": "review_count",
+    "status": "OK",
+    "time": 40.2,
+    "answer_len": 1357,
+    "answer_preview": "### 📊 Amazon SKIN1004 상품별 리뷰 수 비교 분석  #### 요약  SKIN1004 브랜드의 Amazon 리뷰 데이터를 분석한 결과, **'센텔라 에어핏 선크림 라이트'**가 총 **213개**의 리뷰를 기록하며 가장 많은 관심을 받은 것으로 나타났습니다. 전체 23개 제품 중 상위 10개 제품이 120개 이상의 리뷰를 확보하며 고른 인기를"
+  },
+  {
+    "id": "V2_RA-249",
+    "query": "아마존 최근 후기 중 Cream 제품",
+    "table": "review_amazon",
+    "category": "product_review",
+    "status": "OK",
+    "time": 29.6,
+    "answer_len": 501,
+    "answer_preview": "해당 조건에 맞는 데이터가 없습니다.  SQL에서 `brand` 조건으로 'SKIN1004' 브랜드의 아마존 후기를 조회했으며, `product_name` 조건으로 제품명에 'Cream'이 포함된 제품을 찾았습니다. 현재 데이터에는 'SKIN1004' 브랜드의 아마존 제품 중 제품명에 'Cream'이 포함된 후기가 존재하지 않습니다.  유효 값 목록이 없으"
+  },
+  {
+    "id": "V2_RA-250",
+    "query": "Amazon 리뷰 월별 건수 차트 그려줘 알려줄래?",
+    "table": "review_amazon",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 30.6,
+    "answer_len": 1081,
+    "answer_preview": "### 📊 SKIN1004 아마존 월별 리뷰 건수 현황  #### 요약  2025년 3월부터 2026년 2월까지 SKIN1004 브랜드의 아마존 월별 리뷰는 총 **2,309건**으로 집계되었습니다. 특히 2025년 하반기부터 리뷰 건수가 꾸준히 증가하는 추세를 보였으며, **2026년 1월**에 **322건**으로 가장 많은 리뷰가 발생했습니다.  ###"
+  },
+  {
+    "id": "V2_RA-251",
+    "query": "아마존 후기 원문 전체 보여줄래?",
+    "table": "review_amazon",
+    "category": "review_content",
+    "status": "OK",
+    "time": 50.6,
+    "answer_len": 7611,
+    "answer_preview": "### 📊 SKIN1004 아마존 최신 후기 원문 분석  #### 요약  SKIN1004 브랜드의 아마존 후기 **총 1,000건**을 조회했습니다. 이 후기들은 **2026년 2월 12일부터 2026년 2월 27일** 사이에 작성되었으며, **23개**의 고유 제품에 대한 내용입니다. 가장 최근 후기는 2026년 2월 27일에 작성되었습니다. 요청하신 후"
+  },
+  {
+    "id": "V2_RA-252",
+    "query": "빠르게 Amazon 리뷰 2024년 전체 추이",
+    "table": "review_amazon",
+    "category": "date_range",
+    "status": "OK",
+    "time": 38.4,
+    "answer_len": 505,
+    "answer_preview": "# 데이터 조회 안내  안녕하세요. 요청하신 **Amazon 리뷰 2024년 전체 추이** 데이터를 조회하지 못했습니다.  좀 더 정확한 결과를 위해 아래 항목을 구체적으로 지정해 주시면 다시 조회해 드리겠습니다.  > **구체화하면 좋은 항목**  > - **국가/마켓플레이스** (예: Amazon US, Amazon JP 등)  > - **제품명 또는 "
+  },
+  {
+    "id": "V2_RA-253",
+    "query": "혹시 아마존 리뷰에서 Ampoule 제품만 필터",
+    "table": "review_amazon",
+    "category": "product_review",
+    "status": "OK",
+    "time": 44.7,
+    "answer_len": 447,
+    "answer_preview": "해당 조건으로 조회된 데이터가 없습니다.  SQL에서 사용된 필터 조건 중 `product_name LIKE '%Ampoule%'`이 문제일 가능성이 높습니다. 'SKIN1004' 브랜드의 아마존 리뷰 데이터에 'Ampoule'이라는 단어가 포함된 제품명이 없거나, 다른 용어(예: 세럼, 에센스 등)로 표기되어 있을 수 있습니다.  유효 값 목록이 없으므로"
+  },
+  {
+    "id": "V2_RA-254",
+    "query": "혹시 Amazon 리뷰 최근 75건 데이터 좀 알려줘",
+    "table": "review_amazon",
+    "category": "recent_n",
+    "status": "OK",
+    "time": 40.7,
+    "answer_len": 1626,
+    "answer_preview": "### 📊 SKIN1004 Amazon 최신 75건 리뷰 분석  #### 요약  SKIN1004 브랜드의 Amazon 최신 **75건** 리뷰 데이터가 요청되었습니다. 이 리뷰들은 **2026년 1월 13일부터 2026년 2월 27일**까지 작성된 것으로, 다양한 제품에 대한 긍정적인 평가가 주를 이루고 있습니다. 특히 '센텔라 앰플', '프로바이오시카 인"
+  },
+  {
+    "id": "V2_RA-255",
+    "query": "아마존 리뷰데이터 브랜드 분포 알려주세요",
+    "table": "review_amazon",
+    "category": "brand_review",
+    "status": "OK",
+    "time": 34.3,
+    "answer_len": 454,
+    "answer_preview": "### 📊 아마존 리뷰데이터 브랜드 분포 현황  #### 요약  아마존 리뷰 데이터 분석 결과, 현재 데이터셋에는 **SKIN1004** 브랜드의 리뷰만 존재하며, 총 **2,770개**의 리뷰가 집계되었습니다. 이는 현재 분석 대상 데이터셋 내에서 SKIN1004가 유일한 브랜드임을 시사합니다.  #### 분석 및 인사이트  *   현재 분석에 사용된 아"
+  },
+  {
+    "id": "V2_RA-256",
+    "query": "혹시 Amazon 리뷰 상품별 매월 통계표",
+    "table": "review_amazon",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 48.4,
+    "answer_len": 2695,
+    "answer_preview": "### 📊 SKIN1004 Amazon 상품별 월간 리뷰 통계 (2025년 3월 ~ 2026년 2월)  #### 요약  지난 1년간(2025년 3월부터 2026년 2월까지) SKIN1004 브랜드의 Amazon 리뷰 데이터를 분석한 결과, 총 **23개**의 상품에 대해 **236건**의 월별 리뷰 통계가 집계되었습니다. 프리뷰 데이터에 따르면 `센텔라 라"
+  },
+  {
+    "id": "V2_RA-257",
+    "query": "궁금한데 아마존 리뷰 전체 데이터 조회 부탁드려요",
+    "table": "review_amazon",
+    "category": "total_count",
+    "status": "OK",
+    "time": 50.0,
+    "answer_len": 1408,
+    "answer_preview": "### 📊 아마존 SKIN1004 브랜드 최신 리뷰 조회 결과  #### 요약  사용자님께서 요청하신 아마존 SKIN1004 브랜드 리뷰 데이터 중 **최신 1,000건**이 조회되었습니다. 이 데이터는 **2026년 1월 15일부터 2026년 3월 2일** 사이에 수집되었으며, 리뷰 작성일은 **2026년 2월 12일부터 2026년 2월 27일**까지의 "
+  },
+  {
+    "id": "V2_RA-258",
+    "query": "Amazon 2023년 후기 데이터 있어?",
+    "table": "review_amazon",
+    "category": "date_range",
+    "status": "OK",
+    "time": 35.6,
+    "answer_len": 446,
+    "answer_preview": "안녕하세요! 요청하신 **Amazon 2023년 후기 데이터**를 조회하지 못했습니다.  좀 더 정확한 결과를 위해 **조건을 구체적으로** 지정해 주시면 다시 조회해 드리겠습니다. 예를 들어 아래와 같은 항목을 포함해 주시면 도움이 됩니다:  > **기간** · **국가(마켓플레이스)** · **제품명/라인** · **데이터 유형**(매출, 리뷰 수, 평"
+  },
+  {
+    "id": "V2_RA-259",
+    "query": "잠깐, 아마존 리뷰 최근 리뷰 제품명 확인 부탁드립니다",
+    "table": "review_amazon",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 44.2,
+    "answer_len": 2056,
+    "answer_preview": "### 📊 SKIN1004 아마존 최근 리뷰 제품 현황  #### 요약  2026년 3월 8일 기준으로, SKIN1004 브랜드의 아마존 리뷰 중 가장 최근 **50건**의 데이터를 분석한 결과, **2026년 2월 27일**까지의 리뷰가 확인되었습니다. 이들 리뷰는 '센텔라 앰플 폼', '프로바이오시카 바쿠치올 아이 크림', '센텔라 크림' 등 다양한 제"
+  },
+  {
+    "id": "V2_RA-260",
+    "query": "Amazon Centella Ampoule 후기 한국어 요약 알려주시면 감사하겠습니다",
+    "table": "review_amazon",
+    "category": "review_content",
+    "status": "OK",
+    "time": 50.5,
+    "answer_len": 623,
+    "answer_preview": "# 아마존 센텔라 앰플 (SKIN1004 마다가스카르 센텔라 앰플) 한국어 후기 요약  ## 주요 특징 | 항목 | 내용 | |------|------| | **제형** | 물처럼 묽고 점성이 거의 없어 **흡수가 매우 빠름** | | **향** | 특별한 향이 거의 없음 | | **성분** | **병풀 추출물 100%** 단일 성분으로 민감 피부에 적합 "
+  },
+  {
+    "id": "V2_RA-261",
+    "query": "amazon 제품별 후기 수 그래프",
+    "table": "review_amazon",
+    "category": "review_count",
+    "status": "OK",
+    "time": 29.3,
+    "answer_len": 424,
+    "answer_preview": "안녕하세요! 요청하신 **Amazon 제품별 후기 수** 데이터를 조회하지 못했습니다.  좀 더 구체적인 조건을 포함하여 질문해 주시면 정확한 데이터를 찾는 데 도움이 됩니다. 아래 예시를 참고해 주세요:  **질문 예시:** 1. **\"2024년 Amazon US에서 제품별 후기 수를 알려줘\"** (기간 + 국가 지정) 2. **\"Amazon Japan에"
+  },
+  {
+    "id": "V2_RA-262",
+    "query": "우리 회사 Amazon 리뷰 수 기준 하위 제품 빨리",
+    "table": "review_amazon",
+    "category": "review_count",
+    "status": "OK",
+    "time": 36.2,
+    "answer_len": 1702,
+    "answer_preview": "### 📊 최근 1년간 Amazon 리뷰 수 기준 SKIN1004 하위 제품 현황  #### 요약  최근 1년간(2025년 3월 8일 ~ 2026년 3월 8일) Amazon 리뷰 데이터를 분석한 결과, SKIN1004 제품 중 리뷰 수가 가장 적은 제품은 **센텔라 크림**으로 **82개**의 리뷰를 기록했습니다. 하위 23개 제품의 리뷰 수는 82개에서 "
+  },
+  {
+    "id": "V2_RA-263",
+    "query": "아마존 2025년 1월 리뷰데이터 건수",
+    "table": "review_amazon",
+    "category": "date_range",
+    "status": "OK",
+    "time": 54.7,
+    "answer_len": 615,
+    "answer_preview": "# 데이터 조회 안내  안녕하세요. 요청하신 **아마존 2025년 1월 리뷰 데이터 건수**를 현재 조회하지 못했습니다.  좀 더 정확한 결과를 위해 **조건을 구체적으로** 지정해 주시면 다시 조회를 시도해 보겠습니다.  ---  ## 💡 이런 식으로 질문해 보세요  1. **\"아마존 US에서 2025년 1월 마다가스카르 센텔라 토너의 리뷰 건수는?\"**"
+  },
+  {
+    "id": "V2_RA-264",
+    "query": "Amazon 평가 최신 수집 데이터 날짜",
+    "table": "review_amazon",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 24.2,
+    "answer_len": 410,
+    "answer_preview": "### 📊 Amazon 평가 최신 수집 데이터 날짜  #### 요약  Amazon 평가 데이터의 최신 수집 날짜는 **2026년 03월 02일**입니다. 이는 오늘(2026년 03월 08일) 기준으로 6일 전 데이터입니다.  #### 분석 및 인사이트  *   Amazon 평가 데이터는 **2026년 03월 02일**까지 수집된 것으로 확인됩니다. *   "
+  },
+  {
+    "id": "V2_RA-265",
+    "query": "아마존 후기 각 제품 평균 리뷰 수 확인 가능한가요?",
+    "table": "review_amazon",
+    "category": "review_count",
+    "status": "WARN",
+    "time": 66.5,
+    "answer_len": 575,
+    "answer_preview": "### 📊 SKIN1004 아마존 제품별 평균 리뷰 수 분석  #### 요약  SKIN1004 브랜드의 아마존 제품들은 지난 1년간(2025년 3월 8일 ~ 2026년 3월 8일) 평균적으로 **120.4개**의 리뷰를 보유하고 있습니다. 이는 제품당 고객 참여도와 인지도를 나타내는 중요한 지표입니다.  #### 분석 및 인사이트  *   **높은 고객 참"
+  },
+  {
+    "id": "V2_RA-266",
+    "query": "Amazon 리뷰 2025년 전체 변화",
+    "table": "review_amazon",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 41.2,
+    "answer_len": 1197,
+    "answer_preview": "### 📊 2025년 SKIN1004 아마존 월별 리뷰 변화 분석  #### 요약  2025년 한 해 동안 SKIN1004 브랜드의 아마존 리뷰는 꾸준히 증가하는 추세를 보였습니다. 총 **1,759개**의 리뷰가 기록되었으며, 특히 11월에 **293개**로 가장 많은 리뷰를 기록하며 연중 최고치를 달성했습니다. 1월의 46개 리뷰와 비교했을 때 연말에는"
+  },
+  {
+    "id": "V2_RA-267",
+    "query": "아마존 리뷰데이터 원문과 번역 같이 10건 좀 알려줘",
+    "table": "review_amazon",
+    "category": "review_content",
+    "status": "OK",
+    "time": 48.8,
+    "answer_len": 114483,
+    "answer_preview": "### 📊 SKIN1004 아마존 최신 리뷰 10건 (원문 및 번역)  #### 요약  사용자 요청에 따라 SKIN1004 브랜드의 아마존 최신 리뷰 **10건**을 원문과 한국어 번역본으로 제공합니다. 이 리뷰들은 다양한 제품에 대한 긍정적인 평가와 함께 일부 주의사항도 포함하고 있습니다.  #### 상세 데이터 | review_original | rev"
+  },
+  {
+    "id": "V2_RA-268",
+    "query": "Amazon 리뷰 기간별 건수 분석 부탁드려요",
+    "table": "review_amazon",
+    "category": "date_range",
+    "status": "OK",
+    "time": 40.2,
+    "answer_len": 570,
+    "answer_preview": "# 데이터 조회 안내  안녕하세요. 요청하신 **Amazon 리뷰 기간별 건수 분석** 데이터를 현재 조회하지 못했습니다.  좀 더 정확한 결과를 위해 **조건을 구체적으로 지정**해 주시면 다시 조회를 시도해 보겠습니다.  ---  ## 💡 이렇게 질문해 보시면 좋습니다  > **예시 1)** \"2024년 1월~12월 Amazon US에서 마다가스카르 센"
+  },
+  {
+    "id": "V2_RA-269",
+    "query": "아마존 후기 TOP 3 제품 리뷰 내용",
+    "table": "review_amazon",
+    "category": "top_reviewed",
+    "status": "WARN",
+    "time": 68.5,
+    "answer_len": 604,
+    "answer_preview": "## 📊 아마존 TOP 3 제품 리뷰 분석 (제공된 데이터 기준)  #### 요약  제공된 50건의 아마존 리뷰 데이터는 SKIN1004 브랜드의 TOP 3 제품 중 **'센텔라 라이트 클렌징 오일'**에 대한 내용입니다. 해당 제품은 **가벼운 사용감, 뛰어난 메이크업 제거력 (특히 워터프루프), 그리고 피부에 자극이 적다는 점**에서 높은 만족도를 보였"
+  },
+  {
+    "id": "V2_RA-270",
+    "query": "Amazon 최근 리뷰 전체 건수 확인해줘",
+    "table": "review_amazon",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 42.5,
+    "answer_len": 450,
+    "answer_preview": "### 📊 Amazon 최근 SKIN1004 브랜드 리뷰 현황  #### 요약  2025년 3월 8일부터 오늘(2026년 3월 8일)까지 Amazon에서 수집된 SKIN1004 브랜드의 총 리뷰 건수는 **2,770건**입니다.  #### 분석 및 인사이트  *   지난 1년간 Amazon에서 SKIN1004 브랜드에 대한 **2,770건**의 리뷰가 수집"
+  },
+  {
+    "id": "V2_RA-271",
+    "query": "아마존 평가 상품별 최신 리뷰 날짜와 내용?",
+    "table": "review_amazon",
+    "category": "review_content",
+    "status": "OK",
+    "time": 57.7,
+    "answer_len": 3858,
+    "answer_preview": "### 📊 아마존 SKIN1004 상품별 최신 리뷰 현황  #### 요약  아마존 SKIN1004 브랜드 제품에 대한 최신 리뷰 날짜와 내용을 분석한 결과, **총 28건**의 최신 리뷰 데이터가 확인되었습니다. 이 리뷰들은 **2026년 2월 13일부터 2026년 2월 27일** 사이에 작성되었으며, 현재 제공된 프리뷰 데이터에는 **17개**의 고유 제"
+  },
+  {
+    "id": "V2_RA-272",
+    "query": "Amazon 평가 수 각 제품 파이 차트?",
+    "table": "review_amazon",
+    "category": "review_count",
+    "status": "OK",
+    "time": 56.4,
+    "answer_len": 1443,
+    "answer_preview": "### 📊 SKIN1004 Amazon 제품별 평가 수 현황 (최근 1년)  #### 요약  최근 1년간(2025년 3월 8일 ~ 2026년 3월 8일) SKIN1004 브랜드의 Amazon 제품별 평가 수를 분석한 결과, **'센텔라 에어핏 선크림 라이트'가 213건**으로 가장 많은 평가를 받았습니다. 상위 20개 제품 모두 100건 이상의 평가를 기록"
+  },
+  {
+    "id": "V2_RA-273",
+    "query": "아마존 리뷰 최근 6개월 트렌드 좀 봐줘 확인 가능한가요?",
+    "table": "review_amazon",
+    "category": "monthly_trend",
+    "status": "WARN",
+    "time": 74.2,
+    "answer_len": 3357,
+    "answer_preview": "### 📈 아마존 리뷰 최근 6개월 트렌드 분석  #### 요약  지난 6개월간(2025년 9월 ~ 2026년 3월) 아마존 채널은 SKIN1004에 **약 59.2억원**의 매출을 기여하며 핵심 판매 채널로서의 중요성을 입증했습니다. 이 기간 아마존은 '상품 변형(Variation) 리뷰 공유 제한 강화'와 '가짜 리뷰 단속 강화'라는 두 가지 주요 정책"
+  },
+  {
+    "id": "V2_RA-274",
+    "query": "Amazon 평가 데이터 전체 요약 알려주세요",
+    "table": "review_amazon",
+    "category": "total_count",
+    "status": "OK",
+    "time": 48.5,
+    "answer_len": 665,
+    "answer_preview": "### 📊 Amazon 평가 데이터 요약 (2025년 3월 8일 ~ 2026년 3월 8일)  #### 요약  지난 1년간(2025년 3월 8일 ~ 2026년 3월 8일) Amazon에서 **SKIN1004 브랜드**는 총 **2,770개**의 리뷰를 받았으며, 이는 **23개**의 고유 제품에 대한 평가입니다.  #### 상세 데이터 | 브랜드 | 총 리뷰"
+  },
+  {
+    "id": "V2_RA-275",
+    "query": "궁금한데 아마존 Centella Cleansing Oil 리뷰 전체",
+    "table": "review_amazon",
+    "category": "product_review",
+    "status": "OK",
+    "time": 35.5,
+    "answer_len": 850,
+    "answer_preview": "요청하신 조건으로는 데이터를 찾을 수 없습니다.  **문제 조건:**  1.  **수집일 (`collect_date`) 조건:** `CAST(collect_date AS DATE) >= '2025-03-08'`     *   수집일이 미래 날짜(2025년 3월 8일 이후)로 설정되어 있어 현재 시점의 데이터를 조회할 수 없습니다. 이 조건을 현재 날짜 또는"
+  },
+  {
+    "id": "V2_RA-276",
+    "query": "Amazon 평가 최근 35건 알려줘",
+    "table": "review_amazon",
+    "category": "recent_n",
+    "status": "WARN",
+    "time": 64.9,
+    "answer_len": 909,
+    "answer_preview": "# 아마존(AMZN) 최근 애널리스트 평가 요약  제공된 검색 정보를 기반으로 확인된 내용을 안내드립니다.  ---  ## 전체 컨센서스 (최근 3개월 기준)  | 구분 | 내용 | |------|------| | **분석 애널리스트 수** | 72명 | | **매수(Buy)** | 63명 | | **보유(Hold)** | 4명 | | **매도(Sell)*"
+  },
+  {
+    "id": "V2_RA-277",
+    "query": "우리 회사 아마존 리뷰 2024년 하반기 건수",
+    "table": "review_amazon",
+    "category": "date_range",
+    "status": "OK",
+    "time": 23.6,
+    "answer_len": 423,
+    "answer_preview": "### 📊 SKIN1004 2024년 하반기 아마존 리뷰 건수 현황  #### 요약  2024년 하반기(7월 1일 ~ 12월 31일) 동안 SKIN1004 브랜드의 아마존 리뷰는 총 **152건**이었습니다.  #### 분석 및 인사이트  *   2024년 하반기 동안 SKIN1004 브랜드에 대한 아마존 리뷰는 총 152건이 접수되었습니다. *   이 수"
+  },
+  {
+    "id": "V2_RA-278",
+    "query": "Amazon 리뷰 원문 중 긴 리뷰 좀 알려주시면 감사하겠습니다",
+    "table": "review_amazon",
+    "category": "review_content",
+    "status": "OK",
+    "time": 31.5,
+    "answer_len": 1855,
+    "answer_preview": "### 📊 SKIN1004 Amazon 최장 리뷰 분석  #### 요약  SKIN1004 제품 중 가장 긴 Amazon 리뷰 50건을 분석한 결과, 가장 긴 리뷰는 **센텔라 크림** 제품으로 **3,094자**에 달하는 매우 상세한 내용이었습니다. 이 리뷰들은 주로 제품의 성분, 효능, 사용 경험, 그리고 다른 제품과의 비교 등 깊이 있는 평가를 담고 있"
+  },
+  {
+    "id": "V2_RA-279",
+    "query": "아마존 리뷰 제품별 최근 3개월 추이 좀 알려줘",
+    "table": "review_amazon",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 58.1,
+    "answer_len": 2025,
+    "answer_preview": "### 📊 아마존 SKIN1004 제품별 최근 3개월 리뷰 추이 분석  #### 요약  아마존 SKIN1004 제품의 최근 3개월(2025년 12월 8일 ~ 2026년 3월 8일) 리뷰 추이를 분석한 결과, 2026년 1월부터 3월 8일까지 **총 2,914건**의 리뷰가 집계되었습니다. 리뷰 수는 2026년 1월에 **2,398건**으로 가장 많았으나, "
+  },
+  {
+    "id": "V2_RA-280",
+    "query": "확인 좀 해줘 Amazon 전체 리뷰 수 알려줘",
+    "table": "review_amazon",
+    "category": "total_count",
+    "status": "OK",
+    "time": 33.6,
+    "answer_len": 564,
+    "answer_preview": "### 📊 Amazon 지난 1년간 총 리뷰 수 분석  #### 요약  지난 1년간(2025년 03월 08일 ~ 2026년 03월 08일) Amazon 채널에서 수집된 총 리뷰 수는 **2,770개**입니다. 이는 해당 기간 동안 Amazon 고객들의 활발한 제품 피드백 활동을 나타냅니다.  #### 분석 및 인사이트  *   **활발한 고객 피드백:** "
+  },
+  {
+    "id": "V2_RA-281",
+    "query": "아마죤 리뷰 제품 기준 리뷰 날짜 분포 알려주세요",
+    "table": "review_amazon",
+    "category": "date_range",
+    "status": "OK",
+    "time": 48.3,
+    "answer_len": 2446,
+    "answer_preview": "### 📊 아마존 SKIN1004 제품별 최근 1년간 리뷰 날짜 분포  #### 요약  최근 1년간(2025년 3월 8일 ~ 2026년 3월 7일) 아마존에서 **SKIN1004 브랜드의 14개 제품**에 대한 총 **1,000건의 리뷰 데이터**가 분석되었습니다. 이 기간 동안 **총 327일**에 걸쳐 리뷰가 작성되었으며, 일별 제품별 리뷰 수는 최소 "
+  },
+  {
+    "id": "V2_RA-282",
+    "query": "Amazon 평가 SKIN1004 제품 리스트 좀 알려줘",
+    "table": "review_amazon",
+    "category": "brand_review",
+    "status": "OK",
+    "time": 42.1,
+    "answer_len": 134,
+    "answer_preview": "고객님, 문의하신 Amazon에 등록된 SKIN1004 제품 리스트에 대한 정보는 현재 사내 CS 데이터베이스에서 찾을 수 없습니다.  해당 정보는 CS 데이터베이스에 없습니다.  --- **출처:** CS 데이터베이스 검색 결과 (10건)"
+  },
+  {
+    "id": "V2_RA-283",
+    "query": "아마존 리뷰 최근 순으로 50건 좀",
+    "table": "review_amazon",
+    "category": "recent_n",
+    "status": "OK",
+    "time": 46.6,
+    "answer_len": 4985,
+    "answer_preview": "### 📊 SKIN1004 아마존 최신 리뷰 50건  #### 요약  2026년 2월 16일부터 2월 27일까지의 SKIN1004 브랜드 아마존 리뷰 **총 50건**이 조회되었습니다. 가장 최근 리뷰는 2026년 2월 27일에 작성된 '센텔라 앰플 폼', '프로바이오시카 바쿠치올 아이 크림', '센텔라 크림' 제품에 대한 것입니다.  #### 상세 데이터"
+  },
+  {
+    "id": "V2_RA-284",
+    "query": "잠깐, Amazon 리뷰 제품별 건수 내림차순 정렬",
+    "table": "review_amazon",
+    "category": "review_count",
+    "status": "OK",
+    "time": 36.3,
+    "answer_len": 1647,
+    "answer_preview": "### 📊 Amazon SKIN1004 제품별 리뷰 건수 분석  #### 요약  SKIN1004 브랜드의 Amazon 제품 리뷰 데이터를 분석한 결과, 총 23개 제품 중 '센텔라 에어핏 선크림 라이트'가 **213건**으로 가장 많은 리뷰를 기록했습니다. 상위 20개 제품은 모두 100건 이상의 리뷰를 보유하며 고른 인기를 보였습니다.  #### 상세 데"
+  },
+  {
+    "id": "V2_RA-285",
+    "query": "아마존 리뷰 각 월 증감률",
+    "table": "review_amazon",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 42.8,
+    "answer_len": 1830,
+    "answer_preview": "### 📊 아마존 리뷰 월별 증감률 분석 보고서 (2025년 3월 ~ 2026년 2월)  #### 요약  지난 1년간(2025년 3월 ~ 2026년 2월) 아마존 리뷰 수는 전반적으로 증가하는 추세를 보였으나, 월별로 큰 변동성을 나타냈습니다. 특히 **2025년 7월에 전월 대비 64.10%**로 가장 높은 증가율을 기록했으며, **2026년 2월에는 전"
+  },
+  {
+    "id": "V2_RA-286",
+    "query": "Amazon 리뷰데이터 번역 내용 전체",
+    "table": "review_amazon",
+    "category": "review_content",
+    "status": "WARN",
+    "time": 63.4,
+    "answer_len": 2495,
+    "answer_preview": "### 📊 Amazon 리뷰 데이터 분석 보고서 (2026년 2월 최신 리뷰)  #### 요약  ⚠️ 2026년 3월 8일 기준, 요청하신 Amazon 리뷰 데이터는 `collect_date` 2025년 3월 8일 이후 수집된 리뷰 중 `review_date`가 가장 최신인 **1,000건**을 기준으로 분석되었습니다. 제공된 데이터는 **2026년 2월 "
+  },
+  {
+    "id": "V2_RA-287",
+    "query": "아마존 리뷰 2024년 연간 통계 빨리 좀 알려줘",
+    "table": "review_amazon",
+    "category": "date_range",
+    "status": "OK",
+    "time": 41.4,
+    "answer_len": 1282,
+    "answer_preview": "### 📊 2024년 SKIN1004 아마존 제품별 리뷰 통계  #### 요약  2024년 한 해 동안 SKIN1004 아마존 제품 중 **'센텔라 에어핏 선크림 라이트'**가 **38개**의 리뷰를 기록하며 가장 많은 고객 피드백을 받았습니다. 전체 제품군에서 총 **235개**의 리뷰가 집계되었습니다.  #### 상세 데이터  | 제품명 | 리뷰 수 |"
+  },
+  {
+    "id": "V2_RA-288",
+    "query": "Amazon 평가 제품별 리뷰 수 합산",
+    "table": "review_amazon",
+    "category": "review_count",
+    "status": "WARN",
+    "time": 60.9,
+    "answer_len": 1461,
+    "answer_preview": "### 📊 Amazon SKIN1004 제품별 리뷰 수 분석  #### 요약  2026년 3월 8일 기준으로 Amazon에서 SKIN1004 브랜드 제품 중 가장 많은 리뷰를 받은 제품은 **'센텔라 에어핏 선크림 라이트'**로, 총 **213개**의 리뷰를 기록했습니다. 상위 3개 제품은 모두 130개 이상의 리뷰를 보유하고 있으며, 전체 분석 대상 23"
+  },
+  {
+    "id": "V2_RA-289",
+    "query": "아마죤 리뷰 가장 인기 있는 제품",
+    "table": "review_amazon",
+    "category": "top_reviewed",
+    "status": "OK",
+    "time": 35.3,
+    "answer_len": 1900,
+    "answer_preview": "### 📊 SKIN1004 아마존 리뷰 인기 제품 분석 보고서 (최근 1년간)  #### 요약  최근 1년간(2025년 3월 8일 ~ 2026년 3월 8일) 아마존에서 SKIN1004 제품 중 가장 많은 리뷰를 받은 제품은 **센텔라 에어핏 선크림 라이트**로, 총 **213개**의 리뷰를 기록했습니다. 이어서 **센텔라 라이트 클렌징 오일**이 **144"
+  },
+  {
+    "id": "V2_RA-290",
+    "query": "Amazon 최근 후기 review_date 순 확인해줘",
+    "table": "review_amazon",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 41.1,
+    "answer_len": 2386,
+    "answer_preview": "### 📊 Amazon SKIN1004 최근 후기 분석  #### 요약  2026년 2월 16일부터 2월 27일까지의 SKIN1004 제품에 대한 Amazon 후기 **50건**을 분석한 결과입니다. 가장 최근 후기는 **2026년 2월 27일**에 작성되었으며, 주로 '센텔라 앰플 폼', '프로바이오시카 바쿠치올 아이 크림', '센텔라 크림' 등 다양한 "
+  },
+  {
+    "id": "V2_RA-291",
+    "query": "아마존 리뷰 전체 리스트 보여줘 궁금해",
+    "table": "review_amazon",
+    "category": "total_count",
+    "status": "WARN",
+    "time": 78.2,
+    "answer_len": 786,
+    "answer_preview": "### 📊 아마존 SKIN1004 브랜드 리뷰 리스트  #### 요약  2025년 3월 8일부터 2026년 3월 8일 사이에 수집된 SKIN1004 브랜드의 아마존 리뷰 **총 1,000건**이 조회되었습니다. 이 리뷰들은 **23개**의 고유 제품에 대한 것이며, 가장 최근 리뷰 작성일은 **2026년 2월 27일**입니다.  #### 상세 데이터  조회"
+  },
+  {
+    "id": "V2_RA-292",
+    "query": "Amazon Centella Soothing Cream 리뷰 수 추이 확인 부탁드립니다",
+    "table": "review_amazon",
+    "category": "product_review",
+    "status": "OK",
+    "time": 40.9,
+    "answer_len": 369,
+    "answer_preview": "요청하신 조건에 해당하는 데이터가 존재하지 않습니다.  SQL 쿼리에서 `review_date`가 '2025-03-08' 이후인 데이터를 조회하도록 설정되어 있습니다. 해당 날짜는 미래 시점이므로, 현재 시점에서는 해당 조건에 맞는 리뷰 데이터가 존재할 수 없습니다.  비슷한 데이터를 조회할 수 있는 대안 질문은 다음과 같습니다: 1.  \"Amazon Ce"
+  },
+  {
+    "id": "V2_RA-293",
+    "query": "간단하게 아마존 리뷰 최근 리뷰 번역문 보기",
+    "table": "review_amazon",
+    "category": "review_content",
+    "status": "WARN",
+    "time": 77.3,
+    "answer_len": 3301,
+    "answer_preview": "### 📊 SKIN1004 아마존 최근 리뷰 번역문  #### 요약  SKIN1004 브랜드의 아마존 제품에 대한 최근 **50개** 리뷰 번역문을 분석한 결과입니다. 이 리뷰들은 **2026년 2월 16일부터 2026년 2월 27일**까지 작성되었으며, 전반적으로 제품의 보습, 진정 효과 및 순한 사용감에 대한 긍정적인 평가가 많았습니다.  #### 상세"
+  },
+  {
+    "id": "V2_RA-294",
+    "query": "Amazon 2024년 12월 평가 건수 알려주시면 감사하겠습니다",
+    "table": "review_amazon",
+    "category": "date_range",
+    "status": "OK",
+    "time": 38.9,
+    "answer_len": 346,
+    "answer_preview": "죄송합니다. **2024년 12월 아마존의 평가 건수**에 대한 구체적인 정보를 확인할 수 없습니다.  현재 제공된 검색 결과에서는 아마존의 2024년 4분기 재무 실적(매출, 영업 이익, 순이익 등)만 다루고 있으며, 평가(리뷰) 건수는 공개되지 않았습니다.  **확인 가능한 방법을 안내드립니다:**  1. **SKIN1004 셀러 센트럴** — 자사 제"
+  },
+  {
+    "id": "V2_RA-295",
+    "query": "아마존 평가 달별 리뷰 수 차트",
+    "table": "review_amazon",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 32.9,
+    "answer_len": 1140,
+    "answer_preview": "### 📊 SKIN1004 아마존 월별 리뷰 수 추이  #### 요약  SKIN1004 브랜드의 아마존 월별 리뷰 수는 2025년 3월부터 2026년 2월까지 꾸준히 증가하는 추세를 보였습니다. 해당 기간 동안 총 **2,209건**의 리뷰가 집계되었으며, 2025년 3월 **78건**에서 시작하여 2026년 1월 **322건**으로 최고치를 기록했습니다."
+  },
+  {
+    "id": "V2_RA-296",
+    "query": "요즘 Amazon 리뷰데이터 제품별 최근 리뷰 대조 알려주세요",
+    "table": "review_amazon",
+    "category": "review_content",
+    "status": "OK",
+    "time": 51.2,
+    "answer_len": 602,
+    "answer_preview": "# 데이터 조회 안내  안녕하세요. 요청하신 **Amazon 리뷰 데이터 제품별 최근 리뷰 대조** 관련 내부 데이터를 조회하지 못했습니다.  좀 더 정확한 결과를 드리기 위해, 아래 항목을 구체적으로 지정해 주시면 다시 조회해 보겠습니다.  > **구체화하면 좋은 항목**  > - **제품명** (예: 마다가스카르 센텔라 토너, 히알루 시카 수딩 토너 등"
+  },
+  {
+    "id": "V2_RA-297",
+    "query": "아마존 리부 전체 건수는 몇 개?",
+    "table": "review_amazon",
+    "category": "total_count",
+    "status": "OK",
+    "time": 33.6,
+    "answer_len": 381,
+    "answer_preview": "### 📊 아마존 SKIN1004 리뷰 총 건수 (2025년 3월 8일 이후)  #### 요약  2025년 3월 8일부터 2026년 3월 8일(오늘)까지 아마존에서 수집된 SKIN1004 브랜드의 총 리뷰 수는 **2,770건**입니다.  #### 분석 및 인사이트  *   해당 리뷰 건수는 지난 1년간(2025년 3월 8일 ~ 2026년 3월 8일) 아마"
+  },
+  {
+    "id": "V2_RA-298",
+    "query": "혹시 Amazon 리뷰 제품 TOP 리스트",
+    "table": "review_amazon",
+    "category": "top_reviewed",
+    "status": "OK",
+    "time": 42.9,
+    "answer_len": 1456,
+    "answer_preview": "### 📊 SKIN1004 Amazon 리뷰 TOP 제품 리스트 (2025년 3월 8일 ~ 2026년 3월 8일)  #### 요약  지난 1년간(2025년 3월 8일 ~ 2026년 3월 8일) Amazon에서 SKIN1004 브랜드 제품 중 가장 많은 리뷰를 받은 제품은 **'센텔라 에어핏 선크림 라이트'**로, 총 **213개**의 리뷰를 기록했습니다. "
+  },
+  {
+    "id": "V2_RA-299",
+    "query": "간단하게 아마존 리뷰 최신 데이터 전체 확인",
+    "table": "review_amazon",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 45.1,
+    "answer_len": 502,
+    "answer_preview": "# 데이터 조회 안내  안녕하세요. 요청하신 **아마존 리뷰 최신 데이터**를 현재 조회하지 못했습니다.  좀 더 정확한 결과를 위해 **조건을 구체적으로 지정**해 주시면 다시 조회를 시도해 보겠습니다.  ---  ## 💡 이렇게 질문해 보세요  1. **\"아마존 US에서 마다가스카르 센텔라 토닝 토너의 최근 1개월 리뷰 데이터를 보여줘\"** 2. **\""
+  },
+  {
+    "id": "V2_RA-300",
+    "query": "잠깐, Amazon 리뷰 전체 현재 상태 리포트",
+    "table": "review_amazon",
+    "category": "total_count",
+    "status": "OK",
+    "time": 43.9,
+    "answer_len": 652,
+    "answer_preview": "# 📋 데이터 조회 안내  안녕하세요. 요청하신 **Amazon 리뷰 전체 현재 상태 리포트**에 대한 데이터를 조회하지 못했습니다.  ---  ## 💡 더 정확한 결과를 위해 질문을 구체화해 주세요  아래 항목들을 포함해 주시면 원하시는 데이터를 찾는 데 도움이 됩니다:  | 구체화 항목 | 예시 | |------------|------| | **국가/마"
+  }
+]

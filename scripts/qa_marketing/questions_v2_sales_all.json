@@ -1,0 +1,1502 @@
+[
+  {
+    "id": "V2_SA-001",
+    "query": "2025년 1월 매상",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-002",
+    "query": "2025년 2월 매출금액",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-003",
+    "query": "2024년 12월 매출 부탁드려요",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-004",
+    "query": "2026년 1월 매출 알려줄래",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-005",
+    "query": "2024년 7월 매출금액 좀 알려줘",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-006",
+    "query": "2025년 6월 매출금액",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-007",
+    "query": "정확한 2024년 3월 매출 확인 부탁드립니다",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-008",
+    "query": "요즘 2025년 11월 메출 얼마임?",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-009",
+    "query": "9월 2024년 매출",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-010",
+    "query": "2025년 4월 매출금액",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-011",
+    "query": "인도네시아 2025년 매출 알려주시면 감사하겠습니다",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-012",
+    "query": "태국 2024년 매출 빨리",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-013",
+    "query": "빠르게 미국 2025년 매출 부탁 알려주세요",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-014",
+    "query": "일본 2024년 매출 확인 가능한가요?",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-015",
+    "query": "필리핀 2025년 매출금액",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-016",
+    "query": "베트남 2024년 매출금액",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-017",
+    "query": "요즘 말레이시아 2025년 매출",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-018",
+    "query": "싱가포르 2024년 매출은 어떤가요?",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-019",
+    "query": "호주 2025년 매상",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-020",
+    "query": "한국 매출 2024년 어떻게 되나요?",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-021",
+    "query": "중국 2025년 매출 알려주세요",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-022",
+    "query": "간단하게 대만 2024년 매출 어때?",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-023",
+    "query": "캐나다 2025년 매출 부탁드려요",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-024",
+    "query": "독일 2024년 판매액",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-025",
+    "query": "프랑스 2025년 매출금액",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-026",
+    "query": "빠르게 러시아 매출 2024년",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-027",
+    "query": "인도네시아 쇼피 2025년 1월 매축 어떻게 되나요?",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-028",
+    "query": "태국 lazada 2024년 6월 매출",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-029",
+    "query": "베트남 틱톡 2025년 3월 매출 좀 알려줘",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-030",
+    "query": "미국 아마존 2024년 11월 매상",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-031",
+    "query": "일본 라쿠텐 2025년 5월 매상",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-032",
+    "query": "싱가포르 쇼피 2024년 8월 매출은 어떤가요?",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-033",
+    "query": "필리핀 라자다 2025년 2월 매출 좀",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-034",
+    "query": "말레이 쇼피 2024년 10월 매출 알 수 있을까요?",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-035",
+    "query": "참고로 태국 틱톡 2025년 7월 매출금액",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-036",
+    "query": "인도네시아 라자다 2024년 4월 세일즈",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-037",
+    "query": "한국 큐텐 2025년 9월 매출은 어떤가요?",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-038",
+    "query": "베트남 shopee 2024년 12월 매출은 어떤가요?",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-039",
+    "query": "2025년 인도네시아 월별 매출 추이 알려주세요",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-040",
+    "query": "2024년 태국 달별 수익 추세",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-041",
+    "query": "정확한 미국 2025년 월별 세일즈 흐름 알려주세요",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-042",
+    "query": "2024년 일본 월별 세일즈 추이",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-043",
+    "query": "2025년 베트남 달별 매출금액 변동",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-044",
+    "query": "2024년 필리핀 월별 매상 추이 알려주시면 감사하겠습니다",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-045",
+    "query": "2025년 말레이시아 월별 매출 추이 몇이야?",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-046",
+    "query": "확인 좀 해줘 2024년 싱가포르 월별 매출 변화",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-047",
+    "query": "2025년 호주 월별 세일즈 추세은 어떤가요?",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-048",
+    "query": "2024년 한국 월별 매상 추이 어때?",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-049",
+    "query": "2025년 동남아 나라별 매출 대비 어떻게 되나요?",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-050",
+    "query": "잠깐, 2024년 동남아 국가별 매출액 비교 알려주세요",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-051",
+    "query": "궁금한데 2025년 아시아 국가별 매출 비교 좀 알려주세요",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-052",
+    "query": "잠깐, 2024년 전체 나라별 매출금액 대조",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-053",
+    "query": "2025년 상반기 각 나라 매출금액 순위 알려주시면 감사하겠습니다",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-054",
+    "query": "2024년 하반기 국가별 매출 순위 알고 싶어",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-055",
+    "query": "인도네시아에서 가장 많이 팔린 제품 TOP 5 어떻게 되나요?",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-056",
+    "query": "궁금한데 태국에서 가장 많이 팔린 제품 TOP 10은 어떤가요?",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-057",
+    "query": "미국에서 가장 많이 팔린 제품 TOP 3 좀",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-058",
+    "query": "잠깐, 일본에서 가장 많이 팔린 제품 TOP 5 좀",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-059",
+    "query": "정확한 베트남에서 매출 높은 제품 TOP 10 알려주시면 감사하겠습니다",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-060",
+    "query": "잠깐, 필리핀에서 인기 제품 TOP 5 정리해줘",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-061",
+    "query": "말레이시아 각 제품 매출 순위은 어떤가요?",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-062",
+    "query": "궁금한데 싱가포르 베스트셀러 제품",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-063",
+    "query": "호주 인기 제품 TOP 3 확인 부탁드립니다",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-064",
+    "query": "한국 매상 TOP 10 제품 정리해줘",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-065",
+    "query": "Centella 라인 2025년 수익 알려주시면 감사하겠습니다",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-066",
+    "query": "Hyalu_Teca 라인 2024년 매출 어떻게 되나요?",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-067",
+    "query": "Suncare 라인 2025년 매출 알 수 있을까요?",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-068",
+    "query": "Centella_Teca 라인 2024년 매상 알려주시면 감사하겠습니다",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-069",
+    "query": "Tone_Brightening 라인 2025년 매출 몇이야?",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-070",
+    "query": "Probiocica 라인 매출 추세 얼마임?",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-071",
+    "query": "Teatrica 라인 2024년 매상",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-072",
+    "query": "빠르게 Poremizing 라인 2025년 매출 빨리",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-073",
+    "query": "우리 회사 LabinNature 라인 전체 세일즈 알려주세요",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-074",
+    "query": "라인별 매출 견줘봐 2025년?",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-075",
+    "query": "2025년 GM_EAST1 팀 세일즈",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-076",
+    "query": "GM_EAST2 2024년 팀 세일즈",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-077",
+    "query": "2025년 GM_Ecomm 팀 매출 부탁드려요",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-078",
+    "query": "2024년 GM_MKT 팀 매출 빨리 알려주세요",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-079",
+    "query": "2025년 CBT 팀 매출 알려주세요",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-080",
+    "query": "2024년 JBT 팀 매상 어떻게 되나요?",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-081",
+    "query": "2025년 KBT 팀 매출액",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-082",
+    "query": "팀 기준 매출 견줘봐 2025년 정리해줘",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-083",
+    "query": "2024년 BCM 팀 판매액 실적 정리해줘",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-084",
+    "query": "DD_DT1 팀 2025년 매출금액",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-085",
+    "query": "B2B 2025년 매출 합계 부탁드려요",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-086",
+    "query": "정확한 2024년 B2C 매출 합계 부탁드려요",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-087",
+    "query": "2025년 B2B vs B2C 세일즈 대비",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-088",
+    "query": "2024년 B2B B2C 비율 확인 부탁드립니다",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-089",
+    "query": "인니 B2B 매출금액",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-090",
+    "query": "태국 B2C 세일즈 2025년",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-091",
+    "query": "혹시 Ampoule 카테고리 매출",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-092",
+    "query": "Suncare 카테고리 매출 알 수 있을까요?",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-093",
+    "query": "SET 카테고리 매출금액 어떻게 되나요?",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-094",
+    "query": "Cream 카테고리 2025년 매출액",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-095",
+    "query": "Pack 카테고리 매출 흐름 보여줘",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-096",
+    "query": "혹시 Cleanser 카테고리 2024년 매출",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-097",
+    "query": "혹시 Oil 카테고리 매출 알려주세요",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-098",
+    "query": "Toner 카테고리 매출 알려주세요",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-099",
+    "query": "카테고리별 매상 비교 2025년",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-100",
+    "query": "우리 회사 2025년 카테고리별 수익 랭킹",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-101",
+    "query": "인도네시야 쇼피 vs 라자다 매출 비교",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-102",
+    "query": "태국 쇼피 vs 틱톡 매출 비교 몇이야?",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-103",
+    "query": "확인 좀 해줘 베트남 shopee vs 라자다 매출 비교",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-104",
+    "query": "필리핀 쇼피 vs 틱톡 비교 확인 부탁드립니다",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-105",
+    "query": "빠르게 말레이시아 플랫폼별 매출 확인 부탁드립니다",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-106",
+    "query": "간단하게 미국 아마존 vs 큐텐 매출 비교 알려주세요",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-107",
+    "query": "일본 라쿠텐 vs 큐텐 메출 비교",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-108",
+    "query": "싱가포르 쇼피 vs 라자다 매상",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-109",
+    "query": "전체 플랫폼별 매출 비교 알려주세요",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-110",
+    "query": "우리 회사 쇼피 전체 매출금액 2025년",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-111",
+    "query": "참고로 2025년 대륙별 매출",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-112",
+    "query": "정확한 2024년 대륙별 판매액 비교 확인해줘",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-113",
+    "query": "아시아 대륙 매상 2025년 알려주세요",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-114",
+    "query": "북미 대륙 세일즈",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-115",
+    "query": "혹시 유럽 대륙 매출 2024년 확인 부탁드립니다",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-116",
+    "query": "궁금한데 오세아니아 매출금액 알려주세요",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-117",
+    "query": "2025년 1분기 판매액",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-118",
+    "query": "2024년 2분기 수익",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-119",
+    "query": "2025년 3분기 매출 알려주세요",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-120",
+    "query": "2024년 4분기 세일즈",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-121",
+    "query": "잠깐, 2025년 분기별 매출 추이 몇이야?",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-122",
+    "query": "분기별 2024년 세일즈 비교",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-123",
+    "query": "인도네시아 2025년 1분기 세일즈 알려주세요",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-124",
+    "query": "우리 회사 태국 2024년 4분기 매출",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-125",
+    "query": "미국 2025년 2분기 매출 부탁드려요",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-126",
+    "query": "인도네시야 전년 대비 세일즈 변화 얼마임?",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-127",
+    "query": "태국 전년 대비 수익 대비",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-128",
+    "query": "요즘 미국 2024년 vs 2025년 매출 알려주시면 감사하겠습니다",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-129",
+    "query": "참고로 일본 전년 대비 매출 성장률 부탁드려요",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-130",
+    "query": "요즘 베트남 2024년 대비 2025년 매출 변화 알려주시면 감사하겠습니다",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-131",
+    "query": "필리핀 YoY 매출 견줘봐 궁금해 알려주세요",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-132",
+    "query": "말레이시아 전년 대비 매출 증감 알려주세요",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-133",
+    "query": "동남아 전체 전년 대비 매출 비교 부탁드려요",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-134",
+    "query": "해외B2B 매출 TOP 업체 좀 봐줘",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-135",
+    "query": "우리 회사 B2B 판매액 상위 10개 회사 알려주세요",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-136",
+    "query": "인도네시아 B2B 거래처별 매출금액",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-137",
+    "query": "태국 B2B 업체 매출금액 순서",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-138",
+    "query": "간단하게 일본 B2B 거래처 매출 TOP 5",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-139",
+    "query": "혹시 2025년 회사별 매출 TOP 10 좀 봐줘",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-140",
+    "query": "B2B 신규 업체 판매액",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-141",
+    "query": "혹시 인도네시아 달러 매출 알고 싶어",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-142",
+    "query": "간단하게 태국 달러 기준 매출",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-143",
+    "query": "미국 달러 세일즈 2025년",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-144",
+    "query": "일본 엔화 매출 좀 알려줘",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-145",
+    "query": "전체 달러 기준 수익",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-146",
+    "query": "인도네시야 센텔라 앰플 매상",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-147",
+    "query": "태국 선케어 제품 매출 알 수 있을까요?",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-148",
+    "query": "빠르게 미국 토너 제품 매상",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-149",
+    "query": "일본 크림 제품 메출 좀 알려줘",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-150",
+    "query": "혹시 베남 앰플 제품 매출",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-151",
+    "query": "FOC 금액 전체 분석해줘",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-152",
+    "query": "2025년 FOC 금액 합계 확인 부탁드립니다",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-153",
+    "query": "국가별 FOC 금액 비교 분석 어떻게 되나요?",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-154",
+    "query": "간단하게 인도네시아 FOC 금액",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-155",
+    "query": "잠깐, 2024년 FOC 금액 추이",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-156",
+    "query": "할인 쿠폰 금액 분석 알려주세요",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-157",
+    "query": "2025년 할인 금액 전체",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-158",
+    "query": "빠르게 각 나라 할인 쿠폰 금액 비교 빨리",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-159",
+    "query": "태국 할인 금액 2024년 궁금해?",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-160",
+    "query": "플랫폼 기준 할인 금액 대조",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-161",
+    "query": "인도네시아 쇼피 2025년 1월 제품별 매출 알고 싶어 어떻게 되나요?",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-162",
+    "query": "정확한 태국 라자더 2024년 6월 상품별 메출 TOP",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-163",
+    "query": "베트남 틱톡 3월 2025년 카테고리별 매출 알려주세요",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-164",
+    "query": "미국 아마존 2024년 12월 라인별 매출액 확인 부탁드립니다",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-165",
+    "query": "일본 라쿠텐 2025년 5월 상품별 매출 TOP 5 얼마임?",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-166",
+    "query": "싱가포르 쇼피 2024년 8월 카테고리별 매출 비교 파악해줘",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-167",
+    "query": "필리핀 라자다 2025년 2월 제품 매출액",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-168",
+    "query": "궁금한데 말레이시아 쇼피 2024년 10월 상품별 매출",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-169",
+    "query": "인도네시아 상반기 2025년 플랫폼 기준 메출은 어떤가요?",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-170",
+    "query": "태국 2024년 하반기 카테고리별 매출금액",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-171",
+    "query": "궁금한데 2025년 5월 매출",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-172",
+    "query": "2024년 8월 매출 알려주시면 감사하겠습니다",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-173",
+    "query": "우리 회사 2025년 10월 매출",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-174",
+    "query": "2026년 2월 매출 확인 부탁드립니다",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-175",
+    "query": "중국 2025년 매출금액",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-176",
+    "query": "궁금한데 대만 2025년 매상 확인 가능한가요?",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-177",
+    "query": "요즘 캐나다 2024년 매출 확인해줘",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-178",
+    "query": "독일 2025년 매출 알 수 있을까요?",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-179",
+    "query": "확인 좀 해줘 프랑스 2024년 매출",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-180",
+    "query": "러시아 2025년 매상 어때?",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-181",
+    "query": "인도네시아 틱톡 2025년 매축액",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-182",
+    "query": "태국 쇼피 2024년 매출 얼마임?",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-183",
+    "query": "베트남 라자다 2025년 매출금액",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-184",
+    "query": "필리핀 쇼피 2024년 매출 부탁드려요",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-185",
+    "query": "확인 좀 해줘 말레이시아 틱톡 2025년 수익",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-186",
+    "query": "일본 큐텐 2024년 수익",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-187",
+    "query": "라자더 전체 메출 2025년",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-188",
+    "query": "틱톡 전체 판매액 2024년",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-189",
+    "query": "아마존 전체 매출액 2025년",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-190",
+    "query": "큐텐 전체 매상 2024년 알려주세요",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-191",
+    "query": "잠깐, Hyalucica 라인 2025년 매출 좀 알려줘",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-192",
+    "query": "ZB 라인 세일즈",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-193",
+    "query": "Others 라인 매출 2024년 부탁드려요",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-194",
+    "query": "Centella 라인 인도네시아 메출은 어떤가요?",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-195",
+    "query": "우리 회사 Suncare 라인 태국 매출 알려주세요",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-196",
+    "query": "참고로 Hyalu_Teca 라인 미국 매축?",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-197",
+    "query": "Centella_Teca 라인 일본 수익 좀 봐줘",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-198",
+    "query": "2025년 라인별 매출 순위 TOP 5 알려주세요",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-199",
+    "query": "2024년 라인별 매출 추세",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-200",
+    "query": "센텔라 라인 월별 세일즈 추이 2025년 알려주세요",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-201",
+    "query": "간단하게 B2B1 팀 판매액 2025년",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-202",
+    "query": "B2B2 팀 매출 2024년 확인 부탁드립니다",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-203",
+    "query": "간단하게 DD_DT2 팀 매출",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-204",
+    "query": "OP 팀 매출 2025년 확인해줘",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-205",
+    "query": "2025년 팀별 매출 순위 부탁드려요",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-206",
+    "query": "GM_EAST1 팀 인도네시아 매출 몇이야?",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-207",
+    "query": "GM_EAST2 팀 태국 매출 알려주세요",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-208",
+    "query": "혹시 CBT 팀 각 월 매출 추이 좀 알려줘",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-209",
+    "query": "JBT 팀 2024년 분기별 매출은 어떤가요?",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-210",
+    "query": "KBT 팀 전년 대비 매출 변화 몇이야?",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-211",
+    "query": "인도네시아 B2C 쇼피 메출 확인해줘",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-212",
+    "query": "태국 B2B 매출 2025년 어떻게 되나요?",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-213",
+    "query": "확인 좀 해줘 미국 B2B 매출 회사별 순위",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-214",
+    "query": "일본 B2C 매출 트렌드 알려주세요",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-215",
+    "query": "국가별 B2B B2C 비율 보여주세요",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-216",
+    "query": "Ampoule 카테고리 인도네시아 매상 어때?",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-217",
+    "query": "Suncare 카테고리 태국 매출금액",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-218",
+    "query": "Cream 카테고리 미국 매출금액 몇이야?",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-219",
+    "query": "Cleanser 카테고리 일본 수익",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-220",
+    "query": "SET 카테고리 플랫폼별 매출 어떻게 되나요?",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-221",
+    "query": "혹시 인도네시야 쇼피 Centella 라인 매출 부탁드려요",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-222",
+    "query": "태국 라자다 Suncare 세일즈",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-223",
+    "query": "미국 아마존 Ampoule 매출 좀 알려줘",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-224",
+    "query": "확인 좀 해줘 일본 라쿠텐 Cream 매출액 알려주세요",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-225",
+    "query": "베트남 틱톡 Centella 매상",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-226",
+    "query": "2025년 총 주문 건수 얼마임?",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-227",
+    "query": "인도네시아 2024년 주문 건수 알 수 있을까요?",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-228",
+    "query": "태국 쇼피 주문 건수 2025년은 어떤가요?",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-229",
+    "query": "월별 주문 건수 추이 2025년 부탁드려요",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-230",
+    "query": "플랫폼별 주문 건수 견줘봐 보여줘 알려주시면 감사하겠습니다",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-231",
+    "query": "2025년 생산원가 총합 알려주세요",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-232",
+    "query": "우리 회사 인도네시아 생산원가 2024년 알려줄래?",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-233",
+    "query": "우리 회사 국가별 생산원가 비교 확인 가능한가요?",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-234",
+    "query": "잠깐, 2025년 각 월 생산원가 추이 부탁드려요",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-235",
+    "query": "카테고리별 생산원가 분석해줘",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-236",
+    "query": "인도네시아 쇼피 2025년 상반기 매출액 추이 좀?",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-237",
+    "query": "태국 2024년 카테고리별 매출 TOP 5 확인 부탁드립니다",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-238",
+    "query": "베트남 2025년 라인별 메출 비교 분석 정리해줘",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-239",
+    "query": "미국 2024년 분기별 수익 흐름 알려주시면 감사하겠습니다",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-240",
+    "query": "궁금한데 일본 2025년 팀별 매출",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-241",
+    "query": "3월 2025년 인도네시아 쇼피 Ampoule 매출",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-242",
+    "query": "우리 회사 2024년 11월 태국 라자다 Suncare 판매액",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-243",
+    "query": "2025년 1월 미국 아마존 Centella 세일즈",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-244",
+    "query": "7월 2024년 일본 라쿠텐 Cream 매출 확인 가능한가요?",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-245",
+    "query": "2025년 5월 베트남 틱톡 제품별 매출 알려주세요",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-246",
+    "query": "우리 회사 SK 브랜드 매출 2025년 알 수 있을까요?",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-247",
+    "query": "우리 회사 CL 브랜드 2024년 매출금액",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-248",
+    "query": "SK vs CL 브랜드 매출 비교 알려주세요",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-249",
+    "query": "SK 브랜드 인도네시아 메출 확인 가능한가요?",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-250",
+    "query": "CL 브랜드 태국 세일즈",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-251",
+    "query": "참고로 2025년 매출 TOP 20 제품",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-252",
+    "query": "2024년 세일즈 하위 10개 제품 궁금해",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-253",
+    "query": "전체 매출 합계 2025년 알려주세요",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-254",
+    "query": "전체 매출 합계 2024년 좀 알려줘",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-255",
+    "query": "참고로 월별 전체 수익 추이 2025년",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-256",
+    "query": "2025년 매출금액 가장 높은 달 알려주세요",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-257",
+    "query": "빠르게 2024년 매출 가장 높은 국가",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-258",
+    "query": "2025년 판매액 가장 높은 플랫폼 알 수 있을까요?",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-259",
+    "query": "인도네시아 매출액 비중",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-260",
+    "query": "쇼피 매출 비중 2025년 확인 부탁드립니다",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-261",
+    "query": "Centella 라인 매출 비중 몇이야?",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-262",
+    "query": "Ampoule 카테고리 매출 비중 알려주시면 감사하겠습니다",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-263",
+    "query": "참고로 인도네시야 2025년 1월 환율 적용 매축",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-264",
+    "query": "태국 2024년 Sales2_R 매출금액",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-265",
+    "query": "2025년 Sales1_R vs Sales2_R 대조 어떻게 되나요?",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-266",
+    "query": "2024년 인도네시아 매월 FOC 금액 추세",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-267",
+    "query": "2025년 태국 할인 쿠폰 금액 월별 추이 정리해줘 어떻게 되나요?",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-268",
+    "query": "인도네시아 쇼피 FOC 금액 비교 알려주세요",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-269",
+    "query": "인도네시야 라자다 할인 금액",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-270",
+    "query": "요즘 2025년 총 판매 수량",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-271",
+    "query": "확인 좀 해줘 인도네시아 판매 수량 2024년 확인 부탁드립니다",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-272",
+    "query": "요즘 타이 쇼피 판매 수량 2025년",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-273",
+    "query": "국가별 팔린 갯수 TOP",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-274",
+    "query": "간단하게 카테고리별 판매 수량 대조 좀 알려줘",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-275",
+    "query": "혹시 라인별 팔린 수량 순위 2025년",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-276",
+    "query": "참고로 인도네시아 2025년 2분기 매출 몇이야?",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-277",
+    "query": "태국 2024년 3분기 매출금액",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-278",
+    "query": "확인 좀 해줘 미국 2025년 4분기 매출",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-279",
+    "query": "일본 2024년 1분기 수익",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-280",
+    "query": "베트남 2025년 분기별 매상 추이",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-281",
+    "query": "2025년 매출 성장률 국가별 비교 알려주세요",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-282",
+    "query": "2024년 대비 2025년 플랫폼별 매출금액 성장 알려줄래?",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-283",
+    "query": "인도네시아 쇼피 전년 대비 매상 변화",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-284",
+    "query": "궁금한데 태국 라자다 전년 대비 성장률",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-285",
+    "query": "카테고리별 전년 대비 매출금액 변화 알려주세요",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-286",
+    "query": "간단하게 2025년 매출이 감소한 국가 궁금해 알 수 있을까요?",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-287",
+    "query": "2025년 수익이 증가한 플랫폼 좀",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-288",
+    "query": "궁금한데 인도네시아 쇼피 2025년 1분기 Centella 라인 매출",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-289",
+    "query": "태국 B2B 2024년 Suncare 카테고리 매출 부탁드려요",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-290",
+    "query": "GM_EAST1 팀 2025년 국가별 세일즈",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-291",
+    "query": "인도네시아 쇼피 B2C Ampoule 매출금액 2025년",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-292",
+    "query": "태국 라자다 B2B 회사별 세일즈 상위 알려주시면 감사하겠습니다",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-293",
+    "query": "참고로 2025년 인도네시아 SKU별 매출 TOP 10 보여줘",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-294",
+    "query": "2024년 태국 바코드별 매출 현황 정리해주세요",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-295",
+    "query": "GM_Ecomm 팀 플랫폼별 매출 2025년은 어떤가요?",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-296",
+    "query": "요즘 2024년 매출금액이 가장 높은 SKU",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-297",
+    "query": "빠르게 담당자별 매출 현황 2025년 알 수 있을까요?",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-298",
+    "query": "간단하게 인도네시아 담당자별 매출",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-299",
+    "query": "2025년 주문 상태별 매출 파악해줘",
+    "category": "sales_all"
+  },
+  {
+    "id": "V2_SA-300",
+    "query": "인도네시아 쇼피 2025년 1분기 달별 카테고리별 매출액 살펴봐줘",
+    "category": "sales_all"
+  }
+]

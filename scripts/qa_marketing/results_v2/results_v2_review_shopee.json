@@ -1,0 +1,3000 @@
+[
+  {
+    "id": "V2_RS-001",
+    "query": "쇼피 제품 기준 리뷰 수 확인해줘은 어떤가요?",
+    "table": "review_shopee",
+    "category": "review_count",
+    "status": "OK",
+    "time": 33.9,
+    "answer_len": 1746,
+    "answer_preview": "### 📊 쇼피(Shopee) SKIN1004 제품별 리뷰 현황 (2025년 3월 8일 ~ 2026년 3월 8일)  #### 요약  지난 1년간(2025년 3월 8일 ~ 2026년 3월 8일) 쇼피에서 SKIN1004 브랜드 제품에 대한 리뷰는 총 **43개** 제품에서 수집되었습니다. 이 중 가장 많은 리뷰를 받은 제품은 \"톤브라이트닝 클렌징 젤 폼\"으로"
+  },
+  {
+    "id": "V2_RS-002",
+    "query": "Shopee 리뷰 가장 많은 제품은 부탁드려요",
+    "table": "review_shopee",
+    "category": "top_reviewed",
+    "status": "OK",
+    "time": 33.0,
+    "answer_len": 612,
+    "answer_preview": "### 📊 Shopee 리뷰 최다 제품 분석 (2025년 3월 8일 ~ 2026년 3월 8일)  #### 요약  지난 1년간(2025년 3월 8일 ~ 2026년 3월 8일) Shopee에서 SKIN1004 제품 중 가장 많은 리뷰를 받은 제품은 **톤브라이트닝 클렌징 젤 폼**입니다. 해당 제품은 총 **1,023개**의 리뷰를 기록했습니다.  #### 상"
+  },
+  {
+    "id": "V2_RS-003",
+    "query": "간단하게 쇼피 최근 리부 보여줄 수 있어?",
+    "table": "review_shopee",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 53.8,
+    "answer_len": 82496,
+    "answer_preview": "### 📊 쇼피 SKIN1004 최근 리뷰 분석 보고서  #### 요약  SKIN1004 브랜드의 쇼피(Shopee) 최신 리뷰 **50건**을 분석한 결과, 대부분의 리뷰는 **2026년 2월 8일과 9일**에 작성되었습니다. 주요 내용은 제품에 대한 긍정적인 초기 기대감, 프로모션 및 사은품에 대한 높은 만족도, 그리고 제품의 효능 및 품질에 대한 긍정"
+  },
+  {
+    "id": "V2_RS-004",
+    "query": "Shopee Madagascar Centella Ampoule 리뷰데이터 수",
+    "table": "review_shopee",
+    "category": "product_review",
+    "status": "OK",
+    "time": 40.9,
+    "answer_len": 900,
+    "answer_preview": "### 📊 Shopee Madagascar Centella Ampoule 리뷰 데이터 수 분석  #### 요약  요청하신 Shopee 채널의 SKIN1004 Madagascar Centella Ampoule 제품에 대한 리뷰 데이터는 2025년 3월 8일부터 2026년 3월 8일 현재까지 **0건**으로 확인되었습니다. 현재 쿼리는 Shopee 전체 채널을"
+  },
+  {
+    "id": "V2_RS-005",
+    "query": "쇼피 SKIN1004 전체 평가 수",
+    "table": "review_shopee",
+    "category": "total_count",
+    "status": "OK",
+    "time": 17.4,
+    "answer_len": 80,
+    "answer_preview": "고객님, 문의하신 쇼피 SKIN1004 전체 평가 수에 대한 정보는 현재 CS 데이터베이스에서 찾을 수 없습니다.  (출처: CS 데이터베이스)"
+  },
+  {
+    "id": "V2_RS-006",
+    "query": "잠깐, 쇼피 월별 후기 수 추이 알려줘",
+    "table": "review_shopee",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 27.6,
+    "answer_len": 373,
+    "answer_preview": "안녕하세요! 요청하신 **쇼피 월별 후기 수 추이** 데이터를 조회하지 못했습니다.  좀 더 구체적인 조건을 알려주시면 정확한 데이터를 찾는 데 도움이 됩니다. 아래 예시를 참고해 질문을 다시 해주시겠어요?  **질문 예시:** 1. **\"2024년 하반기 쇼피 태국 채널의 월별 후기 수 추이 알려줘\"** (기간 + 국가 지정) 2. **\"쇼피 베트남에서 "
+  },
+  {
+    "id": "V2_RS-007",
+    "query": "Shopee 최근 10건 평가 좀 알려줘",
+    "table": "review_shopee",
+    "category": "recent_n",
+    "status": "OK",
+    "time": 36.9,
+    "answer_len": 789,
+    "answer_preview": "# Shopee 최근 평가 요약 (10가지 핵심 사항)  ## 📦 판매자 경험  | 구분 | 내용 | |------|------| | **성공 사례** | 일부 판매자는 상당한 수익을 창출하며 쇼피를 통해 성공적으로 사업을 확장 중 | | **어려움 토로** | 일부 판매자들은 **매출 감소** 등 어려움을 겪으며 플랫폼에 대한 불만 표출 | | **초보 "
+  },
+  {
+    "id": "V2_RS-008",
+    "query": "쇼피 2025년 1월 리뷰데이터 알려주세요",
+    "table": "review_shopee",
+    "category": "date_range",
+    "status": "OK",
+    "time": 56.0,
+    "answer_len": 3518,
+    "answer_preview": "### 📊 쇼피 SKIN1004 2025년 1월 리뷰 데이터 분석  #### 요약  2025년 1월 쇼피 채널에서 **SKIN1004 브랜드에 대한 총 728건의 리뷰**가 확인되었습니다. **⚠️ 2025년 1월 전체 데이터가 아닌, 1월 27일부터 1월 31일까지의 리뷰 데이터만 존재합니다.** 리뷰는 선크림, 마스크, 토너, 앰플, 크림 등 다양한 제"
+  },
+  {
+    "id": "V2_RS-009",
+    "query": "우리 회사 Shopee Centella Ampoule 최신 후기 내용",
+    "table": "review_shopee",
+    "category": "review_content",
+    "status": "OK",
+    "time": 23.3,
+    "answer_len": 764,
+    "answer_preview": "# 쇼피(Shopee) 센텔라 앰플 최신 후기 요약  **스킨1004 마다가스카르 센텔라 앰플**에 대한 쇼피 최신 후기는 전반적으로 **피부 진정 및 보습 효과**에 긍정적인 반응을 보이고 있으며, 특히 **민감성·트러블성 피부** 사용자에게 좋은 평가를 받고 있습니다.  ---  ## ✅ 긍정적 후기  | 항목 | 주요 내용 | |------|-----"
+  },
+  {
+    "id": "V2_RS-010",
+    "query": "쇼피 브랜드별 리뷰 수 비교 분석",
+    "table": "review_shopee",
+    "category": "brand_review",
+    "status": "OK",
+    "time": 29.1,
+    "answer_len": 734,
+    "answer_preview": "### 📊 쇼피 브랜드별 리뷰 수 분석 (2025년 3월 8일 ~ 2026년 3월 8일)  #### 요약  쇼피 브랜드별 리뷰 수 분석 결과 (2025년 3월 8일 ~ 2026년 3월 8일)에 따르면, 해당 기간 동안 리뷰 데이터가 확인된 브랜드는 **SKIN1004**가 유일하며, 총 **29,630**건의 리뷰를 기록했습니다. 이는 SKIN1004가 쇼"
+  },
+  {
+    "id": "V2_RS-011",
+    "query": "쇼피에서 Tone Brightening Capsule Serum 후기 몇 개야? 정리해줘은 어떤가요?",
+    "table": "review_shopee",
+    "category": "product_review",
+    "status": "OK",
+    "time": 34.3,
+    "answer_len": 621,
+    "answer_preview": "해당 조건의 데이터가 없습니다.  SQL에서 `product_name` 필터 조건에 `Tone_Brightening%Capsule_Ampoule`이 포함된 제품을 검색했지만, 사용자 질문에서는 `Tone Brightening Capsule Serum`을 요청했습니다. SQL의 제품명 필터(`Capsule_Ampoule`)와 요청하신 제품명(`Capsule "
+  },
+  {
+    "id": "V2_RS-012",
+    "query": "Shopee 리뷰 최근 30일 트렌드 알 수 있을까요?",
+    "table": "review_shopee",
+    "category": "monthly_trend",
+    "status": "WARN",
+    "time": 76.5,
+    "answer_len": 3220,
+    "answer_preview": "### 📈 Shopee 리뷰 최근 30일 트렌드 분석  #### 요약  최근 29일간 Shopee는 **총 매출 약 40.51억원**과 **총 주문 179,370건**을 기록하며 견조한 성장세를 보였습니다. 내부 데이터는 직접적인 리뷰 트렌드를 제공하지 않지만, 활발한 거래량은 리뷰 생성의 잠재적 기반이 확대되었음을 시사합니다. 외부 정보 분석 결과, Sh"
+  },
+  {
+    "id": "V2_RS-013",
+    "query": "쇼피 Centella Soothing Cream 리뷰 보여줘 좀 봐줘 확인 부탁드립니다",
+    "table": "review_shopee",
+    "category": "product_review",
+    "status": "OK",
+    "time": 29.5,
+    "answer_len": 381,
+    "answer_preview": "요청하신 조건에 해당하는 데이터가 없습니다.  `product_name` 필터 조건인 `Centella%Soothing_Cream`에서 'Soothing_Cream' 부분에 언더바(`_`)가 포함되어 있어 정확한 제품명을 찾지 못했을 수 있습니다. 제품명은 보통 'Centella Soothing Cream' (공백 포함) 또는 'Centella Soothi"
+  },
+  {
+    "id": "V2_RS-014",
+    "query": "Shopee에서 가장 최근에 등록된 리뷰는? 확인해줘",
+    "table": "review_shopee",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 51.8,
+    "answer_len": 2673,
+    "answer_preview": "### 📊 Shopee SKIN1004 브랜드 최신 리뷰 현황  #### 요약  ⚠️ 2026년 03월 08일 현재, Shopee에서 SKIN1004 브랜드의 가장 최근 리뷰는 **2026년 02월 09일**에 등록되었습니다. 해당 날짜에 총 **50건**의 리뷰가 확인되었으며, 이 중 프리뷰로 제공된 상위 20건을 분석한 결과, 다양한 제품에 대한 초기 "
+  },
+  {
+    "id": "V2_RS-015",
+    "query": "쇼피 리뷰 수 각 월 변화 차트",
+    "table": "review_shopee",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 36.3,
+    "answer_len": 1262,
+    "answer_preview": "### 📊 쇼피 SKIN1004 브랜드 월별 리뷰 수 변화 분석  #### 요약  지난 1년간(2025년 3월 ~ 2026년 2월) 쇼피 SKIN1004 브랜드의 월별 리뷰 수는 변동성이 컸으며, 2025년 11월에 **1,068개**로 가장 높은 수치를 기록했습니다. 반면, 2026년 2월에는 **336개**로 가장 낮은 리뷰 수를 보이며 전월 대비 큰 "
+  },
+  {
+    "id": "V2_RS-016",
+    "query": "Shopee SKIN1004 리뷰 총 몇 건이야",
+    "table": "review_shopee",
+    "category": "total_count",
+    "status": "OK",
+    "time": 29.8,
+    "answer_len": 421,
+    "answer_preview": "### 📊 Shopee SKIN1004 리뷰 현황  #### 요약  2025년 3월 8일 이후 현재(2026년 3월 8일)까지 Shopee 채널에서 수집된 SKIN1004 브랜드의 총 리뷰 수는 **29,630건**입니다.  #### 분석 및 인사이트  *   지난 1년간 Shopee에서 SKIN1004 브랜드에 대한 고객들의 활발한 피드백이 있었음을 확인"
+  },
+  {
+    "id": "V2_RS-017",
+    "query": "쇼피 Centella Cleansing Oil 리뷰 수 알려주세요",
+    "table": "review_shopee",
+    "category": "product_review",
+    "status": "OK",
+    "time": 38.9,
+    "answer_len": 400,
+    "answer_preview": "요청하신 조건에 해당하는 데이터가 존재하지 않습니다.  SQL 쿼리의 `product_name` 필터 조건(`product_name LIKE '%Centella%Cleansing_Oil%'`)이 문제일 수 있습니다. 제품명에 공백이 사용되는 경우가 많으므로 `Cleansing_Oil` 대신 `Cleansing Oil` (공백)으로 검색하거나, 제품명 전체를"
+  },
+  {
+    "id": "V2_RS-018",
+    "query": "Shopee 최근 5건 리뷰 내용 보여줘 알고 싶어",
+    "table": "review_shopee",
+    "category": "recent_n",
+    "status": "OK",
+    "time": 35.9,
+    "answer_len": 1742,
+    "answer_preview": "### 📊 Shopee SKIN1004 최근 5건 리뷰 분석  #### 요약  2026년 2월 9일 기준으로 조회된 Shopee SKIN1004의 **최근 리뷰 5건** 중 **2건(40%)**은 제품 포장(봉인, 박스 상태)에 대한 부정적인 경험을 언급했습니다. 또한 **2건(40%)**은 제품을 무료로 받았지만 아직 사용해보지 않았다는 내용으로, 프로모"
+  },
+  {
+    "id": "V2_RS-019",
+    "query": "쇼피 2025년 리뷰 수 총합은 어떤가요?",
+    "table": "review_shopee",
+    "category": "date_range",
+    "status": "OK",
+    "time": 25.7,
+    "answer_len": 349,
+    "answer_preview": "안녕하세요! 요청하신 **쇼피 2025년 리뷰 수 총합** 데이터를 조회하지 못했습니다.  좀 더 정확한 결과를 위해 **조건을 구체적으로 지정**해 주시면 다시 조회해 드리겠습니다. 예를 들어 기간, 국가, 특정 제품명 등을 함께 알려주시면 도움이 됩니다.  **질문 예시:**  1. 📅 **\"쇼피 태국에서 2025년 1월~3월 리뷰 수 총합은 얼마인가요"
+  },
+  {
+    "id": "V2_RS-020",
+    "query": "간단하게 Shopee 제품 기준 리뷰 순위?",
+    "table": "review_shopee",
+    "category": "review_count",
+    "status": "OK",
+    "time": 29.9,
+    "answer_len": 1601,
+    "answer_preview": "### 📊 Shopee SKIN1004 제품별 리뷰 수 순위 (지난 1년간)  #### 요약  지난 1년간(2025년 3월 8일 ~ 2026년 3월 8일) Shopee에서 SKIN1004 제품 중 가장 많은 리뷰를 받은 제품은 **톤브라이트닝 클렌징 젤 폼**으로, 총 **1,023개**의 리뷰를 기록했습니다. 상위 20개 제품 모두 800개 이상의 높은 "
+  },
+  {
+    "id": "V2_RS-021",
+    "query": "쇼피 리뷰데이터 가장 적은 제품은?",
+    "table": "review_shopee",
+    "category": "review_count",
+    "status": "OK",
+    "time": 25.3,
+    "answer_len": 679,
+    "answer_preview": "### 📊 쇼피 리뷰 수가 가장 적은 SKIN1004 제품 분석  #### 요약  2026년 3월 8일 기준, 쇼피에서 SKIN1004 제품 중 리뷰 수가 가장 적은 제품은 **히알루시카 퍼스트 앰플**로 확인되었습니다. 해당 제품은 총 **26개**의 리뷰를 기록했습니다.  #### 분석 및 인사이트  *   **최소 리뷰 제품 식별:** 현재 쇼피에서 "
+  },
+  {
+    "id": "V2_RS-022",
+    "query": "Shopee 12월 2024년 리뷰 보여줄래?",
+    "table": "review_shopee",
+    "category": "date_range",
+    "status": "OK",
+    "time": 53.0,
+    "answer_len": 2057,
+    "answer_preview": "### 📊 Shopee 2024년 12월 SKIN1004 리뷰 분석  #### 요약  2024년 12월 Shopee에서 수집된 SKIN1004 제품 리뷰는 총 **50건**입니다. 전반적으로 제품의 흡수력, 보습력, 진정 효과, 여드름 흉터 개선, 모공 관리 등 다양한 효능에 대한 긍정적인 평가가 많았습니다. 특히 '프로바이오시카 인텐시브 앰플', '히알루"
+  },
+  {
+    "id": "V2_RS-023",
+    "query": "간단하게 쇼피 최근 20건 리뷰데이터 조회은 어떤가요?",
+    "table": "review_shopee",
+    "category": "recent_n",
+    "status": "OK",
+    "time": 44.6,
+    "answer_len": 567,
+    "answer_preview": "## 📊 쇼피 SKIN1004 브랜드 최근 리뷰 20건 분석 보고서  #### 요약  2026년 03월 08일 기준으로 조회된 쇼피(Shopee)의 SKIN1004 브랜드 최근 리뷰 **20건은 모두 2026년 02월 09일에 작성**되었습니다. 이 리뷰들은 다양한 제품에 대한 긍정적인 평가가 주를 이루었으며, 특히 **'나이아신아마이드 부스팅 샷 앰플'*"
+  },
+  {
+    "id": "V2_RS-024",
+    "query": "Shopee Madagascar Centella Ampoule 최신 후기 확인 부탁드립니다",
+    "table": "review_shopee",
+    "category": "review_content",
+    "status": "OK",
+    "time": 37.8,
+    "answer_len": 756,
+    "answer_preview": "# Shopee 마다가스카르 센텔라 앰플 최신 후기  현재 제가 보유한 실시간 검색 정보에는 **Shopee 플랫폼 특정 후기**가 포함되어 있지 않습니다.  다만, 최근 수집된 **일반 온라인 후기**를 기준으로 마다가스카르 센텔라 앰플의 최신 소비자 반응을 정리해 드리겠습니다.  ---  ## 긍정적 평가  | 항목 | 주요 내용 | |------|--"
+  },
+  {
+    "id": "V2_RS-025",
+    "query": "쇼피 채널별 리뷰 수 알려줄래 알려주세요",
+    "table": "review_shopee",
+    "category": "review_count",
+    "status": "OK",
+    "time": 33.2,
+    "answer_len": 842,
+    "answer_preview": "### 📊 쇼피 채널별 SKIN1004 리뷰 현황 (2025년 03월 08일 ~ 2026년 03월 08일)  #### 요약  지난 1년간(2025년 03월 08일 ~ 2026년 03월 08일) SKIN1004 브랜드의 쇼피 채널별 총 리뷰 수는 **29,630개**입니다. 이 중 'shopee' 채널에서 **27,627개**의 리뷰가 발생하여 전체의 약 9"
+  },
+  {
+    "id": "V2_RS-026",
+    "query": "Shopee 2025년 2월 리뷰 몇 건이야 어떻게 되나요?",
+    "table": "review_shopee",
+    "category": "date_range",
+    "status": "OK",
+    "time": 44.0,
+    "answer_len": 439,
+    "answer_preview": "# 데이터 조회 안내  안녕하세요! 요청하신 **Shopee 2025년 2월 리뷰 건수** 데이터를 현재 조회하지 못했습니다.  좀 더 구체적인 조건을 추가해 주시면 정확한 데이터를 찾는 데 도움이 됩니다. 아래 항목들을 함께 명시해 주세요:  > **국가** · **제품명** · **기간(세부)** · **채널 상세** 등  ---  ### 💡 질문 예시"
+  },
+  {
+    "id": "V2_RS-027",
+    "query": "쇼피 리뷰데이터 데이터 전체 건수 알려줘",
+    "table": "review_shopee",
+    "category": "total_count",
+    "status": "OK",
+    "time": 55.7,
+    "answer_len": 328,
+    "answer_preview": "### 📊 쇼피 리뷰 데이터 전체 건수  #### 요약  현재 쇼피 플랫폼에서 수집된 리뷰 데이터는 총 **29,630**건입니다.  #### 분석 및 인사이트  *   쇼피 플랫폼에서 수집된 리뷰 데이터의 총량을 파악할 수 있습니다. *   이는 향후 리뷰 데이터 분석(예: 긍부정 분석, 키워드 추출)을 위한 기초 데이터 규모를 나타냅니다. *   `> "
+  },
+  {
+    "id": "V2_RS-028",
+    "query": "Shopee Centella Ampoule 평가 매월 변화",
+    "table": "review_shopee",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 43.4,
+    "answer_len": 772,
+    "answer_preview": "# 쇼피(Shopee) 센텔라 앰플 평가 변화  ## 월별 세부 데이터  안타깝게도 쇼피(Shopee)에서의 **월별 평가 변화에 대한 구체적인 데이터는 현재 확인되지 않았습니다.**  ---  ## 확인 가능한 주요 지표  다만, 전반적인 추세를 보여주는 핵심 데이터는 다음과 같습니다:  ### 1. 누적 판매량 추이 | 시점 | 누적 판매량 | |---"
+  },
+  {
+    "id": "V2_RS-029",
+    "query": "정확한 쇼피에서 리뷰 최근 50건",
+    "table": "review_shopee",
+    "category": "recent_n",
+    "status": "OK",
+    "time": 48.3,
+    "answer_len": 76235,
+    "answer_preview": "### 📊 쇼피 SKIN1004 브랜드 최근 리뷰 50건 분석  #### 요약  ⚠️ 현재 조회된 가장 최신 쇼피 리뷰는 **2026년 02월 09일**까지이며, 총 **50건**의 SKIN1004 브랜드 리뷰가 확인되었습니다 (오늘 날짜: 2026년 03월 08일). 조회된 리뷰들은 주로 제품 수령, 사용 전 기대감, 그리고 일부 제품에 대한 긍정적인 첫"
+  },
+  {
+    "id": "V2_RS-030",
+    "query": "Shopee 후기 제품명별 분류",
+    "table": "review_shopee",
+    "category": "review_count",
+    "status": "OK",
+    "time": 37.0,
+    "answer_len": 289,
+    "answer_preview": "Shopee 플랫폼에서는 **후기를 제품명별로 분류하거나 검색하는 기능을 제공하지 않습니다.**  개별 상품의 후기를 확인하려면 **해당 상품 페이지에 직접 접속**해야 합니다.  ---  ### 참고: 활용 가능한 기능  | 대상 | 기능 | 설명 | |------|------|------| | **판매자** | 셀러센터 Shop Rating | 구매자 "
+  },
+  {
+    "id": "V2_RS-031",
+    "query": "요즘 쇼피 Tone Brightening Capsule Serum 최신 리뷰 내용",
+    "table": "review_shopee",
+    "category": "review_content",
+    "status": "OK",
+    "time": 57.9,
+    "answer_len": 462,
+    "answer_preview": "요청하신 조건에 해당하는 쇼피 리뷰 데이터가 없습니다.  SQL에서 `product_name` 필터 조건이 `'%Tone_Brightening%Capsule_Ampoule%'`로 설정되어 있었으나, 사용자 질문에서는 'Tone Brightening Capsule **Serum**'을 요청하셨습니다. 'Serum'과 'Ampoule'의 차이로 인해 일치하는 "
+  },
+  {
+    "id": "V2_RS-032",
+    "query": "Shopee 전체 리뷰 중 최근 7일 리뷰 빨리 알려주세요",
+    "table": "review_shopee",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 40.1,
+    "answer_len": 363,
+    "answer_preview": "해당 조건의 데이터가 없습니다.  SQL에서 사용된 날짜 필터 조건(`review_date`)이 현재 날짜가 아닌 미래 날짜(2026년 3월 1일 ~ 3월 8일)로 설정되어 있어 해당 기간의 데이터가 존재하지 않습니다. '최근 7일 리뷰'를 조회하려면 현재 날짜를 기준으로 설정해야 합니다.  비슷한 데이터를 조회할 수 있는 대안 질문은 다음과 같습니다: 1"
+  },
+  {
+    "id": "V2_RS-033",
+    "query": "쇼피 리뷰 수집 날짜 기준 최신순 정렬 알려주세요",
+    "table": "review_shopee",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 42.9,
+    "answer_len": 4215,
+    "answer_preview": "### 📊 쇼피 SKIN1004 리뷰 수집일 기준 최신순 정렬 결과  #### 요약  2026년 03월 08일 기준으로, 쇼피에서 수집된 SKIN1004 브랜드 리뷰 중 **가장 최근에 수집된 50건**을 확인했습니다. 이 리뷰들은 **2026년 02월 10일**에 수집되었으며, 제품 배송 및 품질, 고객 서비스와 관련된 다양한 부정적 피드백을 포함하고 있"
+  },
+  {
+    "id": "V2_RS-034",
+    "query": "Shopee 2025년 3월 리뷰 있어",
+    "table": "review_shopee",
+    "category": "date_range",
+    "status": "OK",
+    "time": 44.7,
+    "answer_len": 806,
+    "answer_preview": "📊 Shopee 2025년 3월 SKIN1004 제품 리뷰 현황  #### 요약  네, Shopee에서 SKIN1004 제품에 대한 2025년 3월 리뷰가 존재합니다. 총 **735건**의 리뷰가 조회되었으며, 이는 **34개**의 고유 제품에 대한 것입니다.  #### 상세 데이터 | 구분 | 수치 | | :--- | ---: | | 총 리뷰 수 | 73"
+  },
+  {
+    "id": "V2_RS-035",
+    "query": "쇼피 리뷰 브랜드 SKIN1004만 필터링 알려주세요",
+    "table": "review_shopee",
+    "category": "brand_review",
+    "status": "OK",
+    "time": 46.2,
+    "answer_len": 1468,
+    "answer_preview": "### 📊 SKIN1004 브랜드 쇼피 리뷰 현황 분석  #### 요약  SKIN1004 브랜드의 쇼피 리뷰 **총 1,000건**이 조회되었습니다. 해당 리뷰는 **2026년 2월 7일부터 2026년 2월 9일까지**의 기간에 작성되었습니다. (⚠️ 2026년 3월 8일 현재, 2026년 2월 초 3일간의 데이터만 존재합니다.) 총 **39개**의 고유 "
+  },
+  {
+    "id": "V2_RS-036",
+    "query": "Shopee 최근 100건 리뷰 데이터 알려주세요",
+    "table": "review_shopee",
+    "category": "recent_n",
+    "status": "OK",
+    "time": 56.5,
+    "answer_len": 1850,
+    "answer_preview": "### 📊 Shopee SKIN1004 최근 100건 리뷰 분석  #### 요약  SKIN1004의 Shopee 채널에서 수집된 최근 **100건**의 리뷰 데이터는 **2026년 2월 7일부터 2월 9일까지**의 기간을 포함합니다. 주요 리뷰 내용은 제품 수령 및 배송 만족도, 사용 전 기대감, 그리고 프로모션(선물/번들) 구매에 대한 긍정적인 피드백이 "
+  },
+  {
+    "id": "V2_RS-037",
+    "query": "혹시 쇼피 Centella Soothing Cream 평가 내용 보여줄래",
+    "table": "review_shopee",
+    "category": "review_content",
+    "status": "OK",
+    "time": 40.6,
+    "answer_len": 441,
+    "answer_preview": "요청하신 조건에 해당하는 쇼피 SKIN1004 센텔라 수딩 크림 평가 데이터는 찾을 수 없습니다.  SQL 쿼리에서 `product_name` 필터 조건인 `'%Centella%Soothing%Cream%'`이 문제일 수 있습니다. 데이터베이스에 저장된 제품명이 정확히 일치하지 않거나, 다른 이름으로 등록되어 있을 가능성이 있습니다. SKIN1004의 제품"
+  },
+  {
+    "id": "V2_RS-038",
+    "query": "Shopee 월별 리뷰 건수 통계 좀 어때?",
+    "table": "review_shopee",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 35.3,
+    "answer_len": 1218,
+    "answer_preview": "### 📊 Shopee SKIN1004 월별 리뷰 건수 통계 (2025년 3월 ~ 2026년 2월)  #### 요약  ⚠️ 2026년 3월 8일 현재, Shopee SKIN1004 브랜드의 월별 리뷰 건수는 2025년 3월부터 2026년 2월까지 집계되었습니다. 해당 기간 동안 총 **8,542건**의 리뷰가 발생했으며, 월평균 약 **712건**을 기록했"
+  },
+  {
+    "id": "V2_RS-039",
+    "query": "쇼피 평가 각 제품 비율",
+    "table": "review_shopee",
+    "category": "review_count",
+    "status": "OK",
+    "time": 35.3,
+    "answer_len": 517,
+    "answer_preview": "안녕하세요, 요청하신 **쇼피(Shopee) 제품별 평가 비율** 데이터를 조회하지 못했습니다.  좀 더 정확한 결과를 위해 아래와 같이 **조건을 구체적으로** 지정해 주시면 다시 조회해 드리겠습니다.  ---  **📌 구체적으로 지정하면 좋은 항목** - **기간** (예: 2024년 1분기, 2025년 5월 등) - **국가/마켓** (예: 태국, 베"
+  },
+  {
+    "id": "V2_RS-040",
+    "query": "Shopee 2024년 후기 수",
+    "table": "review_shopee",
+    "category": "date_range",
+    "status": "WARN",
+    "time": 62.7,
+    "answer_len": 348,
+    "answer_preview": "2024년 Shopee의 **전체 후기 수에 대한 구체적인 통계는 공개되지 않았습니다.**  다만, 2024년 Shopee 내 **한국 판매자(K-seller) 실적** 관련 주요 수치는 다음과 같습니다:  | 항목 | 전년 대비 성장률 | |---|---| | **주문 건수** | **+63%** | | **매출액** | **+44%** | | **K-뷰"
+  },
+  {
+    "id": "V2_RS-041",
+    "query": "쇼피 리뷰데이터 원문과 한국어 번역 같이 보여줘",
+    "table": "review_shopee",
+    "category": "review_content",
+    "status": "WARN",
+    "time": 67.0,
+    "answer_len": 100856,
+    "answer_preview": "### 📊 SKIN1004 쇼피 리뷰 데이터 (원문 및 한국어 번역)  #### 요약  사용자님의 요청에 따라 SKIN1004 브랜드의 쇼피 리뷰 데이터 **총 1,000건**을 최신순으로 조회했습니다. 조회된 리뷰는 **2026년 2월 7일부터 2026년 2월 9일까지**의 기간에 해당하며, 각 리뷰의 원문과 한국어 번역이 함께 제공됩니다.  #### 상"
+  },
+  {
+    "id": "V2_RS-042",
+    "query": "Shopee Centella Cleansing Oil 최신 리뷰데이터",
+    "table": "review_shopee",
+    "category": "review_content",
+    "status": "OK",
+    "time": 37.9,
+    "answer_len": 441,
+    "answer_preview": "해당 조건의 데이터가 없습니다.  SQL에서 사용된 `product_name LIKE '%Centella%Cleansing_Oil%'` 필터 조건이 문제일 가능성이 높습니다. 데이터베이스에 저장된 실제 제품명과 정확히 일치하지 않아 결과가 없는 것으로 보입니다. 예를 들어, 'Cleansing_Oil' 대신 'Cleansing Oil' (공백 포함) 또는 "
+  },
+  {
+    "id": "V2_RS-043",
+    "query": "궁금한데 쇼피 리뷰 최근 한 달 몇 건 확인 가능한가요?",
+    "table": "review_shopee",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 37.1,
+    "answer_len": 600,
+    "answer_preview": "### 📊 SKIN1004 쇼피 최근 한 달(2026년 2월) 리뷰 현황  #### 요약  사용자님께서 문의하신 SKIN1004 브랜드의 쇼피(Shopee) 채널 최근 한 달 리뷰는 2026년 2월 기준으로 총 **336건** 확인되었습니다. 이는 해당 기간 동안 고객들이 SKIN1004 제품에 대해 활발하게 피드백을 남겼음을 보여줍니다.  #### 분석 "
+  },
+  {
+    "id": "V2_RS-044",
+    "query": "빠르게 Shopee 제품별 리부 수 TOP 5 확인 부탁드립니다",
+    "table": "review_shopee",
+    "category": "top_reviewed",
+    "status": "OK",
+    "time": 41.3,
+    "answer_len": 1079,
+    "answer_preview": "### 📊 Shopee SKIN1004 제품별 리뷰 수 TOP 5 (최근 1년)  #### 요약  지난 1년간 Shopee에서 SKIN1004 제품 중 가장 많은 리뷰를 받은 제품은 '톤브라이트닝 클렌징 젤 폼'으로, **1,023개**의 리뷰를 기록했습니다. 이어서 '히알루시카 워터핏 선 세럼'과 '센텔라 라이트 클렌징 오일'이 각각 **1,017개**,"
+  },
+  {
+    "id": "V2_RS-045",
+    "query": "쇼피 리뷰 날짜별 분포 알려주세요",
+    "table": "review_shopee",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 41.7,
+    "answer_len": 1839,
+    "answer_preview": "### 📊 쇼피 SKIN1004 브랜드 리뷰 날짜별 분포  #### 요약  SKIN1004 브랜드의 쇼피 리뷰 날짜별 분포 분석 결과, 2025년 3월 8일 이후 수집된 리뷰 데이터를 기준으로 **총 999개의 고유한 리뷰 날짜**에 걸쳐 리뷰가 분포되어 있음을 확인했습니다. 이 데이터는 2021년 12월 15일부터 시작하는 리뷰 날짜를 포함하며, 가장 많"
+  },
+  {
+    "id": "V2_RS-046",
+    "query": "Shopee 2025년 1분기 후기 수?",
+    "table": "review_shopee",
+    "category": "date_range",
+    "status": "OK",
+    "time": 30.4,
+    "answer_len": 271,
+    "answer_preview": "2025년 1분기 Shopee의 **후기(리뷰) 수**에 대한 구체적인 정보는 현재 공개된 자료에서 확인되지 않습니다.  참고로, 같은 기간 Shopee의 주요 실적은 다음과 같습니다:  - **총 주문 건수:** 31억 건 (전년 동기 대비 20.5% 증가) - **이커머스(Shopee) 매출:** 35억 2,400만 달러 (전년 동기 대비 28.3% 증"
+  },
+  {
+    "id": "V2_RS-047",
+    "query": "요즘 쇼피 최근 리뷰 3건만 보여줘",
+    "table": "review_shopee",
+    "category": "recent_n",
+    "status": "OK",
+    "time": 52.4,
+    "answer_len": 103579,
+    "answer_preview": "### 📊 쇼피 최근 리뷰 3건 분석  #### 요약  쇼피에서 조회된 SKIN1004 브랜드의 가장 최근 리뷰 3건은 모두 **2026년 02월 09일**에 작성되었습니다. 이 중 2건은 제품 봉인 및 포장 상태에 대한 불만을 담고 있으며, 1건은 무료 증정품 수령에 대한 내용입니다.  #### 상세 데이터 | product_name | review_da"
+  },
+  {
+    "id": "V2_RS-048",
+    "query": "Shopee Madagascar Centella Ampoule 리뷰 몇 개 있나요",
+    "table": "review_shopee",
+    "category": "product_review",
+    "status": "OK",
+    "time": 43.3,
+    "answer_len": 553,
+    "answer_preview": "### 📊 Shopee SKIN1004 마다가스카르 센텔라 앰플 리뷰 현황  #### 요약  2025년 3월 8일부터 현재(2026년 3월 8일)까지 Shopee 플랫폼에서 SKIN1004 마다가스카르 센텔라 앰플 제품에 대한 리뷰는 **0개**로 확인되었습니다. 이는 조회 기간 동안 해당 제품에 대한 리뷰가 데이터베이스에서 발견되지 않았음을 의미합니다. "
+  },
+  {
+    "id": "V2_RS-049",
+    "query": "쇼피 리뷰 수집일 기준 정렬 알려주세요",
+    "table": "review_shopee",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 43.9,
+    "answer_len": 836,
+    "answer_preview": "### 📊 SKIN1004 쇼피 리뷰 수집일별 현황  #### 요약  SKIN1004 브랜드의 쇼피 리뷰는 2025년 12월 11일부터 2026년 2월 10일까지 총 3일에 걸쳐 수집되었으며, **2026년 2월 10일**에 **27,627건**으로 가장 많은 리뷰가 수집되었습니다. 이는 다른 수집일에 비해 압도적으로 높은 수치입니다.  #### 상세 데이"
+  },
+  {
+    "id": "V2_RS-050",
+    "query": "Shopee 전체 평가 데이터 수",
+    "table": "review_shopee",
+    "category": "total_count",
+    "status": "OK",
+    "time": 32.6,
+    "answer_len": 544,
+    "answer_preview": "### 📊 Shopee 평가 데이터 현황 (2025년 3월 8일 ~ 2026년 3월 8일)  #### 요약  ⚠️ 사용자의 '전체' 평가 데이터 요청과 달리, 현재 조회된 데이터는 2025년 3월 8일부터 2026년 3월 8일까지의 Shopee 평가 데이터입니다. 해당 기간 동안의 Shopee 평가 데이터 수는 총 **29,630건**입니다.  #### 분"
+  },
+  {
+    "id": "V2_RS-051",
+    "query": "쇼피에서 후기 가장 많이 달린 제품 TOP 3",
+    "table": "review_shopee",
+    "category": "top_reviewed",
+    "status": "OK",
+    "time": 25.4,
+    "answer_len": 988,
+    "answer_preview": "### 📊 쇼피 SKIN1004 제품별 최다 후기 TOP 3 (2025년 3월 8일 ~ 2026년 3월 8일)  #### 요약  최근 1년간 쇼피에서 SKIN1004 제품 중 후기가 가장 많이 달린 제품은 **톤브라이트닝 클렌징 젤 폼**으로, 총 **1,023개**의 후기를 기록했습니다. 이어서 **히알루시카 워터핏 선 세럼**이 **1,017개**, *"
+  },
+  {
+    "id": "V2_RS-052",
+    "query": "Shopee 2025년 후기 매월 건수",
+    "table": "review_shopee",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 30.4,
+    "answer_len": 387,
+    "answer_preview": "현재 제공된 정보에 따르면, **Shopee 2025년 월별 후기 건수 데이터는 확인할 수 없습니다.**  ### 사유 - 검색 결과에서도 해당 데이터가 존재하지 않는 것으로 확인됩니다. - 내부 시스템에도 Shopee 2025년 월별 후기 건수에 대한 데이터가 제공되지 않았습니다.  ### 확인 방법 제안  1. **Shopee Seller Center*"
+  },
+  {
+    "id": "V2_RS-053",
+    "query": "쇼피 Centella Ampoule 평가 한국어 번역 보여줄래",
+    "table": "review_shopee",
+    "category": "review_content",
+    "status": "OK",
+    "time": 46.9,
+    "answer_len": 458,
+    "answer_preview": "해당 조건에 맞는 데이터가 없습니다.  SQL에서 사용된 `collect_date >= '2025-03-08'` 조건이 문제입니다. `collect_date`는 데이터가 수집된 날짜를 의미하는데, 2025년 3월 8일은 미래 날짜이므로 해당 날짜 이후에 수집된 데이터는 존재할 수 없습니다. 최신 리뷰를 조회하려면 `collect_date` 조건을 제거하거나"
+  },
+  {
+    "id": "V2_RS-054",
+    "query": "Shopee 리뷰 제품명에 Centella 포함된 것만 알려주세요",
+    "table": "review_shopee",
+    "category": "product_review",
+    "status": "OK",
+    "time": 33.9,
+    "answer_len": 381,
+    "answer_preview": "해당 조건의 데이터가 없습니다.  SQL에서 사용된 필터 조건 중 `collect_date >= '2025-03-08'`이 문제였습니다. 수집일(collect_date)이 미래 날짜로 설정되어 있어, 현재 시점에는 해당 조건에 맞는 데이터가 존재하지 않습니다. 데이터를 조회하시려면 날짜 조건을 현재 또는 과거 날짜로 변경해야 합니다.  비슷한 데이터를 조회"
+  },
+  {
+    "id": "V2_RS-055",
+    "query": "궁금한데 쇼피 2024년 11월 리뷰 데이터",
+    "table": "review_shopee",
+    "category": "date_range",
+    "status": "OK",
+    "time": 41.8,
+    "answer_len": 1700,
+    "answer_preview": "### 📊 쇼피 SKIN1004 2024년 11월 리뷰 데이터 분석  #### 요약  ⚠️ 2024년 11월 전체 리뷰 데이터 중, 현재 조회된 데이터는 **2024년 11월 28일부터 30일까지**의 리뷰입니다. 해당 기간 동안 쇼피에서 SKIN1004 브랜드 제품에 대한 총 **1,000건**의 리뷰가 수집되었으며, 이는 **29개**의 고유 제품에 대"
+  },
+  {
+    "id": "V2_RS-056",
+    "query": "Shopee 평가 수 상위 10개 제품",
+    "table": "review_shopee",
+    "category": "top_reviewed",
+    "status": "OK",
+    "time": 19.0,
+    "answer_len": 506,
+    "answer_preview": "# Shopee 평가 수 상위 10개 제품  안타깝게도 **정확한 최신 목록을 제공하기 어렵습니다.**  그 이유는 다음과 같습니다:  1. **Shopee는 공식적인 평가 수 기준 순위를 제공하지 않습니다.** 2. 평가 수는 **실시간으로 변동**하며, **국가별(태국, 베트남, 필리핀 등)로 상이**합니다. 3. 외부에서 이를 집계한 신뢰할 수 있는 "
+  },
+  {
+    "id": "V2_RS-057",
+    "query": "쇼피 최근 리뷰 15건 내용 몇이야?",
+    "table": "review_shopee",
+    "category": "recent_n",
+    "status": "WARN",
+    "time": 73.0,
+    "answer_len": 107350,
+    "answer_preview": "### 📊 쇼피 SKIN1004 최근 리뷰 15건 분석  #### 요약  2026년 3월 8일 기준으로 조회된 쇼피 SKIN1004 브랜드의 최근 리뷰 15건은 모두 **2026년 2월 9일**에 작성되었습니다. 이 리뷰들은 주로 제품 수령, 무료 증정품에 대한 감사, 그리고 일부 제품의 포장 상태에 대한 피드백을 포함하고 있습니다. 특히, **무료 증정품"
+  },
+  {
+    "id": "V2_RS-058",
+    "query": "Shopee 리뷰데이터 한국어 번역 최근 것",
+    "table": "review_shopee",
+    "category": "review_content",
+    "status": "WARN",
+    "time": 75.8,
+    "answer_len": 4798,
+    "answer_preview": "### 📊 Shopee SKIN1004 제품 최근 리뷰 분석  #### 요약  SKIN1004 브랜드 제품에 대한 Shopee 리뷰 데이터 분석 결과, **2026년 2월 8일부터 2026년 2월 9일까지** 작성된 최근 리뷰 **50건**이 확인되었습니다. 대부분의 리뷰는 제품에 대한 긍정적인 기대감이나 만족감을 표현하고 있으며, 특히 무료 증정품에 대한"
+  },
+  {
+    "id": "V2_RS-059",
+    "query": "쇼피 제품 리뷰데이터 분석해줘",
+    "table": "review_shopee",
+    "category": "review_count",
+    "status": "OK",
+    "time": 36.9,
+    "answer_len": 1316,
+    "answer_preview": "### 📊 SKIN1004 쇼피 제품 리뷰 현황 분석 (2025년 3월 ~ 2026년 3월)  #### 요약  지난 1년간(2025년 3월 8일 ~ 2026년 3월 8일) 쇼피에서 SKIN1004 브랜드 제품에 대한 총 **43개** 제품의 리뷰 데이터를 분석한 결과, '톤브라이트닝 클렌징 젤 폼'이 **1,023개**의 리뷰로 가장 많은 관심을 받았습니다"
+  },
+  {
+    "id": "V2_RS-060",
+    "query": "Shopee SKIN1004 브랜드 후기 전체 보여줘",
+    "table": "review_shopee",
+    "category": "brand_review",
+    "status": "WARN",
+    "time": 67.1,
+    "answer_len": 4850,
+    "answer_preview": "### 📊 Shopee SKIN1004 브랜드 최신 후기 분석 보고서  #### 요약  ⚠️ 현재 조회된 SKIN1004 브랜드 후기는 **2026년 02월 07일부터 2026년 02월 09일까지**의 데이터만 포함하고 있습니다. 이 기간 동안 Shopee에서 작성된 SKIN1004 브랜드 후기 중 최신 **1,000건**이 조회되었습니다. 총 **39개*"
+  },
+  {
+    "id": "V2_RS-061",
+    "query": "요즘 shopee 리부 2025년 상반기 데이터",
+    "table": "review_shopee",
+    "category": "date_range",
+    "status": "OK",
+    "time": 49.7,
+    "answer_len": 1495,
+    "answer_preview": "### 📊 2025년 상반기 Shopee SKIN1004 리뷰 분석 보고서 (6월 21일~30일 데이터)  #### 요약  ⚠️ 2025년 상반기 데이터 요청에 대해, 현재 조회된 데이터는 **2025년 6월 21일부터 6월 30일까지의 리뷰 1,000건**입니다. (오늘: 2026년 03월 08일) 총 **1,000건**의 SKIN1004 제품 리뷰가 수"
+  },
+  {
+    "id": "V2_RS-062",
+    "query": "Shopee 리부 건수 추이 그래프 정리해줘은 어떤가요?",
+    "table": "review_shopee",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 50.6,
+    "answer_len": 572,
+    "answer_preview": "# 📊 데이터 조회 안내  안녕하세요! 요청하신 **Shopee 리뷰 건수 추이** 데이터를 현재 조회하지 못했습니다.  ---  ## 💡 좀 더 구체적으로 질문해 주시면 정확한 데이터를 찾는 데 도움이 됩니다.  아래 항목들을 포함해 주시면 좋습니다:  | 구체화 항목 | 예시 | |------------|------| | **기간** | 2024년 1월"
+  },
+  {
+    "id": "V2_RS-063",
+    "query": "쇼피 최근 리뷰 원문 보여줄 수 있어?",
+    "table": "review_shopee",
+    "category": "review_content",
+    "status": "OK",
+    "time": 33.2,
+    "answer_len": 6962,
+    "answer_preview": "### 📊 쇼피 SKIN1004 최근 리뷰 원문 분석 (2026년 02월 08일 ~ 09일)  #### 요약  사용자님의 요청에 따라 SKIN1004 브랜드의 쇼피(Shopee) 최신 리뷰 50건을 분석한 결과, **2026년 02월 08일과 09일**에 작성된 리뷰들이 대부분을 차지했습니다. 리뷰 내용은 주로 제품에 대한 기대감, 무료 증정품에 대한 만족"
+  },
+  {
+    "id": "V2_RS-064",
+    "query": "Shopee Tone Brightening Capsule Serum 리뷰 수 추세",
+    "table": "review_shopee",
+    "category": "product_review",
+    "status": "OK",
+    "time": 27.2,
+    "answer_len": 484,
+    "answer_preview": "안녕하세요, 요청하신 **Shopee Tone Brightening Capsule Serum 리뷰 수 추세** 데이터를 조회하지 못했습니다.  좀 더 정확한 결과를 위해 **조건을 구체적으로 지정**해 주시면 다시 조회해 드리겠습니다. 아래 예시를 참고해 주세요.  ---  **질문 예시**  1. **\"2024년 1월~6월 Shopee 태국에서 Tone "
+  },
+  {
+    "id": "V2_RS-065",
+    "query": "쇼피 평가 수집일 최신 데이터",
+    "table": "review_shopee",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 50.4,
+    "answer_len": 107025,
+    "answer_preview": "### 📊 쇼피(Shopee) SKIN1004 브랜드 최신 평가 수집 현황  #### 요약  SKIN1004 브랜드의 쇼피 평가 중 최신 수집 데이터는 **2026년 02월 10일**에 수집된 **총 50건**의 평가입니다. 이 평가들은 실제 리뷰 작성일이 2022년 04월부터 2026년 02월까지 넓은 범위에 걸쳐 있으며, 상당수가 제품 품질, 배송 문제"
+  },
+  {
+    "id": "V2_RS-066",
+    "query": "Shopee 2025년 2월 후기 내용 부탁드려요",
+    "table": "review_shopee",
+    "category": "date_range",
+    "status": "OK",
+    "time": 38.5,
+    "answer_len": 476,
+    "answer_preview": "2025년 2월 Shopee(쇼피)에 대한 **구체적인 사용자 후기 내용은 확인되지 않습니다.**  다만, 2025년 2월 전후 쇼피의 주요 동향은 다음과 같습니다:  | 분야 | 주요 내용 | |------|-----------| | **AI 기술 도입** | AI 챗봇을 통한 24시간 고객 응대, 상품 정보 요약 및 이미지 품질 개선 기능 제공 | | "
+  },
+  {
+    "id": "V2_RS-067",
+    "query": "쇼피 전체 후기 건수 합계",
+    "table": "review_shopee",
+    "category": "total_count",
+    "status": "OK",
+    "time": 34.5,
+    "answer_len": 506,
+    "answer_preview": "### 📊 쇼피 후기 건수 현황 (2025년 3월 8일 ~ 2026년 3월 8일)  #### 요약  2025년 3월 8일부터 2026년 3월 8일까지 쇼피(Shopee) 채널에서 수집된 총 후기 건수는 **29,630건**입니다. 이는 지난 1년간 쇼피 플랫폼에서 발생한 고객 피드백의 총합을 나타냅니다.  #### 분석 및 인사이트  *   지난 1년간 쇼"
+  },
+  {
+    "id": "V2_RS-068",
+    "query": "Shopee 제품별 최근 리뷰 1건씩 보여줘",
+    "table": "review_shopee",
+    "category": "review_content",
+    "status": "WARN",
+    "time": 65.0,
+    "answer_len": 107331,
+    "answer_preview": "### 📊 Shopee SKIN1004 제품별 최근 리뷰 현황  #### 요약  Shopee에서 판매되는 SKIN1004 브랜드 제품 중, 지난 1년간 수집된 데이터를 기준으로 **43개** 제품에 대한 최신 리뷰를 분석했습니다. 가장 최근 리뷰는 **2026년 02월 09일**에 작성되었으며, 전반적으로 제품에 대한 긍정적인 평가와 함께 일부 제품에서는 "
+  },
+  {
+    "id": "V2_RS-069",
+    "query": "쇼피 후기 날짜 범위 알려줘",
+    "table": "review_shopee",
+    "category": "date_range",
+    "status": "OK",
+    "time": 27.7,
+    "answer_len": 446,
+    "answer_preview": "### 📊 쇼피 후기 데이터 날짜 범위  #### 요약  쇼피 후기 데이터는 **2021년 12월 15일**부터 **2026년 2월 9일**까지의 후기를 포함하고 있습니다. 이는 오늘 날짜(2026년 3월 8일) 기준으로 약 한 달 전까지의 데이터입니다.  #### 분석 및 인사이트  *   제공된 데이터는 약 4년 2개월에 걸친 쇼피 후기 기록을 담고 있"
+  },
+  {
+    "id": "V2_RS-070",
+    "query": "간단하게 Shopee 후기 수 가장 적은 제품은?",
+    "table": "review_shopee",
+    "category": "review_count",
+    "status": "OK",
+    "time": 59.6,
+    "answer_len": 151,
+    "answer_preview": "Shopee에서는 **후기 수 기준 정렬 기능을 제공하지 않아** 후기가 가장 적은 제품을 직접 확인하기 어렵습니다.  대안으로, 검색 시 정렬을 **'최신순(Latest)'**으로 설정하면 신규 등록 상품이 표시되며, 이들이 후기가 없거나 가장 적을 가능성이 높습니다."
+  },
+  {
+    "id": "V2_RS-071",
+    "query": "쇼피 Centella Cleansing Oil 리뷰데이터 몇 건?",
+    "table": "review_shopee",
+    "category": "product_review",
+    "status": "OK",
+    "time": 34.0,
+    "answer_len": 507,
+    "answer_preview": "### 📊 쇼피 Centella Cleansing Oil 리뷰 데이터 조회 결과  #### 요약  쇼피 플랫폼에서 SKIN1004 브랜드의 **Centella Cleansing Oil** 제품에 대한 리뷰 데이터는 현재 **0건**으로 확인되었습니다.  #### 분석 및 인사이트  *   현재 조회된 데이터에 따르면, 쇼피 플랫폼에서 SKIN1004의 Ce"
+  },
+  {
+    "id": "V2_RS-072",
+    "query": "Shopee 최근 한 주간 리뷰데이터",
+    "table": "review_shopee",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 38.6,
+    "answer_len": 588,
+    "answer_preview": "# 데이터 조회 안내  안녕하세요. 요청하신 **Shopee 최근 한 주간 리뷰 데이터**를 현재 조회하지 못했습니다.  좀 더 정확한 결과를 위해 **조건을 구체적으로 지정**해 주시면 다시 조회를 시도해 볼 수 있습니다.  ---  ## 💡 이렇게 질문해 보세요  > **1.** \"Shopee **태국** 채널에서 최근 1주간(6/30~7/6) 등록된 "
+  },
+  {
+    "id": "V2_RS-073",
+    "query": "쇼핑 리뷰데이터 월별 증감 추이",
+    "table": "review_shopee",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 33.3,
+    "answer_len": 864,
+    "answer_preview": "### 📊 SKIN1004 쇼핑 리뷰데이터 월별 증감 추이 분석  #### 요약  ⚠️ SKIN1004 브랜드의 쇼핑 리뷰 데이터는 현재 2025년 12월과 2026년 2월 두 달치만 존재합니다 (오늘: 2026년 03월 08일). 분석 결과, 2025년 12월 **2,003건**의 리뷰에서 2026년 2월 **27,627건**으로 리뷰 수가 크게 증가했습"
+  },
+  {
+    "id": "V2_RS-074",
+    "query": "Shopee 2024년 10월 리뷰 수 알려줄래?",
+    "table": "review_shopee",
+    "category": "date_range",
+    "status": "OK",
+    "time": 45.9,
+    "answer_len": 350,
+    "answer_preview": "### 📊 Shopee 2024년 10월 SKIN1004 리뷰 현황  #### 요약  2024년 10월 한 달간 Shopee 채널에서 SKIN1004 브랜드에 대한 총 리뷰 수는 **930**건으로 집계되었습니다.  #### 분석 및 인사이트  *   2024년 10월 Shopee에서 SKIN1004 브랜드 제품에 대한 고객들의 활발한 피드백이 있었음을 확"
+  },
+  {
+    "id": "V2_RS-075",
+    "query": "쇼피 제품 리뷰 랭킹 알려줘",
+    "table": "review_shopee",
+    "category": "top_reviewed",
+    "status": "OK",
+    "time": 31.1,
+    "answer_len": 1451,
+    "answer_preview": "### 📊 SKIN1004 쇼피 제품 리뷰 수 랭킹 (2025년 3월 8일 ~ 2026년 3월 8일)  #### 요약  지난 1년간(2025년 3월 8일 ~ 2026년 3월 8일) 쇼피에서 **SKIN1004 제품 중 가장 많은 리뷰를 받은 제품은 '톤브라이트닝 클렌징 젤 폼'으로, 총 1,023개의 리뷰**를 기록했습니다. 이 기간 동안 총 43개 제품의"
+  },
+  {
+    "id": "V2_RS-076",
+    "query": "Shopee Madagascar Centella Ampoule 리뷰 원문 정리해줘",
+    "table": "review_shopee",
+    "category": "review_content",
+    "status": "WARN",
+    "time": 64.1,
+    "answer_len": 677,
+    "answer_preview": "해당 조건의 데이터가 없습니다.  SQL 쿼리에서 `brand LIKE '%SKIN1004%'`와 `product_name LIKE '%Centella%Ampoule%'` 필터 조건은 적절해 보이지만, `Shopee_Review` 테이블에 해당 조건에 맞는 데이터가 없거나, 제품명이 데이터베이스에 저장된 이름과 정확히 일치하지 않는 것으로 보입니다. 특히 "
+  },
+  {
+    "id": "V2_RS-077",
+    "query": "혹시 쇼피 최근 평가 25건",
+    "table": "review_shopee",
+    "category": "recent_n",
+    "status": "OK",
+    "time": 34.8,
+    "answer_len": 2650,
+    "answer_preview": "### 📊 쇼피 SKIN1004 최신 리뷰 25건 분석  #### 요약  SKIN1004의 쇼피(Shopee) 플랫폼에서 수집된 **가장 최근 리뷰 25건**에 대한 분석 결과입니다. 해당 리뷰들은 **2026년 02월 08일**부터 **2026년 02월 09일**까지 작성된 것으로 확인됩니다. 전반적으로 제품 품질 및 피부 적합성에 대한 긍정적인 평가가 "
+  },
+  {
+    "id": "V2_RS-078",
+    "query": "Shopee 리뷰 데이터 채널 정보 좀 알려줘",
+    "table": "review_shopee",
+    "category": "review_count",
+    "status": "OK",
+    "time": 37.0,
+    "answer_len": 559,
+    "answer_preview": "### 📊 Shopee 리뷰 데이터 채널 정보  #### 요약  최근 1년간의 Shopee 리뷰 데이터 분석 결과, 채널 정보는 **'shopee'**와 **'Shopee'** 두 가지로 확인되었습니다. 이는 동일한 플랫폼을 지칭하지만, 대소문자 표기 방식에 차이가 있는 것으로 보입니다.  #### 상세 데이터 | 채널 명 | | :------ | | sh"
+  },
+  {
+    "id": "V2_RS-079",
+    "query": "궁금한데 쇼피 전체 2025년 리뷰데이터 수 확인 가능한가요?",
+    "table": "review_shopee",
+    "category": "date_range",
+    "status": "OK",
+    "time": 29.1,
+    "answer_len": 378,
+    "answer_preview": "안녕하세요! 😊  요청하신 **쇼피 전체 2025년 리뷰 데이터 수**를 현재 조회하지 못했습니다.  좀 더 정확한 데이터를 찾아드리기 위해, 조건을 구체적으로 지정해 주시면 도움이 됩니다.  ---  **💡 아래와 같이 질문을 구체화해 보시면 좋습니다:**  1. **\"2025년 1월~3월 쇼피 태국 채널의 전체 리뷰 수가 몇 건인가요?\"** 2. **\""
+  },
+  {
+    "id": "V2_RS-080",
+    "query": "정확한 Shopee Centella Soothing Cream 리뷰 수 변화 얼마임?",
+    "table": "review_shopee",
+    "category": "product_review",
+    "status": "OK",
+    "time": 53.5,
+    "answer_len": 500,
+    "answer_preview": "해당 조건에 맞는 데이터가 존재하지 않습니다.  SQL에서 사용된 `product_name` 필터 조건(`product_name LIKE '%Centella%Soothing_Cream%'`)에 문제가 있을 가능성이 높습니다. 일반적으로 제품명에 공백이 사용되므로, `Soothing_Cream` 대신 `Soothing Cream` (공백)으로 검색해야 정확한"
+  },
+  {
+    "id": "V2_RS-081",
+    "query": "shopee 리부 원문과 번역문 대조 궁금해",
+    "table": "review_shopee",
+    "category": "review_content",
+    "status": "OK",
+    "time": 44.5,
+    "answer_len": 309,
+    "answer_preview": "입력하신 '리부'가 정확히 어떤 의미인지 확인이 어렵습니다.  혹시 **Shopee 리뷰(Review)**의 원문과 번역문 대조를 말씀하시는 것일까요?  현재 제가 보유한 정보에는 **특정 리뷰의 원문과 번역문을 대조한 데이터가 없습니다.** 정확한 답변을 드리기 위해 아래 내용을 알려주시면 감사하겠습니다:  1. **어떤 상품**의 리뷰인지 (예: 마다가"
+  },
+  {
+    "id": "V2_RS-082",
+    "query": "간단하게 Shopee 제품별 리뷰 비율 차트 부탁드려요",
+    "table": "review_shopee",
+    "category": "review_count",
+    "status": "OK",
+    "time": 42.8,
+    "answer_len": 1200,
+    "answer_preview": "### 📊 Shopee SKIN1004 제품별 리뷰 수 현황 (2025년 3월 8일 ~ 2026년 3월 7일)  #### 요약  사용자께서 요청하신 '리뷰 비율'은 현재 데이터에서 산출하기 어려워, 대신 지난 1년간(2025년 3월 8일 ~ 2026년 3월 7일) Shopee에서 SKIN1004 제품별 '리뷰 수'를 분석했습니다. 이 기간 동안 '톤브라이트"
+  },
+  {
+    "id": "V2_RS-083",
+    "query": "쇼피 리부 최근 2주간 데이터",
+    "table": "review_shopee",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 34.7,
+    "answer_len": 341,
+    "answer_preview": "해당 조건에 맞는 데이터가 없습니다.  SQL에서 사용된 필터 조건 중 `collect_date` (수집일) 조건이 문제입니다. 현재 쿼리는 2026년 2월 22일 이후의 데이터를 조회하도록 설정되어 있어, 아직 수집된 데이터가 없을 가능성이 높습니다. '최근 2주간 데이터'를 조회하시려면 `collect_date` 조건을 현재 날짜 기준으로 변경해야 합니"
+  },
+  {
+    "id": "V2_RS-084",
+    "query": "Shopee 평가 총 건수와 제품 수",
+    "table": "review_shopee",
+    "category": "total_count",
+    "status": "OK",
+    "time": 39.5,
+    "answer_len": 504,
+    "answer_preview": "### 📊 SKIN1004 Shopee 최근 1년간 평가 및 제품 현황  #### 요약  SKIN1004 브랜드의 Shopee 플랫폼 내 최근 1년간(2025년 03월 08일 ~ 2026년 03월 08일) 총 평가 건수는 **29,630건**이며, 이 평가들은 **43개**의 고유 제품에 대해 작성되었습니다.  #### 분석 및 인사이트  *   SKIN1"
+  },
+  {
+    "id": "V2_RS-085",
+    "query": "쇼피 2024년 하반기 리뷰데이터",
+    "table": "review_shopee",
+    "category": "date_range",
+    "status": "OK",
+    "time": 58.4,
+    "answer_len": 2036,
+    "answer_preview": "### 📊 SKIN1004 쇼피 2024년 하반기 리뷰 데이터 분석  #### 요약  사용자님께서 요청하신 쇼피 SKIN1004 브랜드의 2024년 하반기(2024년 7월 1일 ~ 12월 31일) 리뷰 데이터는 **총 1,000건**이 조회되었습니다. 조회된 데이터에는 **32개**의 고유 제품에 대한 리뷰가 포함되어 있으며, 총 **34개**의 고유한 리"
+  },
+  {
+    "id": "V2_RS-086",
+    "query": "빠르게 Shopee 리뷰 수 기준 제품 TOP표 어때?",
+    "table": "review_shopee",
+    "category": "top_reviewed",
+    "status": "OK",
+    "time": 30.2,
+    "answer_len": 1154,
+    "answer_preview": "### 📊 Shopee 리뷰 수 기준 SKIN1004 제품 TOP 10 분석 (최근 1년)  #### 요약  최근 1년간 Shopee에서 SKIN1004 제품 중 가장 많은 리뷰를 받은 제품은 **톤브라이트닝 클렌징 젤 폼**으로, 총 **1,023개**의 리뷰를 기록했습니다. 상위 10개 제품 모두 980개 이상의 높은 리뷰 수를 보이며 고른 인기를 입증"
+  },
+  {
+    "id": "V2_RS-087",
+    "query": "쇼피 최근 후기 내용 요약해줘",
+    "table": "review_shopee",
+    "category": "review_content",
+    "status": "OK",
+    "time": 37.4,
+    "answer_len": 1594,
+    "answer_preview": "### 📊 쇼피 SKIN1004 최근 후기 분석 보고서  #### 요약  2026년 2월 8일부터 9일까지의 쇼피 SKIN1004 제품 후기 **50건**을 분석한 결과, 전반적으로 **긍정적인 평가**가 주를 이루며, 특히 **프로모션 및 증정품**에 대한 만족도가 높았습니다. 많은 사용자가 제품을 처음 사용하거나 증정품으로 받아 기대감을 표현했으며, 일"
+  },
+  {
+    "id": "V2_RS-088",
+    "query": "Shopee 월별 평가 수 평균 알려주시면 감사하겠습니다",
+    "table": "review_shopee",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 46.8,
+    "answer_len": 513,
+    "answer_preview": "### 📊 Shopee 채널 월별 평균 평가 수 분석  #### 요약  지난 1년간(2025년 03월 08일 ~ 2026년 03월 07일) Shopee 채널의 월별 평균 평가 수는 **53.8개**입니다. 이 수치는 Shopee 채널에서 발생하는 월별 고객 피드백의 일반적인 수준을 보여줍니다.  #### 분석 및 인사이트  *   **기준점 확보**: 월별"
+  },
+  {
+    "id": "V2_RS-089",
+    "query": "참고로 쇼피 리뷰 제품명 목록 부탁드려요",
+    "table": "review_shopee",
+    "category": "review_count",
+    "status": "OK",
+    "time": 42.8,
+    "answer_len": 1101,
+    "answer_preview": "### 📊 쇼피 리뷰 제품명 목록 (SKIN1004, 2025년 3월 8일 이후 수집 기준)  #### 요약  2025년 3월 8일 이후 쇼피에서 수집된 SKIN1004 브랜드의 리뷰 제품은 총 **43개**입니다. 주로 '센텔라' 라인과 '부스팅 샷' 라인 제품들이 다수 포함되어 있으며, 다양한 스킨케어 제품군이 고루 분포되어 있습니다.  #### 상세 "
+  },
+  {
+    "id": "V2_RS-090",
+    "query": "Shopee 2025년 1월 리뷰데이터 내용 보여줘",
+    "table": "review_shopee",
+    "category": "review_content",
+    "status": "OK",
+    "time": 56.3,
+    "answer_len": 5243,
+    "answer_preview": "### 📊 Shopee 2025년 1월 SKIN1004 제품 리뷰 데이터 분석  #### 요약  2025년 1월 한 달간 Shopee에서 SKIN1004 브랜드 제품에 대한 총 **728건**의 리뷰가 수집되었습니다. 이 리뷰들은 **32개**의 고유 제품에 대해 작성되었으며, 1월 전체 기간(31일)에 걸쳐 활발하게 발생했습니다. 리뷰 내용은 제품 효과,"
+  },
+  {
+    "id": "V2_RS-091",
+    "query": "쇼피에서 Centella 제품 후기 전체",
+    "table": "review_shopee",
+    "category": "product_review",
+    "status": "OK",
+    "time": 34.3,
+    "answer_len": 359,
+    "answer_preview": "해당 조건의 데이터가 없습니다.  SQL에서 `collect_date >= '2025-03-08'` 조건이 문제의 원인입니다. `collect_date`는 데이터가 수집된 날짜를 의미하며, 쿼리에 설정된 '2025-03-08'은 미래 날짜입니다. 따라서 해당 날짜 이후에 수집된 데이터는 현재 존재하지 않습니다.  비슷한 데이터를 조회할 수 있는 대안 질문은"
+  },
+  {
+    "id": "V2_RS-092",
+    "query": "궁금한데 Shopee 리뷰 최신 데이터 날짜가 언제야?",
+    "table": "review_shopee",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 36.6,
+    "answer_len": 395,
+    "answer_preview": "### 📊 Shopee 리뷰 최신 데이터 날짜  #### 요약  Shopee 리뷰 데이터의 최신 수집일은 **2026년 02월 10일**입니다. 이는 오늘 날짜(2026년 03월 08일) 기준으로 약 한 달 전 데이터입니다.  #### 분석 및 인사이트  *   현재 Shopee 리뷰 데이터는 2026년 02월 10일 이후로 업데이트되지 않았습니다. *  "
+  },
+  {
+    "id": "V2_RS-093",
+    "query": "쇼피 2024년 9월 리뷰 건수 알려주세요",
+    "table": "review_shopee",
+    "category": "date_range",
+    "status": "OK",
+    "time": 33.3,
+    "answer_len": 306,
+    "answer_preview": "안녕하세요! 요청하신 **쇼피 2024년 9월 리뷰 건수** 데이터를 조회하지 못했습니다.  좀 더 구체적인 조건을 추가해 주시면 정확한 데이터를 찾는 데 도움이 됩니다. 아래 예시를 참고해 주세요:  **질문 예시:** 1. \"쇼피 **태국** 2024년 9월 리뷰 건수 알려주세요\" 2. \"쇼피 2024년 9월 **마다가스카르 센텔라 토너** 리뷰 건수 "
+  },
+  {
+    "id": "V2_RS-094",
+    "query": "간단하게 Shopee 리뷰 주간 트렌드 어떻게 되나요?",
+    "table": "review_shopee",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 52.9,
+    "answer_len": 2925,
+    "answer_preview": "### 📈 Shopee 리뷰 주간 트렌드 분석  #### 요약  2026년 3월 현재 Shopee 리뷰 주간 트렌드는 동남아시아 전자상거래 시장의 전반적인 성장과 함께 **리뷰의 중요성이 더욱 증대**되고 있습니다. AI 기반 개인화 및 검색 기능이 강화되면서 리뷰가 사용자에게 노출되는 방식이 고도화되고 있으며, 특히 **소셜 커머스와 비디오 리뷰의 영향력"
+  },
+  {
+    "id": "V2_RS-095",
+    "query": "궁금한데 쇼피 SKIN1004 리뷰만 보여줘",
+    "table": "review_shopee",
+    "category": "brand_review",
+    "status": "OK",
+    "time": 50.7,
+    "answer_len": 4586,
+    "answer_preview": "### 📊 쇼피 SKIN1004 브랜드 리뷰 분석  #### 요약  최근 쇼피에서 수집된 SKIN1004 브랜드 리뷰 **1,000건**을 분석한 결과, 총 **39개**의 제품에 대한 리뷰가 확인되었습니다. 이 리뷰들은 주로 **2026년 2월 7일부터 2월 9일** 사이에 작성된 것으로, 대부분의 리뷰에서 제품 품질, 포장, 배송 속도에 대한 긍정적인 "
+  },
+  {
+    "id": "V2_RS-096",
+    "query": "Shopee 최근 평가 7건 한국어로 빨리",
+    "table": "review_shopee",
+    "category": "recent_n",
+    "status": "OK",
+    "time": 42.2,
+    "answer_len": 785,
+    "answer_preview": "# Shopee 최근 평가 요약 (7건)  | # | 시기 | 주제 | 내용 | |---|------|------|------| | 1 | **2026년 1월** | 초보 판매자의 실수 | 입점 첫 1주일간 **상품 정보 누락, 배송 옵션 설정 실수, 프로모션·쿠폰 활용 미숙** 등을 흔한 어려움으로 꼽음 | | 2 | **2025년 2월** | 장기 판매"
+  },
+  {
+    "id": "V2_RS-097",
+    "query": "쇼피 Tone Brightening Capsule Serum 리뷰 원문 알려주시면 감사하겠습니다",
+    "table": "review_shopee",
+    "category": "review_content",
+    "status": "OK",
+    "time": 54.7,
+    "answer_len": 600,
+    "answer_preview": "해당 조건에 맞는 데이터가 존재하지 않습니다.  SQL 쿼리의 필터 조건 중 다음 두 가지가 문제의 원인으로 보입니다:  *   **날짜 조건:** `collect_date >= '2025-03-08'`은 미래 날짜이므로, 해당 날짜 이후에 수집된 리뷰는 현재 조회할 수 없습니다. 과거 날짜로 조건을 변경해야 합니다. *   **제품명 조건:** 사용자님께"
+  },
+  {
+    "id": "V2_RS-098",
+    "query": "요즘 Shopee 리뷰 상품별 최신 날짜 알려주세요",
+    "table": "review_shopee",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 52.9,
+    "answer_len": 1814,
+    "answer_preview": "### 📊 Shopee SKIN1004 상품별 최신 리뷰 날짜 분석  #### 요약  SKIN1004 브랜드의 Shopee 리뷰 데이터를 분석한 결과, **총 43개** 상품에 대한 최신 리뷰 날짜를 확인할 수 있었습니다. 가장 최근 리뷰가 작성된 상품들은 **2026년 2월 9일**에 리뷰가 업데이트되었으며, 이는 레티놀 부스팅 샷 앰플, 센텔라 퀵 카밍"
+  },
+  {
+    "id": "V2_RS-099",
+    "query": "정확한 쇼피 후기 분기별 변동 확인 가능한가요?",
+    "table": "review_shopee",
+    "category": "monthly_trend",
+    "status": "WARN",
+    "time": 66.0,
+    "answer_len": 777,
+    "answer_preview": "### 📊 쇼피 SKIN1004 후기 분기별 변동 현황  #### 요약  최근 두 분기 동안 쇼피 SKIN1004 브랜드의 후기 수가 큰 폭으로 증가했습니다. 2025년 4분기에는 **2,003건**의 후기가 집계되었으며, 2026년 1분기에는 **27,627건**으로 **약 12.8배** 급증하며 매우 긍정적인 추세를 보였습니다.  #### 상세 데이터 "
+  },
+  {
+    "id": "V2_RS-100",
+    "query": "Shopee 전체 후기 중 비율 2025년?",
+    "table": "review_shopee",
+    "category": "date_range",
+    "status": "OK",
+    "time": 38.2,
+    "answer_len": 376,
+    "answer_preview": "2025년 Shopee의 **전체 후기 비율에 대한 구체적인 통계는 공개되지 않습니다.** 이러한 데이터는 일반적으로 Shopee 내부 자료로 분류되어 외부에 제공되지 않습니다.  현재 확인 가능한 관련 정보는 다음과 같습니다:  - **샵 평점 시스템:** 모든 구매자가 매긴 평점의 평균값으로 계산되며, 판매자는 최소 **4.5점 이상** 유지가 권장됩니"
+  },
+  {
+    "id": "V2_RS-101",
+    "query": "쇼피 리뷰데이터 어떤 제품이 있어?",
+    "table": "review_shopee",
+    "category": "review_count",
+    "status": "OK",
+    "time": 54.2,
+    "answer_len": 1134,
+    "answer_preview": "### 📊 쇼피(Shopee) SKIN1004 브랜드 리뷰 데이터 내 제품 목록  #### 요약  SKIN1004 브랜드의 쇼피 리뷰 데이터에는 총 **43개**의 고유한 제품이 존재합니다. 이 제품들은 센텔라 라인을 중심으로 다양한 앰플, 크림, 선크림, 클렌징 제품 등 폭넓은 카테고리를 포함하고 있습니다.  #### 상세 데이터  쇼피 리뷰 데이터에서 "
+  },
+  {
+    "id": "V2_RS-102",
+    "query": "확인 좀 해줘 Shopee 리뷰 수집 현황 알려줘",
+    "table": "review_shopee",
+    "category": "total_count",
+    "status": "OK",
+    "time": 32.0,
+    "answer_len": 814,
+    "answer_preview": "### 📊 Shopee 리뷰 수집 현황 보고서  #### 요약  최근 Shopee 리뷰 수집 현황을 확인한 결과, **2026년 02월 10일**에 **27,627개**의 리뷰가 수집된 것으로 확인되었습니다. 이는 지난 1년간의 수집 기록 중 가장 많은 양이며, 현재 데이터는 총 3건의 수집 기록을 보여주고 있습니다.  #### 상세 데이터 | 수집일자 |"
+  },
+  {
+    "id": "V2_RS-103",
+    "query": "쇼피 최근 리뷰데이터 중 Centella Ampoule 관련 좀 알려줘",
+    "table": "review_shopee",
+    "category": "product_review",
+    "status": "OK",
+    "time": 37.9,
+    "answer_len": 614,
+    "answer_preview": "요청하신 조건에 해당하는 쇼피 리뷰 데이터가 없습니다.  SQL 쿼리에서 사용된 `product_name LIKE '%Centella%Ampoule%'` 필터 조건에 해당하는 데이터가 없는 것으로 보입니다. 'Centella Ampoule'이라는 정확한 명칭의 제품이 없거나, 제품명이 다르게 등록되어 있을 수 있습니다.  유사한 데이터를 찾기 위해 다음을 "
+  },
+  {
+    "id": "V2_RS-104",
+    "query": "확인 좀 해줘 Shopee 2025년 1월~2월 리뷰 좀 알려줘",
+    "table": "review_shopee",
+    "category": "date_range",
+    "status": "OK",
+    "time": 46.3,
+    "answer_len": 1634,
+    "answer_preview": "### 📊 Shopee 2025년 1월~2월 SKIN1004 리뷰 현황  #### 요약  ⚠️ 2025년 1월~2월 Shopee 리뷰를 요청하셨으나, 현재 데이터는 **2025년 2월 24일부터 2월 28일까지의 리뷰**만 포함되어 있습니다. 해당 기간 동안 총 **1,000건**의 SKIN1004 제품 리뷰가 수집되었으며, 이 리뷰들은 **33개**의 고"
+  },
+  {
+    "id": "V2_RS-105",
+    "query": "쇼피 리뷰데이터 수 증가율",
+    "table": "review_shopee",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 46.9,
+    "answer_len": 984,
+    "answer_preview": "### 📊 쇼피 SKIN1004 브랜드 리뷰 데이터 현황 및 증가율  #### 요약  ⚠️ 지난 1년간의 쇼피 SKIN1004 브랜드 리뷰 데이터 중 2025년 12월과 2026년 2월 데이터만 확인됩니다. 2025년 12월에는 **2,003건**의 리뷰가 있었으며, 2026년 2월에는 **27,627건**으로 크게 증가했습니다. 이는 두 달 사이에 약 *"
+  },
+  {
+    "id": "V2_RS-106",
+    "query": "Shopee 제품 기준 최신 리뷰 내용 정리 확인 가능한가요?",
+    "table": "review_shopee",
+    "category": "review_content",
+    "status": "OK",
+    "time": 49.0,
+    "answer_len": 85389,
+    "answer_preview": "### 📊 SKIN1004 Shopee 최신 제품 리뷰 분석 보고서  #### 요약  2026년 2월 8일과 9일에 작성된 SKIN1004 브랜드의 Shopee 최신 리뷰 **50건**을 분석한 결과입니다. 대부분의 리뷰는 제품에 대한 기대감, 무료 증정품 및 할인 혜택에 대한 감사, 그리고 제품의 품질 및 효과에 대한 긍정적인 평가를 담고 있습니다. 특히"
+  },
+  {
+    "id": "V2_RS-107",
+    "query": "쇼피 리뷰 데이터에서 브랜드 종류 어떻게 되나요?",
+    "table": "review_shopee",
+    "category": "brand_review",
+    "status": "OK",
+    "time": 28.3,
+    "answer_len": 471,
+    "answer_preview": "### 📊 쇼피 리뷰 데이터 브랜드 현황  #### 요약  쇼피 리뷰 데이터 분석 결과, 현재 데이터에 포함된 브랜드는 **SKIN1004** 단 한 종류입니다. 이는 현재 조회된 쇼피 리뷰 데이터가 **SKIN1004** 브랜드에 집중되어 있음을 시사합니다.  #### 상세 데이터  (단일 브랜드 정보이므로 상세 데이터 섹션은 생략합니다.)  #### 분"
+  },
+  {
+    "id": "V2_RS-108",
+    "query": "Shopee 최근 평가 40건 보여줄래",
+    "table": "review_shopee",
+    "category": "recent_n",
+    "status": "OK",
+    "time": 50.0,
+    "answer_len": 922,
+    "answer_preview": "# Shopee(쇼피) 최근 평가 종합  개별 사용자 평가 40건을 한 건씩 나열한 단일 출처는 현재 확인되지 않습니다. 다만, 최근 검색 정보를 기반으로 쇼피에 대한 평가 동향을 아래와 같이 정리해 드립니다.  ---  ## 1. 판매자 만족도 | 항목 | 평가 내용 | |------|-----------| | **광고 서비스** | 긍정적 평가 — 효과"
+  },
+  {
+    "id": "V2_RS-109",
+    "query": "쇼피 Madagascar Centella Ampoule 월별 리뷰 수 알려주세요",
+    "table": "review_shopee",
+    "category": "product_review",
+    "status": "OK",
+    "time": 38.6,
+    "answer_len": 511,
+    "answer_preview": "안녕하세요! 요청하신 **쇼피 Madagascar Centella Ampoule 월별 리뷰 수** 데이터를 현재 조회하지 못했습니다.  좀 더 정확한 결과를 위해 **조건을 구체적으로 지정**해 주시면 다시 조회해 드리겠습니다.  ---  **📌 다음과 같이 질문을 구체화해 보세요:**  1. **기간 지정** → *\"쇼피 Madagascar Centell"
+  },
+  {
+    "id": "V2_RS-110",
+    "query": "Shopee 리뷰 최다 제품 TOP 7 어떻게 되나요?",
+    "table": "review_shopee",
+    "category": "top_reviewed",
+    "status": "OK",
+    "time": 26.5,
+    "answer_len": 1189,
+    "answer_preview": "### 📊 Shopee 리뷰 최다 SKIN1004 제품 TOP 7 분석 (지난 1년간)  #### 요약  지난 1년간(2025년 3월 8일 ~ 2026년 3월 8일) Shopee에서 SKIN1004 제품 중 가장 많은 리뷰를 받은 제품은 **'톤브라이트닝 클렌징 젤 폼'**으로, 총 **1,023개**의 리뷰를 기록했습니다. 상위 7개 제품 모두 995개 "
+  },
+  {
+    "id": "V2_RS-111",
+    "query": "쇼피 2024년 평가 총 건수",
+    "table": "review_shopee",
+    "category": "date_range",
+    "status": "OK",
+    "time": 29.6,
+    "answer_len": 423,
+    "answer_preview": "### 📊 쇼피 2024년 평가 총 건수 분석  #### 요약  2024년 쇼피(Shopee) 채널에서 발생한 전체 평가(리뷰) 건수는 총 **9,402건**으로 집계되었습니다.  #### 분석 및 인사이트  *   2024년 한 해 동안 쇼피 채널에서 **9,402건**의 고객 평가가 발생하여 활발한 고객 참여도를 보여주고 있습니다. *   이러한 평가 "
+  },
+  {
+    "id": "V2_RS-112",
+    "query": "Shopee 후기 번역 데이터 최근 것 어떻게 되나요?",
+    "table": "review_shopee",
+    "category": "review_content",
+    "status": "OK",
+    "time": 25.5,
+    "answer_len": 4489,
+    "answer_preview": "### 📊 Shopee SKIN1004 제품 최근 후기 번역 데이터  #### 요약  사용자님의 요청에 따라 SKIN1004 브랜드의 Shopee 최신 후기 번역 데이터를 분석한 결과, **2026년 2월 8일부터 2월 9일까지의 총 50건**의 후기가 확인되었습니다. 이 후기들은 다양한 SKIN1004 제품에 대한 고객들의 생생한 의견을 담고 있으며, 대"
+  },
+  {
+    "id": "V2_RS-113",
+    "query": "쇼핑 Centella Soothing Cream 후기 원문 보여주세요",
+    "table": "review_shopee",
+    "category": "review_content",
+    "status": "OK",
+    "time": 37.1,
+    "answer_len": 872,
+    "answer_preview": "# 센텔라 수딩 크림 주요 후기 원문  ## 👍 긍정적 후기  | 카테고리 | 후기 원문 | |---|---| | **진정·수분** | \"수딩 크림이라 가볍게 발라주기 좋은 크림이었어요! 아침마다 간단하게 이거 발라주는데 수분감도 적당하고 산뜻하게 마무리 돼서 저는 잘 쓰는 중이에요!\" | | **민감·여드름 피부** | \"민감하고 여드름이 나는 피부에 잘"
+  },
+  {
+    "id": "V2_RS-114",
+    "query": "Shopee 후기 수 상품별 내림차순",
+    "table": "review_shopee",
+    "category": "review_count",
+    "status": "OK",
+    "time": 38.3,
+    "answer_len": 443,
+    "answer_preview": "Shopee에서는 **상품을 후기(리뷰) 수 기준으로 내림차순 정렬하는 기능을 제공하지 않습니다.**  ## Shopee에서 사용 가능한 정렬 옵션  | 정렬 기준 | 설명 | |-----------|------| | **최신순** | 최근 등록된 상품 순 | | **인기순** | 판매량·조회수 등 기반 | | **최저가순** | 가격 낮은 순 | | **"
+  },
+  {
+    "id": "V2_RS-115",
+    "query": "쇼피 최근 리뷰 날짜 확인 확인 부탁드립니다",
+    "table": "review_shopee",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 34.2,
+    "answer_len": 979,
+    "answer_preview": "### 📊 쇼피 SKIN1004 최근 리뷰 날짜 확인 보고서  #### 요약  쇼피에서 확인된 SKIN1004 제품의 가장 최근 리뷰 날짜는 **2026년 02월 09일**입니다. 총 **50건**의 최신 리뷰가 확인되었으며, 이 리뷰들은 2026년 02월 10일에 수집되었습니다. ⚠️ 현재 데이터는 2026년 02월 09일까지만 포함되어 있으며, 오늘(2"
+  },
+  {
+    "id": "V2_RS-116",
+    "query": "Shopee 2024년 8월 리뷰 어때?",
+    "table": "review_shopee",
+    "category": "date_range",
+    "status": "OK",
+    "time": 41.3,
+    "answer_len": 1829,
+    "answer_preview": "### 📊 Shopee 2024년 8월 SKIN1004 제품 리뷰 분석  #### 요약  2024년 8월 Shopee에서 SKIN1004 제품에 대한 리뷰는 전반적으로 **매우 긍정적인** 반응을 보였습니다. 특히, 많은 사용자들이 제품의 **효과와 피부 적합성**에 대해 높은 만족도를 표현했으며, 재구매 의사를 밝히는 경우도 많았습니다. 배송 속도에 대한"
+  },
+  {
+    "id": "V2_RS-117",
+    "query": "쇼피 후기 총합 몇 건이야",
+    "table": "review_shopee",
+    "category": "total_count",
+    "status": "OK",
+    "time": 24.3,
+    "answer_len": 615,
+    "answer_preview": "### 📊 쇼피 SKIN1004 브랜드 후기 총합 현황  #### 요약  지난 1년간(2025년 3월 8일 ~ 2026년 3월 8일) 쇼피(Shopee) 플랫폼에서 SKIN1004 브랜드에 대한 총 후기 건수는 **29,630건**으로 집계되었습니다. 이는 SKIN1004 제품에 대한 활발한 고객 참여와 높은 관심을 보여줍니다.  #### 상세 데이터  ("
+  },
+  {
+    "id": "V2_RS-118",
+    "query": "Shopee Centella Cleansing Oil 리뷰데이터 내용",
+    "table": "review_shopee",
+    "category": "review_content",
+    "status": "OK",
+    "time": 22.3,
+    "answer_len": 419,
+    "answer_preview": "해당 조건의 데이터가 존재하지 않습니다.  SQL 쿼리의 `product_name` 필터 조건(`'%Centella%Cleansing_Oil%'`)이 문제일 수 있습니다. 제품명에 'Cleansing_Oil' 대신 'Cleansing Oil' (공백)이 사용되었거나, 실제 제품명이 다를 가능성이 높습니다. 예를 들어, 'Madagascar Centella "
+  },
+  {
+    "id": "V2_RS-119",
+    "query": "쇼피 후기 제품 수 몇 개야? 정리해줘",
+    "table": "review_shopee",
+    "category": "review_count",
+    "status": "OK",
+    "time": 37.4,
+    "answer_len": 1478,
+    "answer_preview": "### 📊 쇼피(Shopee) SKIN1004 제품별 후기 현황 (지난 1년간)  #### 요약  지난 1년간(2025년 03월 08일 ~ 2026년 03월 08일) 쇼피(Shopee)에서 **SKIN1004 브랜드 제품 총 43개**에 대한 후기가 수집되었습니다. 이 중 '톤브라이트닝 클렌징 젤 폼'이 **1,023개**의 후기로 가장 많은 관심을 받았으"
+  },
+  {
+    "id": "V2_RS-120",
+    "query": "Shopee 월간 평가 추이 분석",
+    "table": "review_shopee",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 52.1,
+    "answer_len": 6684,
+    "answer_preview": "### 📊 Shopee 월간 평가 추이 분석  #### 요약  ⚠️ 2026년 3월 데이터는 3월 8일 기준의 부분 데이터이므로, 해당 월의 전체 실적을 나타내지 않습니다. Shopee 채널은 2020년 6월부터 2025년까지 매출, 판매 수량, 주문 건수 모두 꾸준히 성장하는 추세를 보였습니다. 특히 **2024년에는 전년 대비 약 247.6% 성장하며 "
+  },
+  {
+    "id": "V2_RS-121",
+    "query": "잠깐, 쇼피 리부에서 가장 오래된 평가는? 정리해줘",
+    "table": "review_shopee",
+    "category": "date_range",
+    "status": "OK",
+    "time": 29.8,
+    "answer_len": 948,
+    "answer_preview": "### 📊 쇼피(Shopee)에서 가장 오래된 평가 조회 결과  #### 요약  쇼피에서 가장 오래된 평가를 조회한 결과, **'프로바이오시카 노리싱 마스크'** 제품에 대한 평가가 확인되었습니다. 해당 평가는 **작성일이 누락**되어 있어 정확한 작성 시점은 알 수 없으나, 시스템상 가장 오래된(혹은 날짜 정보가 없는) 평가로 분류되었습니다.  #### "
+  },
+  {
+    "id": "V2_RS-122",
+    "query": "Shopee 리뷰데이터 최근 60건 데이터",
+    "table": "review_shopee",
+    "category": "recent_n",
+    "status": "OK",
+    "time": 52.4,
+    "answer_len": 3026,
+    "answer_preview": "### 📊 Shopee SKIN1004 브랜드 최근 60건 리뷰 데이터  #### 요약  SKIN1004 브랜드의 Shopee 리뷰 데이터 중 **가장 최근 60건**을 분석한 결과, 모든 리뷰는 **2026년 2월 8일과 2월 9일**에 집중적으로 작성되었습니다. 리뷰 내용은 주로 제품에 대한 기대감, 프로모션/증정품 수령에 대한 만족, 그리고 사용 후 "
+  },
+  {
+    "id": "V2_RS-123",
+    "query": "쇼피 Centella Ampoule 리뷰 건수 월별 알려주세요",
+    "table": "review_shopee",
+    "category": "product_review",
+    "status": "OK",
+    "time": 27.6,
+    "answer_len": 560,
+    "answer_preview": "요청하신 조건에 해당하는 데이터가 없습니다.  SQL 쿼리의 `review_date` 필터 조건(`review_date >= '2025-03-01'`)이 미래 날짜로 설정되어 있어 현재 시점에는 해당 날짜 이후의 리뷰 데이터가 존재하지 않습니다. 리뷰 데이터는 일반적으로 과거 또는 현재 시점의 데이터만 포함합니다.  최근 또는 과거의 데이터를 조회하시려면 "
+  },
+  {
+    "id": "V2_RS-124",
+    "query": "궁금한데 Shopee 리부 최근 3개월 변동 어때?",
+    "table": "review_shopee",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 29.9,
+    "answer_len": 488,
+    "answer_preview": "# 쇼피(Shopee) 모회사 씨 리미티드(Sea Limited) 최근 3개월 주가 변동  최근 3개월간 씨 리미티드(NYSE: **SE**) 주가는 **약 31.35% 하락**했습니다.  ## 주요 배경  | 항목 | 내용 | |------|------| | **4분기 매출** | 시장 예상 상회 | | **2025년 연간 순이익** | 전년 대비 **2"
+  },
+  {
+    "id": "V2_RS-125",
+    "query": "쇼피 리뷰 데이터 전체 현황 확인 부탁드립니다",
+    "table": "review_shopee",
+    "category": "total_count",
+    "status": "OK",
+    "time": 31.5,
+    "answer_len": 895,
+    "answer_preview": "### 📊 쇼피 SKIN1004 브랜드 리뷰 현황 (2025년 3월 8일 ~ 2026년 3월 8일)  #### 요약  지난 1년간(2025년 3월 8일 ~ 2026년 3월 8일) 쇼피에서 SKIN1004 브랜드는 총 **29,630개**의 리뷰를 받았으며, 43개의 고유 제품에 대한 리뷰가 수집되었습니다. 평균 감성 점수는 **0.689점**으로 전반적으로"
+  },
+  {
+    "id": "V2_RS-126",
+    "query": "잠깐, Shopee SKIN1004 브랜드 리뷰 수 추이",
+    "table": "review_shopee",
+    "category": "brand_review",
+    "status": "OK",
+    "time": 30.9,
+    "answer_len": 401,
+    "answer_preview": "안녕하세요! 요청하신 **Shopee SKIN1004 브랜드 리뷰 수 추이** 데이터를 조회하지 못했습니다.  좀 더 구체적인 조건을 추가해 주시면 정확한 데이터를 찾는 데 도움이 됩니다. 아래 예시를 참고해 주세요:  ---  **질문 예시**  1. **\"2024년 1월~6월 Shopee 태국에서 SKIN1004 마다가스카르 센텔라 토너의 월별 리뷰 수"
+  },
+  {
+    "id": "V2_RS-127",
+    "query": "쇼피 리뷰 중 최근 것부터 정렬해서 보여줘 부탁",
+    "table": "review_shopee",
+    "category": "recent_reviews",
+    "status": "WARN",
+    "time": 67.8,
+    "answer_len": 4778,
+    "answer_preview": "### 📊 SKIN1004 쇼피 최신 리뷰 분석  #### 요약  ⚠️ 2026년 03월 08일 현재, 가장 최근 쇼피 리뷰는 **2026년 02월 09일**까지 조회됩니다. SKIN1004 브랜드의 쇼피 최신 리뷰 **50건**을 분석한 결과, 대부분의 리뷰는 **2026년 02월 09일**에 작성되었으며, 일부는 **2026년 02월 08일**에 작성되"
+  },
+  {
+    "id": "V2_RS-128",
+    "query": "Shopee 2024년 7월 리뷰 데이터 알려주세요",
+    "table": "review_shopee",
+    "category": "date_range",
+    "status": "OK",
+    "time": 42.9,
+    "answer_len": 410,
+    "answer_preview": "안녕하세요! 요청하신 **Shopee 2024년 7월 리뷰 데이터**를 현재 조회하지 못했습니다.  좀 더 구체적인 조건을 추가해 주시면 정확한 데이터를 찾는 데 도움이 됩니다. 아래 예시를 참고하여 질문을 다시 해주시겠어요?  ---  **💡 질문 예시**  1. **\"Shopee 태국에서 2024년 7월 마다가스카르 센텔라 라인의 리뷰 평점 및 리뷰 수"
+  },
+  {
+    "id": "V2_RS-129",
+    "query": "쇼피 각 제품 리뷰 수 표로 보여줘",
+    "table": "review_shopee",
+    "category": "review_count",
+    "status": "OK",
+    "time": 37.2,
+    "answer_len": 1448,
+    "answer_preview": "### 📊 쇼피 SKIN1004 제품별 리뷰 현황 (2025년 3월 8일 이후)  #### 요약  지난 1년간(2025년 3월 8일 ~ 2026년 3월 8일) 쇼피에서 수집된 SKIN1004 제품 리뷰를 분석한 결과, **'톤브라이트닝 클렌징 젤 폼'**이 **1,023개**의 리뷰로 가장 많은 관심을 받았습니다. 상위 5개 제품 모두 1,000개 이상의 "
+  },
+  {
+    "id": "V2_RS-130",
+    "query": "Shopee 평가 원문 언어별 분포 알려주시면 감사하겠습니다",
+    "table": "review_shopee",
+    "category": "review_content",
+    "status": "OK",
+    "time": 57.9,
+    "answer_len": 768,
+    "answer_preview": "# Shopee 평가 원문 언어별 분포  Shopee 평가 원문의 언어별 분포에 대한 **공식적인 최신 통계는 공개되어 있지 않습니다.** 다만, 관련 연구 및 자료를 통해 확인된 내용은 다음과 같습니다.  ---  ## 주요 언어 구성  | 구분 | 언어 | 비고 | |------|------|------| | **영어** | 영어 | 학술 연구에서 주요"
+  },
+  {
+    "id": "V2_RS-131",
+    "query": "쇼피 최근 리뷰 요약 정리해줘",
+    "table": "review_shopee",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 34.4,
+    "answer_len": 1433,
+    "answer_preview": "### 📊 SKIN1004 쇼피 최근 리뷰 요약  #### 요약  본 보고서는 SKIN1004 브랜드의 쇼피(Shopee) 플랫폼에서 수집된 **가장 최근 50개 리뷰**를 요약 정리한 것입니다. 분석 대상 리뷰는 **2026년 2월 8일과 9일**에 작성된 것으로, 주로 제품에 대한 초기 기대감, 프로모션 혜택에 대한 감사, 그리고 일부 제품에 대한 긍정"
+  },
+  {
+    "id": "V2_RS-132",
+    "query": "Shopee Tone Brightening Capsule Serum 평가 있어?",
+    "table": "review_shopee",
+    "category": "product_review",
+    "status": "OK",
+    "time": 38.8,
+    "answer_len": 783,
+    "answer_preview": "# 스킨1004 톤 브라이트닝 캡슐 앰플 주요 평가  **제품명:** SKIN1004 마다가스카르 센텔라 톤 브라이트닝 캡슐 앰플  ---  ## 주요 성분  | 성분 | 함량/특징 | |------|-----------| | **마데화이트™ (MadeWhite™)** | 마다가스카르산 병풀 추출 미백 특허 성분 | | **나이아신아마이드** | 4% — "
+  },
+  {
+    "id": "V2_RS-133",
+    "query": "쇼피 리뷰데이터 2025년 3월 데이터 있어?",
+    "table": "review_shopee",
+    "category": "date_range",
+    "status": "OK",
+    "time": 22.5,
+    "answer_len": 507,
+    "answer_preview": "### 📊 2025년 3월 쇼피 SKIN1004 리뷰 현황  #### 요약  2025년 3월 SKIN1004 브랜드의 쇼피(Shopee) 리뷰 데이터는 총 **735건**이 존재합니다.  #### 분석 및 인사이트  *   **데이터 존재 여부 확인:** 2025년 3월 SKIN1004 브랜드의 쇼피 리뷰 데이터가 성공적으로 조회되었으며, 해당 기간 동안 "
+  },
+  {
+    "id": "V2_RS-134",
+    "query": "잠깐, Shopee 리뷰 수 TOP 제품 비율 알려주세요",
+    "table": "review_shopee",
+    "category": "top_reviewed",
+    "status": "OK",
+    "time": 31.9,
+    "answer_len": 639,
+    "answer_preview": "### 📊 Shopee 리뷰 수 TOP 제품 비율 분석  #### 요약  최근 1년간(2025년 3월 8일 ~ 2026년 3월 8일) Shopee에서 SKIN1004 제품 중 가장 많은 리뷰를 받은 제품은 **톤브라이트닝 클렌징 젤 폼**으로, 총 1,023개의 리뷰를 기록했습니다. 이는 해당 기간 동안의 전체 SKIN1004 제품 리뷰 수 29,630개 "
+  },
+  {
+    "id": "V2_RS-135",
+    "query": "요즘 쇼피 제품 후기 수 비교 차트",
+    "table": "review_shopee",
+    "category": "review_count",
+    "status": "OK",
+    "time": 43.6,
+    "answer_len": 1546,
+    "answer_preview": "### 📊 쇼피 SKIN1004 제품별 최근 1년간 후기 수 비교  #### 요약  최근 1년간(2025년 3월 8일 ~ 2026년 3월 8일) 쇼피에서 SKIN1004 제품 중 가장 많은 후기를 받은 제품은 **톤브라이트닝 클렌징 젤 폼**으로, 총 **1,023개**의 후기를 기록했습니다. 전체 43개 제품의 후기 수는 최소 700개대에서 최대 1,02"
+  },
+  {
+    "id": "V2_RS-136",
+    "query": "Shopee 최근 후기 12건 부탁드려요",
+    "table": "review_shopee",
+    "category": "recent_n",
+    "status": "OK",
+    "time": 42.5,
+    "answer_len": 1229,
+    "answer_preview": "# 쇼피(Shopee) 최신 후기 요약 (12건)  ## 🏪 판매자 후기 (6건)  | # | 주제 | 내용 | |---|------|------| | 1 | **초보 판매자의 어려움** | 상품 정보 누락, 재고 관리, 배송 설정 등 초기 단계에서 실수가 잦고, 프로모션 구조 파악에도 어려움 발생 | | 2 | **수수료 인상** | 2025년 5월 1일"
+  },
+  {
+    "id": "V2_RS-137",
+    "query": "쇼피 리뷰데이터 수집일과 리뷰 작성일 차이",
+    "table": "review_shopee",
+    "category": "date_range",
+    "status": "OK",
+    "time": 40.7,
+    "answer_len": 2404,
+    "answer_preview": "### 📊 쇼피 SKIN1004 리뷰 데이터 수집일과 작성일 차이 분석  #### 요약  SKIN1004 쇼피 리뷰 데이터의 수집일과 작성일 차이를 분석한 결과, 최근 수집된 **2026년 2월 10일** 데이터 20건(전체 50건 중 프리뷰)을 기준으로 볼 때, 리뷰 작성일과 수집일 간의 차이는 최소 **3일**에서 최대 **846일**까지 다양하게 나타"
+  },
+  {
+    "id": "V2_RS-138",
+    "query": "Shopee Madagascar Centella Ampoule 한국어 리뷰 알려주세요",
+    "table": "review_shopee",
+    "category": "review_content",
+    "status": "OK",
+    "time": 30.6,
+    "answer_len": 389,
+    "answer_preview": "해당 조건에 맞는 데이터가 존재하지 않습니다.  SQL에서 사용된 필터 조건 중 `review_date >= '2025-03-08'` 조건이 문제입니다. '2025-03-08'은 미래 날짜이므로, 해당 날짜 이후의 리뷰는 존재할 수 없습니다. 다른 조건(브랜드, 제품명, 한국어 리뷰 여부)은 요청하신 내용과 일치합니다.  비슷한 데이터를 조회할 수 있는 대"
+  },
+  {
+    "id": "V2_RS-139",
+    "query": "쇼피 리뷰데이터 주별 통계",
+    "table": "review_shopee",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 42.8,
+    "answer_len": 2671,
+    "answer_preview": "### 📊 SKIN1004 쇼피 주별 리뷰 통계 (2025년 3월 8일 ~ 2026년 2월 셋째 주)  #### 요약  2025년 3월 8일부터 2026년 2월 셋째 주(2026-06)까지 SKIN1004 브랜드의 쇼피 리뷰는 총 **8,454건**이 집계되었습니다. 현재 날짜(2026년 3월 8일) 기준, 최근 약 3주간의 데이터는 포함되어 있지 않습니다"
+  },
+  {
+    "id": "V2_RS-140",
+    "query": "Shopee 리뷰 데이터 날짜 범위 확인 가능한가요?",
+    "table": "review_shopee",
+    "category": "date_range",
+    "status": "OK",
+    "time": 33.6,
+    "answer_len": 590,
+    "answer_preview": "### 📊 Shopee 리뷰 데이터 날짜 범위 확인 결과  #### 요약  Shopee 리뷰 데이터는 **2021년 12월 15일**부터 **2026년 02월 09일**까지의 기간을 포함하고 있습니다. 이는 약 4년 2개월에 걸친 리뷰 데이터를 분석할 수 있음을 의미합니다.  #### 분석 및 인사이트  *   리뷰 데이터는 약 4년 2개월에 걸친 장기적인"
+  },
+  {
+    "id": "V2_RS-141",
+    "query": "쇼피 최다 평가 제품 체크해줘",
+    "table": "review_shopee",
+    "category": "top_reviewed",
+    "status": "OK",
+    "time": 34.7,
+    "answer_len": 1083,
+    "answer_preview": "### 📊 쇼피 최다 평가 제품 현황 (최근 1년)  #### 요약  최근 1년간 쇼피에서 가장 많은 평가를 받은 SKIN1004 제품은 **톤브라이트닝 클렌징 젤 폼**으로, 총 **1,023개**의 리뷰를 기록했습니다. 상위 10개 제품 모두 980개 이상의 높은 평가 수를 보이며 전반적으로 고른 인기를 얻고 있습니다.  #### 상세 데이터  | 제품"
+  },
+  {
+    "id": "V2_RS-142",
+    "query": "Shopee 후기 전체 목록",
+    "table": "review_shopee",
+    "category": "total_count",
+    "status": "OK",
+    "time": 48.6,
+    "answer_len": 992,
+    "answer_preview": "# 쇼피(Shopee) 후기 종합 정리  검색 결과를 기반으로 쇼피 후기를 **구매자**와 **판매자** 관점으로 정리해 드립니다.  ---  ## 1. 구매자 후기  ### ✅ 긍정적 평가 | 항목 | 내용 | |------|------| | **가격 경쟁력** | 폭넓은 상품군을 저렴한 가격에 구매 가능 | | **편리한 쇼핑** | 앱을 통한 간편한 "
+  },
+  {
+    "id": "V2_RS-143",
+    "query": "쇼피 Centella Ampoule 리뷰 최근 5건 어떻게 되나요?",
+    "table": "review_shopee",
+    "category": "recent_n",
+    "status": "OK",
+    "time": 30.4,
+    "answer_len": 399,
+    "answer_preview": "요청하신 조건에 해당하는 쇼피 Centella Ampoule 리뷰 데이터는 현재 조회되지 않습니다.  SQL 쿼리에서 'SKIN1004' 브랜드와 'Centella Ampoule' 제품명으로 필터링했지만, 해당 조건에 맞는 리뷰가 데이터베이스에 존재하지 않는 것으로 보입니다. 제품명이 정확히 일치하지 않거나, 해당 제품의 쇼피 리뷰 데이터가 아직 수집되지 "
+  },
+  {
+    "id": "V2_RS-144",
+    "query": "Shopee 2025년 월별 리뷰 건수 비교 부탁드려요",
+    "table": "review_shopee",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 41.8,
+    "answer_len": 1002,
+    "answer_preview": "### 📊 2025년 Shopee SKIN1004 월별 리뷰 건수 분석  #### 요약  2025년 Shopee 채널의 SKIN1004 브랜드 리뷰 총 건수는 **633건**입니다. 월별 리뷰 건수는 **9월에 152건**으로 가장 높았으며, **6월에 7건**으로 가장 낮았습니다. 하반기(9월, 11월)에 리뷰 수가 크게 증가하는 경향을 보였습니다.  #"
+  },
+  {
+    "id": "V2_RS-145",
+    "query": "빠르게 쇼피 리뷰에서 Soothing Cream 검색 알려주세요",
+    "table": "review_shopee",
+    "category": "product_review",
+    "status": "OK",
+    "time": 32.0,
+    "answer_len": 672,
+    "answer_preview": "해당 조건의 데이터가 없습니다.  **문제 조건 설명:**  *   **날짜 조건 (`review_date >= '2025-03-08'`):** 가장 큰 문제입니다. 2025년 3월 8일 이후의 리뷰는 존재하지 않습니다. 현재 날짜 이전으로 조건을 변경하거나, 특정 기간을 지정해야 합니다. *   **제품명 조건 (`product_name LIKE '%So"
+  },
+  {
+    "id": "V2_RS-146",
+    "query": "Shopee 리뷰 최근 한 달 건수 알려주세요",
+    "table": "review_shopee",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 34.9,
+    "answer_len": 451,
+    "answer_preview": "안녕하세요. 요청하신 **Shopee 리뷰 최근 한 달 건수** 데이터를 현재 조회하지 못했습니다.  좀 더 정확한 결과를 위해 아래 항목을 구체적으로 지정해 주시면 다시 조회해 드리겠습니다.  - **국가** (예: 태국, 베트남, 필리핀, 말레이시아 등) - **특정 제품명** (예: 마다가스카르 센텔라 톤크림 등) - **정확한 기간** (예: 202"
+  },
+  {
+    "id": "V2_RS-147",
+    "query": "쇼피 리뷰데이터 번역 품질 확인",
+    "table": "review_shopee",
+    "category": "review_content",
+    "status": "OK",
+    "time": 48.4,
+    "answer_len": 2168,
+    "answer_preview": "### 📊 쇼피 SKIN1004 리뷰 데이터 번역 품질 분석  #### 요약  SKIN1004 브랜드의 쇼피 리뷰 데이터 번역 품질을 확인한 결과, 전반적으로 **매우 우수**하며 원문의 의미와 감성을 정확하게 전달하고 있습니다. 분석된 리뷰는 **2026년 2월 8일과 9일**에 작성된 최신 데이터입니다. 대부분의 번역은 자연스럽고 정확하며, 비공식적인 "
+  },
+  {
+    "id": "V2_RS-148",
+    "query": "Shopee 리뷰데이터 수 연도별 비교",
+    "table": "review_shopee",
+    "category": "date_range",
+    "status": "OK",
+    "time": 32.2,
+    "answer_len": 1086,
+    "answer_preview": "### 📊 Shopee 리뷰 데이터 연도별 비교 분석  #### 요약  Shopee 리뷰 데이터는 2021년부터 2024년까지 꾸준히 증가했으며, **2024년**에 **9,402**건으로 가장 많은 리뷰 수를 기록했습니다. 2025년에는 소폭 감소했으나 여전히 높은 수준을 유지했으며, 2026년 데이터는 현재 **3월 8일** 기준으로 **1,154**건"
+  },
+  {
+    "id": "V2_RS-149",
+    "query": "쇼피 제품별 리부데이터 트렌드",
+    "table": "review_shopee",
+    "status": "OK",
+    "time": 49.5,
+    "answer_len": 3756,
+    "answer_preview": "### 📈 쇼피 제품별 리뷰 데이터 트렌드 분석  #### 요약  SKIN1004의 쇼피 채널 매출 데이터와 외부 리뷰 트렌드를 종합 분석한 결과, **약 42.7억원**의 누적 매출을 기록한 `SK_Centella_Ampoule_100ml`, `SK_Centella_Ampoule_55ml`, `CL_Vitamin_C_Brightening_Gel_Cream"
+  },
+  {
+    "id": "V2_RS-150",
+    "query": "Shopee 전체 평가 수 현재 상태",
+    "table": "review_shopee",
+    "category": "total_count",
+    "status": "OK",
+    "time": 44.6,
+    "answer_len": 771,
+    "answer_preview": "# Shopee 전체 평가(리뷰) 수 현황  Shopee 플랫폼 전체의 **총 평가(리뷰) 수에 대한 공식적인 최신 집계는 공개되지 않고 있습니다.** 다만, 현재까지 파악된 주요 동향은 다음과 같습니다.  ---  ## 주요 현황  | 항목 | 내용 | |------|------| | **검색 노출 기준** | 리뷰 **50개 이상**인 제품이 검색 결과"
+  },
+  {
+    "id": "V2_RS-151",
+    "query": "쇼피 리뷰데이터 중 Cleansing Oil 관련",
+    "table": "review_shopee",
+    "category": "product_review",
+    "status": "OK",
+    "time": 34.2,
+    "answer_len": 706,
+    "answer_preview": "해당 조건에 맞는 데이터가 없습니다.  SQL 쿼리의 필터 조건 중 다음 두 가지를 확인해야 합니다.  *   **`collect_date >= '2025-03-08'`**: `collect_date`는 데이터가 수집된 날짜를 의미합니다. 2025년 3월 8일은 미래 날짜이므로, 해당 날짜 이후에 수집된 데이터는 존재하지 않습니다. 실제 데이터가 수집된 과"
+  },
+  {
+    "id": "V2_RS-152",
+    "query": "Shopee 최근 리뷰 30건 한국어 번역 알려주시면 감사하겠습니다",
+    "table": "review_shopee",
+    "category": "recent_n",
+    "status": "WARN",
+    "time": 63.8,
+    "answer_len": 2121,
+    "answer_preview": "### 📊 Shopee SKIN1004 최근 리뷰 30건 한국어 번역  #### 요약  SKIN1004 Shopee 스토어의 최근 30건 리뷰를 분석한 결과, **2026년 2월 8일과 9일**에 작성된 리뷰들이 대부분을 차지했습니다. 전반적으로 제품 품질, 포장, 빠른 배송에 대한 긍정적인 평가가 많았으며, 특히 사은품이나 무료 증정으로 제품을 받은 경우"
+  },
+  {
+    "id": "V2_RS-153",
+    "query": "쇼피 리뷰 데이터 수집 주기는 알려주세요",
+    "table": "review_shopee",
+    "category": "total_count",
+    "status": "OK",
+    "time": 38.2,
+    "answer_len": 691,
+    "answer_preview": "### 📊 쇼피 리뷰 데이터 수집 현황 분석  #### 요약  지난 1년간의 쇼피 리뷰 데이터 수집 기록을 분석한 결과, 정기적인 수집 주기는 확인되지 않았습니다. 데이터는 **2025년 12월 11일**, **2025년 12월 12일**, 그리고 **2026년 2월 10일**에 수집된 것으로 나타났으며, 이는 불규칙적인 패턴을 보입니다.  #### 상세 "
+  },
+  {
+    "id": "V2_RS-154",
+    "query": "Shopee 2024년 4분기 리뷰 수 알려주세요",
+    "table": "review_shopee",
+    "category": "date_range",
+    "status": "OK",
+    "time": 45.1,
+    "answer_len": 421,
+    "answer_preview": "### 📊 Shopee 2024년 4분기 리뷰 수 분석  #### 요약  2024년 4분기 Shopee 채널에서 발생한 총 리뷰 수는 **138개**입니다. 이는 해당 기간 동안 Shopee 플랫폼을 통해 접수된 고객 리뷰의 전체 합계입니다.  #### 분석 및 인사이트  *   2024년 4분기 Shopee 채널에서 **총 138개**의 고객 리뷰가 수집"
+  },
+  {
+    "id": "V2_RS-155",
+    "query": "쇼피 리뷰 제품명 중복 제거 목록 알려주시면 감사하겠습니다",
+    "table": "review_shopee",
+    "category": "review_count",
+    "status": "OK",
+    "time": 40.5,
+    "answer_len": 1578,
+    "answer_preview": "### 📊 쇼피 SKIN1004 브랜드 리뷰 제품명 중복 제거 목록  #### 요약  2026년 3월 8일 기준으로, 쇼피에서 SKIN1004 브랜드의 리뷰 제품명 중복을 제거한 결과 총 **43개**의 고유한 제품명이 확인되었습니다. 이 목록은 쇼피 플랫폼에서 SKIN1004 브랜드의 제품 라인업을 파악하는 데 활용될 수 있습니다.  #### 상세 데이터"
+  },
+  {
+    "id": "V2_RS-156",
+    "query": "Shopee 리뷰 매월 평균 건수 알 수 있을까요?",
+    "table": "review_shopee",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 38.3,
+    "answer_len": 647,
+    "answer_preview": "### 📊 Shopee 리뷰 매월 평균 건수 분석  #### 요약  2025년 3월부터 2026년 3월까지 (오늘 기준) 수집된 Shopee 리뷰 데이터를 분석한 결과, 매월 평균 **569.8건**의 리뷰가 발생하는 것으로 나타났습니다.  #### 분석 및 인사이트  *   **안정적인 리뷰 유입:** 지난 13개월간 Shopee 채널에서 매월 평균 약 "
+  },
+  {
+    "id": "V2_RS-157",
+    "query": "쇼피 최근 수집된 후기 보여줘",
+    "table": "review_shopee",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 52.0,
+    "answer_len": 2336,
+    "answer_preview": "### 📊 쇼피 최근 수집된 SKIN1004 후기 분석 (2026년 2월 8일 ~ 2월 9일)  #### 요약  2026년 3월 8일 기준으로 쇼피에서 최근 수집된 SKIN1004 브랜드 후기는 **총 50건**이며, 2026년 2월 8일과 2월 9일 양일간 작성된 후기들입니다. 많은 사용자들이 제품을 **무료 증정 또는 번들 구매**를 통해 경험하고 있으"
+  },
+  {
+    "id": "V2_RS-158",
+    "query": "Shopee Centella Ampoule 리뷰 원문 10건 확인 부탁드립니다",
+    "table": "review_shopee",
+    "category": "review_content",
+    "status": "WARN",
+    "time": 84.4,
+    "answer_len": 404,
+    "answer_preview": "해당 조건에 맞는 데이터가 존재하지 않습니다.  입력하신 'SKIN1004' 브랜드의 'Centella Ampoule' 제품에 대한 Shopee 리뷰 데이터가 현재 조회되지 않습니다. `brand` 또는 `product_name` 필터 조건이 문제일 수 있습니다. 데이터베이스에 'SKIN1004' 브랜드 또는 'Centella Ampoule' 제품이 등록되"
+  },
+  {
+    "id": "V2_RS-159",
+    "query": "정확한 쇼피 리뷰 수 1위 달은",
+    "table": "review_shopee",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 35.2,
+    "answer_len": 740,
+    "answer_preview": "### 📊 SKIN1004 쇼피 리뷰 수 1위 달 분석  #### 요약  SKIN1004 브랜드의 쇼피 리뷰 데이터 분석 결과, 지난 1년간 수집된 데이터를 기준으로 **2024년 8월**이 가장 많은 리뷰 수를 기록한 달로 확인되었습니다. 해당 월에는 총 **1,337개**의 리뷰가 작성되었습니다.  #### 분석 및 인사이트  *   **최고 리뷰 수 "
+  },
+  {
+    "id": "V2_RS-160",
+    "query": "Shopee 리뷰 2024년 전체 요약 몇이야?",
+    "table": "review_shopee",
+    "category": "date_range",
+    "status": "OK",
+    "time": 44.9,
+    "answer_len": 552,
+    "answer_preview": "### 📊 2024년 Shopee SKIN1004 브랜드 총 리뷰 수  #### 요약  2024년 한 해 동안 Shopee 채널에서 SKIN1004 브랜드에 대한 총 리뷰 수는 **9,402건**으로 집계되었습니다. 이는 고객들이 SKIN1004 제품에 대해 활발하게 의견을 공유했음을 보여줍니다.  #### 분석 및 인사이트  *   **활발한 고객 참여*"
+  },
+  {
+    "id": "V2_RS-161",
+    "query": "쇼피에서 SKIN1004 후기 제일 많은 제품",
+    "table": "review_shopee",
+    "category": "top_reviewed",
+    "status": "OK",
+    "time": 25.2,
+    "answer_len": 235,
+    "answer_preview": "고객님, 문의하신 \"쇼피에서 SKIN1004 제품 중 가장 후기가 많은 제품\"에 대한 정보는 현재 저희 CS 데이터베이스에서 찾을 수 없습니다.  저희 데이터베이스는 제품의 성분, 사용법, 품질 이슈, 특허 정보 등 주로 제품 자체에 대한 문의사항을 다루고 있으며, 특정 판매 플랫폼(쇼피)에서의 후기 수와 같은 판매 및 마케팅 관련 정보는 포함하고 있지 않"
+  },
+  {
+    "id": "V2_RS-162",
+    "query": "Shopee 후기 최신 데이터 확인해줘 빨리",
+    "table": "review_shopee",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 46.5,
+    "answer_len": 3020,
+    "answer_preview": "### 📊 Shopee SKIN1004 최신 후기 분석 보고서  #### 요약  ⚠️ 현재 조회된 Shopee 후기 데이터는 **2026년 02월 09일**까지의 내용입니다 (오늘: 2026년 03월 08일). 요청하신 SKIN1004 브랜드의 Shopee 최신 후기 **50건**을 확인했습니다. 가장 최근 후기는 **2026년 02월 09일**에 작성되었"
+  },
+  {
+    "id": "V2_RS-163",
+    "query": "요즘 쇼피 리뷰 collect_date 기준 최근 데이터",
+    "table": "review_shopee",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 57.6,
+    "answer_len": 2953,
+    "answer_preview": "### 📊 쇼피 SKIN1004 브랜드 최근 수집 리뷰 분석 (2026년 2월 10일 기준)  #### 요약  SKIN1004 브랜드의 쇼피 리뷰 중 **2026년 2월 10일**에 수집된 최신 데이터 **50건**을 분석한 결과, 배송 및 제품 품질과 관련된 부정적인 피드백이 다수 확인되었습니다. 특히 제품 내용물 부족, 오배송, 피부 트러블 유발 등 다"
+  },
+  {
+    "id": "V2_RS-164",
+    "query": "Shopee 제품별 리뷰데이터 건수와 비중",
+    "table": "review_shopee",
+    "category": "review_count",
+    "status": "OK",
+    "time": 38.9,
+    "answer_len": 1650,
+    "answer_preview": "### 📊 Shopee SKIN1004 제품별 최근 1년간 리뷰 현황  #### 요약  지난 1년간(2025년 3월 8일 ~ 2026년 3월 8일) Shopee에서 SKIN1004 브랜드 제품에 대해 총 **29,630건**의 리뷰가 수집되었습니다. 이 중 '톤브라이트닝 클렌징 젤 폼' 제품이 **1,023건**의 리뷰로 가장 많은 비중(3.45%)을 차지"
+  },
+  {
+    "id": "V2_RS-165",
+    "query": "쇼피 2025년 신규 리뷰데이터 수",
+    "table": "review_shopee",
+    "category": "date_range",
+    "status": "OK",
+    "time": 33.3,
+    "answer_len": 406,
+    "answer_preview": "### 📊 쇼피 2025년 신규 리뷰 데이터 현황  #### 요약  2025년 한 해 동안 쇼피(Shopee) 플랫폼에서 발생한 신규 리뷰 수는 총 **9,020**건으로 집계되었습니다.  #### 분석 및 인사이트  *   2025년 쇼피 플랫폼에서 총 9,020건의 신규 리뷰가 생성되어, 해당 기간 동안 사용자들의 활발한 피드백 활동이 있었음을 보여줍니"
+  },
+  {
+    "id": "V2_RS-166",
+    "query": "Shopee 리뷰 데이터 컬럼 정보 알려주세요",
+    "table": "review_shopee",
+    "category": "total_count",
+    "status": "OK",
+    "time": 46.1,
+    "answer_len": 1067,
+    "answer_preview": "### 📊 Shopee 리뷰 데이터 컬럼 정보  #### 요약  Shopee 리뷰 데이터는 `collect_date`, `channel`, `brand`, `review_date`, `product_name`, `review_original`, `review_ko`의 **총 7가지 컬럼**으로 구성되어 있습니다. 이 컬럼들은 리뷰 수집일, 채널, 브랜드, "
+  },
+  {
+    "id": "V2_RS-167",
+    "query": "잠깐, 쇼피 Madagascar Centella Ampoule 리뷰 추이 좀 봐줘 확인 부탁드립니다",
+    "table": "review_shopee",
+    "category": "product_review",
+    "status": "OK",
+    "time": 31.8,
+    "answer_len": 550,
+    "answer_preview": "# 데이터 조회 안내  안녕하세요! 요청하신 **쇼피(Shopee) Madagascar Centella Ampoule 리뷰 추이** 데이터를 현재 조회하지 못했습니다.  좀 더 정확한 데이터를 찾아드릴 수 있도록, 아래 항목을 구체적으로 알려주시면 감사하겠습니다:  - **국가** (예: 태국, 베트남, 말레이시아 등) - **기간** (예: 최근 3개월,"
+  },
+  {
+    "id": "V2_RS-168",
+    "query": "Shopee 최근 평가 8건",
+    "table": "review_shopee",
+    "category": "recent_n",
+    "status": "OK",
+    "time": 45.0,
+    "answer_len": 1012,
+    "answer_preview": "# 쇼피(Shopee) 최근 평가 요약 (8건)  ---  ## 🛒 소비자 및 사용자 평가 (4건)  | # | 시기 | 핵심 내용 | |---|------|-----------| | 1 | 2024년 11월 | **인도네시아 소비자 만족도 1위** — 지인에게 추천할 이커머스 플랫폼으로 가장 많이 선택됨 | | 2 | 2024년 12월 | **말레이시아 "
+  },
+  {
+    "id": "V2_RS-169",
+    "query": "쇼피 리뷰 작성일 기준 최신순 확인 부탁드립니다",
+    "table": "review_shopee",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 53.9,
+    "answer_len": 79061,
+    "answer_preview": "### 📊 쇼피 최신 리뷰 분석 보고서 (SKIN1004 브랜드)  #### 요약  ⚠️ 2026년 03월 08일 기준, 최신 리뷰는 **2026년 02월 09일**까지 확인됩니다. SKIN1004 브랜드의 쇼피 최신 리뷰 **50건**을 확인한 결과, 가장 최근인 **2026년 02월 09일**에 **20건**의 리뷰가 작성되었습니다. 이 중 '나이아신아"
+  },
+  {
+    "id": "V2_RS-170",
+    "query": "Shopee 리뷰 제품별 월별 교차 분석 좀 확인 부탁드립니다",
+    "table": "review_shopee",
+    "category": "monthly_trend",
+    "status": "WARN",
+    "time": 61.7,
+    "answer_len": 1451,
+    "answer_preview": "### 📊 Shopee SKIN1004 제품별 월별 리뷰 현황 분석  #### 요약  2025년 3월부터 2026년 2월까지 SKIN1004 브랜드의 Shopee 리뷰 데이터를 분석한 결과, 총 **436건**의 리뷰가 집계되었습니다. 이 기간 동안 총 **43개**의 고유 제품에 대한 리뷰가 확인되었으며, 가장 최근 월인 2026년 2월에는 **'포어마이"
+  },
+  {
+    "id": "V2_RS-171",
+    "query": "쇼피 2025년 2월 리뷰 내용 전부 알 수 있을까요?",
+    "table": "review_shopee",
+    "category": "date_range",
+    "status": "WARN",
+    "time": 65.9,
+    "answer_len": 1427,
+    "answer_preview": "### 📊 쇼피 2025년 2월 SKIN1004 제품 리뷰 현황  #### 요약  2025년 2월 쇼피에서 **총 766건**의 SKIN1004 제품 리뷰가 수집되었습니다. 이 기간 동안 **33개**의 고유한 제품에 대한 리뷰가 작성되었으며, 총 **28개**의 고유한 날짜에 걸쳐 리뷰가 등록되었습니다. 프리뷰 데이터에 따르면 '포어마이징 퀵 클레이 스틱"
+  },
+  {
+    "id": "V2_RS-172",
+    "query": "Shopee 평가 Centella 키워드 검색",
+    "table": "review_shopee",
+    "category": "product_review",
+    "status": "OK",
+    "time": 33.6,
+    "answer_len": 646,
+    "answer_preview": "# 쇼피(Shopee) '센텔라' 키워드 검색 제품 평가 요약  ## 긍정적 평가  | 항목 | 주요 내용 | |------|-----------| | **피부 진정 효과** | 붉은 기·자극 완화에 효과적, 여드름성·민감성 피부 사용자 만족도 높음 | | **수분 공급** | 가벼운 제형이지만 깊은 수분감 제공, 끈적임 없이 빠르게 흡수 | | **민감성"
+  },
+  {
+    "id": "V2_RS-173",
+    "query": "확인 좀 해줘 쇼피 리뷰 한국어 번역본만 보여줘 알려주시면 감사하겠습니다",
+    "table": "review_shopee",
+    "category": "review_content",
+    "status": "OK",
+    "time": 48.2,
+    "answer_len": 405,
+    "answer_preview": "### 📊 SKIN1004 쇼피 한국어 번역 리뷰 분석 보고서  #### 요약  ⚠️ 지난 1년간의 쇼피 리뷰를 요청하셨으나, 현재 조회된 데이터는 **2026년 2월 7일부터 2월 9일까지**의 리뷰만 포함되어 있습니다. 이 기간 동안 **총 1,000개**의 SKIN1004 제품 한국어 번역 리뷰가 확인되었으며, **39개**의 고유 제품에 대한 리뷰가"
+  },
+  {
+    "id": "V2_RS-174",
+    "query": "Shopee 제품별 최근 리뷰데이터 날짜",
+    "table": "review_shopee",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 50.8,
+    "answer_len": 2315,
+    "answer_preview": "### 📊 Shopee SKIN1004 제품별 최근 리뷰 날짜 분석  #### 요약  SKIN1004 브랜드의 Shopee 제품별 최근 리뷰 날짜를 분석한 결과, **2026년 2월 9일**이 가장 최근 리뷰가 작성된 날짜로 확인되었습니다. 이는 오늘(2026년 3월 8일) 기준으로 약 한 달 전 데이터이며, '레티놀 부스팅 샷 앰플', '센텔라 퀵 카밍 "
+  },
+  {
+    "id": "V2_RS-175",
+    "query": "쇼피 후기 수 월 평균은?",
+    "table": "review_shopee",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 39.0,
+    "answer_len": 672,
+    "answer_preview": "### 📊 쇼피 SKIN1004 후기 수 월 평균 분석  #### 요약  지난 12개월 (2025년 3월 8일 ~ 2026년 3월 8일) 동안 쇼피 채널에서 SKIN1004 브랜드의 월 평균 후기 수는 **53.6개**로 집계되었습니다. 이는 해당 기간 동안 매월 평균적으로 50개 이상의 후기가 꾸준히 발생했음을 의미합니다.  #### 분석 및 인사이트  "
+  },
+  {
+    "id": "V2_RS-176",
+    "query": "Shopee 전체 리뷰 건수 추이 차트은 어떤가요?",
+    "table": "review_shopee",
+    "category": "total_count",
+    "status": "OK",
+    "time": 45.8,
+    "answer_len": 951,
+    "answer_preview": "### 📊 Shopee 전체 리뷰 건수 추이  #### 요약  ⚠️ 2025년 3월 8일부터 2026년 3월 8일 현재까지의 Shopee 리뷰 데이터 중 **2025년 12월과 2026년 2월 데이터만 존재**합니다. 조회된 데이터에 따르면, 2025년 12월에는 **2,003건**의 리뷰가 있었으며, 2026년 2월에는 **27,627건**으로 크게 증가"
+  },
+  {
+    "id": "V2_RS-177",
+    "query": "shopee Soothing Cream 리뷰 최근 3건 빨리",
+    "table": "review_shopee",
+    "category": "recent_n",
+    "status": "OK",
+    "time": 34.6,
+    "answer_len": 469,
+    "answer_preview": "요청하신 조건에 해당하는 리뷰 데이터가 없습니다.  SQL에서 사용된 `product_name` 필터 조건(`product_name LIKE '%Soothing_Cream%'`)이 문제인 것으로 보입니다. SKIN1004 브랜드의 Shopee 채널에서 'Soothing Cream'이라는 이름을 포함하는 제품 리뷰는 현재 조회되지 않습니다. 혹시 '마다가스카"
+  },
+  {
+    "id": "V2_RS-178",
+    "query": "Shopee 2024년 6월 리뷰 데이터 있나요",
+    "table": "review_shopee",
+    "category": "date_range",
+    "status": "OK",
+    "time": 38.9,
+    "answer_len": 537,
+    "answer_preview": "### 📊 Shopee 2024년 6월 리뷰 데이터 현황  #### 요약  Shopee의 2024년 6월 리뷰 데이터는 총 **811건** 존재합니다. 요청하신 기간의 데이터는 모두 확인되었습니다.  #### 상세 데이터  (단일 수치이므로 상세 데이터 섹션은 생략합니다.)  #### 분석 및 인사이트  *   **데이터 가용성 확인**: 요청하신 2024"
+  },
+  {
+    "id": "V2_RS-179",
+    "query": "쇼피 리부 제품별 통계 요약 알려주세요",
+    "table": "review_shopee",
+    "category": "review_count",
+    "status": "OK",
+    "time": 39.0,
+    "answer_len": 1476,
+    "answer_preview": "### 📊 쇼피 SKIN1004 제품별 리뷰 통계 요약  #### 요약  지난 1년간(2025년 3월 8일 ~ 2026년 3월 8일) 쇼피에서 수집된 SKIN1004 제품 리뷰 통계에 따르면, 총 **43개** 제품이 분석되었습니다. 이 중 '톤브라이트닝 클렌징 젤 폼'이 **1,023건**으로 가장 많은 리뷰 수를 기록했으며, '히알루시카 워터핏 선 세럼"
+  },
+  {
+    "id": "V2_RS-180",
+    "query": "Shopee 리뷰 가장 최근 작성된 것 알려주시면 감사하겠습니다",
+    "table": "review_shopee",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 50.2,
+    "answer_len": 3284,
+    "answer_preview": "### 📊 Shopee SKIN1004 브랜드 최신 리뷰 분석  #### 요약  SKIN1004 브랜드의 Shopee 리뷰 중 가장 최근 작성된 리뷰는 **2026년 02월 09일**에 확인되었습니다. 총 **50건**의 최신 리뷰를 조회했으며, 주로 '나이아신아마이드 부스팅 샷 앰플', '포어마이징 벨벳 피니쉬 선 스크린', '포어마이징 퓨리파잉 마스크'"
+  },
+  {
+    "id": "V2_RS-181",
+    "query": "쇼피 Centella Ampoule 리부 번역 보여줘 좀 봐줘",
+    "table": "review_shopee",
+    "category": "review_content",
+    "status": "OK",
+    "time": 12.5,
+    "answer_len": 393,
+    "answer_preview": "해당 조건의 데이터가 없습니다.  `product_name` 필터 조건(`LIKE '%Centella%Ampoule%'`)이 너무 구체적이거나 데이터베이스에 저장된 제품명과 정확히 일치하지 않아 결과가 없는 것으로 보입니다. SKIN1004의 대표적인 센텔라 앰플 제품명은 '마다가스카르 센텔라 앰플'입니다.  비슷한 데이터를 조회할 수 있는 대안 질문을 드"
+  },
+  {
+    "id": "V2_RS-182",
+    "query": "Shopee 리뷰 데이터 연도별 건수 좀 알려줘",
+    "table": "review_shopee",
+    "category": "date_range",
+    "status": "OK",
+    "time": 30.6,
+    "answer_len": 1155,
+    "answer_preview": "### 📊 SKIN1004 Shopee 리뷰 연도별 현황  #### 요약  ⚠️ 2026년은 현재 3월 8일까지의 데이터만 포함되어 있습니다. SKIN1004 브랜드의 Shopee 리뷰 건수는 2021년부터 2024년까지 꾸준히 증가하여 2024년에 **9,402건**으로 최고치를 기록했습니다. 2025년에는 소폭 감소한 **9,020건**을 기록했으며, "
+  },
+  {
+    "id": "V2_RS-183",
+    "query": "잠깐, 쇼피 리뷰 TOP 5 제품 리스트 보여주세요",
+    "table": "review_shopee",
+    "category": "top_reviewed",
+    "status": "OK",
+    "time": 34.7,
+    "answer_len": 1072,
+    "answer_preview": "### 📊 쇼피(Shopee) SKIN1004 브랜드 리뷰 TOP 5 제품 리스트  #### 요약  오늘 날짜(2026년 03월 08일) 기준으로 쇼피에서 SKIN1004 브랜드 제품 중 가장 많은 리뷰를 받은 상위 5개 제품은 다음과 같습니다. **톤브라이트닝 클렌징 젤 폼**이 총 **1,023개**의 리뷰로 1위를 차지했으며, 이어서 **히알루시카 워"
+  },
+  {
+    "id": "V2_RS-184",
+    "query": "Shopee 최근 2개월 평가 건수",
+    "table": "review_shopee",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 43.6,
+    "answer_len": 423,
+    "answer_preview": "쇼피(Shopee) 플랫폼 전체의 최근 2개월간 총 평가 건수에 대한 **공식적인 공개 데이터는 존재하지 않습니다.**  ### 확인 가능한 방법  개별 판매자(셀러)는 쇼피 **셀러센터**를 통해 자신의 샵에 한정된 평가 데이터를 확인할 수 있습니다.  | 기능 | 확인 가능 내용 | |---|---| | **리뷰 매니지먼트** | 샵 전체 평점, 등급 "
+  },
+  {
+    "id": "V2_RS-185",
+    "query": "요즘 쇼피 리뷰 원문으로 된 것만 보여줄 수 있어?",
+    "table": "review_shopee",
+    "category": "review_content",
+    "status": "WARN",
+    "time": 65.4,
+    "answer_len": 3588,
+    "answer_preview": "### 📊 SKIN1004 쇼피 최신 리뷰 원문 분석  #### 요약  요청하신 SKIN1004 브랜드의 쇼피 최신 리뷰 원문 **50건** 중 상위 20건을 분석한 결과, **2026년 2월 8일과 9일**에 작성된 리뷰들이 대부분을 차지했습니다. 리뷰들은 주로 인도네시아어로 작성되었으며, 제품 만족도, 무료 증정품 및 빠른 배송에 대한 긍정적인 피드백이"
+  },
+  {
+    "id": "V2_RS-186",
+    "query": "Shopee 2024년 3분기 리뷰데이터 알 수 있을까요?",
+    "table": "review_shopee",
+    "category": "date_range",
+    "status": "OK",
+    "time": 36.0,
+    "answer_len": 440,
+    "answer_preview": "안녕하세요! 요청하신 **Shopee 2024년 3분기 리뷰 데이터**를 현재 조회하지 못했습니다.  좀 더 정확한 데이터를 찾기 위해 **조건을 구체적으로 지정**해 주시면 다시 조회해 보겠습니다. 아래 예시를 참고해 주세요.  ---  **💡 질문 예시**  1. **\"Shopee 태국에서 2024년 7월~9월 마다가스카르 센텔라 토닝 토너의 리뷰 건수"
+  },
+  {
+    "id": "V2_RS-187",
+    "query": "쇼피 평가 제품 카테고리별 분류 부탁드려요",
+    "table": "review_shopee",
+    "category": "review_count",
+    "status": "OK",
+    "time": 39.2,
+    "answer_len": 419,
+    "answer_preview": "안녕하세요, 요청하신 **쇼피 평가 제품 카테고리별 분류** 데이터를 조회하지 못했습니다.  좀 더 정확한 결과를 위해 **조건을 구체적으로 지정**해 주시면 다시 조회해 드리겠습니다. 아래 예시를 참고해 주세요.  ---  **💡 질문 예시**  1. **\"2024년 쇼피 태국에서 SKIN1004 제품의 카테고리별 리뷰 평점 분포를 알려줘\"** 2. **"
+  },
+  {
+    "id": "V2_RS-188",
+    "query": "Shopee 리뷰 최근 90건 확인 가능한가요?",
+    "table": "review_shopee",
+    "category": "recent_n",
+    "status": "OK",
+    "time": 28.5,
+    "answer_len": 556,
+    "answer_preview": "# 데이터 조회 안내  안녕하세요. 요청하신 **Shopee 리뷰 최근 90건** 데이터를 현재 조회하지 못했습니다.  좀 더 정확한 결과를 위해 **조건을 구체적으로 지정**해 주시면 다시 조회를 시도해 보겠습니다.  ---  ## 💡 이렇게 질문해 보시면 좋습니다  > 1. **\"Shopee 태국에서 마다가스카르 센텔라 토너의 최근 90일간 리뷰를 확인"
+  },
+  {
+    "id": "V2_RS-189",
+    "query": "간단하게 쇼피 리뷰 브랜드 필터링 후 건수",
+    "table": "review_shopee",
+    "category": "brand_review",
+    "status": "OK",
+    "time": 30.2,
+    "answer_len": 470,
+    "answer_preview": "### 📊 쇼피(Shopee) SKIN1004 브랜드 리뷰 현황  #### 요약  2025년 3월 8일부터 2026년 3월 8일까지 지난 1년간 쇼피 플랫폼에서 **SKIN1004 브랜드에 대한 총 리뷰 건수는 29,630건**으로 집계되었습니다.  #### 분석 및 인사이트  *   지난 1년간 쇼피에서 SKIN1004 브랜드에 대한 활발한 고객 리뷰 활"
+  },
+  {
+    "id": "V2_RS-190",
+    "query": "빠르게 Shopee Centella Cleansing Oil 월별 리뷰?",
+    "table": "review_shopee",
+    "category": "product_review",
+    "status": "OK",
+    "time": 38.3,
+    "answer_len": 610,
+    "answer_preview": "안녕하세요! 요청하신 **Shopee Centella Cleansing Oil 월별 리뷰** 데이터를 조회하지 못했습니다.  좀 더 정확한 결과를 위해 **조건을 구체적으로 지정**해 주시면 다시 조회해 드리겠습니다.  ---  **💡 아래와 같이 질문을 구체화해 보세요:**  1. **\"2024년 1월~6월 Shopee 태국 Centella Cleansi"
+  },
+  {
+    "id": "V2_RS-191",
+    "query": "쇼피 리뷰 review_date 기준 분석 궁금해",
+    "table": "review_shopee",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 37.5,
+    "answer_len": 1411,
+    "answer_preview": "### 📊 SKIN1004 쇼피 월별 리뷰 현황 분석  #### 요약  2025년 3월부터 2026년 2월까지 SKIN1004 브랜드의 쇼피 리뷰는 총 **8,542건**이 발생했습니다. 이 기간 동안 가장 많은 리뷰가 발생한 달은 2025년 11월로 **1,068건**을 기록했으며, 가장 적은 리뷰는 2026년 2월에 **336건**이었습니다. 전반적으로"
+  },
+  {
+    "id": "V2_RS-192",
+    "query": "Shopee 전체 데이터 행 수 말해줘",
+    "table": "review_shopee",
+    "category": "total_count",
+    "status": "OK",
+    "time": 40.6,
+    "answer_len": 513,
+    "answer_preview": "### 📊 Shopee 전체 데이터 행 수 분석  #### 요약  Shopee 채널의 전체 데이터 행 수는 **6,605,289건**입니다. 이 수치는 2019년 1월 1일부터 현재까지의 Shopee 관련 모든 매출 데이터를 집계한 결과입니다.  #### 분석 및 인사이트  *   **방대한 데이터 규모**: 660만 건 이상의 데이터는 Shopee 채널에"
+  },
+  {
+    "id": "V2_RS-193",
+    "query": "쇼피 최근 평가 중 긍정적인 것",
+    "table": "review_shopee",
+    "category": "review_content",
+    "status": "WARN",
+    "time": 67.1,
+    "answer_len": 457,
+    "answer_preview": "### 📊 쇼피 SKIN1004 최근 긍정 평가 분석  #### 요약  사용자 질문에 따라 쇼피에서 SKIN1004 브랜드의 최근 평가 50건(2026년 2월 8일~9일 작성)을 조회했습니다. 원본 SQL은 긍정 평가를 필터링하지 않아, 제공된 상위 20건의 프리뷰 데이터를 기반으로 수동 분석을 진행했습니다. 분석 결과, 프리뷰 내 **18건**의 긍정적인"
+  },
+  {
+    "id": "V2_RS-194",
+    "query": "Shopee 2024년 5월 리뷰 확인 부탁드립니다",
+    "table": "review_shopee",
+    "category": "date_range",
+    "status": "OK",
+    "time": 38.9,
+    "answer_len": 1726,
+    "answer_preview": "### 📊 Shopee 2024년 5월 SKIN1004 제품 리뷰 현황  #### 요약  2024년 5월 Shopee에서 **SKIN1004** 제품에 대한 총 **428**건의 리뷰가 확인되었습니다. 이 리뷰들은 **29**개의 고유 제품에 대한 피드백을 포함하고 있으며, 전반적으로 제품의 효과, 배송 및 포장에 대한 긍정적인 평가가 많았습니다.  ###"
+  },
+  {
+    "id": "V2_RS-195",
+    "query": "쇼피 평가 수 기준 상위 제품",
+    "table": "review_shopee",
+    "category": "top_reviewed",
+    "status": "OK",
+    "time": 42.8,
+    "answer_len": 380,
+    "answer_preview": "안녕하세요. 요청하신 **쇼피 평가 수 기준 상위 제품** 데이터를 조회하지 못했습니다.  좀 더 정확한 결과를 위해 **조건을 구체적으로 지정**해 주시면 다시 조회해 드리겠습니다. 아래 예시를 참고해 주세요.  ---  **질문 예시**  1. **\"2024년 쇼피 태국에서 평가(리뷰) 수가 가장 많은 상위 5개 제품은?\"** 2. **\"2025년 1분"
+  },
+  {
+    "id": "V2_RS-196",
+    "query": "빠르게 Shopee 리뷰데이터 수집 날짜 기준 통계",
+    "table": "review_shopee",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 54.4,
+    "answer_len": 954,
+    "answer_preview": "### 📊 Shopee SKIN1004 리뷰 데이터 월별 수집 현황  #### 요약  지난 1년간(2025년 3월 8일 ~ 2026년 3월 8일)의 Shopee SKIN1004 리뷰 데이터 수집 현황을 분석한 결과, **2026년 2월에 총 27,627건**의 리뷰가 수집되어 가장 높은 수치를 기록했습니다. 해당 기간 동안 2025년 12월(2,003건)과"
+  },
+  {
+    "id": "V2_RS-197",
+    "query": "쇼피 리뷰 제품별 최신 리뷰 요약 알려줄래?",
+    "table": "review_shopee",
+    "category": "review_content",
+    "status": "OK",
+    "time": 49.5,
+    "answer_len": 1929,
+    "answer_preview": "### 📊 SKIN1004 쇼피 제품별 최신 리뷰 요약  #### 요약  ⚠️ 현재 데이터는 **2026년 02월 09일**까지의 쇼피 리뷰를 포함하고 있습니다 (오늘: 2026년 03월 08일). SKIN1004 브랜드의 쇼피 최신 리뷰 50건을 분석한 결과, **2026년 02월 08일과 09일**에 작성된 리뷰들이 주를 이루고 있습니다. 주요 제품으로"
+  },
+  {
+    "id": "V2_RS-198",
+    "query": "Shopee 2024년 상반기 후기 건수",
+    "table": "review_shopee",
+    "category": "date_range",
+    "status": "OK",
+    "time": 33.0,
+    "answer_len": 397,
+    "answer_preview": "2024년 상반기 Shopee의 후기 건수에 대한 공식적인 발표는 확인되지 않았습니다.  Shopee의 모회사인 **Sea Limited**의 2024년 1~2분기 실적 보고서에서도 후기 건수 관련 데이터는 포함되어 있지 않으며, 총 주문량·GMV·매출 등 재무 및 운영 지표 중심으로 공개되고 있습니다.  참고로 확인 가능한 관련 수치는 다음과 같습니다: "
+  },
+  {
+    "id": "V2_RS-199",
+    "query": "혹시 쇼피 후기 데이터 전체 요약 통계",
+    "table": "review_shopee",
+    "category": "total_count",
+    "status": "OK",
+    "time": 28.0,
+    "answer_len": 736,
+    "answer_preview": "### 📊 쇼피 후기 데이터 요약 통계 (2025년 12월 11일 ~ 2026년 2월 10일)  #### 요약  ⚠️ 요청하신 기간(2025년 3월 8일 이후) 중 실제 쇼피 후기 데이터는 **2025년 12월 11일부터 2026년 2월 10일까지** 존재합니다. 이 기간 동안 총 **29,630개**의 후기가 수집되었으며, 이는 **43개**의 고유 제품"
+  },
+  {
+    "id": "V2_RS-200",
+    "query": "궁금한데 Shopee 최근 리뷰 전체 보여줘",
+    "table": "review_shopee",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 27.6,
+    "answer_len": 4856,
+    "answer_preview": "### 📊 Shopee SKIN1004 최근 리뷰 분석 (2026년 2월)  #### 요약  2026년 2월 8일과 9일에 작성된 SKIN1004 제품에 대한 Shopee 리뷰 **총 50건**을 분석한 결과입니다. 대부분의 리뷰는 제품에 대한 긍정적인 기대감, 무료 증정품에 대한 만족감, 그리고 배송 및 포장에 대한 긍정적인 피드백을 담고 있습니다. 특히"
+  },
+  {
+    "id": "V2_RS-201",
+    "query": "혹시 쇼피 리뷰데이터 중 Madagascar Centella Ampoule 비율",
+    "table": "review_shopee",
+    "category": "product_review",
+    "status": "OK",
+    "time": 34.4,
+    "answer_len": 664,
+    "answer_preview": "### 📊 쇼피 리뷰 데이터 내 마다가스카르 센텔라 앰플 언급 비율  #### 요약  2025년 3월 8일 이후 수집된 SKIN1004 브랜드의 쇼피 리뷰 데이터(최대 1,000건)를 분석한 결과, 'Madagascar Centella Ampoule' 제품이 언급된 리뷰의 비율은 **0.0%**로 나타났습니다.  #### 분석 및 인사이트  *   **제품"
+  },
+  {
+    "id": "V2_RS-202",
+    "query": "Shopee 리뷰 날짜별 건수 차트 알려주세요",
+    "table": "review_shopee",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 45.5,
+    "answer_len": 1674,
+    "answer_preview": "### 📊 SKIN1004 Shopee 리뷰 날짜별 건수 추이 분석 (2025년 3월 8일 ~ 2026년 2월 8일)  #### 요약  SKIN1004 브랜드의 Shopee 리뷰는 **2025년 3월 8일부터 2026년 2월 8일까지 총 339일간** 집계되었습니다. 이 기간 동안 일별 리뷰 건수는 프리뷰 데이터 기준 최소 6건에서 최대 44건으로 나타나며"
+  },
+  {
+    "id": "V2_RS-203",
+    "query": "요즘 쇼피 Centella Ampoule 관련 평가 전부 빨리?",
+    "table": "review_shopee",
+    "category": "product_review",
+    "status": "OK",
+    "time": 34.5,
+    "answer_len": 380,
+    "answer_preview": "해당 조건의 데이터가 없습니다.  SQL에서 사용된 필터 조건 중 `product_name LIKE '%Centella%Ampoule%'`이 문제일 가능성이 높습니다. 데이터베이스에 저장된 제품명은 일반적으로 더 구체적인 명칭을 사용합니다. 예를 들어, 'Madagascar Centella Ampoule'과 같이 'Madagascar' 접두사가 붙어있을 수"
+  },
+  {
+    "id": "V2_RS-204",
+    "query": "Shopee 최근 후기 200건 데이터",
+    "table": "review_shopee",
+    "category": "recent_n",
+    "status": "OK",
+    "time": 45.9,
+    "answer_len": 1104,
+    "answer_preview": "### 📊 Shopee SKIN1004 최근 후기 200건 분석 보고서  #### 요약  Shopee에서 수집된 SKIN1004 브랜드의 최근 후기 **200건**을 분석한 결과, **2026년 2월 6일부터 2월 9일까지** 단 **4일** 동안 작성된 후기들이었습니다. 이 후기들은 총 **18개**의 다양한 제품에 대해 작성되었으며, 제품 품질, 포장,"
+  },
+  {
+    "id": "V2_RS-205",
+    "query": "쇼피 리뷰 각 제품 점유율 부탁드려요",
+    "table": "review_shopee",
+    "category": "review_count",
+    "status": "OK",
+    "time": 38.3,
+    "answer_len": 1930,
+    "answer_preview": "### 📊 쇼피 SKIN1004 제품별 리뷰 점유율 분석 (최근 1년)  #### 요약  최근 1년간 쇼피에서 SKIN1004 제품 중 '포어마이징 벨벳 피니쉬 선 스크린'이 전체 리뷰의 **8.89%**를 차지하며 가장 높은 점유율을 보였습니다. 이어서 '레티놀 부스팅 샷 앰플'이 **6.80%**, '나이아신아마이드 부스팅 샷 앰플'이 **5.21%**"
+  },
+  {
+    "id": "V2_RS-206",
+    "query": "Shopee 2024년 2분기 리뷰 수 몇이야?",
+    "table": "review_shopee",
+    "category": "date_range",
+    "status": "OK",
+    "time": 26.2,
+    "answer_len": 439,
+    "answer_preview": "### 📊 Shopee 2024년 2분기 SKIN1004 리뷰 수  #### 요약  2024년 2분기(4월 1일 ~ 6월 30일) 동안 Shopee 플랫폼에서 SKIN1004 브랜드에 대한 총 리뷰 수는 **1,713개**입니다.  #### 분석 및 인사이트  *   2024년 2분기 동안 Shopee에서 SKIN1004 브랜드에 대한 고객들의 활발한 피드"
+  },
+  {
+    "id": "V2_RS-207",
+    "query": "쇼피 리뷰데이터 최근 순 정렬 보여줄래",
+    "table": "review_shopee",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 34.6,
+    "answer_len": 2761,
+    "answer_preview": "### 📊 SKIN1004 쇼피 최신 리뷰 데이터 (2026년 02월)  #### 요약  2026년 03월 08일 기준으로 조회된 SKIN1004 쇼피 리뷰 중 가장 최근 **50건**은 **2026년 02월 08일**과 **2026년 02월 09일**에 작성되었습니다. 이들 리뷰에서는 제품에 대한 기대감과 만족도가 높게 나타났으며, 특히 **무료 증정품*"
+  },
+  {
+    "id": "V2_RS-208",
+    "query": "Shopee Tone Brightening Serum 리뷰 건수 알려주세요",
+    "table": "review_shopee",
+    "category": "product_review",
+    "status": "OK",
+    "time": 49.5,
+    "answer_len": 518,
+    "answer_preview": "해당 조건으로 조회된 데이터가 없습니다.  SQL에서 사용된 `product_name` 필터 조건이 문제인 것으로 보입니다. 사용자님께서는 'Shopee Tone Brightening **Serum**'의 리뷰 건수를 요청하셨으나, SQL 쿼리에서는 `product_name LIKE '%Tone_Brightening%Ampoule%'`와 같이 '앰플(Amp"
+  },
+  {
+    "id": "V2_RS-209",
+    "query": "빠르게 쇼핑 리뷰 수 전년 대비 변화 알려주세요",
+    "table": "review_shopee",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 35.6,
+    "answer_len": 718,
+    "answer_preview": "### 📊 SKIN1004 쇼핑 리뷰 수 전년 대비 변화 (2026년 3월 8일 기준)  #### 요약  2026년 3월 8일 기준 SKIN1004의 쇼핑 리뷰 수는 전년 동기 대비 **30.9% 감소**했습니다. 2025년 동기 **1,671건**에서 2026년 동기 **1,154건**으로 **517건** 줄어들었습니다.  #### 상세 데이터 | 연도 "
+  },
+  {
+    "id": "V2_RS-210",
+    "query": "Shopee 평가 한국어 번역 최근 20건",
+    "table": "review_shopee",
+    "category": "review_content",
+    "status": "OK",
+    "time": 32.3,
+    "answer_len": 645,
+    "answer_preview": "# Shopee 최근 한국어 평가 요약  검색 결과를 바탕으로 안내드립니다.  ---  ## 현재 확인 가능한 정보  현재 검색된 결과에서는 **소비자가 작성한 개별 상품에 대한 최신 한국어 리뷰 20건을 특정하여 확인하기 어렵습니다.**  검색에서 확인된 Shopee 관련 한국어 평가는 대부분 아래 세 가지 유형입니다:  | 유형 | 주요 내용 | |--"
+  },
+  {
+    "id": "V2_RS-211",
+    "query": "쇼피 리뷰데이터 데이터 행 건수",
+    "table": "review_shopee",
+    "category": "total_count",
+    "status": "OK",
+    "time": 22.2,
+    "answer_len": 371,
+    "answer_preview": "### 📊 쇼피 리뷰 데이터 총 건수  #### 요약  현재 SKIN1004의 BigQuery 데이터베이스에 저장된 쇼피(Shopee) 리뷰 데이터는 총 **29,630건**입니다.  #### 분석 및 인사이트  *   이 수치는 현재까지 수집된 쇼피 리뷰 데이터의 전체 규모를 나타냅니다. *   `> 해당 데이터는 쇼피 플랫폼에서의 고객 반응 및 제품별 "
+  },
+  {
+    "id": "V2_RS-212",
+    "query": "Shopee 1월 2024년 리뷰 데이터 알려주세요",
+    "table": "review_shopee",
+    "category": "date_range",
+    "status": "OK",
+    "time": 27.8,
+    "answer_len": 465,
+    "answer_preview": "# 데이터 조회 안내  안녕하세요. 요청하신 **Shopee 2024년 1월 리뷰 데이터**를 현재 조회하지 못했습니다.  좀 더 구체적인 조건을 추가해 주시면 정확한 데이터를 찾는 데 도움이 됩니다. 아래 항목들을 함께 명시해 주세요:  - **국가** (예: 태국, 베트남, 필리핀 등) - **특정 제품명** (예: 마다가스카르 센텔라 앰플 등) - *"
+  },
+  {
+    "id": "V2_RS-213",
+    "query": "잠깐, 쇼피 리뷰 가장 많은 월은",
+    "table": "review_shopee",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 33.0,
+    "answer_len": 529,
+    "answer_preview": "### 📊 쇼피 월별 리뷰 현황: 2025년 11월 최다 기록  #### 요약  지난 1년간 쇼피에서 가장 많은 리뷰가 발생한 월은 **2025년 11월**로, 총 **1,068건**의 리뷰가 기록되었습니다.  #### 상세 데이터 | 리뷰 월 | 리뷰 수 | |:-------|--------:| | 2025-11 | 1,068 |  #### 분석 및 인사"
+  },
+  {
+    "id": "V2_RS-214",
+    "query": "Shopee 상품별 리뷰 수 차트 그려줘 알려주세요",
+    "table": "review_shopee",
+    "category": "review_count",
+    "status": "OK",
+    "time": 35.2,
+    "answer_len": 1510,
+    "answer_preview": "### 📊 SKIN1004 Shopee 상품별 리뷰 수 현황 (2025년 3월 8일 ~ 2026년 3월 8일)  #### 요약  지난 1년간(2025년 3월 8일 ~ 2026년 3월 8일) Shopee에서 **SKIN1004** 브랜드의 상품별 리뷰 수를 분석한 결과, **'톤브라이트닝 클렌징 젤 폼'**이 **1,023개**의 리뷰로 가장 많은 리뷰를 기"
+  },
+  {
+    "id": "V2_RS-215",
+    "query": "쇼피 최근 수집 리뷰 날짜 확인 부탁드립니다",
+    "table": "review_shopee",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 39.3,
+    "answer_len": 457,
+    "answer_preview": "### 📊 쇼피(Shopee) 리뷰 데이터 최종 수집일 확인  #### 요약  쇼피 리뷰 데이터의 최종 수집일은 **2026년 02월 10일**입니다. 이는 오늘 날짜(2026년 03월 08일) 기준으로 약 한 달 전 데이터이므로, 최신 리뷰 현황을 파악하기 위해서는 데이터 업데이트가 필요할 수 있습니다.  #### 분석 및 인사이트  *   현재 조회된 "
+  },
+  {
+    "id": "V2_RS-216",
+    "query": "Shopee Centella 관련 제품 리뷰 전체은 어떤가요?",
+    "table": "review_shopee",
+    "category": "product_review",
+    "status": "OK",
+    "time": 27.1,
+    "answer_len": 352,
+    "answer_preview": "제공된 조건으로는 조회되는 데이터가 없습니다.  SQL 쿼리에서 `collect_date >= '2025-03-08'` 조건이 문제로 보입니다. 데이터 수집일이 미래 날짜로 설정되어 있어 해당 조건에 맞는 리뷰 데이터가 존재하지 않습니다. 일반적으로 리뷰 데이터는 과거 또는 현재 시점까지 수집됩니다.  다음과 같이 질문하시면 비슷한 데이터를 조회할 수 있습"
+  },
+  {
+    "id": "V2_RS-217",
+    "query": "쇼피 리뷰데이터 월 단위 집계",
+    "table": "review_shopee",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 26.9,
+    "answer_len": 770,
+    "answer_preview": "### 📊 쇼피 리뷰데이터 월별 집계 현황  #### 요약  ⚠️ 2025년 3월 8일 이후의 쇼피 리뷰 데이터 중, 현재 **2025년 12월**과 **2026년 2월** 데이터만 집계되었습니다. 2026년 2월에는 총 **27,627건**의 리뷰가 집계되어, 2025년 12월의 2,003건 대비 약 1,279% 증가하며 큰 폭의 성장을 보였습니다.  #"
+  },
+  {
+    "id": "V2_RS-218",
+    "query": "Shopee 리뷰 원문 내용 최신 5건 알려주세요",
+    "table": "review_shopee",
+    "category": "review_content",
+    "status": "OK",
+    "time": 46.4,
+    "answer_len": 98519,
+    "answer_preview": "### 📊 SKIN1004 Shopee 최신 리뷰 5건 분석  #### 요약  ⚠️ 현재 조회 가능한 최신 리뷰는 **2026년 2월 9일**자입니다 (오늘: 2026년 03월 08일). 사용자님의 요청에 따라 SKIN1004 브랜드의 Shopee 최신 리뷰 **5건**을 분석했습니다. 이 리뷰들은 모두 **2026년 2월 9일**에 작성되었으며, 제품의 "
+  },
+  {
+    "id": "V2_RS-219",
+    "query": "궁금한데 쇼피 리뷰 2024년 4월 데이터",
+    "table": "review_shopee",
+    "category": "date_range",
+    "status": "OK",
+    "time": 53.9,
+    "answer_len": 7308,
+    "answer_preview": "### 📊 SKIN1004 쇼피 2024년 4월 리뷰 데이터 분석  #### 요약  2024년 4월 한 달간 SKIN1004 브랜드의 쇼피 리뷰는 총 **474건**이 수집되었습니다. 이 리뷰들은 **27가지**의 고유한 제품에 대해 작성되었으며, 4월 중 **30일**에 걸쳐 꾸준히 리뷰가 등록된 것으로 확인됩니다.  #### 상세 데이터  2024년 4"
+  },
+  {
+    "id": "V2_RS-220",
+    "query": "Shopee SKIN1004 평가 수 총합",
+    "table": "review_shopee",
+    "category": "brand_review",
+    "status": "OK",
+    "time": 13.7,
+    "answer_len": 94,
+    "answer_preview": "고객님, 문의하신 'Shopee SKIN1004 평가 수 총합'에 대한 정보는 현재 CS 데이터베이스에서 찾을 수 없습니다.  해당 정보는 CS 데이터베이스에 없습니다."
+  },
+  {
+    "id": "V2_RS-221",
+    "query": "쇼피 평가 가장 최근 수집된 제품",
+    "table": "review_shopee",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 27.5,
+    "answer_len": 519,
+    "answer_preview": "### 📊 SKIN1004 쇼피 제품 중 가장 최근 평가 수집 현황  #### 요약  SKIN1004 쇼피 제품 중 가장 최근 평가가 수집된 제품은 \"**센텔라 토닝 토너**\"이며, 해당 평가는 **2026년 02월 10일**에 수집되었습니다.  #### 분석 및 인사이트  *   **최신 평가 제품 확인**: SKIN1004 브랜드의 쇼피 제품 중 가장 "
+  },
+  {
+    "id": "V2_RS-222",
+    "query": "Shopee 리뷰데이터 제품명별 건수 정리",
+    "table": "review_shopee",
+    "category": "review_count",
+    "status": "OK",
+    "time": 29.5,
+    "answer_len": 1725,
+    "answer_preview": "### 📊 Shopee SKIN1004 제품별 리뷰 건수 분석  #### 요약  SKIN1004의 Shopee 리뷰 데이터를 분석한 결과, 총 43개 제품 중 '톤브라이트닝 클렌징 젤 폼'이 **1,023건**으로 가장 많은 리뷰를 기록했습니다. 상위 20개 제품 모두 800건 이상의 높은 리뷰 수를 보이며, 전반적으로 활발한 고객 참여가 이루어지고 있음을"
+  },
+  {
+    "id": "V2_RS-223",
+    "query": "쇼피 Centella Soothing Cream 최근 리뷰 내용 빨리",
+    "table": "review_shopee",
+    "category": "review_content",
+    "status": "OK",
+    "time": 28.7,
+    "answer_len": 430,
+    "answer_preview": "죄송합니다. 요청하신 **쇼피 Centella Soothing Cream 리뷰 데이터**를 현재 조회하지 못했습니다.  좀 더 정확한 결과를 위해 **조건을 구체적으로** 지정해 주시면 다시 조회해 드리겠습니다.  ---  **💡 이렇게 질문해 보시면 좋습니다:**  1. *\"쇼피 **태국** 채널에서 Centella Soothing Cream의 **최근 "
+  },
+  {
+    "id": "V2_RS-224",
+    "query": "Shopee 리뷰데이터 2024년 3월 건수",
+    "table": "review_shopee",
+    "category": "date_range",
+    "status": "OK",
+    "time": 23.4,
+    "answer_len": 590,
+    "answer_preview": "### 📊 2024년 3월 Shopee SKIN1004 리뷰 건수  #### 요약  2024년 3월 한 달간 Shopee 플랫폼에서 SKIN1004 브랜드에 대한 리뷰는 총 **396건**이 발생했습니다.  #### 분석 및 인사이트  *   **월별 리뷰 활동:** 2024년 3월 한 달 동안 Shopee에서 SKIN1004 제품에 대한 활발한 사용자 피"
+  },
+  {
+    "id": "V2_RS-225",
+    "query": "쇼피 리뷰 매월 제품 기준 크로스탭",
+    "table": "review_shopee",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 50.1,
+    "answer_len": 2083,
+    "answer_preview": "### 📊 쇼피(Shopee) SKIN1004 제품별 월간 리뷰 현황  #### 요약  본 보고서는 2025년 12월 및 2026년 2월 SKIN1004 브랜드 제품의 쇼피(Shopee) 리뷰 현황을 분석합니다. 오늘 날짜(2026년 3월 8일) 기준, 2026년 1월 데이터는 누락되었으며 3월 데이터는 아직 집계되지 않았습니다. 총 **86개**의 제품-"
+  },
+  {
+    "id": "V2_RS-226",
+    "query": "잠깐, Shopee 후기 전체 데이터 개수",
+    "table": "review_shopee",
+    "category": "total_count",
+    "status": "OK",
+    "time": 38.7,
+    "answer_len": 350,
+    "answer_preview": "### 📊 Shopee 후기 전체 데이터 개수  #### 요약  Shopee 플랫폼의 전체 후기 데이터는 총 **29,630개**입니다.  #### 분석 및 인사이트  *   Shopee 플랫폼에서 수집된 후기 데이터의 총량은 29,630개로, 이는 고객 피드백 분석을 위한 충분한 규모의 데이터셋을 형성합니다. *   `> 이 데이터는 제품 개선, 마케팅 "
+  },
+  {
+    "id": "V2_RS-227",
+    "query": "쇼피 리뷰에서 Cleansing 키워드 검색 정리해주세요",
+    "table": "review_shopee",
+    "category": "product_review",
+    "status": "OK",
+    "time": 39.4,
+    "answer_len": 1338,
+    "answer_preview": "### 📊 쇼피 SKIN1004 '클렌징' 키워드 리뷰 분석 (2026년 1월 15일 ~ 2월 3일)  #### 요약  2026년 1월 15일부터 2월 3일까지 수집된 SKIN1004 쇼피 리뷰 중 '클렌징' 키워드가 언급된 총 **50건**의 리뷰를 분석했습니다. 이 중 **'히알루시카 젠틀 클렌징 밀크'** 제품에 대한 긍정적인 평가가 압도적으로 많았으"
+  },
+  {
+    "id": "V2_RS-228",
+    "query": "Shopee 최근 리뷰 내용 한국어로 보여줄래",
+    "table": "review_shopee",
+    "category": "review_content",
+    "status": "OK",
+    "time": 40.7,
+    "answer_len": 1820,
+    "answer_preview": "### 📊 Shopee SKIN1004 최근 리뷰 분석  #### 요약  사용자님의 요청에 따라 Shopee에 게시된 SKIN1004 브랜드의 최근 리뷰 50건을 분석했습니다. 해당 리뷰들은 **2026년 2월 8일과 9일**에 작성된 것으로, 오늘 날짜(2026년 3월 8일) 기준 약 한 달 전의 데이터입니다. 전반적으로 제품에 대한 **높은 기대감과 긍"
+  },
+  {
+    "id": "V2_RS-229",
+    "query": "참고로 쇼피 리뷰 TOP 10 제품 부탁드려요",
+    "table": "review_shopee",
+    "category": "top_reviewed",
+    "status": "OK",
+    "time": 46.0,
+    "answer_len": 1102,
+    "answer_preview": "### 📊 SKIN1004 쇼피 리뷰 TOP 10 제품 현황  #### 요약  2026년 03월 08일 기준으로 쇼피에서 가장 많은 리뷰를 받은 SKIN1004 제품은 **톤브라이트닝 클렌징 젤 폼**으로, 총 **1,023**개의 리뷰를 기록했습니다. 상위 10개 제품 모두 980개 이상의 높은 리뷰 수를 보이며, 특히 센텔라 라인 제품들이 다수 포함되어"
+  },
+  {
+    "id": "V2_RS-230",
+    "query": "Shopee 2024년 2월 리뷰 알려주세요",
+    "table": "review_shopee",
+    "category": "date_range",
+    "status": "OK",
+    "time": 44.5,
+    "answer_len": 3229,
+    "answer_preview": "### 📊 Shopee 2024년 2월 SKIN1004 제품 리뷰 현황  #### 요약  2024년 2월 한 달간 Shopee에서 **SKIN1004 제품에 대한 총 433건**의 리뷰가 수집되었습니다. 이 리뷰들은 2024년 2월의 **모든 29일**에 걸쳐 작성되었으며, **28개의 고유한 제품**에 대한 피드백을 포함합니다.  #### 상세 데이터  "
+  },
+  {
+    "id": "V2_RS-231",
+    "query": "쇼피 리뷰 collect_date 별 건수 알려주세요",
+    "table": "review_shopee",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 30.8,
+    "answer_len": 830,
+    "answer_preview": "### 📊 SKIN1004 쇼피 리뷰 수집일별 현황  #### 요약  SKIN1004의 쇼피 리뷰는 2025년 12월 11일, 12월 12일, 2026년 2월 10일 세 차례에 걸쳐 수집된 것으로 확인됩니다. 이 중 **2026년 2월 10일**에 **27,627건**의 가장 많은 리뷰가 수집되었습니다.  #### 상세 데이터 | collect_date |"
+  },
+  {
+    "id": "V2_RS-232",
+    "query": "Shopee 리뷰데이터 최근 것 review_date 기준",
+    "table": "review_shopee",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 48.6,
+    "answer_len": 92193,
+    "answer_preview": "### 📊 SKIN1004 Shopee 최신 리뷰 데이터 분석 (2026년 2월)  #### 요약  ⚠️ 2026년 3월 8일 현재, 가장 최근 조회된 SKIN1004 Shopee 리뷰는 **2026년 2월 9일** 및 **2월 8일** 데이터입니다. 총 **50건**의 최신 리뷰가 확인되었으며, 대부분은 제품 수령, 첫 사용 경험, 무료 증정품에 대한 감"
+  },
+  {
+    "id": "V2_RS-233",
+    "query": "쇼피 리뷰데이터 채널 목록 말해줘",
+    "table": "review_shopee",
+    "category": "review_count",
+    "status": "OK",
+    "time": 26.7,
+    "answer_len": 601,
+    "answer_preview": "### 📊 쇼피 리뷰 데이터 채널 목록  #### 요약  쇼피 리뷰 데이터에서 확인된 채널은 총 **2개**입니다. 'shopee'와 'Shopee' 두 가지 표기 방식이 발견되었으며, 이는 동일한 채널의 대소문자 차이로 인한 것으로 분석됩니다.  #### 상세 데이터  쇼피 리뷰 데이터에서 조회된 채널 목록은 다음과 같습니다.  | 채널명 | | :---"
+  },
+  {
+    "id": "V2_RS-234",
+    "query": "Shopee 후기 각 제품 번역 리뷰데이터 보여줄래 알 수 있을까요?",
+    "table": "review_shopee",
+    "category": "review_content",
+    "status": "OK",
+    "time": 46.1,
+    "answer_len": 8383,
+    "answer_preview": "### 📊 Shopee SKIN1004 제품별 최신 번역 리뷰 데이터  #### 요약  2025년 3월 8일 이후 수집된 Shopee의 SKIN1004 브랜드 제품 리뷰 중, **가장 최신 50건의 번역된 리뷰 데이터**를 제공합니다. 해당 리뷰들은 **2026년 2월 8일에서 2월 9일 사이**에 작성된 내용입니다.  #### 상세 데이터 | produc"
+  },
+  {
+    "id": "V2_RS-235",
+    "query": "shopee 리뷰 월별 2025년 누적",
+    "table": "review_shopee",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 40.2,
+    "answer_len": 1292,
+    "answer_preview": "### 📊 2025년 Shopee SKIN1004 월별 리뷰 현황  #### 요약  2025년 Shopee에서 SKIN1004 브랜드에 대한 총 리뷰 수는 **9,020개**로 집계되었습니다. 월별로는 11월에 **1,068개**의 리뷰가 발생하여 가장 높은 수치를 기록했으며, 6월에는 **436개**로 가장 낮은 리뷰 수를 보였습니다.  #### 상세 데"
+  },
+  {
+    "id": "V2_RS-236",
+    "query": "Shopee 전체 평가 현황 요약 알려주세요",
+    "table": "review_shopee",
+    "category": "total_count",
+    "status": "OK",
+    "time": 38.0,
+    "answer_len": 668,
+    "answer_preview": "# Shopee 전체 평가 요약  Shopee는 동남아시아의 선도적인 전자상거래 플랫폼으로, 아래와 같이 긍정적·부정적 평가가 공존합니다.  ---  ## ✅ 긍정적 평가  | 항목 | 내용 | |---|---| | **다양한 상품군** | 패션, 뷰티, 가전, 생활용품 등 폭넓은 카테고리 제공 | | **경쟁력 있는 가격** | 저렴한 가격 + 상시 할인"
+  },
+  {
+    "id": "V2_RS-237",
+    "query": "우리 회사 쇼피 리뷰 최근 150건 알려주세요",
+    "table": "review_shopee",
+    "status": "OK",
+    "time": 39.8,
+    "answer_len": 1512,
+    "answer_preview": "### 📊 SKIN1004 쇼피 최근 리뷰 150건 분석  #### 요약  SKIN1004의 쇼피 최근 리뷰 **150건**을 분석한 결과, 해당 리뷰들은 **2026년 2월 7일부터 2월 9일까지 3일간** 작성된 것으로 확인되었습니다. 이 리뷰들은 총 **17개**의 고유 제품에 대해 작성되었으며, 제품 품질에 대한 긍정적인 평가와 함께 포장 및 배송 "
+  },
+  {
+    "id": "V2_RS-238",
+    "query": "궁금한데 Shopee Madagascar Centella Ampoule 리뷰 전체 건수 빨리",
+    "table": "review_shopee",
+    "category": "product_review",
+    "status": "OK",
+    "time": 59.9,
+    "answer_len": 656,
+    "answer_preview": "### 📊 Shopee Centella 앰플 전체 리뷰 현황  #### 요약  2026년 03월 08일 기준으로, Shopee 채널에서 'SKIN1004 Centella 앰플' 제품에 대한 리뷰는 **총 0건**으로 확인되었습니다. 현재 데이터상으로는 해당 제품에 대한 리뷰가 존재하지 않습니다.  #### 분석 및 인사이트  *   **리뷰 부재 확인**:"
+  },
+  {
+    "id": "V2_RS-239",
+    "query": "참고로 쇼피 후기 상품별 최다 리뷰 월",
+    "table": "review_shopee",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 54.9,
+    "answer_len": 1408,
+    "answer_preview": "### 📊 SKIN1004 쇼피 상품별 최다 리뷰 월 분석  #### 요약  지난 1년간(2025년 3월 ~ 2026년 2월) SKIN1004 쇼피 상품 중 **'포어마이징 벨벳 피니쉬 선 스크린'**이 **2025년 10월에 207건**으로 가장 많은 리뷰를 기록했습니다. 이어서 '히알루시카 젠틀 클렌징 밀크'와 '레티놀 부스팅 샷 앰플' 또한 높은 리뷰"
+  },
+  {
+    "id": "V2_RS-240",
+    "query": "Shopee 리뷰 데이터 최초 수집일 알려줄래?",
+    "table": "review_shopee",
+    "category": "date_range",
+    "status": "OK",
+    "time": 21.5,
+    "answer_len": 429,
+    "answer_preview": "### 📊 Shopee 리뷰 데이터 최초 수집일 분석  #### 요약  Shopee 리뷰 데이터의 최초 수집일은 **2025년 12월 11일**입니다. 이는 현재 시스템에 저장된 Shopee 리뷰 데이터가 해당 시점부터 축적되었음을 의미합니다.  #### 분석 및 인사이트  *   Shopee 리뷰 데이터 수집은 **2025년 12월 11일**부터 시작되었"
+  },
+  {
+    "id": "V2_RS-241",
+    "query": "쇼피에서 리뷰 수 증가 추세야? 알려줄래?",
+    "table": "review_shopee",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 33.0,
+    "answer_len": 1270,
+    "answer_preview": "### 📊 쇼피 SKIN1004 브랜드 월별 리뷰 수 추이 분석  #### 요약  ⚠️ 2026년 3월 8일 현재, 2026년 2월 데이터가 가장 최신 월별 데이터입니다. 지난 1년간(2025년 3월 ~ 2026년 2월) 쇼피에서 SKIN1004 브랜드의 월별 리뷰 수는 **총 8,534건**으로 집계되었습니다. 전반적으로 뚜렷한 증가 추세보다는 월별 변동"
+  },
+  {
+    "id": "V2_RS-242",
+    "query": "Shopee 리뷰 최근 데이터 요약해줘은 어떤가요?",
+    "table": "review_shopee",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 41.1,
+    "answer_len": 1591,
+    "answer_preview": "### 📊 Shopee SKIN1004 제품 최근 1년간 리뷰 현황  #### 요약  2025년 3월 8일부터 2026년 3월 8일까지 Shopee에서 수집된 SKIN1004 제품 리뷰 데이터 분석 결과, **'톤브라이트닝 클렌징 젤 폼'**이 **1,023개**의 리뷰로 가장 많은 관심을 받았습니다. 상위 20개 제품의 총 리뷰 수는 **19,361개**"
+  },
+  {
+    "id": "V2_RS-243",
+    "query": "쇼피 Tone Brightening 제품 리뷰데이터 몇 건?",
+    "table": "review_shopee",
+    "category": "product_review",
+    "status": "OK",
+    "time": 24.0,
+    "answer_len": 671,
+    "answer_preview": "### 📊 쇼피 SKIN1004 Tone Brightening 제품 리뷰 현황  #### 요약  2025년 3월 8일부터 현재(2026년 3월 8일)까지의 쇼피(Shopee)에서 SKIN1004 Tone Brightening 제품에 대한 리뷰는 **0건**으로 확인되었습니다. 해당 기간 동안 검색된 리뷰 데이터가 없습니다.  #### 분석 및 인사이트  *"
+  },
+  {
+    "id": "V2_RS-244",
+    "query": "Shopee 평가 제품 종류 몇 개야?",
+    "table": "review_shopee",
+    "category": "review_count",
+    "status": "OK",
+    "time": 28.8,
+    "answer_len": 420,
+    "answer_preview": "### 📊 Shopee에서 평가된 SKIN1004 제품 종류 현황  #### 요약  Shopee 플랫폼에서 2025년 3월 8일부터 현재(2026년 3월 8일)까지 평가된 SKIN1004 제품은 총 **43가지** 종류입니다.  #### 분석 및 인사이트  *   지난 1년간 Shopee에서 다양한 SKIN1004 제품들이 소비자들에게 평가받고 있음을 확인"
+  },
+  {
+    "id": "V2_RS-245",
+    "query": "쇼피 리뷰데이터 번역문 최근 순",
+    "table": "review_shopee",
+    "category": "review_content",
+    "status": "OK",
+    "time": 32.9,
+    "answer_len": 2922,
+    "answer_preview": "### 📊 SKIN1004 쇼피 최신 리뷰 데이터 (2026년 2월 8일 ~ 2월 9일)  #### 요약  SKIN1004 브랜드의 쇼피 최신 리뷰 **50건**을 분석한 결과, 2026년 2월 8일과 2월 9일에 작성된 리뷰들이 가장 최근 순으로 조회되었습니다. 주요 제품으로는 '나이아신아마이드 부스팅 샷 앰플', '포어마이징 벨벳 피니쉬 선 스크린', "
+  },
+  {
+    "id": "V2_RS-246",
+    "query": "Shopee 2024년 1분기 리뷰 데이터 확인 부탁드립니다",
+    "table": "review_shopee",
+    "category": "date_range",
+    "status": "OK",
+    "time": 34.9,
+    "answer_len": 787,
+    "answer_preview": "### 📊 Shopee 2024년 1분기 SKIN1004 리뷰 현황  #### 요약  SKIN1004 브랜드의 Shopee 채널 2024년 1분기 리뷰 데이터는 총 **1,000건**으로 집계되었습니다. 이 리뷰들은 **28개**의 고유 제품에 대해 작성되었으며, 2024년 1월 1일부터 3월 31일까지 **75일**에 걸쳐 수집되었습니다. 모든 리뷰는 S"
+  },
+  {
+    "id": "V2_RS-247",
+    "query": "우리 회사 쇼피 리뷰데이터 전체 건수 차트",
+    "table": "review_shopee",
+    "category": "total_count",
+    "status": "OK",
+    "time": 48.2,
+    "answer_len": 468,
+    "answer_preview": "### 📊 쇼피 SKIN1004 브랜드 리뷰 현황  #### 요약  ⚠️ 현재 데이터는 2025년 03월 08일부터 2026년 03월 08일까지의 쇼피 리뷰를 기준으로 합니다. 해당 기간 동안 SKIN1004 브랜드의 쇼피 리뷰는 총 **29,630건**으로 집계되었습니다.  #### 분석 및 인사이트  *   지난 1년간 SKIN1004 브랜드는 쇼피에서"
+  },
+  {
+    "id": "V2_RS-248",
+    "query": "Shopee 리뷰 제품별 비교 분석 어때?",
+    "table": "review_shopee",
+    "category": "review_count",
+    "status": "OK",
+    "time": 33.3,
+    "answer_len": 1460,
+    "answer_preview": "### 📊 Shopee SKIN1004 제품별 리뷰 수 비교 분석 (2025.03.08 ~ 2026.03.08)  #### 요약  지난 1년간(2025년 3월 8일 ~ 2026년 3월 8일) Shopee에서 SKIN1004 브랜드 제품에 대한 리뷰를 분석한 결과, 총 **43개** 제품에서 리뷰가 확인되었습니다. 가장 많은 리뷰를 받은 제품은 **'톤브라이"
+  },
+  {
+    "id": "V2_RS-249",
+    "query": "쇼피 최근 리뷰 중 Cream 제품 알 수 있을까요?",
+    "table": "review_shopee",
+    "category": "product_review",
+    "status": "OK",
+    "time": 28.2,
+    "answer_len": 396,
+    "answer_preview": "해당 조건의 데이터가 없습니다.  SQL에서 사용된 `collect_date >= '2025-03-08'` 조건이 문제입니다. `collect_date`는 데이터가 수집된 날짜를 의미하는데, 2025년 3월 8일은 미래 날짜이므로 해당 날짜 이후에 수집된 데이터는 현재 존재할 수 없습니다. \"최근 리뷰\"를 조회하려면 과거 날짜를 기준으로 설정해야 합니다. "
+  },
+  {
+    "id": "V2_RS-250",
+    "query": "Shopee 후기 월별 건수 차트 그려줘 알려주세요",
+    "table": "review_shopee",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 29.2,
+    "answer_len": 519,
+    "answer_preview": "# 데이터 조회 안내  안녕하세요. 요청하신 **Shopee 후기 월별 건수** 데이터를 조회하지 못했습니다.  좀 더 정확한 결과를 위해 아래와 같이 **조건을 구체적으로** 지정해 주시면 다시 조회해 드리겠습니다.  ---  ## 🔍 이런 정보를 추가해 주세요  | 항목 | 예시 | |------|------| | **기간** | 2024년 1월 ~ 2"
+  },
+  {
+    "id": "V2_RS-251",
+    "query": "쇼피 후기 원문 전체 보여줘",
+    "table": "review_shopee",
+    "category": "review_content",
+    "status": "OK",
+    "time": 43.8,
+    "answer_len": 3667,
+    "answer_preview": "### 📊 쇼피 SKIN1004 후기 원문 조회 결과 (최신 1,000건)  #### 요약  사용자님의 요청에 따라, 쇼피에서 수집된 SKIN1004 브랜드 제품의 후기 원문 중 **최신 1,000건**을 조회했습니다. 해당 후기들은 **2026년 02월 07일부터 2026년 02월 09일** 사이에 작성되었으며, **총 39개**의 고유 제품에 대한 피드"
+  },
+  {
+    "id": "V2_RS-252",
+    "query": "Shopee 리뷰데이터 2024년 전체 추이 확인 부탁드립니다",
+    "table": "review_shopee",
+    "category": "date_range",
+    "status": "OK",
+    "time": 37.5,
+    "answer_len": 619,
+    "answer_preview": "해당 조건에 맞는 데이터가 존재하지 않습니다.  SQL에서 사용된 필터 조건 중 `EXTRACT(YEAR FROM collect_date) = 2024` (2024년 데이터)와 `brand LIKE '%SKIN1004%'` (SKIN1004 브랜드)의 조합으로 조회된 결과가 없습니다. 이는 다음 중 하나 또는 여러 가지 이유 때문일 수 있습니다: *   *"
+  },
+  {
+    "id": "V2_RS-253",
+    "query": "쇼핑 리뷰에서 Ampoule 제품만 필터 알고 싶어 확인 부탁드립니다",
+    "table": "review_shopee",
+    "category": "product_review",
+    "status": "WARN",
+    "time": 60.1,
+    "answer_len": 918,
+    "answer_preview": "해당 조건의 데이터가 없습니다.  SQL에서 사용된 필터 조건 중 `product_name LIKE '%Ampoule%'` 조건이 문제인 것으로 보입니다.  **문제 설명:** SKIN1004 브랜드의 쇼피(Shopee) 리뷰 데이터 중 최근 1년 이내에 'Ampoule'이라는 단어가 포함된 제품명은 없는 것으로 확인됩니다.  *   **가능성 1:** S"
+  },
+  {
+    "id": "V2_RS-254",
+    "query": "확인 좀 해줘 Shopee 후기 최근 75건 데이터",
+    "table": "review_shopee",
+    "category": "recent_n",
+    "status": "WARN",
+    "time": 67.2,
+    "answer_len": 1131,
+    "answer_preview": "### 📊 SKIN1004 Shopee 최근 75건 리뷰 데이터 분석  #### 요약  SKIN1004 브랜드의 Shopee 플랫폼에서 **최근 75건**의 리뷰 데이터가 성공적으로 조회되었습니다. 이 리뷰들은 **2026년 2월 8일부터 2월 9일**까지 작성된 것으로 확인되며, 전반적으로 제품에 대한 긍정적인 평가와 함께 프로모션 및 배송 관련 피드백이"
+  },
+  {
+    "id": "V2_RS-255",
+    "query": "참고로 쇼피 리뷰 브랜드 분포 알 수 있을까요?",
+    "table": "review_shopee",
+    "category": "brand_review",
+    "status": "OK",
+    "time": 29.8,
+    "answer_len": 687,
+    "answer_preview": "### 📊 최근 1년간 쇼피(Shopee) 리뷰 브랜드 분포 현황  #### 요약  최근 1년간(2025년 3월 8일 ~ 2026년 3월 8일) 쇼피 리뷰 데이터를 분석한 결과, **SKIN1004 브랜드가 총 8,542건의 리뷰**를 기록하며 유일하게 확인된 브랜드였습니다. 제공된 데이터에서는 SKIN1004 외 다른 브랜드의 리뷰는 확인되지 않았습니다."
+  },
+  {
+    "id": "V2_RS-256",
+    "query": "Shopee 후기 상품별 매월 통계표",
+    "table": "review_shopee",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 43.0,
+    "answer_len": 769,
+    "answer_preview": "# Shopee 상품별 월간 후기 통계  Shopee는 **상품별 월간 후기 통계를 정형화된 표(리포트) 형태로 직접 제공하지 않습니다.**  대신, 셀러 센터 내 아래 경로를 조합하여 간접적으로 분석할 수 있습니다.  ---  ## 활용 가능한 데이터 확인 경로  | 메뉴 | 확인 가능 항목 | 활용 포인트 | |---|---|---| | **샵 평점 ("
+  },
+  {
+    "id": "V2_RS-257",
+    "query": "쇼피 후기 전체 데이터 조회 알려주세요",
+    "table": "review_shopee",
+    "category": "total_count",
+    "status": "OK",
+    "time": 42.9,
+    "answer_len": 1989,
+    "answer_preview": "### 📊 쇼피(Shopee) SKIN1004 후기 조회 결과 (2026년 2월 10일 수집 기준)  #### 요약  사용자님의 요청에 따라 쇼피(Shopee) 채널의 SKIN1004 브랜드 후기 데이터를 조회했습니다. 조회된 데이터는 **2026년 2월 10일**에 수집된 **총 1,000건**의 후기이며, 이 후기들은 **41개**의 고유 제품에 대한 "
+  },
+  {
+    "id": "V2_RS-258",
+    "query": "빠르게 Shopee 2023년 리뷰 데이터 있어?",
+    "table": "review_shopee",
+    "category": "date_range",
+    "status": "OK",
+    "time": 28.6,
+    "answer_len": 566,
+    "answer_preview": "### 📊 Shopee 2023년 SKIN1004 리뷰 현황  #### 요약  2023년 Shopee 채널에서 SKIN1004 브랜드에 대한 총 리뷰 수는 **6,123**건으로 확인되었습니다. 이는 2023년 한 해 동안 Shopee에서 SKIN1004 제품에 대한 활발한 고객 피드백이 있었음을 보여줍니다.  #### 분석 및 인사이트  *   **202"
+  },
+  {
+    "id": "V2_RS-259",
+    "query": "쇼피 후기 최근 리뷰 제품명",
+    "table": "review_shopee",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 48.2,
+    "answer_len": 1243,
+    "answer_preview": "### 📊 쇼피 SKIN1004 최근 리뷰 제품 분석  #### 요약  쇼피에서 SKIN1004 브랜드의 최근 리뷰 **50건**을 분석한 결과, **2026년 2월 8일부터 2월 9일까지**의 리뷰가 확인되었습니다. 이 중 제공된 프리뷰 데이터 20건을 기준으로 '나이아신아마이드 부스팅 샷 앰플'과 '포어마이징 벨벳 피니쉬 선 스크린'이 각각 **5건**"
+  },
+  {
+    "id": "V2_RS-260",
+    "query": "Shopee Centella Ampoule 후기 한국어 요약",
+    "table": "review_shopee",
+    "category": "review_content",
+    "status": "WARN",
+    "time": 62.8,
+    "answer_len": 731,
+    "answer_preview": "# Shopee 센텔라 앰플 후기 요약  제공된 검색 정보를 기반으로 **SKIN1004 마다가스카르 센텔라 앰플**의 주요 후기를 요약해 드립니다.  > ⚠️ 현재 제공된 정보는 **Shopee 플랫폼 특정 후기**가 아닌 한국어 후기 전반의 요약입니다. Shopee 한정 후기 데이터는 별도로 확보되지 않은 점 참고해 주세요.  ---  ## 제형 & 사"
+  },
+  {
+    "id": "V2_RS-261",
+    "query": "쇼핑 제품 기준 리뷰 수 그래프",
+    "table": "review_shopee",
+    "category": "review_count",
+    "status": "OK",
+    "time": 45.3,
+    "answer_len": 1913,
+    "answer_preview": "### 📊 SKIN1004 쇼피 제품별 리뷰 수 현황 (2025년 3월 8일 ~ 2026년 3월 8일)  #### 요약  지난 1년간 쇼피에서 수집된 SKIN1004 제품 리뷰 데이터를 분석한 결과, 총 43개 제품에 대한 리뷰가 확인되었습니다. 이 중 **'톤브라이트닝 클렌징 젤 폼'**이 **1,023개**의 리뷰로 가장 많은 수를 기록했으며, **'히"
+  },
+  {
+    "id": "V2_RS-262",
+    "query": "궁금한데 Shopee 리뷰 수 기준 하위 제품 알려주세요",
+    "table": "review_shopee",
+    "category": "review_count",
+    "status": "OK",
+    "time": 48.7,
+    "answer_len": 1638,
+    "answer_preview": "### 📊 Shopee SKIN1004 제품별 리뷰 수 하위 분석 (2025년 3월 8일 ~ 2026년 3월 8일)  #### 요약  최근 1년간 Shopee에서 SKIN1004 브랜드 제품 중 리뷰 수가 가장 적은 제품은 **\"히알루시카 퍼스트 앰플\"**로 **26개**의 리뷰를 기록했습니다. 전체 43개 제품 중 리뷰 수가 100개 미만인 제품은 5개로"
+  },
+  {
+    "id": "V2_RS-263",
+    "query": "쇼피 2025년 1월 리뷰데이터 건수",
+    "table": "review_shopee",
+    "category": "date_range",
+    "status": "OK",
+    "time": 35.5,
+    "answer_len": 372,
+    "answer_preview": "### 📊 쇼피 2025년 1월 리뷰 데이터 현황  #### 요약  2025년 1월 쇼피(Shopee) 채널에서 총 **728건**의 리뷰 데이터가 집계되었습니다. 이는 해당 기간 동안 고객들이 남긴 제품 피드백의 총량을 나타냅니다.  #### 분석 및 인사이트  *   2025년 1월 쇼피 채널의 고객 참여도를 나타내는 중요한 지표입니다. *   해당 수"
+  },
+  {
+    "id": "V2_RS-264",
+    "query": "Shopee 리뷰 최신 수집 데이터 날짜 확인 가능한가요?",
+    "table": "review_shopee",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 28.2,
+    "answer_len": 512,
+    "answer_preview": "### 📊 SKIN1004 Shopee 리뷰 최신 수집 데이터 현황  #### 요약  SKIN1004 브랜드의 Shopee 리뷰 데이터는 **2026년 02월 10일**까지 수집된 것이 최신입니다. 오늘(2026년 03월 08일)을 기준으로 약 한 달 전 데이터까지 확인 가능합니다.  #### 분석 및 인사이트  *   **데이터 최신성 확인:** 현재 조"
+  },
+  {
+    "id": "V2_RS-265",
+    "query": "쇼피 리뷰데이터 제품 기준 평균 리뷰 수 알 수 있을까요?",
+    "table": "review_shopee",
+    "category": "review_count",
+    "status": "OK",
+    "time": 26.1,
+    "answer_len": 582,
+    "answer_preview": "### 📊 쇼피 SKIN1004 제품별 평균 리뷰 수 분석  #### 요약  최근 1년간(2025년 3월 8일 ~ 2026년 3월 8일) 쇼피에서 SKIN1004 브랜드 제품의 평균 리뷰 수는 **약 689개**로 집계되었습니다. 이는 SKIN1004 제품들이 쇼피 플랫폼에서 높은 고객 참여도와 인지도를 가지고 있음을 시사합니다.  #### 분석 및 인사이"
+  },
+  {
+    "id": "V2_RS-266",
+    "query": "Shopee 리뷰 2025년 전체 추이 얼마임?",
+    "table": "review_shopee",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 30.0,
+    "answer_len": 1222,
+    "answer_preview": "### 📊 2025년 SKIN1004 Shopee 리뷰 월별 추이 분석  #### 요약  2025년 한 해 동안 SKIN1004 브랜드의 Shopee 리뷰는 총 **8,020건**이 발생했습니다. 월별 추이를 살펴보면, 11월에 **1,068건**으로 가장 많은 리뷰가 기록되었으며, 6월에 **436건**으로 가장 적은 리뷰 수를 보였습니다.  #### 상"
+  },
+  {
+    "id": "V2_RS-267",
+    "query": "쇼피 리뷰데이터 원문과 번역 같이 10건",
+    "table": "review_shopee",
+    "category": "review_content",
+    "status": "OK",
+    "time": 50.5,
+    "answer_len": 67983,
+    "answer_preview": "### 📊 쇼피 SKIN1004 최신 리뷰 데이터 (원문 및 번역 10건)  #### 요약  SKIN1004 브랜드의 쇼피 최신 리뷰 **10건**을 원문과 번역본으로 제공합니다. 이 중 **4건**은 아직 제품을 사용해보지 않았다는 내용이며, **3건**은 무료 증정품에 대한 언급이 있었습니다. 또한, **2건**의 리뷰에서 제품 포장(봉인) 문제에 대한"
+  },
+  {
+    "id": "V2_RS-268",
+    "query": "Shopee 리뷰 기간별 건수 분석 좀 알려줘",
+    "table": "review_shopee",
+    "category": "date_range",
+    "status": "OK",
+    "time": 26.1,
+    "answer_len": 447,
+    "answer_preview": "안녕하세요! 요청하신 **Shopee 리뷰 기간별 건수 분석** 데이터를 현재 조회하지 못했습니다.  좀 더 정확한 결과를 위해 **조건을 구체적으로 지정**해 주시면 다시 조회해 드리겠습니다. 아래 항목들을 포함해 주시면 도움이 됩니다:  - **기간** (예: 2024년 1분기, 최근 6개월 등) - **국가/마켓** (예: 태국, 베트남, 말레이시아 "
+  },
+  {
+    "id": "V2_RS-269",
+    "query": "쇼피 평가 TOP 3 제품 리뷰 내용 좀 알려줘",
+    "table": "review_shopee",
+    "category": "top_reviewed",
+    "status": "WARN",
+    "time": 69.2,
+    "answer_len": 591,
+    "answer_preview": "### 📊 쇼피 SKIN1004 TOP 3 제품 최신 리뷰 분석 (프리뷰 데이터 기반)  #### 요약  2025년 3월 8일 이후 수집된 쇼피 리뷰 데이터를 기반으로, SKIN1004 브랜드의 리뷰 수 기준 TOP 3 제품을 분석했습니다. 제공된 데이터 프리뷰에는 **센텔라 라이트 클렌징 오일**과 **톤브라이트닝 클렌징 젤 폼** 두 제품의 최신 리뷰 "
+  },
+  {
+    "id": "V2_RS-270",
+    "query": "궁금한데 Shopee 최근 리뷰 전체 건수",
+    "table": "review_shopee",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 35.2,
+    "answer_len": 570,
+    "answer_preview": "### 📊 Shopee SKIN1004 최근 리뷰 전체 건수  #### 요약  지난 1년간(2025년 3월 8일 ~ 2026년 3월 8일) Shopee 플랫폼에서 SKIN1004 브랜드에 대한 총 리뷰 건수는 **29,630건**으로 집계되었습니다. 이는 SKIN1004 제품에 대한 고객들의 활발한 관심과 참여를 보여줍니다.  #### 분석 및 인사이트  "
+  },
+  {
+    "id": "V2_RS-271",
+    "query": "쇼핑 리뷰데이터 제품별 최신 리뷰 날짜와 내용",
+    "table": "review_shopee",
+    "category": "review_content",
+    "status": "WARN",
+    "time": 66.5,
+    "answer_len": 3098,
+    "answer_preview": "### 📊 SKIN1004 제품별 최신 리뷰 현황  #### 요약  총 **43개** SKIN1004 제품에 대한 최신 리뷰 현황을 분석했습니다. 각 제품별 최신 리뷰 날짜는 **2025년 10월 4일**부터 **2026년 2월 9일**까지 분포하며, 가장 최근 리뷰가 작성된 날짜는 **2026년 2월 9일**입니다. ⚠️ 현재 데이터는 **2026년 2월"
+  },
+  {
+    "id": "V2_RS-272",
+    "query": "정확한 Shopee 후기 수 제품별 파이 차트",
+    "table": "review_shopee",
+    "category": "review_count",
+    "status": "OK",
+    "time": 41.3,
+    "answer_len": 1527,
+    "answer_preview": "### 📊 SKIN1004 Shopee 제품별 후기 수 현황 (지난 1년간)  #### 요약  지난 1년간(2025년 03월 08일 ~ 2026년 03월 08일) Shopee에서 수집된 SKIN1004 브랜드 제품 후기 분석 결과, 총 **43개** 제품에 대한 데이터가 확인되었습니다. 이 중 '톤브라이트닝 클렌징 젤 폼'이 **1,023개**의 후기로 가"
+  },
+  {
+    "id": "V2_RS-273",
+    "query": "쇼피 리뷰 최근 6개월 추세",
+    "table": "review_shopee",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 29.1,
+    "answer_len": 908,
+    "answer_preview": "### 📊 쇼피 리뷰 최근 6개월 추세 분석 (SKIN1004)  #### 요약  최근 6개월간(2025년 9월 ~ 2026년 2월) 쇼피 리뷰 수는 총 **4,796건**으로 집계되었습니다. 2025년 11월에 **1,068건**으로 최고치를 기록한 후 감소 추세를 보였으며, 특히 2026년 2월에는 **336건**으로 가장 낮은 수치를 기록했습니다.  "
+  },
+  {
+    "id": "V2_RS-274",
+    "query": "Shopee 리뷰데이터 데이터 전체 요약",
+    "table": "review_shopee",
+    "category": "total_count",
+    "status": "OK",
+    "time": 33.8,
+    "answer_len": 686,
+    "answer_preview": "### 📊 Shopee 리뷰 데이터 요약 보고서  #### 요약  2025년 3월 8일부터 2026년 3월 8일 현재까지 Shopee에서 총 **29,630개**의 리뷰가 수집되었습니다. 이 리뷰들은 **43개**의 고유 제품에 대한 것이며, 모두 **1개**의 단일 브랜드에 대한 데이터입니다.  #### 상세 데이터 | 지표 | 수치 | |:---|---"
+  },
+  {
+    "id": "V2_RS-275",
+    "query": "혹시 쇼피 Centella Cleansing Oil 리뷰 전체 알고 싶어",
+    "table": "review_shopee",
+    "category": "product_review",
+    "status": "OK",
+    "time": 30.8,
+    "answer_len": 363,
+    "answer_preview": "요청하신 조건에 해당하는 쇼피 센텔라 클렌징 오일 리뷰 데이터는 찾을 수 없습니다.  SQL 쿼리에서 `product_name` 필터 조건인 `'%Centella%Cleansing_Oil%'`이 문제일 수 있습니다. 일반적으로 제품명에는 공백이 사용되므로, `Cleansing_Oil` 대신 `Cleansing Oil` (공백)으로 검색하거나, 제품명에 `_"
+  },
+  {
+    "id": "V2_RS-276",
+    "query": "Shopee 후기 최근 35건 보여줄 수 있어?",
+    "table": "review_shopee",
+    "category": "recent_n",
+    "status": "OK",
+    "time": 38.1,
+    "answer_len": 704,
+    "answer_preview": "쇼피(Shopee)에 올라온 최근 후기 35건을 개별적으로 보여드리기는 어렵습니다. 실시간으로 쇼피 플랫폼의 개별 리뷰 데이터에 직접 접근할 수 있는 권한이 없기 때문입니다.  다만, 최신 검색 정보를 기반으로 **쇼피 후기의 전반적인 동향**을 요약해 드릴 수 있습니다.  ---  ## 쇼피 최신 후기 동향 요약  ### ✅ 긍정적 후기 경향  | 구분 "
+  },
+  {
+    "id": "V2_RS-277",
+    "query": "확인 좀 해줘 쇼피 리뷰 2024년 하반기 건수 정리해줘",
+    "table": "review_shopee",
+    "category": "date_range",
+    "status": "OK",
+    "time": 30.8,
+    "answer_len": 486,
+    "answer_preview": "### 📊 2024년 하반기 쇼피 SKIN1004 리뷰 현황  #### 요약  2024년 하반기(7월 1일 ~ 12월 31일) 동안 쇼피에서 SKIN1004 브랜드에 대한 총 리뷰 건수는 **6,364건**으로 집계되었습니다.  #### 분석 및 인사이트  *   2024년 하반기 동안 쇼피에서 SKIN1004 브랜드에 대한 **6,364건**의 리뷰가 생"
+  },
+  {
+    "id": "V2_RS-278",
+    "query": "Shopee 후기 원문 중 긴 리뷰 알려주세요",
+    "table": "review_shopee",
+    "category": "review_content",
+    "status": "OK",
+    "time": 48.3,
+    "answer_len": 5259,
+    "answer_preview": "### 📊 Shopee SKIN1004 제품별 장문 리뷰 분석  #### 요약  사용자 질문에 따라 Shopee에서 SKIN1004 브랜드 제품에 대해 작성된 후기 원문 중 가장 긴 **50건**의 리뷰를 분석했습니다. 이 리뷰들은 제품 사용 경험, 효과, 피부 타입별 적합성 등 매우 상세하고 구체적인 내용을 담고 있으며, 특히 **센텔라 라이트 클렌징 오"
+  },
+  {
+    "id": "V2_RS-279",
+    "query": "쇼피 리뷰 제품별 최근 3개월 변화",
+    "table": "review_shopee",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 45.8,
+    "answer_len": 1697,
+    "answer_preview": "### 📊 쇼피 제품별 2025년 12월 대비 2026년 2월 리뷰 수 변화 분석  #### 요약  ⚠️ 최근 3개월(2025년 12월 8일 ~ 2026년 3월 8일) 데이터 요청에 대해, 현재 분석 결과는 **2025년 12월**과 **2026년 2월** 데이터만 포함되어 있습니다. **2026년 1월 및 2026년 3월 데이터는 조회되지 않았습니다.**"
+  },
+  {
+    "id": "V2_RS-280",
+    "query": "Shopee 전체 리뷰데이터 수 가르쳐줘",
+    "table": "review_shopee",
+    "category": "total_count",
+    "status": "OK",
+    "time": 28.7,
+    "answer_len": 562,
+    "answer_preview": "### 📊 Shopee 리뷰 데이터 현황 (2025년 3월 8일 이후 수집분)  #### 요약  ⚠️ 사용자 질문은 'Shopee 전체 리뷰데이터 수'였으나, 현재 조회된 데이터는 2025년 3월 8일 이후 수집된 리뷰에 대한 것입니다. 2025년 3월 8일 이후 수집된 Shopee 리뷰 데이터는 총 **29,630**건입니다.  #### 상세 데이터  ("
+  },
+  {
+    "id": "V2_RS-281",
+    "query": "쇼피 리뷰 상품별 리뷰 날짜 분포 부탁드려요",
+    "table": "review_shopee",
+    "category": "date_range",
+    "status": "OK",
+    "time": 54.6,
+    "answer_len": 1862,
+    "answer_preview": "### 📊 쇼피 SKIN1004 상품별 월별 리뷰 분포 분석  #### 요약  2025년 3월부터 2026년 2월까지 지난 1년간 SKIN1004 브랜드의 쇼피 리뷰는 총 **43개**의 고유 상품에 대해 **436건**의 데이터가 집계되었습니다. 이 기간 동안 '레티놀 부스팅 샷 앰플'은 2025년 9월에 **175개**의 리뷰를 기록하며 단일 월 기준 "
+  },
+  {
+    "id": "V2_RS-282",
+    "query": "잠깐, Shopee 리뷰 SKIN1004 제품 리스트 좀",
+    "table": "review_shopee",
+    "category": "brand_review",
+    "status": "OK",
+    "time": 30.1,
+    "answer_len": 1180,
+    "answer_preview": "### 📊 Shopee SKIN1004 제품 리스트  #### 요약  사용자님께서 요청하신 Shopee 리뷰 데이터 기반의 SKIN1004 제품 리스트입니다. 총 **43개**의 고유 제품이 확인되었으며, 이 중 상위 20개 제품은 아래 상세 데이터에서 확인하실 수 있습니다.  #### 상세 데이터  아래는 Shopee 리뷰 데이터에서 확인된 SKIN100"
+  },
+  {
+    "id": "V2_RS-283",
+    "query": "쇼피 리뷰데이터 최근 순으로 50건",
+    "table": "review_shopee",
+    "category": "recent_n",
+    "status": "OK",
+    "time": 44.9,
+    "answer_len": 2919,
+    "answer_preview": "### 📊 SKIN1004 쇼피 최근 리뷰 50건 분석  #### 요약  ⚠️ 현재 조회된 SKIN1004 쇼피 리뷰 데이터는 **2026년 02월 09일** 및 **2026년 02월 08일**에 작성된 리뷰이며, 오늘(2026년 03월 08일) 기준 약 한 달 전 데이터입니다. 총 **50건**의 리뷰 중, 가장 최근 리뷰는 2026년 02월 09일에 작"
+  },
+  {
+    "id": "V2_RS-284",
+    "query": "Shopee 리뷰 제품 기준 건수 내림차순 정렬은 어떤가요?",
+    "table": "review_shopee",
+    "category": "review_count",
+    "status": "OK",
+    "time": 32.7,
+    "answer_len": 1311,
+    "answer_preview": "### 📊 Shopee SKIN1004 제품별 리뷰 건수 순위 (2025년 3월 8일 ~ 2026년 3월 7일)  #### 요약  지난 1년간(2025년 3월 8일 ~ 2026년 3월 7일) Shopee에서 SKIN1004 제품 중 가장 많은 리뷰를 받은 제품은 **'톤브라이트닝 클렌징 젤 폼'으로 총 1,023건**의 리뷰를 기록했습니다. 이어서 '히알루"
+  },
+  {
+    "id": "V2_RS-285",
+    "query": "정확한 쇼피 리뷰 월별 증감률",
+    "table": "review_shopee",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 32.2,
+    "answer_len": 1733,
+    "answer_preview": "### 📊 쇼피 리뷰 월별 증감률 분석  #### 요약  2026년 2월 쇼피 리뷰 수는 전월 대비 **58.9% 감소**한 336건을 기록했습니다. 지난 1년간(2025년 3월 ~ 2026년 2월) 가장 높은 월별 증감률은 2025년 9월의 **107.7% 증가**였으며, 가장 낮은 증감률은 2026년 2월의 **-58.9% 감소**였습니다.  #### "
+  },
+  {
+    "id": "V2_RS-286",
+    "query": "Shopee 후기 번역 내용 전체 좀 알려줘",
+    "table": "review_shopee",
+    "category": "review_content",
+    "status": "OK",
+    "time": 55.6,
+    "answer_len": 639,
+    "answer_preview": "Shopee 후기 번역 기능에 대해 검색된 정보를 정리해 드리겠습니다.  ---  ## Shopee 후기 번역 기능 안내  ### 주요 기능  1. **자동 번역**    - 외국어로 작성된 후기 아래에 **\"번역 보기\"** 또는 유사한 버튼이 표시됨    - 버튼 클릭 시 사용자가 설정한 언어로 번역된 내용 확인 가능  2. **번역 품질**    - 기"
+  },
+  {
+    "id": "V2_RS-287",
+    "query": "우리 회사 쇼피 리뷰 연간 2024년 통계",
+    "table": "review_shopee",
+    "category": "date_range",
+    "status": "OK",
+    "time": 23.6,
+    "answer_len": 523,
+    "answer_preview": "### 📊 SKIN1004 2024년 쇼피(Shopee) 연간 리뷰 통계  #### 요약  2024년 한 해 동안 SKIN1004 브랜드의 쇼피(Shopee) 채널에서 총 **9,402개**의 고객 리뷰가 수집되었습니다. 이는 해당 기간 동안 쇼피 플랫폼에서 활발한 고객 참여와 브랜드 활동이 있었음을 보여줍니다.  #### 분석 및 인사이트  *   202"
+  },
+  {
+    "id": "V2_RS-288",
+    "query": "Shopee 리뷰 각 제품 리뷰 수 합산",
+    "table": "review_shopee",
+    "category": "review_count",
+    "status": "OK",
+    "time": 39.4,
+    "answer_len": 405,
+    "answer_preview": "안녕하세요. 요청하신 **Shopee 리뷰 각 제품 리뷰 수 합산** 데이터를 조회하지 못했습니다.  좀 더 정확한 결과를 위해 **조건을 구체적으로 지정**해 주시면 다시 조회를 시도해 보겠습니다.  ---  ### 💡 이렇게 질문을 바꿔 보시면 좋습니다  1. **\"2024년 1월~6월 Shopee 태국 채널에서 제품별 리뷰 수를 알려줘\"** 2. **"
+  },
+  {
+    "id": "V2_RS-289",
+    "query": "쇼피 리뷰 가장 인기 있는 제품 어떻게 되나요?",
+    "table": "review_shopee",
+    "category": "top_reviewed",
+    "status": "OK",
+    "time": 43.8,
+    "answer_len": 1656,
+    "answer_preview": "### 📊 쇼피(Shopee) SKIN1004 브랜드 최다 리뷰 제품 분석 (2025년 3월 8일 ~ 2026년 3월 8일)  #### 요약  지난 1년간 쇼피(Shopee)에서 SKIN1004 브랜드 제품 중 가장 많은 리뷰를 받은 제품은 **톤브라이트닝 클렌징 젤 폼**으로, 총 **1,023개**의 리뷰를 기록했습니다. 이어서 히알루시카 워터핏 선 세"
+  },
+  {
+    "id": "V2_RS-290",
+    "query": "Shopee 최근 후기 review_date 순",
+    "table": "review_shopee",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 52.7,
+    "answer_len": 1908,
+    "answer_preview": "### 📊 SKIN1004 Shopee 최근 고객 후기 분석 (2026년 2월)  #### 요약  SKIN1004 브랜드의 Shopee 최근 고객 후기 **50건**을 분석한 결과, 2026년 2월 8일과 9일에 작성된 후기들이 확인되었습니다. 전반적으로 제품에 대한 만족도가 높았으며, 특히 '나이아신아마이드 부스팅 샷 앰플', '포어마이징 벨벳 피니쉬 선"
+  },
+  {
+    "id": "V2_RS-291",
+    "query": "쇼피 리뷰 전체 리스트 보여주세요",
+    "table": "review_shopee",
+    "category": "total_count",
+    "status": "OK",
+    "time": 52.3,
+    "answer_len": 4585,
+    "answer_preview": "### 📊 쇼피 최신 리뷰 목록 분석  #### 요약  사용자님의 요청에 따라 **2025년 3월 8일 이후 수집된 쇼피 리뷰 중 최신 1,000건**을 분석했습니다. 이 리뷰들은 **2026년 2월 7일부터 2026년 2월 9일** 사이에 작성되었으며, **총 39개**의 다양한 제품에 대한 고객 피드백을 포함하고 있습니다.  #### 상세 데이터  다음"
+  },
+  {
+    "id": "V2_RS-292",
+    "query": "Shopee Centella Soothing Cream 리뷰 수 변동",
+    "table": "review_shopee",
+    "category": "product_review",
+    "status": "OK",
+    "time": 25.1,
+    "answer_len": 484,
+    "answer_preview": "안녕하세요. 요청하신 **Shopee Centella Soothing Cream 리뷰 수 변동** 데이터를 현재 조회하지 못했습니다.  좀 더 정확한 결과를 위해 아래 항목을 구체적으로 지정해 주시면 다시 조회해 드리겠습니다.  - **기간** (예: 특정 월, 분기, 연도) - **국가/마켓** (예: 태국, 베트남, 말레이시아 등) - **정확한 제품명"
+  },
+  {
+    "id": "V2_RS-293",
+    "query": "확인 좀 해줘 쇼핑 리뷰 최근 리뷰 번역문 보기",
+    "table": "review_shopee",
+    "category": "review_content",
+    "status": "OK",
+    "time": 35.0,
+    "answer_len": 4420,
+    "answer_preview": "### 📊 SKIN1004 쇼피(Shopee) 최신 리뷰 분석  #### 요약  ⚠️ 2026년 03월 08일 현재, 가장 최근 리뷰는 **2026년 02월 09일** 데이터입니다. SKIN1004 브랜드의 쇼피(Shopee) 최신 리뷰 **50건**을 분석한 결과, 2026년 02월 08일부터 02월 09일까지의 리뷰가 확인되었습니다. 주로 **나이아신아"
+  },
+  {
+    "id": "V2_RS-294",
+    "query": "궁금한데 Shopee 2024년 12월 리부 건수",
+    "table": "review_shopee",
+    "category": "date_range",
+    "status": "OK",
+    "time": 37.0,
+    "answer_len": 429,
+    "answer_preview": "2024년 12월 Shopee의 정확한 리뷰 건수는 **공식적으로 공개되지 않았습니다.**  다만, 참고할 수 있는 관련 수치는 다음과 같습니다:  | 항목 | 수치 | |---|---| | **2024년 4분기 총 주문량** | **약 30억 건** | | **2024년 연간 총 주문량** | **약 109억 건** (전년 대비 33% 증가) | | **"
+  },
+  {
+    "id": "V2_RS-295",
+    "query": "쇼피 평가 월간 리뷰 수 차트은 어떤가요?",
+    "table": "review_shopee",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 57.6,
+    "answer_len": 1421,
+    "answer_preview": "### 📊 쇼피 SKIN1004 브랜드 월간 리뷰 수 현황 (2021년 12월 ~ 2023년 6월)  #### 요약  SKIN1004 브랜드의 쇼피 월간 리뷰 수는 2021년 12월부터 2023년 6월까지 총 **6,638건**으로 집계되었습니다. 이 중 가장 많은 리뷰가 발생한 달은 **2022년 11월**로 **1,013건**을 기록했습니다. 현재 데이"
+  },
+  {
+    "id": "V2_RS-296",
+    "query": "Shopee 리부 제품별 최근 리뷰 비교 알려주시면 감사하겠습니다",
+    "table": "review_shopee",
+    "category": "review_content",
+    "status": "OK",
+    "time": 44.8,
+    "answer_len": 2414,
+    "answer_preview": "### 📊 Shopee SKIN1004 제품별 최근 리뷰 분석  #### 요약  2026년 2월 8일부터 2월 9일까지 수집된 **총 50건**의 가장 최근 Shopee SKIN1004 제품 리뷰를 분석했습니다. 이 기간 동안 **나이아신아마이드 부스팅 샷 앰플**과 **포어마이징 벨벳 피니쉬 선 스크린**이 가장 많은 리뷰를 받았으며, 많은 리뷰에서 무료"
+  },
+  {
+    "id": "V2_RS-297",
+    "query": "쇼피 리뷰 전체 건수는 몇 개",
+    "table": "review_shopee",
+    "category": "total_count",
+    "status": "OK",
+    "time": 26.4,
+    "answer_len": 538,
+    "answer_preview": "### 📊 쇼피 리뷰 현황 (2025년 3월 8일 이후)  #### 요약  ⚠️ 사용자 질문은 '쇼피 리뷰 전체 건수'였으나, 조회된 데이터는 2025년 3월 8일부터 2026년 3월 8일까지의 리뷰 건수입니다. 해당 1년 기간 동안 쇼피 리뷰는 총 **29,630건** 발생했습니다.  #### 분석 및 인사이트  *   **활발한 고객 참여**: 지난 1"
+  },
+  {
+    "id": "V2_RS-298",
+    "query": "Shopee 평가 제품 TOP 리스트",
+    "table": "review_shopee",
+    "category": "top_reviewed",
+    "status": "OK",
+    "time": 36.6,
+    "answer_len": 1426,
+    "answer_preview": "### 📊 Shopee SKIN1004 제품별 최근 1년간 리뷰 수 TOP 20  #### 요약  최근 1년간(2025년 3월 8일 ~ 2026년 3월 8일) Shopee에서 SKIN1004 브랜드 제품 중 가장 많은 리뷰를 받은 제품은 **톤브라이트닝 클렌징 젤 폼**으로, 총 **1,023개**의 리뷰를 기록했습니다. 상위 3개 제품은 모두 1,000개"
+  },
+  {
+    "id": "V2_RS-299",
+    "query": "쇼피 리뷰 최신 데이터 전체 확인은 어떤가요?",
+    "table": "review_shopee",
+    "category": "recent_reviews",
+    "status": "WARN",
+    "time": 67.8,
+    "answer_len": 1254,
+    "answer_preview": "### 📊 쇼피 SKIN1004 최신 리뷰 데이터 현황  #### 요약  SKIN1004 브랜드의 쇼피 리뷰 최신 데이터 **1,000건**이 조회되었습니다. 해당 리뷰들은 **2026년 2월 10일**에 수집되었으며, 이는 오늘 날짜(2026년 3월 8일) 기준으로 약 한 달 전 데이터입니다. 수집된 리뷰들의 작성일은 **2022년 4월 7일**부터 **"
+  },
+  {
+    "id": "V2_RS-300",
+    "query": "Shopee 후기 전체 현재 상태 리포트",
+    "table": "review_shopee",
+    "category": "total_count",
+    "status": "WARN",
+    "time": 64.6,
+    "answer_len": 1430,
+    "answer_preview": "# Shopee 후기 현황 리포트  ## 1. 전체 요약  Shopee는 판매자 지원 강화와 AI 기술 도입을 통해 서비스 품질을 개선하고 있으나, 고객 후기 기준으로 **긍정적·부정적 평가가 혼재**된 상태입니다. 플랫폼 차원의 노력에도 불구하고 배송, 고객 서비스, 상품 품질 등에서 소비자 불만이 지속되고 있습니다.  ---  ## 2. 긍정적 동향  "
+  }
+]

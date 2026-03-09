@@ -75,3 +75,50 @@ Desktop.ini
 # Broken path files (Windows encoding artifacts)
 C:*
 CUsersDB_PC*
+
+# Secrets
+.webui_secret_key
+
+# Logs
+logs/
+*.log
+
+# Backup directories
+backup_before_custom_frontend/
+_docker_recovery_temp/
+open-webui-backup/
+open-webui-backup-webui.db
+
+# Temp analysis files (root level)
+ANALYSIS_SUMMARY.txt
+CONTEXT_RESULTS_ANALYSIS.txt
+CONTEXT_RESULTS_STATS.json
+WARN_*.txt
+WARN_*.csv
+warn_*.txt
+warn_*.csv
+chart18_test.txt
+
+# Test output logs/results (root level)
+qa_*.log
+qa500_regression_log.txt
+retest_*.log
+retest_results.json
+test_results_*.json
+test_results_*.json.bak*
+
+# Local scripts (not part of app)
+start_open_webui.bat
+analyze_warns.py
+
+# Screenshots (root level)
+ss_*.png
+screenshot_*.png
+
+# Temp/clone directories
+craver_design_clone/
+custom_frontend/
+
+# Misc temp
+logo_datauri.txt
+관리자/

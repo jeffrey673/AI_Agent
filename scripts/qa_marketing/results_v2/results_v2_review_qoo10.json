@@ -1,0 +1,2998 @@
+[
+  {
+    "id": "V2_RQ-001",
+    "query": "혹시 큐텐 제품별 리뷰 수 알려줘 알 수 있을까요?",
+    "table": "review_qoo10",
+    "category": "review_count",
+    "status": "OK",
+    "time": 36.3,
+    "answer_len": 365,
+    "answer_preview": "안녕하세요! 😊  요청하신 **큐텐 제품별 리뷰 수** 데이터를 조회하지 못했습니다.  좀 더 구체적인 조건을 알려주시면 정확한 데이터를 찾는 데 도움이 됩니다. 아래 예시를 참고하여 질문을 다시 해주시겠어요?  ---  **💡 질문 예시**  1. **\"2024년 큐텐 재팬에서 마다가스카르 센텔라 라인 제품별 리뷰 수 알려줘\"** 2. **\"최근 3개월간"
+  },
+  {
+    "id": "V2_RQ-002",
+    "query": "Qoo10 평가 가장 많은 제품은",
+    "table": "review_qoo10",
+    "category": "top_reviewed",
+    "status": "OK",
+    "time": 44.8,
+    "answer_len": 563,
+    "answer_preview": "Qoo10에서 가장 많은 평가(리뷰)를 받은 단일 제품에 대한 **공식 종합 순위는 제공되지 않고 있습니다.**  다만, 판매 동향을 통해 리뷰가 많이 축적되는 제품군을 유추할 수 있습니다.  ---  ## 리뷰가 많은 주요 카테고리 및 브랜드  | 카테고리 | 인기 브랜드/품목 | |---|---| | **뷰티·화장품** (K-뷰티) | VT코스메틱, 티"
+  },
+  {
+    "id": "V2_RQ-003",
+    "query": "큐텐 최근 후기 알려줘",
+    "table": "review_qoo10",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 33.0,
+    "answer_len": 610,
+    "answer_preview": "# 큐텐(Qoo10) 최근 동향  최근 큐텐 관련 동향은 특히 **큐텐 재팬(Qoo10 Japan)**을 중심으로 활발하게 전개되고 있습니다.  ---  ## 주요 소비자층 및 인기 상품 - 주요 이용자는 **20~30대 여성** - **K-뷰티·스킨케어** 제품에 대한 관심이 매우 높음 - 일본 현지에서 구하기 어려운 최신 유행 K-뷰티·패션 상품을 빠르"
+  },
+  {
+    "id": "V2_RQ-004",
+    "query": "Qoo10 Madagascar Centella Ampoule 리뷰 수 어떻게 되나요?",
+    "table": "review_qoo10",
+    "category": "product_review",
+    "status": "WARN",
+    "time": 60.7,
+    "answer_len": 731,
+    "answer_preview": "### 📊 Qoo10 마다가스카르 센텔라 앰플 리뷰 수 현황  #### 요약  Qoo10 채널에서 'Madagascar Centella Ampoule' 제품에 대한 리뷰는 현재 **0건**으로 확인됩니다. 이는 해당 제품에 대한 리뷰 데이터가 아직 수집되지 않았거나, Qoo10에서 판매되지 않을 가능성을 시사합니다.  #### 분석 및 인사이트  *   *"
+  },
+  {
+    "id": "V2_RQ-005",
+    "query": "빠르게 큐텐 SKIN1004 전체 리뷰데이터 수",
+    "table": "review_qoo10",
+    "category": "total_count",
+    "status": "OK",
+    "time": 25.1,
+    "answer_len": 450,
+    "answer_preview": "### 📊 큐텐 SKIN1004 전체 리뷰 데이터 현황  #### 요약  2026년 03월 07일 기준으로 큐텐(Qoo10)에서 SKIN1004 브랜드의 전체 리뷰 데이터 수는 총 **55,364**건입니다.  #### 분석 및 인사이트  *   SKIN1004 브랜드는 큐텐에서 5만 건이 넘는 방대한 리뷰 데이터를 확보하고 있습니다. *   `> 이처럼 "
+  },
+  {
+    "id": "V2_RQ-006",
+    "query": "큐텐 달별 리뷰 수 추이 알려줘 알려주시면 감사하겠습니다",
+    "table": "review_qoo10",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 33.7,
+    "answer_len": 875,
+    "answer_preview": "### 📊 큐텐 SKIN1004 브랜드 달별 리뷰 수 추이  #### 요약  ⚠️ 큐텐 SKIN1004 브랜드의 달별 리뷰 수 추이는 현재 2025년 12월부터 2026년 1월까지의 데이터만 존재합니다 (오늘: 2026년 03월 07일). 해당 기간 동안 큐텐 SKIN1004 브랜드의 리뷰 수는 2025년 12월 **2,583건**에서 2026년 1월 **"
+  },
+  {
+    "id": "V2_RQ-007",
+    "query": "Qoo10 최근 10건 리뷰 몇이야?",
+    "table": "review_qoo10",
+    "category": "recent_n",
+    "status": "OK",
+    "time": 28.6,
+    "answer_len": 1883,
+    "answer_preview": "### 📊 Qoo10 SKIN1004 최근 리뷰 10건 분석  #### 요약  Qoo10에서 SKIN1004 브랜드의 **가장 최근 리뷰 10건**은 2026년 1월 27일과 28일에 작성되었습니다. 이들 리뷰는 주로 '센텔라 앰플' 제품에 대한 긍정적인 평가를 담고 있으며, 특히 진정 및 보습 효과, 끈적임 없는 사용감에 대한 만족도가 높게 나타났습니다."
+  },
+  {
+    "id": "V2_RQ-008",
+    "query": "큐텐 2025년 1월 리부 알고 싶어은 어떤가요?",
+    "table": "review_qoo10",
+    "category": "date_range",
+    "status": "OK",
+    "time": 45.5,
+    "answer_len": 411,
+    "answer_preview": "큐텐(Qoo10)의 2025년 1월 **'리부'**라는 이름의 특정 이벤트는 확인되지 않았습니다.  '리부'는 **'리뷰'의 오타**이거나 다른 프로모션을 지칭하는 것일 수 있습니다.  ---  ## 2025년 1월 전후 큐텐 주요 프로모션  | 프로모션 | 시기 | 내용 | |---|---|---| | **메가포 (メガポ)** | 2025년 초 | 202"
+  },
+  {
+    "id": "V2_RQ-009",
+    "query": "Qoo10 Centella Ampoule 최신 리뷰 내용 어떻게 되나요?",
+    "table": "review_qoo10",
+    "category": "review_content",
+    "status": "OK",
+    "time": 38.3,
+    "answer_len": 483,
+    "answer_preview": "해당 조건에 맞는 최신 리뷰 데이터를 찾을 수 없습니다.  SQL 쿼리에서 사용된 `brand` 조건 (`SKIN1004`) 또는 `product_name` 조건 (`Centella Ampoule`)에 해당하는 데이터가 존재하지 않거나, 데이터베이스에 저장된 이름과 정확히 일치하지 않아 검색되지 않았습니다. 예를 들어, `product_name`이 '마다가"
+  },
+  {
+    "id": "V2_RQ-010",
+    "query": "큐텐 브랜드별 후기 수 비교 알려주세요",
+    "table": "review_qoo10",
+    "category": "brand_review",
+    "status": "OK",
+    "time": 32.3,
+    "answer_len": 591,
+    "answer_preview": "### 📊 큐텐 브랜드별 후기 수 현황 (최근 1년간)  #### 요약  ⚠️ 최근 1년간(2025년 03월 07일 ~ 2026년 03월 07일) 큐텐에서 조회된 브랜드 중 **SKIN1004**에 대한 후기 데이터만 확인되었습니다. 이 기간 동안 **SKIN1004**는 총 **55,364개**의 후기를 기록했습니다.  #### 분석 및 인사이트  *  "
+  },
+  {
+    "id": "V2_RQ-011",
+    "query": "큐텐에서 Tone Brightening Capsule Serum 리뷰 몇 개야은 어떤가요?",
+    "table": "review_qoo10",
+    "category": "product_review",
+    "status": "OK",
+    "time": 37.4,
+    "answer_len": 595,
+    "answer_preview": "해당 조건으로 조회된 데이터가 없습니다.  SQL에서 사용된 `product_name` 필터 조건이 문제인 것으로 보입니다. 사용자님께서는 'Tone Brightening Capsule **Serum**'에 대한 리뷰를 문의하셨으나, SQL 쿼리에서는 'Tone_Brightening%Capsule%**Ampoule**%'로 검색하여 제품명이 일치하지 않았습"
+  },
+  {
+    "id": "V2_RQ-012",
+    "query": "Qoo10 후기 최근 30일 추이 부탁드려요",
+    "table": "review_qoo10",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 59.7,
+    "answer_len": 458,
+    "answer_preview": "안녕하세요! 요청하신 **Qoo10 후기 최근 30일 추이** 데이터를 조회하지 못했습니다.  좀 더 정확한 결과를 위해 아래 항목을 구체적으로 지정해 주시면 다시 조회해 보겠습니다.  - **국가/플랫폼** : Qoo10 Japan, Qoo10 글로벌 등 - **제품명** : 특정 SKU 또는 제품 라인 - **기간** : 정확한 시작일 ~ 종료일 - *"
+  },
+  {
+    "id": "V2_RQ-013",
+    "query": "큐텐 Centella Soothing Cream 리뷰 보여줄래 확인 부탁드립니다",
+    "table": "review_qoo10",
+    "category": "product_review",
+    "status": "OK",
+    "time": 27.9,
+    "answer_len": 429,
+    "answer_preview": "요청하신 조건에 해당하는 데이터가 없습니다.  SQL 쿼리에서 `product_name` 필터 조건에 `Centella_Soothing_Cream`으로 언더바(`_`)가 사용되었습니다. 데이터베이스에 저장된 실제 제품명은 'Centella Soothing Cream'과 같이 공백(` `)으로 구분되어 있을 가능성이 높습니다.  따라서 `product_nam"
+  },
+  {
+    "id": "V2_RQ-014",
+    "query": "Qoo10에서 가장 최근에 등록된 리뷰는 부탁드려요",
+    "table": "review_qoo10",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 48.5,
+    "answer_len": 1565,
+    "answer_preview": "### 📊 Qoo10 SKIN1004 브랜드 최신 리뷰 현황  #### 요약  ⚠️ 2026년 03월 07일 현재, Qoo10 SKIN1004 브랜드의 가장 최근 리뷰는 **2026년 01월 28일**에 등록된 리뷰입니다. 총 **50건**의 최신 리뷰가 조회되었으며, 이 중 **'센텔라 앰플'**이 **27건**으로 가장 많은 비중을 차지했습니다. 리뷰들"
+  },
+  {
+    "id": "V2_RQ-015",
+    "query": "큐텐 리뷰 수 달별 변화 차트 확인 부탁드립니다",
+    "table": "review_qoo10",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 35.8,
+    "answer_len": 1141,
+    "answer_preview": "### 📊 큐텐(Qoo10) SKIN1004 브랜드 월별 리뷰 수 변화  #### 요약  지난 1년간(2025년 3월 ~ 2026년 1월) 큐텐(Qoo10) SKIN1004 브랜드의 총 리뷰 수는 **49,019건**으로 집계되었습니다. 특히 **2025년 3월(11,554건)**과 **2025년 6월(11,038건)**에 가장 많은 리뷰가 발생하며 두 차"
+  },
+  {
+    "id": "V2_RQ-016",
+    "query": "Qoo10 SKIN1004 리뷰 총 몇 건이야",
+    "table": "review_qoo10",
+    "category": "total_count",
+    "status": "OK",
+    "time": 44.7,
+    "answer_len": 291,
+    "answer_preview": "### 📊 Qoo10 SKIN1004 총 리뷰 현황  #### 요약  Qoo10 채널에서 SKIN1004 브랜드의 총 리뷰 수는 **55,364건**입니다.  #### 분석 및 인사이트  *   Qoo10 채널에서 SKIN1004 브랜드에 대한 고객들의 활발한 피드백이 확인됩니다. *   `> 5만 건이 넘는 리뷰 수는 브랜드의 높은 인지도와 제품에 대한 "
+  },
+  {
+    "id": "V2_RQ-017",
+    "query": "큐텐 Centella Cleansing Oil 후기 수",
+    "table": "review_qoo10",
+    "category": "product_review",
+    "status": "OK",
+    "time": 35.7,
+    "answer_len": 323,
+    "answer_preview": "# 큐텐(Qoo10) 센텔라 클렌징 오일 후기 수  큐텐(Qoo10)에서의 **'센텔라 클렌징 오일' 단독 후기 수는 현재 정확히 확인되지 않습니다.**  ---  ## 참고: 다른 플랫폼별 후기 수  | 플랫폼 | 후기 수 | |--------|---------| | **아이허브(iHerb)** | **6,438개** | | **화해** | **5,967"
+  },
+  {
+    "id": "V2_RQ-018",
+    "query": "Qoo10 최근 5건 리부데이터 내용 보여줄 수 있어? 부탁",
+    "table": "review_qoo10",
+    "category": "recent_n",
+    "status": "OK",
+    "time": 41.5,
+    "answer_len": 1366,
+    "answer_preview": "### 📊 Qoo10 SKIN1004 최근 5건 리뷰 데이터 분석  #### 요약  Qoo10에서 SKIN1004 제품에 대한 **최근 5건**의 리뷰는 모두 **2026년 1월 28일**에 작성되었습니다. 이 리뷰들은 주로 '센텔라 앰플'과 '센텔라 퀵 카밍 패드'에 대한 내용으로, 보습, 진정, 민감성 피부 적합성, 그리고 가성비 측면에서 긍정적인 평가"
+  },
+  {
+    "id": "V2_RQ-019",
+    "query": "큐텐 2025년 리부 수 총합 좀 봐줘 알려주시면 감사하겠습니다",
+    "table": "review_qoo10",
+    "category": "date_range",
+    "status": "OK",
+    "time": 57.3,
+    "answer_len": 192,
+    "answer_preview": "2025년 큐텐(Qoo10) 플랫폼의 전체 리뷰 수 총합에 대한 공식 통계는 현재 공개되어 있지 않습니다.  큐텐은 '큐텐 어워즈' 등에서 리뷰를 평가 지표로 활용하고 있지만, 플랫폼 전체의 리뷰 총수를 외부에 공개하지는 않고 있습니다.  정확한 수치가 필요하시다면 큐텐 공식 채널이나 담당 파트너 매니저에게 직접 문의하시는 것을 권장드립니다."
+  },
+  {
+    "id": "V2_RQ-020",
+    "query": "Qoo10 상품별 리뷰 TOP",
+    "table": "review_qoo10",
+    "category": "review_count",
+    "status": "OK",
+    "time": 54.8,
+    "answer_len": 2024,
+    "answer_preview": "### 📊 Qoo10 SKIN1004 상품별 리뷰 TOP (지난 1년간)  #### 요약  지난 1년간(2025년 3월 7일 ~ 2026년 3월 7일) Qoo10에서 SKIN1004 브랜드의 상품별 리뷰를 분석한 결과, **센텔라 앰플**이 **20,415건**으로 압도적인 1위를 차지했습니다. 이어서 히알루시카 워터핏 선 세럼이 9,162건, 센텔라 퀵 "
+  },
+  {
+    "id": "V2_RQ-021",
+    "query": "큐텐 리뷰 가장 적은 제품은",
+    "table": "review_qoo10",
+    "category": "review_count",
+    "status": "OK",
+    "time": 33.1,
+    "answer_len": 531,
+    "answer_preview": "### 📊 큐텐(Qoo10) 리뷰가 가장 적은 SKIN1004 제품 분석  #### 요약  지난 1년간 큐텐에서 SKIN1004 브랜드 제품 중 리뷰 수가 가장 적은 제품은 **티트리카 마일드 필링 젤**로, 총 **34개**의 리뷰를 기록했습니다.  #### 분석 및 인사이트  *   **리뷰 최저 제품 확인**: `티트리카 마일드 필링 젤`은 지난 1년"
+  },
+  {
+    "id": "V2_RQ-022",
+    "query": "Qoo10 12월 2024년 리뷰 보여줘",
+    "table": "review_qoo10",
+    "category": "date_range",
+    "status": "OK",
+    "time": 39.8,
+    "answer_len": 325,
+    "answer_preview": "2024년 12월 Qoo10 리뷰 데이터는 현재 존재하지 않습니다.  SQL 쿼리에서 `review_date`가 '2024년 12월'인 데이터를 조회하도록 설정되어 있으나, 해당 기간은 아직 도래하지 않았거나 데이터가 수집되지 않아 조회되는 결과가 없습니다.  가장 유사한 값으로는 2023년 12월 또는 2024년 중 가장 최신 월의 데이터를 확인해 보시는"
+  },
+  {
+    "id": "V2_RQ-023",
+    "query": "큐텐 최근 20건 평가 조회",
+    "table": "review_qoo10",
+    "category": "recent_n",
+    "status": "OK",
+    "time": 49.2,
+    "answer_len": 2388,
+    "answer_preview": "### 📊 큐텐 SKIN1004 최근 20건 평가 조회 결과  #### 요약  2026년 1월 27일부터 28일까지 큐텐에서 작성된 SKIN1004 제품 평가 **20건**을 분석한 결과, 대부분의 리뷰가 긍정적인 내용을 담고 있었습니다. 특히 **'센텔라 앰플'**이 가장 많은 평가를 받았으며, 진정, 보습, 피부 트러블 개선 등 다양한 효능에 대한 만족"
+  },
+  {
+    "id": "V2_RQ-024",
+    "query": "Qoo10 Madagascar Centella Ampoule 최신 리뷰 빨리 알려주시면 감사하겠습니다",
+    "table": "review_qoo10",
+    "category": "review_content",
+    "status": "OK",
+    "time": 33.4,
+    "answer_len": 453,
+    "answer_preview": "요청하신 조건에 해당하는 데이터가 없습니다.  SQL 쿼리에서 사용된 필터 조건 중 제품명(`product_name LIKE '%Centella%Ampoule%'`)이 문제일 가능성이 높습니다. 'Qoo10' 채널의 'SKIN1004' 브랜드 제품 중 'Centella'와 'Ampoule'을 포함하는 제품명이 데이터베이스에 없는 것으로 보입니다. 실제 데이"
+  },
+  {
+    "id": "V2_RQ-025",
+    "query": "큐텐 채널별 리뷰 수 알려주세요",
+    "table": "review_qoo10",
+    "category": "review_count",
+    "status": "OK",
+    "time": 30.4,
+    "answer_len": 823,
+    "answer_preview": "### 📊 SKIN1004 큐텐 채널별 리뷰 현황  #### 요약  지난 1년간(2025년 3월 8일 ~ 2026년 3월 8일) SKIN1004 브랜드의 큐텐 채널별 리뷰 수는 총 **55,364건**으로 집계되었습니다. 이 중 'Qoo10' 채널이 **52,781건**으로 전체의 약 95.3%를 차지하며 압도적인 비중을 보였습니다.  #### 상세 데이터"
+  },
+  {
+    "id": "V2_RQ-026",
+    "query": "Qoo10 2025년 2월 후기 몇 건이야",
+    "table": "review_qoo10",
+    "category": "date_range",
+    "status": "OK",
+    "time": 49.9,
+    "answer_len": 209,
+    "answer_preview": "2025년 2월 Qoo10(큐텐)에 등록된 후기 건수에 대한 공식 집계 자료는 현재 확인되지 않습니다.  온라인 쇼핑몰의 월별 후기 수와 같은 세부 내부 데이터는 일반적으로 외부에 공개되지 않기 때문에, 정확한 수치를 안내드리기 어렵습니다.  해당 데이터가 필요하시다면 **Qoo10 셀러 어드민** 또는 **사내 이커머스 담당 부서**에 직접 확인하시는 것"
+  },
+  {
+    "id": "V2_RQ-027",
+    "query": "요즘 큐텐 리뷰데이터 데이터 전체 건수 알려주세요",
+    "table": "review_qoo10",
+    "category": "total_count",
+    "status": "OK",
+    "time": 27.1,
+    "answer_len": 436,
+    "answer_preview": "### 📊 최근 1년간 큐텐 리뷰 데이터 전체 건수  #### 요약  오늘(2026년 03월 08일)을 기준으로 지난 1년간(2025년 03월 08일 ~ 2026년 03월 08일) 큐텐(Qoo10)에서 수집된 리뷰 데이터의 총 건수는 **55,364건**입니다.  #### 분석 및 인사이트  *   지난 1년간 5만 5천 건 이상의 큐텐 리뷰 데이터가 수집"
+  },
+  {
+    "id": "V2_RQ-028",
+    "query": "Qoo10 Centella Ampoule 리뷰 월별 추세은 어떤가요?",
+    "table": "review_qoo10",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 56.5,
+    "answer_len": 788,
+    "answer_preview": "안녕하세요! 요청하신 **Qoo10 Centella Ampoule 리뷰 월별 추세** 데이터를 현재 조회하지 못했습니다.  좀 더 정확한 결과를 위해 **조건을 구체적으로 지정**해 주시면 다시 조회해 드리겠습니다. 아래 예시를 참고해 주세요:  ---  **💡 질문 예시**  1. **\"2024년 1월~12월 Qoo10 Japan에서 Madagascar "
+  },
+  {
+    "id": "V2_RQ-029",
+    "query": "큐텐에서 리뷰 최근 50건 알려주세요",
+    "table": "review_qoo10",
+    "category": "recent_n",
+    "status": "OK",
+    "time": 58.9,
+    "answer_len": 1165,
+    "answer_preview": "### 📊 큐텐 SKIN1004 브랜드 최근 리뷰 50건 분석  #### 요약  ⚠️ 큐텐 SKIN1004 브랜드의 최근 리뷰 50건이 조회되었으나, 오늘 날짜(2026년 03월 08일) 기준으로 해당 리뷰들은 **2026년 1월 25일부터 28일까지**의 데이터입니다. 조회된 리뷰 중 **센텔라 앰플**이 가장 높은 비중을 차지하며, 전반적으로 **진정,"
+  },
+  {
+    "id": "V2_RQ-030",
+    "query": "Qoo10 후기 제품명별 분류",
+    "table": "review_qoo10",
+    "category": "review_count",
+    "status": "OK",
+    "time": 33.9,
+    "answer_len": 406,
+    "answer_preview": "Qoo10에서는 **제품명별로 후기를 분류하거나 검색하는 기능을 제공하지 않습니다.**  ### Qoo10 후기 확인 방식  | 항목 | 내용 | |------|------| | **후기 확인 방법** | 개별 상품의 **상세 페이지**에 직접 접속해야 확인 가능 | | **제품명 기반 후기 검색** | ❌ 지원하지 않음 | | **플랫폼 전체 후기 필터링"
+  },
+  {
+    "id": "V2_RQ-031",
+    "query": "큐텐 Tone Brightening Capsule Serum 최신 리부 내용 확인 부탁드립니다",
+    "table": "review_qoo10",
+    "category": "review_content",
+    "status": "OK",
+    "time": 48.3,
+    "answer_len": 806,
+    "answer_preview": "# 큐텐 톤 브라이트닝 캡슐 세럼 최신 리뷰  검색 결과, **'큐텐(Qoo10)' 플랫폼의 '톤 브라이트닝 캡슐 세럼'**에 대한 별도의 최신 리뷰는 확인되지 않았습니다.  다만, 명칭이 유사한 **SKIN1004 마다가스카르 센텔라 톤 브라이트닝 캡슐 앰플**에 대한 리뷰가 다수 확인되어 해당 내용을 정리해 드립니다.  ---  ## 긍정적 평가  | "
+  },
+  {
+    "id": "V2_RQ-032",
+    "query": "우리 회사 Qoo10 전체 리뷰 중 최근 7일 리뷰 알 수 있을까요?",
+    "table": "review_qoo10",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 35.9,
+    "answer_len": 548,
+    "answer_preview": "안녕하세요! 요청하신 **Qoo10 최근 7일 리뷰 데이터**를 조회하지 못했습니다.  좀 더 정확한 결과를 위해 아래와 같이 **조건을 구체적으로** 지정해 주시면 다시 조회해 보겠습니다.  ---  ### 💡 구체적으로 지정하면 좋은 항목 - **국가/플랫폼**: Qoo10 Japan, Qoo10 Singapore 등 - **제품명**: 특정 제품(예:"
+  },
+  {
+    "id": "V2_RQ-033",
+    "query": "큐텐 리뷰 수집 날짜 기준 최신순 정렬 알려주세요",
+    "table": "review_qoo10",
+    "status": "OK",
+    "time": 26.6,
+    "answer_len": 1800,
+    "answer_preview": "### 📊 SKIN1004 큐텐 최신 리뷰 현황 (수집일 기준)  #### 요약  SKIN1004 브랜드의 큐텐 리뷰 중 **가장 최근에 수집된 50건**은 **2026년 01월 28일**에 수집된 데이터입니다. 이 리뷰들은 2025년 1월 10일부터 2025년 11월 2일까지 작성된 다양한 제품에 대한 내용을 포함하고 있습니다.  #### 상세 데이터  "
+  },
+  {
+    "id": "V2_RQ-034",
+    "query": "Qoo10 2025년 3월 리뷰 있어",
+    "table": "review_qoo10",
+    "category": "date_range",
+    "status": "OK",
+    "time": 38.4,
+    "answer_len": 504,
+    "answer_preview": "### 📊 Qoo10 2025년 3월 SKIN1004 리뷰 현황  #### 요약  2025년 3월 한 달간 Qoo10 채널에서 SKIN1004 브랜드에 대한 리뷰는 총 **13,167건**이 작성되었습니다. 이는 해당 기간 동안 고객들의 활발한 제품 구매 및 리뷰 참여가 있었음을 보여줍니다.  #### 분석 및 인사이트  *   2025년 3월 Qoo10 "
+  },
+  {
+    "id": "V2_RQ-035",
+    "query": "정확한 qoo10 평가 브랜드 SKIN1004만 필터링 좀 알려줘",
+    "table": "review_qoo10",
+    "category": "brand_review",
+    "status": "OK",
+    "time": 31.4,
+    "answer_len": 106,
+    "answer_preview": "고객님, 문의하신 Qoo10에서 특정 브랜드(SKIN1004)의 평가를 필터링하는 방법에 대한 정보는 현재 저희 CS 데이터베이스에서 찾을 수 없습니다.  해당 정보가 CS DB에 없습니다."
+  },
+  {
+    "id": "V2_RQ-036",
+    "query": "Qoo10 최근 100건 리뷰 데이터 알려줄래 얼마임?",
+    "table": "review_qoo10",
+    "category": "recent_n",
+    "status": "OK",
+    "time": 54.9,
+    "answer_len": 1296,
+    "answer_preview": "### 📊 Qoo10 SKIN1004 최근 100건 리뷰 데이터 분석  #### 요약  ⚠️ 현재 조회된 Qoo10 SKIN1004 브랜드의 최근 100건 리뷰 데이터는 **2026년 1월 24일부터 2026년 1월 28일**까지의 내용입니다 (오늘 날짜: 2026년 03월 08일). 사용자 질문에 포함된 \"얼마임?\"에 대한 가격 또는 판매액 정보는 현재 "
+  },
+  {
+    "id": "V2_RQ-037",
+    "query": "큐텐 Centella Soothing Cream 리뷰 내용 보여줄래",
+    "table": "review_qoo10",
+    "category": "review_content",
+    "status": "OK",
+    "time": 28.7,
+    "answer_len": 322,
+    "answer_preview": "해당 조건에 맞는 리뷰 내용을 찾을 수 없습니다.  SQL에서 `product_name` 필터 조건(`%Centella%Soothing_Cream%`)이 문제인 것으로 보입니다. 'Soothing_Cream' 부분에 언더바(`_`)가 사용되었는데, 실제 제품명에는 공백이 사용될 가능성이 높습니다.  비슷한 데이터를 조회할 수 있는 대안 질문은 다음과 같습니"
+  },
+  {
+    "id": "V2_RQ-038",
+    "query": "Qoo10 각 월 후기 건수 통계 알려줄래 알려주세요",
+    "table": "review_qoo10",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 37.3,
+    "answer_len": 364,
+    "answer_preview": "Qoo10(큐텐)의 **월별 후기(리뷰) 건수에 대한 공식 통계 자료는 외부에 공개되어 있지 않습니다.**  현재 확인 가능한 사항은 다음과 같습니다:  - **플랫폼 전체의 월별 리뷰 통계**는 Qoo10 측에서 공식적으로 제공하지 않고 있습니다. - **개별 상품 단위**의 리뷰 수는 Qoo10 사이트에서 확인할 수 있으나, 이를 월별로 집계한 자료는 "
+  },
+  {
+    "id": "V2_RQ-039",
+    "query": "큐텐 평가 제품별 비율",
+    "table": "review_qoo10",
+    "category": "review_count",
+    "status": "OK",
+    "time": 47.6,
+    "answer_len": 1733,
+    "answer_preview": "### 📊 Qoo10 SKIN1004 제품별 리뷰 점유율 분석 (2025년 3월 8일 ~ 2026년 3월 8일)  #### 요약  지난 1년간 Qoo10에서 SKIN1004 브랜드 제품 중 '센텔라 앰플'이 전체 리뷰의 **36.87%**를 차지하며 압도적인 1위를 기록했습니다. 상위 3개 제품인 '센텔라 앰플', '히알루시카 워터핏 선 세럼', '센텔라 "
+  },
+  {
+    "id": "V2_RQ-040",
+    "query": "Qoo10 2024년 후기 수",
+    "table": "review_qoo10",
+    "category": "date_range",
+    "status": "OK",
+    "time": 59.2,
+    "answer_len": 409,
+    "answer_preview": "2024년 Qoo10의 전체 후기 수에 대한 **정확한 공개 통계는 확인되지 않습니다.**  다만, 참고할 수 있는 관련 동향은 다음과 같습니다:  ---  ### 2024년 Qoo10 고객 참여도 관련 동향  - 2025년 진행된 **'큐텐 어워즈'**에서 2024년 성과를 기준으로 시상이 이루어졌으며, 고객 만족도와 매출 성과 등을 종합 평가했습니다. "
+  },
+  {
+    "id": "V2_RQ-041",
+    "query": "간단하게 큐텐 리뷰 원문과 한국어 번역 같이 보여줄래",
+    "table": "review_qoo10",
+    "category": "review_content",
+    "status": "OK",
+    "time": 44.0,
+    "answer_len": 2817,
+    "answer_preview": "### 📊 Qoo10 SKIN1004 최근 리뷰 원문 및 한국어 번역  #### 요약  최근 1년간 Qoo10에서 수집된 SKIN1004 제품 리뷰 **50건** 중 최신 순으로 원문과 한국어 번역을 제공합니다. 주요 제품은 센텔라 앰플로, 진정 및 보습 효과에 대한 긍정적인 평가와 높은 재구매 의사가 두드러집니다.  #### 상세 데이터  아래는 최근 1"
+  },
+  {
+    "id": "V2_RQ-042",
+    "query": "Qoo10 Centella Cleansing Oil 최신 리뷰 좀 알려주세요",
+    "table": "review_qoo10",
+    "category": "review_content",
+    "status": "OK",
+    "time": 36.1,
+    "answer_len": 394,
+    "answer_preview": "해당 조건의 데이터가 없습니다.  SQL에서 사용된 `product_name` 필터 조건(`%Centella%Cleansing_Oil%`)이 문제일 수 있습니다. 일반적으로 제품명에는 `Cleansing_Oil`과 같이 언더바(_) 대신 띄어쓰기(예: `Cleansing Oil`)가 사용됩니다. 데이터베이스에 저장된 실제 제품명과 검색 패턴이 일치하지 않아"
+  },
+  {
+    "id": "V2_RQ-043",
+    "query": "큐텐 리뷰데이터 최근 한 달 몇 건?",
+    "table": "review_qoo10",
+    "category": "recent_reviews",
+    "status": "WARN",
+    "time": 66.5,
+    "answer_len": 404,
+    "answer_preview": "### 📊 큐텐 최근 한 달 리뷰 현황  #### 요약  2026년 2월 8일부터 2026년 3월 7일까지 최근 한 달간 큐텐(Qoo10)에서 수집된 리뷰 데이터는 **총 0건**입니다.  #### 분석 및 인사이트  *   최근 한 달간 큐텐 리뷰가 **0건**으로 집계되어, 해당 기간 동안 새로운 리뷰가 없었거나 리뷰 데이터 수집에 문제가 있었을 가능성"
+  },
+  {
+    "id": "V2_RQ-044",
+    "query": "Qoo10 제품별 평가 수 TOP 5 빨리",
+    "table": "review_qoo10",
+    "category": "top_reviewed",
+    "status": "OK",
+    "time": 45.9,
+    "answer_len": 1033,
+    "answer_preview": "### 📊 Qoo10 제품별 평가 수 TOP 5 현황  #### 요약  2026년 03월 08일 기준으로 Qoo10에서 가장 많은 평가를 받은 제품은 **센텔라 앰플**로 총 **20,415건**의 평가를 기록했습니다. 이어서 히알루시카 워터핏 선 세럼이 9,162건, 센텔라 퀵 카밍 패드가 6,991건으로 상위권을 차지했습니다.  #### 상세 데이터  "
+  },
+  {
+    "id": "V2_RQ-045",
+    "query": "빠르게 큐텐 리뷰데이터 날짜별 분포",
+    "table": "review_qoo10",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 56.5,
+    "answer_len": 1937,
+    "answer_preview": "### 📊 큐텐 리뷰 데이터 날짜별 분포 분석 (2025년 3월 8일 이후)  #### 요약  큐텐 리뷰 데이터의 날짜별 분포 분석 결과, **2025년 3월 8일**부터 현재(2026년 3월 8일)까지의 기간 중 총 **327일**에 걸쳐 리뷰가 발생했습니다. 제공된 상세 데이터(2025년 3월 8일 ~ 2025년 3월 27일)에 따르면, 일별 리뷰 수는"
+  },
+  {
+    "id": "V2_RQ-046",
+    "query": "Qoo10 2025년 1분기 리뷰 수 알 수 있을까요?",
+    "table": "review_qoo10",
+    "category": "date_range",
+    "status": "OK",
+    "time": 52.7,
+    "answer_len": 429,
+    "answer_preview": "### 📊 Qoo10 2025년 1분기 리뷰 수 분석  #### 요약  2025년 1분기 Qoo10 채널에서 집계된 총 리뷰 수는 **16,899건**입니다. 이는 해당 기간 동안 Qoo10 고객들의 활발한 제품 구매 및 피드백 활동을 나타냅니다.  #### 분석 및 인사이트  *   2025년 1월부터 3월까지 Qoo10 채널에서 총 **16,899건**"
+  },
+  {
+    "id": "V2_RQ-047",
+    "query": "간단하게 큐텐 최근 리뷰 3건만 보여줘 부탁드려요",
+    "table": "review_qoo10",
+    "category": "recent_n",
+    "status": "OK",
+    "time": 21.2,
+    "answer_len": 1055,
+    "answer_preview": "### 📊 큐텐 최근 리뷰 3건 분석  #### 요약  큐텐에서 조회된 가장 최근 리뷰 3건은 모두 **센텔라 앰플** 제품에 대한 것이며, **2026년 01월 28일**에 작성되었습니다. 주요 내용은 민감성 피부 진정, 보습 효과, 그리고 도입 미용액으로서의 활용 등 긍정적인 평가가 주를 이룹니다.  #### 상세 데이터 | product_name | "
+  },
+  {
+    "id": "V2_RQ-048",
+    "query": "잠깐, Qoo10 Madagascar Centella Ampoule 리뷰 몇 개 있어?",
+    "table": "review_qoo10",
+    "category": "product_review",
+    "status": "OK",
+    "time": 55.1,
+    "answer_len": 456,
+    "answer_preview": "안녕하세요! 😊  죄송하지만, 요청하신 **Qoo10 Madagascar Centella Ampoule 리뷰 데이터**를 현재 조회하지 못했습니다.  조금 더 구체적으로 조건을 지정해 주시면 정확한 데이터를 찾는 데 도움이 됩니다. 아래 예시를 참고해 주세요!  ---  **💡 질문 예시:**  1. **\"2024년 1월~6월 Qoo10 Japan에서 Ma"
+  },
+  {
+    "id": "V2_RQ-049",
+    "query": "qoo10 리뷰 수집일 기준 정렬",
+    "table": "review_qoo10",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 52.5,
+    "answer_len": 3456,
+    "answer_preview": "### 📊 Qoo10 SKIN1004 리뷰 수집 현황 (수집일 기준 정렬)  #### 요약  SKIN1004 브랜드의 Qoo10 리뷰 **1,000건**이 조회되었습니다. 모든 리뷰는 **2026년 01월 28일**에 수집되었으며, 이는 오늘 날짜(2026년 03월 08일) 기준 약 한 달 반 전의 수집 데이터입니다. 수집된 리뷰들의 실제 작성일은 2025"
+  },
+  {
+    "id": "V2_RQ-050",
+    "query": "Qoo10 전체 리뷰데이터 데이터 수",
+    "table": "review_qoo10",
+    "category": "total_count",
+    "status": "OK",
+    "time": 52.6,
+    "answer_len": 438,
+    "answer_preview": "### 📊 Qoo10 리뷰 데이터 현황  #### 요약  2025년 03월 08일부터 현재(2026년 03월 08일)까지 Qoo10 채널에서 수집된 리뷰 데이터는 총 **55,364**건입니다.  #### 분석 및 인사이트  *   Qoo10 채널에서 지난 1년간 **5만 5천 건 이상의 리뷰가 수집**되어 고객들의 활발한 제품 구매 및 피드백 활동이 이루"
+  },
+  {
+    "id": "V2_RQ-051",
+    "query": "큐텐에서 평가 가장 많이 달린 제품 TOP 3",
+    "table": "review_qoo10",
+    "category": "top_reviewed",
+    "status": "OK",
+    "time": 37.5,
+    "answer_len": 459,
+    "answer_preview": "안녕하세요! 요청하신 **큐텐(Qoo10)에서 평가가 가장 많이 달린 제품 TOP 3** 데이터를 현재 조회하지 못했습니다.  좀 더 정확한 결과를 위해 **조건을 구체적으로 지정**해 주시면 다시 조회를 시도해 볼 수 있습니다.  ---  **💡 이렇게 질문을 바꿔보시면 좋습니다:**  1. **\"2024년 큐텐 일본에서 리뷰 수 기준 SKIN1004 제"
+  },
+  {
+    "id": "V2_RQ-052",
+    "query": "Qoo10 2025년 후기 월별 건수",
+    "table": "review_qoo10",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 39.2,
+    "answer_len": 478,
+    "answer_preview": "안녕하세요. 요청하신 **Qoo10 2025년 후기 월별 건수** 데이터를 조회하지 못했습니다.  좀 더 정확한 결과를 위해 아래 정보를 추가로 명시해 주시면 다시 조회해 드리겠습니다.  - **국가/플랫폼 구분** : Qoo10 Japan, Qoo10 글로벌 등 - **특정 제품명** : 예) 마다가스카르 센텔라 앰플 등 - **기간 범위** : 특정 월"
+  },
+  {
+    "id": "V2_RQ-053",
+    "query": "큐텐 Centella Ampoule 후기 한국어 번역 보여줄래?",
+    "table": "review_qoo10",
+    "category": "review_content",
+    "status": "OK",
+    "time": 37.9,
+    "answer_len": 689,
+    "answer_preview": "# SKIN1004 마다가스카르 센텔라 앰플 — 큐텐 후기 요약  검색된 한국어 후기 정보를 정리해 드리겠습니다.  ---  ## ✅ 긍정적 후기  | 항목 | 주요 내용 | |------|-----------| | **진정 효과** | 붉고 자극받은 피부를 진정시키는 데 효과적. 민감성 피부에 순하게 작용하며 **트러블 완화**에도 도움 | | **가벼운"
+  },
+  {
+    "id": "V2_RQ-054",
+    "query": "Qoo10 리뷰데이터 제품명에 Centella 포함된 것만",
+    "table": "review_qoo10",
+    "category": "product_review",
+    "status": "OK",
+    "time": 29.4,
+    "answer_len": 371,
+    "answer_preview": "해당 조건의 데이터가 없습니다.  SQL 쿼리의 `collect_date >= '2025-03-08'` 조건이 문제의 원인입니다. `collect_date`는 데이터가 수집된 날짜를 의미하는데, 2025년 3월 8일은 미래 날짜이므로 해당 날짜 이후에 수집된 데이터는 존재하지 않습니다.  비슷한 데이터를 조회할 수 있는 대안 질문은 다음과 같습니다: 1. "
+  },
+  {
+    "id": "V2_RQ-055",
+    "query": "요즘 큐텐 2024년 11월 리뷰 데이터 확인 가능한가요?",
+    "table": "review_qoo10",
+    "category": "date_range",
+    "status": "OK",
+    "time": 27.7,
+    "answer_len": 510,
+    "answer_preview": "안녕하세요! 😊  요청하신 **큐텐 2024년 11월 리뷰 데이터**를 현재 조회하지 못했습니다.  좀 더 정확한 데이터를 찾아드리기 위해, 질문을 아래와 같이 **구체적으로** 다시 요청해 주시면 감사하겠습니다.  ---  ### 📌 구체적으로 명시해 주시면 좋은 항목 - **국가/플랫폼**: 큐텐 재팬 / 큐텐 글로벌 등 - **제품명**: 특정 제품 "
+  },
+  {
+    "id": "V2_RQ-056",
+    "query": "혹시 Qoo10 후기 수 상위 10개 제품",
+    "table": "review_qoo10",
+    "category": "top_reviewed",
+    "status": "WARN",
+    "time": 64.0,
+    "answer_len": 630,
+    "answer_preview": "# Qoo10 후기 수 상위 제품  안타깝게도 Qoo10에서 **전체 상품 후기 수 기준 공식 순위 Top 10**은 플랫폼 자체에서 제공하지 않아 정확한 리스트를 확인하기 어렵습니다.  다만, 검색을 통해 **높은 후기 수를 기록한 것으로 확인된 제품**들은 다음과 같습니다:  | 순위 | 제품 | 후기 수 | 비고 | |------|------|----"
+  },
+  {
+    "id": "V2_RQ-057",
+    "query": "큐텐 최근 리부 15건 내용 좀 봐줘",
+    "table": "review_qoo10",
+    "category": "recent_n",
+    "status": "OK",
+    "time": 59.2,
+    "answer_len": 696,
+    "answer_preview": "죄송합니다. 현재 제공된 검색 결과에서는 **큐텐(Qoo10)의 최신 사용자 리뷰 15건**을 직접 확인할 수 없었습니다.  ## 확인된 큐텐 관련 최신 동향  검색을 통해 리뷰 원문 대신 아래와 같은 동향 정보가 파악되었습니다:  | 구분 | 내용 | |------|------| | **리뷰의 영향력** | 큐텐 재팬에서 리뷰가 소비자 구매 결정에 큰 영"
+  },
+  {
+    "id": "V2_RQ-058",
+    "query": "Qoo10 평가 한국어 번역 최근 것 알려주세요",
+    "table": "review_qoo10",
+    "category": "review_content",
+    "status": "OK",
+    "time": 27.8,
+    "answer_len": 721,
+    "answer_preview": "# 큐텐(Qoo10) 최근 평가 요약  큐텐에 대한 최근 평가는 **한국 내 사업**과 **일본 중심 해외 사업**에서 상반된 모습을 보이고 있습니다.  ---  ## 🔴 부정적 평가 (큐텐 코리아)  | 항목 | 내용 | |------|------| | **정산 지연** | 2024년 7월, 위메프·티몬의 모회사인 큐텐 코리아가 판매자 정산 대금을 제때 "
+  },
+  {
+    "id": "V2_RQ-059",
+    "query": "큐텐 제품 리뷰 분석해줘해줘",
+    "table": "review_qoo10",
+    "category": "review_count",
+    "status": "OK",
+    "time": 55.9,
+    "answer_len": 417,
+    "answer_preview": "# 데이터 조회 안내  안녕하세요. 요청하신 **큐텐 제품 리뷰 데이터**를 현재 조회하지 못했습니다.  좀 더 구체적인 조건을 포함하여 질문해 주시면, 정확한 데이터를 찾는 데 도움이 됩니다.  ---  ## 💡 이렇게 질문해 보세요  1. **\"2024년 하반기 큐텐 재팬에서 마다가스카르 센텔라 토닝 토너의 리뷰 분석해줘\"** 2. **\"큐텐 글로벌에서"
+  },
+  {
+    "id": "V2_RQ-060",
+    "query": "Qoo10 SKIN1004 브랜드 후기 전체 보여줘 알려주시면 감사하겠습니다",
+    "table": "review_qoo10",
+    "category": "brand_review",
+    "status": "OK",
+    "time": 36.5,
+    "answer_len": 2458,
+    "answer_preview": "### 📊 Qoo10 SKIN1004 브랜드 최신 고객 후기 분석 보고서  #### 요약  SKIN1004 브랜드의 Qoo10 채널 최신 고객 후기 **1,000건**을 분석한 결과입니다. 조회된 후기는 **2026년 1월 24일부터 2026년 1월 28일까지** 작성된 내용이며, 가장 최근에 작성된 순서대로 추출되었습니다. 이 기간 동안 **31개**의 "
+  },
+  {
+    "id": "V2_RQ-061",
+    "query": "큐텐 후기 2025년 상반기 데이터",
+    "table": "review_qoo10",
+    "category": "date_range",
+    "status": "WARN",
+    "time": 64.5,
+    "answer_len": 1911,
+    "answer_preview": "### 📊 2025년 상반기 큐텐 SKIN1004 후기 분석 보고서  #### 요약  ⚠️ 2025년 상반기 큐텐 SKIN1004 후기 데이터를 요청하셨으나, 현재 조회된 데이터는 **2025년 1월 1일부터 1월 4일까지**의 후기 **1,000건**입니다. 해당 기간 동안 총 **1,000건**의 후기가 수집되었으며, **22개**의 고유 제품에 대한 "
+  },
+  {
+    "id": "V2_RQ-062",
+    "query": "혹시 Qoo10 리뷰 건수 추이 그래프",
+    "table": "review_qoo10",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 28.1,
+    "answer_len": 419,
+    "answer_preview": "## 데이터 조회 안내  안녕하세요. 요청하신 **Qoo10 리뷰 건수 추이** 데이터를 조회하지 못했습니다.  좀 더 구체적인 조건을 포함하여 질문해 주시면 정확한 데이터를 찾는 데 도움이 됩니다. 아래 항목들을 명시해 주세요:  > **기간** · **국가(마켓)** · **특정 제품명** · **데이터 단위(월별/주별)** 등  ---  ### 💡 질"
+  },
+  {
+    "id": "V2_RQ-063",
+    "query": "큐텐 최근 후기 원문 보여줘 좀",
+    "table": "review_qoo10",
+    "category": "review_content",
+    "status": "WARN",
+    "time": 72.5,
+    "answer_len": 1271,
+    "answer_preview": "# 큐텐(Qoo10) 최근 후기 원문  큐텐에 대한 최근 후기는 **한국 큐텐(모기업)**과 **큐텐 재팬**으로 극명하게 나뉩니다.  ---  ## 1. 한국 큐텐 (티몬·위메프 정산 지연 사태)  2024년 대규모 정산 지연으로 인한 피해 호소가 주를 이룹니다.  **여행 상품 구매자:**  > \"암 투병 중인 시부모님과 첫 해외여행을 가려고 800만 "
+  },
+  {
+    "id": "V2_RQ-064",
+    "query": "Qoo10 Tone Brightening Capsule Serum 후기 수 추이",
+    "table": "review_qoo10",
+    "category": "product_review",
+    "status": "OK",
+    "time": 34.0,
+    "answer_len": 463,
+    "answer_preview": "안녕하세요. 요청하신 **Qoo10 Tone Brightening Capsule Serum 후기 수 추이** 데이터를 조회하지 못했습니다.  좀 더 정확한 결과를 위해 아래와 같이 **조건을 구체적으로 지정**해 주시면 다시 조회해 드리겠습니다.  ---  **📌 질문 예시**  1. **\"2024년 1월~12월 Qoo10 Japan에서 Tone Brigh"
+  },
+  {
+    "id": "V2_RQ-065",
+    "query": "큐탠 리뷰 수집일 최신 데이터 좀 부탁드려요",
+    "table": "review_qoo10",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 54.2,
+    "answer_len": 2994,
+    "answer_preview": "### 📊 큐텐 SKIN1004 브랜드 최신 리뷰 데이터 (2026년 1월 28일 수집 기준)  #### 요약  SKIN1004 브랜드의 큐텐 리뷰 최신 데이터는 **2026년 1월 28일**에 수집된 총 **50건**의 리뷰입니다. 오늘 날짜(2026년 3월 8일) 기준으로 약 한 달 반 전의 데이터이며, 다양한 제품에 대한 사용자들의 경험과 의견, 그리"
+  },
+  {
+    "id": "V2_RQ-066",
+    "query": "Qoo10 2025년 2월 리부 내용 부탁드려요",
+    "table": "review_qoo10",
+    "category": "date_range",
+    "status": "OK",
+    "time": 36.4,
+    "answer_len": 346,
+    "answer_preview": "죄송합니다. **Qoo10의 2025년 2월 리브랜딩(리부)에 대한 구체적인 정보는 확인되지 않았습니다.**  현재 확인 가능한 2025년 2월 전후 Qoo10 관련 주요 내용은 다음과 같습니다:  | 시기 | 내용 | |---|---| | **2025년 2월 말** | 메가와리(대규모 할인 행사) 1차 예상 기간: 2월 28일(금) 17:00 ~ 3월 1"
+  },
+  {
+    "id": "V2_RQ-067",
+    "query": "큐텐 전체 리부 건수 합산",
+    "table": "review_qoo10",
+    "category": "total_count",
+    "status": "OK",
+    "time": 32.3,
+    "answer_len": 342,
+    "answer_preview": "큐텐(Qoo10) 플랫폼 전체의 총 리뷰 건수 합산치는 **공식적으로 발표된 바가 없어 정확한 수치를 확인하기 어렵습니다.**  다만, 일부 공개된 데이터는 다음과 같습니다:  | 구분 | 리뷰 건수 | 기간 | |---|---|---| | **큐텐재팬 샘플마켓 K-제품 리뷰** | **약 28만 건 이상** | 2021.05 ~ 2025.10 (약 4년 "
+  },
+  {
+    "id": "V2_RQ-068",
+    "query": "Qoo10 제품 기준 최근 후기 1건씩",
+    "table": "review_qoo10",
+    "category": "review_content",
+    "status": "OK",
+    "time": 46.3,
+    "answer_len": 371,
+    "answer_preview": "## Qoo10 최근 후기 요약  ### 닥터지 (Dr.G) 블랙 스네일 크림 - **작성일:** 2026년 3월 2일 - **주요 내용:** 두 번째 재구매 제품으로, 피부과 의사가 개발했다는 점이 매력 포인트. 달팽이 분비물 성분이 함유되어 **보습감이 뛰어나고** 피부에 윤기와 탄력을 준다고 평가. - **사용자 평가:** 건조한 계절에 사용하기 좋은"
+  },
+  {
+    "id": "V2_RQ-069",
+    "query": "큐텐 평가 날짜 범위 알려줘",
+    "table": "review_qoo10",
+    "category": "date_range",
+    "status": "OK",
+    "time": 51.9,
+    "answer_len": 645,
+    "answer_preview": "## 큐텐(Qoo10) 평가 날짜 범위  검색 결과에 따르면, 큐텐은 **명확한 단일 평가 날짜 범위가 정해져 있지 않고** 각 기준에 따라 상시적 또는 정기적으로 진행됩니다.  ---  ### 1. 판매자 등급 평가 - **매월 1일**에 등급이 갱신됩니다. - 이전 기간의 **판매 실적**과 **서비스 점수** 등을 바탕으로 산정됩니다.  ### 2. "
+  },
+  {
+    "id": "V2_RQ-070",
+    "query": "Qoo10 리부 수 가장 적은 제품은?",
+    "table": "review_qoo10",
+    "category": "review_count",
+    "status": "OK",
+    "time": 32.8,
+    "answer_len": 332,
+    "answer_preview": "Qoo10에서 리뷰 수가 가장 적은 단일 상품을 특정하는 것은 **사실상 불가능**합니다.  ## 이유  - Qoo10 플랫폼에서 리뷰 수 기준 **오름차순 정렬 기능을 제공하지 않습니다.** - 새로 등록되는 상품이 지속적으로 추가되므로, 리뷰가 0개인 상품은 항상 다수 존재합니다.  ## 리뷰가 적은 상품을 찾는 방법  1. **'최신 상품' 정렬 활용"
+  },
+  {
+    "id": "V2_RQ-071",
+    "query": "큐텐 Centella Cleansing Oil 리뷰 몇 건 어떻게 되나요?",
+    "table": "review_qoo10",
+    "category": "product_review",
+    "status": "OK",
+    "time": 27.8,
+    "answer_len": 506,
+    "answer_preview": "### 📊 큐텐 Centella Cleansing Oil 리뷰 현황 (2025년 3월 8일 이후)  #### 요약  2025년 3월 8일부터 현재(2026년 3월 8일)까지 큐텐에서 SKIN1004 Centella Cleansing Oil 제품에 대한 리뷰는 **0건**으로 확인되었습니다.  #### 분석 및 인사이트  *   조회 기간(2025년 3월 8"
+  },
+  {
+    "id": "V2_RQ-072",
+    "query": "간단하게 Qoo10 최근 한 주간 리뷰?",
+    "table": "review_qoo10",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 39.7,
+    "answer_len": 418,
+    "answer_preview": "안녕하세요! 😊  요청하신 **Qoo10 최근 한 주간 리뷰 데이터**를 조회하지 못했습니다.  좀 더 구체적인 조건을 포함해 주시면 정확한 데이터를 찾는 데 도움이 됩니다. 아래 예시를 참고해 주세요!  ---  **💡 질문 예시:**  1. **\"Qoo10 일본에서 최근 7일간(6/30~7/6) 마다가스카르 센텔라 토닝 토너의 리뷰 건수와 평점은?\"**"
+  },
+  {
+    "id": "V2_RQ-073",
+    "query": "궁금한데 큐텐 후기 월별 증감 추이 알려주세요",
+    "table": "review_qoo10",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 34.8,
+    "answer_len": 471,
+    "answer_preview": "안녕하세요! 😊  큐텐 후기 월별 증감 추이에 대해 조회를 시도했으나, **요청하신 데이터를 조회하지 못했습니다.**  조금 더 구체적인 조건을 알려주시면 정확한 데이터를 찾는 데 도움이 됩니다. 아래 항목들을 포함해 주시면 좋겠습니다:  - **기간** (예: 최근 6개월, 2024년 1월~12월 등) - **국가/마켓** (예: 큐텐 재팬, 큐텐 글로벌"
+  },
+  {
+    "id": "V2_RQ-074",
+    "query": "Qoo10 2024년 10월 후기 수",
+    "table": "review_qoo10",
+    "category": "date_range",
+    "status": "OK",
+    "time": 38.4,
+    "answer_len": 337,
+    "answer_preview": "2024년 10월 Qoo10의 전체 후기 수에 대한 **정확한 통계는 공개적으로 제공되지 않았습니다.**  다만, 2024년 10월에 발표된 **'Qoo10 이용 실태 조사'**에 따르면 후기 활용 현황은 다음과 같습니다:  | 항목 | 비율 | |---|---| | **이미지 포함 체험 후기 참고** (여성 이용자) | **93%** | | **세일 기간"
+  },
+  {
+    "id": "V2_RQ-075",
+    "query": "큐텐 제품 리뷰 순위 알려주세요",
+    "table": "review_qoo10",
+    "category": "top_reviewed",
+    "status": "OK",
+    "time": 49.3,
+    "answer_len": 1494,
+    "answer_preview": "### 📊 Qoo10 SKIN1004 제품 리뷰 순위 분석 (2025년 3월 8일 ~ 2026년 3월 8일)  #### 요약  지난 1년간(2025년 3월 8일 ~ 2026년 3월 8일) 큐텐에서 SKIN1004 브랜드 제품 중 가장 많은 리뷰를 받은 제품은 **센텔라 앰플**로, 총 **20,415건**의 압도적인 리뷰 수를 기록했습니다. 이어서 히알루시"
+  },
+  {
+    "id": "V2_RQ-076",
+    "query": "잠깐, Qoo10 Madagascar Centella Ampoule 리부데이터 원문 알려주세요",
+    "table": "review_qoo10",
+    "category": "review_content",
+    "status": "OK",
+    "time": 25.8,
+    "answer_len": 355,
+    "answer_preview": "해당 조건에 맞는 데이터가 존재하지 않습니다.  SQL 쿼리에서 `collect_date` 조건이 '2025-03-08'로 설정되어 있습니다. 이는 미래 날짜이므로, 현재까지 수집된 데이터 중 해당 조건을 만족하는 데이터는 없습니다.  비슷한 데이터를 조회할 수 있는 대안 질문은 다음과 같습니다: *   \"Qoo10 Madagascar Centella Am"
+  },
+  {
+    "id": "V2_RQ-077",
+    "query": "간단하게 큐텐 최근 리뷰 25건",
+    "table": "review_qoo10",
+    "category": "recent_n",
+    "status": "OK",
+    "time": 57.9,
+    "answer_len": 529,
+    "answer_preview": "## 📊 Qoo10 SKIN1004 최근 리뷰 분석 보고서 (상위 20건 기준)  #### 요약  SKIN1004의 Qoo10 최근 리뷰는 **2026년 1월 27일~28일**에 작성된 리뷰들이며, 총 25건 중 상위 20건이 분석되었습니다. 이 중 **센텔라 앰플**이 **9건**으로 가장 많은 리뷰를 차지했으며, 전반적으로 보습, 진정, 끈적임 없는 사"
+  },
+  {
+    "id": "V2_RQ-078",
+    "query": "참고로 Qoo10 리뷰데이터 데이터 채널 정보 좀 알려줘",
+    "table": "review_qoo10",
+    "category": "review_count",
+    "status": "OK",
+    "time": 25.6,
+    "answer_len": 466,
+    "answer_preview": "### 📊 Qoo10 리뷰 데이터 채널 정보  #### 요약  Qoo10 리뷰 데이터에는 **총 2가지**의 채널 정보가 존재합니다. 확인된 채널은 'Q10'과 'Qoo10'입니다.  #### 상세 데이터 | 채널명 | |:---| | Q10 | | Qoo10 |  #### 분석 및 인사이트  *   Qoo10 리뷰 데이터는 'Q10'과 'Qoo10' 두 "
+  },
+  {
+    "id": "V2_RQ-079",
+    "query": "큐텐 2025년 전체 리뷰 수 확인 부탁드립니다",
+    "table": "review_qoo10",
+    "category": "date_range",
+    "status": "OK",
+    "time": 56.2,
+    "answer_len": 536,
+    "answer_preview": "안녕하세요, 요청하신 **큐텐 2025년 전체 리뷰 수** 데이터를 현재 조회하지 못했습니다.  좀 더 정확한 결과를 위해 **조건을 구체적으로** 지정해 주시면 다시 조회해 드리겠습니다. 아래 예시를 참고해 주세요.  ---  **질문 예시**  1. **\"큐텐 일본에서 2025년 1월~3월 마다가스카르 센텔라 토너의 리뷰 수를 알려주세요.\"** 2. *"
+  },
+  {
+    "id": "V2_RQ-080",
+    "query": "Qoo10 Centella Soothing Cream 리뷰 수 변화?",
+    "table": "review_qoo10",
+    "category": "product_review",
+    "status": "OK",
+    "time": 33.4,
+    "answer_len": 540,
+    "answer_preview": "해당 조건에 맞는 데이터가 존재하지 않습니다.  SQL에서 사용된 `product_name LIKE '%Centella%Soothing_Cream%'` 필터 조건이 문제일 가능성이 높습니다. 데이터베이스에 \"Centella Soothing Cream\"이라는 정확한 제품명이 없거나, 다른 명칭으로 저장되어 있을 수 있습니다. SKIN1004 제품의 경우 \"마"
+  },
+  {
+    "id": "V2_RQ-081",
+    "query": "확인 좀 해줘 큐탠 리부 원문과 번역문 비교",
+    "table": "review_qoo10",
+    "category": "review_content",
+    "status": "OK",
+    "time": 46.9,
+    "answer_len": 387,
+    "answer_preview": "입력하신 \"큐텐 리부 원문과 번역문 비교\"에 대해 확인한 결과, **비교할 수 있는 특정 원문이나 번역문은 존재하지 않는 것으로 파악됩니다.**  검색 결과에 따르면:  - **'큐텐 리부(Qoo10 Reboot)'**는 특정 문서나 문학 작품이 아닙니다. - 일본 이커머스 플랫폼 **큐텐(Qoo10)**에서 판매되는 상품명에 'Reboot(리부트)'가 포"
+  },
+  {
+    "id": "V2_RQ-082",
+    "query": "Qoo10 상품별 리뷰 비율 차트",
+    "table": "review_qoo10",
+    "category": "review_count",
+    "status": "OK",
+    "time": 37.3,
+    "answer_len": 2575,
+    "answer_preview": "### 📊 Qoo10 SKIN1004 상품별 리뷰 비율 분석  #### 요약  지난 1년간(2025년 3월 8일 ~ 2026년 3월 8일) Qoo10에서 SKIN1004 브랜드의 상품별 리뷰를 분석한 결과, **'센텔라 앰플'**이 전체 리뷰의 **36.87%**를 차지하며 압도적인 1위를 기록했습니다. 상위 3개 제품인 센텔라 앰플, 히알루시카 워터핏 선"
+  },
+  {
+    "id": "V2_RQ-083",
+    "query": "큐텐 후기 최근 2주간 데이터 확인 가능한가요?",
+    "table": "review_qoo10",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 37.6,
+    "answer_len": 333,
+    "answer_preview": "해당 조건의 데이터가 존재하지 않습니다.  SQL 쿼리에서 수집일(collect_date) 필터가 2026년 2월 22일 이후의 데이터를 조회하도록 설정되어 있습니다. 현재 시점에서는 2026년 데이터가 존재하지 않으므로 결과가 0행으로 나타났습니다. \"최근 2주간\" 데이터를 조회하려면 현재 날짜를 기준으로 필터링해야 합니다.  비슷한 데이터를 조회할 수 "
+  },
+  {
+    "id": "V2_RQ-084",
+    "query": "요즘 Qoo10 리뷰 총 건수와 제품 수",
+    "table": "review_qoo10",
+    "category": "total_count",
+    "status": "OK",
+    "time": 34.0,
+    "answer_len": 426,
+    "answer_preview": "안녕하세요! 요청하신 **Qoo10 리뷰 총 건수와 제품 수** 데이터를 조회하지 못했습니다.  좀 더 정확한 결과를 위해 **조건을 구체적으로** 지정해 주시면 다시 조회해 드리겠습니다. 예를 들어 기간, 국가(Qoo10 Japan / Qoo10 글로벌 등), 특정 제품명 등을 함께 알려주시면 도움이 됩니다.  ---  ### 💡 이렇게 질문해 보시면 좋"
+  },
+  {
+    "id": "V2_RQ-085",
+    "query": "간단하게 큐텐 2024년 하반기 후기 알려주세요",
+    "table": "review_qoo10",
+    "category": "date_range",
+    "status": "WARN",
+    "time": 62.6,
+    "answer_len": 450,
+    "answer_preview": "## 큐텐(Qoo10) 2024년 하반기 주요 동향  2024년 하반기 큐텐은 **판매자 정산 지연** 문제로 큰 논란을 겪었습니다.  ### 핵심 이슈  1. **정산 지연 사태** — 2023년 10월 변경된 정산 주기로 인해 2024년 7월까지 판매 대금 지급이 지연되었습니다. 자회사 **티몬·위메프**에서도 동일 문제가 발생했으며, 큐익스프레스의 나"
+  },
+  {
+    "id": "V2_RQ-086",
+    "query": "Qoo10 리뷰 수 기준 제품 랭킹표",
+    "table": "review_qoo10",
+    "category": "top_reviewed",
+    "status": "OK",
+    "time": 32.9,
+    "answer_len": 1531,
+    "answer_preview": "### 📊 Qoo10 SKIN1004 제품 리뷰 수 랭킹  #### 요약  SKIN1004 제품 중 Qoo10에서 가장 많은 리뷰를 받은 제품은 **센텔라 앰플**로, 총 **20,415개**의 압도적인 리뷰 수를 기록했습니다. 다음으로는 **히알루시카 워터핏 선 세럼**이 **9,162개**, **센텔라 퀵 카밍 패드**가 **6,991개**의 리뷰를 받"
+  },
+  {
+    "id": "V2_RQ-087",
+    "query": "큐텐 최근 리뷰 내용 요약해주세요",
+    "table": "review_qoo10",
+    "category": "review_content",
+    "status": "OK",
+    "time": 46.1,
+    "answer_len": 1579,
+    "answer_preview": "### 📊 SKIN1004 큐텐 최근 리뷰 분석 보고서  #### 요약  2026년 1월 25일부터 28일까지의 큐텐 SKIN1004 제품 리뷰 **50건**을 분석한 결과, **'센텔라 앰플'**이 **27건**으로 가장 많은 리뷰를 받았으며, 전반적으로 **진정, 보습, 끈적임 없는 사용감**에 대한 긍정적인 평가가 주를 이루었습니다. 많은 사용자들이 "
+  },
+  {
+    "id": "V2_RQ-088",
+    "query": "잠깐, Qoo10 월별 리뷰 수 평균",
+    "table": "review_qoo10",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 32.1,
+    "answer_len": 321,
+    "answer_preview": "안녕하세요! 요청하신 **Qoo10 월별 리뷰 수 평균** 데이터를 조회하지 못했습니다.  좀 더 구체적인 조건을 추가해 주시면 정확한 데이터를 찾는 데 도움이 됩니다. 아래 예시를 참고해 주세요:  > **질문 예시**  > 1. \"2024년 Qoo10 일본 채널의 월별 리뷰 수 평균을 알려줘\"  > 2. \"Qoo10에서 마다가스카르 센텔라 토닝 토너의 "
+  },
+  {
+    "id": "V2_RQ-089",
+    "query": "큐텐 후기 제품명 목록",
+    "table": "review_qoo10",
+    "category": "review_count",
+    "status": "OK",
+    "time": 49.3,
+    "answer_len": 1154,
+    "answer_preview": "# 큐텐(Qoo10) 후기 기반 인기 제품 목록  최근 후기 및 판매량 기준으로 자주 언급되는 제품들입니다.  ---  ## 🧴 뷰티 — 스킨케어 | 브랜드 | 제품명 | |---|---| | **아누아(Anua)** | 비타민 스킨케어 세트 | | **메디큐브(Medicube)** | 에이지알(AGE-R) 부스터 프로 | | **VT코스메틱** | AC케"
+  },
+  {
+    "id": "V2_RQ-090",
+    "query": "Qoo10 2025년 1월 리뷰 내용 보여줄래",
+    "table": "review_qoo10",
+    "category": "review_content",
+    "status": "OK",
+    "time": 52.7,
+    "answer_len": 358,
+    "answer_preview": "안녕하세요! 요청하신 **Qoo10 2025년 1월 리뷰 데이터**를 조회하지 못했습니다.  좀 더 구체적인 조건을 추가해 주시면 정확한 데이터를 찾는 데 도움이 됩니다. 예를 들어 **국가, 특정 제품명, 리뷰 유형(평점, 텍스트 등)** 등을 명시해 주세요.  **질문 예시:** 1. *\"Qoo10 일본에서 2025년 1월 마다가스카르 히알루론산 토너의"
+  },
+  {
+    "id": "V2_RQ-091",
+    "query": "큐텐에서 Centella 제품 리뷰데이터 전체 얼마임?",
+    "table": "review_qoo10",
+    "category": "product_review",
+    "status": "OK",
+    "time": 44.8,
+    "answer_len": 807,
+    "answer_preview": "### 📊 큐텐 SKIN1004 센텔라 제품 리뷰 현황 (2025년 3월 8일 이후)  #### 요약  ⚠️ 큐텐에서 SKIN1004 브랜드의 'Centella' 제품에 대한 리뷰 데이터는 2025년 3월 8일부터 현재(2026년 3월 8일)까지 **총 0건**으로 확인됩니다. 이는 해당 기간 동안 조회 조건에 부합하는 리뷰가 수집되지 않았음을 의미합니다."
+  },
+  {
+    "id": "V2_RQ-092",
+    "query": "Qoo10 리뷰 최신 데이터 날짜가 언제야",
+    "table": "review_qoo10",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 32.7,
+    "answer_len": 476,
+    "answer_preview": "### 📊 Qoo10 리뷰 최신 데이터 날짜 확인  #### 요약  Qoo10 리뷰 데이터는 **2026년 01월 28일**까지 수집된 것이 최신입니다. 이는 오늘 날짜(2026년 03월 08일) 기준으로 약 한 달 반 가량 이전 데이터입니다.  #### 분석 및 인사이트  *   현재 Qoo10 리뷰 데이터는 **2026년 01월 28일**을 마지막으로 "
+  },
+  {
+    "id": "V2_RQ-093",
+    "query": "큐텐 2024년 9월 리뷰데이터 건수",
+    "table": "review_qoo10",
+    "category": "date_range",
+    "status": "WARN",
+    "time": 64.2,
+    "answer_len": 560,
+    "answer_preview": "# 데이터 조회 안내  안녕하세요. 요청하신 **큐텐(Qoo10) 2024년 9월 리뷰 데이터 건수**를 현재 데이터베이스에서 조회하지 못했습니다.  좀 더 정확한 결과를 위해 **조건을 구체적으로 지정**해 주시면 다시 조회를 시도해 보겠습니다.  ---  ## 💡 이렇게 질문해 보시면 좋습니다  > **예시 1)** \"큐텐 **일본** 2024년 9월 "
+  },
+  {
+    "id": "V2_RQ-094",
+    "query": "Qoo10 후기 주간 트렌드",
+    "table": "review_qoo10",
+    "category": "monthly_trend",
+    "status": "WARN",
+    "time": 87.5,
+    "answer_len": 712,
+    "answer_preview": "# Qoo10 주간 후기 트렌드 (2026년 3월 첫째 주)  K-뷰티 제품의 강세가 지속되는 가운데, **'이너뷰티' 제품군이 새로운 핵심 트렌드**로 부상하고 있습니다.  ---  ## 1. K-이너뷰티의 부상 - **콜라겐, 세라마이드** 등 기능성 성분을 함유한 한국산 이너뷰티 제품 수요가 눈에 띄게 증가 - 스킨케어·메이크업을 넘어 **섭취를 통한"
+  },
+  {
+    "id": "V2_RQ-095",
+    "query": "큐텐 SKIN1004 평가만 보여주세요",
+    "table": "review_qoo10",
+    "category": "brand_review",
+    "status": "OK",
+    "time": 22.5,
+    "answer_len": 184,
+    "answer_preview": "고객님, 문의하신 '큐텐 SKIN1004 평가'에 대한 정보는 현재 CS 데이터베이스에서 찾을 수 없습니다. 저희 데이터베이스는 제품 성분, 사용 가능 여부, 품질 관련 문의 등 내부 Q&A 자료를 기반으로 하고 있어, 특정 판매 채널의 고객 평가 정보는 포함되어 있지 않습니다.  **출처:** CS 데이터베이스 검색 결과 없음"
+  },
+  {
+    "id": "V2_RQ-096",
+    "query": "Qoo10 최근 후기 7건 한국어로?",
+    "table": "review_qoo10",
+    "status": "OK",
+    "time": 42.9,
+    "answer_len": 827,
+    "answer_preview": "# Qoo10 최근 이용 후기 요약  최근 Qoo10 관련 후기는 대부분 **큐텐재팬(Qoo10 Japan)**에 집중되어 있습니다. 본사 큐텐은 2024년 여름 자금난으로 정산 지연 사태를 겪으며 사실상 서비스가 중단된 상태입니다.  현재 검색 정보에서 확인 가능한 후기는 아래와 같으며, **7건 전체를 확보하기는 어렵고 확인된 후기만** 정리해 드립니다"
+  },
+  {
+    "id": "V2_RQ-097",
+    "query": "큐텐 Tone Brightening Capsule Serum 후기 원문",
+    "table": "review_qoo10",
+    "category": "review_content",
+    "status": "OK",
+    "time": 53.5,
+    "answer_len": 415,
+    "answer_preview": "검색 결과에서 확인된 정보는 후기의 **핵심 요약본**이며, 개별 후기의 원문 텍스트는 제공되지 않았습니다.  원문 후기를 직접 확인하시려면 아래 채널을 참고해 주세요:  | 채널 | 확인 방법 | |------|-----------| | **Qoo10 (큐텐)** | 제품 페이지 → Reviews 탭 | | **Amazon** | \"SKIN1004 Ton"
+  },
+  {
+    "id": "V2_RQ-098",
+    "query": "Qoo10 리뷰 제품별 최신 날짜 궁금해",
+    "table": "review_qoo10",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 41.8,
+    "answer_len": 1519,
+    "answer_preview": "### 📊 Qoo10 SKIN1004 제품별 최신 리뷰 날짜 분석  #### 요약  ⚠️ 2026년 03월 08일 현재, Qoo10 SKIN1004 제품 리뷰 데이터는 **2026년 01월 28일**까지 존재합니다. 가장 최신 리뷰가 작성된 제품은 **센텔라 앰플**과 **센텔라 퀵 카밍 패드**로, 모두 **2026년 01월 28일**에 리뷰가 확인되었습"
+  },
+  {
+    "id": "V2_RQ-099",
+    "query": "혹시 큐텐 리뷰 분기별 추이 좀 확인 부탁드립니다",
+    "table": "review_qoo10",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 32.2,
+    "answer_len": 1133,
+    "answer_preview": "### 📊 큐텐 SKIN1004 리뷰 분기별 추이 분석  #### 요약  ⚠️ 2026년 1분기 데이터는 현재 3월 8일까지의 데이터만 포함되어 있습니다 (오늘: 2026년 03월 08일). 또한, 2025년 1분기 데이터는 3월 8일부터의 기록입니다. SKIN1004 브랜드의 큐텐 리뷰는 2025년 2분기에 **15,508건**으로 가장 많았으며, 이후 "
+  },
+  {
+    "id": "V2_RQ-100",
+    "query": "우리 회사 Qoo10 전체 리뷰 중 2025년 비율 빨리",
+    "table": "review_qoo10",
+    "category": "date_range",
+    "status": "OK",
+    "time": 50.9,
+    "answer_len": 517,
+    "answer_preview": "## 데이터 조회 안내  안녕하세요. 요청하신 **Qoo10 전체 리뷰 중 2025년 비율** 데이터를 조회하지 못했습니다.  좀 더 정확한 결과를 위해 **조건을 구체적으로** 지정해 주시면 다시 조회해 드리겠습니다.  ---  ### 💡 이렇게 질문해 보시면 좋아요  1. **\"Qoo10 일본에서 2025년 1월~5월 리뷰 수와 전체 리뷰 대비 비율을 "
+  },
+  {
+    "id": "V2_RQ-101",
+    "query": "확인 좀 해줘 큐텐 리뷰 어떤 제품이 있어 얼마임?",
+    "table": "review_qoo10",
+    "category": "review_count",
+    "status": "OK",
+    "time": 49.8,
+    "answer_len": 1125,
+    "answer_preview": "### 📊 Qoo10 리뷰에 언급된 SKIN1004 제품 목록 및 가격 정보  #### 요약  사용자님의 요청에 따라 Qoo10 리뷰에서 확인되는 **SKIN1004 브랜드의 제품은 총 32가지**입니다. 현재 데이터에서는 각 제품의 가격 정보는 확인할 수 없습니다.  #### 상세 데이터  Qoo10 리뷰에 언급된 SKIN1004 제품 목록은 다음과 같습"
+  },
+  {
+    "id": "V2_RQ-102",
+    "query": "Qoo10 리뷰 수집 현재 상태 알려줘",
+    "table": "review_qoo10",
+    "category": "total_count",
+    "status": "OK",
+    "time": 36.3,
+    "answer_len": 637,
+    "answer_preview": "### 📊 Qoo10 리뷰 수집 현황  #### 요약  Qoo10 리뷰 수집은 2026년 1월 28일에 **52,781건**이 수집된 것이 마지막입니다. 현재 2026년 3월 8일 기준으로 2월 및 3월의 최신 리뷰 수집 데이터는 확인되지 않고 있습니다.  #### 상세 데이터 | 수집일자 | 수집된 리뷰 수 | | :------- | -----------"
+  },
+  {
+    "id": "V2_RQ-103",
+    "query": "참고로 큐텐 최근 후기 중 Centella Ampoule 관련",
+    "table": "review_qoo10",
+    "category": "product_review",
+    "status": "OK",
+    "time": 54.4,
+    "answer_len": 651,
+    "answer_preview": "# 큐텐 센텔라 앰플 최근 후기 요약  최근 큐텐(Qoo10)에서의 **SKIN1004 마다가스카르 센텔라 앰플** 후기를 종합하면 다음과 같습니다.  ---  ## ✅ 긍정적 반응  | 항목 | 주요 내용 | |------|-----------| | **피부 진정** | 붉은 기·자극 완화 효과를 체감한 후기가 가장 많음. 민감성·트러블성 피부에 편안하게"
+  },
+  {
+    "id": "V2_RQ-104",
+    "query": "Qoo10 2025년 1월~2월 평가",
+    "table": "review_qoo10",
+    "category": "date_range",
+    "status": "OK",
+    "time": 58.4,
+    "answer_len": 864,
+    "answer_preview": "# 큐텐(Qoo10) 2025년 1월~2월 동향 평가  ## 주요 성과  ### 1. K-뷰티 카테고리 강세 - **K-이너뷰티** 카테고리 판매량이 전년 동기 대비 **90% 증가** (2025년 2월 기준) - 큐텐재팬은 이너뷰티 **전담 조직 신설** 및 관련 인력 **2배 확대**로 대응 - 일본 시장 내 K-뷰티 영향력이 지속 확대되고 있음을 보여"
+  },
+  {
+    "id": "V2_RQ-105",
+    "query": "큐텐 리뷰 수 증가율 부탁드려요",
+    "table": "review_qoo10",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 53.9,
+    "answer_len": 1620,
+    "answer_preview": "### 📊 SKIN1004 큐텐 월별 리뷰 수 및 증가율 분석  #### 요약  SKIN1004 브랜드의 큐텐 월별 리뷰 수는 2025년 3월부터 2026년 1월까지 **큰 폭의 변동성**을 보였습니다. 특히 2025년 6월에는 전월 대비 **427.38%**의 가장 높은 증가율을 기록했으나, 2026년 1월에는 전월 대비 **-86.43%**로 가장 큰 "
+  },
+  {
+    "id": "V2_RQ-106",
+    "query": "Qoo10 제품별 최신 리뷰 내용 정리 부탁드려요",
+    "table": "review_qoo10",
+    "category": "review_content",
+    "status": "OK",
+    "time": 53.7,
+    "answer_len": 398,
+    "answer_preview": "### 📊 Qoo10 SKIN1004 제품별 최신 리뷰 요약  #### 요약  2026년 3월 8일 기준, Qoo10에서 수집된 SKIN1004 브랜드의 최신 리뷰 **50건** 중 상위 20건을 분석한 결과, 리뷰 날짜는 **2025년 1월부터 11월까지** 분포되어 있습니다. 특히 **센텔라 앰플**에 대한 리뷰가 가장 많았으며, 사용자들은 주로 인플루"
+  },
+  {
+    "id": "V2_RQ-107",
+    "query": "큐텐 후기 데이터에서 브랜드 종류 알려주세요",
+    "table": "review_qoo10",
+    "category": "brand_review",
+    "status": "OK",
+    "time": 26.0,
+    "answer_len": 384,
+    "answer_preview": "### 📊 Qoo10 후기 데이터 내 브랜드 현황  #### 요약  현재 Qoo10 후기 데이터에서 확인된 브랜드는 **SKIN1004**입니다. 현재 데이터셋에는 단일 브랜드 정보만 포함되어 있습니다.  #### 분석 및 인사이트  *   Qoo10 후기 데이터에는 현재 **SKIN1004** 브랜드의 정보만 포함되어 있습니다. *   이는 해당 데이터셋"
+  },
+  {
+    "id": "V2_RQ-108",
+    "query": "Qoo10 최근 리뷰 40건 알려줘",
+    "table": "review_qoo10",
+    "category": "recent_n",
+    "status": "OK",
+    "time": 43.8,
+    "answer_len": 1651,
+    "answer_preview": "### 📊 Qoo10 SKIN1004 최근 리뷰 40건 분석  #### 요약  ⚠️ 조회된 최근 리뷰 40건은 **2026년 01월 26일부터 2026년 01월 28일**까지의 데이터입니다 (오늘 날짜: 2026년 03월 08일). Qoo10에서 SKIN1004 브랜드의 최근 리뷰 **40건**을 분석한 결과, '센텔라 앰플'이 가장 많은 리뷰를 받았으며,"
+  },
+  {
+    "id": "V2_RQ-109",
+    "query": "큐텐 Madagascar Centella Ampoule 월별 리뷰 수 확인 부탁드립니다",
+    "table": "review_qoo10",
+    "category": "product_review",
+    "status": "OK",
+    "time": 38.7,
+    "answer_len": 556,
+    "answer_preview": "안녕하세요, 요청하신 **큐텐 Madagascar Centella Ampoule 월별 리뷰 수** 데이터를 현재 조회하지 못했습니다.  좀 더 정확한 결과를 위해 **조건을 구체적으로 지정**해 주시면 다시 조회를 시도해 보겠습니다.  ---  **📌 다음 정보를 추가해 주시면 도움이 됩니다**  - **기간** : 조회하고 싶은 연도/월 범위 (예: 20"
+  },
+  {
+    "id": "V2_RQ-110",
+    "query": "Qoo10 평가 최다 제품 TOP 7",
+    "table": "review_qoo10",
+    "category": "top_reviewed",
+    "status": "OK",
+    "time": 57.4,
+    "answer_len": 1020,
+    "answer_preview": "### 📊 Qoo10 SKIN1004 제품별 최다 평가 TOP 7  #### 요약  2026년 3월 8일 기준, Qoo10에서 SKIN1004 브랜드 제품 중 가장 많은 평가를 받은 제품은 **센텔라 앰플**로, 총 **20,415건**의 리뷰를 기록했습니다. 2위인 히알루시카 워터핏 선 세럼은 9,162건의 평가를 받았으며, TOP 7 제품들은 최소 99"
+  },
+  {
+    "id": "V2_RQ-111",
+    "query": "큐텐 2024년 평가 총 건수",
+    "table": "review_qoo10",
+    "category": "date_range",
+    "status": "OK",
+    "time": 37.2,
+    "answer_len": 375,
+    "answer_preview": "큐텐(Qoo10)의 **2024년 전체 평가(리뷰) 총 건수**는 현재 공식적으로 공개된 자료가 없어 정확한 수치를 확인하기 어렵습니다.  참고로 확인된 관련 정보는 다음과 같습니다:  - 큐텐은 매년 **'큐텐 어워즈(Qoo10 AWARDS)'**를 진행하며, 2024년에는 **총 96개사 및 4명의 인플루언서**가 수상했습니다. - 고객 만족도·매출 등"
+  },
+  {
+    "id": "V2_RQ-112",
+    "query": "우리 회사 Qoo10 평가 번역 데이터 최근 것",
+    "table": "review_qoo10",
+    "category": "review_content",
+    "status": "OK",
+    "time": 40.7,
+    "answer_len": 976,
+    "answer_preview": "### 📊 SKIN1004 Qoo10 최근 평가 번역 데이터 분석  #### 요약  2026년 1월 25일부터 28일까지의 SKIN1004 Qoo10 최신 고객 평가 **50건**을 분석한 결과입니다. 주요 제품으로는 **센텔라 앰플**이 가장 많은 평가를 받았으며, **진정, 보습, 끈적임 없는 사용감**에 대한 긍정적인 피드백이 두드러졌습니다. 고객들은"
+  },
+  {
+    "id": "V2_RQ-113",
+    "query": "우리 회사 큐텐 Centella Soothing Cream 리뷰 원문 보여줘 확인해줘 확인 가능한가요?",
+    "table": "review_qoo10",
+    "category": "review_content",
+    "status": "OK",
+    "time": 32.1,
+    "answer_len": 654,
+    "answer_preview": "요청하신 조건에 해당하는 데이터가 없습니다.  **문제 조건:** `product_name` 필터 조건 (`product_name LIKE '%Centella%Soothing_Cream%'`)  **설명:** 제품명에 'Centella'와 'Soothing_Cream'이 정확히 포함된 데이터가 조회되지 않았습니다. 실제 제품명은 띄어쓰기, 하이픈, 또는 다"
+  },
+  {
+    "id": "V2_RQ-114",
+    "query": "Qoo10 평가 수 제품별 내림차순?",
+    "table": "review_qoo10",
+    "category": "review_count",
+    "status": "OK",
+    "time": 39.6,
+    "answer_len": 1497,
+    "answer_preview": "### 📊 Qoo10 SKIN1004 제품별 리뷰 수 현황 (2025년 3월 8일 ~ 2026년 3월 8일)  #### 요약  지난 1년간 Qoo10에서 SKIN1004 제품 중 가장 많은 리뷰를 받은 제품은 **센텔라 앰플**로, 총 **20,415건**의 평가를 기록했습니다. 이어서 히알루시카 워터핏 선 세럼이 9,162건, 센텔라 퀵 카밍 패드가 6,"
+  },
+  {
+    "id": "V2_RQ-115",
+    "query": "궁금한데 큐텐 최근 리뷰 날짜 확인 부탁드려요",
+    "table": "review_qoo10",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 38.3,
+    "answer_len": 1029,
+    "answer_preview": "### 📊 Qoo10 SKIN1004 브랜드 최근 리뷰 날짜 확인 보고서  #### 요약  Qoo10에서 SKIN1004 브랜드의 가장 최근 리뷰는 **2026년 01월 28일**에 작성되었습니다. 오늘 날짜(2026년 03월 08일) 기준으로 약 한 달 반 전의 리뷰이며, 조회된 상위 50개 리뷰는 2026년 01월 25일부터 2026년 01월 28일 사"
+  },
+  {
+    "id": "V2_RQ-116",
+    "query": "Qoo10 2024년 8월 리뷰 알려주세요",
+    "table": "review_qoo10",
+    "category": "date_range",
+    "status": "OK",
+    "time": 37.6,
+    "answer_len": 357,
+    "answer_preview": "안녕하세요! 요청하신 **Qoo10 2024년 8월 리뷰 데이터**를 조회하지 못했습니다.  좀 더 구체적인 조건을 추가해 주시면 정확한 데이터를 찾는 데 도움이 됩니다. 아래 예시를 참고해 주세요:  **질문 예시:** 1. \"Qoo10 **일본** 2024년 8월 **마다가스카르 센텔라 토닝 토너** 리뷰 건수 알려주세요\" 2. \"Qoo10 2024년 "
+  },
+  {
+    "id": "V2_RQ-117",
+    "query": "큐텐 리부 총합 몇 건이야",
+    "table": "review_qoo10",
+    "category": "total_count",
+    "status": "OK",
+    "time": 37.7,
+    "answer_len": 257,
+    "answer_preview": "큐텐(Qoo10) 플랫폼의 **전체 누적 리뷰 총합은 공식적으로 공개되지 않은 것으로 파악됩니다.**  참고로 개별 사례를 보면:  - 특정 한국 화장품: **1만 개 이상** 리뷰 보유 - 한 패션 브랜드 볼캡: **1만 8천 개 이상** 리뷰 기록 - 한 뷰티 팝업 행사: 이틀 만에 **2만 6천 건 이상** 누적 리뷰 투고  이처럼 개별 상품·이벤트 "
+  },
+  {
+    "id": "V2_RQ-118",
+    "query": "Qoo10 Centella Cleansing Oil 평가 내용 어떻게 되나요?",
+    "table": "review_qoo10",
+    "category": "review_content",
+    "status": "OK",
+    "time": 38.1,
+    "answer_len": 628,
+    "answer_preview": "# 스킨1004 마다가스카르 센텔라 라이트 클렌징 오일 평가  현재 제공된 검색 정보에는 **Qoo10 플랫폼에 특정된 리뷰 데이터는 포함되어 있지 않습니다.**  다만, 다양한 뷰티 플랫폼에서 수집된 전반적인 소비자 평가는 다음과 같습니다.  ---  ## 긍정적 평가  | 항목 | 내용 | |------|------| | **사용감** | 오일 특유의 "
+  },
+  {
+    "id": "V2_RQ-119",
+    "query": "정확한 큐텐 후기 제품 수 몇 개야?",
+    "table": "review_qoo10",
+    "category": "review_count",
+    "status": "OK",
+    "time": 25.8,
+    "answer_len": 486,
+    "answer_preview": "### 📊 큐텐(Qoo10) 후기 제품 수 현황  #### 요약  2025년 3월 8일부터 오늘(2026년 3월 8일)까지 큐텐(Qoo10)에서 후기가 수집된 SKIN1004 브랜드의 고유 제품 수는 총 **32개**입니다.  #### 분석 및 인사이트  *   지난 1년간(2025년 3월 8일 ~ 2026년 3월 8일) 큐텐에서 SKIN1004 브랜드의 "
+  },
+  {
+    "id": "V2_RQ-120",
+    "query": "정확한 Qoo10 각 월 리뷰 추이 분석",
+    "table": "review_qoo10",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 44.7,
+    "answer_len": 1251,
+    "answer_preview": "### 📊 Qoo10 SKIN1004 월별 리뷰 추이 분석  #### 요약  ⚠️ 2026년은 현재 1월 데이터만 존재합니다 (오늘: 2026년 03월 08일). 2025년 3월부터 2026년 1월까지 Qoo10에서 SKIN1004 브랜드에 대한 월별 리뷰는 큰 변동성을 보였습니다. 가장 많은 리뷰가 발생한 달은 **2025년 3월(11,160건)**이었으"
+  },
+  {
+    "id": "V2_RQ-121",
+    "query": "큐텐 리뷰데이터에서 가장 오래된 리뷰는?",
+    "table": "review_qoo10",
+    "category": "date_range",
+    "status": "OK",
+    "time": 55.1,
+    "answer_len": 606,
+    "answer_preview": "### 📊 큐텐 리뷰 데이터에서 가장 오래된 리뷰  #### 요약  큐텐 리뷰 데이터에서 가장 오래된 리뷰는 **2025년 01월 01일**에 작성된 '히알루시카 워터핏 선 세럼' 제품의 리뷰입니다. 해당 리뷰는 \"가벼운 사용감으로 사용하기 쉽습니다.\"라는 내용입니다.  #### 상세 데이터 | 제품명 | 리뷰 날짜 | 원문 리뷰 | 번역 리뷰 | |:--"
+  },
+  {
+    "id": "V2_RQ-122",
+    "query": "Qoo10 리뷰 최근 60건 데이터 알고 싶어 알려주세요",
+    "table": "review_qoo10",
+    "category": "recent_n",
+    "status": "OK",
+    "time": 36.0,
+    "answer_len": 1228,
+    "answer_preview": "### 📊 Qoo10 SKIN1004 브랜드 최근 60건 리뷰 분석  #### 요약  SKIN1004 브랜드의 Qoo10 최근 리뷰 **60건**에 대한 분석 보고서입니다. 해당 리뷰들은 **2026년 1월 25일부터 2026년 1월 28일까지** 작성되었습니다. 주로 **센텔라 앰플**이 전체 리뷰의 **65%**를 차지하며 압도적인 인기를 보였고, 진정"
+  },
+  {
+    "id": "V2_RQ-123",
+    "query": "큐텐 Centella Ampoule 평가 건수 월별",
+    "table": "review_qoo10",
+    "category": "product_review",
+    "status": "OK",
+    "time": 34.8,
+    "answer_len": 532,
+    "answer_preview": "## 데이터 조회 안내  안녕하세요. 요청하신 **큐텐(Qoo10) Centella Ampoule 평가 건수 월별 데이터**를 조회하지 못했습니다.  좀 더 정확한 결과를 위해 아래 정보를 구체적으로 포함하여 다시 질문해 주시면 감사하겠습니다.  - **조회 기간** (예: 2024년 1월~12월) - **큐텐 지역/플랫폼** (예: 큐텐 재팬, 큐텐 글로"
+  },
+  {
+    "id": "V2_RQ-124",
+    "query": "Qoo10 리뷰데이터 최근 3개월 추이",
+    "table": "review_qoo10",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 32.1,
+    "answer_len": 917,
+    "answer_preview": "### 📊 Qoo10 SKIN1004 리뷰 데이터 최근 3개월 추이  #### 요약  ⚠️ 2026년 3월 8일 기준으로 최근 3개월(2025년 12월 ~ 2026년 2월) 데이터 중, 현재 **2025년 12월과 2026년 1월 데이터만 확인**되었습니다. 2026년 2월 및 3월 데이터는 현재 조회되지 않습니다. 2026년 1월 Qoo10 SKIN100"
+  },
+  {
+    "id": "V2_RQ-125",
+    "query": "요즘 큐텐 리뷰 데이터 전체 현황 알려주세요",
+    "table": "review_qoo10",
+    "category": "total_count",
+    "status": "OK",
+    "time": 42.7,
+    "answer_len": 629,
+    "answer_preview": "### 📊 최근 큐텐(Qoo10) 리뷰 데이터 현황  #### 요약  지난 1년간 수집된 큐텐 리뷰는 총 **55,364건**입니다. 이 리뷰들은 2025년 1월 1일부터 2026년 1월 28일까지 작성된 데이터를 포함하고 있으며, 가장 최근 작성된 리뷰는 2026년 1월 28일입니다.  #### 상세 데이터  | 지표 | 값 | |:---|---:| | "
+  },
+  {
+    "id": "V2_RQ-126",
+    "query": "Qoo10 SKIN1004 브랜드 리뷰 수 흐름",
+    "table": "review_qoo10",
+    "category": "brand_review",
+    "status": "OK",
+    "time": 32.3,
+    "answer_len": 421,
+    "answer_preview": "안녕하세요. 요청하신 **Qoo10 SKIN1004 브랜드 리뷰 수 흐름** 데이터를 조회하지 못했습니다.  좀 더 구체적인 조건을 포함하여 질문해 주시면 정확한 데이터를 찾는 데 도움이 됩니다. 아래 예시를 참고해 주세요.  ---  **질문 예시:**  1. **\"2024년 1월~12월 Qoo10 일본에서 SKIN1004 마다가스카르 센텔라 토닝 토너의"
+  },
+  {
+    "id": "V2_RQ-127",
+    "query": "큐텐 평가 중 최근 것부터 정렬해서 보여줘 보여줘",
+    "table": "review_qoo10",
+    "category": "recent_reviews",
+    "status": "WARN",
+    "time": 66.2,
+    "answer_len": 612,
+    "answer_preview": "# 큐텐(Qoo10) 최신 평가 — 최신순 정리  | 시기 | 주요 내용 | |---|---| | **2026년 2월~3월** | 큐텐재팬에서 K-뷰티 인기 지속. '이너뷰티' 카테고리 한국 제품 판매량 **전년 대비 90% 증가**. '큐텐 어워즈' 수상자의 **절반이 한국 브랜드**, 라이브 쇼핑 부문은 **전원 한국 셀러**가 차지. | | **202"
+  },
+  {
+    "id": "V2_RQ-128",
+    "query": "간단하게 Qoo10 2024년 7월 리뷰 데이터",
+    "table": "review_qoo10",
+    "category": "date_range",
+    "status": "OK",
+    "time": 49.4,
+    "answer_len": 404,
+    "answer_preview": "요청하신 조건(Qoo10, SKIN1004 브랜드, 2024년 7월)에 해당하는 리뷰 데이터가 없습니다.  SQL 쿼리에서 사용된 필터 조건은 'Qoo10' 채널, 'SKIN1004' 브랜드, 그리고 '2024년 7월'입니다. 이 중 '2024년 7월'에 해당하는 데이터가 아직 수집되지 않았거나 존재하지 않을 가능성이 높습니다. 가장 최근 데이터는 2024"
+  },
+  {
+    "id": "V2_RQ-129",
+    "query": "큐텐 제품 기준 평가 수 표로 보여줄 수 있어?",
+    "table": "review_qoo10",
+    "category": "review_count",
+    "status": "OK",
+    "time": 44.0,
+    "answer_len": 609,
+    "answer_preview": "큐텐(Qoo10)의 제품 평가 핵심 기준을 아래 표로 정리해 드립니다.  | 평가 기준 | 세부 내용 | 영향 | | :--- | :--- | :--- | | **별점 및 리뷰 수** | 고객이 구매 후 부여하는 별점과 리뷰 총 개수 | 평균 평점과 리뷰 수가 많고 긍정적일수록 제품 신뢰도 및 구매 전환율 상승 | | **고객 리뷰 내용** | 사용자가 남"
+  },
+  {
+    "id": "V2_RQ-130",
+    "query": "빠르게 Qoo10 후기 원문 언어별 분포",
+    "table": "review_qoo10",
+    "category": "review_content",
+    "status": "OK",
+    "time": 40.2,
+    "answer_len": 560,
+    "answer_preview": "# Qoo10 후기 원문 언어별 분포  공식적으로 공개된 **정확한 언어별 비율 통계는 없습니다.**  다만, Qoo10이 국가별 현지화 플랫폼을 운영하는 구조이므로 일반적인 분포는 다음과 같이 추정됩니다:  | 운영 국가 | 주요 리뷰 언어 | 비중 (추정) | |---|---|---| | **일본** | 일본어 | 가장 높음 (최대 시장) | | **싱"
+  },
+  {
+    "id": "V2_RQ-131",
+    "query": "확인 좀 해줘 큐텐 최근 리뷰데이터 요약 알려주세요",
+    "table": "review_qoo10",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 55.4,
+    "answer_len": 1520,
+    "answer_preview": "## 📊 큐텐(Qoo10) SKIN1004 최근 리뷰 요약 (2026년 1월 25일 ~ 1월 28일)  #### 요약  ⚠️ 현재 조회된 데이터는 2026년 1월 25일부터 1월 28일까지의 큐텐(Qoo10) 리뷰 데이터입니다 (오늘: 2026년 03월 08일). 총 **50건**의 리뷰 중 '센텔라 앰플'이 가장 많은 비중을 차지하며, 전반적으로 **진정"
+  },
+  {
+    "id": "V2_RQ-132",
+    "query": "빠르게 Qoo10 Tone Brightening Capsule Serum 리뷰 있어 확인 부탁드립니다",
+    "table": "review_qoo10",
+    "category": "product_review",
+    "status": "OK",
+    "time": 42.4,
+    "answer_len": 624,
+    "answer_preview": "요청하신 조건에 해당하는 데이터가 없습니다.  SQL에서 사용된 필터 조건 중 `product_name`이 사용자 요청과 다릅니다. *   **사용자 요청:** 'Tone Brightening Capsule **Serum**' *   **SQL 조건:** `product_name LIKE '%Tone Brightening Capsule **Ampoule**"
+  },
+  {
+    "id": "V2_RQ-133",
+    "query": "잠깐, 큐텐 평가 2025년 3월 데이터 있나요",
+    "table": "review_qoo10",
+    "category": "date_range",
+    "status": "OK",
+    "time": 39.2,
+    "answer_len": 379,
+    "answer_preview": "안녕하세요! 요청하신 **큐텐(Qoo10) 2025년 3월 평가 데이터**를 조회하지 못했습니다.  좀 더 정확한 결과를 위해 **조건을 구체적으로** 말씀해 주시면 다시 조회해 보겠습니다. 예를 들어 아래와 같이 질문해 보시겠어요?  > **질문 예시**  > 1. \"2025년 3월 큐텐 **일본** 채널 매출 데이터 보여줘\"  > 2. \"큐텐 2025년"
+  },
+  {
+    "id": "V2_RQ-134",
+    "query": "참고로 Qoo10 리뷰 수 TOP 제품 비율",
+    "table": "review_qoo10",
+    "category": "top_reviewed",
+    "status": "OK",
+    "time": 45.8,
+    "answer_len": 1587,
+    "answer_preview": "### 📊 Qoo10 채널 리뷰 수 상위 제품 분석 보고서 (2025년 3월 8일 ~ 2026년 3월 8일)  #### 요약  지난 1년간(2025년 3월 8일 ~ 2026년 3월 8일) Qoo10 채널에서 수집된 총 리뷰 수는 **55,362건**이며, 이 중 '센텔라 앰플'이 **20,415건**으로 전체의 **36.87%**를 차지하며 압도적인 1위를"
+  },
+  {
+    "id": "V2_RQ-135",
+    "query": "간단하게 큐텐 제품 리뷰데이터 수 비교 차트",
+    "table": "review_qoo10",
+    "category": "review_count",
+    "status": "OK",
+    "time": 42.5,
+    "answer_len": 2021,
+    "answer_preview": "### 📊 SKIN1004 Qoo10 제품별 리뷰 수 비교 분석  #### 요약  지난 1년간(2025년 3월 8일 ~ 2026년 3월 8일) Qoo10에서 SKIN1004 제품 중 '센텔라 앰플'이 **20,415개**의 리뷰를 기록하며 압도적인 1위를 차지했습니다. 이는 2위 제품인 '히알루시카 워터핏 선 세럼'의 리뷰 수(9,162개)보다 2배 이상 "
+  },
+  {
+    "id": "V2_RQ-136",
+    "query": "Qoo10 최근 후기 12건 어떻게 되나요?",
+    "table": "review_qoo10",
+    "category": "recent_n",
+    "status": "OK",
+    "time": 58.7,
+    "answer_len": 656,
+    "answer_preview": "현재 검색 결과에서 **Qoo10의 개별 최근 후기 12건을 직접 확인할 수 없었습니다.**  검색을 통해 파악된 내용은 개별 후기 원문이 아니라, Qoo10 후기의 **전반적인 트렌드와 마케팅 활용**에 대한 정보입니다.  ---  ### 현재 파악 가능한 Qoo10 후기 관련 요약  | 항목 | 내용 | |---|---| | **주요 이용자층** | 1"
+  },
+  {
+    "id": "V2_RQ-137",
+    "query": "큐텐 리뷰데이터 수집일과 리뷰 작성일 차이",
+    "table": "review_qoo10",
+    "category": "date_range",
+    "status": "WARN",
+    "time": 67.5,
+    "answer_len": 1480,
+    "answer_preview": "### 📊 큐텐 리뷰 수집일과 작성일 차이 분석 (2026년 1월 28일 수집 데이터 기준)  #### 요약  제공된 큐텐 리뷰 데이터는 **2026년 1월 28일**에 수집된 총 1,000건의 리뷰를 대상으로 분석되었습니다. 분석 결과, 리뷰 작성일과 수집일 간의 차이는 **최소 43일에서 최대 383일**에 이르는 것으로 나타났습니다. 이는 리뷰가 작성"
+  },
+  {
+    "id": "V2_RQ-138",
+    "query": "Qoo10 Madagascar Centella Ampoule 한국어 리뷰 알려주시면 감사하겠습니다",
+    "table": "review_qoo10",
+    "category": "review_content",
+    "status": "OK",
+    "time": 39.7,
+    "answer_len": 281,
+    "answer_preview": "요청하신 조건에 해당하는 데이터가 없습니다. 특히 SQL 쿼리의 `collect_date >= '2025-03-08'` 조건이 미래 날짜로 설정되어 있어, 해당 날짜 이후에 수집된 데이터는 존재하지 않습니다.  비슷한 데이터를 조회하시려면 다음 질문을 이용해 보세요: *   Qoo10 마다가스카르 센텔라 앰플의 최신 한국어 리뷰를 알려주세요. *   Qoo"
+  },
+  {
+    "id": "V2_RQ-139",
+    "query": "큐텐 평가 주별 통계 알려주세요",
+    "table": "review_qoo10",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 32.6,
+    "answer_len": 379,
+    "answer_preview": "큐텐(Qoo10)의 **주별 평가 통계는 공개적으로 제공되지 않습니다.**  큐텐의 평가 시스템은 전체 플랫폼 단위의 주별 통계를 발표하지 않으며, 개별 판매자·상품 단위로 평가가 이루어집니다. 참고로 큐텐의 평가 체계는 다음과 같습니다:  | 평가 항목 | 내용 | |---|---| | **판매자 등급** | 판매 실적, 배송 속도, 고객 문의 응대 등을"
+  },
+  {
+    "id": "V2_RQ-140",
+    "query": "Qoo10 리뷰데이터 데이터 날짜 범위 알려주세요",
+    "table": "review_qoo10",
+    "category": "date_range",
+    "status": "OK",
+    "time": 53.8,
+    "answer_len": 490,
+    "answer_preview": "### 📊 Qoo10 리뷰 데이터 날짜 범위  #### 요약  Qoo10 리뷰 데이터는 **2025년 12월 08일**부터 **2026년 01월 28일**까지의 기간을 포함하고 있습니다. 현재 조회일(2026년 03월 08일) 기준으로 약 한 달 전까지의 리뷰 데이터가 존재합니다.  #### 분석 및 인사이트  *   현재 Qoo10 리뷰 데이터는 **20"
+  },
+  {
+    "id": "V2_RQ-141",
+    "query": "요즘 큐텐 최다 리뷰 제품 알려줘",
+    "table": "review_qoo10",
+    "category": "top_reviewed",
+    "status": "OK",
+    "time": 38.1,
+    "answer_len": 355,
+    "answer_preview": "안녕하세요! 😊  큐텐(Qoo10) 최다 리뷰 제품에 대한 **내부 데이터를 조회하지 못했습니다.**  좀 더 구체적인 조건을 추가해 주시면 정확한 데이터를 찾는 데 도움이 됩니다. 아래 예시를 참고해 주세요!  ---  **💡 질문 예시**  1. **\"2025년 1분기 큐텐 재팬에서 리뷰 수가 가장 많은 SKIN1004 제품은?\"** 2. **\"최근 6"
+  },
+  {
+    "id": "V2_RQ-142",
+    "query": "Qoo10 리뷰 전체 목록 어때?",
+    "table": "review_qoo10",
+    "category": "total_count",
+    "status": "WARN",
+    "time": 62.3,
+    "answer_len": 56222,
+    "answer_preview": "### 📊 Qoo10 SKIN1004 최근 리뷰 현황 분석  #### 요약  Qoo10에서 수집된 SKIN1004 브랜드의 최근 리뷰 **1,000건**을 분석한 결과, 2026년 01월 24일부터 2026년 01월 28일까지의 리뷰가 포함되어 있습니다. 이 기간 동안 총 **31개**의 고유 제품에 대한 리뷰가 작성되었으며, 특히 '센텔라 앰플' 제품에 "
+  },
+  {
+    "id": "V2_RQ-143",
+    "query": "큐텐 Centella Ampoule 리뷰 최근 5건 알려주세요",
+    "table": "review_qoo10",
+    "category": "recent_n",
+    "status": "OK",
+    "time": 37.9,
+    "answer_len": 421,
+    "answer_preview": "해당 조건의 데이터가 없습니다.  SQL에서 사용된 `brand` 필터 조건(`SKIN1004`) 또는 `product_name` 필터 조건(`Centella Ampoule`)이 `Qoo10_Review` 테이블의 실제 데이터와 일치하지 않아 결과가 없는 것으로 보입니다. 데이터베이스에 저장된 브랜드명은 '스킨1004' 또는 'SKIN 1004'와 같이 다"
+  },
+  {
+    "id": "V2_RQ-144",
+    "query": "Qoo10 2025년 매월 리뷰 건수 비교 파악해줘",
+    "table": "review_qoo10",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 38.6,
+    "answer_len": 1217,
+    "answer_preview": "### 📊 Qoo10 2025년 월별 리뷰 건수 분석  #### 요약  2025년 Qoo10의 총 리뷰 건수는 **54,429건**으로 집계되었습니다. 특히 **3월(13,167건)**과 **6월(11,038건)**에 리뷰 건수가 크게 증가하는 경향을 보였으며, 가장 낮은 리뷰 건수는 **10월(1,292건)**이었습니다. 연말인 12월에도 리뷰 건수가 다"
+  },
+  {
+    "id": "V2_RQ-145",
+    "query": "qoo10 리뷰에서 Soothing Cream 검색 몇이야?",
+    "table": "review_qoo10",
+    "category": "product_review",
+    "status": "OK",
+    "time": 42.7,
+    "answer_len": 709,
+    "answer_preview": "### 📊 Qoo10 Soothing Cream 관련 리뷰 현황  #### 요약  2025년 3월 8일부터 2026년 3월 8일까지의 Qoo10 리뷰 데이터에서 SKIN1004 브랜드의 'Soothing Cream' 관련 리뷰는 **0건**으로 확인되었습니다. 이는 해당 기간 동안 지정된 검색 조건에 부합하는 리뷰가 없음을 의미합니다.  #### 분석 및 "
+  },
+  {
+    "id": "V2_RQ-146",
+    "query": "Qoo10 평가 최근 한 달 건수",
+    "table": "review_qoo10",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 37.8,
+    "answer_len": 339,
+    "answer_preview": "Qoo10의 최근 한 달간 평가 건수에 대한 정확한 통계는 **외부에 공개되어 있지 않습니다.** 이러한 데이터는 일반적으로 기업 내부에서 관리되는 정보입니다.  참고로 Qoo10의 평가 시스템은 다음과 같이 운영됩니다:  1. **구매자 중심 평가** — 상품을 구매한 회원만 상품평 작성 가능 2. **다양한 평가 항목** — 품질, 가격, 배송 속도 등"
+  },
+  {
+    "id": "V2_RQ-147",
+    "query": "참고로 큐텐 리뷰 번역 품질 확인",
+    "table": "review_qoo10",
+    "category": "review_content",
+    "status": "OK",
+    "time": 54.1,
+    "answer_len": 91860,
+    "answer_preview": "### 📊 Qoo10 리뷰 번역 품질 확인 보고서  #### 요약  최근 Qoo10에 등록된 **20개**의 리뷰를 분석한 결과, 전반적인 번역 품질은 **매우 양호**한 것으로 확인되었습니다. 원문의 의미를 정확하게 전달하며, 한국어 사용자가 이해하기 쉽고 자연스러운 표현으로 번역되었습니다. 특히 구어체나 신조어, 감성적인 표현까지도 적절히 의역하여 원문"
+  },
+  {
+    "id": "V2_RQ-148",
+    "query": "Qoo10 평가 수 연도별 비교 확인 부탁드립니다",
+    "table": "review_qoo10",
+    "category": "date_range",
+    "status": "OK",
+    "time": 40.4,
+    "answer_len": 773,
+    "answer_preview": "### 📊 Qoo10 SKIN1004 평가 수 연도별 비교  #### 요약  ⚠️ 2026년은 현재 3월 8일 기준 데이터만 존재합니다. Qoo10에서 SKIN1004 브랜드의 평가 수는 2025년에 **54,429건**을 기록하며 활발한 활동을 보였습니다. 2026년에는 현재까지 **935건**의 평가가 집계되었습니다.  #### 상세 데이터  | 연도 "
+  },
+  {
+    "id": "V2_RQ-149",
+    "query": "큐텐 제품별 후기 트렌드",
+    "table": "review_qoo10",
+    "status": "OK",
+    "time": 58.2,
+    "answer_len": 3410,
+    "answer_preview": "### 📈 큐텐 제품별 후기 트렌드 분석  #### 요약  SKIN1004의 큐텐 매출은 2019년 1월부터 2023년 10월까지 총 **약 11.3억원**을 기록했으며, 특히 2023년 9월 `SK_Centella_Ampoule_100ml`와 `SK_Centella_Ampoule_55ml`가 각각 **약 1.1억원**과 **약 1.0억원**의 매출을 달성"
+  },
+  {
+    "id": "V2_RQ-150",
+    "query": "Qoo10 전체 리뷰데이터 수 현재 상태 알려줄래",
+    "table": "review_qoo10",
+    "category": "total_count",
+    "status": "OK",
+    "time": 33.8,
+    "answer_len": 609,
+    "answer_preview": "### 📊 Qoo10 SKIN1004 브랜드 리뷰 현황  #### 요약  ⚠️ 사용자 질문은 'Qoo10 전체 리뷰데이터 수'였으나, 현재 데이터는 **SKIN1004 브랜드에 한정된** 리뷰 수입니다. 2026년 03월 08일 기준으로 Qoo10에서 SKIN1004 브랜드의 총 리뷰 수는 **55,364**건입니다.  #### 분석 및 인사이트  *   "
+  },
+  {
+    "id": "V2_RQ-151",
+    "query": "큐텐 평가 중 Cleansing Oil 관련",
+    "table": "review_qoo10",
+    "category": "product_review",
+    "status": "OK",
+    "time": 51.5,
+    "answer_len": 1049,
+    "answer_preview": "# 큐텐(Qoo10) 인기 클렌징 오일 주요 평가 요약  큐텐에서 인기를 끌고 있는 클렌징 오일은 주로 한국 뷰티 브랜드 제품들이며, **아누아, 마녀공장, 비플레인**이 상위권을 차지하고 있습니다.  ---  ## 1. 아누아 어성초 포어 컨트롤 클렌징 오일  > 큐텐재팬 **전체 판매 1위**  | 구분 | 내용 | |------|------| | **"
+  },
+  {
+    "id": "V2_RQ-152",
+    "query": "Qoo10 최근 평가 30건 한국어 번역",
+    "table": "review_qoo10",
+    "category": "recent_n",
+    "status": "WARN",
+    "time": 65.9,
+    "answer_len": 944,
+    "answer_preview": "# Qoo10(큐텐) 최근 평가 요약  현재 개별 리뷰 30건을 원문 그대로 번역하여 제공하는 것은 불가능합니다. 다만, 최근 수집된 검색 정보를 바탕으로 **주요 평가 경향**을 한국어로 정리해 드리겠습니다.  ---  ## ✅ 긍정적 평가 경향  | 주제 | 주요 내용 | |---|---| | **K-뷰티·한국 상품** | 한국 화장품, 패션, K-PO"
+  },
+  {
+    "id": "V2_RQ-153",
+    "query": "큐텐 리뷰 데이터 수집 주기는 알려주세요",
+    "table": "review_qoo10",
+    "category": "total_count",
+    "status": "OK",
+    "time": 34.1,
+    "answer_len": 765,
+    "answer_preview": "### 📊 큐텐 리뷰 데이터 수집 주기 분석  #### 요약  큐텐 리뷰 데이터는 지난 1년간 **2025년 12월 8일**과 **2026년 1월 28일** 두 차례 수집된 것으로 확인됩니다. 가장 최근 데이터 수집일은 **2026년 1월 28일**로, 현재(2026년 3월 8일) 기준으로 약 한 달 이상 지난 데이터입니다. 데이터 수집 주기는 불규칙하며,"
+  },
+  {
+    "id": "V2_RQ-154",
+    "query": "Qoo10 2024년 4분기 리뷰 수 좀 부탁드려요",
+    "table": "review_qoo10",
+    "category": "date_range",
+    "status": "OK",
+    "time": 27.1,
+    "answer_len": 364,
+    "answer_preview": "### 📊 Qoo10 2024년 4분기 리뷰 수 분석  #### 요약  2024년 4분기 Qoo10 채널의 리뷰 수는 **0건**으로 집계되었습니다. 해당 기간 동안 Qoo10 채널에서는 새로운 리뷰가 발생하지 않은 것으로 보입니다.  #### 분석 및 인사이트  *   2024년 4분기 Qoo10 채널에서 발생한 리뷰는 없습니다. *   이는 해당 기간 "
+  },
+  {
+    "id": "V2_RQ-155",
+    "query": "큐텐 리뷰 제품명 중복 제거 목록 알려주세요",
+    "table": "review_qoo10",
+    "category": "review_count",
+    "status": "OK",
+    "time": 35.5,
+    "answer_len": 1134,
+    "answer_preview": "### 📊 큐텐(Qoo10) 리뷰 내 SKIN1004 제품명 중복 제거 목록  #### 요약  큐텐 리뷰 데이터에서 SKIN1004 브랜드의 중복을 제거한 제품명 목록을 분석한 결과, 총 **32개**의 고유한 제품명이 확인되었습니다. 이 목록은 Qoo10 플랫폼에서 언급되는 SKIN1004 제품 라인업을 파악하는 데 활용될 수 있습니다.  #### 상세 "
+  },
+  {
+    "id": "V2_RQ-156",
+    "query": "확인 좀 해줘 Qoo10 리뷰 월별 평균 건수 궁금해",
+    "table": "review_qoo10",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 37.2,
+    "answer_len": 462,
+    "answer_preview": "### 📊 Qoo10 SKIN1004 월별 평균 리뷰 건수 분석  #### 요약  Qoo10에서 SKIN1004 브랜드의 2025년 3월 8일부터 2026년 3월 8일까지의 기간 동안 월별 평균 리뷰 건수는 **4,511건**입니다.  #### 분석 및 인사이트  *   이 평균은 지정된 기간(2025년 3월 8일 ~ 2026년 3월 8일) 내에서 리뷰가 "
+  },
+  {
+    "id": "V2_RQ-157",
+    "query": "큐텐 최근 수집된 리뷰데이터 보여줄래?",
+    "table": "review_qoo10",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 55.3,
+    "answer_len": 442,
+    "answer_preview": "### 📊 큐텐 SKIN1004 최근 수집 리뷰 데이터 분석  #### 요약  2026년 03월 08일 기준으로, Qoo10 채널에서 SKIN1004 브랜드의 리뷰 데이터 **50건**이 확인되었습니다. 이 모든 리뷰는 **2026년 01월 28일**에 수집되었으며, 실제 리뷰 작성일은 **2025년 01월 10일부터 2025년 11월 02일**까지 넓게 "
+  },
+  {
+    "id": "V2_RQ-158",
+    "query": "Qoo10 Centella Ampoule 리뷰 원문 10건 확인 가능한가요?",
+    "table": "review_qoo10",
+    "category": "review_content",
+    "status": "OK",
+    "time": 32.3,
+    "answer_len": 494,
+    "answer_preview": "해당 조건의 데이터가 없습니다.  SQL에서 사용된 `brand` 조건(`SKIN1004`)은 유효하지만, `product_name` 조건(`Centella Ampoule`)에 해당하는 리뷰 데이터가 Qoo10 채널에 존재하지 않습니다. 실제 제품명과 일치하지 않거나, 해당 제품의 Qoo10 리뷰가 없는 경우일 수 있습니다. SKIN1004 브랜드의 유사한"
+  },
+  {
+    "id": "V2_RQ-159",
+    "query": "큐텐 리뷰데이터 수 가장 많은 달은?",
+    "table": "review_qoo10",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 35.7,
+    "answer_len": 573,
+    "answer_preview": "### 📊 큐텐 리뷰 데이터 월별 최다 기록 분석  #### 요약  지난 1년간(2025년 3월 8일 ~ 2026년 3월 8일) 큐텐 리뷰 데이터 중 가장 많은 리뷰가 기록된 달은 **2025년 3월**로, 총 **13,167건**의 리뷰가 집계되었습니다.  #### 분석 및 인사이트  *   **2025년 3월의 높은 리뷰 수**: 지난 1년간의 데이터 "
+  },
+  {
+    "id": "V2_RQ-160",
+    "query": "Qoo10 평가 2024년 전체 요약",
+    "table": "review_qoo10",
+    "category": "date_range",
+    "status": "WARN",
+    "time": 65.9,
+    "answer_len": 750,
+    "answer_preview": "# 2024년 Qoo10(큐텐) 종합 평가 요약  2024년 Qoo10은 **일본 시장의 성공**과 **모기업의 재정 위기**라는 상반된 두 축으로 평가됩니다.  ---  ## 1. 일본 시장 — K-뷰티 중심의 강세  | 항목 | 내용 | |------|------| | **핵심 타겟** | 10~30대 MZ세대 여성 (회원의 **71%** MZ세대, 여"
+  },
+  {
+    "id": "V2_RQ-161",
+    "query": "큐텐에서 SKIN1004 평가 제일 많은 제품 알려주세요",
+    "table": "review_qoo10",
+    "category": "top_reviewed",
+    "status": "OK",
+    "time": 18.8,
+    "answer_len": 100,
+    "answer_preview": "고객님, 문의하신 \"큐텐에서 SKIN1004 평가가 가장 많은 제품\"에 대한 정보는 현재 저희 CS 데이터베이스에서 찾을 수 없습니다.  해당 정보는 CS 데이터베이스에 없습니다."
+  },
+  {
+    "id": "V2_RQ-162",
+    "query": "Qoo10 리뷰 최신 데이터 확인해줘 확인 부탁드립니다",
+    "table": "review_qoo10",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 44.7,
+    "answer_len": 1817,
+    "answer_preview": "### 📊 Qoo10 SKIN1004 브랜드 최신 리뷰 데이터 확인 결과  #### 요약  ⚠️ 2026년 03월 08일 현재, Qoo10 SKIN1004 브랜드의 최신 리뷰 데이터는 **2026년 01월 28일**까지 수집된 총 **50건**이 확인됩니다. 이는 현재 시점으로부터 약 한 달 전 데이터입니다. 확인된 리뷰 중 '센텔라 앰플' 제품이 가장 많"
+  },
+  {
+    "id": "V2_RQ-163",
+    "query": "큐텐 리뷰데이터 collect_date 기준 최근 데이터",
+    "table": "review_qoo10",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 42.2,
+    "answer_len": 3954,
+    "answer_preview": "### 📊 큐텐 SKIN1004 브랜드 최신 리뷰 데이터 분석  #### 요약  큐텐에서 수집된 SKIN1004 브랜드의 최신 리뷰 50건 중 상위 20건을 분석한 결과입니다. 가장 최근 수집된 리뷰 데이터는 **2026년 01월 28일**이며, 이는 오늘 날짜(2026년 03월 08일)보다 약 한 달 반 이전의 데이터입니다. 주로 **센텔라 앰플** 제품"
+  },
+  {
+    "id": "V2_RQ-164",
+    "query": "Qoo10 제품별 리뷰 건수와 비중 확인 부탁드립니다",
+    "table": "review_qoo10",
+    "category": "review_count",
+    "status": "OK",
+    "time": 33.4,
+    "answer_len": 1622,
+    "answer_preview": "### 📊 Qoo10 SKIN1004 제품별 리뷰 현황  #### 요약  지난 1년간(2025년 3월 8일 ~ 2026년 3월 8일) Qoo10에서 SKIN1004 브랜드 제품에 대한 총 **55,365건**의 리뷰가 수집되었습니다. 이 중 **센텔라 앰플**이 **20,415건**의 리뷰로 전체의 **36.87%**를 차지하며 압도적인 1위를 기록했습니다"
+  },
+  {
+    "id": "V2_RQ-165",
+    "query": "큐텐 2025년 신규 리뷰 수 정리해줘",
+    "table": "review_qoo10",
+    "category": "date_range",
+    "status": "OK",
+    "time": 33.5,
+    "answer_len": 547,
+    "answer_preview": "### 📊 2025년 Qoo10 SKIN1004 신규 리뷰 현황  #### 요약  2025년 한 해 동안 Qoo10 채널에서 SKIN1004 브랜드에 대해 작성된 신규 리뷰는 총 **54,429건**입니다. 이는 고객들의 활발한 피드백과 브랜드에 대한 높은 관심을 보여줍니다.  #### 분석 및 인사이트  *   **높은 고객 참여도**: 2025년 한 해"
+  },
+  {
+    "id": "V2_RQ-166",
+    "query": "Qoo10 평가 데이터 컬럼 정보 좀 봐줘",
+    "table": "review_qoo10",
+    "category": "total_count",
+    "status": "OK",
+    "time": 33.0,
+    "answer_len": 389,
+    "answer_preview": "안녕하세요! 요청하신 **Qoo10 평가 데이터의 컬럼 정보**를 현재 데이터베이스에서 조회하지 못했습니다.  좀 더 구체적으로 질문해 주시면 정확한 데이터를 찾는 데 도움이 됩니다. 예를 들어 **기간, 국가, 특정 제품명, 평가 유형** 등을 명시해 주시면 좋겠습니다.  ---  **💡 이렇게 질문해 보시면 어떨까요?**  1. **\"2024년 Qoo1"
+  },
+  {
+    "id": "V2_RQ-167",
+    "query": "큐텐 Madagascar Centella Ampoule 후기 추이",
+    "table": "review_qoo10",
+    "category": "product_review",
+    "status": "OK",
+    "time": 34.3,
+    "answer_len": 444,
+    "answer_preview": "안녕하세요. 요청하신 **큐텐 Madagascar Centella Ampoule 후기 추이** 데이터를 조회하지 못했습니다.  좀 더 구체적인 조건을 포함하여 질문해 주시면 정확한 데이터를 찾는 데 도움이 됩니다. 아래 예시를 참고해 주세요.  ---  **질문 예시:**  1. **\"2024년 1월~6월 큐텐 재팬(Qoo10 Japan) Madagasca"
+  },
+  {
+    "id": "V2_RQ-168",
+    "query": "Qoo10 최근 리뷰데이터 8건 어때?",
+    "table": "review_qoo10",
+    "category": "recent_n",
+    "status": "OK",
+    "time": 34.9,
+    "answer_len": 1363,
+    "answer_preview": "### 📊 Qoo10 SKIN1004 최근 리뷰 8건 분석 (2026년 01월 28일 기준)  #### 요약  Qoo10에서 조회된 SKIN1004 브랜드의 최근 리뷰 8건은 모두 **2026년 01월 28일**에 작성되었습니다. 이 중 **7건**은 '센텔라 앰플'에 대한 리뷰이며, 주로 진정 및 보습 효과에 대한 긍정적인 내용이 주를 이룹니다. 나머지 "
+  },
+  {
+    "id": "V2_RQ-169",
+    "query": "큐텐 리뷰데이터 작성일 기준 최신순",
+    "table": "review_qoo10",
+    "category": "recent_reviews",
+    "status": "WARN",
+    "time": 73.7,
+    "answer_len": 83817,
+    "answer_preview": "### 📊 큐텐 SKIN1004 리뷰 데이터 (작성일 기준 최신순)  #### 요약  SKIN1004 브랜드의 큐텐 리뷰 데이터를 작성일 기준 최신순으로 조회한 결과, 총 **50건**의 리뷰가 확인되었습니다. ⚠️ 현재 조회 기준일(2026년 03월 08일) 대비 최신 리뷰는 **2026년 01월 28일**까지의 데이터이며, 가장 오래된 리뷰는 **202"
+  },
+  {
+    "id": "V2_RQ-170",
+    "query": "참고로 Qoo10 평가 각 제품 매월 교차 분석",
+    "table": "review_qoo10",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 41.8,
+    "answer_len": 693,
+    "answer_preview": "# 데이터 조회 안내  안녕하세요. 요청하신 **Qoo10 채널의 제품별 월별 평가(리뷰) 교차 분석** 데이터를 조회하지 못했습니다.  ---  ## 💡 더 구체적으로 질문해 주시면 정확한 데이터를 찾는 데 도움이 됩니다  아래 항목들을 포함하여 질문을 다시 작성해 주시면 감사하겠습니다:  | 구체화 항목 | 예시 | |------------|------"
+  },
+  {
+    "id": "V2_RQ-171",
+    "query": "큐텐 2025년 2월 평가 내용 전부 부탁드려요",
+    "table": "review_qoo10",
+    "category": "date_range",
+    "status": "OK",
+    "time": 55.7,
+    "answer_len": 914,
+    "answer_preview": "# 큐텐(Qoo10) 2025년 2월 주요 동향  2025년 2월 큐텐의 전체적인 **공식 평가는 공개되지 않았으나**, 큐텐재팬(Qoo10 Japan)의 주요 활동과 성과를 통해 당시 동향을 파악할 수 있습니다. 확인된 내용은 아래와 같습니다.  ---  ## 1. 큐텐 어워즈 2025 개최  - **2025년 한 해 성과**를 바탕으로 **2026년 2"
+  },
+  {
+    "id": "V2_RQ-172",
+    "query": "Qoo10 후기 Centella 키워드 검색",
+    "table": "review_qoo10",
+    "category": "product_review",
+    "status": "OK",
+    "time": 57.0,
+    "answer_len": 740,
+    "answer_preview": "# Qoo10 '센텔라(Centella)' 키워드 후기 요약  ## 전반적 평가  Qoo10에서 센텔라 관련 제품(특히 SKIN1004)은 **피부 진정 및 트러블 완화**에 긍정적인 평가를 받고 있으며, **민감성·여드름성 피부** 사용자들의 만족도가 높습니다.  ---  ## 주요 후기 키워드  | 카테고리 | 후기 내용 | |---|---| | **피"
+  },
+  {
+    "id": "V2_RQ-173",
+    "query": "큐텐 평가 한국어 번역본만 보여줄 수 있어?",
+    "table": "review_qoo10",
+    "category": "review_content",
+    "status": "OK",
+    "time": 38.2,
+    "answer_len": 280,
+    "answer_preview": "현재 큐텐(Qoo10) 플랫폼에서는 **상품 평가(리뷰)를 한국어로만 필터링하거나, 외국어 리뷰를 한국어로 자동 번역하여 보여주는 기능을 제공하지 않고 있습니다.**  외국어로 작성된 리뷰를 확인하려면 다음 방법을 활용해 보시기 바랍니다:  1. **웹 브라우저 번역 기능** — Chrome 등에서 페이지 전체를 한국어로 번역 2. **별도 번역 도구** "
+  },
+  {
+    "id": "V2_RQ-174",
+    "query": "Qoo10 각 제품 최근 리뷰데이터 날짜",
+    "table": "review_qoo10",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 31.4,
+    "answer_len": 427,
+    "answer_preview": "안녕하세요. 요청하신 **Qoo10 각 제품의 최근 리뷰 데이터 날짜**를 현재 데이터베이스에서 조회하지 못했습니다.  좀 더 정확한 결과를 위해 **조건을 구체적으로 지정**해 주시면 다시 조회를 시도해 보겠습니다.  ---  ### 💡 질문 예시  1. **\"Qoo10 일본에서 마다가스카르 시카 클리어링 토너의 최근 리뷰 날짜를 알려줘\"**    → 특"
+  },
+  {
+    "id": "V2_RQ-175",
+    "query": "큐텐 리뷰 수 월 평균은 알려주세요",
+    "table": "review_qoo10",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 38.9,
+    "answer_len": 559,
+    "answer_preview": "### 📊 큐텐 채널 월 평균 리뷰 수 분석  #### 요약  지난 1년간 (2025년 3월 8일 ~ 2026년 3월 7일) 큐텐 채널의 월 평균 리뷰 수는 **4,547개**입니다. 이는 해당 기간 동안 큐텐에서 월별로 평균 4천 5백여 건의 리뷰가 꾸준히 발생했음을 나타냅니다.  #### 분석 및 인사이트  *   **꾸준한 고객 참여**: 월 평균 4"
+  },
+  {
+    "id": "V2_RQ-176",
+    "query": "Qoo10 전체 리뷰 건수 변동 차트",
+    "table": "review_qoo10",
+    "category": "total_count",
+    "status": "OK",
+    "time": 34.3,
+    "answer_len": 478,
+    "answer_preview": "## 데이터 조회 안내  안녕하세요. 요청하신 **Qoo10 전체 리뷰 건수 변동 차트** 데이터를 조회하지 못했습니다.  좀 더 구체적인 조건을 포함하여 질문해 주시면 정확한 데이터를 찾는 데 도움이 됩니다. 아래 항목들을 명시해 주세요:  > **기간** · **국가(일본/싱가포르 등)** · **특정 제품명** · **Qoo10 내 세부 플랫폼(Qoo"
+  },
+  {
+    "id": "V2_RQ-177",
+    "query": "궁금한데 큐텐 Soothing Cream 리뷰 최근 3건",
+    "table": "review_qoo10",
+    "category": "recent_n",
+    "status": "OK",
+    "time": 20.0,
+    "answer_len": 376,
+    "answer_preview": "요청하신 조건에 해당하는 데이터가 없습니다.  SQL에서 `product_name` 조건으로 `LIKE '%Soothing_Cream%'` (언더바 포함)을 사용했는데, 실제 제품명에는 언더바 대신 띄어쓰기(`Soothing Cream`)가 사용되거나 한글 제품명(`수딩 크림`)으로 등록되어 있을 가능성이 높습니다.  비슷한 데이터를 조회할 수 있는 대안 "
+  },
+  {
+    "id": "V2_RQ-178",
+    "query": "Qoo10 2024년 6월 평가 데이터 있어? 정리해줘",
+    "table": "review_qoo10",
+    "category": "date_range",
+    "status": "OK",
+    "time": 38.6,
+    "answer_len": 583,
+    "answer_preview": "안녕하세요! 요청하신 **Qoo10 2024년 6월 평가 데이터**를 현재 조회하지 못했습니다.  좀 더 구체적인 조건을 추가해 주시면 정확한 데이터를 찾는 데 도움이 됩니다. 아래 예시를 참고하여 질문을 다시 해주시겠어요?  ---  **📌 질문 예시**  1. **\"Qoo10 일본 2024년 6월 마다가스카르 센텔라 라인 매출 데이터 정리해줘\"** 2."
+  },
+  {
+    "id": "V2_RQ-179",
+    "query": "큐텐 리뷰데이터 각 제품 통계 요약 확인 가능한가요?",
+    "table": "review_qoo10",
+    "category": "review_count",
+    "status": "OK",
+    "time": 35.6,
+    "answer_len": 1369,
+    "answer_preview": "### 📊 큐텐(Qoo10) SKIN1004 제품별 최근 1년간 리뷰 현황  #### 요약  최근 1년간(2025년 3월 8일 ~ 2026년 3월 8일) 큐텐(Qoo10)에서 SKIN1004 브랜드의 제품 리뷰를 분석한 결과, 총 **32개** 제품에 대한 리뷰가 집계되었습니다. 이 중 **'센텔라 앰플'**이 **20,415건**으로 압도적인 리뷰 수를 "
+  },
+  {
+    "id": "V2_RQ-180",
+    "query": "Qoo10 리뷰데이터 가장 최근 작성된 것",
+    "table": "review_qoo10",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 56.9,
+    "answer_len": 102827,
+    "answer_preview": "### 📊 Qoo10 SKIN1004 브랜드 최신 리뷰 분석  #### 요약  ⚠️ 2026년 03월 08일 현재, Qoo10 SKIN1004 브랜드의 가장 최근 리뷰는 **2026년 01월 28일**에 작성되었습니다. 총 **50건**의 최신 리뷰를 분석한 결과, '센텔라 앰플'이 가장 많은 리뷰를 받았으며, 사용자들은 주로 **진정 및 보습 효과**와 "
+  },
+  {
+    "id": "V2_RQ-181",
+    "query": "큐텐 Centella Ampoule 후기 번역 보여줘",
+    "table": "review_qoo10",
+    "category": "review_content",
+    "status": "OK",
+    "time": 35.7,
+    "answer_len": 666,
+    "answer_preview": "# 큐텐 센텔라 앰플 후기 요약  큐텐(Qoo10)에서의 **SKIN1004 마다가스카르 센텔라 앰플** 후기를 정리해 드립니다.  ---  ## 긍정적 후기  | 항목 | 주요 내용 | |------|-----------| | **피부 진정** | 민감하고 자극받은 피부, 여드름성 피부의 붉은 기를 가라앉히는 데 효과적 | | **수분 공급** | 물처럼"
+  },
+  {
+    "id": "V2_RQ-182",
+    "query": "Qoo10 후기 데이터 연도별 건수 알고 싶어 부탁드려요",
+    "table": "review_qoo10",
+    "category": "date_range",
+    "status": "OK",
+    "time": 35.1,
+    "answer_len": 423,
+    "answer_preview": "안녕하세요! 😊  요청하신 **Qoo10 후기 데이터의 연도별 건수**를 현재 데이터베이스에서 조회하지 못했습니다.  좀 더 정확한 결과를 드리기 위해, 조건을 구체적으로 지정해 주시면 다시 조회해 보겠습니다.  ---  **💡 아래와 같이 질문을 구체화해 보시면 좋습니다:**  1. **\"Qoo10 일본 채널에서 2023년~2024년 후기 건수를 알고 싶"
+  },
+  {
+    "id": "V2_RQ-183",
+    "query": "큐텐 후기 TOP 5 제품 리스트",
+    "table": "review_qoo10",
+    "category": "top_reviewed",
+    "status": "OK",
+    "time": 29.8,
+    "answer_len": 1124,
+    "answer_preview": "### 📊 큐텐(Qoo10) SKIN1004 제품별 후기 TOP 5 현황  #### 요약  2026년 3월 8일 기준, 큐텐(Qoo10)에서 SKIN1004 제품 중 가장 많은 후기를 받은 제품은 **센텔라 앰플**로, 총 **20,415개**의 후기를 기록했습니다. 이는 2위인 히알루시카 워터핏 선 세럼의 9,162개보다 두 배 이상 많은 수치로, 센텔라"
+  },
+  {
+    "id": "V2_RQ-184",
+    "query": "Qoo10 최근 2개월 후기 건수",
+    "table": "review_qoo10",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 35.9,
+    "answer_len": 294,
+    "answer_preview": "Qoo10(큐텐)의 최근 2개월간 후기 건수에 대한 **공식적인 통계는 공개된 바 없습니다.**  참고로 알려진 사항은 다음과 같습니다:  - Qoo10은 판매자용 **'Qoo10 Analytics'** 툴을 통해 자체 상점의 리뷰 데이터를 확인·관리할 수 있도록 제공하고 있습니다. - 플랫폼 전체의 구체적인 리뷰 건수 데이터는 **외부에 비공개**입니다."
+  },
+  {
+    "id": "V2_RQ-185",
+    "query": "정확한 큐텐 리뷰 원문으로 된 것만 보여줄래? 좀 봐줘",
+    "table": "review_qoo10",
+    "category": "review_content",
+    "status": "WARN",
+    "time": 64.2,
+    "answer_len": 345,
+    "answer_preview": "### 📊 Qoo10 SKIN1004 브랜드 최근 리뷰 원문 분석  #### 요약  ⚠️ 최근 1년간(2025년 03월 08일 ~ 2026년 03월 08일)의 Qoo10 리뷰를 요청하셨으나, 현재 조회된 데이터는 2026년 01월 25일부터 2026년 01월 28일까지의 리뷰 **50건**입니다. 이 기간 동안 '센텔라 앰플' 제품에 대한 리뷰가 가장 많았"
+  },
+  {
+    "id": "V2_RQ-186",
+    "query": "Qoo10 2024년 3분기 리뷰 알려주세요",
+    "table": "review_qoo10",
+    "category": "date_range",
+    "status": "OK",
+    "time": 30.5,
+    "answer_len": 282,
+    "answer_preview": "2024년 3분기 Qoo10 리뷰 데이터가 존재하지 않습니다.  SQL에서 사용된 `review_date` 필터 조건(2024년 7월 1일 ~ 2024년 9월 30일)에 해당하는 데이터가 현재 조회되지 않습니다. 해당 분기의 데이터가 아직 수집되지 않았거나 존재하지 않을 수 있습니다.  **비슷한 데이터를 조회할 수 있는 대안 질문:** *   \"Qoo10"
+  },
+  {
+    "id": "V2_RQ-187",
+    "query": "참고로 큐텐 리뷰데이터 제품 카테고리별 분류",
+    "table": "review_qoo10",
+    "category": "review_count",
+    "status": "OK",
+    "time": 51.5,
+    "answer_len": 1313,
+    "answer_preview": "### 📊 Qoo10 SKIN1004 제품 카테고리별 리뷰 현황 (2025년 3월 8일 ~ 2026년 3월 8일)  #### 요약  지난 1년간(2025년 3월 8일 ~ 2026년 3월 8일) Qoo10에서 SKIN1004 브랜드의 제품 카테고리별 리뷰를 분석한 결과, **앰플(Ampoule) 카테고리가 총 37,542건**으로 전체 리뷰의 약 **67.8"
+  },
+  {
+    "id": "V2_RQ-188",
+    "query": "Qoo10 후기 최근 90건",
+    "table": "review_qoo10",
+    "category": "recent_n",
+    "status": "OK",
+    "time": 45.8,
+    "answer_len": 712,
+    "answer_preview": "# Qoo10 최근 후기 요약  현재 제가 보유한 정보는 Qoo10의 **개별 후기 90건 원문 데이터**가 아닌, 최근 후기 동향을 종합한 요약 정보입니다. 개별 후기 90건을 건별로 제공해 드리기는 어렵습니다.  제공 가능한 최근 후기 동향은 다음과 같습니다:  ---  ## 주요 동향  | 구분 | 내용 | |------|------| | **주요 구"
+  },
+  {
+    "id": "V2_RQ-189",
+    "query": "큐텐 리뷰데이터 브랜드 필터링 후 건수 부탁",
+    "table": "review_qoo10",
+    "category": "brand_review",
+    "status": "OK",
+    "time": 34.8,
+    "answer_len": 562,
+    "answer_preview": "### 📊 큐텐(Qoo10) SKIN1004 브랜드 리뷰 현황  #### 요약  2025년 3월 8일부터 2026년 3월 8일까지 큐텐(Qoo10) 플랫폼에서 'SKIN1004' 브랜드와 관련된 리뷰는 총 **55,364건**으로 집계되었습니다. 이는 지난 1년간의 리뷰 데이터를 기준으로 합니다.  #### 분석 및 인사이트  *   **활발한 고객 참여*"
+  },
+  {
+    "id": "V2_RQ-190",
+    "query": "Qoo10 Centella Cleansing Oil 월별 리뷰데이터 좀",
+    "table": "review_qoo10",
+    "category": "product_review",
+    "status": "OK",
+    "time": 36.8,
+    "answer_len": 539,
+    "answer_preview": "해당 조건에 맞는 데이터가 존재하지 않습니다.  SQL 쿼리의 필터 조건 중 `product_name LIKE '%Centella%Cleansing%Oil%'`이 가장 문제일 가능성이 높습니다. 데이터베이스에 저장된 제품명이 정확히 이 패턴과 일치하지 않거나, 다른 형태로 저장되어 있을 수 있습니다. 예를 들어, '마다가스카르 센텔라 클렌징 오일' 또는 '"
+  },
+  {
+    "id": "V2_RQ-191",
+    "query": "큐텐 리뷰데이터 review_date 기준 분석",
+    "table": "review_qoo10",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 46.7,
+    "answer_len": 1266,
+    "answer_preview": "### 📊 큐텐(Qoo10) SKIN1004 월별 리뷰 현황 분석 (2025년 3월 ~ 2026년 1월)  #### 요약  ⚠️ 2026년 2월 및 3월(현재 2026년 03월 08일 기준) 데이터는 아직 집계되지 않았습니다. 지난 12개월(2025년 3월 8일 이후부터 2026년 1월까지) 동안 큐텐(Qoo10)에서 SKIN1004 브랜드의 총 리뷰 수는"
+  },
+  {
+    "id": "V2_RQ-192",
+    "query": "Qoo10 전체 데이터 행 수 확인해줘",
+    "table": "review_qoo10",
+    "category": "total_count",
+    "status": "OK",
+    "time": 29.8,
+    "answer_len": 287,
+    "answer_preview": "### 📊 Qoo10 전체 데이터 행 수 확인 결과  #### 요약  Qoo10 리뷰 데이터셋의 전체 행 수는 **55,364**개입니다.  #### 분석 및 인사이트  *   Qoo10 채널의 리뷰 데이터는 총 55,364건으로 집계되었습니다. *   `> 이 데이터는 Qoo10 플랫폼에서의 고객 리뷰 활동 규모를 파악하고, 향후 리뷰 트렌드 분석 또는 "
+  },
+  {
+    "id": "V2_RQ-193",
+    "query": "큐텐 최근 후기 중 긍정적인 것",
+    "table": "review_qoo10",
+    "category": "review_content",
+    "status": "OK",
+    "time": 36.9,
+    "answer_len": 732,
+    "answer_preview": "# 큐텐(Qoo10) 최근 긍정적 후기 요약  최근 큐텐, 특히 **큐텐 재팬**을 중심으로 나타난 긍정적 후기의 핵심 요소는 다음과 같습니다.  ---  ## 1. **다양한 상품 구성** - 패션·뷰티 외에도 가전, 생활용품, 식료품 등 폭넓은 카테고리 보유 - **한국 최신 트렌드 상품, 화장품, K-POP 관련 상품**이 풍부하여 일본 내에서도 쉽게"
+  },
+  {
+    "id": "V2_RQ-194",
+    "query": "Qoo10 2024년 5월 리뷰데이터",
+    "table": "review_qoo10",
+    "category": "date_range",
+    "status": "OK",
+    "time": 34.2,
+    "answer_len": 350,
+    "answer_preview": "해당 조건에 맞는 데이터가 존재하지 않습니다.  SQL에서 사용된 필터 조건 중 '2024년 5월'이라는 최근 날짜 조건과 'SKIN1004' 브랜드 조건이 동시에 만족하는 데이터가 없는 것으로 보입니다. 특히 2024년 5월 데이터는 아직 수집되지 않았거나 매우 적을 수 있습니다.  비슷한 데이터를 조회하기 위한 대안 질문은 다음과 같습니다: *   \"Q"
+  },
+  {
+    "id": "V2_RQ-195",
+    "query": "qoo10 리뷰 수 기준 상위 제품 보여줘",
+    "table": "review_qoo10",
+    "category": "top_reviewed",
+    "status": "OK",
+    "time": 57.1,
+    "answer_len": 1660,
+    "answer_preview": "### 📊 Qoo10 리뷰 수 기준 SKIN1004 상위 제품 현황 (2025년 3월 8일 ~ 2026년 3월 8일)  #### 요약  지난 1년간(2025년 3월 8일 ~ 2026년 3월 8일) Qoo10에서 SKIN1004 제품 중 가장 많은 리뷰를 받은 제품은 **센텔라 앰플**로, 총 **20,415건**의 리뷰를 기록하며 압도적인 1위를 차지했습니"
+  },
+  {
+    "id": "V2_RQ-196",
+    "query": "우리 회사 Qoo10 리부 수집 날짜 기준 통계",
+    "table": "review_qoo10",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 40.2,
+    "answer_len": 439,
+    "answer_preview": "현재 SKIN1004의 Qoo10 리뷰 수집 날짜 기준 통계에 대한 내부 데이터를 보유하고 있지 않아 정확한 답변을 드리기 어렵습니다.  참고로, 공개된 정보에 따르면 Qoo10 플랫폼 자체에서도 리뷰 수집 날짜별 통계를 별도로 제공하지 않는 것으로 파악됩니다. 판매자용 분석 도구인 **Q-Analytics**에서는 상품별 판매 실적, 페이지 뷰(PV) 등"
+  },
+  {
+    "id": "V2_RQ-197",
+    "query": "큐텐 리뷰데이터 상품별 최신 리뷰 요약 어때?",
+    "table": "review_qoo10",
+    "category": "review_content",
+    "status": "OK",
+    "time": 51.0,
+    "answer_len": 3008,
+    "answer_preview": "### 📊 SKIN1004 Qoo10 상품별 최신 리뷰 요약  #### 요약  SKIN1004 브랜드의 Qoo10 상품별 최신 리뷰를 분석한 결과, 총 **32개** 제품에 대한 최신 리뷰가 확인되었습니다. 가장 최근 리뷰는 **2026년 1월 28일**에 작성되었으며, 전반적으로 제품의 **보습, 진정, 사용감, 재구매 의사**에 대한 긍정적인 평가가 많"
+  },
+  {
+    "id": "V2_RQ-198",
+    "query": "Qoo10 2024년 상반기 후기 건수",
+    "table": "review_qoo10",
+    "category": "date_range",
+    "status": "OK",
+    "time": 36.0,
+    "answer_len": 265,
+    "answer_preview": "2024년 상반기 Qoo10(큐텐)의 전체 후기 건수에 대한 **공식적인 통계는 발표되지 않았습니다.**  확인된 사항은 다음과 같습니다:  - Qoo10은 분기별·반기별 **전체 리뷰 수를 공개적으로 발표하지 않는** 것으로 보입니다. - 개별 상품 인기나 특정 카테고리 성장률에 대한 언급은 있으나, **전체 후기 건수 같은 구체적 수치는 포함되지 않았습"
+  },
+  {
+    "id": "V2_RQ-199",
+    "query": "큐텐 후기 데이터 전체 요약 통계",
+    "table": "review_qoo10",
+    "category": "total_count",
+    "status": "OK",
+    "time": 37.0,
+    "answer_len": 589,
+    "answer_preview": "# 데이터 조회 안내  안녕하세요. 요청하신 **큐텐 후기 데이터 전체 요약 통계**를 현재 조회하지 못했습니다.  ---  ## 💡 더 정확한 결과를 위해 질문을 구체화해 주세요  조회 범위를 좁혀주시면 원하시는 데이터를 찾는 데 도움이 됩니다. 아래 항목들을 포함해 보세요:  | 구체화 항목 | 예시 | |------------|------| | **기"
+  },
+  {
+    "id": "V2_RQ-200",
+    "query": "Qoo10 최근 리뷰 전체 보여줄래",
+    "table": "review_qoo10",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 49.5,
+    "answer_len": 2346,
+    "answer_preview": "### 📊 Qoo10 SKIN1004 최근 리뷰 분석  #### 요약  총 **50건**의 SKIN1004 Qoo10 최근 리뷰가 조회되었습니다. 가장 최근 리뷰는 **2026년 01월 28일**에 작성되었습니다. 주요 제품은 **센텔라 앰플**이며, 진정, 보습, 끈적임 없는 사용감에 대한 긍정적인 평가가 많습니다. ⚠️ 현재 데이터는 2026년 1월 2"
+  },
+  {
+    "id": "V2_RQ-201",
+    "query": "정확한 큐텐 리뷰 중 Madagascar Centella Ampoule 비율 어때?",
+    "table": "review_qoo10",
+    "category": "product_review",
+    "status": "OK",
+    "time": 30.8,
+    "answer_len": 947,
+    "answer_preview": "### 📊 큐텐 SKIN1004 리뷰 중 Madagascar Centella Ampoule 비율 분석 (2025년 3월 8일 ~ 2026년 3월 8일)  #### 요약  지난 1년간 (2025년 3월 8일 ~ 2026년 3월 8일) 큐텐에서 수집된 SKIN1004 브랜드의 전체 리뷰 55,364건 중, Madagascar Centella Ampoule 관련"
+  },
+  {
+    "id": "V2_RQ-202",
+    "query": "정확한 Qoo10 리부 날짜별 건수 차트 좀 알려줘",
+    "table": "review_qoo10",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 39.2,
+    "answer_len": 1669,
+    "answer_preview": "### 📊 Qoo10 일별 리뷰 건수 분석  #### 요약  ⚠️ 데이터는 2025년 3월 8일부터 2026년 2월 7일까지의 Qoo10 리뷰 건수를 포함합니다 (오늘: 2026년 03월 08일). 해당 기간 동안 Qoo10의 일별 리뷰 건수는 **총 327일**에 걸쳐 집계되었으며, **최대 1,076건** (2025년 3월 15일)을 기록했습니다. 데이"
+  },
+  {
+    "id": "V2_RQ-203",
+    "query": "큐텐 Centella Ampoule 관련 리뷰 전부?",
+    "table": "review_qoo10",
+    "category": "product_review",
+    "status": "OK",
+    "time": 26.0,
+    "answer_len": 370,
+    "answer_preview": "해당 조건에 맞는 데이터가 존재하지 않습니다.  SQL에서 사용된 `collect_date >= '2025-03-08'` 조건이 문제입니다. 수집일이 미래 날짜로 설정되어 있어, 아직 수집되지 않은 데이터를 조회하려고 했기 때문에 결과가 없습니다. 리뷰 데이터는 과거 또는 현재 시점에 수집된 데이터를 기반으로 합니다.  비슷한 데이터를 조회할 수 있는 대안"
+  },
+  {
+    "id": "V2_RQ-204",
+    "query": "Qoo10 최근 후기 200건 데이터",
+    "table": "review_qoo10",
+    "category": "recent_n",
+    "status": "OK",
+    "time": 54.4,
+    "answer_len": 1715,
+    "answer_preview": "### 📊 Qoo10 SKIN1004 최근 후기 200건 분석 보고서  #### 요약  Qoo10에서 SKIN1004 브랜드의 최근 후기 **200건**을 분석한 결과입니다. 해당 후기들은 **2026년 1월 20일부터 2026년 1월 28일**까지 작성되었으며, 총 **23개**의 고유 제품에 대한 내용을 포함하고 있습니다. 후기 내용을 통해 제품의 진정"
+  },
+  {
+    "id": "V2_RQ-205",
+    "query": "큐텐 리뷰 제품별 점유율 어때?",
+    "table": "review_qoo10",
+    "category": "review_count",
+    "status": "OK",
+    "time": 27.8,
+    "answer_len": 1332,
+    "answer_preview": "### 📊 Qoo10 SKIN1004 제품별 리뷰 점유율 (최근 1년)  #### 요약  최근 1년간(2025년 3월 8일 ~ 2026년 3월 8일) Qoo10에서 SKIN1004 브랜드 제품의 리뷰 점유율을 분석한 결과, **'센텔라 앰플'이 전체 리뷰의 36.87%를 차지하며 압도적인 1위**를 기록했습니다. 상위 3개 제품인 '센텔라 앰플', '히알루"
+  },
+  {
+    "id": "V2_RQ-206",
+    "query": "Qoo10 2024년 2분기 후기 수",
+    "table": "review_qoo10",
+    "category": "date_range",
+    "status": "OK",
+    "time": 53.6,
+    "answer_len": 334,
+    "answer_preview": "입력하신 내용만으로는 정확한 답변을 드리기 어렵습니다.  **Qoo10 2024년 2분기 후기 수**에 대한 데이터를 확인하려면, 해당 정보가 포함된 사내 시스템이나 리포트에 접근해야 하는데, 현재 저에게 해당 데이터가 제공되지 않은 상태입니다.  다음 정보를 보완해 주시면 더 정확하게 도와드릴 수 있습니다:  1. **플랫폼 범위** — Qoo10 Jap"
+  },
+  {
+    "id": "V2_RQ-207",
+    "query": "큐텐 후기 최근 순 정렬 보여줄 수 있어?",
+    "table": "review_qoo10",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 28.3,
+    "answer_len": 312,
+    "answer_preview": "죄송합니다. 저는 큐텐(Qoo10) 사이트에 직접 접속하여 실시간 후기 데이터를 조회하거나 보여드리는 기능은 갖추고 있지 않습니다.  다만, 큐텐에서 직접 확인하시는 방법을 안내드릴 수 있습니다:  1. **Qoo10 사이트/앱**에서 해당 상품 페이지에 접속 2. **리뷰(후기) 탭**을 클릭 3. 정렬 옵션에서 **\"최신 순\"**을 선택  이렇게 하시면"
+  },
+  {
+    "id": "V2_RQ-208",
+    "query": "Qoo10 Tone Brightening Serum 평가 건수",
+    "table": "review_qoo10",
+    "category": "product_review",
+    "status": "OK",
+    "time": 44.1,
+    "answer_len": 154,
+    "answer_preview": "Qoo10에서 **SKIN1004 마다가스카르 센텔라 톤 브라이트닝 캡슐 앰플**의 평가 건수는 다음과 같습니다:  - **Qoo10 Japan**: **3,221건**  참고로, 동일 제품의 화해 앱 리뷰는 **179건**입니다.  *(출처: Google 검색 결과 기준)*"
+  },
+  {
+    "id": "V2_RQ-209",
+    "query": "요즘 큐텐 리뷰데이터 수 전년 대비 변화 알려주세요",
+    "table": "review_qoo10",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 40.3,
+    "answer_len": 561,
+    "answer_preview": "### 📊 큐텐 리뷰 데이터 현황 (2026년 3월 8일 기준)  #### 요약  ⚠️ 사용자의 요청은 전년 대비 변화 분석이었으나, 제공된 데이터에는 **2026년 데이터만 존재하여 전년(2025년) 대비 변화를 분석할 수 없습니다.** 2026년 3월 8일 현재까지 SKIN1004 브랜드의 큐텐 리뷰 수는 총 **52,781건**입니다.  #### 분석"
+  },
+  {
+    "id": "V2_RQ-210",
+    "query": "Qoo10 리부 한국어 번역 최근 20건 알려주세요",
+    "table": "review_qoo10",
+    "category": "review_content",
+    "status": "OK",
+    "time": 40.2,
+    "answer_len": 487,
+    "answer_preview": "죄송합니다. 현재 Qoo10의 개별 소비자 리뷰를 직접 조회하거나 한국어로 번역하여 제공하는 기능은 지원되지 않습니다.  검색을 시도했으나, **Qoo10 리뷰의 한국어 번역 최신 20건에 해당하는 데이터를 확인할 수 없었습니다.**  ### 대안 안내  Qoo10 리뷰를 확인하시려면 아래 방법을 참고해 주세요.  1. **Qoo10 사이트에서 직접 확인*"
+  },
+  {
+    "id": "V2_RQ-211",
+    "query": "우리 회사 큐텐 리뷰 데이터 행 건수",
+    "table": "review_qoo10",
+    "category": "total_count",
+    "status": "OK",
+    "time": 27.2,
+    "answer_len": 496,
+    "answer_preview": "### 📊 큐텐 리뷰 데이터 총 행 건수  #### 요약  2025년 3월 8일부터 2026년 3월 8일 현재까지 수집된 큐텐 리뷰 데이터는 총 **55,364**건입니다. 이는 지난 1년간의 큐텐 플랫폼 내 고객 리뷰 활동을 나타내는 수치입니다.  #### 분석 및 인사이트  *   **방대한 고객 피드백**: 5만 5천 건이 넘는 리뷰는 큐텐 플랫폼에서"
+  },
+  {
+    "id": "V2_RQ-212",
+    "query": "Qoo10 2024년 1월 리뷰 데이터 알려주세요",
+    "table": "review_qoo10",
+    "category": "date_range",
+    "status": "OK",
+    "time": 31.0,
+    "answer_len": 274,
+    "answer_preview": "해당 조건의 데이터가 없습니다.  SQL에서 사용된 필터 조건 중 '날짜(2024년 1월)'에 해당하는 Qoo10 리뷰 데이터가 현재 테이블에 존재하지 않습니다. 2024년 1월 데이터가 아직 수집되지 않았거나, 해당 기간의 데이터가 없는 것으로 보입니다.  유사한 데이터를 찾으시려면 다음 질문들을 활용해 보세요: *   Qoo10 2023년 1월 리뷰 데"
+  },
+  {
+    "id": "V2_RQ-213",
+    "query": "큐텐 리뷰 가장 많은 월은 알려주시면 감사하겠습니다",
+    "table": "review_qoo10",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 30.0,
+    "answer_len": 460,
+    "answer_preview": "### 📊 큐텐(Qoo10) 리뷰 최다 발생 월 분석  #### 요약  지난 1년간(2025년 3월 8일 ~ 2026년 3월 8일) 큐텐(Qoo10)에서 SKIN1004 브랜드의 리뷰가 가장 많았던 월은 **2025년 3월**로, 총 **11,554건**의 리뷰가 발생했습니다.  #### 분석 및 인사이트  *   지난 1년간의 큐텐(Qoo10) 리뷰 데이"
+  },
+  {
+    "id": "V2_RQ-214",
+    "query": "Qoo10 각 제품 리뷰 수 차트 그려줘",
+    "table": "review_qoo10",
+    "category": "review_count",
+    "status": "OK",
+    "time": 56.2,
+    "answer_len": 1678,
+    "answer_preview": "### 📊 Qoo10 SKIN1004 제품별 리뷰 수 현황 (2025년 3월 1일 ~ 2026년 3월 8일)  #### 요약  2025년 3월 1일부터 2026년 3월 8일까지 Qoo10에서 수집된 SKIN1004 제품 리뷰 데이터를 분석한 결과, 총 32개 제품 중 '센텔라 앰플'이 **20,415개**로 가장 많은 리뷰 수를 기록하며 압도적인 인기를 보"
+  },
+  {
+    "id": "V2_RQ-215",
+    "query": "요즘 큐텐 최근 수집 리뷰 날짜 부탁은 어떤가요?",
+    "table": "review_qoo10",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 46.8,
+    "answer_len": 926,
+    "answer_preview": "### 📊 큐텐 SKIN1004 최근 리뷰 수집 현황  #### 요약  SKIN1004 브랜드의 큐텐 리뷰는 **2026년 01월 28일**에 가장 최근에 수집되었습니다. 해당 수집일에 확인된 리뷰들은 2025년 01월 10일부터 2025년 11월 02일 사이에 작성된 것들입니다.  #### 상세 데이터  최근 수집된 큐텐 리뷰 데이터 50건을 기준으로, "
+  },
+  {
+    "id": "V2_RQ-216",
+    "query": "Qoo10 Centella 관련 제품 리뷰 합계 몇이야?",
+    "table": "review_qoo10",
+    "category": "product_review",
+    "status": "OK",
+    "time": 35.0,
+    "answer_len": 702,
+    "answer_preview": "### 📊 Qoo10 Centella 관련 SKIN1004 제품 리뷰 현황  #### 요약  2025년 3월 8일부터 2026년 3월 8일까지 Qoo10 채널에서 SKIN1004의 Centella 관련 제품에 대한 총 리뷰 수는 **0건**입니다. 이는 해당 기간 동안 조건에 맞는 리뷰가 존재하지 않음을 의미합니다.  #### 분석 및 인사이트  *   조"
+  },
+  {
+    "id": "V2_RQ-217",
+    "query": "참고로 큐텐 리뷰 월 단위 집계 알고 싶어",
+    "table": "review_qoo10",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 45.6,
+    "answer_len": 1316,
+    "answer_preview": "### 📊 큐텐(Qoo10) 월별 리뷰 현황  #### 요약  ⚠️ 2026년 2월 및 3월(현재) 데이터는 아직 집계되지 않았습니다. 지난 1년간(2025년 3월 ~ 2026년 1월) 큐텐(Qoo10) 리뷰는 총 **50,081건**이 집계되었습니다. 특히 **2025년 3월**에 **11,554건**으로 가장 많은 리뷰가 발생했으며, 2026년 1월에는"
+  },
+  {
+    "id": "V2_RQ-218",
+    "query": "우리 회사 Qoo10 리뷰 원문 내용 최신 5건 몇이야?",
+    "table": "review_qoo10",
+    "category": "review_content",
+    "status": "OK",
+    "time": 31.2,
+    "answer_len": 1100,
+    "answer_preview": "### 📊 Qoo10 최신 리뷰 원문 내용 5건  #### 요약  SKIN1004의 Qoo10 채널에서 조회된 최신 리뷰 5건은 모두 **2026년 1월 28일**에 작성되었습니다. 이 중 **4건**이 '센텔라 앰플' 제품에 대한 리뷰였으며, 주로 보습 및 진정 효과에 대한 긍정적인 내용이었습니다.  #### 상세 데이터 | 제품명 | 리뷰 날짜 | 리뷰"
+  },
+  {
+    "id": "V2_RQ-219",
+    "query": "qoo10 리뷰 4월 2024년 데이터 알려주세요",
+    "table": "review_qoo10",
+    "category": "date_range",
+    "status": "OK",
+    "time": 27.3,
+    "answer_len": 372,
+    "answer_preview": "안녕하세요! 요청하신 **Qoo10 2024년 4월 리뷰 데이터**를 조회하지 못했습니다.  좀 더 구체적인 조건을 포함하여 질문해 주시면 정확한 데이터를 찾는 데 도움이 됩니다. 아래 예시를 참고해 주세요:  **질문 예시:** 1. *\"2024년 4월 Qoo10 **일본** 채널의 **마다가스카르 센텔라 토닝 토너** 리뷰 데이터를 알려주세요.\"* 2."
+  },
+  {
+    "id": "V2_RQ-220",
+    "query": "Qoo10 SKIN1004 리뷰데이터 수 총합 알려주세요",
+    "table": "review_qoo10",
+    "category": "brand_review",
+    "status": "OK",
+    "time": 35.3,
+    "answer_len": 571,
+    "answer_preview": "### 📊 Qoo10 SKIN1004 리뷰 데이터 총합 분석  #### 요약  2025년 03월 08일부터 현재(2026년 03월 08일)까지 Qoo10에서 수집된 SKIN1004 브랜드의 리뷰 데이터 총합은 **55,364건**입니다.  #### 분석 및 인사이트  *   **활발한 고객 참여**: 지난 1년간 5만 5천 건 이상의 리뷰가 수집된 것은 Q"
+  },
+  {
+    "id": "V2_RQ-221",
+    "query": "큐텐 후기 가장 최근 수집된 제품",
+    "table": "review_qoo10",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 23.0,
+    "answer_len": 372,
+    "answer_preview": "제공된 검색 정보에는 큐텐에서 **가장 최근 수집된 특정 제품의 후기 데이터**가 포함되어 있지 않습니다.  현재 확인 가능한 내용은 큐텐의 전반적인 인기 동향 수준입니다:  | 카테고리 | 인기 브랜드/제품 예시 | |---|---| | **K-뷰티** | VT코스메틱, 티르티르, 클리오, 라카, 광동 스킨솔루션 세라마이드 등 | | **K-패션** | "
+  },
+  {
+    "id": "V2_RQ-222",
+    "query": "Qoo10 후기 제품명별 건수 정리",
+    "table": "review_qoo10",
+    "category": "review_count",
+    "status": "OK",
+    "time": 36.5,
+    "answer_len": 668,
+    "answer_preview": "# Qoo10 상품별 후기 건수 확인 방법  현재 **SKIN1004의 특정 제품별 Qoo10 후기 건수 데이터**는 제가 보유하고 있지 않아 정확한 수치를 안내드리기 어렵습니다.  ---  ## Qoo10에서 후기 건수를 확인하는 방법  ### 1. 상품 상세 페이지에서 직접 확인 - 각 상품 페이지 접속 → 상품 이미지·가격 주변에 **후기 수 표시**"
+  },
+  {
+    "id": "V2_RQ-223",
+    "query": "큐텐 Centella Soothing Cream 최근 리뷰데이터 내용",
+    "table": "review_qoo10",
+    "category": "review_content",
+    "status": "OK",
+    "time": 17.6,
+    "answer_len": 423,
+    "answer_preview": "해당 조건의 데이터가 없습니다.  SQL에서 사용된 `product_name` 필터 조건 `'%Centella%Soothing_Cream%'`이 문제일 수 있습니다. 제품명에 `Soothing_Cream`과 같이 언더스코어(`_`)가 포함된 경우는 드물며, 일반적으로 `Soothing Cream` (공백)으로 표기됩니다. 또한, SKIN1004의 해당 제품"
+  },
+  {
+    "id": "V2_RQ-224",
+    "query": "Qoo10 후기 2024년 3월 건수 어때?",
+    "table": "review_qoo10",
+    "category": "date_range",
+    "status": "OK",
+    "time": 32.7,
+    "answer_len": 406,
+    "answer_preview": "2024년 3월 Qoo10(큐텐)의 후기 건수에 대한 **정확한 통계는 공개적으로 제공되지 않아 확인이 어렵습니다.**  다만, 당시 상황을 유추할 수 있는 참고 정보는 다음과 같습니다:  1. **2024년 3월 '메가割(메가와리)' 대규모 할인 행사**가 진행되어 판매량이 증가했고, 이에 따라 후기 작성 건수도 함께 늘어났을 가능성이 높습니다. 2. *"
+  },
+  {
+    "id": "V2_RQ-225",
+    "query": "큐텐 리뷰 월별 제품별 크로스탭 보여주세요",
+    "table": "review_qoo10",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 54.1,
+    "answer_len": 2084,
+    "answer_preview": "### 📊 큐텐(Qoo10) 월별 제품별 리뷰 현황  #### 요약  ⚠️ 2026년 3월 8일 현재, 큐텐 리뷰 데이터는 2025년 3월부터 2026년 1월까지 집계되었습니다. 2026년 2월 및 3월(현재 월) 데이터는 포함되어 있지 않습니다. 해당 기간 동안 **총 11개월**에 걸쳐 **32개 제품**에 대한 리뷰가 확인되었으며, 특히 **'센텔라 "
+  },
+  {
+    "id": "V2_RQ-226",
+    "query": "Qoo10 리뷰 전체 데이터 개수?",
+    "table": "review_qoo10",
+    "category": "total_count",
+    "status": "OK",
+    "time": 26.2,
+    "answer_len": 462,
+    "answer_preview": "### 📊 Qoo10 리뷰 전체 데이터 개수 현황  #### 요약  Qoo10 플랫폼에 등록된 전체 리뷰 데이터는 총 **55,364개**입니다.  #### 분석 및 인사이트  *   **방대한 고객 피드백:** 55,364개의 리뷰는 Qoo10 채널에서 SKIN1004 제품에 대한 고객들의 활발한 관심과 참여를 보여주는 중요한 지표입니다. *   **데이"
+  },
+  {
+    "id": "V2_RQ-227",
+    "query": "큐텐 후기에서 Cleansing 키워드 검색",
+    "table": "review_qoo10",
+    "category": "product_review",
+    "status": "OK",
+    "time": 59.8,
+    "answer_len": 1004,
+    "answer_preview": "# 큐텐(Qoo10) 클렌징 제품 후기 요약  검색 정보를 기반으로 큐텐에서 인기 있는 클렌징 제품 후기를 정리해 드립니다.  ---  ## 주요 인기 제품 및 후기  | 브랜드 | 제품명 | 주요 후기 요약 | |--------|--------|----------------| | **아누아(Anua)** | 어성초 쿼세티놀 포어 딥 클렌징폼 | 자극 없이"
+  },
+  {
+    "id": "V2_RQ-228",
+    "query": "Qoo10 최근 평가 내용 한국어로 보여줘",
+    "table": "review_qoo10",
+    "category": "review_content",
+    "status": "OK",
+    "time": 53.0,
+    "answer_len": 839,
+    "answer_preview": "# 큐텐(Qoo10) 최근 평가 요약  큐텐에 대한 최근 평가는 **부정적 측면**과 **긍정적 측면**이 상반되게 나타나고 있습니다.  ---  ## ⚠️ 부정적 평가  | 이슈 | 내용 | |------|------| | **정산 지연 사태** | 큐텐이 인수한 티몬·위메프 등에서 판매자 대금을 장기간 정산하지 못하는 사태 발생. 무리한 인수합병으로 인"
+  },
+  {
+    "id": "V2_RQ-229",
+    "query": "큐텐 리뷰 TOP 10 제품 확인 부탁드립니다",
+    "table": "review_qoo10",
+    "category": "top_reviewed",
+    "status": "OK",
+    "time": 44.2,
+    "answer_len": 1199,
+    "answer_preview": "### 📊 큐텐(Qoo10) SKIN1004 제품별 리뷰 TOP 10 분석  #### 요약  SKIN1004의 큐텐(Qoo10) 리뷰 데이터를 분석한 결과, '센텔라 앰플'이 **20,415개**의 압도적인 리뷰 수로 1위를 차지했습니다. 이어서 '히알루시카 워터핏 선 세럼'이 **9,162개**, '센텔라 퀵 카밍 패드'가 **6,991개**로 상위권을 "
+  },
+  {
+    "id": "V2_RQ-230",
+    "query": "간단하게 Qoo10 2024년 2월 후기 빨리은 어떤가요?",
+    "table": "review_qoo10",
+    "category": "date_range",
+    "status": "OK",
+    "time": 41.3,
+    "answer_len": 310,
+    "answer_preview": "2024년 2월 Qoo10의 배송 관련 상황을 요약하면 다음과 같습니다.  ---  ### Qoo10 2024년 2월 배송 상황  - **정산 지연 사태**로 인해 판매자 이탈이 발생하면서 전반적인 서비스가 **불안정**했습니다. - **설 연휴**(2월 초)와 맞물려 배송 지연이 있었을 가능성이 높습니다. - 직접적인 소비자 배송 후기는 많지 않으나, 내"
+  },
+  {
+    "id": "V2_RQ-231",
+    "query": "큐텐 평가 collect_date 별 건수",
+    "table": "review_qoo10",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 49.0,
+    "answer_len": 512,
+    "answer_preview": "큐텐(Qoo10)의 **collect_date(수집일)별 평가 건수**에 대한 구체적인 통계는 현재 공개적으로 제공되지 않습니다.  ## 참고 사항  - 큐텐 플랫폼의 리뷰 데이터는 **내부적으로 관리**되며, 특정 수집 날짜별 리뷰 건수를 외부에서 확인할 수 있는 방법은 없습니다. - 공개 검색 결과에서도 수집일별 건수와 같은 상세 데이터는 확인되지 않았"
+  },
+  {
+    "id": "V2_RQ-232",
+    "query": "Qoo10 리뷰데이터 최근 것 review_date 기준",
+    "table": "review_qoo10",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 44.6,
+    "answer_len": 1574,
+    "answer_preview": "### 📊 Qoo10 SKIN1004 브랜드 최근 리뷰 분석 보고서 (2026년 1월 기준)  #### 요약  ⚠️ 2026년 03월 08일 현재, 요청하신 Qoo10 SKIN1004 브랜드의 가장 최신 리뷰 데이터는 **2026년 1월 25일부터 1월 28일까지**의 총 **50건**입니다. 제공된 상위 20건의 프리뷰 데이터 분석 결과, '센텔라 앰플'"
+  },
+  {
+    "id": "V2_RQ-233",
+    "query": "잠깐, 큐텐 리뷰 채널 목록 알려줘",
+    "table": "review_qoo10",
+    "category": "review_count",
+    "status": "OK",
+    "time": 28.7,
+    "answer_len": 363,
+    "answer_preview": "### 📊 큐텐 리뷰 채널 목록  #### 요약  큐텐 리뷰 데이터에서 확인된 채널은 **Q10**과 **Qoo10** 두 가지입니다.  #### 상세 데이터 | 채널명 | |:---| | Q10 | | Qoo10 |  #### 분석 및 인사이트  *   큐텐 리뷰 데이터에서 'Q10'과 'Qoo10' 두 가지 채널명이 확인되었습니다. *   > 이 두 채"
+  },
+  {
+    "id": "V2_RQ-234",
+    "query": "Qoo10 리부 제품별 번역 리뷰 보여줘",
+    "table": "review_qoo10",
+    "category": "review_content",
+    "status": "WARN",
+    "time": 68.9,
+    "answer_len": 3068,
+    "answer_preview": "### 📊 Qoo10 SKIN1004 제품별 최신 번역 리뷰  #### 요약  Qoo10에서 SKIN1004 제품에 대한 최신 번역 리뷰 **50건**이 조회되었습니다. 이 리뷰들은 **2026년 01월 25일부터 2026년 01월 28일까지** 작성되었으며, 특히 **센텔라 앰플**에 대한 리뷰가 가장 높은 비중을 차지했습니다.  #### 상세 데이터  "
+  },
+  {
+    "id": "V2_RQ-235",
+    "query": "큐텐 후기 2025년 월별 누적",
+    "table": "review_qoo10",
+    "category": "monthly_trend",
+    "status": "WARN",
+    "time": 61.8,
+    "answer_len": 566,
+    "answer_preview": "# 데이터 조회 안내  안녕하세요. 요청하신 **큐텐(Qoo10) 2025년 월별 누적 후기 데이터**를 조회하지 못했습니다.  좀 더 정확한 결과를 위해 **조건을 구체적으로 지정**해 주시면 다시 조회를 시도해 보겠습니다.  ---  ## 💡 이렇게 질문해 보세요  | # | 예시 질문 | |---|----------| | 1 | **\"큐텐 일본에서 마"
+  },
+  {
+    "id": "V2_RQ-236",
+    "query": "Qoo10 전체 리뷰 현황 요약 얼마임?",
+    "table": "review_qoo10",
+    "category": "total_count",
+    "status": "OK",
+    "time": 19.8,
+    "answer_len": 568,
+    "answer_preview": "### 📊 Qoo10 SKIN1004 브랜드 리뷰 현황 요약  #### 요약  2025년 3월 8일부터 2026년 3월 8일까지 Qoo10에서 수집된 SKIN1004 브랜드의 총 리뷰 수는 **55,364개**입니다. 이는 지난 1년간 Qoo10 채널에서 SKIN1004 제품에 대한 고객들의 활발한 피드백을 보여줍니다.  #### 분석 및 인사이트  *  "
+  },
+  {
+    "id": "V2_RQ-237",
+    "query": "큐텐 평가 최근 150건 알고 싶어 부탁드려요",
+    "table": "review_qoo10",
+    "category": "recent_n",
+    "status": "OK",
+    "time": 50.4,
+    "answer_len": 867,
+    "answer_preview": "# 큐텐(Qoo10) 최신 평가 요약  현재 제가 보유한 검색 정보에는 **최근 150건의 개별 리뷰 데이터**가 포함되어 있지 않습니다. 다만, 최신 검색 결과를 기반으로 큐텐에 대한 전반적인 평가 동향을 안내드릴 수 있습니다.  ---  ## 📊 최신 평가 동향  ### ✅ 긍정적 평가 (주로 큐텐 재팬)  | 항목 | 내용 | |------|-----"
+  },
+  {
+    "id": "V2_RQ-238",
+    "query": "Qoo10 Madagascar Centella Ampoule 리뷰 전체 건수 확인해줘",
+    "table": "review_qoo10",
+    "category": "product_review",
+    "status": "OK",
+    "time": 38.3,
+    "answer_len": 741,
+    "answer_preview": "### 📊 Qoo10 Madagascar Centella Ampoule 리뷰 현황 (2025.03.08 ~ 2026.03.08)  #### 요약  2025년 3월 8일부터 2026년 3월 8일(오늘 기준)까지 Qoo10 채널에서 SKIN1004 Madagascar Centella Ampoule 제품에 대한 리뷰는 **총 0건**으로 확인되었습니다. 해당 기"
+  },
+  {
+    "id": "V2_RQ-239",
+    "query": "큐텐 평가 제품별 최다 리뷰 월",
+    "table": "review_qoo10",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 44.2,
+    "answer_len": 420,
+    "answer_preview": "안녕하세요. 요청하신 **큐텐(Qoo10) 채널의 제품별 최다 리뷰 월** 데이터를 현재 조회하지 못했습니다.  좀 더 정확한 결과를 위해 **조건을 구체적으로 지정**해 주시면 다시 조회를 시도해 볼 수 있습니다. 아래 예시를 참고해 주세요.  ---  ### 💡 질문 예시  1. **\"2024년 큐텐 일본에서 마다가스카르 센텔라 톤크림의 월별 리뷰 수를"
+  },
+  {
+    "id": "V2_RQ-240",
+    "query": "Qoo10 리뷰 데이터 최초 수집일 빨리",
+    "table": "review_qoo10",
+    "category": "date_range",
+    "status": "OK",
+    "time": 24.5,
+    "answer_len": 386,
+    "answer_preview": "### 📊 Qoo10 리뷰 데이터 최초 수집일  #### 요약  Qoo10 리뷰 데이터의 최초 수집일은 **2025년 12월 08일**입니다. 이는 현재까지 수집된 Qoo10 리뷰 데이터 중 가장 오래된 날짜를 나타냅니다.  #### 분석 및 인사이트  *   Qoo10 리뷰 데이터는 2025년 12월 08일부터 수집되기 시작했습니다. *   이는 Qoo1"
+  },
+  {
+    "id": "V2_RQ-241",
+    "query": "큐텐에서 리뷰 수 증가 추세야? 좀",
+    "table": "review_qoo10",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 32.8,
+    "answer_len": 387,
+    "answer_preview": "안녕하세요! 😊  큐텐 리뷰 수 증가 추세에 대한 **데이터를 조회하지 못했습니다.** 조금 더 구체적인 조건을 알려주시면 정확한 데이터를 찾는 데 도움이 됩니다.  ---  **아래와 같이 질문을 구체화해 보시겠어요?**  > 📌 **예시 질문**  > 1. \"큐텐 **일본**에서 **마다가스카르 센텔라 앰플**의 최근 **3개월** 리뷰 수 추이를 알려"
+  },
+  {
+    "id": "V2_RQ-242",
+    "query": "Qoo10 후기 최근 데이터 요약해줘 알려줄래 몇이야?",
+    "table": "review_qoo10",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 40.7,
+    "answer_len": 424,
+    "answer_preview": "### 📊 Qoo10 SKIN1004 최근 후기 현황  #### 요약  2025년 3월 8일부터 2026년 3월 8일까지 지난 1년간 Qoo10에서 수집된 SKIN1004 브랜드의 후기는 총 **55,364**건입니다.  #### 분석 및 인사이트  *   지난 1년간 Qoo10 플랫폼에서 SKIN1004 브랜드에 대한 고객들의 활발한 관심과 참여가 있었음"
+  },
+  {
+    "id": "V2_RQ-243",
+    "query": "큐텐 Tone Brightening 제품 리뷰 몇 건은 어떤가요?",
+    "table": "review_qoo10",
+    "category": "product_review",
+    "status": "OK",
+    "time": 35.6,
+    "answer_len": 453,
+    "answer_preview": "요청하신 조건에 해당하는 데이터가 없습니다.  SQL 쿼리에서 `product_name` 필터 조건인 `'%Tone_Brightening%'`이 문제일 수 있습니다. 사용자 질문에서는 'Tone Brightening' (공백)으로 요청되었으나, SQL에서는 언더바(_)가 사용되어 실제 제품명과 일치하지 않았을 가능성이 높습니다. 유효한 제품명 목록이 없어 "
+  },
+  {
+    "id": "V2_RQ-244",
+    "query": "요즘 Qoo10 리뷰 제품 종류 몇 개야? 빨리",
+    "table": "review_qoo10",
+    "category": "review_count",
+    "status": "OK",
+    "time": 26.4,
+    "answer_len": 548,
+    "answer_preview": "### 📊 Qoo10 SKIN1004 리뷰 제품 종류 현황 (최근 1년)  #### 요약  최근 1년간(2025년 3월 8일 ~ 2026년 3월 8일) Qoo10 채널에서 SKIN1004 브랜드의 리뷰가 작성된 제품 종류는 총 **32개**입니다.  #### 분석 및 인사이트  *   **다양한 제품 포트폴리오:** 지난 1년간 Qoo10에서 **32개**"
+  },
+  {
+    "id": "V2_RQ-245",
+    "query": "qoo10 리뷰데이터 번역문 최근 순",
+    "table": "review_qoo10",
+    "category": "review_content",
+    "status": "OK",
+    "time": 55.6,
+    "answer_len": 63197,
+    "answer_preview": "### 📊 Qoo10 SKIN1004 최신 리뷰 분석 보고서  #### 요약  ⚠️ **데이터 기간 경고:** 오늘 날짜는 2026년 03월 08일이지만, 조회된 Qoo10 리뷰 데이터는 **2026년 01월 25일부터 2026년 01월 28일**까지의 내용입니다. 총 **50건**의 SKIN1004 브랜드 리뷰가 최신순으로 조회되었으며, 이 중 상위 20"
+  },
+  {
+    "id": "V2_RQ-246",
+    "query": "Qoo10 2024년 1분기 리뷰 데이터 어떻게 되나요?",
+    "table": "review_qoo10",
+    "category": "date_range",
+    "status": "OK",
+    "time": 41.2,
+    "answer_len": 544,
+    "answer_preview": "Qoo10 2024년 1분기 SKIN1004 브랜드에 대한 리뷰 데이터는 현재 조회되지 않습니다.  SQL 쿼리에서 사용된 필터 조건은 'SKIN1004' 브랜드와 '2024년 1월 1일부터 2024년 3월 31일'까지의 날짜 범위입니다. 해당 조건에 일치하는 데이터가 없으므로, 다음 중 하나가 원인일 수 있습니다: *   해당 기간 동안 Qoo10에서 S"
+  },
+  {
+    "id": "V2_RQ-247",
+    "query": "큐텐 리뷰 전체 건수 차트 부탁드려요",
+    "table": "review_qoo10",
+    "category": "total_count",
+    "status": "OK",
+    "time": 38.8,
+    "answer_len": 562,
+    "answer_preview": "### 📊 큐텐(Qoo10) 리뷰 현황 (최근 1년)  #### 요약  ⚠️ 사용자 질문에서 요청하신 '전체' 리뷰 건수 중, 현재 데이터는 2025년 03월 08일부터 2026년 03월 08일까지 최근 1년간의 큐텐(Qoo10) 리뷰를 기준으로 집계되었습니다. 이 기간 동안 수집된 총 리뷰 건수는 **55,364건**입니다.  #### 분석 및 인사이트 "
+  },
+  {
+    "id": "V2_RQ-248",
+    "query": "Qoo10 평가 각 제품 비교 분석 어떻게 되나요?",
+    "table": "review_qoo10",
+    "category": "review_count",
+    "status": "OK",
+    "time": 37.2,
+    "answer_len": 1444,
+    "answer_preview": "### 📊 Qoo10 SKIN1004 제품별 리뷰 수 비교 분석 (2025년 3월 8일 ~ 2026년 3월 8일)  #### 요약  지난 1년간 (2025년 3월 8일 ~ 2026년 3월 8일) Qoo10에서 SKIN1004 제품들의 리뷰 수를 분석한 결과, '센텔라 앰플'이 **20,415개**의 리뷰로 압도적인 1위를 차지했습니다. 이는 2위인 '히알루"
+  },
+  {
+    "id": "V2_RQ-249",
+    "query": "참고로 큐텐 최근 후기 중 Cream 제품 좀 알려줘",
+    "table": "review_qoo10",
+    "category": "product_review",
+    "status": "OK",
+    "time": 49.7,
+    "answer_len": 716,
+    "answer_preview": "큐텐에서 판매되는 주요 크림 제품의 최근 후기를 정리해 드리겠습니다.  ---  ## 큐텐 주요 크림 제품 최근 후기 요약  | 제품명 | 주요 후기 내용 | |---|---| | **발레아 Q10 나이트 크림** | 독일 제품으로 **가성비 우수**. 다소 무거운 제형이지만 쫀쫀하게 발리며 자극이 적음. 아침에 **피부 속광** 효과. 건성 피부에 유분감"
+  },
+  {
+    "id": "V2_RQ-250",
+    "query": "Qoo10 리뷰 각 월 건수 차트 그려줘",
+    "table": "review_qoo10",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 39.0,
+    "answer_len": 1285,
+    "answer_preview": "### 📊 Qoo10 SKIN1004 월별 리뷰 현황  #### 요약  ⚠️ 2026년 데이터는 현재 1월까지 존재합니다 (오늘: 2026년 03월 08일). Qoo10에서 SKIN1004 브랜드의 리뷰는 2025년 3월부터 2026년 1월까지 월별로 큰 변동성을 보였습니다. 특히 2025년 3월에 **13,167건**으로 가장 많은 리뷰가 발생했으며, 2"
+  },
+  {
+    "id": "V2_RQ-251",
+    "query": "큐텐 리뷰 원문 전체 보여줄래",
+    "table": "review_qoo10",
+    "category": "review_content",
+    "status": "WARN",
+    "time": 62.2,
+    "answer_len": 376,
+    "answer_preview": "### 📊 SKIN1004 큐텐 최신 리뷰 원문 분석  #### 요약  사용자님의 요청에 따라 SKIN1004 브랜드의 큐텐 최신 리뷰 원문 **총 1,000건**을 조회했습니다. 조회된 리뷰는 **2026년 01월 28일**까지의 데이터를 포함하며, **31개**의 고유 제품에 대한 리뷰가 있습니다. ⚠️ 현재 조회된 데이터는 **2026년 01월 28일"
+  },
+  {
+    "id": "V2_RQ-252",
+    "query": "Qoo10 리뷰 2024년 전체 추세",
+    "table": "review_qoo10",
+    "category": "date_range",
+    "status": "OK",
+    "time": 34.1,
+    "answer_len": 443,
+    "answer_preview": "# 데이터 조회 안내  안녕하세요. 요청하신 **Qoo10 2024년 리뷰 추세** 데이터를 조회하지 못했습니다.  좀 더 구체적인 조건을 포함하여 질문해 주시면 정확한 데이터를 찾는 데 도움이 됩니다. 아래 항목들을 명시해 주세요:  > **기간** · **국가(일본/싱가포르 등)** · **특정 제품명** · **지표(리뷰 수, 평점, 키워드 등)** "
+  },
+  {
+    "id": "V2_RQ-253",
+    "query": "정확한 큐텐 리뷰에서 Ampoule 제품만 필터 부탁",
+    "table": "review_qoo10",
+    "category": "product_review",
+    "status": "OK",
+    "time": 19.9,
+    "answer_len": 393,
+    "answer_preview": "해당 조건의 데이터가 없습니다.  SQL에서 사용된 필터 조건 중 `collect_date` 필터 조건인 `CAST(collect_date AS DATE) >= '2025-03-08'`이 문제입니다. 2025년 3월 8일은 미래 날짜이므로, 현재까지 수집된 데이터 중 해당 조건을 만족하는 데이터는 존재하지 않습니다. `collect_date`는 데이터가 수"
+  },
+  {
+    "id": "V2_RQ-254",
+    "query": "빠르게 Qoo10 후기 최근 75건 데이터 확인해주세요",
+    "table": "review_qoo10",
+    "category": "recent_n",
+    "status": "OK",
+    "time": 54.8,
+    "answer_len": 964,
+    "answer_preview": "### 📊 Qoo10 SKIN1004 최근 75건 후기 분석  #### 요약  Qoo10 채널에서 SKIN1004 브랜드의 최근 후기 **총 75건**이 조회되었습니다. 조회된 후기는 **2026년 01월 25일부터 2026년 01월 28일까지**의 데이터입니다. (오늘 날짜 2026년 03월 08일 기준, 약 한 달 전 데이터입니다.) 프리뷰 데이터에서는"
+  },
+  {
+    "id": "V2_RQ-255",
+    "query": "큐텐 후기 브랜드 분포",
+    "table": "review_qoo10",
+    "category": "brand_review",
+    "status": "OK",
+    "time": 50.2,
+    "answer_len": 882,
+    "answer_preview": "# 큐텐(Qoo10) 후기 브랜드 분포  큐텐, 특히 **큐텐 재팬**의 후기 브랜드 분포는 **K-뷰티 카테고리가 압도적**인 것으로 나타났습니다. 한국 화장품 브랜드들이 판매 순위 및 어워드 상위권을 휩쓸면서, 소비자 후기 역시 이들 브랜드에 집중되고 있습니다.  ---  ## 1. 색조 메이크업  | 브랜드 | 강세 카테고리 | 대표 인기 제품 | |"
+  },
+  {
+    "id": "V2_RQ-256",
+    "query": "Qoo10 후기 각 제품 월별 통계표",
+    "table": "review_qoo10",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 57.7,
+    "answer_len": 1756,
+    "answer_preview": "### 📊 Qoo10 SKIN1004 제품별 월별 후기 통계 보고서  #### 요약  ⚠️ 2026년은 현재 1월 데이터만 존재합니다 (오늘: 2026년 03월 08일). 본 보고서는 2025년 3월부터 2026년 1월까지 Qoo10에서 SKIN1004 브랜드 제품에 대한 월별 후기 통계를 분석한 결과입니다. 총 **32개**의 고유 제품에 대해 **324"
+  },
+  {
+    "id": "V2_RQ-257",
+    "query": "큐텐 리뷰 전체 데이터 조회 알려주세요",
+    "table": "review_qoo10",
+    "category": "total_count",
+    "status": "OK",
+    "time": 40.5,
+    "answer_len": 1177,
+    "answer_preview": "### 📊 Qoo10 SKIN1004 리뷰 데이터 조회 결과 (2026년 1월 28일 수집 기준)  #### 요약  2026년 1월 28일에 수집된 Qoo10 채널의 SKIN1004 브랜드 리뷰 **1,000건**이 조회되었습니다. 이 리뷰들은 2025년 1월 10일부터 2025년 12월 16일 사이에 작성된 **28개**의 고유 제품에 대한 내용을 포함하"
+  },
+  {
+    "id": "V2_RQ-258",
+    "query": "Qoo10 2023년 리뷰 데이터 있어",
+    "table": "review_qoo10",
+    "category": "date_range",
+    "status": "OK",
+    "time": 26.9,
+    "answer_len": 532,
+    "answer_preview": "### 📊 Qoo10 2023년 SKIN1004 리뷰 데이터 조회 결과  #### 요약  2023년 Qoo10 채널에서 **SKIN1004 브랜드의 리뷰 데이터는 현재 조회되지 않습니다.**  #### 분석 및 인사이트  *   **데이터 부재 확인:** 2023년 Qoo10 채널에서 SKIN1004 브랜드에 대한 리뷰는 현재 시스템에서 확인되지 않습니다."
+  },
+  {
+    "id": "V2_RQ-259",
+    "query": "큐텐 리뷰데이터 최근 리뷰 제품명",
+    "table": "review_qoo10",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 51.3,
+    "answer_len": 1249,
+    "answer_preview": "### 📊 큐텐(Qoo10) SKIN1004 브랜드 최근 리뷰 제품 분석  #### 요약  SKIN1004 브랜드의 큐텐(Qoo10) 최근 리뷰 **50건**을 분석한 결과, **'센텔라 앰플'**이 가장 많은 리뷰를 기록하며 주력 제품으로서의 인기를 입증했습니다. 이 리뷰들은 **2026년 1월 25일부터 2026년 1월 28일까지**의 기간에 작성되었습"
+  },
+  {
+    "id": "V2_RQ-260",
+    "query": "Qoo10 Centella Ampoule 후기 한국어 요약",
+    "table": "review_qoo10",
+    "category": "review_content",
+    "status": "OK",
+    "time": 45.2,
+    "answer_len": 639,
+    "answer_preview": "# Qoo10 센텔라 앰플 후기 요약  **스킨1004 마다가스카르 센텔라 앰플**에 대한 한국 사용자 후기를 정리하면 다음과 같습니다.  ---  ## 1. 주요 효과 및 성분 - **마다가스카르산 병풀추출물 100%** 단일 성분으로 구성 - **붉은 기운 완화** 및 **트러블 케어**에 도움을 준다는 후기 다수 - **피부 장벽 강화** 및 자극받은"
+  },
+  {
+    "id": "V2_RQ-261",
+    "query": "큐탠 제품별 리부 수 그래프 좀 알려줘",
+    "table": "review_qoo10",
+    "category": "review_count",
+    "status": "OK",
+    "time": 46.5,
+    "answer_len": 1447,
+    "answer_preview": "### 📊 Qoo10 SKIN1004 제품별 리뷰 수 현황  #### 요약  2025년 3월 8일부터 2026년 3월 8일까지 Qoo10에서 SKIN1004 브랜드 제품에 대한 리뷰 현황을 분석한 결과, 총 32개 제품 중 상위 20개 제품의 리뷰 수가 집계되었습니다. 이 기간 동안 가장 많은 리뷰를 받은 제품은 **센텔라 앰플**로, **20,415건**"
+  },
+  {
+    "id": "V2_RQ-262",
+    "query": "빠르게 Qoo10 리부 수 기준 하위 제품 몇이야?",
+    "table": "review_qoo10",
+    "category": "review_count",
+    "status": "OK",
+    "time": 43.3,
+    "answer_len": 636,
+    "answer_preview": "입력하신 질문을 정확히 이해하기 어렵지만, **Qoo10에서 리뷰 수가 적은 순서대로 하위 제품을 조회하는 방법**에 대해 문의하신 것으로 판단됩니다.  ---  ## Qoo10 리뷰 수 기준 하위 제품 조회  **Qoo10 플랫폼에서는 리뷰 수가 적은 순으로 상품을 정렬하는 기능을 제공하지 않습니다.**  따라서 SKIN1004 제품 중 Qoo10에서 리"
+  },
+  {
+    "id": "V2_RQ-263",
+    "query": "확인 좀 해줘 큐텐 2025년 1월 리뷰 건수 알 수 있을까요?",
+    "table": "review_qoo10",
+    "category": "date_range",
+    "status": "OK",
+    "time": 58.8,
+    "answer_len": 551,
+    "answer_preview": "안녕하세요! 😊  요청하신 **큐텐(Qoo10) 2025년 1월 리뷰 건수** 데이터를 현재 조회하지 못했습니다.  좀 더 정확한 결과를 위해 **조건을 구체적으로 지정**해 주시면 다시 조회해 보겠습니다.  ---  ### 💡 이렇게 질문해 보시면 좋아요  1. **\"큐텐 일본에서 2025년 1월 마다가스카르 센텔라 토닝 토너의 리뷰 건수 알려줘\"**  "
+  },
+  {
+    "id": "V2_RQ-264",
+    "query": "Qoo10 리뷰데이터 최신 수집 데이터 날짜",
+    "table": "review_qoo10",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 28.9,
+    "answer_len": 565,
+    "answer_preview": "### 📊 Qoo10 리뷰 데이터 최신 수집일 현황  #### 요약  Qoo10 리뷰 데이터의 최신 수집일은 **2026년 01월 28일**입니다. 이는 오늘(2026년 03월 08일) 기준으로 약 한 달 이상 지난 데이터이므로, 최신 리뷰 현황을 파악하기 위해서는 데이터 업데이트가 필요합니다.  #### 분석 및 인사이트  *   **데이터 신선도 문제:"
+  },
+  {
+    "id": "V2_RQ-265",
+    "query": "큐텐 리뷰 제품별 평균 리뷰 수 어때?",
+    "table": "review_qoo10",
+    "category": "review_count",
+    "status": "OK",
+    "time": 27.5,
+    "answer_len": 1833,
+    "answer_preview": "### 📊 큐텐 제품별 리뷰 현황 (최근 1년)  #### 요약  ⚠️ 사용자 질문에서 요청하신 '평균 리뷰 수'는 제품별 총 리뷰 수 데이터를 기반으로 산출해야 합니다. 현재 제공된 데이터는 **최근 1년간 (2025년 03월 08일 ~ 2026년 03월 08일) 제품별 총 리뷰 수**를 보여줍니다. 이 기간 동안 큐텐에서 가장 많은 리뷰를 받은 제품은 "
+  },
+  {
+    "id": "V2_RQ-266",
+    "query": "확인 좀 해줘 Qoo10 리뷰 전체 2025년 추이 확인 부탁드립니다",
+    "table": "review_qoo10",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 30.3,
+    "answer_len": 530,
+    "answer_preview": "안녕하세요! 요청하신 **Qoo10 리뷰 전체 2025년 추이** 데이터를 조회하지 못했습니다.  좀 더 정확한 결과를 위해 **조건을 구체적으로 지정**해 주시면 다시 조회해 보겠습니다. 아래 항목들을 참고하여 질문을 다듬어 주세요.  > **구체화하면 좋은 항목**  > - **국가/플랫폼** : Qoo10 Japan / Qoo10 글로벌 등  > - "
+  },
+  {
+    "id": "V2_RQ-267",
+    "query": "qoo10 리뷰 원문과 번역 같이 10건",
+    "table": "review_qoo10",
+    "category": "review_content",
+    "status": "OK",
+    "time": 38.2,
+    "answer_len": 362,
+    "answer_preview": "안녕하세요. 요청하신 **Qoo10 리뷰 데이터를 조회하지 못했습니다.**  좀 더 구체적인 조건을 추가해 주시면 정확한 데이터를 찾는 데 도움이 됩니다. 예를 들어 **기간, 국가(일본/싱가포르 등), 특정 제품명** 등을 함께 알려주세요.  **질문 예시:** 1. *\"2025년 5월 Qoo10 일본에서 마다가스카르 센텔라 토닝 토너 리뷰 원문과 번역 "
+  },
+  {
+    "id": "V2_RQ-268",
+    "query": "Qoo10 리뷰 기간별 건수 분석 알 수 있을까요?",
+    "table": "review_qoo10",
+    "category": "date_range",
+    "status": "OK",
+    "time": 57.6,
+    "answer_len": 982,
+    "answer_preview": "### 📊 Qoo10 SKIN1004 리뷰 기간별 건수 분석  #### 요약  ⚠️ 지난 1년간의 Qoo10 SKIN1004 리뷰 기간별 건수 분석 요청에 대해, 현재 데이터는 **2025년 12월**과 **2026년 1월** 두 달치만 제공됩니다. 2026년 1월에는 **52,781건**의 리뷰가 발생하여, 2025년 12월 **2,583건** 대비 **"
+  },
+  {
+    "id": "V2_RQ-269",
+    "query": "확인 좀 해줘 큐텐 리뷰 TOP 3 제품 리뷰 내용",
+    "table": "review_qoo10",
+    "category": "top_reviewed",
+    "status": "OK",
+    "time": 50.2,
+    "answer_len": 2349,
+    "answer_preview": "### 📊 Qoo10 리뷰 TOP 3 제품 내용 분석 보고서  #### 요약  Qoo10 리뷰 수 기준으로 TOP 3 제품의 리뷰 내용을 요청하셨습니다. 현재 조회된 데이터에는 **'센텔라 앰플'** 제품의 리뷰만 포함되어 있습니다. 이 제품은 최근 1년간(2025년 3월 8일 이후 수집된 데이터 기준) **총 1,000건**의 리뷰가 확인되었습니다. 리뷰"
+  },
+  {
+    "id": "V2_RQ-270",
+    "query": "Qoo10 최근 리뷰 전체 건수 확인 부탁드립니다",
+    "table": "review_qoo10",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 27.5,
+    "answer_len": 350,
+    "answer_preview": "### 📊 Qoo10 최근 1년간 리뷰 전체 건수  #### 요약  Qoo10 채널의 지난 1년간(2025년 03월 08일 ~ 2026년 03월 08일) 리뷰는 총 **55,364건**으로 집계되었습니다.  #### 분석 및 인사이트  *   Qoo10 채널에서 지난 1년간 5만 5천 건 이상의 리뷰가 수집되어, 활발한 고객 활동을 보여주고 있습니다. * "
+  },
+  {
+    "id": "V2_RQ-271",
+    "query": "큐텐 후기 제품별 최신 리뷰 날짜와 내용 어때?",
+    "table": "review_qoo10",
+    "status": "OK",
+    "time": 41.9,
+    "answer_len": 426,
+    "answer_preview": "### 📊 SKIN1004 큐텐 제품별 최신 리뷰 현황 분석  #### 요약  2026년 3월 8일 기준으로, SKIN1004 브랜드의 큐텐(Qoo10) 제품에 대한 최신 리뷰를 분석한 결과, 총 **32개** 제품에서 최신 리뷰가 확인되었습니다. 이 중 **가장 최근에 작성된 20개 리뷰**의 상세 내용을 분석했으며, 가장 최신 리뷰는 **2026년 1월"
+  },
+  {
+    "id": "V2_RQ-272",
+    "query": "잠깐, Qoo10 리뷰 수 제품별 파이 차트 좀",
+    "table": "review_qoo10",
+    "category": "review_count",
+    "status": "OK",
+    "time": 25.7,
+    "answer_len": 1277,
+    "answer_preview": "### 📊 Qoo10 SKIN1004 제품별 리뷰 현황 (2025.03.08 ~ 2026.03.07)  #### 요약  지난 1년간(2025년 3월 8일 ~ 2026년 3월 7일 기준) Qoo10에서 SKIN1004 브랜드 제품의 리뷰는 총 32개 제품에서 집계되었습니다. 이 중 '센텔라 앰플'이 **20,415건**으로 압도적인 1위를 차지했으며, 상위 "
+  },
+  {
+    "id": "V2_RQ-273",
+    "query": "큐텐 리뷰 최근 6개월 추이 부탁드려요",
+    "table": "review_qoo10",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 35.8,
+    "answer_len": 1055,
+    "answer_preview": "### 📊 큐텐(Qoo10) SKIN1004 리뷰 최근 6개월 추이  #### 요약  2025년 9월부터 2026년 1월까지 큐텐(Qoo10) SKIN1004 브랜드의 월별 리뷰 수는 총 **17,246건**으로 집계되었습니다. 이 기간 동안 2025년 12월에 **6,889건**으로 가장 많은 리뷰가 발생했으며, 2026년 1월에는 **935건**으로 가"
+  },
+  {
+    "id": "V2_RQ-274",
+    "query": "Qoo10 평가 데이터 전체 요약",
+    "table": "review_qoo10",
+    "category": "total_count",
+    "status": "OK",
+    "time": 30.3,
+    "answer_len": 463,
+    "answer_preview": "# 데이터 조회 안내  안녕하세요. 요청하신 **Qoo10 평가 데이터 전체 요약**을 현재 데이터베이스에서 조회하지 못했습니다.  ---  ## 💡 더 정확한 결과를 위해 질문을 구체화해 주세요  Qoo10 평가 데이터의 범위가 넓기 때문에, 아래와 같은 조건을 추가해 주시면 원활한 조회가 가능합니다.  > **기간** · **국가(일본/싱가포르 등)**"
+  },
+  {
+    "id": "V2_RQ-275",
+    "query": "큐텐 Centella Cleansing Oil 후기 전체 확인 가능한가요?",
+    "table": "review_qoo10",
+    "category": "product_review",
+    "status": "OK",
+    "time": 42.4,
+    "answer_len": 629,
+    "answer_preview": "# 큐텐 Centella Cleansing Oil 후기 확인 안내  큐텐(Qoo10)에서 판매하는 센텔라 클렌징 오일의 **모든 후기를 한 곳에서 전체 확인하는 것은 어렵습니다.** 후기가 다양한 플랫폼에 분산되어 있기 때문입니다.  ---  ## 주요 후기 확인 가능한 곳  | 채널 유형 | 플랫폼 예시 | |---|---| | **뷰티 전문 플랫폼** "
+  },
+  {
+    "id": "V2_RQ-276",
+    "query": "Qoo10 리뷰데이터 최근 35건 알려줘",
+    "table": "review_qoo10",
+    "category": "recent_n",
+    "status": "OK",
+    "time": 59.8,
+    "answer_len": 387,
+    "answer_preview": "### 📊 Qoo10 SKIN1004 브랜드 최근 리뷰 35건 분석  #### 요약  Qoo10에서 SKIN1004 브랜드에 대한 최근 리뷰 **35건**이 조회되었습니다. 조회된 리뷰는 **2026년 1월 26일부터 2026년 1월 28일**까지의 데이터입니다. (오늘 날짜 2026년 3월 8일 기준, 약 한 달 전 데이터) 주로 **센텔라 앰플**에 대"
+  },
+  {
+    "id": "V2_RQ-277",
+    "query": "간단하게 큐텐 리뷰 2024년 하반기 건수 부탁드려요",
+    "table": "review_qoo10",
+    "category": "date_range",
+    "status": "OK",
+    "time": 26.8,
+    "answer_len": 439,
+    "answer_preview": "### 📊 큐텐 2024년 하반기 리뷰 건수  #### 요약  2024년 하반기(7월 1일 ~ 12월 31일) 큐텐 채널의 리뷰 건수는 **0건**으로 집계되었습니다. 해당 기간 동안 시스템에 등록된 리뷰 데이터가 없는 것으로 확인됩니다.  #### 분석 및 인사이트  *   2024년 하반기(7월 1일 ~ 12월 31일) 동안 큐텐 채널에서 발생한 리뷰는"
+  },
+  {
+    "id": "V2_RQ-278",
+    "query": "요즘 Qoo10 리뷰 원문 중 긴 리뷰?",
+    "table": "review_qoo10",
+    "category": "review_content",
+    "status": "OK",
+    "time": 46.2,
+    "answer_len": 1573,
+    "answer_preview": "### 📊 Qoo10 SKIN1004 브랜드 최근 1년간 최장 리뷰 분석  #### 요약  최근 1년간(2025년 3월 8일 ~ 2026년 3월 8일) Qoo10에서 수집된 SKIN1004 브랜드 리뷰 중 **가장 긴 리뷰 50건**을 분석한 결과, '센텔라 앰플'이 가장 많은 장문 리뷰를 기록하며 사용자들의 높은 관심과 상세한 사용 후기를 이끌어냈습니다."
+  },
+  {
+    "id": "V2_RQ-279",
+    "query": "큐텐 리뷰 제품별 최근 3개월 변동",
+    "table": "review_qoo10",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 57.1,
+    "answer_len": 593,
+    "answer_preview": "### 📊 큐텐(Qoo10) SKIN1004 제품별 최근 3개월 리뷰 변동 현황  #### 요약  ⚠️ 사용자님께서 요청하신 최근 3개월(2025년 12월 ~ 2026년 3월 8일) 데이터 중, 현재 **2025년 12월과 2026년 1월** 데이터만 확인 가능합니다. 2026년 2월 및 3월(8일까지) 데이터는 현재 조회되지 않습니다.  조회된 기간 동안"
+  },
+  {
+    "id": "V2_RQ-280",
+    "query": "Qoo10 전체 리뷰데이터 수 가르쳐줘 알려주세요",
+    "table": "review_qoo10",
+    "category": "total_count",
+    "status": "OK",
+    "time": 27.5,
+    "answer_len": 459,
+    "answer_preview": "### 📊 Qoo10 전체 리뷰 데이터 현황  #### 요약  현재까지 집계된 Qoo10 전체 리뷰 데이터 수는 총 **55,364**건입니다. 이는 Qoo10 플랫폼에서 고객들의 활발한 제품 사용 및 피드백 활동을 보여줍니다.  #### 분석 및 인사이트  *   Qoo10 플랫폼에 **5만 5천 건 이상의 리뷰**가 축적되어 있어, 고객들의 제품에 대한"
+  },
+  {
+    "id": "V2_RQ-281",
+    "query": "궁금한데 qoo10 리뷰 제품별 리뷰 날짜 분포",
+    "table": "review_qoo10",
+    "category": "date_range",
+    "status": "OK",
+    "time": 40.9,
+    "answer_len": 365,
+    "answer_preview": "안녕하세요! 요청하신 **Qoo10 제품별 리뷰 날짜 분포** 데이터를 조회하지 못했습니다.  좀 더 구체적인 조건을 포함해 주시면 정확한 데이터를 찾는 데 도움이 됩니다. 아래 예시를 참고해 주세요:  ---  **💡 질문 예시**  1. **\"2024년 Qoo10 일본에서 마다가스카르 센텔라 토너의 월별 리뷰 수 분포를 알려줘\"** 2. **\"2024년"
+  },
+  {
+    "id": "V2_RQ-282",
+    "query": "Qoo10 리뷰데이터 SKIN1004 제품 리스트",
+    "table": "review_qoo10",
+    "category": "brand_review",
+    "status": "OK",
+    "time": 25.4,
+    "answer_len": 544,
+    "answer_preview": "## 데이터 조회 안내  안녕하세요. 요청하신 **Qoo10 SKIN1004 제품 리뷰 데이터**를 현재 조회하지 못했습니다.  좀 더 정확한 결과를 위해 **조건을 구체적으로 지정**해 주시면 다시 조회를 시도해 보겠습니다.  ---  ### 💡 이렇게 질문해 보세요  1. **\"2024년 Qoo10 Japan에서 SKIN1004 마다가스카르 센텔라 토닝"
+  },
+  {
+    "id": "V2_RQ-283",
+    "query": "큐텐 리뷰 최근 순으로 50건 어떻게 되나요?",
+    "table": "review_qoo10",
+    "category": "recent_n",
+    "status": "WARN",
+    "time": 68.4,
+    "answer_len": 3624,
+    "answer_preview": "### 📊 큐텐 SKIN1004 브랜드 최근 리뷰 50건 분석  #### 요약  ⚠️ 현재 조회 가능한 가장 최근 큐텐 리뷰 50건은 **2026년 01월 25일부터 2026년 01월 28일**까지의 데이터입니다 (오늘: 2026년 03월 08일). 총 **50건**의 SKIN1004 브랜드 리뷰가 확인되었으며, 이 중 **센텔라 앰플**에 대한 긍정적인 "
+  },
+  {
+    "id": "V2_RQ-284",
+    "query": "Qoo10 리뷰 제품별 건수 내림차순 정렬 알려주시면 감사하겠습니다",
+    "table": "review_qoo10",
+    "category": "review_count",
+    "status": "OK",
+    "time": 54.5,
+    "answer_len": 1920,
+    "answer_preview": "### 📊 Qoo10 SKIN1004 제품별 리뷰 건수 순위 분석  #### 요약  2025년 3월 8일부터 2026년 3월 8일까지 Qoo10에서 수집된 SKIN1004 제품 리뷰 데이터를 분석한 결과, **'센텔라 앰플'**이 **20,415건**으로 압도적인 리뷰 수를 기록하며 1위를 차지했습니다. 이는 2위인 '히알루시카 워터핏 선 세럼'(9,162"
+  },
+  {
+    "id": "V2_RQ-285",
+    "query": "궁금한데 큐텐 리뷰 월별 증감률",
+    "table": "review_qoo10",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 45.4,
+    "answer_len": 1440,
+    "answer_preview": "### 📊 큐텐(Qoo10) SKIN1004 브랜드 월별 리뷰 증감률 분석  #### 요약  지난 1년간 큐텐(Qoo10)에서 SKIN1004 브랜드의 월별 리뷰 수는 큰 폭의 변동을 보였습니다. 가장 많은 리뷰가 발생한 달은 2025년 3월로 **11,554개**였으며, 가장 높은 성장률은 2025년 6월에 **427.38%**를 기록했습니다. 반면, 2"
+  },
+  {
+    "id": "V2_RQ-286",
+    "query": "Qoo10 후기 번역 내용 전체 좀 봐줘",
+    "table": "review_qoo10",
+    "category": "review_content",
+    "status": "OK",
+    "time": 41.6,
+    "answer_len": 438,
+    "answer_preview": "Qoo10 플랫폼에서는 현재 **해외 사용자가 작성한 후기 전체를 자동으로 번역해주는 공식 기능이 제공되지 않습니다.**  따라서 다른 언어로 작성된 후기를 확인하려면 **외부 번역 도구를 활용**해야 합니다. 주요 방법은 다음과 같습니다:  | 방법 | 설명 | |------|------| | **번역 앱/웹사이트** | 후기 텍스트를 복사하여 **구글 "
+  },
+  {
+    "id": "V2_RQ-287",
+    "query": "큐텐 후기 2024년 연간 통계",
+    "table": "review_qoo10",
+    "category": "date_range",
+    "status": "OK",
+    "time": 47.7,
+    "answer_len": 1066,
+    "answer_preview": "# 큐텐(Qoo10) 2024년 연간 후기 통계  2024년 큐텐의 연간 후기에 대한 **공식 종합 통계 보고서는 발표되지 않았습니다.** 다만, 관련 자료를 통해 파악된 주요 동향은 다음과 같습니다.  ---  ## 1. 리뷰의 역할 및 중요성  | 항목 | 내용 | |------|------| | **전략적 위치** | 고객 리뷰는 큐텐 내 판매 전략의"
+  },
+  {
+    "id": "V2_RQ-288",
+    "query": "Qoo10 리뷰 제품 기준 리뷰 수 합산",
+    "table": "review_qoo10",
+    "category": "review_count",
+    "status": "OK",
+    "time": 31.4,
+    "answer_len": 1492,
+    "answer_preview": "### 📊 Qoo10 SKIN1004 제품별 리뷰 수 분석  #### 요약  Qoo10에서 SKIN1004 브랜드 제품 중 **'센텔라 앰플'이 총 20,415건**의 리뷰로 가장 많은 리뷰 수를 기록하며 독보적인 1위를 차지했습니다. 상위 20개 제품의 리뷰 수는 총 **52,864건**으로 집계되었으며, 전체 32개 제품에 대한 분석 결과입니다.  ##"
+  },
+  {
+    "id": "V2_RQ-289",
+    "query": "확인 좀 해줘 큐텐 리뷰 가장 인기 있는 제품",
+    "table": "review_qoo10",
+    "category": "top_reviewed",
+    "status": "OK",
+    "time": 44.7,
+    "answer_len": 1200,
+    "answer_preview": "### 📊 Qoo10 SKIN1004 브랜드 리뷰 인기 제품 현황  #### 요약  Qoo10에서 SKIN1004 브랜드 제품 중 리뷰 수가 가장 많은 제품은 **센텔라 앰플**로, 총 **20,415개**의 리뷰를 기록하며 압도적인 인기를 보였습니다. 그 뒤를 이어 히알루시카 워터핏 선 세럼과 센텔라 퀵 카밍 패드가 높은 리뷰 수를 기록하며 상위권을 차지"
+  },
+  {
+    "id": "V2_RQ-290",
+    "query": "Qoo10 최근 평가 review_date 순",
+    "table": "review_qoo10",
+    "category": "recent_reviews",
+    "status": "WARN",
+    "time": 63.0,
+    "answer_len": 2692,
+    "answer_preview": "### 📊 Qoo10 SKIN1004 최근 평가 보고서  #### 요약  ⚠️ 사용자 질문의 '최근 평가'와 달리, 현재 조회된 데이터는 **2026년 1월 25일부터 1월 28일까지**의 평가입니다 (오늘: 2026년 03월 08일). 총 **50건**의 Qoo10 SKIN1004 제품 평가가 조회되었으며, 이 중 **'센텔라 앰플'**에 대한 긍정적인 "
+  },
+  {
+    "id": "V2_RQ-291",
+    "query": "큐텐 리뷰데이터 전체 리스트 보여줄 수 있어? 좀",
+    "table": "review_qoo10",
+    "category": "total_count",
+    "status": "OK",
+    "time": 60.0,
+    "answer_len": 332,
+    "answer_preview": "### 📊 SKIN1004 큐텐 최신 리뷰 데이터 조회 결과  #### 요약  사용자님의 요청에 따라 SKIN1004 브랜드의 큐텐 리뷰 데이터 **총 1,000건**을 조회했습니다. 이 데이터는 **2026년 01월 24일부터 2026년 01월 28일까지** 작성된 가장 최신 리뷰들을 포함하고 있습니다. 조회된 리뷰들은 총 **31개**의 고유한 제품에 "
+  },
+  {
+    "id": "V2_RQ-292",
+    "query": "Qoo10 Centella Soothing Cream 후기 수 추이",
+    "table": "review_qoo10",
+    "category": "product_review",
+    "status": "OK",
+    "time": 42.9,
+    "answer_len": 848,
+    "answer_preview": "해당 조건의 데이터가 없습니다.  SQL에서 사용된 필터 조건 중 `product_name`이 문제일 수 있습니다. *   **`product_name`**: \"Centella Soothing Cream\"에 해당하는 제품명이 데이터베이스에 존재하지 않거나, 정확한 명칭이 다를 수 있습니다. 예를 들어, 제품명이 한국어로 \"마다가스카르 센텔라 수딩 크림\"으로"
+  },
+  {
+    "id": "V2_RQ-293",
+    "query": "확인 좀 해줘 qoo10 리뷰 최근 리뷰 번역문 보기 부탁드려요",
+    "table": "review_qoo10",
+    "category": "review_content",
+    "status": "OK",
+    "time": 39.2,
+    "answer_len": 1890,
+    "answer_preview": "### 📊 Qoo10 SKIN1004 최근 리뷰 번역문 분석  #### 요약  2026년 1월 25일부터 28일까지 Qoo10에 등록된 SKIN1004 브랜드의 최근 리뷰 **50건**을 분석한 결과, 전반적으로 매우 긍정적인 평가를 받고 있습니다. 특히 **'센텔라 앰플'**이 가장 많이 언급되며, 피부 진정, 보습, 끈적임 없는 사용감 등 핵심적인 효능"
+  },
+  {
+    "id": "V2_RQ-294",
+    "query": "간단하게 Qoo10 2024년 12월 리뷰 건수 몇이야?",
+    "table": "review_qoo10",
+    "category": "date_range",
+    "status": "OK",
+    "time": 48.5,
+    "answer_len": 406,
+    "answer_preview": "안녕하세요! 😊  요청하신 **Qoo10 2024년 12월 리뷰 건수** 데이터를 현재 조회하지 못했습니다.  좀 더 정확한 결과를 위해 아래와 같이 **조건을 구체적으로** 지정해 주시면 다시 조회해 보겠습니다.  ---  **📌 질문 예시**  1. **\"Qoo10 Japan에서 2024년 12월 마다가스카르 센텔라 앰플의 리뷰 건수는?\"** 2. **"
+  },
+  {
+    "id": "V2_RQ-295",
+    "query": "큐텐 후기 월별 리뷰 수 차트 확인 부탁드립니다",
+    "table": "review_qoo10",
+    "category": "monthly_trend",
+    "status": "OK",
+    "time": 45.5,
+    "answer_len": 1304,
+    "answer_preview": "### 📊 큐텐 SKIN1004 브랜드 월별 리뷰 수 현황  #### 요약  ⚠️ 2026년 데이터는 현재 1월까지 존재합니다 (오늘: 2026년 03월 08일). 2025년 3월부터 2026년 1월까지 큐텐 SKIN1004 브랜드의 월별 리뷰 수는 **11,160**건(2025년 3월)에서 **935**건(2026년 1월) 사이의 변동을 보였습니다. 특히"
+  },
+  {
+    "id": "V2_RQ-296",
+    "query": "Qoo10 리뷰데이터 제품별 최근 리뷰 비교",
+    "table": "review_qoo10",
+    "category": "review_content",
+    "status": "WARN",
+    "time": 75.3,
+    "answer_len": 2565,
+    "answer_preview": "## 📊 Qoo10 SKIN1004 제품별 최근 리뷰 분석 (2026년 1월)  #### 요약  2026년 1월 25일부터 28일까지의 Qoo10 SKIN1004 브랜드 최근 리뷰 **총 50건**을 분석한 결과, **센텔라 앰플**이 가장 많은 리뷰를 받으며 진정, 보습, 피부 트러블 개선 효과로 높은 만족도를 보였습니다. 전반적으로 제품들은 끈적임 없는"
+  },
+  {
+    "id": "V2_RQ-297",
+    "query": "qoo10 후기 전체 건수는 몇 개 몇이야?",
+    "table": "review_qoo10",
+    "category": "total_count",
+    "status": "OK",
+    "time": 47.8,
+    "answer_len": 204,
+    "answer_preview": "Qoo10의 전체 후기 건수에 대한 정확한 정보는 현재 공개적으로 제공되지 않습니다.  Qoo10 플랫폼은 개별 상품이나 판매자 단위의 후기는 확인할 수 있지만, **사이트 전체의 총 후기 수를 종합하여 공식 발표하는 데이터는 없는 것으로 확인됩니다.**  보다 정확한 수치가 필요하시다면, Qoo10 담당 MD 또는 플랫폼 측에 직접 문의하시는 것을 권장드"
+  },
+  {
+    "id": "V2_RQ-298",
+    "query": "Qoo10 리뷰 제품 TOP 리스트 부탁드려요",
+    "table": "review_qoo10",
+    "category": "top_reviewed",
+    "status": "OK",
+    "time": 29.6,
+    "answer_len": 1258,
+    "answer_preview": "### 📊 Qoo10 리뷰 TOP 10 제품 리스트  #### 요약  지난 1년간(2025년 3월 8일 ~ 2026년 3월 8일) Qoo10에서 SKIN1004 제품 중 가장 많은 리뷰를 받은 제품은 **센텔라 앰플**로, 총 **20,415건**의 압도적인 리뷰 수를 기록했습니다. 이어서 히알루시카 워터핏 선 세럼이 9,162건, 센텔라 퀵 카밍 패드가 "
+  },
+  {
+    "id": "V2_RQ-299",
+    "query": "큐텐 리부 최신 데이터 전체 확인 확인 가능한가요?",
+    "table": "review_qoo10",
+    "category": "recent_reviews",
+    "status": "OK",
+    "time": 52.0,
+    "answer_len": 1074,
+    "answer_preview": "### 📊 큐텐 SKIN1004 최신 리뷰 데이터 분석 보고서  #### 요약  SKIN1004 브랜드의 큐텐 최신 리뷰 데이터 **1,000건**이 조회되었습니다. 해당 데이터는 **2026년 01월 28일**에 수집된 것으로, 실제 리뷰 작성일은 **2025년 01월 10일부터 2025년 12월 16일**까지 분포합니다. 총 **28개**의 고유 제품에"
+  },
+  {
+    "id": "V2_RQ-300",
+    "query": "Qoo10 리뷰 전체 현황 리포트 정리해줘",
+    "table": "review_qoo10",
+    "category": "total_count",
+    "status": "OK",
+    "time": 55.3,
+    "answer_len": 2028,
+    "answer_preview": "### 📊 Qoo10 SKIN1004 리뷰 전체 현황 리포트 (2025년 1월 ~ 2026년 1월)  #### 요약  Qoo10에서 SKIN1004 브랜드의 지난 1년간(2025년 3월 8일 ~ 2026년 3월 8일 수집 기준) 리뷰 현황을 분석한 결과, **총 55,364건**의 리뷰가 집계되었습니다. 이 기간 동안 **총 13개월**의 리뷰 데이터(20"
+  }
+]

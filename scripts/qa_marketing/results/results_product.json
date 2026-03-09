@@ -1,0 +1,3002 @@
+[
+  {
+    "id": "PR-001",
+    "query": "센텔라 앰플 100ml 2025년 판매 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 43.7,
+    "answer_len": 534,
+    "answer_preview": "### 📊 2025년 센텔라 앰플 100ml 판매 수량 분석  #### 요약  2025년 한 해 동안 '센텔라 앰플 100ml' 제품 중 **SK_Centella_Ampoule_100ml** 제품은 총 **2,648,836개** 판매되었습니다.  #### 분석 및 인사이트  *   **단일 제품 판매량**: 2025년 센텔라 앰플 100ml 제품군 중 SK"
+  },
+  {
+    "id": "PR-002",
+    "query": "센텔라 앰플 60ml 2024년 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 26.6,
+    "answer_len": 752,
+    "answer_preview": "요청하신 조건에 해당하는 데이터가 존재하지 않습니다.  SQL에서 사용된 필터 조건 중 다음 두 가지를 확인해 볼 필요가 있습니다.  1.  **브랜드 조건 (`Brand IN ('SK', 'CL')`)**: '센텔라 앰플'은 주로 'SKIN1004' 브랜드의 제품입니다. 현재 쿼리에서는 'SK', 'CL' 브랜드만 조회하도록 설정되어 있어 해당 브랜드의 "
+  },
+  {
+    "id": "PR-003",
+    "query": "마다가스카르 센텔라 토닝 토너 2025년 판매 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 43.5,
+    "answer_len": 920,
+    "answer_preview": "### 📊 2025년 마다가스카르 센텔라 토닝 토너 판매 수량 분석  #### 요약  2025년 마다가스카르 센텔라 토닝 토너 제품군은 총 **1,774,295개**의 판매 수량을 기록했습니다. 이 중 'SK_Centella_Toning_Toner_210ml' 제품이 **1,323,229개**로 가장 많이 판매되며 전체 판매량의 약 74.6%를 차지했습니다"
+  },
+  {
+    "id": "PR-004",
+    "query": "센텔라 히알루-시카 워터핏 선 세럼 2024년 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 21.4,
+    "answer_len": 1260,
+    "answer_preview": "### 📊 2024년 센텔라 히알루-시카 워터핏 선 세럼 제품별 판매 수량 분석  #### 요약  2024년 한 해 동안 '센텔라 히알루-시카 워터핏 선 세럼' 제품군은 총 **4,860,809**개의 판매 수량을 기록했습니다. 이 중 'SK_Hyalucica_Waterfit_Sun_Serum_50ml' 단품이 **3,352,983**개로 전체 판매량의 약"
+  },
+  {
+    "id": "PR-005",
+    "query": "센텔라 수딩 크림 2025년 판매 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 58.0,
+    "answer_len": 996,
+    "answer_preview": "### 📊 2025년 센텔라 수딩 크림 판매 수량 분석  #### 요약  2025년 한 해 동안 센텔라 수딩 크림 제품군은 총 **1,944,668개**의 판매 수량을 기록했습니다. 이 중 'SK_Centella_Soothing_Cream_75ml' 제품이 **1,337,175개**로 전체 판매량의 약 68.8%를 차지하며 압도적으로 가장 높은 판매량을 보"
+  },
+  {
+    "id": "PR-006",
+    "query": "히알루시카 모이스처 크림 2024년 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 16.1,
+    "answer_len": 525,
+    "answer_preview": "### 📊 2024년 히알루시카 모이스처 크림 수량 분석  #### 요약  2024년 한 해 동안 'SK_Hyalucica_Moisture_Cream_75ml' 제품은 총 **319,345개**의 판매 수량을 기록했습니다.  #### 분석 및 인사이트  *   **단일 제품의 높은 판매량**: 2024년 'SK_Hyalucica_Moisture_Cream_"
+  },
+  {
+    "id": "PR-007",
+    "query": "프로바이오시카 클렌징 폼 2025년 판매량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 34.3,
+    "answer_len": 98,
+    "answer_preview": "고객님, 문의하신 '프로바이오시카 클렌징 폼 2025년 판매량'에 대한 정보는 현재 CS 데이터베이스에서 찾을 수 없습니다.  해당 질문에 대한 CS 데이터를 찾지 못했습니다."
+  },
+  {
+    "id": "PR-008",
+    "query": "톤 브라이트닝 세럼 2024년 판매 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 45.5,
+    "answer_len": 1187,
+    "answer_preview": "### 📊 2024년 톤 브라이트닝 앰플 제품 판매 수량 분석  #### 요약  사용자님께서 문의하신 '톤 브라이트닝 세럼'에 대한 2024년 판매 수량은 현재 조회되지 않으며, 대신 '톤 브라이트닝 앰플' 제품군의 판매 수량이 확인되었습니다. 2024년 한 해 동안 'SK_Tone_Brightening_Capsule_Ampoule' 제품군은 총 **1,8"
+  },
+  {
+    "id": "PR-009",
+    "query": "포어마이징 토너 2025년 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 20.5,
+    "answer_len": 603,
+    "answer_preview": "### 📊 2025년 포어마이징 토너 제품군 판매 수량 분석  #### 요약  2025년 한 해 동안 '포어마이징 토너' 제품군에서는 'SK_Poremizing_Clear_Toner_210ml' 제품이 유일하게 판매 수량이 집계되었으며, 총 **496,829개**의 판매량을 기록했습니다.  #### 상세 데이터  (단일 수치이므로 상세 데이터 섹션은 생략합"
+  },
+  {
+    "id": "PR-010",
+    "query": "센텔라 클렌징 오일 2024년 판매 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 38.3,
+    "answer_len": 805,
+    "answer_preview": "### 📊 2024년 센텔라 클렌징 오일 판매 수량 분석  #### 요약  2024년 센텔라 클렌징 오일 제품군은 총 **3,272,138개** 판매되었습니다. 이 중 'SK_Centella_Light_Cleansing_Oil_200ml' 제품이 **2,715,444개**로 전체 판매량의 대부분을 차지하며 가장 높은 판매량을 기록했습니다.  #### 상세 "
+  },
+  {
+    "id": "PR-011",
+    "query": "인도네시아 2025년 제품별 수량 TOP 10",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 57.5,
+    "answer_len": 1543,
+    "answer_preview": "### 📊 2025년 인도네시아 제품별 판매 수량 TOP 10  #### 요약  2025년 인도네시아 시장에서 가장 많이 판매된 제품은 **SK_Centella_Light_Cleansing_Oil_200ml**로, 총 **558,980개**의 판매 수량을 기록했습니다. 상위 10개 제품 모두 SK 브랜드 제품이며, 클렌징 오일, 앰플, 선 세럼 등 다양한 "
+  },
+  {
+    "id": "PR-012",
+    "query": "태국 2024년 제품별 수량 TOP 5",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 36.1,
+    "answer_len": 1236,
+    "answer_preview": "### 📊 2024년 태국 시장 제품별 판매 수량 TOP 5  #### 요약  2024년 태국 시장에서 가장 많이 판매된 제품은 **SK_Centella_Ampoule_55ml**로, 총 **140,735개**가 판매되었습니다. 상위 5개 제품 모두 'SK' 브랜드 제품이며, 특히 센텔라 라인 제품들이 강세를 보였습니다.  #### 상세 데이터  | 제품명"
+  },
+  {
+    "id": "PR-013",
+    "query": "미국 2025년 제품별 수량 TOP 10",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 16.9,
+    "answer_len": 1332,
+    "answer_preview": "### 📊 미국 2025년 제품별 판매 수량 TOP 10 분석  #### 요약  2025년 미국 시장에서 가장 많이 판매된 제품은 **SK_Centella_Light_Cleansing_Oil_200ml**로, 총 **707,172개**의 판매 수량을 기록했습니다. 상위 10개 제품 중 센텔라 라인 제품들이 다수를 차지하며 높은 인기를 보였습니다.  ####"
+  },
+  {
+    "id": "PR-014",
+    "query": "일본 2024년 제품별 수량 TOP 5",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 18.1,
+    "answer_len": 927,
+    "answer_preview": "### 📊 2024년 일본 제품별 판매 수량 TOP 5  #### 요약  2024년 일본 시장에서 가장 많이 판매된 제품은 **SK_Centella_Ampoule_100ml**로, 총 **141,809**개가 판매되었습니다. 상위 5개 제품 모두 SK 브랜드의 센텔라 라인 제품이 강세를 보였습니다.  #### 상세 데이터 | 제품명 | 총 판매 수량 | |"
+  },
+  {
+    "id": "PR-015",
+    "query": "베트남 2025년 제품별 수량 TOP 10",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 42.7,
+    "answer_len": 1454,
+    "answer_preview": "### 📊 베트남 2025년 제품별 판매 수량 TOP 10  #### 요약  2025년 베트남 시장에서 가장 많이 판매된 제품은 **SK_Centella_Airfit_Suncream_Plus_50ml**로, 총 **402,902개**가 판매되었습니다. 이어서 Sachet 제품이 268,560개로 2위를 차지했으며, 상위 10개 제품 중 선크림 제품이 3개,"
+  },
+  {
+    "id": "PR-016",
+    "query": "필리핀 제품별 수량 TOP 5",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 22.5,
+    "answer_len": 1135,
+    "answer_preview": "### 📊 필리핀 시장 SK/CL 브랜드 제품별 누적 판매 수량 TOP 5  #### 요약  필리핀 시장에서 SK 및 CL 브랜드 제품 중 2019년 1월 1일부터 현재까지 가장 많이 판매된 제품은 **Sachet**으로, 총 **1,146,741개**가 판매되었습니다. 상위 5개 제품의 총 판매 수량은 **2,370,911개**에 달하며, Sachet 제"
+  },
+  {
+    "id": "PR-017",
+    "query": "말레이시아 제품별 판매 수량 TOP 10",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 24.3,
+    "answer_len": 1510,
+    "answer_preview": "### 📊 말레이시아 제품별 판매 수량 TOP 10 분석  #### 요약  말레이시아에서 2019년 1월 1일부터 현재(2026년 3월 6일)까지 SK 및 CL 브랜드 제품 중 판매 수량이 가장 많았던 상위 10개 제품을 분석한 결과, **'Sachet'** 제품이 총 **1,523,793개**로 압도적인 1위를 차지했습니다. 이어서 'Others'가 41"
+  },
+  {
+    "id": "PR-018",
+    "query": "싱가포르 제품별 수량 순위",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 43.8,
+    "answer_len": 2681,
+    "answer_preview": "### 📊 싱가포르 SK/CL 브랜드 제품별 총 판매 수량 순위 (2019년 1월 1일 ~ 2026년 3월 6일)  #### 요약  2019년 1월 1일부터 2026년 3월 6일까지 싱가포르에서 판매된 SK 및 CL 브랜드 제품의 총 수량은 **2,332,024개**이며, 총 **154개**의 고유 제품이 판매되었습니다. 이 중 'Sachet' 제품이 **"
+  },
+  {
+    "id": "PR-019",
+    "query": "호주 제품별 수량 TOP 3",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 16.2,
+    "answer_len": 953,
+    "answer_preview": "### 📊 호주 제품별 총 판매 수량 TOP 3  #### 요약  호주 시장에서 가장 많이 판매된 제품은 **Sachet**으로, 총 **3,000,270개**가 판매되었습니다. 그 뒤를 이어 SK_Centella_Light_Cleansing_Oil_200ml이 **176,597개**, SK_Centella_Ampoule_55ml이 **135,513개** "
+  },
+  {
+    "id": "PR-020",
+    "query": "한국 제품별 판매 수량 TOP 10",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 43.4,
+    "answer_len": 1539,
+    "answer_preview": "### 📊 한국 SK 및 CL 브랜드 제품별 판매 수량 TOP 10 (2019년 1월 1일 이후 누적)  #### 요약  2019년 1월 1일부터 현재(2026년 3월 6일)까지 한국 시장에서 SK 및 CL 브랜드 제품의 누적 판매량을 분석한 결과, 'Sachet' 제품이 **4,911,409개**로 압도적인 1위를 차지했습니다. 이어서 'SK_Centel"
+  },
+  {
+    "id": "PR-021",
+    "query": "Centella 라인 수량 2025년",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 27.2,
+    "answer_len": 2596,
+    "answer_preview": "### 📊 2025년 Centella 라인 제품별 총 판매 수량 분석  #### 요약  2025년 Centella 라인에서는 총 **47개**의 제품이 판매되었으며, 이 중 **SK_Centella_Light_Cleansing_Oil_200ml**가 **4,353,858개**로 가장 높은 판매 수량을 기록했습니다. 상위 5개 제품이 전체 판매량에서 큰 비중"
+  },
+  {
+    "id": "PR-022",
+    "query": "Centella_Teca 라인 수량 2024년",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 37.0,
+    "answer_len": 600,
+    "answer_preview": "해당 조건에 맞는 데이터가 존재하지 않습니다.  SQL 쿼리에서 사용된 필터 조건 중 다음 사항을 확인해 볼 필요가 있습니다:  1.  **날짜 (2024년):** 2024년 데이터가 아직 집계되지 않았거나, 데이터베이스에 반영되지 않았을 수 있습니다. 현재 시점 기준으로 2024년 전체 데이터가 없을 가능성이 높습니다. 2.  **제품명 (`%Centel"
+  },
+  {
+    "id": "PR-023",
+    "query": "Hyalu_Teca 라인 수량 2025년",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 22.0,
+    "answer_len": 496,
+    "answer_preview": "해당 조건의 데이터가 없습니다.  SQL 쿼리에서 가장 큰 문제는 `EXTRACT(YEAR FROM Date) = 2025` 조건입니다. 현재 2024년이므로, 2025년의 실제 판매 수량 데이터는 아직 존재하지 않습니다.  또한, `Brand IN ('SK', 'CL')` 조건도 'Hyalu_Teca' 라인이 해당 브랜드에 속하는지 또는 브랜드 코드가 정"
+  },
+  {
+    "id": "PR-024",
+    "query": "Hyalucica 라인 수량 2024년",
+    "table": "product",
+    "category": "product",
+    "status": "WARN",
+    "time": 70.3,
+    "answer_len": 2082,
+    "answer_preview": "### 📊 2024년 Hyalucica 라인 제품별 판매 수량 분석  #### 요약  2024년 Hyalucica 라인의 총 판매 수량은 **7,050,982개**를 기록했습니다. 이 중 'SK_Hyalucica_Waterfit_Sun_Serum_50ml' 제품이 **3,352,983개**로 전체 판매량의 약 47.5%를 차지하며 압도적인 1위를 차지했습니"
+  },
+  {
+    "id": "PR-025",
+    "query": "Probiocica 라인 수량 2025년",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 26.4,
+    "answer_len": 1643,
+    "answer_preview": "### 📊 2025년 Probiocica 라인 제품별 판매 수량 현황  #### 요약  2025년 Probiocica 라인의 총 판매 수량은 **4,887,433개**를 기록했습니다. 이 중 'SK_Probiocica_Intensive_Ampoule_50ml' 제품이 **989,856개**로 가장 높은 판매량을 보이며 라인 전체 판매를 견인했습니다.  ##"
+  },
+  {
+    "id": "PR-026",
+    "query": "Teatrica 라인 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 39.0,
+    "answer_len": 789,
+    "answer_preview": "### 📊 Teatrica 라인 총 판매 수량 분석  #### 요약  2019년 1월 1일부터 현재(2026년 3월 6일)까지 'SK' 및 'CL' 브랜드의 Teatrica 라인 총 판매 수량은 **5,417,665개**입니다. 이는 Teatrica 라인이 지난 몇 년간 매우 높은 판매량을 기록하며 꾸준히 고객들에게 사랑받아 왔음을 보여줍니다.  #### "
+  },
+  {
+    "id": "PR-027",
+    "query": "Tone_Brightening 라인 수량 2024년",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 23.3,
+    "answer_len": 1727,
+    "answer_preview": "### 📊 2024년 Tone_Brightening 라인 제품별 판매 수량 분석  #### 요약  2024년 한 해 동안 Tone_Brightening 라인의 총 판매 수량은 **3,105,318개**를 기록했습니다. 이 중 'SK_Tone_Brightening_Capsule_Ampoule_100ml' 제품이 **1,110,329개**로 라인 전체 판매량의"
+  },
+  {
+    "id": "PR-028",
+    "query": "Poremizing 라인 수량 2025년",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 49.3,
+    "answer_len": 1918,
+    "answer_preview": "### 📊 2025년 Poremizing 라인 제품별 판매 수량 분석  #### 요약  2025년 Poremizing 라인의 총 판매 수량은 **7,903,004개**를 기록했습니다. 이 중 'SK_Poremizing_Quick_Clay_Stick_Mask_27g' 제품이 **2,151,031개**로 가장 많이 판매되며 라인 전체 판매를 견인했습니다.  #"
+  },
+  {
+    "id": "PR-029",
+    "query": "LabinNature 라인 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 39.3,
+    "answer_len": 1529,
+    "answer_preview": "### 📊 LabinNature 라인 제품별 총 판매 수량 분석  #### 요약  LabinNature 라인의 총 판매 수량은 **992,421개**로 집계되었습니다. 이 중 'SK_LabinNature_Retinol_02_Boosting_Shot_Ampoule_30ml' 제품이 **392,159개**로 가장 높은 판매량을 기록하며 라인 전체 판매를 견인하"
+  },
+  {
+    "id": "PR-030",
+    "query": "라인별 수량 비교 2025년",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 23.6,
+    "answer_len": 1129,
+    "answer_preview": "### 📊 2025년 라인별 총 수량 비교 분석  #### 요약  2025년 한 해 동안 'SK' 및 'CL' 브랜드의 라인별 총 수량은 **Others** 라인이 **29,029,718개**로 가장 많았으며, 이어서 **Centella** 라인이 **28,310,262개**를 기록하며 두 라인이 전체 수량의 **약 60%**를 차지하며 시장을 주도했습니다"
+  },
+  {
+    "id": "PR-031",
+    "query": "Ampoule 카테고리별 수량 2025년",
+    "table": "product",
+    "category": "product",
+    "status": "WARN",
+    "time": 60.5,
+    "answer_len": 2683,
+    "answer_preview": "### 📊 2025년 Ampoule 카테고리별 제품 판매 수량 분석 (SK 및 CL 브랜드)  #### 요약  2025년 Ampoule 카테고리 내 SK 및 CL 브랜드 제품 중 총 31개 제품의 판매 수량이 집계되었습니다. 이 중 'SK_Tone_Brightening_Capsule_Ampoule_100ml' 제품이 **3,476,611개**로 가장 높은 "
+  },
+  {
+    "id": "PR-032",
+    "query": "Suncare 카테고리 수량 2024년",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 42.5,
+    "answer_len": 534,
+    "answer_preview": "### 📊 2024년 Suncare 카테고리 총 판매 수량 (SK, CL 브랜드)  #### 요약  2024년 한 해 동안 SK 및 CL 브랜드의 Suncare 카테고리 총 판매 수량은 **8,011,648개**를 기록했습니다. 이 수치는 해당 브랜드의 Suncare 제품에 대한 견고한 수요를 보여줍니다.  #### 분석 및 인사이트  *   **특정 브랜"
+  },
+  {
+    "id": "PR-033",
+    "query": "SET 카테고리 수량 2025년",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 46.8,
+    "answer_len": 527,
+    "answer_preview": "### 📊 2025년 SK 및 CL 브랜드 SET 카테고리 총 판매 수량  #### 요약  2025년 한 해 동안 SK 및 CL 브랜드의 SET 카테고리 총 판매 수량은 **2,765,419개**로 집계되었습니다. 이는 해당 기간 동안 두 브랜드의 SET 제품에 대한 견고한 수요를 보여줍니다.  #### 분석 및 인사이트  *   2025년 SK 및 CL "
+  },
+  {
+    "id": "PR-034",
+    "query": "Cream 카테고리 수량",
+    "table": "product",
+    "category": "product",
+    "status": "WARN",
+    "time": 81.7,
+    "answer_len": 2362,
+    "answer_preview": "### 📊 Cream 카테고리 제품별 판매 수량 분석 (2019년 1월 1일 이후)  #### 요약  2019년 1월 1일부터 현재(2026년 3월 6일)까지 SK 및 CL 브랜드의 Cream 카테고리 제품 판매 수량을 분석한 결과, 제공된 상위 20개 제품의 총 판매 수량은 **19,778,040개**입니다. 전체 26개 제품의 총 판매 수량은 이보다 더"
+  },
+  {
+    "id": "PR-035",
+    "query": "Pack 카테고리 수량 2024년",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 49.1,
+    "answer_len": 546,
+    "answer_preview": "### 📊 2024년 Pack 카테고리 총 판매 수량 (SK, CL 브랜드)  #### 요약  2024년 한 해 동안 SK 및 CL 브랜드의 Pack 카테고리 총 판매 수량은 **3,126,045개**로 집계되었습니다.  #### 분석 및 인사이트  *   **높은 판매량 기록**: 2024년 Pack 카테고리 제품은 SK 및 CL 두 브랜드에서만 3백만 "
+  },
+  {
+    "id": "PR-036",
+    "query": "Cleanser 카테고리 수량 2025년",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 41.8,
+    "answer_len": 512,
+    "answer_preview": "### 📊 2025년 SK 및 CL 브랜드 Cleanser 카테고리 총 판매 수량  #### 요약  2025년 한 해 동안 SK 및 CL 브랜드의 Cleanser 카테고리 총 판매 수량은 **6,624,763개**입니다. 이 수치는 해당 브랜드의 Cleanser 제품에 대한 높은 수요를 보여줍니다.  #### 분석 및 인사이트  *   2025년 한 해 동"
+  },
+  {
+    "id": "PR-037",
+    "query": "Oil 카테고리 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 50.2,
+    "answer_len": 580,
+    "answer_preview": "### 📊 SK 및 CL 브랜드 Oil 카테고리 총 판매 수량  #### 요약  2019년 1월 1일 이후 'SK' 및 'CL' 브랜드의 Oil 카테고리 총 판매 수량은 **10,533,557개**입니다. 이는 해당 기간 동안 두 브랜드의 Oil 제품이 매우 높은 판매량을 기록했음을 보여줍니다.  #### 분석 및 인사이트  *   **높은 판매량:** '"
+  },
+  {
+    "id": "PR-038",
+    "query": "Toner 카테고리 수량 2024년",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 23.2,
+    "answer_len": 1906,
+    "answer_preview": "### 📊 2024년 토너 카테고리 제품별 판매 수량 분석 (SK, CL 브랜드)  #### 요약  2024년 한 해 동안 SK 및 CL 브랜드의 토너 카테고리 제품 판매 수량 분석 결과, **'SK_Centella_Toning_Toner_210ml'**이 **899,013개**로 압도적인 판매량을 기록하며 1위를 차지했습니다. 상위 10개 제품 중 9개가"
+  },
+  {
+    "id": "PR-039",
+    "query": "카테고리별 수량 비교 2025년",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 35.1,
+    "answer_len": 1072,
+    "answer_preview": "### 📊 2025년 SK, CL 브랜드 카테고리별 총 수량 비교  #### 요약  2025년 SK 및 CL 브랜드의 카테고리별 총 수량을 분석한 결과, **\"Others\" 카테고리가 28,857,515개**로 가장 높은 판매 수량을 기록했습니다. 이어서 \"Ampoule\" 카테고리가 20,979,400개, \"Suncare\" 카테고리가 11,080,409개로"
+  },
+  {
+    "id": "PR-040",
+    "query": "카테고리별 수량 순위 2024년",
+    "table": "product",
+    "category": "product",
+    "status": "WARN",
+    "time": 61.4,
+    "answer_len": 1256,
+    "answer_preview": "### 📊 2024년 카테고리별 총 수량 순위 (SK, CL 브랜드)  #### 요약  2024년 한 해 동안 SK 및 CL 브랜드의 카테고리별 총 수량 분석 결과, 'Others' 카테고리가 **15,298,212개**로 가장 높은 판매 수량을 기록했습니다. 이어서 'Ampoule'이 **10,160,522개**, 'Suncare'가 **8,011,648"
+  },
+  {
+    "id": "PR-041",
+    "query": "센텔라 앰플 100ml 월별 판매 추이 2025년",
+    "table": "product",
+    "category": "product",
+    "status": "WARN",
+    "time": 61.6,
+    "answer_len": 2323,
+    "answer_preview": "### 📊 2025년 SK_Centella_Ampoule_100ml 월별 판매 추이 분석  #### 요약  2025년 한 해 동안 SK_Centella_Ampoule_100ml 제품은 **총 약 253.9억원**의 매출과 **총 2,330,335개**의 판매량을 기록했습니다. 월별 매출은 **2025년 11월에 약 27.3억원으로 최고치**를 달성했으며, "
+  },
+  {
+    "id": "PR-042",
+    "query": "센텔라 선크림 월별 판매 추이 2024년",
+    "table": "product",
+    "category": "product",
+    "status": "WARN",
+    "time": 77.0,
+    "answer_len": 1670,
+    "answer_preview": "### 📊 2024년 센텔라 선크림 월별 판매 추이  #### 요약  2024년 센텔라 선크림의 연간 총 매출은 약 **130.6억원**을 기록했습니다. 월별 매출은 **7월에 약 20.4억원**으로 가장 높았으며, **8월에 약 4.8억원**으로 가장 낮았습니다. 전반적으로 봄부터 여름 시즌에 강세를 보였으나, 8월에 급격한 매출 하락이 관찰되었습니다. "
+  },
+  {
+    "id": "PR-043",
+    "query": "히알루시카 크림 월별 수량 추이",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 32.0,
+    "answer_len": 5034,
+    "answer_preview": "### 📊 히알루시카 크림 월별 수량 추이 분석 보고서  #### 요약  히알루시카 크림 제품군(SK_Hyalucica_Moisture_Cream_75ml 및 SK_Hyalucica_Moisture_Cream_30ml)은 2022년 1월부터 2026년 3월까지 전반적으로 **지속적인 판매량 증가 추세**를 보였습니다. 특히 75ml 제품은 2025년 11월"
+  },
+  {
+    "id": "PR-044",
+    "query": "센텔라 토너 월별 판매 추이 2025년",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 39.3,
+    "answer_len": 1652,
+    "answer_preview": "### 📊 2025년 센텔라 토너 월별 판매 추이 분석  #### 요약  2025년 SK 및 CL 브랜드의 센텔라 토너는 연간 총 **약 124.7억원**의 매출을 기록했습니다. 월별 매출은 **약 6.4억원**에서 **약 13.8억원** 사이로 변동성이 컸으며, 6월(약 **13.8억원**)과 11월(약 **13.4억원**)에 가장 높은 판매량을 보였습니"
+  },
+  {
+    "id": "PR-045",
+    "query": "프로바이오시카 클렌저 월별 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 59.0,
+    "answer_len": 376,
+    "answer_preview": "해당 조건의 데이터가 존재하지 않습니다.  SQL에서 사용된 필터 조건 중 `Brand IN ('SK', 'CL')`이 문제일 수 있습니다. 사용자 질문에는 특정 브랜드에 대한 언급이 없었으나, SQL 쿼리에 'SK' 또는 'CL' 브랜드만 조회하도록 조건이 추가되었습니다. 'Probiocica' 라인이 해당 브랜드에 속하지 않거나, 브랜드 코드가 다르게 "
+  },
+  {
+    "id": "PR-046",
+    "query": "톤 브라이트닝 세럼 월별 추이 2024년",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 38.1,
+    "answer_len": 3557,
+    "answer_preview": "### 📊 2024년 톤 브라이트닝 앰플 월별 매출 추이  #### 요약  2024년 톤 브라이트닝 앰플 제품군의 총 매출은 **약 156.3억원**을 기록하며 연초 대비 큰 폭의 성장을 보였습니다. 특히 11월과 12월에 각각 **약 23.0억원**, **약 23.2억원**의 매출을 달성하며 연말에 가장 높은 실적을 기록했습니다. SK_Tone_Brigh"
+  },
+  {
+    "id": "PR-047",
+    "query": "포어마이징 토너 월별 판매 추이",
+    "table": "product",
+    "category": "product",
+    "status": "WARN",
+    "time": 70.2,
+    "answer_len": 680,
+    "answer_preview": "### 📊 포어마이징 토너 월별 판매 추이 분석  #### 요약  ⚠️ 2026년 3월 데이터는 현재 3월 6일 기준이므로 불완전합니다. 포어마이징 토너 제품군은 2022년 1월부터 2026년 3월까지 지속적인 성장세를 보였으며, 특히 'SK_Poremizing_Clear_Toner_210ml' 제품이 매출의 대부분을 견인했습니다. 가장 높은 월 매출은 2"
+  },
+  {
+    "id": "PR-048",
+    "query": "센텔라 오일 월별 수량 2025년",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 49.5,
+    "answer_len": 3148,
+    "answer_preview": "### 📊 2025년 센텔라 오일 제품 월별 판매 수량 분석  #### 요약  2025년 한 해 동안 센텔라 오일 제품의 총 판매 수량은 **5,461,696개**로 집계되었습니다. 이 중 'SK_Centella_Light_Cleansing_Oil_200ml' 제품이 전체 판매량의 약 80%를 차지하며 가장 높은 판매량을 기록했습니다. 월별로는 4월이 **"
+  },
+  {
+    "id": "PR-049",
+    "query": "전체 제품 월별 판매 추이 2025년",
+    "table": "product",
+    "category": "product",
+    "status": "WARN",
+    "time": 63.1,
+    "answer_len": 1032,
+    "answer_preview": "### 📊 2025년 SK 및 CL 브랜드 전체 제품 판매 현황 및 주요 제품 월별 매출 분석  #### 요약  2025년 SK 및 CL 브랜드의 전체 제품 매출은 **약 4,910.9억원**을 기록했으며, 총 **91,491,469개**의 제품이 판매되었습니다. 제공된 데이터는 전체 제품의 월별 합계가 아닌, 제품별 월별 판매 데이터의 상위 프리뷰이므로,"
+  },
+  {
+    "id": "PR-050",
+    "query": "센텔라 앰플 60ml 월별 추이 2024년",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 42.1,
+    "answer_len": 827,
+    "answer_preview": "2024년 센텔라 앰플 60ml의 월별 추이 데이터가 존재하지 않습니다.  SQL에서 사용된 필터 조건 중 다음 부분이 문제일 가능성이 높습니다:  *   **제품명 (`SET` 필터):** `'%Centella%Ampoule_60ml%'` 이 조건이 데이터베이스에 저장된 실제 제품명과 정확히 일치하지 않을 수 있습니다. 특히 `_` (언더스코어) 대신 `"
+  },
+  {
+    "id": "PR-051",
+    "query": "국가별 센텔라 앰플 100ml 판매량 비교",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 53.1,
+    "answer_len": 2449,
+    "answer_preview": "### 📊 국가별 SK_Centella_Ampoule_100ml 판매량 비교 분석  #### 요약  SK_Centella_Ampoule_100ml 제품은 2019년 1월 1일부터 현재까지 **총 6,259,787개**가 판매되었으며, **약 661.7억원**의 총 매출을 기록했습니다. 판매량 기준으로는 '글로벌_플랫폼', '미국', '인도네시아'가 가장 높"
+  },
+  {
+    "id": "PR-052",
+    "query": "국가별 선크림 판매량 비교",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 46.0,
+    "answer_len": 1306,
+    "answer_preview": "### 📊 국가별 선크림 판매량 비교 분석 (2019년 1월 1일 이후)  #### 요약  2019년 1월 1일 이후 'SK' 및 'CL' 브랜드의 선크림 판매량은 총 **26,075,307개**를 기록했습니다. 이 중 **글로벌_플랫폼**이 **6,774,334개**로 가장 높은 판매량을 보였으며, 이어서 **베트남**이 **3,351,396개**, **"
+  },
+  {
+    "id": "PR-053",
+    "query": "국가별 히알루시카 크림 수량 비교",
+    "table": "product",
+    "category": "product",
+    "status": "WARN",
+    "time": 65.6,
+    "answer_len": 1682,
+    "answer_preview": "### 📊 국가별 Hyalucica Cream 판매 수량 비교 분석  #### 요약  2019년 1월 1일부터 현재(2026년 3월 6일)까지 Hyalucica Cream은 전 세계 **121개 국가**에서 총 **1,657,247개**가 판매되었습니다. 가장 높은 판매량을 기록한 국가는 **미국**으로 **603,801개**의 판매량을 보였으며, 이는 전"
+  },
+  {
+    "id": "PR-054",
+    "query": "국가별 센텔라 토너 판매 비교",
+    "table": "product",
+    "category": "product",
+    "status": "WARN",
+    "time": 60.9,
+    "answer_len": 2197,
+    "answer_preview": "### 📊 국가별 센텔라 토너 판매 현황 분석 (2019.01.01 ~ 2026.03.06)  #### 요약  2019년 1월 1일부터 2026년 3월 6일까지 센텔라 토너 제품군의 총 매출은 **약 340.7억원**이며, 총 판매 수량은 **4,374,767개**에 달합니다. 이 기간 동안 `SK_Centella_Toning_Toner_210ml` 제품이"
+  },
+  {
+    "id": "PR-055",
+    "query": "국가별 앰플 수량 비교 2025년",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 41.0,
+    "answer_len": 1280,
+    "answer_preview": "### 📊 2025년 국가별 앰플 판매 수량 분석  #### 요약  2025년 한 해 동안 SK 및 CL 브랜드의 앰플 제품은 전 세계적으로 총 **24,027,925개**가 판매되었습니다. 이 중 '글로벌_플랫폼'이 3,580,842개로 가장 높은 판매량을 기록했으며, 인도네시아(2,708,209개)와 미국(2,528,652개)이 그 뒤를 이어 주요 판매"
+  },
+  {
+    "id": "PR-056",
+    "query": "국가별 선케어 수량 비교 2024년",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 38.0,
+    "answer_len": 1631,
+    "answer_preview": "### 📊 2024년 국가별 선케어(Suncare) 수량 비교 (SK, CL 브랜드 기준)  #### 요약  2024년 한 해 동안 SK 및 CL 브랜드의 선케어 제품 **총 판매 수량은 8,011,648개**를 기록했습니다. 이 중 **글로벌_플랫폼이 2,586,293개**로 가장 많은 수량을 차지했으며, **베트남(1,187,463개)**과 **인도네시"
+  },
+  {
+    "id": "PR-057",
+    "query": "국가별 크림 제품 수량",
+    "table": "product",
+    "category": "product",
+    "status": "WARN",
+    "time": 64.4,
+    "answer_len": 2307,
+    "answer_preview": "### 📊 국가별 크림 제품 판매 수량 분석  #### 요약  2019년 1월 1일부터 2026년 3월 6일까지 SK 및 CL 브랜드의 크림 제품은 총 **14,538,194**개가 판매되었습니다. 이 중 인도네시아, 글로벌_플랫폼, 미국이 주요 판매 국가로 나타났으며, 특히 'SK_Centella_Soothing_Cream_75ml'와 'SK_Tone_B"
+  },
+  {
+    "id": "PR-058",
+    "query": "국가별 클렌저 수량 비교",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 42.3,
+    "answer_len": 1530,
+    "answer_preview": "### 📊 2019년 1월 1일 이후 국가별 클렌저 판매 수량 비교 (SK, CL 브랜드)  #### 요약  2019년 1월 1일부터 현재(2026년 3월 6일)까지 SK 및 CL 브랜드 클렌저의 총 판매 수량은 **12,399,215개**입니다. 이 중 **글로벌_플랫폼**이 **2,353,059개**로 가장 많은 판매량을 기록했으며, **인도네시아**와"
+  },
+  {
+    "id": "PR-059",
+    "query": "국가별 세트 제품 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 48.4,
+    "answer_len": 2579,
+    "answer_preview": "### 📊 국가별 세트 제품 판매 수량 분석 보고서  #### 요약  2019년 1월 1일부터 현재(2026년 3월 6일)까지의 데이터 분석 결과, SK 및 CL 브랜드의 세트 제품은 총 **2,110,394개**가 판매되었습니다. 이 중 인도네시아는 가장 높은 판매량을 기록하며 시장을 주도하고 있으며, 특히 'SK_Centella_Light_Cleansi"
+  },
+  {
+    "id": "PR-060",
+    "query": "국가별 토너 수량 비교 2025년",
+    "table": "product",
+    "category": "product",
+    "status": "WARN",
+    "time": 65.3,
+    "answer_len": 1545,
+    "answer_preview": "### 📊 2025년 국가별 토너 판매 수량 비교 (SK, CL 브랜드)  #### 요약  2025년 한 해 동안 SK 및 CL 브랜드 토너 제품은 전 세계적으로 총 **3,774,224개** 판매되었습니다. 이 중 **인도네시아**가 **733,138개**로 가장 많은 판매 수량을 기록했으며, 이는 전체 판매량의 약 **19.4%**에 해당합니다. 글로벌"
+  },
+  {
+    "id": "PR-061",
+    "query": "GM_EAST1 팀 제품 수량 2025년",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 41.1,
+    "answer_len": 1390,
+    "answer_preview": "### 📊 GM_EAST1 팀 2025년 제품별 총 판매 수량 분석  #### 요약  2025년 GM_EAST1 팀의 제품별 판매 수량 분석 결과, 총 **78개 제품**의 판매 실적이 집계되었습니다. 이 중 가장 많이 판매된 제품은 **SK_Centella_Watergel_sheet_ampoule_mask_25ml_5ea**로 **54,469개**를 기록"
+  },
+  {
+    "id": "PR-062",
+    "query": "GM_EAST2 팀 제품 수량 2024년",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 40.5,
+    "answer_len": 469,
+    "answer_preview": "### 📊 2024년 GM_EAST2 팀 제품 수량 분석  #### 요약  2024년 GM_EAST2 팀의 제품 수량은 **0개**로 집계되었습니다. 이는 'SK' 및 'CL' 브랜드에 한정하여 조회된 결과입니다.  #### 분석 및 인사이트  *   2024년 한 해 동안 GM_EAST2 팀에서 'SK' 및 'CL' 브랜드 제품에 대한 판매 수량이 없는 "
+  },
+  {
+    "id": "PR-063",
+    "query": "GM_Ecomm 팀 제품 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 38.3,
+    "answer_len": 316,
+    "answer_preview": "해당 조건에 맞는 데이터가 없습니다.  SQL 쿼리에 사용된 `Team_NEW` 값 'GM_Ecomm'은 유효한 값입니다. 하지만 쿼리에 `Brand IN ('SK', 'CL')` 필터 조건이 추가되어 있어, 'GM_Ecomm' 팀의 제품 중 'SK' 또는 'CL' 브랜드에 해당하는 판매량이 없을 가능성이 있습니다.  비슷한 데이터를 조회할 수 있는 대안 "
+  },
+  {
+    "id": "PR-064",
+    "query": "GM_MKT 팀 제품 수량 2025년",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 45.3,
+    "answer_len": 1475,
+    "answer_preview": "### 📊 2025년 GM_MKT 팀 제품별 총 판매 수량 분석  #### 요약  2025년 한 해 동안 GM_MKT 팀에서 판매된 제품의 총 수량은 **12,771,693개**입니다. 이 중 'SK_Hyalucica_Waterfit_Sun_Serum_50ml'이 **1,368,366개**로 가장 높은 판매 수량을 기록하며 팀의 판매를 견인했습니다.  ##"
+  },
+  {
+    "id": "PR-065",
+    "query": "CBT 팀 제품 수량 2024년",
+    "table": "product",
+    "category": "product",
+    "status": "WARN",
+    "time": 69.4,
+    "answer_len": 2213,
+    "answer_preview": "### 📊 2024년 CBT 팀 제품별 판매 수량 분석  #### 요약  2024년 CBT 팀에서는 총 **69개**의 제품이 판매되었습니다. 이 중 'SK_Centella_Airfit_Suncream_Plus_50ml' 제품이 **906,680개**로 가장 높은 판매 수량을 기록하며 전체 판매를 견인했습니다. 상위 20개 제품의 총 판매 수량은 **3,1"
+  },
+  {
+    "id": "PR-066",
+    "query": "JBT 팀 제품 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 37.8,
+    "answer_len": 1678,
+    "answer_preview": "### 📊 JBT 팀 제품별 총 판매 수량 분석 (2019년 1월 1일 이후)  #### 요약  JBT 팀의 2019년 1월 1일부터 현재(2026년 3월 6일)까지 SK 및 CL 브랜드 제품의 총 판매 수량은 **3,403,313개**입니다. 이 기간 동안 총 142개의 고유 제품이 판매되었으며, 'SK_Centella_Ampoule_100ml' 제품이 "
+  },
+  {
+    "id": "PR-067",
+    "query": "KBT 팀 제품 수량 2025년",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 41.7,
+    "answer_len": 1867,
+    "answer_preview": "### 📊 2025년 KBT 팀 제품별 판매 수량 분석  #### 요약  2025년 KBT 팀의 제품별 판매 수량을 분석한 결과, **'Sachet'** 제품이 **618,124개**로 가장 높은 판매 수량을 기록했습니다. 그 뒤를 이어 'SK_Centella_Ampoule_55ml'가 334,248개, 'SK_Hyalucica_Waterfit_Sun_Se"
+  },
+  {
+    "id": "PR-068",
+    "query": "BCM 팀 제품 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 36.2,
+    "answer_len": 2097,
+    "answer_preview": "### 📊 BCM 팀 제품별 총 판매 수량 분석 (2019년 1월 1일 이후)  #### 요약  2019년 1월 1일부터 현재(2026년 3월 6일)까지 BCM 팀(SK, CL 브랜드)의 제품별 총 판매 수량은 **총 337,090개**로 집계되었습니다. 이 기간 동안 **총 111개**의 고유 제품이 판매되었으며, 'SK_Hyalucica_Waterfit"
+  },
+  {
+    "id": "PR-069",
+    "query": "팀별 제품 수량 비교 2025년",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 54.7,
+    "answer_len": 2056,
+    "answer_preview": "### 📊 2025년 팀별 제품 수량 비교 분석  #### 요약  2025년 한 해 동안 SK 및 CL 브랜드 제품의 총 판매 수량은 **95,388,432개**를 기록했습니다. 특히 'B2B1' 팀이 가장 많은 제품 수량을 처리하며 전체 판매를 주도했으며, 'Sachet' 제품이 여러 팀에서 압도적으로 높은 판매량을 보였습니다.  #### 상세 데이터  "
+  },
+  {
+    "id": "PR-070",
+    "query": "팀별 제품 수량 순위 2024년",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 53.9,
+    "answer_len": 1903,
+    "answer_preview": "### 📊 2024년 팀별 제품 수량 순위 분석  #### 요약  2024년 한 해 동안 SK 및 CL 브랜드 제품의 총 판매 수량은 **49,507,142개**를 기록했습니다. 이 중 **B2B1, B2B2, GM_MKT** 팀이 가장 높은 제품 수량을 보였으며, 특히 **'Sachet'** 제품이 여러 팀에서 압도적인 판매량을 기록하며 전체 수량 순위에"
+  },
+  {
+    "id": "PR-071",
+    "query": "B2B 제품별 수량 비교 2025년",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 53.2,
+    "answer_len": 1714,
+    "answer_preview": "### 📊 2025년 B2B 제품별 판매 수량 비교 분석  #### 요약  2025년 한 해 동안 SK 및 CL 브랜드의 B2B 제품 총 판매 수량은 **82,457,972개**를 기록했습니다. 이 중 'Sachet' 제품이 **28,626,840개**로 가장 높은 판매 수량을 보이며 전체 B2B 판매를 주도했습니다. 총 157개의 고유 제품이 B2B 채널"
+  },
+  {
+    "id": "PR-072",
+    "query": "B2C 제품별 수량 비교 2024년",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 39.3,
+    "answer_len": 1967,
+    "answer_preview": "📊 B2C 2024년 제품별 판매 수량 비교 분석  #### 요약  2024년 B2C 채널에서 SK 및 CL 브랜드 제품의 총 판매 수량은 **6,703,030개**를 기록했습니다. 이 중 'SK_Centella_Light_Cleansing_Oil_200ml' 제품이 **458,476개**로 가장 높은 판매 수량을 보이며 전체 판매를 견인했습니다. 상위 1"
+  },
+  {
+    "id": "PR-073",
+    "query": "B2B vs B2C 제품별 수량 비교",
+    "table": "product",
+    "category": "product",
+    "status": "WARN",
+    "time": 61.6,
+    "answer_len": 2934,
+    "answer_preview": "### 📊 B2B vs B2C 제품별 수량 비교 분석 보고서  #### 요약  2019년 1월 1일부터 현재(2026년 3월 6일)까지의 SK 및 CL 브랜드 제품 판매 수량을 분석한 결과, **B2B 판매가 압도적인 비중**을 차지하고 있습니다. 전체 판매 수량 **192,657,910개** 중 상위 20개 제품은 모두 B2B 유형이었으며, 이들 제품만으"
+  },
+  {
+    "id": "PR-074",
+    "query": "B2B 판매 수량 TOP 10 제품",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 30.9,
+    "answer_len": 1561,
+    "answer_preview": "### 📊 B2B 판매 수량 TOP 10 제품 현황  #### 요약  2019년 1월 1일부터 현재까지의 B2B 판매 데이터를 분석한 결과, 'Sachet' 제품이 **55,160,760개**로 압도적인 판매 수량을 기록하며 1위를 차지했습니다. TOP 10 제품의 총 판매 수량은 **105,602,277개**이며, 이 중 'Sachet'이 전체의 절반 이"
+  },
+  {
+    "id": "PR-075",
+    "query": "B2C 판매 수량 TOP 10 제품",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 40.0,
+    "answer_len": 1701,
+    "answer_preview": "### 📊 B2C 판매 수량 TOP 10 제품 분석 보고서 (2019년 1월 1일 이후)  #### 요약  2019년 1월 1일부터 현재까지의 B2C 판매 데이터를 기준으로, SK 브랜드의 'SK_Centella_Light_Cleansing_Oil_200ml' 제품이 **1,619,332개** 판매되며 가장 높은 판매 수량을 기록했습니다. 상위 10개 제품"
+  },
+  {
+    "id": "PR-076",
+    "query": "인도네시아 B2B 제품 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 45.7,
+    "answer_len": 2490,
+    "answer_preview": "### 📊 인도네시아 B2B 제품별 총 판매 수량 분석 (2019년 1월 1일 이후)  #### 요약  2019년 1월 1일부터 현재(2026년 3월 6일)까지 인도네시아 B2B 채널에서 SK 및 CL 브랜드 제품의 총 판매 수량은 **4,005,440개**입니다. 이 기간 동안 총 112개의 고유 제품이 판매되었으며, 'SK_Centella_Toning_"
+  },
+  {
+    "id": "PR-077",
+    "query": "태국 B2C 제품 수량 2025년",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 32.0,
+    "answer_len": 404,
+    "answer_preview": "2025년 태국 B2C 제품 수량 데이터는 현재 조회되지 않습니다.  SQL에서 사용된 필터 조건 중 `EXTRACT(YEAR FROM Date) = 2025`가 문제의 원인입니다. 2025년은 미래 시점이므로, 현재 시점에서는 해당 연도의 실제 판매 데이터가 존재하지 않습니다.  `Country = '태국'` 및 `Sales_Type = 'B2C'` 조건"
+  },
+  {
+    "id": "PR-078",
+    "query": "미국 B2B 제품 수량 순위",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 39.0,
+    "answer_len": 2652,
+    "answer_preview": "### 📊 미국 B2B 제품 수량 순위 분석 (2019년 1월 1일 ~ 2026년 3월 6일)  #### 요약  2019년 1월 1일부터 2026년 3월 6일까지 미국 B2B 채널에서 SK 및 CL 브랜드 제품의 수량 순위를 분석한 결과, 총 **148개**의 고유 제품이 판매되었으며, 전체 판매 수량은 **10,518,226개**로 집계되었습니다. 이 중"
+  },
+  {
+    "id": "PR-079",
+    "query": "일본 B2C 제품 수량 2024년",
+    "table": "product",
+    "category": "product",
+    "status": "WARN",
+    "time": 70.2,
+    "answer_len": 1973,
+    "answer_preview": "### 📊 2024년 일본 B2C 제품별 판매 수량 분석  #### 요약  2024년 일본 B2C 시장에서 가장 많이 판매된 제품은 **SK_Centella_Ampoule_100ml**로, 총 **138,866개**가 판매되었습니다. 상위 20개 제품의 총 판매 수량은 **694,781개**이며, 센텔라 라인 제품들이 판매량 상위권을 다수 차지하며 시장을 "
+  },
+  {
+    "id": "PR-080",
+    "query": "B2B B2C 수량 비율 국가별",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 53.7,
+    "answer_len": 3200,
+    "answer_preview": "### 📊 국가별 B2B/B2C 수량 비율 분석  #### 요약  2019년 1월 1일부터 2026년 3월 6일까지의 데이터를 분석한 결과, 전체 판매 수량 **1억 9,342만 990개** 중 B2B 판매가 **1억 7,212만 2,008개**로 **약 89.1%**를 차지하며 압도적인 비중을 보였습니다. B2C 판매는 **2,129만 8,982개**로 "
+  },
+  {
+    "id": "PR-081",
+    "query": "2025년 가장 많이 팔린 제품 TOP 10",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 53.0,
+    "answer_len": 1465,
+    "answer_preview": "### 📊 2025년 SK 및 CL 브랜드 판매량 TOP 10 제품 분석  #### 요약  2025년 SK 및 CL 브랜드에서 가장 많이 판매된 제품은 **Sachet**으로, 총 **28,642,651**개의 압도적인 판매량을 기록했습니다. Sachet을 제외하면 SK_Hyalucica_Waterfit_Sun_Serum_50ml가 5,194,700개로 가"
+  },
+  {
+    "id": "PR-082",
+    "query": "2024년 가장 많이 팔린 제품 TOP 10",
+    "table": "product",
+    "category": "product",
+    "status": "WARN",
+    "time": 72.3,
+    "answer_len": 2364,
+    "answer_preview": "### 📊 2024년 SK 및 CL 브랜드 판매량 기준 TOP 10 제품 분석  #### 요약  2024년 SK 및 CL 브랜드에서 판매량 기준 가장 많이 팔린 제품은 **Sachet**으로, 총 **1,518만 개** 이상 판매되었습니다. Sachet은 압도적인 판매량을 기록했으나, 매출액은 다른 상위 제품에 비해 현저히 낮아 샘플 또는 증정품일 가능성이"
+  },
+  {
+    "id": "PR-083",
+    "query": "2025년 가장 많이 팔린 제품 TOP 20",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 41.0,
+    "answer_len": 2637,
+    "answer_preview": "### 📊 2025년 SK 및 CL 브랜드 제품 판매량 TOP 20 분석  #### 요약  2025년 SK 및 CL 브랜드 제품 중 가장 많이 팔린 제품은 **Sachet**으로, 총 **28,642,651개**가 판매되며 압도적인 1위를 차지했습니다. 그 뒤를 이어 **SK_Hyalucica_Waterfit_Sun_Serum_50ml**가 **5,194,"
+  },
+  {
+    "id": "PR-084",
+    "query": "2024년 제품별 수량 순위",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 48.8,
+    "answer_len": 2587,
+    "answer_preview": "### 📊 2024년 SK 및 CL 브랜드 제품별 수량 순위  #### 요약  2024년 한 해 동안 SK 및 CL 브랜드의 총 판매 수량은 **49,507,142개**를 기록했습니다. 이 중 'Sachet' 제품이 **15,181,842개**로 압도적인 1위를 차지하며, 전체 판매 수량의 약 30.6%를 차지했습니다. 상위 20개 제품은 모두 SK 브랜드"
+  },
+  {
+    "id": "PR-085",
+    "query": "2025년 상반기 제품 수량 TOP 10",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 35.2,
+    "answer_len": 1644,
+    "answer_preview": "### 📊 2025년 상반기 제품 수량 TOP 10 분석  #### 요약  2025년 상반기 동안 SK 및 CL 브랜드 제품 중 가장 많이 판매된 제품은 **Sachet**으로, 총 **15,266,082개**의 압도적인 판매량을 기록했습니다. 그 뒤를 이어 SK_Hyalucica_Waterfit_Sun_Serum_50ml이 **2,830,283개**, S"
+  },
+  {
+    "id": "PR-086",
+    "query": "2024년 하반기 제품 수량 TOP 10",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 45.5,
+    "answer_len": 1564,
+    "answer_preview": "### 📊 2024년 하반기 제품별 판매 수량 TOP 10 (SK, CL 브랜드 기준)  #### 요약  2024년 하반기(7월 1일 ~ 12월 31일) SK 및 CL 브랜드 제품 중 판매 수량 TOP 10을 분석한 결과, 'Sachet' 제품이 **10,903,977개**로 압도적인 1위를 차지했습니다. 2위인 'SK_Hyalucica_Waterfit_S"
+  },
+  {
+    "id": "PR-087",
+    "query": "전체 기간 제품 수량 TOP 10",
+    "table": "product",
+    "category": "product",
+    "status": "WARN",
+    "time": 61.4,
+    "answer_len": 1537,
+    "answer_preview": "### 📊 전체 기간 제품 수량 TOP 10 (SK, CL 브랜드 대상)  #### 요약  2019년 1월 1일부터 현재까지 SK 및 CL 브랜드 제품 중 가장 많이 판매된 수량 TOP 10을 분석한 결과, 'Sachet'이 **55,198,011개**로 압도적인 1위를 차지했습니다. 그 뒤를 이어 'SK_Hyalucica_Waterfit_Sun_Serum"
+  },
+  {
+    "id": "PR-088",
+    "query": "2025년 수량이 가장 적은 제품",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 42.0,
+    "answer_len": 516,
+    "answer_preview": "### 📊 2025년 SK 및 CL 브랜드 최저 판매 수량 제품  #### 요약  2025년 SK 및 CL 브랜드 제품 중 판매 수량이 가장 적었던 제품은 **SK_Centella_Boosting_Ampoule_Kit**으로, 총 **8개**가 판매되었습니다.  #### 상세 데이터  (단일 결과이므로 상세 데이터는 요약에 포함됩니다.)  #### 분석 및"
+  },
+  {
+    "id": "PR-089",
+    "query": "2024년 제품별 수량 하위 10개",
+    "table": "product",
+    "category": "product",
+    "status": "WARN",
+    "time": 66.4,
+    "answer_len": 1494,
+    "answer_preview": "### 📊 2024년 SK/CL 브랜드 제품별 판매 수량 하위 10개 분석 보고서  #### 요약  2024년 SK 및 CL 브랜드 제품 중 판매 수량이 가장 적었던 하위 10개 제품이 분석되었습니다. 이 중 'SK_Probiocica_Spring_Special_Edition'이 **16개**로 가장 낮은 판매 수량을 기록했으며, 하위 10개 제품의 판매 "
+  },
+  {
+    "id": "PR-090",
+    "query": "2025년 신제품 판매 수량",
+    "table": "product",
+    "category": "product",
+    "status": "WARN",
+    "time": 72.7,
+    "answer_len": 441,
+    "answer_preview": "해당 조건에 맞는 데이터가 존재하지 않습니다.  SQL 쿼리에서 0행이 반환된 주된 이유는 다음과 같습니다: *   **날짜 조건 문제:** 쿼리는 `EXTRACT(YEAR FROM Date) = 2025` 조건을 통해 2025년의 판매 데이터를 찾고 있습니다. 또한, `EXTRACT(YEAR FROM First_Cohort) = 2025` 조건을 통해 2"
+  },
+  {
+    "id": "PR-091",
+    "query": "FOC 제품 수량 분석 2025년",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 26.9,
+    "answer_len": 306,
+    "answer_preview": "2025년 데이터는 현재 존재하지 않아 조회된 결과가 없습니다.  SQL 쿼리에서 `EXTRACT(YEAR FROM Date) = 2025` 조건이 사용되었으나, 현재 데이터는 2025년까지의 정보를 포함하고 있지 않습니다. 일반적으로 데이터는 과거 또는 현재 시점까지만 기록됩니다.  가장 최신 연도인 2024년 또는 이전 연도를 선택하여 다시 시도해 보세"
+  },
+  {
+    "id": "PR-092",
+    "query": "FOC 제품 수량 분석 2024년",
+    "table": "product",
+    "category": "product",
+    "status": "WARN",
+    "time": 66.0,
+    "answer_len": 318,
+    "answer_preview": "2024년 FOC 제품 수량 데이터는 현재 조회되지 않습니다.  SQL 쿼리의 필터 조건 중 `EXTRACT(YEAR FROM Date) = 2024`가 문제의 원인일 가능성이 높습니다. 2024년 데이터가 아직 전부 집계되지 않았거나, 지정된 브랜드('SK', 'CL')의 FOC 제품이 2024년에 아직 발생하지 않았을 수 있습니다.  비슷한 데이터를 조"
+  },
+  {
+    "id": "PR-093",
+    "query": "FOC 제품 국가별 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 44.2,
+    "answer_len": 586,
+    "answer_preview": "해당 조건에 맞는 FOC 제품 데이터가 존재하지 않습니다.  SQL 쿼리에서 사용된 필터 조건 중 다음을 확인해 보시는 것이 좋습니다:  *   **`Brand IN ('SK', 'CL')`**: 'SK'와 'CL'이 실제 데이터에 사용되는 정확한 브랜드 코드인지 확인이 필요합니다. 만약 다른 브랜드 이름이나 코드가 사용된다면, 해당 값으로 변경해야 합니다"
+  },
+  {
+    "id": "PR-094",
+    "query": "FOC 제품 라인별 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 41.8,
+    "answer_len": 290,
+    "answer_preview": "현재 조건으로는 조회되는 데이터가 없습니다.  SQL 쿼리에서 'SK' 또는 'CL' 브랜드의 FOC(Free Of Charge) 제품만 조회하도록 필터링되어 있습니다. 해당 브랜드의 FOC 제품 데이터가 없거나, '2019-01-01' 이후의 데이터가 없는 것으로 보입니다.  비슷한 데이터를 조회할 수 있는 대안 질문입니다: *   전체 브랜드의 FOC "
+  },
+  {
+    "id": "PR-095",
+    "query": "FOC 비율 카테고리별 분석",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 37.6,
+    "answer_len": 1672,
+    "answer_preview": "### 📊 카테고리별 FOC 비율 분석 (SK, CL 브랜드)  #### 요약  2019년 1월 1일부터 2026년 3월 6일까지의 데이터 분석 결과, 'Others' 카테고리가 **5.90%**로 가장 높은 FOC(Free Of Charge) 비율을 보였습니다. 그 뒤를 이어 'Pack' 카테고리가 **4.89%**, 'Suncare' 카테고리가 **3."
+  },
+  {
+    "id": "PR-096",
+    "query": "인도네시아 FOC 제품 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 42.6,
+    "answer_len": 506,
+    "answer_preview": "현재 조건으로는 조회되는 데이터가 없습니다.  SQL에서 사용된 필터 조건을 확인한 결과, `Country = '인도네시아'` 값은 유효한 값 목록에 존재합니다. `FOC_or_Not = 'Y'` 조건 또한 FOC 제품을 필터링하는 데 적절해 보입니다.  문제는 `Country = '인도네시아'`, `FOC_or_Not = 'Y'`, 그리고 `Brand I"
+  },
+  {
+    "id": "PR-097",
+    "query": "태국 FOC 제품 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 51.0,
+    "answer_len": 508,
+    "answer_preview": "해당 조건에 맞는 데이터가 존재하지 않습니다.  SQL에서 사용된 필터 조건 중 `Country = '태국'`과 `FOC_or_Not = 'Y'`는 유효하며 사용자님의 질문 의도와 일치합니다. 하지만 `Brand IN ('SK', 'CL')` 조건이 추가되어 있습니다. 태국에서 'SK' 또는 'CL' 브랜드의 FOC(Free Of Charge) 제품 데이터"
+  },
+  {
+    "id": "PR-098",
+    "query": "FOC vs 일반 판매 수량 비교",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 37.4,
+    "answer_len": 826,
+    "answer_preview": "### 📊 FOC(무상) 판매 vs 일반 판매 수량 비교 분석  #### 요약  2019년 1월 1일 이후 전체 판매 수량을 분석한 결과, **일반 판매 수량**이 **179,343,107개**로 전체의 약 92.7%를 차지하며 압도적인 비중을 보였습니다. 반면 FOC(무상) 판매 수량은 **14,077,883개**로 전체의 약 7.3%를 기록했습니다.  "
+  },
+  {
+    "id": "PR-099",
+    "query": "2025년 FOC 제품 TOP 10",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 45.0,
+    "answer_len": 534,
+    "answer_preview": "2025년 FOC 제품 TOP 10에 대한 데이터는 현재 조회되지 않습니다.  **문제 조건 설명:**  *   **날짜 조건 (`EXTRACT(YEAR FROM Date) = 2025`):** 가장 큰 문제는 2025년 데이터입니다. 판매 통합 데이터는 주로 과거 및 현재의 거래를 기록하므로, 미래 시점인 2025년의 FOC 제품 데이터는 아직 존재하지 "
+  },
+  {
+    "id": "PR-100",
+    "query": "FOC 월별 수량 추이 2024년",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 32.5,
+    "answer_len": 1218,
+    "answer_preview": "### 📊 2024년 FOC 월별 수량 추이 (SK, CL 브랜드)  #### 요약  2024년 한 해 동안 SK 및 CL 브랜드의 FOC(Free of Charge) 총 수량은 **3,389,038개**를 기록했습니다. 월별 추이를 보면 **11월에 523,679개**로 가장 높은 수량을 보였으며, 2월은 76,635개로 가장 낮은 수량을 기록했습니다. "
+  },
+  {
+    "id": "PR-101",
+    "query": "센텔라 라인에 어떤 제품이 있어?",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 50.8,
+    "answer_len": 224,
+    "answer_preview": "고객님, 스킨1004 센텔라 라인에는 현재 CS 데이터베이스에서 확인된 바로는 다음과 같은 제품들이 있습니다.  *   **스킨1004 센텔라 앰플** *   **스킨1004 마다가스카르 센텔라 앰플 폼 (또는 센텔라 앰플 폼 클렌저)** *   **스킨1004 센텔라 클렌징 오일**  출처: CS 데이터베이스 [1], [2], [3], [4], [5], "
+  },
+  {
+    "id": "PR-102",
+    "query": "히알루테카 라인 제품 목록",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 24.9,
+    "answer_len": 330,
+    "answer_preview": "고객님, 문의하신 히알루시카 라인 제품 목록에 대해 CS 데이터베이스를 기반으로 안내해 드립니다.  CS 데이터베이스에서 히알루시카 라인과 관련하여 언급된 제품은 다음과 같습니다. *   **히알루시카 퍼스트 앰플** *   **히알루시카 모이스처 크림**  히알루시카 라인은 진정, 수분, 피부 장벽 케어를 돕는 라인으로, 민감 피부도 사용하실 수 있는 제"
+  },
+  {
+    "id": "PR-103",
+    "query": "히알루시카 라인 제품 목록",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 37.3,
+    "answer_len": 397,
+    "answer_preview": "고객님, 문의하신 SKIN1004 히알루시카 라인 제품 목록은 CS 데이터베이스를 바탕으로 다음과 같습니다.  *   **히알루시카 워터핏 선세럼**: 이 제품은 기존 버전과 미국 규정에 맞춰 성분 및 제형이 개선된 '히알루시카 선세럼 UV' (또는 OTC 선세럼) 버전이 있습니다. (출처: [1], [2], [5], [6], [10]) *   **히알루시"
+  },
+  {
+    "id": "PR-104",
+    "query": "프로바이오시카 라인 제품 목록",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 36.6,
+    "answer_len": 355,
+    "answer_preview": "고객님, SKIN1004 프로바이오시카 라인의 제품 목록은 CS 데이터베이스를 바탕으로 다음과 같습니다.  *   **프로바이오시카 인리치 크림** *   **프로바이오시카 인텐시브 앰플** *   **프로바이오시카 너리싱 마스크** *   **프로바이오시카 아이크림** (바쿠치올 아이크림으로도 언급됩니다.) *   **프로바이오시카 토너** *   **프"
+  },
+  {
+    "id": "PR-105",
+    "query": "티아트리카 라인에 어떤 제품이 있나요?",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 44.6,
+    "answer_len": 1084,
+    "answer_preview": "### 📊 티아트리카 라인 제품 목록  #### 요약  티아트리카 라인에는 현재 **12가지** 제품이 있습니다. 이 제품들은 크림, 토너, 앰플과 같은 기본적인 스킨케어 제품부터 마스크, 선 밀크, 스팟 케어 등 다양한 피부 고민을 위한 솔루션을 제공합니다.  #### 상세 데이터  | 제품명 | |:---| | SK_Teatrica_B5_Cream_75"
+  },
+  {
+    "id": "PR-106",
+    "query": "톤 브라이트닝 라인 제품 리스트",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 57.0,
+    "answer_len": 1381,
+    "answer_preview": "### 📊 톤 브라이트닝 라인 제품 리스트  #### 요약  SK 브랜드의 톤 브라이트닝 라인 제품은 총 **11개**가 확인되었습니다. 이 라인은 토너, 앰플, 크림, 클렌징, 마스크, 선크림 등 다양한 스킨케어 단계를 아우르는 제품들로 구성되어 있습니다.  #### 상세 데이터 | product_name                            "
+  },
+  {
+    "id": "PR-107",
+    "query": "포어마이징 라인 제품 종류",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 55.6,
+    "answer_len": 428,
+    "answer_preview": "안녕하세요, 고객님. 스킨1004 포어마이징 라인 제품 종류에 대해 문의 주셨습니다.  CS 데이터베이스에 따르면, 스킨1004 포어마이징 라인에는 다음과 같은 제품들이 있습니다.  *   **포어마이징 폼 클렌저** *   **포어마이징 퀵 클레이 스틱 마스크** *   **포어마이징 시트 마스크** *   **포어마이징 프레쉬 앰플** *   **포어마"
+  },
+  {
+    "id": "PR-108",
+    "query": "라빈네이처 라인 제품 목록",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 28.0,
+    "answer_len": 1159,
+    "answer_preview": "### 📊 라빈네이처 라인 제품 목록  #### 요약  현재 조회된 라빈네이처 라인의 제품은 총 **9개**입니다. 이 제품들은 주로 아젤라익산, 매트릭실, 나이아신아마이드, 레티놀 성분을 포함한 부스팅 샷 앰플류로 구성되어 있으며, 대부분 30ml와 9ml 두 가지 용량으로 제공됩니다.  #### 상세 데이터 | 제품명 | |:---| | SK_Labin"
+  },
+  {
+    "id": "PR-109",
+    "query": "센텔라 테카 라인 제품 목록",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 47.9,
+    "answer_len": 127,
+    "answer_preview": "고객님, 센텔라 테카 라인 제품 목록에 대해 문의주셨습니다.  CS 데이터베이스에 따르면, 센텔라 테카 라인에는 다음과 같은 제품이 있습니다.  *   센텔라 테카 토너 *   센텔라 테카 크림  출처: CS 데이터베이스 [1]"
+  },
+  {
+    "id": "PR-110",
+    "query": "전체 라인별 제품 종류 수",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 35.6,
+    "answer_len": 1682,
+    "answer_preview": "### 📊 라인별 제품 종류 수 분석  #### 요약  2019년 1월 1일 이후 'SK' 및 'CL' 브랜드 데이터를 기준으로 분석한 결과, 전체 16개 라인에서 총 **210개**의 제품 종류가 확인되었습니다. 이 중 **Centella 라인**이 **51개**의 제품 종류로 가장 다양한 제품군을 보유하고 있으며, Hyalucica 라인(27개)과 Ot"
+  },
+  {
+    "id": "PR-111",
+    "query": "히알루테카 라인 제품별 수량",
+    "table": "product",
+    "category": "product",
+    "status": "WARN",
+    "time": 63.4,
+    "answer_len": 1024,
+    "answer_preview": "### 📊 히알루테카 라인 제품별 총 판매 수량  #### 요약  2019년 1월 1일부터 2026년 3월 6일까지의 SK 및 CL 브랜드 데이터에 따르면, 히알루테카 라인 제품 중 'SK_Hyalu_Teca_Plumping_Ampoule_50ml'이 **2,209개**로 가장 많이 판매되었습니다. 총 3가지 히알루테카 라인 제품의 판매 수량이 집계되었습니"
+  },
+  {
+    "id": "PR-112",
+    "query": "센텔라 테카 라인 제품별 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 38.0,
+    "answer_len": 1013,
+    "answer_preview": "### 📊 센텔라 테카 라인 제품별 판매 수량 분석  #### 요약  2019년 1월 1일부터 현재까지 센텔라 테카 라인 제품 중 'SK_Centella_Teca_Ampoule_50ml'이 **55,022개**로 가장 많이 판매되었습니다. 이어서 'SK_Centella_Teca_Cream_75ml'이 **34,890개**, 'SK_Centella_Teca_"
+  },
+  {
+    "id": "PR-113",
+    "query": "쇼피 센텔라 앰플 수량 2025년",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 31.2,
+    "answer_len": 1456,
+    "answer_preview": "### 📊 2025년 쇼피 센텔라 앰플 제품별 판매 수량 현황  #### 요약  2025년 쇼피(Shopee) 채널에서 센텔라 앰플 관련 제품은 총 **495,614개**가 판매되었습니다. 이 중 'SK_Centella_Ampoule_Foam_125ml' 제품이 **144,078개**로 가장 높은 판매 수량을 기록하며 전체 판매를 주도했습니다.  #### "
+  },
+  {
+    "id": "PR-114",
+    "query": "라자다 선크림 수량 2024년",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 31.6,
+    "answer_len": 670,
+    "answer_preview": "해당 조건에 맞는 데이터가 없습니다.  SQL 쿼리에서 사용된 필터 조건 중 다음 부분이 문제일 수 있습니다:  *   **날짜 조건 (`EXTRACT(YEAR FROM Date) = 2024`)**: 2024년 데이터는 아직 집계 중이거나, 해당 시점까지의 데이터가 충분하지 않을 수 있습니다. 2024년 전체 데이터는 아직 완료되지 않았을 가능성이 높습니"
+  },
+  {
+    "id": "PR-115",
+    "query": "틱톡 센텔라 앰플 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 39.3,
+    "answer_len": 1382,
+    "answer_preview": "### 📊 틱톡 채널 센텔라 앰플 제품군 총 판매 수량 분석  #### 요약  틱톡 채널에서 2019년 1월 1일부터 현재(2026년 3월 6일)까지 판매된 센텔라 앰플 제품군의 총 판매 수량은 **1,669,737개**입니다. 이 중 'SK_Centella_Ampoule_Foam_125ml' 제품이 **506,106개**로 가장 높은 판매량을 기록했습니다"
+  },
+  {
+    "id": "PR-116",
+    "query": "아마존 크림 제품 수량 2025년",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 31.2,
+    "answer_len": 1404,
+    "answer_preview": "### 📊 2025년 아마존 크림 제품별 판매 수량 분석  #### 요약  2025년 아마존 채널에서 판매된 SK 브랜드 크림 제품의 총 수량은 **18,008개**입니다. 이 중 'SK_Hyalucica_Moisture_Cream_75ml' 제품이 **7,036개**로 가장 높은 판매량을 기록하며 전체 크림 제품 판매량의 약 39%를 차지했습니다.  ##"
+  },
+  {
+    "id": "PR-117",
+    "query": "라쿠텐 앰플 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 54.5,
+    "answer_len": 2811,
+    "answer_preview": "### 📊 라쿠텐 채널 앰플 제품별 판매 수량 분석 (2019년 1월 1일 ~ 2026년 3월 6일)  #### 요약  2019년 1월 1일부터 2026년 3월 6일까지 라쿠텐 채널에서 판매된 앰플 제품의 총 수량은 (제공된 상위 20개 제품 기준) **113,112개**입니다. 이 중 'SK_Centella_Ampoule_100ml' 제품이 **52,28"
+  },
+  {
+    "id": "PR-118",
+    "query": "큐텐 제품 수량 2024년",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 33.3,
+    "answer_len": 1513,
+    "answer_preview": "### 📊 2024년 큐텐(Q10) 채널 SK/CL 브랜드 제품 판매 수량 분석  #### 요약  2024년 한 해 동안 큐텐(Q10) 채널에서 SK 및 CL 브랜드 제품의 판매 수량은 총 80개 제품으로 집계되었으며, 이 중 제공된 상위 20개 제품의 총 판매 수량은 **619,974개**를 기록했습니다. 가장 많이 판매된 제품은 'SK_Centella_"
+  },
+  {
+    "id": "PR-119",
+    "query": "플랫폼별 센텔라 앰플 수량 비교",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 51.6,
+    "answer_len": 1745,
+    "answer_preview": "### 📊 플랫폼별 센텔라 앰플 판매 수량 비교 분석  #### 요약  2019년 1월 1일부터 2026년 3월 5일까지의 데이터 기준, 센텔라 앰플은 **SK_B2B_Overseas** 채널에서 **12,986,465개**로 가장 많이 판매되었으며, 이어서 **SK_B2B_Domestic** 채널이 **8,393,533개**를 기록하며 전체 판매를 주도하"
+  },
+  {
+    "id": "PR-120",
+    "query": "플랫폼별 선크림 수량 비교 2025년",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 51.1,
+    "answer_len": 1904,
+    "answer_preview": "### 📊 2025년 SK 및 CL 브랜드 선크림 플랫폼별 판매 수량 분석  #### 요약  2025년 한 해 동안 SK 및 CL 브랜드 선크림은 총 **11,548,366개**가 판매되었습니다. 이 중 **SK_B2B_Domestic** 채널이 **4,760,297개**로 가장 많은 판매량을 기록했으며, **SK_B2B_Overseas** 채널이 **4,"
+  },
+  {
+    "id": "PR-121",
+    "query": "인도네시아 쇼피 제품 수량 TOP 10",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 43.3,
+    "answer_len": 1539,
+    "answer_preview": "### 📊 인도네시아 쇼피 제품 수량 TOP 10 분석  #### 요약  2019년 1월 1일부터 현재(2026년 3월 6일)까지 인도네시아 쇼피 채널에서 SK 및 CL 브랜드 제품 중 **SK_Tone_Brightening_Capsule_Ampoule_100ml**가 총 **392,735개** 판매되며 가장 높은 판매 수량을 기록했습니다. 상위 10개 제"
+  },
+  {
+    "id": "PR-122",
+    "query": "태국 라자다 제품 수량 TOP 5",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 41.0,
+    "answer_len": 649,
+    "answer_preview": "해당 조건의 데이터가 없습니다.  SQL에서 사용된 필터 조건 중 `Country = '태국'`은 유효한 값입니다.  문제는 `Mall_Classification LIKE '%Lazada%'` 조건일 가능성이 높습니다. `Mall_Classification` 컬럼에 'Lazada'라는 값이 존재하지 않거나, 대소문자 또는 스펠링이 다를 수 있습니다. 또는 "
+  },
+  {
+    "id": "PR-123",
+    "query": "2025년 1분기 제품별 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 48.1,
+    "answer_len": 2321,
+    "answer_preview": "### 📊 2025년 1분기 SK 및 CL 브랜드 제품별 판매 수량 분석  #### 요약  2025년 1분기 동안 SK 및 CL 브랜드의 총 판매 수량은 **20,166,005개**를 기록했습니다. 이 기간 동안 총 **123개**의 고유 제품이 판매되었으며, 가장 높은 판매 수량을 보인 제품은 'Sachet'으로 **7,290,353개**가 판매되었습니다"
+  },
+  {
+    "id": "PR-124",
+    "query": "2024년 2분기 제품별 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 39.8,
+    "answer_len": 1936,
+    "answer_preview": "### 📊 2024년 2분기 제품별 판매 수량 분석 (SK, CL 브랜드)  #### 요약  2024년 2분기(4월 1일 ~ 6월 30일) 동안 SK 및 CL 브랜드의 제품별 총 판매 수량은 **11,083,040개**로 집계되었습니다. 이 중 'Sachet' 제품이 **2,485,873개**로 가장 높은 판매량을 기록하며 전체 판매량의 약 22.4%를 차"
+  },
+  {
+    "id": "PR-125",
+    "query": "2025년 3분기 제품별 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 35.8,
+    "answer_len": 2109,
+    "answer_preview": "### 📊 2025년 3분기 SK 및 CL 브랜드 제품별 판매 수량 분석  #### 요약  2025년 3분기 동안 SK 및 CL 브랜드의 제품 총 판매 수량은 **22,732,607개**입니다. 이 중 'Sachet' 제품이 **6,207,309개** 판매되어 전체 수량의 약 27.3%를 차지하며 가장 높은 판매량을 기록했습니다. 상위 5개 제품이 전체 판"
+  },
+  {
+    "id": "PR-126",
+    "query": "2024년 4분기 제품별 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 36.5,
+    "answer_len": 1873,
+    "answer_preview": "### 📊 2024년 4분기 SK 및 CL 브랜드 제품별 판매 수량 분석  #### 요약  2024년 4분기 동안 SK 및 CL 브랜드 제품의 총 판매 수량은 **16,287,884개**를 기록했습니다. 이 중 'Sachet' 제품이 **5,394,216개**로 전체 판매량의 약 33.1%를 차지하며 압도적인 1위를 차지했습니다. 상위 20개 제품은 모두 "
+  },
+  {
+    "id": "PR-127",
+    "query": "2025년 분기별 수량 추이",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 35.6,
+    "answer_len": 834,
+    "answer_preview": "### 📊 2025년 SK, CL 브랜드 분기별 총 수량 추이  #### 요약  2025년 SK 및 CL 브랜드의 총 수량은 **2분기**에 **26,800,186개**로 가장 높았으며, 연간 총 수량은 **95,388,432개**를 기록했습니다. 전반적으로 2분기와 4분기에 높은 판매량을 보였습니다.  #### 상세 데이터 | 분기 | 총 수량 (개) |"
+  },
+  {
+    "id": "PR-128",
+    "query": "인도네시아 2025년 1분기 제품 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 48.1,
+    "answer_len": 2399,
+    "answer_preview": "### 📊 인도네시아 2025년 1분기 제품별 판매 수량 분석  #### 요약  인도네시아에서 2025년 1분기(1월~3월) 동안 **총 88개**의 제품이 판매되었으며, 가장 많이 판매된 제품은 **SK_Centella_Light_Cleansing_Oil_200ml**로 **135,362개**의 판매 수량을 기록했습니다. 상위 판매 제품들은 주로 SK 브"
+  },
+  {
+    "id": "PR-129",
+    "query": "태국 2024년 4분기 제품 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 40.0,
+    "answer_len": 1577,
+    "answer_preview": "### 📊 태국 2024년 4분기 제품별 판매 수량 분석  #### 요약  태국 시장의 2024년 4분기 동안 총 29개 제품에서 판매 수량이 집계되었습니다. 이 중 **SK_Centella_Ampoule_30ml** 제품이 **53,596**개로 가장 높은 판매 수량을 기록하며 압도적인 1위를 차지했습니다. 상위 3개 제품이 전체 판매 수량의 상당 부분을"
+  },
+  {
+    "id": "PR-130",
+    "query": "미국 2025년 2분기 제품 수량",
+    "table": "product",
+    "category": "product",
+    "status": "WARN",
+    "time": 77.7,
+    "answer_len": 1929,
+    "answer_preview": "### 📊 미국 2025년 2분기 SK 및 CL 브랜드 제품별 판매 수량 현황  #### 요약  2025년 2분기 미국 시장에서 SK 및 CL 브랜드 제품의 총 판매 수량은 **1,643,405개**를 기록했습니다. 이 중 'SK_Centella_Light_Cleansing_Oil_200ml' 제품이 **223,440개**로 가장 높은 판매 수량을 보였습니"
+  },
+  {
+    "id": "PR-131",
+    "query": "센텔라 앰플 100ml 1월 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 57.4,
+    "answer_len": 677,
+    "answer_preview": "### 📊 SK_Centella_Ampoule_100ml 제품의 1월 총 판매 수량 분석  #### 요약  SK 및 CL 브랜드의 센텔라 앰플 100ml 제품군 중, 'SK_Centella_Ampoule_100ml' 제품은 2019년부터 2026년 1월까지 모든 1월 판매량을 합산하여 총 **522,054개**의 판매 수량을 기록했습니다.  #### 분석 "
+  },
+  {
+    "id": "PR-132",
+    "query": "센텔라 앰플 100ml 2월 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 27.1,
+    "answer_len": 590,
+    "answer_preview": "### 📊 2026년 2월 센텔라 앰플 100ml 판매 수량  #### 요약  2026년 2월 한 달간 'SK_Centella_Ampoule_100ml' 제품의 총 판매 수량은 **241,423개**입니다. 이는 해당 기간 동안 센텔라 앰플 100ml 제품군 중 가장 높은 판매량을 기록한 단일 제품입니다.  #### 분석 및 인사이트  *   2026년 2"
+  },
+  {
+    "id": "PR-133",
+    "query": "센텔라 앰플 100ml 3월 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 52.6,
+    "answer_len": 622,
+    "answer_preview": "### 📊 센텔라 앰플 100ml 2026년 3월 판매 수량 현황  #### 요약  ⚠️ 2026년 3월 데이터는 현재 3월 6일까지의 집계입니다. 2026년 3월 6일 기준, 'SK_Centella_Ampoule_100ml' 제품은 총 **134,483개**의 판매 수량을 기록했습니다.  #### 분석 및 인사이트  *   'SK_Centella_Ampo"
+  },
+  {
+    "id": "PR-134",
+    "query": "센텔라 앰플 60ml 6월 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 38.5,
+    "answer_len": 459,
+    "answer_preview": "해당 조건의 데이터가 없습니다. 2026년은 미래 시점으로, 해당 연도의 판매 데이터는 존재하지 않습니다.  SQL에서 사용된 필터 조건 중 `EXTRACT(YEAR FROM Date) = 2026`이 문제입니다. 2026년은 미래 시점으로, 현재 데이터베이스에 해당 연도의 판매 데이터가 존재하지 않을 가능성이 높습니다. 가장 유사한 유효 값은 가장 최근 "
+  },
+  {
+    "id": "PR-135",
+    "query": "선크림 7월 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 35.0,
+    "answer_len": 359,
+    "answer_preview": "2026년 데이터는 존재하지 않아 해당 조건의 데이터가 없습니다.  SQL 쿼리에서 `EXTRACT(YEAR FROM Date) = 2026` 조건으로 2026년 데이터를 조회했으나, 현재 데이터셋에는 2026년 판매 데이터가 존재하지 않습니다. 2026년은 유효한 값이 아닙니다. 데이터는 2019년부터 현재 시점까지의 기간을 포함할 가능성이 높습니다. 따"
+  },
+  {
+    "id": "PR-136",
+    "query": "센텔라 앰플 100ml 11월 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 30.9,
+    "answer_len": 460,
+    "answer_preview": "### 📊 센텔라 앰플 100ml 11월 판매 수량 분석  #### 요약  2019년 1월 1일부터 현재(2026년 3월 6일)까지의 데이터를 기준으로, SK_Centella_Ampoule_100ml 제품은 모든 11월을 통틀어 총 **697,415개**의 판매 수량을 기록했습니다.  #### 분석 및 인사이트  *   제공된 데이터는 2019년 1월 1일"
+  },
+  {
+    "id": "PR-137",
+    "query": "센텔라 앰플 100ml 12월 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 46.2,
+    "answer_len": 794,
+    "answer_preview": "### 📊 SK_Centella_Ampoule_100ml 12월 총 판매 수량 분석  #### 요약  SK 브랜드의 `SK_Centella_Ampoule_100ml` 제품에 대한 모든 12월(2019년 1월 1일 이후)의 총 판매 수량은 **535,483개**입니다. 이 수치는 특정 연도에 한정되지 않고, 데이터가 존재하는 모든 12월의 합산 결과입니다. "
+  },
+  {
+    "id": "PR-138",
+    "query": "센텔라 토너 4월 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 32.7,
+    "answer_len": 984,
+    "answer_preview": "### 📊 센텔라 토너 4월 판매 수량 분석  #### 요약  4월에 가장 많이 판매된 센텔라 토너 제품은 **SK_Centella_Toning_Toner_210ml**로 총 **266,001개**가 판매되었습니다. 모든 센텔라 토너 제품을 합산한 4월 총 판매 수량은 **363,122개**입니다.  #### 상세 데이터 | 제품명 | 총 판매 수량 | |"
+  },
+  {
+    "id": "PR-139",
+    "query": "히알루시카 크림 5월 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 31.7,
+    "answer_len": 451,
+    "answer_preview": "### 📊 히알루시카 크림 5월 총 판매 수량  #### 요약  SK_Hyalucica_Moisture_Cream_75ml 제품의 5월 총 판매 수량은 **87,385개**입니다. 이 수치는 2019년 1월 1일부터 현재(2026년 3월 6일)까지의 모든 5월 데이터를 합산한 결과입니다.  #### 분석 및 인사이트  *   사용자 질문에 해당하는 '히알루"
+  },
+  {
+    "id": "PR-140",
+    "query": "클렌징 폼 8월 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 37.2,
+    "answer_len": 246,
+    "answer_preview": "해당 조건의 데이터는 존재하지 않습니다.  SQL 쿼리에서 `EXTRACT(YEAR FROM Date) = 2026` 조건이 문제였습니다. 2026년은 미래 시점으로, 해당 연도의 판매 데이터는 존재하지 않습니다.  비슷한 데이터를 조회할 수 있는 대안 질문은 다음과 같습니다: *   \"2023년 8월 클렌징 폼 수량 알려주세요.\" *   \"올해 8월 클렌"
+  },
+  {
+    "id": "PR-141",
+    "query": "인도네시아 센텔라 앰플 수량 2025년",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 36.5,
+    "answer_len": 1838,
+    "answer_preview": "### 📊 2025년 인도네시아 센텔라 앰플 제품별 판매 수량 분석  #### 요약  2025년 인도네시아 시장에서 센텔라 앰플 관련 제품은 총 **1,241,859개**가 판매되었습니다. 이 중 'SK_Centella_Ampoule_Foam_125ml' 제품이 **358,420개**로 가장 높은 판매 수량을 기록했습니다.  #### 상세 데이터  | 제품"
+  },
+  {
+    "id": "PR-142",
+    "query": "태국 선크림 수량 2024년",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 27.6,
+    "answer_len": 1158,
+    "answer_preview": "### 📊 2024년 태국 선크림 제품별 판매 수량 분석  #### 요약  2024년 태국 시장에서 판매된 선크림 제품의 총 수량은 **31,550개**입니다. 이 중 'SK_Hyalucica_Waterfit_Sun_Serum_50ml' 제품이 **28,450개**로 전체 판매량의 대부분을 차지하며 가장 높은 판매량을 기록했습니다.  #### 상세 데이터 "
+  },
+  {
+    "id": "PR-143",
+    "query": "미국 앰플 제품 수량 2025년",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 47.4,
+    "answer_len": 2408,
+    "answer_preview": "### 📊 2025년 미국 내 SK 및 CL 브랜드 앰플 제품 판매 수량 분석  #### 요약  2025년 미국 시장에서 SK 및 CL 브랜드의 앰플 제품 중 상위 20개 제품은 총 **2,473,083개** 판매되었습니다. (전체 30개 제품 중 상위 20개 기준) 가장 많이 판매된 제품은 **SK_Centella_Ampoule_100ml**로, **44"
+  },
+  {
+    "id": "PR-144",
+    "query": "일본 크림 제품 수량 2024년",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 29.6,
+    "answer_len": 1592,
+    "answer_preview": "### 📊 2024년 일본 크림 제품 판매 수량 분석  #### 요약  2024년 일본 시장에서 크림 제품의 총 판매 수량은 **7,986개**로 집계되었습니다. 이 중 'SK_Centella_Soothing_Cream_75ml' 제품이 **3,679개**로 전체 판매량의 약 46%를 차지하며 가장 높은 판매량을 기록했습니다.  #### 상세 데이터  | "
+  },
+  {
+    "id": "PR-145",
+    "query": "베트남 센텔라 토너 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 40.0,
+    "answer_len": 833,
+    "answer_preview": "### 📊 베트남 센텔라 토너 제품별 총 판매 수량 분석  #### 요약  베트남 시장에서 '센텔라 토너' 키워드를 포함하는 제품들의 총 판매 수량은 **413,418개**입니다. 이 중 'SK_Centella_Toning_Toner_210ml' 제품이 **393,405개**로 압도적인 판매량을 기록하며 전체의 약 95.2%를 차지했습니다.  #### 상세"
+  },
+  {
+    "id": "PR-146",
+    "query": "필리핀 선케어 제품 수량 2025년",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 20.7,
+    "answer_len": 1987,
+    "answer_preview": "### 📊 2025년 필리핀 선케어 제품별 판매 수량 분석  #### 요약  2025년 필리핀 시장에서 SKIN1004 선케어 제품은 총 **398,710개**의 판매 수량을 기록했습니다. 이 중 'SK_Hyalucica_Waterfit_Sun_Serum_50ml' 제품이 **191,574개**로 압도적인 판매량을 보이며 전체 판매량의 약 48%를 차지했습"
+  },
+  {
+    "id": "PR-147",
+    "query": "말레이시아 Ampoule 수량 2024년",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 24.9,
+    "answer_len": 2170,
+    "answer_preview": "### 📊 말레이시아 2024년 Ampoule 제품별 판매 수량 분석  #### 요약  말레이시아에서 2024년 한 해 동안 판매된 Ampoule 제품 중 프리뷰에 포함된 상위 20개 제품의 총 판매 수량은 **239,822개**입니다. 이 중 **SK_Centella_Ampoule_30ml**가 **52,688개**로 가장 많이 판매되며 Ampoule 제"
+  },
+  {
+    "id": "PR-148",
+    "query": "싱가포르 크림 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 16.2,
+    "answer_len": 1900,
+    "answer_preview": "### 📊 싱가포르 크림 제품 판매 수량 분석 (2019년 1월 1일 이후)  #### 요약  2019년 1월 1일부터 현재까지 싱가포르에서 판매된 SK 및 CL 브랜드의 크림 제품 총 판매 수량은 **115,128개**입니다. 이 중 'SK_Centella_Soothing_Cream_75ml' 제품이 **30,416개**로 가장 많이 판매되어 전체 판매량"
+  },
+  {
+    "id": "PR-149",
+    "query": "호주 센텔라 앰플 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 44.5,
+    "answer_len": 1442,
+    "answer_preview": "### 📊 호주 센텔라 앰플 제품군 판매 수량 분석 (2019년 1월 1일 ~ 현재)  #### 요약  2019년 1월 1일부터 현재(2026년 3월 6일)까지 호주 시장에서 SK 브랜드의 센텔라 앰플 관련 제품은 총 **439,888개**가 판매되었습니다. 이 중 'SK_Centella_Ampoule_55ml' 제품이 **135,513개**로 가장 높은 "
+  },
+  {
+    "id": "PR-150",
+    "query": "한국 선크림 수량 2025년",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 28.7,
+    "answer_len": 2073,
+    "answer_preview": "### 📊 2025년 한국 SK 및 CL 브랜드 선크림 제품별 판매 수량 분석  #### 요약  2025년 한국 시장에서 SK 및 CL 브랜드의 선크림 제품 총 판매 수량은 **584,478**개로 집계되었습니다. 이 중 'SK_Hyalucica_Waterfit_Sun_Serum_50ml' 제품이 **236,638**개 판매되며 가장 높은 판매량을 기록했습"
+  },
+  {
+    "id": "PR-151",
+    "query": "중국 제품 수량 TOP 5",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 17.4,
+    "answer_len": 1127,
+    "answer_preview": "### 📊 중국 내 SK, CL 브랜드 제품 수량 TOP 5 분석  #### 요약  중국 시장에서 SK 및 CL 브랜드 제품 중 **SK_Centella_Travel_Kit**이 총 **20,106개** 판매되며 가장 높은 판매 수량을 기록했습니다. 상위 5개 제품 모두 SK 브랜드의 센텔라 라인 제품으로, 특히 앰플 제품들이 강세를 보이며 중국 소비자들에"
+  },
+  {
+    "id": "PR-152",
+    "query": "대만 제품 수량 TOP 5",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 20.3,
+    "answer_len": 1233,
+    "answer_preview": "### 📊 대만 SK/CL 브랜드 제품 수량 TOP 5 분석  #### 요약  대만 시장에서 SK 및 CL 브랜드 제품 중 가장 높은 판매 수량을 기록한 제품은 **Sachet**으로, 총 **131,540개**가 판매되었습니다. 이는 2위 제품인 SK_Centella_Ampoule_100ml(45,898개)보다 약 2.8배 높은 수치로, Sachet 제품"
+  },
+  {
+    "id": "PR-153",
+    "query": "캐나다 제품 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 44.5,
+    "answer_len": 1545,
+    "answer_preview": "### 📊 캐나다 SK 및 CL 브랜드 제품별 총 판매 수량 분석 (2019년 1월 1일 이후)  #### 요약  2019년 1월 1일부터 현재(2026년 3월 6일)까지 캐나다에서 판매된 SK 및 CL 브랜드 제품의 총 수량은 **2,172,087개**입니다. 이 기간 동안 총 111개의 고유 제품이 판매되었으며, 'Sachet' 제품이 **352,510"
+  },
+  {
+    "id": "PR-154",
+    "query": "독일 제품 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 40.7,
+    "answer_len": 1951,
+    "answer_preview": "### 📊 독일 제품별 총 판매 수량 분석 (2019년 1월 1일 ~ 2026년 3월 6일)  #### 요약  2019년 1월 1일부터 2026년 3월 6일까지 독일 시장에서 'SK' 및 'CL' 브랜드의 제품들은 **총 1,806,169개**의 판매 수량을 기록했습니다. 이 기간 동안 총 **107개**의 고유 제품이 판매되었으며, 가장 많이 판매된 제품"
+  },
+  {
+    "id": "PR-155",
+    "query": "프랑스 제품 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 38.4,
+    "answer_len": 2035,
+    "answer_preview": "### 📊 프랑스 SK/CL 브랜드 제품별 총 판매 수량 분석  #### 요약  2019년 1월 1일부터 현재(2026년 3월 6일)까지 프랑스 시장에서 SK 및 CL 브랜드 제품의 총 판매 수량은 **1,178,517개**이며, 총 **115개**의 고유 제품이 판매되었습니다. 이 중 'Sachet' 제품이 **322,547개**로 가장 많이 판매되었으며"
+  },
+  {
+    "id": "PR-156",
+    "query": "러시아 제품 수량 2024년",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 17.9,
+    "answer_len": 459,
+    "answer_preview": "### 📊 2024년 러시아 SK 및 CL 브랜드 제품 수량  #### 요약  2024년 러시아에서 SK 및 CL 브랜드 제품의 총 판매 수량은 **265,883개**입니다. 이 수치는 특정 브랜드(SK, CL)에 한정된 결과입니다.  #### 상세 데이터  *(단일 수치이므로 상세 데이터 섹션은 생략합니다.)*  #### 분석 및 인사이트  *   202"
+  },
+  {
+    "id": "PR-157",
+    "query": "인도네시아 Centella 라인 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 32.4,
+    "answer_len": 1461,
+    "answer_preview": "### 📊 인도네시아 Centella 라인 제품별 판매 수량 분석  #### 요약  인도네시아 시장에서 Centella 라인 제품의 판매 수량 분석 결과, 2019년 1월 1일부터 2026년 3월 6일까지 총 33개의 고유 제품이 판매되었습니다. 이 중 'SK_Centella_Light_Cleansing_Oil_200ml' 제품이 **1,024,764개**"
+  },
+  {
+    "id": "PR-158",
+    "query": "태국 Suncare 라인 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 32.5,
+    "answer_len": 1185,
+    "answer_preview": "### 📊 태국 Suncare 라인 제품별 총 수량 현황  #### 요약  태국 Suncare 라인의 총 판매 수량은 **170,879개**입니다. 이 중 'SK_Hyalucica_Waterfit_Sun_Serum_50ml' 제품이 **107,600개**로 전체 판매량의 약 63%를 차지하며 가장 높은 판매량을 기록했습니다.  #### 상세 데이터  | 제"
+  },
+  {
+    "id": "PR-159",
+    "query": "미국 Hyalu_Teca 라인 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 31.0,
+    "answer_len": 1002,
+    "answer_preview": "### 📊 미국 Hyalu_Teca 라인 제품별 판매 수량  #### 요약  미국 시장에서 Hyalu_Teca 라인의 제품별 판매 수량을 분석한 결과, 'SK_Hyalu_Teca_Glass_Skin_Milk_210ml'와 'SK_Hyalu_Teca_Firming_Cream_50ml'가 각각 **10개**로 가장 높은 판매량을 기록했습니다. 이어서 'SK_H"
+  },
+  {
+    "id": "PR-160",
+    "query": "일본 Centella_Teca 라인 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 46.8,
+    "answer_len": 897,
+    "answer_preview": "### 📊 일본 Centella_Teca 라인 제품별 판매 수량  #### 요약  일본 Centella_Teca 라인의 총 판매 수량은 **71,778개**이며, 이 중 'SK_Centella_Teca_Ampoule_50ml' 제품이 **38,823개**로 가장 높은 판매량을 기록했습니다.  #### 상세 데이터 | 제품명 | 총 수량 | |:---|---"
+  },
+  {
+    "id": "PR-161",
+    "query": "2025년 총 판매 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 14.5,
+    "answer_len": 369,
+    "answer_preview": "### 📊 2025년 총 판매 수량 분석  #### 요약  2025년 한 해 동안 SKIN1004의 총 판매 수량은 **95,656,205개**로 집계되었습니다.  #### 분석 및 인사이트  *   2025년 총 판매 수량은 SKIN1004의 모든 제품에 대한 연간 판매량을 합산한 결과입니다. *   이 수치는 전년 대비 성장률 분석, 시장 점유율 평가,"
+  },
+  {
+    "id": "PR-162",
+    "query": "2024년 총 판매 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 14.5,
+    "answer_len": 369,
+    "answer_preview": "### 📊 2024년 총 판매 수량  #### 요약  2024년 한 해 동안의 총 판매 수량은 **49,920,691개**로 집계되었습니다.  #### 분석 및 인사이트  *   2024년 전체 판매 수량은 약 5천만 개에 육박하는 높은 수치를 기록하며, SKIN1004 제품에 대한 견고한 수요를 입증했습니다. *   이는 시장에서의 강력한 입지와 고객 충"
+  },
+  {
+    "id": "PR-163",
+    "query": "월별 총 판매 수량 추이 2025년",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 49.7,
+    "answer_len": 1248,
+    "answer_preview": "### 📊 2025년 월별 총 판매 수량 추이 분석  #### 요약  2025년 총 판매 수량은 **95,756,605**개로 집계되었습니다. 월별 판매량은 **1월 5,487,818개**로 가장 낮았으며, **11월 9,932,807개**로 연중 최고치를 기록하며 큰 폭의 변동성을 보였습니다. 전반적으로 상반기에는 증가 추세를 보이다가 하반기에는 변동성이"
+  },
+  {
+    "id": "PR-164",
+    "query": "월별 총 판매 수량 추이 2024년",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 54.8,
+    "answer_len": 1220,
+    "answer_preview": "### 📊 2024년 월별 총 판매 수량 추이 분석  #### 요약  2024년 총 판매 수량은 **49,990,691개**를 기록했습니다. 월별 판매 수량은 연초에 낮은 수준을 보이다가 점차 증가하는 추세를 보였으며, 특히 **11월에 6,360,713개로 연중 최고치**를 달성했습니다. 반면, **2월은 1,752,809개로 가장 낮은 판매 수량**을 "
+  },
+  {
+    "id": "PR-165",
+    "query": "2025년 수량 가장 높은 달",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 55.0,
+    "answer_len": 1308,
+    "answer_preview": "### 📊 2025년 월별 총 수량 현황 (SK, CL 브랜드)  #### 요약  2025년 한 해 동안 SK 및 CL 브랜드의 월별 총 수량 분석 결과, **2025년 11월**이 총 **10,175,278개**로 가장 높은 수량을 기록했습니다. 이는 2025년 중 유일하게 1천만 개 이상의 수량을 달성한 달입니다.  #### 상세 데이터 | 월     "
+  },
+  {
+    "id": "PR-166",
+    "query": "2024년 수량 가장 높은 국가",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 54.1,
+    "answer_len": 692,
+    "answer_preview": "### 📊 2024년 SK 및 CL 브랜드 수량 기준 최고 국가  #### 요약  2024년 SK 및 CL 브랜드의 총 수량 기준으로 가장 높은 실적을 기록한 국가는 **글로벌_플랫폼**이며, 총 **10,227,922개**의 수량을 달성했습니다. 이 수치는 특정 국가를 넘어선 광범위한 판매 채널의 중요성을 보여줍니다.  #### 상세 데이터 | 국가 | "
+  },
+  {
+    "id": "PR-167",
+    "query": "2025년 수량 가장 높은 플랫폼",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 24.5,
+    "answer_len": 538,
+    "answer_preview": "### 📊 2025년 수량 기준 최고 성과 플랫폼 분석  #### 요약  2025년 한 해 동안 가장 높은 판매 수량을 기록한 플랫폼은 **SK_B2B_Overseas**로 나타났습니다. 해당 플랫폼은 총 **45,743,322개**의 판매 수량을 달성하며 전체 플랫폼 중 1위를 차지했습니다.  #### 분석 및 인사이트  *   `SK_B2B_Overse"
+  },
+  {
+    "id": "PR-168",
+    "query": "2024년 수량 가장 높은 카테고리",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 29.9,
+    "answer_len": 1253,
+    "answer_preview": "### 📊 2024년 SK, CL 브랜드의 카테고리별 판매 수량 현황  #### 요약  2024년 SK 및 CL 브랜드의 판매 수량 분석 결과, **Others** 카테고리가 총 **15,295,130개**로 가장 높은 판매 수량을 기록했습니다. 이는 2위인 Ampoule 카테고리(9,680,842개)보다 약 58% 높은 수치이며, 전체 카테고리 중 압도적"
+  },
+  {
+    "id": "PR-169",
+    "query": "인도네시아 수량 비중",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 49.2,
+    "answer_len": 591,
+    "answer_preview": "### 📊 인도네시아 총 수량 및 전체 비중 분석  #### 요약  인도네시아의 총 수량은 **14,666,450개**이며, 전체 브랜드(SK, CL)의 총 수량인 187,939,265개 대비 **약 7.80%**의 비중을 차지합니다.  #### 상세 데이터 | 항목 | 값 | |:---|---:| | 인도네시아 총 수량 | 14,666,450 개 | | "
+  },
+  {
+    "id": "PR-170",
+    "query": "쇼피 수량 비중 2025년",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 22.6,
+    "answer_len": 491,
+    "answer_preview": "### 📊 2025년 쇼피(Shopee) 판매 수량 비중 분석  #### 요약  2025년 전체 판매 수량 중 쇼피(Shopee) 채널이 차지하는 비중은 **2.94%**로 나타났습니다. 이는 쇼피 채널이 전체 판매량에서 상대적으로 작은 부분을 담당하고 있음을 보여줍니다.  #### 분석 및 인사이트  *   2025년 쇼피 채널의 판매 수량 비중은 전체 "
+  },
+  {
+    "id": "PR-171",
+    "query": "Centella 라인 수량 비중",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 23.8,
+    "answer_len": 724,
+    "answer_preview": "### 📊 Centella 라인 수량 비중 분석  #### 요약  조회된 기간 동안 Centella 라인은 전체 판매 수량의 약 **33.53%**를 차지하며, 총 **64,589,711개**가 판매되었습니다. 이는 전체 판매 수량 192,657,910개 중 상당한 비중을 차지하고 있음을 보여줍니다.  #### 상세 데이터 | 구분 | 수량 (개) | 비중"
+  },
+  {
+    "id": "PR-172",
+    "query": "Ampoule 카테고리 수량 비중",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 32.4,
+    "answer_len": 737,
+    "answer_preview": "### 📊 SK 및 CL 브랜드의 앰플 카테고리 수량 비중 분석  #### 요약  2019년 1월 1일 이후 SK 및 CL 브랜드의 전체 제품 판매 수량 중 앰플 카테고리가 차지하는 비중은 **21.81%**로 나타났습니다. 이는 해당 브랜드의 전체 판매량에서 앰플 제품군이 상당한 부분을 차지하고 있음을 의미합니다.  #### 분석 및 인사이트  *   *"
+  },
+  {
+    "id": "PR-173",
+    "query": "인도네시아 전년 대비 수량 변화",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 52.9,
+    "answer_len": 857,
+    "answer_preview": "### 📊 인도네시아 전년 대비 판매 수량 변화 분석  #### 요약  ⚠️ 2026년 데이터는 현재 3월 6일까지의 집계입니다. 인도네시아의 2026년 현재까지(3월 6일 기준) 총 판매 수량은 **1,652,821개**로 집계되었습니다. 이는 2025년 총 판매 수량 **6,879,776개**와 비교했을 때 **약 76.0% 감소**한 수치입니다.  #"
+  },
+  {
+    "id": "PR-174",
+    "query": "태국 전년 대비 수량 비교",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 22.8,
+    "answer_len": 434,
+    "answer_preview": "안녕하세요. 요청하신 **태국 전년 대비 수량 비교** 데이터를 조회하지 못했습니다.  좀 더 정확한 결과를 위해 **조건을 구체적으로** 지정해 주시면 다시 조회해 드리겠습니다. 아래 항목들을 포함해 주시면 도움이 됩니다.  > **구체화하면 좋은 항목:** 비교 기간(연도/월), 채널(온라인·오프라인·특정 플랫폼), 제품명 또는 제품 카테고리  --- "
+  },
+  {
+    "id": "PR-175",
+    "query": "미국 2024년 vs 2025년 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 17.1,
+    "answer_len": 694,
+    "answer_preview": "### 📊 미국 2024년 vs 2025년 총 수량 비교  #### 요약  2025년 미국 시장의 총 수량은 2024년 대비 크게 증가했습니다. 2024년에는 **3,523,497개**의 수량을 기록했으나, 2025년에는 **7,609,546개**로 약 116% 증가하며 두 배 이상의 성장률을 보였습니다.  #### 상세 데이터  | 연도 | 총 수량 | "
+  },
+  {
+    "id": "PR-176",
+    "query": "일본 전년 대비 수량 성장률",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 35.5,
+    "answer_len": 616,
+    "answer_preview": "### 📊 일본 전년 대비 수량 성장률 분석  #### 요약  ⚠️ 2026년은 현재 1월 1일부터 3월 6일까지의 데이터만 존재합니다 (오늘: 2026년 03월 06일). 일본의 2026년 전년 대비 수량 성장률은 **-45.22%**를 기록했습니다. 이는 2025년 동기간 대비 수량이 크게 감소했음을 나타냅니다.  #### 분석 및 인사이트  *   *"
+  },
+  {
+    "id": "PR-177",
+    "query": "베트남 전년 대비 수량 변화",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 27.5,
+    "answer_len": 774,
+    "answer_preview": "### 📊 베트남 SK, CL 브랜드의 전년 대비 총 수량 변화 분석  #### 요약  2025년 베트남 시장에서 SK 및 CL 브랜드의 총 판매 수량은 **1,595,806개**를 기록하며, 전년(2024년) 대비 **27.2% 감소**했습니다. 2024년 총 판매 수량은 **2,191,230개**였습니다.  #### 상세 데이터  | 판매 연도 | 총 "
+  },
+  {
+    "id": "PR-178",
+    "query": "센텔라 앰플 전년 대비 수량 비교",
+    "table": "product",
+    "category": "product",
+    "status": "WARN",
+    "time": 79.8,
+    "answer_len": 1374,
+    "answer_preview": "### 📊 센텔라 앰플 제품군 전년 대비 수량 비교 분석  #### 요약  센텔라 앰플 제품군은 **2021년**에 총 판매 수량 **1,570,743개**를 기록하며 전년 대비 **264.42%**의 가장 높은 성장률을 보였습니다. 그러나 2022년에는 전년 대비 **19.90% 감소**한 **1,256,187개**를 기록하며 성장세가 꺾였습니다. ⚠️ "
+  },
+  {
+    "id": "PR-179",
+    "query": "선크림 전년 대비 수량 변화",
+    "table": "product",
+    "category": "product",
+    "status": "WARN",
+    "time": 75.3,
+    "answer_len": 771,
+    "answer_preview": "### 📊 선크림 전년 대비 판매 수량 변화 분석  #### 요약  2026년 3월 6일 기준, 선크림 판매 수량은 전년 동기 대비 **41.07% 증가**하며 매우 긍정적인 성장세를 보였습니다. 2025년 동기 **1,422,636개**에서 2026년 동기 **2,006,847개**로 **584,211개** 증가했습니다.  #### 상세 데이터 | 판매 "
+  },
+  {
+    "id": "PR-180",
+    "query": "히알루시카 크림 전년 대비 수량",
+    "table": "product",
+    "category": "product",
+    "status": "WARN",
+    "time": 77.6,
+    "answer_len": 1733,
+    "answer_preview": "### 📊 히알루시카 크림 전년 동기간 대비 판매 수량 분석 (2026년 3월 6일 기준)  #### 요약  2026년 3월 6일 기준으로 히알루시카 크림 제품군의 총 판매 수량은 **229,381개**를 기록하며, 전년 동기간(2025년 3월 6일 기준) **66,584개** 대비 **약 244.5% 증가**한 것으로 나타났습니다. 특히 `SK_Hyalu"
+  },
+  {
+    "id": "PR-181",
+    "query": "인도네시아 쇼피 센텔라 앰플 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 25.0,
+    "answer_len": 1332,
+    "answer_preview": "### 📊 인도네시아 쇼피 센텔라 앰플 제품별 총 판매 수량 분석  #### 요약  인도네시아 쇼피 채널에서 센텔라 앰플 관련 제품의 총 판매 수량은 **SK_Centella_Ampoule_100ml** 제품이 **325,796개**로 가장 높은 판매량을 기록했습니다. 전체 센텔라 앰플 관련 제품 중 상위 3개 제품이 전체 판매량의 약 70% 이상을 차지하"
+  },
+  {
+    "id": "PR-182",
+    "query": "태국 라자다 선크림 수량 2024년",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 43.5,
+    "answer_len": 794,
+    "answer_preview": "해당 조건으로 조회된 데이터가 없습니다.  ---  **SQL 필터 조건 분석:**  가장 큰 문제는 `EXTRACT(YEAR FROM Date) = 2024` 조건입니다. 현재 2024년이므로, 2024년 전체 또는 부분 판매 데이터가 아직 집계되지 않았거나 데이터베이스에 반영되지 않았을 가능성이 큽니다. 대부분의 판매 데이터베이스는 과거 데이터를 주로 "
+  },
+  {
+    "id": "PR-183",
+    "query": "베트남 틱톡 센텔라 앰플 수량 2025년",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 33.7,
+    "answer_len": 338,
+    "answer_preview": "요청하신 조건에 해당하는 데이터가 존재하지 않습니다.  SQL에서 사용된 필터 조건 중 `EXTRACT(YEAR FROM Date) = 2025`가 문제의 원인으로 보입니다. 2025년은 미래 시점으로, 현재 시점의 판매 데이터베이스에는 해당 연도의 실제 판매 데이터가 존재하지 않을 가능성이 높습니다.  비슷한 데이터를 조회할 수 있는 대안 질문은 다음과 "
+  },
+  {
+    "id": "PR-184",
+    "query": "미국 아마존 크림 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 53.4,
+    "answer_len": 1434,
+    "answer_preview": "### 📊 미국 아마존 크림 제품별 총 판매 수량 분석  #### 요약  미국 아마존에서 판매된 크림 제품 중 'SK_Centella_Soothing_Cream_75ml'가 **20,158개**로 가장 높은 판매 수량을 기록했습니다. 총 8가지 크림 제품이 조회되었으며, 전체 크림 제품의 총 판매 수량은 **49,562개**입니다. 상위 3개 제품이 전체 "
+  },
+  {
+    "id": "PR-185",
+    "query": "일본 라쿠텐 앰플 수량 2024년",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 25.8,
+    "answer_len": 1449,
+    "answer_preview": "### 📊 2024년 일본 라쿠텐 앰플 제품별 판매 수량 분석  #### 요약  2024년 일본 라쿠텐 채널에서 판매된 앰플 제품의 총 판매 수량은 **8,066개**입니다. 이 중 'SK_Centella_Ampoule_100ml'이 **3,025개**로 가장 많이 판매되었으며, 전체 앰플 판매량의 약 37.5%를 차지했습니다.  #### 상세 데이터 | "
+  },
+  {
+    "id": "PR-186",
+    "query": "필리핀 쇼피 선크림 수량 2025년",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 36.0,
+    "answer_len": 608,
+    "answer_preview": "2025년 데이터는 아직 집계되지 않아 해당 조건의 데이터가 없습니다.  SQL에서 사용된 필터 조건 중 `EXTRACT(YEAR FROM Date) = 2025`가 문제의 원인입니다. 2025년은 미래 시점으로, 현재 시점에서는 해당 연도의 판매 데이터가 존재하지 않습니다.  다른 조건들은 다음과 같습니다: *   **국가**: `Country = '필리"
+  },
+  {
+    "id": "PR-187",
+    "query": "말레이시아 쇼피 제품 수량 순위",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 51.6,
+    "answer_len": 2098,
+    "answer_preview": "### 📊 말레이시아 쇼피 제품별 누적 판매 수량 순위 분석  #### 요약  2019년 1월 1일부터 현재(2026년 3월 6일)까지 말레이시아 쇼피에서 가장 많이 판매된 제품은 **SK_Centella_Ampoule_100ml**로 총 **15,067**개가 판매되었습니다. 상위 3개 제품 모두 SK 브랜드의 센텔라 라인 제품이 차지하며, 특히 앰플 제"
+  },
+  {
+    "id": "PR-188",
+    "query": "싱가포르 라자다 제품 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 33.8,
+    "answer_len": 461,
+    "answer_preview": "제시된 조건으로는 싱가포르 라자다 제품 수량 데이터가 조회되지 않습니다.  SQL 쿼리에서 `Mall_Classification LIKE '%Lazada%'` 조건이 문제일 가능성이 높습니다. `Mall_Classification` 컬럼에 'Lazada'라는 문자열이 포함된 채널명이 존재하지 않거나, 대소문자 문제 또는 다른 이름으로 저장되어 있을 수 있습"
+  },
+  {
+    "id": "PR-189",
+    "query": "인도네시아 라자다 센텔라 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 55.5,
+    "answer_len": 1971,
+    "answer_preview": "### 📊 인도네시아 라자다 센텔라 제품별 판매 수량 분석 (2019년 1월 1일 이후)  #### 요약  2019년 1월 1일부터 현재까지 인도네시아 라자다 채널에서 판매된 센텔라 제품 중, 'SK_Centella_Ampoule_100ml'이 **3,985개**로 가장 높은 판매량을 기록했습니다. 이어서 'SK_Centella_Ampoule_55ml'와 "
+  },
+  {
+    "id": "PR-190",
+    "query": "태국 틱톡 제품 수량 TOP 5",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 58.2,
+    "answer_len": 625,
+    "answer_preview": "해당 조건에 맞는 데이터가 존재하지 않습니다.  SQL 쿼리에서 사용된 필터 조건 중 `Mall_Classification LIKE '%Tiktok%'`이 가장 유력한 문제입니다. `Mall_Classification` 컬럼에 'Tiktok'이라는 문자열을 포함하는 값이 없거나, 틱톡 채널이 다른 이름으로 등록되어 있을 수 있습니다. `Mall_Classi"
+  },
+  {
+    "id": "PR-191",
+    "query": "인도네시아 Ampoule 카테고리 수량 2025년",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 56.4,
+    "answer_len": 2568,
+    "answer_preview": "### 📊 2025년 인도네시아 Ampoule 카테고리 제품별 판매 수량 분석  #### 요약  2025년 한 해 동안 인도네시아에서 판매된 Ampoule 카테고리 제품의 총 판매 수량은 **2,298,794개**였습니다. 이 중 'SK_Tone_Brightening_Capsule_Ampoule_100ml' 제품이 **445,398개**로 가장 많이 판매되"
+  },
+  {
+    "id": "PR-192",
+    "query": "태국 Suncare 카테고리 수량 2024년",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 34.0,
+    "answer_len": 491,
+    "answer_preview": "### 📊 태국 Suncare 카테고리 2024년 판매 수량 분석 (SK, CL 브랜드 한정)  #### 요약  2024년 태국 Suncare 카테고리의 총 판매 수량은 **31,550개**로 집계되었습니다. 이 수치는 SK 및 CL 브랜드에 대한 데이터만을 기준으로 합니다.  #### 분석 및 인사이트  *   2024년 태국 Suncare 카테고리에서 "
+  },
+  {
+    "id": "PR-193",
+    "query": "미국 Cream 카테고리 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 34.0,
+    "answer_len": 606,
+    "answer_preview": "### 📊 미국 Cream 카테고리 총 판매 수량 분석 (SK, CL 브랜드)  #### 요약  2019년 1월 1일부터 현재까지 SK 및 CL 브랜드의 미국 Cream 카테고리 총 판매 수량은 **2,059,930개**로 집계되었습니다. 이는 해당 기간 동안 미국 시장에서 두 브랜드의 Cream 제품이 상당한 판매량을 기록했음을 보여줍니다.  #### 분"
+  },
+  {
+    "id": "PR-194",
+    "query": "일본 Cleanser 카테고리 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 38.9,
+    "answer_len": 451,
+    "answer_preview": "### 📊 일본 Cleanser 카테고리 총 판매 수량 (SK, CL 브랜드)  #### 요약  2019년 1월 1일부터 현재까지 일본 시장에서 Cleanser 카테고리의 총 판매 수량은 **65,736개**입니다. 이 수치는 SK 및 CL 브랜드에 대한 데이터만을 포함합니다.  #### 분석 및 인사이트  *   해당 수량은 2019년 1월 1일부터 20"
+  },
+  {
+    "id": "PR-195",
+    "query": "베트남 SET 카테고리 수량 2025년",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 41.2,
+    "answer_len": 535,
+    "answer_preview": "### 📊 2025년 베트남 SET 카테고리 제품 수량 조회 결과  #### 요약  2025년 베트남 시장에서 SK 및 CL 브랜드의 SET 카테고리 제품에 대한 총 수량은 **조회된 데이터가 없습니다.** 이는 해당 조건에 부합하는 판매 기록이 없음을 의미합니다.  #### 상세 데이터  (단일 합계 결과이므로 상세 데이터 표는 생략합니다.)  #### "
+  },
+  {
+    "id": "PR-196",
+    "query": "인도네시아 카테고리별 수량 순위",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 58.4,
+    "answer_len": 1065,
+    "answer_preview": "### 📊 인도네시아 SK/CL 브랜드 카테고리별 누적 수량 순위 (2019년 1월 1일 이후)  #### 요약  인도네시아에서 2019년 1월 1일 이후 SK 및 CL 브랜드의 누적 판매 수량 기준, **앰플(Ampoule)** 카테고리가 **4,993,027개**로 압도적인 1위를 차지했습니다. 선케어(Suncare)와 크림(Cream) 카테고리가 그 "
+  },
+  {
+    "id": "PR-197",
+    "query": "태국 카테고리별 수량 비교 2024년",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 41.5,
+    "answer_len": 1039,
+    "answer_preview": "### 📊 2024년 태국 시장 SK 및 CL 브랜드 카테고리별 판매 수량 비교  #### 요약  2024년 태국 시장에서 SK 및 CL 브랜드의 카테고리별 판매 수량을 분석한 결과, **앰플(Ampoule)**이 **320,553개**로 압도적인 1위를 차지했습니다. 이는 전체 판매 수량 **585,678개**의 절반 이상을 차지하는 수치입니다. 팩(Pa"
+  },
+  {
+    "id": "PR-198",
+    "query": "미국 카테고리별 수량 2025년",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 57.1,
+    "answer_len": 1194,
+    "answer_preview": "### 📊 2025년 미국 내 SK, CL 브랜드 카테고리별 판매 수량 분석  #### 요약  2025년 미국 시장에서 SK 및 CL 브랜드의 카테고리별 총 판매 수량은 **앰플(Ampoule)**이 **2,297,553개**로 압도적인 1위를 차지했습니다. 크림(Cream)과 팩(Pack)이 그 뒤를 이어 주요 판매 카테고리로 나타났으며, 상위 3개 카테"
+  },
+  {
+    "id": "PR-199",
+    "query": "일본 카테고리별 수량 순위",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 47.4,
+    "answer_len": 1281,
+    "answer_preview": "### 📊 일본 카테고리별 총 판매 수량 순위  #### 요약  일본 시장에서 2019년 1월 1일부터 현재(2026년 3월 6일)까지의 판매 데이터를 분석한 결과, **앰플(Ampoule) 카테고리**가 **1,439,499개**로 압도적인 판매 수량을 기록하며 1위를 차지했습니다. 팩(Pack) 카테고리가 955,872개로 그 뒤를 이어 두 카테고리가 "
+  },
+  {
+    "id": "PR-200",
+    "query": "전체 국가 카테고리별 수량 비교",
+    "table": "product",
+    "category": "product",
+    "status": "WARN",
+    "time": 63.4,
+    "answer_len": 1883,
+    "answer_preview": "### 📊 국가 및 카테고리별 총 수량 비교 분석 (SK, CL 브랜드 대상)  #### 요약  2019년 1월 1일부터 현재까지 SK 및 CL 브랜드의 전체 국가 카테고리별 총 판매 수량은 **192,657,910개**로 집계되었습니다. 이 중 가장 높은 판매 수량을 기록한 조합은 캄보디아의 Others 카테고리로 **8,383,942개**를 기록했습니다"
+  },
+  {
+    "id": "PR-201",
+    "query": "인도네시아 B2B 센텔라 앰플 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 38.1,
+    "answer_len": 1403,
+    "answer_preview": "### 📊 인도네시아 B2B 센텔라 앰플 제품별 총 판매 수량 분석  #### 요약  인도네시아 B2B 채널에서 센텔라 앰플 관련 제품의 총 판매 수량은 **817,807개**로 집계되었습니다. 이 중 'SK_Centella_Ampoule_100ml' 제품이 **220,750개**로 가장 높은 판매량을 기록했으며, 'SK_Centella_Ampoule_30"
+  },
+  {
+    "id": "PR-202",
+    "query": "태국 B2C 선크림 수량 2025년",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 28.2,
+    "answer_len": 338,
+    "answer_preview": "2025년 데이터는 아직 존재하지 않아 조회 결과가 없습니다.  SQL 쿼리에서 `EXTRACT(YEAR FROM Date) = 2025` 조건으로 인해 0행이 반환되었습니다. 현재 시점에서는 미래인 2025년의 판매 데이터가 존재하지 않기 때문입니다. `Country = '태국'`과 `Sales_Type = 'B2C'` 조건은 유효한 값입니다.  비슷한 "
+  },
+  {
+    "id": "PR-203",
+    "query": "미국 B2B 크림 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 47.3,
+    "answer_len": 2026,
+    "answer_preview": "### 📊 미국 B2B 크림 제품별 총 판매 수량 분석 (2019년 1월 1일 ~ 2026년 3월 6일)  #### 요약  2019년 1월 1일부터 2026년 3월 6일까지 미국 B2B 채널에서 판매된 크림 제품의 총 수량은 **1,691,080개**입니다. 이 중 'SK_Hyalucica_Moisture_Cream_75ml' 제품이 **417,385개**"
+  },
+  {
+    "id": "PR-204",
+    "query": "일본 B2C 앰플 수량 2024년",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 51.7,
+    "answer_len": 1907,
+    "answer_preview": "### 📊 2024년 일본 B2C 앰플 판매 수량 분석  #### 요약  2024년 일본 B2C 시장에서 앰플 제품의 총 판매 수량은 **397,715**개로 집계되었습니다. 이 중 'SK_Centella_Ampoule_100ml' 제품이 **138,866**개로 가장 높은 판매량을 기록하며 전체 앰플 판매를 견인했습니다.  #### 상세 데이터  2024"
+  },
+  {
+    "id": "PR-205",
+    "query": "B2B 인도네시아 제품 수량 TOP 10",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 38.0,
+    "answer_len": 1612,
+    "answer_preview": "### 📊 인도네시아 B2B 채널 제품별 판매 수량 TOP 10 분석 (2019년 1월 1일 이후)  #### 요약  2019년 1월 1일부터 2026년 3월 6일 현재까지 인도네시아 B2B 채널에서 SK 및 CL 브랜드 제품 중 **SK_Centella_Toning_Toner_210ml**이(가) 총 **221,655개** 판매되며 가장 높은 수량을 기록"
+  },
+  {
+    "id": "PR-206",
+    "query": "B2C 태국 제품 수량 TOP 5",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 41.5,
+    "answer_len": 405,
+    "answer_preview": "해당 조건에 맞는 데이터가 존재하지 않습니다.  SQL 쿼리에서 `Brand IN ('SK', 'CL')` 조건이 추가되었는데, 사용자님의 원래 질문에는 브랜드 조건이 없었으므로, 이 브랜드들이 태국 B2C 채널에서 판매 실적이 없거나 브랜드 코드가 일치하지 않을 수 있습니다. 또한, '2019-01-01' 이후의 데이터만 조회하도록 설정된 날짜 조건이 너"
+  },
+  {
+    "id": "PR-207",
+    "query": "B2B 라인별 수량 비교",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 53.3,
+    "answer_len": 2004,
+    "answer_preview": "### 📊 B2B 라인별 총 판매 수량 비교 분석 (2019년 1월 1일 이후)  #### 요약  2019년 1월 1일부터 현재(2026년 3월 6일)까지의 B2B 판매 데이터를 분석한 결과, 'Others' 라인이 **56,548,027개**로 가장 높은 판매 수량을 기록했습니다. 이어서 'Centella' 라인이 **52,806,794개**로 2위를 차"
+  },
+  {
+    "id": "PR-208",
+    "query": "B2C 카테고리별 수량 비교 2025년",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 39.7,
+    "answer_len": 1327,
+    "answer_preview": "### 📊 2025년 B2C 카테고리별 판매 수량 비교 분석 (SK, CL 브랜드 기준)  #### 요약  2025년 B2C 매출에서 가장 많이 판매된 카테고리는 **Ampoule**로, 총 **2,799,415개**가 판매되었습니다. 전체 B2C 판매 수량은 **9,192,968개**를 기록했으며, Ampoule, Suncare, SET 카테고리가 전체 "
+  },
+  {
+    "id": "PR-209",
+    "query": "인도네시아 B2B vs B2C 수량 비교",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 34.8,
+    "answer_len": 836,
+    "answer_preview": "### 📊 인도네시아 B2B vs B2C 판매 수량 비교 분석  #### 요약  인도네시아에서 2019년 1월 1일부터 현재(2026년 3월 6일)까지의 판매 데이터를 분석한 결과, B2C 판매 수량이 B2B 판매 수량보다 훨씬 높은 것으로 나타났습니다. B2C는 총 **10,658,436개**가 판매되어 B2B의 **4,008,014개** 대비 약 2.6"
+  },
+  {
+    "id": "PR-210",
+    "query": "태국 B2B vs B2C 수량 비율",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 34.2,
+    "answer_len": 750,
+    "answer_preview": "### 📊 태국 B2B 판매 수량 분석 (B2C 데이터 부재)  #### 요약  ⚠️ 요청하신 태국 B2B vs B2C 수량 비율 분석 결과, **B2C 판매 유형에 대한 데이터가 조회되지 않았습니다.** 2019년 1월 1일 이후 태국 B2B 판매 수량은 총 **3,740,567개**로 집계되었으나, B2C 데이터 부재로 인해 두 판매 유형 간의 정확한 "
+  },
+  {
+    "id": "PR-211",
+    "query": "GM_EAST1 팀 센텔라 앰플 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 42.4,
+    "answer_len": 1207,
+    "answer_preview": "### 📊 GM_EAST1 팀 센텔라 앰플 제품별 총 판매 수량 분석  #### 요약  GM_EAST1 팀의 센텔라 앰플 관련 제품들은 2019년 1월 1일부터 현재까지 총 **205,254개**의 판매 수량을 기록했습니다. 이 중 'SK_Centella_Ampoule_100ml' 제품이 **59,380개**로 가장 높은 판매량을 보이며 전체 센텔라 앰플 "
+  },
+  {
+    "id": "PR-212",
+    "query": "GM_EAST2 팀 선크림 수량 2025년",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 58.4,
+    "answer_len": 680,
+    "answer_preview": "요청하신 조건(GM_EAST2 팀, 2025년 선크림)에 해당하는 데이터가 현재 조회되지 않습니다.  SQL 쿼리의 필터 조건들을 확인했을 때, 다음 두 가지 조건이 데이터 부재의 주요 원인일 수 있습니다.  1.  **날짜 조건 (`EXTRACT(YEAR FROM Date) = 2025`)**: 현재 2024년임을 감안할 때, 2025년의 실제 판매 데이"
+  },
+  {
+    "id": "PR-213",
+    "query": "CBT 팀 제품 수량 TOP 5",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 50.9,
+    "answer_len": 1295,
+    "answer_preview": "### 📊 CBT 팀 제품별 총 판매 수량 TOP 5  #### 요약  CBT 팀의 제품별 총 판매 수량 분석 결과, 'SK_Hyalucica_Sleeping_Pack_100ml'이 **185개**로 가장 높은 판매 수량을 기록했습니다. 상위 5개 제품 모두 SK 브랜드 제품이며, 특히 'SK_Hyalucica_Sleeping_Pack_100ml'과 'SK"
+  },
+  {
+    "id": "PR-214",
+    "query": "JBT 팀 Centella 라인 수량",
+    "table": "product",
+    "category": "product",
+    "status": "WARN",
+    "time": 71.3,
+    "answer_len": 2016,
+    "answer_preview": "### 📊 JBT 팀 Centella 라인 제품별 총 수량 분석  #### 요약  JBT 팀의 Centella 라인 제품 중 'SK_Centella_Ampoule_100ml'이 **476,325개**로 가장 높은 판매 수량을 기록했습니다. 2019년 1월 1일부터 2026년 3월 6일까지 JBT 팀의 Centella 라인에서는 총 36개 제품이 판매되었으며"
+  },
+  {
+    "id": "PR-215",
+    "query": "KBT 팀 제품 수량 2024년",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 51.9,
+    "answer_len": 1401,
+    "answer_preview": "### 📊 2024년 KBT 팀 SK/CL 브랜드 제품별 판매 수량 분석  #### 요약  2024년 KBT 팀의 SK 및 CL 브랜드 제품별 판매 수량 분석 결과, 총 69개의 제품 중 'SK_Centella_Ampoule_55ml'이 **315,010개**로 가장 높은 판매 수량을 기록했습니다. 이어서 'SK_Hyalucica_Waterfit_Sun_S"
+  },
+  {
+    "id": "PR-216",
+    "query": "GM_Ecomm 팀 카테고리별 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 35.5,
+    "answer_len": 1241,
+    "answer_preview": "### 📊 GM_Ecomm 팀 카테고리별 제품 판매 수량 현황 (SK, CL 브랜드)  #### 요약  GM_Ecomm 팀의 2019년 1월 1일부터 현재(2026년 3월 6일)까지 SK 및 CL 브랜드 제품 판매 수량을 카테고리별로 분석한 결과, **앰플(Ampoule)**이 총 **534,315개**로 가장 높은 판매량을 기록했습니다. 이어서 팩(Pac"
+  },
+  {
+    "id": "PR-217",
+    "query": "팀별 센텔라 앰플 수량 비교",
+    "table": "product",
+    "category": "product",
+    "status": "WARN",
+    "time": 60.1,
+    "answer_len": 2297,
+    "answer_preview": "### 📊 팀별 센텔라 앰플 판매 수량 비교  #### 요약  2019년 1월 1일부터 현재(2026년 3월 6일)까지 집계된 센텔라 앰플 제품의 총 판매 수량은 **26,146,364개**입니다. 이 중 **B2B1 팀**이 **8,210,963개**로 가장 많은 판매량을 기록했으며, **B2B2 팀**이 **7,030,327개**로 그 뒤를 이었습니다."
+  },
+  {
+    "id": "PR-218",
+    "query": "팀별 선크림 수량 비교 2025년",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 45.3,
+    "answer_len": 1256,
+    "answer_preview": "### 📊 2025년 팀별 선크림 판매 수량 비교 분석  #### 요약  2025년 한 해 동안의 선크림 판매량 분석 결과, **B2B1 팀**이 **3,945,609개**를 판매하며 전체 팀 중 압도적인 1위를 차지했습니다. 전체 팀의 선크림 총 판매량은 **11,237,156개**로 집계되었습니다.  #### 상세 데이터  | Team_NEW | tot"
+  },
+  {
+    "id": "PR-219",
+    "query": "담당자별 제품 수량 2025년",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 50.2,
+    "answer_len": 1048,
+    "answer_preview": "### 📊 2025년 SK, CL 브랜드 담당자별 제품 출고 수량 분석  #### 요약  2025년 한 해 동안 SK 및 CL 브랜드 제품의 담당자별 총 출고 수량을 분석한 결과, **심재권 담당자가 13,627,184개**로 가장 많은 수량을 기록했습니다. 총 33명의 담당자 중 상위 3명의 담당자가 전체 출고량의 상당 부분을 차지하며 높은 기여도를 보였"
+  },
+  {
+    "id": "PR-220",
+    "query": "인도네시아 담당자별 제품 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 24.6,
+    "answer_len": 2299,
+    "answer_preview": "### 📊 인도네시아 담당자별 제품 수량 분석 (2019년 1월 1일 이후)  #### 요약  인도네시아 시장에서 2019년 1월 1일 이후 SK 및 CL 브랜드 제품의 총 판매 수량은 **16,465,862개**입니다. 총 9명의 담당자가 149개의 고유 제품을 관리하고 있으며, 특히 **정제인 담당자**가 판매량 상위권을 압도적으로 차지하며 인도네시아 "
+  },
+  {
+    "id": "PR-221",
+    "query": "2025년 1월 인도네시아 센텔라 앰플 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 39.0,
+    "answer_len": 1311,
+    "answer_preview": "### 📊 2025년 1월 인도네시아 센텔라 앰플 제품별 판매 수량 분석  #### 요약  2025년 1월 인도네시아에서 '센텔라 앰플' 관련 제품은 총 **82,513개** 판매되었습니다. 이 중 'SK_Centella_Ampoule_Foam_125ml' 제품이 **24,568개**로 가장 높은 판매량을 기록하며 전체 판매를 주도했습니다.  #### 상세"
+  },
+  {
+    "id": "PR-222",
+    "query": "2024년 6월 태국 선크림 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 35.1,
+    "answer_len": 856,
+    "answer_preview": "### 📊 2024년 6월 태국 선크림 제품별 판매 수량 분석  #### 요약  2024년 6월 태국 시장에서 판매된 선크림 제품의 총 수량은 **2,000개**입니다. 이 중 'SK_Hyalucica_Waterfit_Sun_Serum_50ml' 제품이 **1,500개**로 가장 높은 판매량을 기록하며 전체의 75%를 차지했습니다.  #### 상세 데이터 "
+  },
+  {
+    "id": "PR-223",
+    "query": "2025년 3월 미국 크림 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 39.0,
+    "answer_len": 1139,
+    "answer_preview": "### 📊 2025년 3월 미국 크림 제품별 판매 수량 분석  #### 요약  2025년 3월 미국에서 판매된 SK 및 CL 브랜드 크림 제품의 총 수량은 **67,639개**입니다. 이 중 'SK_Hyalucica_Moisture_Cream_75ml' 제품이 **16,063개**로 가장 많이 판매되며 전체 판매량의 약 23.7%를 차지했습니다.  ####"
+  },
+  {
+    "id": "PR-224",
+    "query": "2024년 11월 일본 앰플 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 59.7,
+    "answer_len": 1763,
+    "answer_preview": "### 📊 2024년 11월 일본 앰플 제품별 판매 수량 분석  #### 요약  2024년 11월 일본 시장에서 판매된 앰플 제품의 총 수량은 **141,656개**입니다. 이 중 'SK_Centella_Ampoule_100ml' 제품이 **48,996개**로 가장 높은 판매량을 기록했으며, 이는 전체 앰플 판매량의 약 34.6%에 해당합니다.  #### "
+  },
+  {
+    "id": "PR-225",
+    "query": "2025년 5월 베트남 선케어 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 32.7,
+    "answer_len": 520,
+    "answer_preview": "### 📊 2025년 5월 베트남 선케어 판매 수량  #### 요약  2025년 5월, 베트남 시장에서 SK 및 CL 브랜드의 선케어 제품은 총 **144,335개** 판매되었습니다. 이는 해당 기간 동안 두 브랜드의 선케어 제품에 대한 수요를 보여줍니다.  #### 분석 및 인사이트  *   2025년 5월 한 달간 베트남에서 SK 및 CL 브랜드의 선케"
+  },
+  {
+    "id": "PR-226",
+    "query": "2024년 7월 필리핀 제품 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 47.4,
+    "answer_len": 2478,
+    "answer_preview": "### 📊 2024년 7월 필리핀 SK/CL 브랜드 제품별 판매 수량 분석  #### 요약  2024년 7월 필리핀에서 SK 및 CL 브랜드 제품의 판매 수량은 총 73개 제품에 걸쳐 발생했습니다. 제공된 상위 20개 제품의 판매 수량 합계는 **89,927개**이며, 이 중 'Sachet' 제품이 **25,900개**로 가장 많이 판매되었습니다. 전체 7"
+  },
+  {
+    "id": "PR-227",
+    "query": "2025년 9월 말레이시아 제품 수량",
+    "table": "product",
+    "category": "product",
+    "status": "WARN",
+    "time": 64.8,
+    "answer_len": 1562,
+    "answer_preview": "### 📊 2025년 9월 말레이시아 'SK' 및 'CL' 브랜드 제품별 판매 수량  #### 요약  2025년 9월 말레이시아에서 'SK' 및 'CL' 브랜드 제품 중 **총 78개**의 고유 제품이 판매되었습니다. 이 중 가장 높은 판매 수량을 기록한 제품은 **SK_Tone_Brightening_Capsule_Ampoule_100ml**로 **4,68"
+  },
+  {
+    "id": "PR-228",
+    "query": "2024년 12월 싱가포르 제품 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 31.8,
+    "answer_len": 507,
+    "answer_preview": "### 📊 2024년 12월 싱가포르 SK 및 CL 브랜드 제품 수량 분석  #### 요약  2024년 12월 싱가포르에서 판매된 SK 및 CL 브랜드 제품의 총 수량은 **191,300개**입니다.  #### 상세 데이터  (단일 합계 수치이므로 상세 데이터 표는 생략합니다.)  #### 분석 및 인사이트  *   2024년 12월 한 달 동안 싱가포르 "
+  },
+  {
+    "id": "PR-229",
+    "query": "2025년 2월 호주 제품 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 51.4,
+    "answer_len": 1581,
+    "answer_preview": "### 📊 2025년 2월 호주 제품별 판매 수량 분석  #### 요약  2025년 2월 호주에서는 총 **60개**의 제품이 판매되었으며, 이 중 가장 많이 판매된 제품은 **Sachet**으로 **45,000개**의 압도적인 판매 수량을 기록했습니다. 다음으로 'SK_Tone_Brightening_Capsule_Ampoule_100ml'이 6,750개,"
+  },
+  {
+    "id": "PR-230",
+    "query": "2024년 4월 한국 제품 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 53.1,
+    "answer_len": 1504,
+    "answer_preview": "### 📊 2024년 4월 한국 내 SK 및 CL 브랜드 제품별 판매 수량 분석  #### 요약  2024년 4월 한 달간 한국 시장에서 SK 및 CL 브랜드 제품 중 **총 75개**의 제품이 판매되었습니다. 이 중 가장 높은 판매 수량을 기록한 제품은 **Sachet**으로 **78,000개**가 판매되었으며, **SK_Centella_Ampoule_5"
+  },
+  {
+    "id": "PR-231",
+    "query": "인도네시아 쇼피 2025년 1분기 제품 수량",
+    "table": "product",
+    "category": "product",
+    "status": "WARN",
+    "time": 70.9,
+    "answer_len": 2056,
+    "answer_preview": "### 📊 인도네시아 쇼피 2025년 1분기 제품 판매 수량 분석  #### 요약  인도네시아 쇼피에서 2025년 1분기 동안 총 **75개**의 고유 제품이 판매되었습니다. 이 중 **SK_Tone_Brightening_Capsule_Ampoule_100ml** 제품이 **55,094개**로 가장 높은 판매 수량을 기록했습니다. 상위 판매 제품들은 주로 "
+  },
+  {
+    "id": "PR-232",
+    "query": "태국 라자다 2024년 4분기 제품 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 38.3,
+    "answer_len": 430,
+    "answer_preview": "요청하신 조건(태국 라자다 2024년 4분기)에 해당하는 데이터가 현재 존재하지 않습니다.  SQL에서 사용된 필터 조건 중 `EXTRACT(YEAR FROM Date) = 2024 AND EXTRACT(QUARTER FROM Date) = 4`가 문제의 원인으로 보입니다. 2024년 4분기는 아직 도래하지 않았거나 데이터가 집계되지 않은 미래 시점이기 때"
+  },
+  {
+    "id": "PR-233",
+    "query": "인도네시아 2025년 분기별 수량 추이",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 29.5,
+    "answer_len": 781,
+    "answer_preview": "### 📊 인도네시아 2025년 분기별 총 수량 추이  #### 요약  인도네시아의 2025년 총 수량은 연간 **6,879,776개**를 기록했습니다. 분기별로는 4분기에 **2,231,172개**로 가장 높은 수량을 달성하며 연말에 판매량이 크게 증가하는 추세를 보였습니다.  #### 상세 데이터  | 분기 | 총 수량 (개) | | ---: | ---"
+  },
+  {
+    "id": "PR-234",
+    "query": "태국 2024년 분기별 수량 추이",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 54.4,
+    "answer_len": 805,
+    "answer_preview": "### 📊 2024년 태국 분기별 총 판매 수량 추이 분석  #### 요약  2024년 태국의 총 판매 수량은 **585,678**개였으며, 3분기에 **204,381**개로 가장 높은 판매량을 기록하며 연중 최고치를 달성했습니다. 1분기에는 **80,077**개로 가장 낮은 판매량을 보였으나, 이후 꾸준히 증가하는 추세를 보였습니다.  #### 상세 데이"
+  },
+  {
+    "id": "PR-235",
+    "query": "전체 제품 분기별 수량 추이 2025년",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 43.1,
+    "answer_len": 1016,
+    "answer_preview": "### 📊 2025년 SK 및 CL 브랜드 제품 분기별 수량 추이  #### 요약  2025년 한 해 동안 SK 및 CL 브랜드 제품의 총 판매 수량은 **92,635,333개**를 기록했습니다. 분기별로는 **2분기(26,161,738개)**에 가장 높은 판매량을 보였으며, 1분기(19,602,744개)가 가장 낮은 판매량을 기록했습니다.  #### 상세"
+  },
+  {
+    "id": "PR-236",
+    "query": "동남아 국가별 수량 비교 2025년",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 52.2,
+    "answer_len": 468,
+    "answer_preview": "요청하신 2025년 동남아시아 국가별 데이터는 현재 존재하지 않습니다.  SQL에서 사용된 필터 조건 중 `EXTRACT(YEAR FROM Date) = 2025` 조건이 문제의 원인입니다. 일반적으로 판매 데이터는 미래 시점의 데이터를 포함하지 않으므로, 2025년 데이터는 아직 집계되지 않았을 가능성이 높습니다.  만약 특정 브랜드(`Brand IN ("
+  },
+  {
+    "id": "PR-237",
+    "query": "아시아 국가별 수량 비교",
+    "table": "product",
+    "category": "product",
+    "status": "WARN",
+    "time": 62.8,
+    "answer_len": 1256,
+    "answer_preview": "### 📊 아시아 주요 국가별 총 판매 수량 비교 분석 (2019년 1월 ~ 2026년 3월)  #### 요약  2019년 1월 1일부터 2026년 3월 7일까지의 데이터에 따르면, 아시아 주요 국가 중 **인도네시아**가 **14,666,450개**로 가장 높은 총 판매 수량을 기록했습니다. 한국과 베트남이 그 뒤를 이어 상위 3개국이 전체 판매량의 상당"
+  },
+  {
+    "id": "PR-238",
+    "query": "대륙별 수량 비교 2024년",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 35.6,
+    "answer_len": 1122,
+    "answer_preview": "### 📊 2024년 대륙별 총 판매 수량 비교  #### 요약  2024년 대륙별 총 판매 수량 분석 결과, **아시아**가 **19,323,811개**로 압도적인 1위를 차지했습니다. 이어서 **글로벌**이 **10,227,922개**, **유럽**이 **7,208,326개**를 기록하며 상위권을 형성했습니다.  #### 상세 데이터  | 대륙     "
+  },
+  {
+    "id": "PR-239",
+    "query": "대륙별 수량 비교 2025년",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 42.0,
+    "answer_len": 1162,
+    "answer_preview": "### 📊 2025년 SK 및 CL 브랜드 대륙별 제품 수량 비교  #### 요약  2025년 SK 및 CL 브랜드의 대륙별 제품 수량 분석 결과, **아시아**가 **39,322,465개**로 압도적인 판매량을 기록하며 가장 큰 시장임을 보여주었습니다. 그 뒤를 이어 **글로벌(12,777,548개)**과 **유럽(12,463,415개)**이 높은 수량을"
+  },
+  {
+    "id": "PR-240",
+    "query": "동남아 전체 수량 추이",
+    "table": "product",
+    "category": "product",
+    "status": "WARN",
+    "time": 61.6,
+    "answer_len": 804,
+    "answer_preview": "제공된 SQL 쿼리는 `Continent1` 필드에 '동남아시아'라는 값이 존재하지 않아 0행이 반환되었습니다.  1.  **해당 값은 존재하지 않습니다.**     `Continent1` 필드에 '동남아시아'라는 값은 존재하지 않습니다.  2.  **문제 조건 설명 및 추천:**     *   **문제 조건:** SQL 쿼리의 `WHERE Continen"
+  },
+  {
+    "id": "PR-241",
+    "query": "센텔라 앰플 100ml 인도네시아 쇼피 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 31.8,
+    "answer_len": 505,
+    "answer_preview": "### 📊 인도네시아 쇼피 센텔라 앰플 100ml 총 판매 수량  #### 요약  인도네시아 쇼피에서 'SK_Centella_Ampoule_100ml' 제품의 총 판매 수량은 **325,796개**입니다. 이 수치는 2019년 1월 1일부터 2026년 3월 7일까지의 누적 판매량입니다.  #### 분석 및 인사이트  *   'SK_Centella_Ampou"
+  },
+  {
+    "id": "PR-242",
+    "query": "선크림 태국 라자다 2024년 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 30.4,
+    "answer_len": 479,
+    "answer_preview": "2024년 태국 라자다에서 'Sun'을 포함하는 제품의 판매 데이터가 현재 조회되지 않습니다.  SQL에서 사용된 필터 조건 중 `EXTRACT(YEAR FROM Date) = 2024`가 문제의 원인으로 보입니다. 현재 2024년 데이터가 아직 집계되지 않았거나, 데이터베이스에 업데이트되지 않았을 가능성이 높습니다. 또한, `Brand IN ('SK', "
+  },
+  {
+    "id": "PR-243",
+    "query": "히알루시카 크림 미국 아마존 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 35.2,
+    "answer_len": 709,
+    "answer_preview": "### 📊 미국 아마존 히알루시카 크림 판매 수량 분석  #### 요약  2019년 1월 1일부터 현재(2026년 3월 7일)까지 미국 아마존에서 판매된 'Hyalucica Cream' 관련 제품 중 `SK_Hyalucica_Moisture_Cream_75ml`의 총 판매 수량은 **13,935개**입니다. 현재 조회된 데이터 기준, 해당 조건에 부합하는 "
+  },
+  {
+    "id": "PR-244",
+    "query": "센텔라 토너 일본 라쿠텐 수량",
+    "table": "product",
+    "category": "product",
+    "status": "WARN",
+    "time": 63.2,
+    "answer_len": 998,
+    "answer_preview": "### 📊 일본 라쿠텐 센텔라 토너 제품별 총 판매 수량 분석  #### 요약  일본 라쿠텐에서 '센텔라 토너' 제품군의 총 판매 수량은 **6,979개**로 집계되었습니다 (2019년 1월 1일 ~ 2026년 3월 7일 기준). 이 중 'SK_Centella_Toning_Toner_210ml' 제품이 **4,212개**로 가장 높은 판매량을 기록했습니다."
+  },
+  {
+    "id": "PR-245",
+    "query": "프로바이오시카 클렌저 베트남 틱톡 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 32.6,
+    "answer_len": 648,
+    "answer_preview": "해당 조건의 데이터가 없습니다.  SQL에서 사용된 필터 조건 중 다음 부분이 문제일 수 있습니다:  *   **`Mall_Classification LIKE '%Tiktok%'`**: `Mall_Classification` 컬럼에 'Tiktok'이라는 단어가 포함된 채널 데이터가 없거나, 다른 이름으로 저장되어 있을 가능성이 높습니다. (예: 'TikTo"
+  },
+  {
+    "id": "PR-246",
+    "query": "인도네시아 쇼피 Centella 라인 수량 2025년",
+    "table": "product",
+    "category": "product",
+    "status": "WARN",
+    "time": 70.8,
+    "answer_len": 2511,
+    "answer_preview": "### 📊 2025년 인도네시아 쇼피 센텔라 라인 제품별 판매 수량 분석  #### 요약  2025년 인도네시아 쇼피에서 센텔라 라인 제품 중 **SK_Centella_Light_Cleansing_Oil_200ml**가 **169,249개**로 가장 많이 판매되었습니다. 상위 20개 제품의 총 판매 수량은 **1,288,894개**이며, 이는 센텔라 라인 "
+  },
+  {
+    "id": "PR-247",
+    "query": "태국 라자다 Suncare 카테고리 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 21.2,
+    "answer_len": 646,
+    "answer_preview": "### 📊 태국 라자다 Suncare 카테고리 총 수량 분석  #### 요약  사용자님께서 요청하신 태국 라자다 채널의 'SK' 또는 'CL' 브랜드 Suncare 카테고리 총 수량은 **0개**로 확인되었습니다. 이는 해당 조건에 부합하는 판매 데이터가 없거나, 아직 시스템에 반영되지 않았을 가능성이 있습니다.  #### 분석 및 인사이트  *   **판"
+  },
+  {
+    "id": "PR-248",
+    "query": "미국 아마존 Ampoule 카테고리 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 50.8,
+    "answer_len": 2552,
+    "answer_preview": "### 📊 미국 아마존 Ampoule 카테고리 판매 수량 분석  #### 요약  2019년 1월 1일부터 2026년 3월 7일 현재까지 미국 아마존 Ampoule 카테고리에서 총 **158,321개**의 제품이 판매되었습니다. 이 중 'SK_Centella_Ampoule_100ml' 제품이 **63,236개**로 전체 판매량의 약 40%를 차지하며 압도적인"
+  },
+  {
+    "id": "PR-249",
+    "query": "일본 라쿠텐 Cream 카테고리 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 55.9,
+    "answer_len": 672,
+    "answer_preview": "### 📊 일본 라쿠텐 Cream 카테고리 총 판매 수량  #### 요약  2019년 1월 1일부터 현재까지 일본 라쿠텐 채널에서 'SK' 및 'CL' 브랜드의 Cream 카테고리 제품은 총 **13,858개** 판매되었습니다. 이 수치는 해당 기간 동안 특정 브랜드의 Cream 제품에 대한 일본 라쿠텐 시장의 누적 수요를 나타냅니다.  #### 분석 및 "
+  },
+  {
+    "id": "PR-250",
+    "query": "베트남 틱톡 Centella 라인 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 22.8,
+    "answer_len": 890,
+    "answer_preview": "해당 조건의 데이터가 없습니다.  SQL 쿼리에 사용된 필터 조건 중 다음을 확인해 볼 필요가 있습니다.  *   **`Mall_Classification` (채널)**: `LIKE '%Tiktok%'` 조건이 실제 데이터의 채널명과 정확히 일치하지 않을 수 있습니다. 데이터에 'TikTok Shop' 또는 'TikTok Live'와 같이 'Tiktok'이"
+  },
+  {
+    "id": "PR-251",
+    "query": "인도네시아 쇼피 2025년 1월 Ampoule 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 29.4,
+    "answer_len": 1952,
+    "answer_preview": "### 📊 인도네시아 쇼피 2025년 1월 Ampoule 제품별 판매 수량 분석  #### 요약  인도네시아 쇼피에서 2025년 1월 한 달간 Ampoule 제품군은 총 **66,398개**가 판매되었습니다. 이 중 'SK_Tone_Brightening_Capsule_Ampoule_100ml' 제품이 **21,521개**로 가장 높은 판매량을 기록하며 전체"
+  },
+  {
+    "id": "PR-252",
+    "query": "태국 라자다 2024년 6월 Suncare 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 44.5,
+    "answer_len": 540,
+    "answer_preview": "### 📊 태국 라자다 2024년 6월 Suncare 제품 판매 수량 분석  #### 요약  2024년 6월 태국 라자다 채널에서 Suncare 카테고리(SK, CL 브랜드)의 판매 수량은 **0**으로 확인되었습니다. 이는 조회된 조건에 해당하는 판매 데이터가 존재하지 않음을 의미합니다.  #### 분석 및 인사이트  *   해당 기간(2024년 6월) "
+  },
+  {
+    "id": "PR-253",
+    "query": "미국 아마존 2025년 3월 Cream 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 32.5,
+    "answer_len": 545,
+    "answer_preview": "해당 조건의 데이터가 존재하지 않습니다.  SQL에서 사용된 필터 조건 중 **날짜(2025년 3월)**가 문제입니다. 일반적으로 판매 데이터는 과거 또는 현재 시점의 기록이며, 미래 시점(2025년 3월)의 판매 데이터는 존재하지 않습니다.  다른 조건들은 유효합니다: *   **국가('미국')**: 유효한 값입니다. *   **채널('USA_Amazon"
+  },
+  {
+    "id": "PR-254",
+    "query": "일본 라쿠텐 2024년 11월 Ampoule 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 37.5,
+    "answer_len": 1381,
+    "answer_preview": "### 📊 2024년 11월 일본 라쿠텐 앰플 제품별 판매 수량 분석  #### 요약  2024년 11월 한 달간 일본 라쿠텐 채널에서 판매된 앰플 제품의 총 수량은 **230개**로 집계되었습니다. 이 중 'SK_Centella_Ampoule_100ml' 제품이 **105개**로 가장 높은 판매량을 기록하며 전체 판매량의 약 45.7%를 차지했습니다.  "
+  },
+  {
+    "id": "PR-255",
+    "query": "베트남 틱톡 2025년 5월 제품 수량 TOP 5",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 41.1,
+    "answer_len": 337,
+    "answer_preview": "해당 조건의 데이터가 없습니다.  **문제 조건 설명:** 가장 큰 문제는 **날짜** 조건입니다. 2025년 5월은 미래 시점이므로 해당 기간의 판매 데이터는 현재 존재하지 않습니다. *   **국가** 조건('베트남')은 유효한 값입니다. *   **채널** 조건(`Mall_Classification LIKE '%Tiktok%'`)은 틱톡 채널을 잘 필"
+  },
+  {
+    "id": "PR-256",
+    "query": "회사별 제품 수량 TOP 10",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 44.7,
+    "answer_len": 1935,
+    "answer_preview": "### 📊 SK/CL 브랜드 회사별 제품 수량 TOP 10 분석  #### 요약  SK 및 CL 브랜드 제품의 총 수량을 기준으로 회사별 제품 TOP 10을 분석한 결과, **'Sachet'** 제품이 압도적인 판매량을 보이며 상위 10개 중 7개를 차지했습니다. 특히 **토브플랜의 'Sachet'**은 총 **5,641,500개**로 가장 높은 수량을 기"
+  },
+  {
+    "id": "PR-257",
+    "query": "인도네시아 회사별 제품 수량",
+    "table": "product",
+    "category": "product",
+    "status": "WARN",
+    "time": 61.6,
+    "answer_len": 1708,
+    "answer_preview": "### 📊 인도네시아 회사별 제품 수량 분석 보고서  #### 요약  인도네시아 시장에서 2019년 1월 1일부터 현재(2026년 3월 7일)까지 **총 16,383,254개**의 제품이 판매되었습니다. 이 기간 동안 **20개**의 고유한 회사와 **148개**의 고유한 제품이 확인되었습니다. 특히, `SK_Centella_Light_Cleansing_O"
+  },
+  {
+    "id": "PR-258",
+    "query": "태국 회사별 수량 순위",
+    "table": "product",
+    "category": "product",
+    "status": "WARN",
+    "time": 72.0,
+    "answer_len": 1028,
+    "answer_preview": "### 📊 태국 회사별 SK, CL 브랜드 총 수량 순위 (2019년 1월 1일 이후)  #### 요약  2019년 1월 1일부터 현재(2026년 3월 7일)까지 태국 내 SK 및 CL 브랜드의 총 수량 기준으로 분석한 결과, **All About You**가 **3,604,897개**로 압도적인 1위를 차지했습니다. 이는 전체 6개 회사 중 가장 높은 수"
+  },
+  {
+    "id": "PR-259",
+    "query": "일본 회사별 제품 수량 TOP 5",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 38.6,
+    "answer_len": 1189,
+    "answer_preview": "### 📊 일본 회사별 제품 수량 TOP 5 (회사명 데이터 미확인)  #### 요약  일본 시장에서 **2019년 1월 1일 이후** 가장 많이 판매된 제품은 **SK_Centella_Ampoule_100ml**로 총 **451,540개**가 판매되었습니다. 상위 5개 제품 모두 SK 브랜드 제품이 차지하며 강세를 보였습니다. 그러나 요청하신 '회사별' "
+  },
+  {
+    "id": "PR-260",
+    "query": "B2B 회사별 수량 순위 2025년",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 53.9,
+    "answer_len": 1240,
+    "answer_preview": "### 📊 2025년 B2B 회사별 수량 순위 (SK, CL 브랜드 한정)  #### 요약  2025년 B2B 채널에서 SK 및 CL 브랜드의 총 판매 수량은 **82,440,743개**이며, 총 604개 회사가 집계되었습니다. 이 중 '토브플랜'이 **5,972,001개**로 가장 높은 판매 수량을 기록하며 1위를 차지했습니다.  #### 상세 데이터  "
+  },
+  {
+    "id": "PR-261",
+    "query": "센텔라 앰플 100ml 전체 기간 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 31.5,
+    "answer_len": 736,
+    "answer_preview": "### 📊 SK 센텔라 앰플 100ml 전체 기간 총 판매 수량 분석  #### 요약  2019년 1월 1일부터 현재(2026년 3월 7일)까지 **SK_Centella_Ampoule_100ml** 제품의 총 판매 수량은 **6,880,509개**입니다. 이 수치는 SK 및 CL 브랜드에 한정된 센텔라 앰플 100ml 제품군 중 SK 브랜드 제품의 누적 판"
+  },
+  {
+    "id": "PR-262",
+    "query": "선크림 전체 기간 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 40.9,
+    "answer_len": 2334,
+    "answer_preview": "### 📊 SK, CL 브랜드 선크림 제품별 전체 기간 판매 수량 현황  #### 요약  2019년 1월 1일부터 현재(2026년 3월 7일)까지 SK 및 CL 브랜드의 선크림 제품 판매 현황을 분석한 결과, 제공된 상위 20개 제품의 총 판매 수량은 **26,056,994개**로 집계되었습니다. 전체 22개 선크림 제품 중 'SK_Hyalucica_Wat"
+  },
+  {
+    "id": "PR-263",
+    "query": "히알루시카 크림 전체 기간 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 30.5,
+    "answer_len": 886,
+    "answer_preview": "### 📊 히알루시카 크림 전체 기간 판매 수량 분석  #### 요약  전체 기간 동안 히알루시카 크림 제품군은 총 **1,657,247개**의 판매 수량을 기록했습니다. 이 중 'SK_Hyalucica_Moisture_Cream_75ml' 제품이 **1,494,957개**로 압도적인 판매량을 보이며 전체 판매의 대부분을 차지했습니다.  #### 상세 데이"
+  },
+  {
+    "id": "PR-264",
+    "query": "센텔라 토너 전체 기간 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 34.8,
+    "answer_len": 1344,
+    "answer_preview": "### 📊 센텔라 토너 제품별 전체 기간 판매 수량 분석  #### 요약  2019년 1월 1일부터 현재(2026년 3월 7일)까지 SK 및 CL 브랜드의 센텔라 토너 제품군 총 판매 수량은 **4,792,320개**입니다. 이 중 'SK_Centella_Toning_Toner_210ml' 제품이 **3,562,088개**로 전체 판매량의 약 74%를 차지"
+  },
+  {
+    "id": "PR-265",
+    "query": "제품별 전체 기간 수량 순위",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 55.0,
+    "answer_len": 2731,
+    "answer_preview": "### 📊 SK, CL 브랜드 제품별 전체 기간 수량 순위  #### 요약  SK 및 CL 브랜드의 2019년 1월 1일부터 현재(2026년 3월 7일)까지 전체 기간 동안 제품별 총 판매 수량 분석 결과, 총 **192,657,910**개의 제품이 판매되었으며, **213개**의 고유 제품이 집계되었습니다. 이 중 'Sachet' 제품이 **55,198,"
+  },
+  {
+    "id": "PR-266",
+    "query": "인도네시아 2025년 상반기 제품 수량 TOP 5",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 36.3,
+    "answer_len": 1211,
+    "answer_preview": "### 📊 인도네시아 2025년 상반기 제품 수량 TOP 5 분석  #### 요약  2025년 상반기 인도네시아 시장에서 가장 많이 판매된 제품은 **SK_Centella_Light_Cleansing_Oil_200ml**로, 총 **248,841개**의 판매 수량을 기록했습니다. 상위 5개 제품 모두 SK 브랜드 제품이었으며, 클렌징 오일, 앰플, 선 세럼"
+  },
+  {
+    "id": "PR-267",
+    "query": "태국 2024년 하반기 제품 수량 TOP 5",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 32.1,
+    "answer_len": 1120,
+    "answer_preview": "### 📊 태국 2024년 하반기 제품별 판매 수량 TOP 5  #### 요약  2024년 하반기 태국 시장에서 가장 많이 판매된 제품은 **SK_Centella_Ampoule_55ml**로 총 **68,450개**의 판매 수량을 기록했습니다. 이 제품은 2위인 SK_Centella_Ampoule_30ml보다 약 8,800개 더 많이 판매되며 압도적인 1위"
+  },
+  {
+    "id": "PR-268",
+    "query": "2025년 수량 증가율 제품별 비교",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 50.1,
+    "answer_len": 2467,
+    "answer_preview": "### 📊 2025년 제품별 수량 증가율 비교 분석  #### 요약  2025년 SK 및 CL 브랜드 제품들의 총 수량은 **95,217,043개**로, 2024년 **49,507,142개** 대비 **92.3%**의 높은 성장률을 기록했습니다. 특히 'SK_Tone_Brightening_Capsule_Ampoule_50ml' 제품이 **969.6%**로 "
+  },
+  {
+    "id": "PR-269",
+    "query": "2024년 대비 2025년 라인별 수량 변화",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 36.5,
+    "answer_len": 2265,
+    "answer_preview": "### 📊 2024년 대비 2025년 라인별 총 수량 변화 분석  #### 요약  2024년 대비 2025년 전체 라인의 총 수량은 **4,464만 개**에서 **9,539만 개**로 **113.68% 증가**하며 매우 높은 성장세를 보였습니다. 특히 `Poremizing` 라인이 **264.35%** 증가하며 가장 높은 성장률을 기록했고, `Tone_Br"
+  },
+  {
+    "id": "PR-270",
+    "query": "2024년 대비 2025년 카테고리별 수량 변화",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 42.0,
+    "answer_len": 1919,
+    "answer_preview": "### 📊 2024년 대비 2025년 카테고리별 수량 변화 분석 (SK, CL 브랜드 기준)  #### 요약  2024년 대비 2025년 SK 및 CL 브랜드의 전체 제품 수량은 **약 92.14% 증가**하여 총 **95,388,432개**가 판매되었습니다. 특히 Pack 카테고리가 188.26%로 가장 높은 성장률을 보였으며, Cleanser와 SET "
+  },
+  {
+    "id": "PR-271",
+    "query": "인도네시아 쇼피 센텔라 앰플 월별 추이 2025년",
+    "table": "product",
+    "category": "product",
+    "status": "WARN",
+    "time": 75.5,
+    "answer_len": 733,
+    "answer_preview": "### 📊 2025년 인도네시아 쇼피 센텔라 앰플 월별 매출 추이 분석  #### 요약  2025년 인도네시아 쇼피에서 센텔라 앰플 제품군은 **총 약 24.7억원**의 매출을 기록했습니다. 이 중 'SK_Centella_Ampoule_100ml' 제품이 **약 9.9억원**으로 전체 매출의 약 40%를 차지하며 가장 높은 기여도를 보였습니다. 월별로는 1"
+  },
+  {
+    "id": "PR-272",
+    "query": "태국 라자다 선크림 월별 추이 2024년",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 21.0,
+    "answer_len": 745,
+    "answer_preview": "요청하신 조건(2024년 태국 라자다 SK/CL 브랜드 선크림)에 해당하는 데이터가 현재 조회되지 않습니다.  ---  **문제 조건 설명:**  SQL 쿼리에서 `EXTRACT(YEAR FROM Date) = 2024` 필터가 가장 큰 원인으로 보입니다. 현재 데이터베이스에 2024년 데이터가 아직 업데이트되지 않았거나, 해당 브랜드(SK, CL)의 20"
+  },
+  {
+    "id": "PR-273",
+    "query": "인도네시아 제품 수량 월별 추이 2025년",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 53.2,
+    "answer_len": 2449,
+    "answer_preview": "### 📊 2025년 인도네시아 제품 월별 판매 수량 추이 분석  #### 요약  2025년 인도네시아 시장에서는 총 **7,824,275개**의 제품이 판매되었습니다. 특히 'SK_Centella_Light_Cleansing_Oil_200ml'와 'SK_Hyalucica_Waterfit_Sun_Serum_50ml'가 연간 판매량에서 두각을 나타냈으며, 3"
+  },
+  {
+    "id": "PR-274",
+    "query": "태국 제품 수량 월별 추이 2024년",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 44.8,
+    "answer_len": 650,
+    "answer_preview": "### 📊 2024년 태국 시장 제품 수량 추이 분석 (일부 월 데이터 누락)  #### 요약  2024년 태국 시장에서 집계된 제품의 총 수량은 **585,678개**입니다. 데이터는 2024년 1월, 2월, 3월, 5월, 6월, 7월, 8월, 9월, 11월에 대한 기록만 존재하며, 4월, 10월, 12월의 데이터는 누락되어 있습니다. 가장 높은 판매 수"
+  },
+  {
+    "id": "PR-275",
+    "query": "미국 제품 수량 월별 추이 2025년",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 30.6,
+    "answer_len": 1051,
+    "answer_preview": "### 📊 2025년 미국 SK 및 CL 브랜드 제품 월별 수량 추이  #### 요약  2025년 미국 시장에서 SK 및 CL 브랜드 제품의 총 판매 수량은 **7,412,036개**를 기록했습니다. 특히 **10월**에 **1,356,123개**로 연중 최고 판매량을 달성하며 연말 성수기 효과를 뚜렷하게 보여주었습니다.  #### 상세 데이터 | 월   "
+  },
+  {
+    "id": "PR-276",
+    "query": "B2B1 팀 제품 수량 2025년",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 49.2,
+    "answer_len": 2413,
+    "answer_preview": "### 📊 2025년 B2B1 팀 제품 판매 수량 분석  #### 요약  2025년 한 해 동안 B2B1 팀에서 판매된 SK 및 CL 브랜드 제품의 총 수량은 **43,341,934개**입니다. 이 중 'Sachet' 제품이 **20,302,654개**로 전체 판매 수량의 약 46.8%를 차지하며 압도적인 1위를 기록했습니다.  #### 상세 데이터  20"
+  },
+  {
+    "id": "PR-277",
+    "query": "B2B2 팀 제품 수량 2024년",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 58.5,
+    "answer_len": 1561,
+    "answer_preview": "### 📊 2024년 B2B2 팀 SK 및 CL 브랜드 제품별 판매 수량 분석  #### 요약  2024년 B2B2 팀의 SK 및 CL 브랜드 제품 판매 수량 분석 결과, 'Sachet' 제품이 **4,013,300개**로 압도적인 1위를 차지했습니다. 상위 20개 제품의 총 판매 수량은 약 **895만 개**를 기록했으며, 특히 SK 브랜드의 Hyaluc"
+  },
+  {
+    "id": "PR-278",
+    "query": "DD_DT1 팀 제품 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 36.2,
+    "answer_len": 440,
+    "answer_preview": "DD_DT1 팀의 2019년 1월 1일 이후 제품 수량 데이터는 존재하지 않습니다.  SQL에서 사용된 필터 조건 중 `Team_NEW = 'DD_DT1'` 값은 유효한 팀명입니다. 하지만 해당 팀('DD_DT1')에 대해 2019년 1월 1일 이후의 제품 판매 수량 데이터가 없기 때문에 결과가 0행으로 나온 것으로 보입니다.  비슷한 데이터를 조회할 수 "
+  },
+  {
+    "id": "PR-279",
+    "query": "DD_DT2 팀 제품 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 27.9,
+    "answer_len": 404,
+    "answer_preview": "### 📊 DD_DT2 팀 제품 총 수량 현황  #### 요약  2019년 1월 1일부터 현재(2026년 3월 7일)까지 DD_DT2 팀이 처리한 총 제품 수량은 **1,316,729개**입니다.  #### 분석 및 인사이트  *   DD_DT2 팀은 2019년 1월 1일 이후 현재까지 **130만 개 이상의 제품**을 처리하며 상당한 규모의 운영을 보여주"
+  },
+  {
+    "id": "PR-280",
+    "query": "OP 팀 제품 수량 2025년",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 24.9,
+    "answer_len": 572,
+    "answer_preview": "### 📊 2025년 OP 팀 SK 및 CL 브랜드 제품 총 수량 분석  #### 요약  2025년 한 해 동안 OP 팀의 SK 및 CL 브랜드 제품 총 수량은 **2,984,004개**로 집계되었습니다. 이 수치는 OP 팀이 해당 브랜드 제품군에서 상당한 규모의 판매를 기록했음을 보여줍니다.  #### 분석 및 인사이트  *   OP 팀은 2025년에 S"
+  },
+  {
+    "id": "PR-281",
+    "query": "인도네시아 Centella 라인 Ampoule 카테고리 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 32.2,
+    "answer_len": 1473,
+    "answer_preview": "### 📊 인도네시아 Centella 라인 앰플 카테고리 제품별 판매 수량  #### 요약  2019년 1월 1일부터 현재(2026년 3월 7일)까지 인도네시아 Centella 라인 앰플 카테고리 제품의 총 판매 수량은 **2,049,407개**입니다. 이 중 'SK_Centella_Ampoule_100ml' 제품이 **826,294개**로 가장 많이 판매"
+  },
+  {
+    "id": "PR-282",
+    "query": "태국 Suncare 라인 카테고리별 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 46.6,
+    "answer_len": 2122,
+    "answer_preview": "### 📊 태국 Suncare 라인별 제품 판매 수량 현황 (2019년 이후 누적)  #### 요약  2019년 1월 1일부터 현재(2026년 3월 7일)까지 태국 Suncare 라인의 제품별 누적 판매 수량을 분석한 결과, **Hyalucica 라인의 'SK_Hyalucica_Waterfit_Sun_Serum_50ml' 제품이 총 107,600개**로 압"
+  },
+  {
+    "id": "PR-283",
+    "query": "미국 Hyalu_Teca 라인 Cream 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 37.6,
+    "answer_len": 602,
+    "answer_preview": "### 📊 미국 Hyalu_Teca 라인 Cream 제품 수량 분석  #### 요약  미국 시장에서 Hyalu_Teca 라인의 Cream 제품 중 'SK_Hyalu_Teca_Firming_Cream_50ml' 제품은 2019년 1월 1일부터 현재까지 총 **10개**의 수량을 기록했습니다.  #### 분석 및 인사이트  *   사용자 질문 조건(미국, Hy"
+  },
+  {
+    "id": "PR-284",
+    "query": "일본 Centella_Teca 라인 Ampoule 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 28.8,
+    "answer_len": 787,
+    "answer_preview": "### 📊 일본 Centella_Teca 라인 앰플 제품 판매 수량 분석  #### 요약  일본 Centella_Teca 라인 앰플 제품의 판매 수량을 분석한 결과, 'SK_Centella_Teca_Ampoule_50ml' 제품이 총 **38,823개** 판매된 것으로 확인되었습니다. 현재 조회된 데이터 기준, 해당 라인에서는 이 제품만이 판매 실적을 기록"
+  },
+  {
+    "id": "PR-285",
+    "query": "베트남 Probiocica 라인 Cleanser 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 40.4,
+    "answer_len": 454,
+    "answer_preview": "해당 조건의 데이터가 없습니다.  SQL 쿼리에 `Brand IN ('SK', 'CL')` 필터가 포함되어 있습니다. 사용자의 질문에는 브랜드가 명시되지 않았는데, '베트남' 국가, 'Probiocica' 라인, 'Cleanser' 카테고리 조건과 함께 이 특정 브랜드 필터를 만족하는 데이터가 없는 것으로 보입니다. `Country = '베트남'`은 유효한"
+  },
+  {
+    "id": "PR-286",
+    "query": "인도네시아 B2B Centella 라인 수량 2025년",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 49.4,
+    "answer_len": 1985,
+    "answer_preview": "### 📊 2025년 인도네시아 B2B 센텔라 라인 제품별 판매 수량 분석  #### 요약  2025년 인도네시아 B2B 센텔라 라인에서는 총 24개 제품이 판매되었으며, 이 중 'SK_Centella_Light_Cleansing_Oil_200ml'이 **116,686개**로 가장 높은 판매 수량을 기록했습니다. 제공된 데이터(상위 20개 제품) 기준 총 "
+  },
+  {
+    "id": "PR-287",
+    "query": "태국 B2C Suncare 수량 2024년",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 37.1,
+    "answer_len": 479,
+    "answer_preview": "### 📊 2024년 태국 B2C Suncare (SK/CL 브랜드) 수량 조회 결과  #### 요약  2024년 태국 B2C Suncare 카테고리에서 **SK 및 CL 브랜드**의 총 판매 수량은 **0**입니다. 이는 해당 조건에 부합하는 판매 데이터가 없음을 의미합니다.  #### 분석 및 인사이트  *   2024년 태국 B2C Suncare 카테"
+  },
+  {
+    "id": "PR-288",
+    "query": "GM_EAST1 팀 인도네시아 제품 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 31.1,
+    "answer_len": 2167,
+    "answer_preview": "### 📊 GM_EAST1 팀 인도네시아 제품별 총 판매 수량 분석  #### 요약  GM_EAST1 팀의 인도네시아 시장에서 2019년 1월 1일부터 2026년 3월 7일까지 판매된 총 80개 제품의 수량을 분석한 결과, 'SK_Centella_Light_Cleansing_Oil_200ml' 제품이 **94,355개**로 가장 높은 판매량을 기록했습니다."
+  },
+  {
+    "id": "PR-289",
+    "query": "GM_EAST2 팀 태국 제품 수량 2025년",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 32.8,
+    "answer_len": 433,
+    "answer_preview": "GM_EAST2 팀의 2025년 태국 제품 수량에 대한 데이터는 존재하지 않습니다.  SQL 쿼리에서 사용된 필터 조건 중 `EXTRACT(YEAR FROM Date) = 2025` (2025년) 날짜 조건이 문제의 원인으로 보입니다. 일반적으로 판매 데이터는 과거 또는 현재 시점의 기록을 포함하며, 2025년과 같은 미래 시점의 판매 데이터는 존재하지 않"
+  },
+  {
+    "id": "PR-290",
+    "query": "CBT 팀 월별 수량 추이 2024년",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 29.0,
+    "answer_len": 1018,
+    "answer_preview": "### 📊 CBT 팀 2024년 월별 총 수량 추이 분석  #### 요약  2024년 CBT 팀의 총 수량은 **915,128개**를 기록했습니다. 월별 수량은 2월에 **33,644개**로 가장 낮았으며, 12월에 **124,625개**로 연중 최고치를 달성하며 연말에 강세를 보였습니다.  #### 상세 데이터  | 월 | 총 수량 (개) | |:---|"
+  },
+  {
+    "id": "PR-291",
+    "query": "2026년 1월 제품 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 34.9,
+    "answer_len": 487,
+    "answer_preview": "### 📊 2026년 1월 SK 및 CL 브랜드 제품 총 수량  #### 요약  2026년 1월 한 달간 SK 및 CL 브랜드의 제품 총 수량은 **7,897,631개**로 집계되었습니다. 본 수치는 SK 및 CL 브랜드에 한정된 데이터입니다.  #### 분석 및 인사이트  *   2026년 1월, SK 및 CL 두 브랜드에서 총 **7,897,631개**"
+  },
+  {
+    "id": "PR-292",
+    "query": "2026년 2월 제품 수량 TOP 10",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 30.1,
+    "answer_len": 1823,
+    "answer_preview": "### 📊 2026년 2월 SK 및 CL 브랜드 제품 수량 TOP 10 분석  #### 요약  2026년 2월 한 달간 SK 및 CL 브랜드 제품 중 수량 기준으로 **'Sachet' 제품이 총 2,102,110개**로 압도적인 1위를 차지했습니다. 2위인 'SK_Centella_Light_Cleansing_Oil_200ml'는 416,328개로, 1위 제"
+  },
+  {
+    "id": "PR-293",
+    "query": "센텔라 앰플 100ml 2026년 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 27.3,
+    "answer_len": 549,
+    "answer_preview": "### 📊 2026년 센텔라 앰플 100ml 판매 수량 분석  #### 요약  ⚠️ 2026년은 현재 3월 7일까지의 데이터만 존재합니다 (오늘: 2026년 03월 07일). 2026년 3월 7일 기준으로 'SK_Centella_Ampoule_100ml' 제품은 총 **579,288개**의 판매 수량을 기록했습니다.  #### 분석 및 인사이트  *   2"
+  },
+  {
+    "id": "PR-294",
+    "query": "인도네시아 2026년 1월 제품 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 43.1,
+    "answer_len": 1430,
+    "answer_preview": "### 📊 인도네시아 2026년 1월 제품별 총 판매 수량 분석  #### 요약  2026년 1월 한 달간 인도네시아에서 판매된 제품의 총 수량은 **683,416개**입니다. 이 기간 동안 'SK_Centella_Watergel_sheet_ampoule_mask_25ml' 제품이 **50,104개**로 가장 높은 판매 수량을 기록했습니다. 전체 103개의"
+  },
+  {
+    "id": "PR-295",
+    "query": "플랫폼별 제품 수량 비교 2025년",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 42.6,
+    "answer_len": 2061,
+    "answer_preview": "### 📊 2025년 플랫폼별 제품 수량 비교  #### 요약  2025년 SK 및 CL 브랜드의 플랫폼별 제품 판매 수량을 분석한 결과, **SK_B2B_Overseas** 플랫폼이 **45,743,322개**로 가장 많은 판매량을 기록했습니다. 그 뒤를 이어 **SK_B2B_Domestic**이 **36,645,519개**로 높은 판매량을 보이며 B2B"
+  },
+  {
+    "id": "PR-296",
+    "query": "인도네시아 쇼피 B2C Centella 라인 Ampoule 수량 2025년",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 30.0,
+    "answer_len": 1365,
+    "answer_preview": "### 📊 2025년 인도네시아 쇼피 B2C 센텔라 앰플 라인 제품별 판매 수량  #### 요약  2025년 인도네시아 쇼피 B2C 채널에서 센텔라 앰플 라인 제품은 총 **419,073**개가 판매되었습니다. 이 중 'SK_Centella_Ampoule_Foam_125ml' 제품이 **120,001**개로 가장 높은 판매량을 기록했으며, 'SK_Cente"
+  },
+  {
+    "id": "PR-297",
+    "query": "태국 라자다 B2B 2024년 팀별 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 40.1,
+    "answer_len": 511,
+    "answer_preview": "1.  해당 조건에 맞는 2024년 데이터가 현재 조회되지 않습니다.  2.  SQL에서 사용된 필터 조건 중 `EXTRACT(YEAR FROM Date) = 2024` 조건이 문제일 가능성이 가장 높습니다.     *   `SALES_ALL_Backup` 테이블은 백업 테이블이므로, 2024년 데이터가 아직 완전히 적재되지 않았거나, 실시간 데이터가 아닌"
+  },
+  {
+    "id": "PR-298",
+    "query": "전체 제품 수량 요약",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 35.0,
+    "answer_len": 520,
+    "answer_preview": "### 📊 SK 및 CL 브랜드 전체 제품 수량 요약  #### 요약  2019년 1월 1일부터 현재까지 **SK 및 CL 브랜드**의 총 제품 수량은 **192,657,910개**입니다. 이 수치는 특정 두 브랜드에 한정된 데이터입니다.  #### 분석 및 인사이트  *   **방대한 제품 판매량**: 2019년 이후 SK 및 CL 두 브랜드에서만 약 1"
+  },
+  {
+    "id": "PR-299",
+    "query": "인도네시아 쇼피 2025년 1분기 월별 카테고리별 수량",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 32.2,
+    "answer_len": 1983,
+    "answer_preview": "### 📊 인도네시아 쇼피 2025년 1분기 월별 카테고리별 수량 분석  #### 요약  2025년 1분기(1월~3월) 인도네시아 쇼피에서 **총 500,010개**의 제품이 판매되었습니다. 이 기간 동안 **앰플(Ampoule) 카테고리가 총 159,698개**로 가장 높은 판매 수량을 기록하며 전체 판매를 주도했습니다. 월별 판매량은 1월 170,566"
+  },
+  {
+    "id": "PR-300",
+    "query": "인도네시아 2025년 B2B 회사별 센텔라 앰플 수량 순위",
+    "table": "product",
+    "category": "product",
+    "status": "OK",
+    "time": 44.8,
+    "answer_len": 2590,
+    "answer_preview": "### 📊 2025년 인도네시아 B2B 센텔라 앰플 회사별 수량 순위  #### 요약  2025년 인도네시아 B2B 센텔라 앰플 판매량은 **FBI_B2B**가 총 **117,673개**를 기록하며 가장 높은 수량을 보였습니다. 이어서 **Sociolla**가 총 **75,968개**로 두 번째를 차지했으며, 이 두 회사가 인도네시아 B2B 센텔라 앰플 시"
+  }
+]
