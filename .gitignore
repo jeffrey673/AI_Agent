@@ -33,6 +33,9 @@ app/static/charts/*.html
 data/gws_tokens/
 data/*.log
 
+# Dev SQLite database (local only)
+data/dev.db
+
 # Temp files (development/debugging)
 temp_*
 nul
