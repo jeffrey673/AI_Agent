@@ -107,15 +107,15 @@ def generate_sql(state: AgentState) -> Dict[str, Any]:
 
     # 2) Lazy-load: only include marketing tables whose keywords match the query
     query_lower = query.lower()
-    matched_tables = 0
-    for table_entry in MARKETING_TABLES:
-        table_path, label, keywords = table_entry[0], table_entry[1], table_entry[2]
-        # Check if any keyword matches the query
-        if not any(kw in query_lower for kw in keywords):
-            continue
-        matched_tables += 1
-        # Fetch and cache individual table schema
-        if table_path not in _schema_cache_tables:
+    matched_entries = [
+        (t[0], t[1], t[2]) for t in MARKETING_TABLES
+        if any(kw in query_lower for kw in t[2])
+    ]
+
+    # Parallel-fetch uncached schemas (avoid serial BQ roundtrips)
+    uncached = [(tp, lb) for tp, lb, _ in matched_entries if tp not in _schema_cache_tables]
+    if uncached:
+        def _fetch_schema(table_path, label):
             try:
                 tbl_schema = bq.get_table_schema(table_path)
                 tbl_lines = [
@@ -123,13 +123,21 @@ def generate_sql(state: AgentState) -> Dict[str, Any]:
                     for col in tbl_schema
                 ]
                 table_short = table_path.rsplit(".", 1)[-1]
-                _schema_cache_tables[table_path] = f"\n\n### {label} ({table_short})\n" + "\n".join(tbl_lines)
+                return table_path, f"\n\n### {label} ({table_short})\n" + "\n".join(tbl_lines)
             except Exception as e:
                 logger.warning("schema_fetch_failed", table=table_path, error=str(e))
-                _schema_cache_tables[table_path] = ""
+                return table_path, ""
+
+        with concurrent.futures.ThreadPoolExecutor(max_workers=min(len(uncached), 5)) as pool:
+            futures = [pool.submit(_fetch_schema, tp, lb) for tp, lb in uncached]
+            for f in concurrent.futures.as_completed(futures):
+                tp, schema_text = f.result()
+                _schema_cache_tables[tp] = schema_text
+
+    for table_path, _, _ in matched_entries:
         schema_context += _schema_cache_tables.get(table_path, "")
 
-    logger.info("schema_context_built", total_tables=1 + matched_tables, query_matched=matched_tables)
+    logger.info("schema_context_built", total_tables=1 + len(matched_entries), query_matched=len(matched_entries))
 
     today = datetime.now().strftime("%Y-%m-%d")
     date_context = f"\n\n## 오늘 날짜\n{today} (사용자가 '이번 달', '지난 달', '올해' 등 상대적 날짜를 사용하면 이 날짜를 기준으로 계산하세요)"
@@ -143,7 +151,7 @@ def generate_sql(state: AgentState) -> Dict[str, Any]:
     full_prompt = f"{system_prompt}{schema_context}{date_context}{conv_section}\n\n## 사용자 질문\n{query}"
 
     try:
-        sql = llm.generate(full_prompt, temperature=0.0)
+        sql = llm.generate(full_prompt, temperature=0.0, max_output_tokens=2048)
         sql = sanitize_sql(sql)
         logger.info("sql_generated", sql=sql[:200])
         return {"generated_sql": sql, "error": None}
@@ -303,26 +311,21 @@ def format_answer(state: AgentState) -> Dict[str, Any]:
             )
         _hints_text = "\n".join(_value_hints)
 
-        # Try Flash LLM for helpful empty-result message, else template fallback
+        # Try Flash LLM for helpful empty-result message (with timeout), else template
         try:
             empty_llm = get_flash_client()
-            empty_prompt = f"""사용자가 "{query}"라고 질문했고, 다음 SQL을 실행했지만 결과가 0행이었습니다:
-
+            empty_prompt = f"""사용자가 "{query}"라고 질문했고, SQL 결과가 0행입니다:
 ```sql
 {sql}
 ```
-
-{f"## 참고: 유효한 컬럼 값{chr(10)}{_hints_text}" if _hints_text else ""}
-
-다음 규칙으로 답변하세요:
-1. 해당 조건의 데이터가 없다고 간결하게 안내 (1문장). SQL에 사용된 값이 유효 값 목록에 없으면 **"해당 값은 존재하지 않습니다"**라고 명확히 안내
-2. SQL에서 사용된 필터 조건(국가, 채널, 날짜, 제품명, 팀 등)을 확인하고, 어떤 조건이 문제인지 설명. 유효 값 목록이 있으면 가장 유사한 값을 추천
-3. 비슷한 데이터를 조회할 수 있는 대안 질문 2-3개 제시
-4. 한국어로 답변하세요."""
-            answer = empty_llm.generate(empty_prompt, temperature=0.3)
+{f"유효 값: {_hints_text}" if _hints_text else ""}
+간결하게: 1) 데이터 없음 안내 2) 어떤 조건이 문제인지 3) 대안 질문 2개. 한국어."""
+            with concurrent.futures.ThreadPoolExecutor(max_workers=1) as pool:
+                f = pool.submit(empty_llm.generate, empty_prompt, None, 0.3)
+                answer = f.result(timeout=5.0)
             if answer and len(answer) > 30:
                 return {"answer": answer}
-        except Exception:
+        except (concurrent.futures.TimeoutError, Exception):
             pass
         # Template fallback — more helpful than a single line
         return {
@@ -478,20 +481,24 @@ def format_answer(state: AgentState) -> Dict[str, Any]:
 """
 
     try:
-        # Run answer generation and chart generation in parallel
+        # Answer generation: foreground. Chart: parallel with short timeout.
+        # User sees answer immediately; chart appended only if ready fast enough.
         with concurrent.futures.ThreadPoolExecutor(max_workers=2) as executor:
-            answer_future = executor.submit(llm.generate, prompt, None, 0.3)
-            # Use Flash for chart config generation (faster, Pro too slow)
+            answer_future = executor.submit(llm.generate, prompt, None, 0.3, 8192)
             chart_llm = get_flash_client()
             chart_future = executor.submit(
                 _try_generate_chart, chart_llm, query, sql, result_preview, results
             )
 
             answer = answer_future.result()
-            chart_markdown = chart_future.result()
+            # Give chart up to 3s after answer is ready; skip if slow
+            try:
+                chart_markdown = chart_future.result(timeout=3.0)
+            except concurrent.futures.TimeoutError:
+                chart_markdown = None
+                logger.info("chart_generation_skipped_timeout")
 
         if chart_markdown:
-            # Insert chart before "분석 및 인사이트" section if found
             insight_markers = ["#### 분석 및 인사이트", "#### 분석", "### 분석 및 인사이트", "### 분석"]
             inserted = False
             for marker in insight_markers:
@@ -502,7 +509,6 @@ def format_answer(state: AgentState) -> Dict[str, Any]:
             if not inserted:
                 answer = answer + f"\n\n#### 시각화\n{chart_markdown}"
 
-        # Embed SQL reference for full-data re-execution (hidden in details tag)
         if len(results) >= 10000:
             answer += f"\n\n<details><summary>실행된 쿼리</summary>\n\n```sql\n{sql}\n```\n</details>"
 

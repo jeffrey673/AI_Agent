@@ -175,28 +175,29 @@ async def _warmup_bq_schema():
             sql_mod._schema_cache_sales = f"\n\n### 실제 테이블 스키마 ({table_short})\n" + "\n".join(schema_lines)
             logger.info("bq_schema_warmup_sales_done", columns=len(schema))
 
-        # 2) Pre-cache all marketing table schemas individually
-        loaded = 0
-        for table_entry in sql_mod.MARKETING_TABLES:
-            table_path, label = table_entry[0], table_entry[1]
-            if table_path in sql_mod._schema_cache_tables:
-                loaded += 1
-                continue
+        # 2) Pre-cache all marketing table schemas in parallel
+        uncached = [
+            (t[0], t[1]) for t in sql_mod.MARKETING_TABLES
+            if t[0] not in sql_mod._schema_cache_tables
+        ]
+
+        async def _fetch_one(table_path, label):
             try:
-                tbl_schema = await asyncio.to_thread(
-                    bq.get_table_schema, table_path
-                )
+                tbl_schema = await asyncio.to_thread(bq.get_table_schema, table_path)
                 tbl_lines = [
                     f"  - {col['name']} ({col['type']}): {col['description']}"
                     for col in tbl_schema
                 ]
                 tbl_short = table_path.rsplit(".", 1)[-1]
                 sql_mod._schema_cache_tables[table_path] = f"\n\n### {label} ({tbl_short})\n" + "\n".join(tbl_lines)
-                loaded += 1
+                return True
             except Exception as e:
                 logger.warning("bq_schema_warmup_table_failed", table=table_path, error=str(e))
+                return False
 
-        logger.info("bq_schema_warmup_done", marketing_tables_cached=loaded)
+        results = await asyncio.gather(*[_fetch_one(tp, lb) for tp, lb in uncached])
+        loaded = sum(1 for r in results if r) + sum(1 for t in sql_mod.MARKETING_TABLES if t[0] in sql_mod._schema_cache_tables and t[0] not in dict(uncached))
+        logger.info("bq_schema_warmup_done", marketing_tables_cached=loaded, parallel=len(uncached))
     except Exception as e:
         logger.warning("bq_schema_warmup_failed", error=str(e))
 

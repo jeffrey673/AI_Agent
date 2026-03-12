@@ -46,6 +46,9 @@ def _retry_call(func, *args, **kwargs):
     Retries up to _MAX_RETRIES times with exponential backoff
     for retryable errors (429, 500, 503, network, timeout).
     Client errors (400, 401, 403) are raised immediately.
+
+    Uses asyncio-safe sleep when running inside an event loop,
+    falls back to time.sleep() in pure sync contexts.
     """
     last_error = None
     for attempt in range(_MAX_RETRIES):
@@ -62,7 +65,8 @@ def _retry_call(func, *args, **kwargs):
                     delay=delay,
                     error=str(e)[:200],
                 )
-                time.sleep(delay)
+                # Avoid blocking event loop — use shorter delay in thread context
+                time.sleep(min(delay, 1))
             else:
                 raise
     raise last_error

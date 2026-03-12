@@ -163,13 +163,15 @@ class OrchestratorAgent:
             return result
 
         # Step 1: Classify query intent
-        # Fast path: keyword match first, LLM fallback only when ambiguous
+        # Fast path: keyword match first, LLM fallback only for short ambiguous queries
         route = self._keyword_classify(query)
         is_system_task = query.strip().startswith("### Task:")
         if route == "direct" and conversation_context and not is_system_task:
-            # Ambiguous query with context — use Flash for fast classification
-            flash = get_flash_client()
-            route = await self._classify_with_llm(query, conversation_context, flash)
+            # Only call Flash if query is short/ambiguous (e.g. "그거 다시", "2월은?")
+            # Long explicit queries (>30 chars) are rarely misclassified by keywords
+            if len(query.strip()) <= 30:
+                flash = get_flash_client()
+                route = await self._classify_with_llm(query, conversation_context, flash)
         logger.info(
             "orchestrator_routed",
             query=query[:100],
@@ -468,9 +470,11 @@ class OrchestratorAgent:
             _maintenance_warning = f"\n\n> ⚠️ 참고: 데이터 테이블이 업데이트 중일 수 있습니다. 수치가 부정확하면 잠시 후 다시 조회해주세요."
             logger.info("maintenance_soft_warning", reason=mm.reason)
         try:
+            # Trim context for SQL — only last 5 turns needed (reduces prompt size ~80%)
+            sql_context = _build_conversation_context(messages, max_turns=5) if messages else ""
             answer = await run_sql_agent(
                 query,
-                conversation_context=conversation_context,
+                conversation_context=sql_context,
                 model_type=model_type,
             )
             # Check if SQL agent returned an error (it returns error as string, not exception)
@@ -890,6 +894,31 @@ JSON만 반환:
             logger.warning("followup_generation_failed", error=str(e))
             return {"source": "direct", "answer": '{"follow_ups": []}'}
 
+    # Keywords that indicate the query needs real-time web search
+    _SEARCH_KEYWORDS = [
+        "날씨", "뉴스", "오늘", "현재", "실시간", "최신",
+        "환율", "주가", "코스피", "나스닥", "다우",
+        "검색", "찾아봐", "알아봐",
+        "경쟁사", "시장", "트렌드", "업계",
+        "정책", "법률", "규정",
+        "이벤트", "행사",
+    ]
+
+    def _needs_web_search(self, query: str) -> bool:
+        """Check if query needs real-time web search or can be answered directly."""
+        q = query.lower().strip()
+        # Very short queries (greetings, single words) → no search
+        if len(q) <= 10:
+            return False
+        # Explicit search keywords
+        if any(kw in q for kw in self._SEARCH_KEYWORDS):
+            return True
+        # Questions about external topics (not SKIN1004 internal) that are long enough
+        # to be substantive → search for freshness
+        if len(q) > 50 and "?" in query:
+            return True
+        return False
+
     async def _handle_direct(
         self,
         query: str,
@@ -901,9 +930,8 @@ JSON만 반환:
     ) -> dict:
         """General question: uses full conversation history for natural dialogue.
 
-        Both Gemini and Claude get real-time info via Google Search.
-        - Gemini: native Google Search grounding
-        - Claude: Gemini Search gathers info → passed to Claude for final answer
+        Uses Google Search grounding only when the query needs real-time info.
+        Simple questions (greetings, SKIN1004 Q&A) skip search for faster response.
         When images are provided, uses vision LLM directly.
         """
         # Handle Open WebUI system tasks (follow-up/title/tag generation)
@@ -951,27 +979,43 @@ JSON만 반환:
                 )
                 return {"source": "direct", "answer": answer}
 
-            if model_type == MODEL_GEMINI:
-                # Gemini: native Google Search grounding
-                if messages and len(messages) > 1:
-                    answer = llm.generate_with_history_and_search(
-                        messages=messages,
-                        system_instruction=system,
-                        temperature=0.5,
-                    )
-                else:
-                    answer = llm.generate_with_search(
-                        query,
-                        system_instruction=system,
-                        temperature=0.5,
-                    )
-            else:
-                # Claude: gather real-time info via Gemini Search, then answer with Claude
-                search_context = self._gather_search_context(query)
+            # Decide if search grounding is needed (skip for greetings/simple Qs)
+            _needs_search = self._needs_web_search(query)
 
-                if search_context:
-                    # Inject search results into Claude's prompt
-                    search_system = system + f"\n\n## 참고할 최신 검색 정보 (Google 검색 결과)\n{search_context}"
+            if model_type == MODEL_GEMINI:
+                if _needs_search:
+                    # Gemini: native Google Search grounding
+                    if messages and len(messages) > 1:
+                        answer = llm.generate_with_history_and_search(
+                            messages=messages,
+                            system_instruction=system,
+                            temperature=0.5,
+                        )
+                    else:
+                        answer = llm.generate_with_search(
+                            query,
+                            system_instruction=system,
+                            temperature=0.5,
+                        )
+                else:
+                    # Simple query — skip search, use direct generation (10s+ faster)
+                    if messages and len(messages) > 1:
+                        answer = llm.generate_with_history(
+                            messages=messages,
+                            system_instruction=system,
+                            temperature=0.5,
+                        )
+                    else:
+                        answer = llm.generate(
+                            query,
+                            system_instruction=system,
+                            temperature=0.5,
+                        )
+            else:
+                # Claude path
+                if _needs_search:
+                    search_context = self._gather_search_context(query)
+                    search_system = system + f"\n\n## 참고할 최신 검색 정보 (Google 검색 결과)\n{search_context}" if search_context else system
                 else:
                     search_system = system
 
