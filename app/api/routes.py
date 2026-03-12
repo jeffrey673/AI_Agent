@@ -238,7 +238,6 @@ async def _stream_response(
             ],
         )
         yield f"data: {stream_chunk.model_dump_json()}\n\n"
-        await asyncio.sleep(0.01)  # Small delay for streaming effect
 
     # Send final chunk
     final_chunk = ChatCompletionStreamResponse(

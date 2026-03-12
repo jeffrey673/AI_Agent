@@ -104,7 +104,6 @@
     }
 
     setupEventListeners();
-    filterModelSelector();
     showAdminButton();
     await loadConversations();
     updateTheme();
@@ -196,6 +195,14 @@
       clearPendingImages();
       closeMobileSidebar();
     });
+
+    // Change password
+    var btnChangePw = document.getElementById("btn-change-pw");
+    if (btnChangePw) {
+      btnChangePw.addEventListener("click", function () {
+        showChangePasswordModal();
+      });
+    }
 
     // Logout
     btnLogout.addEventListener("click", async function () {
@@ -1028,10 +1035,6 @@
       label: "Gemini",
       svg: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>'
     },
-    "Claude API": {
-      label: "Claude",
-      svg: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>'
-    },
     "GWS Token": {
       label: "Token",
       svg: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>'
@@ -1175,38 +1178,39 @@
 
   // ===== Model Access Control =====
   var MODEL_LABELS = {
-    "skin1004-Analysis": "Claude (Analysis)",
+    "skin1004-Analysis": "SKIN1004 Analysis",
   };
 
-  function filterModelSelector() {
-    if (!currentUser || !currentUser.allowed_models) return;
-    var allowed = currentUser.allowed_models;
-    var options = modelSelect.querySelectorAll("option");
-    var hasSelected = false;
-    for (var i = 0; i < options.length; i++) {
-      if (allowed.indexOf(options[i].value) === -1) {
-        options[i].style.display = "none";
-        options[i].disabled = true;
-        if (options[i].selected) options[i].selected = false;
-      } else {
-        options[i].style.display = "";
-        options[i].disabled = false;
-        if (!hasSelected) { options[i].selected = true; hasSelected = true; }
-      }
-    }
-  }
-
   function showAdminButton() {
-    if (currentUser && currentUser.role === "admin") {
+    if (currentUser) {
       document.getElementById("admin-btn-wrap").style.display = "";
     }
   }
 
+  function isAdmin() {
+    return currentUser && currentUser.role === "admin";
+  }
+
   // ===== Admin Drawer =====
+  var _adminGroups = [];
+  var _adminDepts = [];
+
   function openAdminDrawer() {
-    loadAdminUsers();
     document.getElementById("skin-admin-overlay").className = "open";
     document.getElementById("skin-admin-drawer").className = "open";
+    // Hide write-actions for non-admin
+    document.getElementById("btn-create-group").style.display = isAdmin() ? "" : "none";
+    document.getElementById("btn-sync-ad").style.display = isAdmin() ? "" : "none";
+    // Load all data in parallel
+    Promise.all([
+      fetch("/api/admin/ad/stats").then(function(r) { return r.json(); }),
+      fetch("/api/admin/groups").then(function(r) { return r.json(); }),
+      fetch("/api/admin/ad/departments").then(function(r) { return r.json(); }),
+    ]).then(function(results) {
+      renderAdminStats(results[0]);
+      renderAdminGroups(results[1]);
+      renderAdminDepts(results[2]);
+    }).catch(function(e) { console.error("Admin load failed:", e); });
   }
 
   function closeAdminDrawer() {
@@ -1214,92 +1218,368 @@
     document.getElementById("skin-admin-drawer").className = "closed";
   }
 
-  function loadAdminUsers() {
-    fetch("/api/admin/users")
-      .then(function (r) { return r.json(); })
-      .then(function (users) {
-        var container = document.getElementById("admin-user-list");
-        var html = "";
-        for (var i = 0; i < users.length; i++) {
-          var u = users[i];
-          var initial = (u.name || "U").charAt(0).toUpperCase();
-          var isAdmin = u.role === "admin";
-          html += '<div class="admin-user-card">';
-          html += '<div class="admin-user-info">';
-          html += '<div class="admin-user-avatar">' + initial + '</div>';
-          html += '<div class="admin-user-detail">';
-          html += '<div class="admin-user-name">' + u.name + '</div>';
-          html += '<div class="admin-user-email">' + u.email + '</div>';
-          html += '</div>';
-          html += '<span class="admin-role-badge ' + u.role + '">' + u.role + '</span>';
-          html += '</div>';
-          html += '<div class="admin-model-toggles">';
-          for (var modelId in MODEL_LABELS) {
-            var active = u.allowed_models.indexOf(modelId) !== -1;
-            var disabled = isAdmin;
-            html += '<button class="admin-model-toggle' +
-              (active ? " active" : "") +
-              (disabled ? " disabled" : "") +
-              '" data-user-id="' + u.id + '" data-model="' + modelId + '"' +
-              (disabled ? " disabled" : "") +
-              '>' + MODEL_LABELS[modelId] + '</button>';
-          }
-          html += '</div>';
-          html += '</div>';
-        }
-        container.innerHTML = html;
+  // Tab switching
+  document.querySelectorAll(".admin-tab").forEach(function(tab) {
+    tab.addEventListener("click", function() {
+      document.querySelectorAll(".admin-tab").forEach(function(t) { t.classList.remove("active"); });
+      document.querySelectorAll(".admin-tab-content").forEach(function(c) { c.classList.remove("active"); });
+      tab.classList.add("active");
+      document.getElementById("tab-" + tab.dataset.tab).classList.add("active");
+      if (tab.dataset.tab === "users") loadAdminADUsers();
+    });
+  });
 
-        // Attach click handlers
-        container.querySelectorAll(".admin-model-toggle:not(.disabled)").forEach(function (btn) {
-          btn.addEventListener("click", function () {
-            toggleUserModel(this.dataset.userId, this.dataset.model, this);
-          });
-        });
-      })
-      .catch(function (e) { console.error("Failed to load admin users:", e); });
+  // Stats
+  function loadAdminStats() {
+    fetch("/api/admin/ad/stats").then(function(r) { return r.json(); }).then(renderAdminStats).catch(function() {});
+  }
+  function renderAdminStats(s) {
+    document.getElementById("admin-stats-bar").innerHTML =
+      '<div class="admin-stat"><div class="admin-stat-num">' + s.total_ad_users + '</div><div class="admin-stat-label">AD 사용자</div></div>' +
+      '<div class="admin-stat"><div class="admin-stat-num">' + s.assigned_users + '</div><div class="admin-stat-label">배정됨</div></div>' +
+      '<div class="admin-stat"><div class="admin-stat-num">' + s.unassigned_users + '</div><div class="admin-stat-label">미배정</div></div>' +
+      '<div class="admin-stat"><div class="admin-stat-num">' + s.total_groups + '</div><div class="admin-stat-label">그룹</div></div>';
   }
 
-  function toggleUserModel(userId, modelId, btnEl) {
-    // Find current models from sibling buttons
-    var card = btnEl.closest(".admin-user-card");
-    var toggles = card.querySelectorAll(".admin-model-toggle:not(.disabled)");
-    var currentModels = [];
-    toggles.forEach(function (t) {
-      if (t.classList.contains("active")) currentModels.push(t.dataset.model);
+  // Departments — hierarchical tree
+  function loadAdminDepts() {
+    fetch("/api/admin/ad/departments").then(function(r) { return r.json(); }).then(renderAdminDepts).catch(function() {});
+  }
+  function renderAdminDepts(depts) {
+    _adminDepts = depts;
+    var sel = document.getElementById("admin-dept-filter");
+    sel.innerHTML = '<option value="">전체 부서</option>';
+
+    var tree = {};
+    depts.forEach(function(d) {
+      var parts = d.department.split(" > ");
+      var meaningful = parts.slice(2);
+      if (!meaningful.length) meaningful = [parts[parts.length - 1]];
+      for (var i = 0; i < meaningful.length; i++) {
+        var key = meaningful.slice(0, i + 1).join(" > ");
+        if (!tree[key]) tree[key] = {count: 0, depth: i, label: meaningful[i]};
+        tree[key].count += d.cnt;
+      }
     });
 
-    var idx = currentModels.indexOf(modelId);
-    if (idx !== -1) {
-      // Removing — ensure at least 1 model remains
-      if (currentModels.length <= 1) {
-        alert("최소 1개 모델은 필요합니다.");
-        return;
-      }
-      currentModels.splice(idx, 1);
-    } else {
-      currentModels.push(modelId);
-    }
+    var optHtml = "";
+    Object.keys(tree).sort().forEach(function(key) {
+      var node = tree[key];
+      var indent = "";
+      for (var i = 0; i < node.depth; i++) indent += "\u00A0\u00A0\u00A0";
+      var prefix = node.depth > 0 ? "└ " : "";
+      optHtml += '<option value="' + escapeHtml(node.label) + '">' +
+        indent + prefix + escapeHtml(node.label) + ' (' + node.count + ')</option>';
+    });
+    sel.innerHTML += optHtml;
+  }
 
-    fetch("/api/admin/users/" + userId + "/models", {
-      method: "PUT",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ allowed_models: currentModels }),
-    })
-      .then(function (r) {
-        if (!r.ok) throw new Error("Failed");
+  // Groups
+  function loadAdminGroups() {
+    fetch("/api/admin/groups").then(function(r) { return r.json(); }).then(renderAdminGroups).catch(function(e) { console.error("Failed to load groups:", e); });
+  }
+  function renderAdminGroups(groups) {
+    _adminGroups = groups;
+    var container = document.getElementById("admin-group-list");
+    // Update group filter in users tab
+    var gf = document.getElementById("admin-group-filter");
+    var gfHtml = '<option value="">전체 그룹</option><option value="unassigned">미배정</option>';
+    groups.forEach(function(g) {
+      gfHtml += '<option value="' + g.id + '">' + g.name + '</option>';
+    });
+    gf.innerHTML = gfHtml;
+
+    if (!groups.length) {
+      container.innerHTML = '<div style="text-align:center;padding:40px 0;color:var(--text-muted)">그룹이 없습니다. 새 그룹을 만들어보세요.</div>';
+      return;
+    }
+    var html = "";
+    groups.forEach(function(g) {
+      html += '<div class="admin-group-card" data-group-id="' + g.id + '">';
+      html += '<div class="admin-group-header">';
+      html += '<div class="admin-group-name">' + escapeHtml(g.name) + '</div>';
+      html += '<div class="admin-group-meta">';
+      html += '<span class="admin-group-count">' + g.member_count + '명</span>';
+      html += '<div class="admin-group-actions">';
+      html += '<button onclick="adminViewGroup(' + g.id + ', \'' + escapeHtml(g.name) + '\')">멤버</button>';
+      if (isAdmin()) {
+        html += '<button onclick="adminEditGroup(' + g.id + ', \'' + escapeHtml(g.name) + '\', \'' + escapeHtml(g.description || '') + '\')">편집</button>';
+        html += '<button class="danger" onclick="adminDeleteGroup(' + g.id + ', \'' + escapeHtml(g.name) + '\')">삭제</button>';
+      }
+      html += '</div></div></div>';
+      if (g.description) html += '<div class="admin-group-desc">' + escapeHtml(g.description) + '</div>';
+      html += '</div>';
+    });
+    container.innerHTML = html;
+  }
+
+  // Create group
+  document.getElementById("btn-create-group").addEventListener("click", function() {
+    showAdminModal("새 그룹 만들기", "", "", function(name, desc) {
+      fetch("/api/admin/groups", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({name: name, description: desc})
+      }).then(function(r) {
+        if (!r.ok) return r.json().then(function(e) { throw new Error(e.detail); });
         return r.json();
-      })
-      .then(function () {
-        // Toggle visual state
-        if (btnEl.classList.contains("active")) {
-          btnEl.classList.remove("active");
+      }).then(function() {
+        loadAdminGroups();
+        loadAdminStats();
+      }).catch(function(e) { alert("그룹 생성 실패: " + e.message); });
+    });
+  });
+
+  // AD sync
+  document.getElementById("btn-sync-ad").addEventListener("click", function() {
+    if (!confirm("AD 사용자 목록을 동기화하시겠습니까?")) return;
+    var btn = this;
+    btn.textContent = "동기화 중...";
+    btn.disabled = true;
+    fetch("/api/admin/ad/sync", {method: "POST"})
+      .then(function(r) { return r.json(); })
+      .then(function(res) {
+        btn.textContent = "AD 동기화";
+        btn.disabled = false;
+        if (res.ok) {
+          alert("AD 동기화 완료!\n" + res.output.split("\n").slice(-5).join("\n"));
+          loadAdminStats();
+          loadAdminADUsers();
         } else {
-          btnEl.classList.add("active");
+          alert("동기화 실패: " + (res.error || "Unknown"));
         }
-      })
-      .catch(function (e) {
-        alert("모델 권한 변경 실패: " + e.message);
+      }).catch(function(e) {
+        btn.textContent = "AD 동기화";
+        btn.disabled = false;
+        alert("동기화 오류: " + e.message);
       });
+  });
+
+  // AD users list
+  function loadAdminADUsers() {
+    var dept = document.getElementById("admin-dept-filter").value;
+    var groupFilter = document.getElementById("admin-group-filter").value;
+    var search = document.getElementById("admin-search").value;
+
+    var params = new URLSearchParams();
+    if (dept) params.set("dept", dept);
+    if (search) params.set("search", search);
+    if (groupFilter === "unassigned") params.set("unassigned", "true");
+    else if (groupFilter) params.set("group_id", groupFilter);
+
+    fetch("/api/admin/ad/users?" + params.toString())
+      .then(function(r) { return r.json(); })
+      .then(function(users) {
+        var container = document.getElementById("admin-user-list");
+        if (!users.length) {
+          container.innerHTML = '<div style="text-align:center;padding:40px 0;color:var(--text-muted)">검색 결과가 없습니다.</div>';
+          return;
+        }
+        var html = "";
+        users.forEach(function(u) {
+          var initial = (u.display_name || "U").charAt(0).toUpperCase();
+          var deptShort = u.department ? u.department.split(" > ").slice(-1)[0] : "";
+          var groupBadge = u.group_names
+            ? '<span class="admin-ad-group-badge">' + escapeHtml(u.group_names) + '</span>'
+            : '<span class="admin-ad-group-badge none">미배정</span>';
+
+          html += '<div class="admin-ad-user">';
+          html += '<div class="admin-ad-avatar">' + initial + '</div>';
+          html += '<div class="admin-ad-info">';
+          html += '<div class="admin-ad-name">' + escapeHtml(u.display_name) + ' <small style="color:var(--text-muted)">(' + escapeHtml(u.username) + ')</small></div>';
+          html += '<div class="admin-ad-email">' + escapeHtml(u.email || "N/A") + '</div>';
+          html += '<div class="admin-ad-dept">' + escapeHtml(deptShort) + '</div>';
+          html += '</div>';
+          html += groupBadge;
+          if (isAdmin()) {
+            html += '<button class="admin-ad-assign" onclick="adminAssignUser(' + u.id + ', \'' + escapeHtml(u.display_name) + '\')">배정</button>';
+          }
+          html += '</div>';
+        });
+        container.innerHTML = html;
+      }).catch(function(e) { console.error("Failed to load AD users:", e); });
+  }
+
+  // Filters
+  document.getElementById("admin-dept-filter").addEventListener("change", loadAdminADUsers);
+  document.getElementById("admin-group-filter").addEventListener("change", loadAdminADUsers);
+  var _searchTimer = null;
+  document.getElementById("admin-search").addEventListener("input", function() {
+    clearTimeout(_searchTimer);
+    _searchTimer = setTimeout(loadAdminADUsers, 300);
+  });
+
+  // Assign user to group
+  window.adminAssignUser = function(userId, userName) {
+    if (!_adminGroups.length) { alert("먼저 그룹을 만들어주세요."); return; }
+    var options = _adminGroups.map(function(g) { return g.name; });
+    var choice = prompt("'" + userName + "' 을(를) 배정할 그룹을 선택하세요:\n\n" +
+      _adminGroups.map(function(g, i) { return (i+1) + ". " + g.name; }).join("\n") +
+      "\n\n번호를 입력하세요:");
+    if (!choice) return;
+    var idx = parseInt(choice) - 1;
+    if (isNaN(idx) || idx < 0 || idx >= _adminGroups.length) { alert("잘못된 번호입니다."); return; }
+    var groupId = _adminGroups[idx].id;
+
+    fetch("/api/admin/groups/" + groupId + "/members", {
+      method: "POST",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify({ad_user_ids: [userId]})
+    }).then(function(r) { return r.json(); })
+    .then(function() { loadAdminADUsers(); loadAdminGroups(); loadAdminStats(); })
+    .catch(function(e) { alert("배정 실패: " + e.message); });
+  };
+
+  // View group members
+  window.adminViewGroup = function(groupId, groupName) {
+    fetch("/api/admin/groups/" + groupId + "/members")
+      .then(function(r) { return r.json(); })
+      .then(function(members) {
+        if (!members.length) { alert("'" + groupName + "' 그룹에 멤버가 없습니다."); return; }
+        var msg = "'" + groupName + "' 멤버 (" + members.length + "명):\n\n";
+        members.forEach(function(m) {
+          msg += "- " + m.display_name + " (" + (m.email || m.username) + ")\n";
+        });
+        if (!isAdmin()) { alert(msg); return; }
+        msg += "\n멤버를 제거하시려면 [확인]을 누르세요.";
+        if (confirm(msg)) {
+          var removeChoice = prompt("제거할 멤버 이름을 입력하세요 (일부 입력 가능):");
+          if (!removeChoice) return;
+          var toRemove = members.filter(function(m) {
+            return m.display_name.includes(removeChoice) || m.username.includes(removeChoice);
+          });
+          if (!toRemove.length) { alert("해당 멤버를 찾을 수 없습니다."); return; }
+          if (!confirm(toRemove.map(function(m) { return m.display_name; }).join(", ") + " 을(를) 제거하시겠습니까?")) return;
+          fetch("/api/admin/groups/" + groupId + "/members", {
+            method: "DELETE",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify({ad_user_ids: toRemove.map(function(m) { return m.id; })})
+          }).then(function() { loadAdminGroups(); loadAdminStats(); });
+        }
+      }).catch(function(e) { alert("멤버 조회 실패: " + e.message); });
+  };
+
+  // Edit group
+  window.adminEditGroup = function(groupId, name, desc) {
+    showAdminModal("그룹 편집", name, desc, function(newName, newDesc) {
+      fetch("/api/admin/groups/" + groupId, {
+        method: "PUT",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({name: newName, description: newDesc})
+      }).then(function(r) {
+        if (!r.ok) return r.json().then(function(e) { throw new Error(e.detail); });
+        return r.json();
+      }).then(function() { loadAdminGroups(); })
+      .catch(function(e) { alert("그룹 수정 실패: " + e.message); });
+    });
+  };
+
+  // Delete group
+  window.adminDeleteGroup = function(groupId, name) {
+    if (!confirm("'" + name + "' 그룹을 삭제하시겠습니까?\n멤버는 미배정 상태로 변경됩니다.")) return;
+    fetch("/api/admin/groups/" + groupId, {method: "DELETE"})
+      .then(function() { loadAdminGroups(); loadAdminStats(); })
+      .catch(function(e) { alert("삭제 실패: " + e.message); });
+  };
+
+  // Modal helper
+  function showAdminModal(title, nameVal, descVal, onSubmit) {
+    var overlay = document.createElement("div");
+    overlay.className = "admin-modal-overlay";
+    overlay.innerHTML =
+      '<div class="admin-modal">' +
+      '<h3>' + title + '</h3>' +
+      '<input type="text" id="modal-name" placeholder="그룹 이름" value="' + escapeHtml(nameVal) + '">' +
+      '<textarea id="modal-desc" placeholder="설명 (선택)">' + escapeHtml(descVal) + '</textarea>' +
+      '<div class="admin-modal-actions">' +
+      '<button class="admin-btn-secondary" id="modal-cancel">취소</button>' +
+      '<button class="admin-btn-primary" id="modal-ok">확인</button>' +
+      '</div></div>';
+    document.body.appendChild(overlay);
+    overlay.querySelector("#modal-name").focus();
+    overlay.querySelector("#modal-cancel").addEventListener("click", function() { overlay.remove(); });
+    overlay.addEventListener("click", function(e) { if (e.target === overlay) overlay.remove(); });
+    overlay.querySelector("#modal-ok").addEventListener("click", function() {
+      var n = overlay.querySelector("#modal-name").value.trim();
+      var d = overlay.querySelector("#modal-desc").value.trim();
+      if (!n) { alert("그룹 이름을 입력하세요."); return; }
+      overlay.remove();
+      onSubmit(n, d);
+    });
+  }
+
+  // Password change modal
+  function showChangePasswordModal() {
+    var overlay = document.createElement("div");
+    overlay.className = "admin-modal-overlay";
+    overlay.innerHTML =
+      '<div class="admin-modal pw-modal">' +
+      '<h3>비밀번호 변경</h3>' +
+      '<label class="pw-label">현재 비밀번호</label>' +
+      '<input type="password" id="pw-current" placeholder="현재 비밀번호 입력">' +
+      '<label class="pw-label">새 비밀번호</label>' +
+      '<input type="password" id="pw-new" placeholder="새 비밀번호 (4자 이상)">' +
+      '<label class="pw-label">새 비밀번호 확인</label>' +
+      '<input type="password" id="pw-confirm" placeholder="새 비밀번호 다시 입력">' +
+      '<div class="pw-error" id="pw-error"></div>' +
+      '<div class="admin-modal-actions">' +
+      '<button class="admin-btn-secondary" id="pw-cancel">취소</button>' +
+      '<button class="admin-btn-primary" id="pw-submit">변경</button>' +
+      '</div></div>';
+    document.body.appendChild(overlay);
+    overlay.querySelector("#pw-current").focus();
+
+    var close = function () { overlay.remove(); };
+    overlay.querySelector("#pw-cancel").addEventListener("click", close);
+    overlay.addEventListener("click", function (e) { if (e.target === overlay) close(); });
+
+    overlay.querySelector("#pw-submit").addEventListener("click", async function () {
+      var cur = overlay.querySelector("#pw-current").value;
+      var nw = overlay.querySelector("#pw-new").value;
+      var cf = overlay.querySelector("#pw-confirm").value;
+      var errEl = overlay.querySelector("#pw-error");
+      errEl.textContent = "";
+
+      if (!cur) { errEl.textContent = "현재 비밀번호를 입력하세요"; return; }
+      if (nw.length < 4) { errEl.textContent = "새 비밀번호는 4자 이상이어야 합니다"; return; }
+      if (nw !== cf) { errEl.textContent = "새 비밀번호가 일치하지 않습니다"; return; }
+
+      var btn = overlay.querySelector("#pw-submit");
+      btn.disabled = true;
+      btn.textContent = "변경 중...";
+
+      try {
+        var res = await fetch("/api/auth/change-password", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ current_password: cur, new_password: nw }),
+        });
+        var data = await res.json();
+        if (!res.ok) {
+          errEl.textContent = data.detail || "변경 실패";
+          btn.disabled = false;
+          btn.textContent = "변경";
+          return;
+        }
+        overlay.querySelector(".pw-modal").innerHTML =
+          '<h3>비밀번호 변경</h3>' +
+          '<p class="pw-success">비밀번호가 변경되었습니다.</p>' +
+          '<div class="admin-modal-actions">' +
+          '<button class="admin-btn-primary" id="pw-done">확인</button>' +
+          '</div>';
+        overlay.querySelector("#pw-done").addEventListener("click", close);
+      } catch (e) {
+        errEl.textContent = "서버 연결 오류";
+        btn.disabled = false;
+        btn.textContent = "변경";
+      }
+    });
+  }
+
+  function escapeHtml(str) {
+    if (!str) return "";
+    var map = {"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#039;"};
+    return str.replace(/[&<>"']/g, function(c) { return map[c]; });
   }
 
 })();

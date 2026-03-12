@@ -302,7 +302,7 @@ def format_answer(state: AgentState) -> Dict[str, Any]:
     _is_timeseries = any(kw in query for kw in _ts_keywords)
 
     # Truncate long text fields (review content etc.) to reduce prompt size
-    def _truncate_row(row, max_text_len=150):
+    def _truncate_row(row, max_text_len=80):
         truncated = {}
         for k, v in row.items():
             if isinstance(v, str) and len(v) > max_text_len:
@@ -330,9 +330,9 @@ def format_answer(state: AgentState) -> Dict[str, Any]:
         preview_rows = [_truncate_row(r) for r in results[:15]]
         result_preview = json.dumps(preview_rows, ensure_ascii=False, indent=2, default=str)
 
-    # Hard cap on preview size to keep LLM prompt manageable (max ~8KB)
-    if len(result_preview) > 8000:
-        preview_rows = [_truncate_row(r) for r in results[:10]]
+    # Hard cap on preview size to keep LLM prompt manageable (max ~5KB)
+    if len(result_preview) > 5000:
+        preview_rows = [_truncate_row(r) for r in results[:8]]
         result_preview = json.dumps(preview_rows, ensure_ascii=False, indent=2, default=str)
 
     today = datetime.now().strftime("%Y-%m-%d")
@@ -533,8 +533,8 @@ def _build_smart_preview(results: list, query: str) -> str:
     for row in top_rows:
         tr = {}
         for k, v in row.items():
-            if isinstance(v, str) and len(v) > 150:
-                tr[k] = v[:150] + "..."
+            if isinstance(v, str) and len(v) > 80:
+                tr[k] = v[:80] + "..."
             else:
                 tr[k] = v
         truncated_rows.append(tr)

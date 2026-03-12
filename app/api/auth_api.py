@@ -1,17 +1,21 @@
-"""Authentication endpoints: signup, signin, me, logout."""
+"""Authentication endpoints: signup, signin, me, logout.
 
+Uses MariaDB for user storage with AD-linked department+name login.
+"""
+
+import asyncio
+import time
 from datetime import datetime, timedelta, timezone
 
 import bcrypt as _bcrypt
 import jwt
 import structlog
-from fastapi import APIRouter, Depends, HTTPException, Response
-from pydantic import BaseModel, EmailStr
-from sqlalchemy.orm import Session
+from fastapi import APIRouter, Depends, HTTPException, Query, Response
+from pydantic import BaseModel
 
 from app.api.auth_middleware import get_current_user
 from app.config import get_settings
-from app.db.database import get_db
+from app.db.mariadb import fetch_all, fetch_one, execute, execute_lastid
 from app.db.models import User
 
 logger = structlog.get_logger(__name__)
@@ -20,46 +24,78 @@ auth_api_router = APIRouter(prefix="/api/auth", tags=["auth"])
 
 _ALGORITHM = "HS256"
 _TOKEN_EXPIRE_DAYS = 7
+_ALL_MODELS = "skin1004-Analysis"
 
+# ── AD user cache (avoid DB hit on every keystroke) ──
+_ad_cache: list[dict] = []
+_ad_cache_ts: float = 0
+_AD_CACHE_TTL = 300  # 5 minutes
+
+
+# ── Async DB wrappers ──
+
+async def _db_fetch_all(sql: str, params: tuple = ()) -> list[dict]:
+    return await asyncio.to_thread(fetch_all, sql, params)
+
+
+async def _db_fetch_one(sql: str, params: tuple = ()):
+    return await asyncio.to_thread(fetch_one, sql, params)
+
+
+async def _db_execute(sql: str, params: tuple = ()) -> int:
+    return await asyncio.to_thread(execute, sql, params)
+
+
+async def _db_execute_lastid(sql: str, params: tuple = ()) -> int:
+    return await asyncio.to_thread(execute_lastid, sql, params)
+
+
+# ── Schemas ──
 
 class SignupRequest(BaseModel):
-    email: EmailStr
+    department: str
     name: str
     password: str
 
 
 class SigninRequest(BaseModel):
-    email: EmailStr
+    department: str
+    name: str
     password: str
 
 
-_ALL_MODELS = "skin1004-Analysis"
-
-
 class UserResponse(BaseModel):
-    id: str
+    id: int
     email: str
     name: str
+    department: str
     role: str
     allowed_models: list[str]
 
 
-def _user_response(user: User) -> UserResponse:
-    """Build UserResponse with resolved allowed_models."""
-    if user.role == "admin":
-        models = [m.strip() for m in _ALL_MODELS.split(",") if m.strip()]
-    else:
-        raw = getattr(user, "allowed_models", "") or ""
-        models = [m.strip() for m in raw.split(",") if m.strip()]
-        if not models:
-            models = ["skin1004-Analysis"]
-    return UserResponse(
-        id=user.id, email=user.email, name=user.name,
-        role=user.role, allowed_models=models,
-    )
+# ── Helpers ──
+
+def _resolve_models(role: str, allowed_models: str | None) -> list[str]:
+    if role == "admin":
+        return [m.strip() for m in _ALL_MODELS.split(",") if m.strip()]
+    raw = allowed_models or ""
+    models = [m.strip() for m in raw.split(",") if m.strip()]
+    return models if models else ["skin1004-Analysis"]
 
 
-def _create_token(user_id: str, email: str = "") -> str:
+def _user_response(user_row: dict) -> dict:
+    """Build UserResponse dict from a joined users+ad_users row."""
+    return {
+        "id": user_row["id"],
+        "email": user_row.get("ad_email") or user_row.get("email") or "",
+        "name": user_row.get("ad_name") or user_row.get("display_name") or "",
+        "department": user_row.get("department") or "",
+        "role": user_row["role"],
+        "allowed_models": _resolve_models(user_row["role"], user_row.get("allowed_models")),
+    }
+
+
+def _create_token(user_id: int, email: str = "") -> str:
     settings = get_settings()
     payload = {
         "user_id": user_id,
@@ -82,56 +118,205 @@ def _set_cookie(response: Response, token: str):
     )
 
 
+# ── Public endpoints (no auth required, for login form) ──
+
+@auth_api_router.get("/departments")
+async def list_departments():
+    """List all departments with user counts (from cache)."""
+    cache = await _get_ad_cache()
+    counts: dict[str, int] = {}
+    for u in cache:
+        d = u.get("department") or ""
+        if d:
+            counts[d] = counts.get(d, 0) + 1
+    return [{"department": k, "cnt": v} for k, v in sorted(counts.items())]
+
+
+@auth_api_router.get("/users-by-dept")
+async def list_users_by_department(
+    dept: str = Query(..., description="Department name (exact match)")
+):
+    """List AD users in a department (for login form name selector)."""
+    users = await _db_fetch_all("""
+        SELECT ad.id, ad.display_name, ad.email,
+               CASE WHEN u.id IS NOT NULL THEN 1 ELSE 0 END as registered
+        FROM ad_users ad
+        LEFT JOIN users u ON ad.id = u.ad_user_id
+        WHERE ad.is_active = 1 AND ad.department = %s
+        ORDER BY ad.display_name
+    """, (dept,))
+    return users
+
+
+async def _get_ad_cache() -> list[dict]:
+    """Return cached AD user list, refresh if stale."""
+    global _ad_cache, _ad_cache_ts
+    now = time.time()
+    if _ad_cache and (now - _ad_cache_ts) < _AD_CACHE_TTL:
+        return _ad_cache
+    rows = await _db_fetch_all("""
+        SELECT ad.id, ad.display_name, ad.email, ad.department
+        FROM ad_users ad
+        WHERE ad.is_active = 1 AND ad.department IS NOT NULL AND ad.department != ''
+        ORDER BY ad.display_name, ad.department
+    """)
+    _ad_cache = rows
+    _ad_cache_ts = now
+    logger.info("ad_cache_refreshed", count=len(rows))
+    return _ad_cache
+
+
+@auth_api_router.get("/search-name")
+async def search_by_name(
+    name: str = Query(..., min_length=1, description="Name to search")
+):
+    """Find AD users by display_name (in-memory search, no DB hit)."""
+    cache = await _get_ad_cache()
+    q = name.lower()
+    results = []
+    for u in cache:
+        if q in (u.get("display_name") or "").lower():
+            results.append(u)
+            if len(results) >= 20:
+                break
+    return results
+
+
+# ── Auth endpoints ──
+
 @auth_api_router.post("/signup")
-async def signup(req: SignupRequest, response: Response, db: Session = Depends(get_db)):
-    """Create a new user account."""
-    existing = db.query(User).filter(User.email == req.email).first()
-    if existing:
-        raise HTTPException(status_code=409, detail="Email already registered")
-
+async def signup(req: SignupRequest, response: Response):
+    """Create a new user account linked to an AD user."""
     if len(req.password) < 4:
-        raise HTTPException(status_code=400, detail="Password must be at least 4 characters")
+        raise HTTPException(status_code=400, detail="비밀번호는 4자 이상이어야 합니다")
 
-    user = User(
-        email=req.email,
-        name=req.name,
-        password=_bcrypt.hashpw(req.password.encode(), _bcrypt.gensalt()).decode(),
+    # Find AD user by department + name
+    ad_user = await _db_fetch_one(
+        "SELECT id, display_name, email, department FROM ad_users "
+        "WHERE is_active = 1 AND department = %s AND display_name = %s",
+        (req.department, req.name),
     )
-    # First user gets admin role
-    count = db.query(User).count()
-    if count == 0:
-        user.role = "admin"
-        user.allowed_models = _ALL_MODELS
+    if not ad_user:
+        raise HTTPException(status_code=404, detail="해당 부서/이름의 AD 사용자를 찾을 수 없습니다")
 
-    db.add(user)
-    db.commit()
-    db.refresh(user)
+    # Check if already registered
+    existing = await _db_fetch_one(
+        "SELECT id FROM users WHERE ad_user_id = %s", (ad_user["id"],)
+    )
+    if existing:
+        raise HTTPException(status_code=409, detail="이미 등록된 사용자입니다. 로그인해 주세요.")
 
-    token = _create_token(user.id, user.email)
+    # Hash password
+    pw_hash = _bcrypt.hashpw(req.password.encode(), _bcrypt.gensalt()).decode()
+
+    # Create user
+    user_id = await _db_execute_lastid(
+        "INSERT INTO users (email, password_hash, display_name, role, allowed_models, ad_user_id) "
+        "VALUES (%s, %s, %s, %s, %s, %s)",
+        (ad_user["email"] or "", pw_hash, ad_user["display_name"], "user", "skin1004-Analysis", ad_user["id"]),
+    )
+
+    token = _create_token(user_id, ad_user.get("email") or "")
     _set_cookie(response, token)
 
-    logger.info("user_signup", email=req.email, role=user.role)
-    return _user_response(user)
+    logger.info("user_signup", name=req.name, department=req.department, user_id=user_id)
+    return {
+        "id": user_id,
+        "email": ad_user.get("email") or "",
+        "name": ad_user["display_name"],
+        "department": ad_user["department"],
+        "role": "user",
+        "allowed_models": ["skin1004-Analysis"],
+    }
 
 
 @auth_api_router.post("/signin")
-async def signin(req: SigninRequest, response: Response, db: Session = Depends(get_db)):
-    """Sign in with email and password."""
-    user = db.query(User).filter(User.email == req.email).first()
-    if not user or not _bcrypt.checkpw(req.password.encode(), user.password.encode()):
-        raise HTTPException(status_code=401, detail="Invalid email or password")
+async def signin(req: SigninRequest, response: Response):
+    """Sign in with department + name + password."""
+    # Find AD user
+    ad_user = await _db_fetch_one(
+        "SELECT id, display_name, email, department FROM ad_users "
+        "WHERE is_active = 1 AND department = %s AND display_name = %s",
+        (req.department, req.name),
+    )
+    if not ad_user:
+        raise HTTPException(status_code=401, detail="사용자를 찾을 수 없습니다")
 
-    token = _create_token(user.id, user.email)
+    # Find registered user
+    user = await _db_fetch_one(
+        "SELECT id, password_hash, role, allowed_models FROM users WHERE ad_user_id = %s",
+        (ad_user["id"],),
+    )
+    if not user:
+        raise HTTPException(status_code=401, detail="등록되지 않은 사용자입니다. 회원가입을 먼저 해주세요.")
+
+    # Verify password
+    if not _bcrypt.checkpw(req.password.encode(), user["password_hash"].encode()):
+        raise HTTPException(status_code=401, detail="비밀번호가 일치하지 않습니다")
+
+    # Update last_login
+    await _db_execute(
+        "UPDATE users SET last_login = NOW() WHERE id = %s", (user["id"],)
+    )
+
+    token = _create_token(user["id"], ad_user.get("email") or "")
     _set_cookie(response, token)
 
-    logger.info("user_signin", email=req.email)
-    return _user_response(user)
+    logger.info("user_signin", name=req.name, department=req.department)
+    return {
+        "id": user["id"],
+        "email": ad_user.get("email") or "",
+        "name": ad_user["display_name"],
+        "department": ad_user["department"],
+        "role": user["role"],
+        "allowed_models": _resolve_models(user["role"], user.get("allowed_models")),
+    }
 
 
 @auth_api_router.get("/me")
 async def me(user: User = Depends(get_current_user)):
     """Get current authenticated user."""
-    return _user_response(user)
+    return {
+        "id": user.id,
+        "email": user.email,
+        "name": user.name,
+        "department": user.department,
+        "role": user.role,
+        "allowed_models": _resolve_models(user.role, user.allowed_models),
+    }
+
+
+class ChangePasswordRequest(BaseModel):
+    current_password: str
+    new_password: str
+
+
+@auth_api_router.post("/change-password")
+async def change_password(req: ChangePasswordRequest, user: User = Depends(get_current_user)):
+    """Change password for current user."""
+    if len(req.new_password) < 4:
+        raise HTTPException(status_code=400, detail="새 비밀번호는 4자 이상이어야 합니다")
+
+    # Get current password hash
+    row = await _db_fetch_one(
+        "SELECT password_hash FROM users WHERE id = %s", (user.id,)
+    )
+    if not row:
+        raise HTTPException(status_code=404, detail="사용자를 찾을 수 없습니다")
+
+    # Verify current password
+    if not _bcrypt.checkpw(req.current_password.encode(), row["password_hash"].encode()):
+        raise HTTPException(status_code=401, detail="현재 비밀번호가 일치하지 않습니다")
+
+    # Hash and update
+    new_hash = _bcrypt.hashpw(req.new_password.encode(), _bcrypt.gensalt()).decode()
+    await _db_execute(
+        "UPDATE users SET password_hash = %s, updated_at = NOW() WHERE id = %s",
+        (new_hash, user.id),
+    )
+
+    logger.info("password_changed", user_id=user.id, name=user.name)
+    return {"ok": True}
 
 
 @auth_api_router.post("/logout")

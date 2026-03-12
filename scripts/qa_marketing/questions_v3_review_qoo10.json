@@ -1,0 +1,3002 @@
+[
+  {
+    "id": "RQ-001",
+    "query": "큐텐 제품별 리뷰 수 알려줘",
+    "category": "review_count",
+    "tier": 1
+  },
+  {
+    "id": "RQ-002",
+    "query": "Qoo10 리뷰 가장 많은 제품은?",
+    "category": "top_reviewed",
+    "tier": 1
+  },
+  {
+    "id": "RQ-003",
+    "query": "큐텐 최근 리뷰 보여줘",
+    "category": "recent_reviews",
+    "tier": 1
+  },
+  {
+    "id": "RQ-004",
+    "query": "Qoo10 Madagascar Centella Ampoule 리뷰 수",
+    "category": "product_review",
+    "tier": 1
+  },
+  {
+    "id": "RQ-005",
+    "query": "큐텐 SKIN1004 전체 리뷰 수",
+    "category": "total_count",
+    "tier": 1
+  },
+  {
+    "id": "RQ-006",
+    "query": "큐텐 월별 리뷰 수 추이 알려줘",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "RQ-007",
+    "query": "Qoo10 최근 10건 리뷰",
+    "category": "recent_n",
+    "tier": 1
+  },
+  {
+    "id": "RQ-008",
+    "query": "큐텐 2025년 1월 리뷰",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RQ-009",
+    "query": "Qoo10 Centella Ampoule 최신 리뷰 내용",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RQ-010",
+    "query": "큐텐 브랜드별 리뷰 수 비교",
+    "category": "brand_review",
+    "tier": 1
+  },
+  {
+    "id": "RQ-011",
+    "query": "큐텐에서 Tone Brightening Capsule Serum 리뷰 몇 개야?",
+    "category": "product_review",
+    "tier": 1
+  },
+  {
+    "id": "RQ-012",
+    "query": "Qoo10 리뷰 최근 30일 추이",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "RQ-013",
+    "query": "큐텐 Centella Soothing Cream 리뷰 보여줘",
+    "category": "product_review",
+    "tier": 1
+  },
+  {
+    "id": "RQ-014",
+    "query": "Qoo10에서 가장 최근에 등록된 리뷰는?",
+    "category": "recent_reviews",
+    "tier": 1
+  },
+  {
+    "id": "RQ-015",
+    "query": "큐텐 리뷰 수 월별 변화 차트",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "RQ-016",
+    "query": "Qoo10 SKIN1004 리뷰 총 몇 건이야?",
+    "category": "total_count",
+    "tier": 1
+  },
+  {
+    "id": "RQ-017",
+    "query": "큐텐 Centella Cleansing Oil 리뷰 수",
+    "category": "product_review",
+    "tier": 1
+  },
+  {
+    "id": "RQ-018",
+    "query": "Qoo10 최근 5건 리뷰 내용 보여줘",
+    "category": "recent_n",
+    "tier": 1
+  },
+  {
+    "id": "RQ-019",
+    "query": "큐텐 2025년 리뷰 수 총합",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RQ-020",
+    "query": "Qoo10 제품별 리뷰 순위",
+    "category": "review_count",
+    "tier": 1
+  },
+  {
+    "id": "RQ-021",
+    "query": "큐텐 리뷰 가장 적은 제품은?",
+    "category": "review_count",
+    "tier": 1
+  },
+  {
+    "id": "RQ-022",
+    "query": "Qoo10 2024년 12월 리뷰 보여줘",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RQ-023",
+    "query": "큐텐 최근 20건 리뷰 조회",
+    "category": "recent_n",
+    "tier": 1
+  },
+  {
+    "id": "RQ-024",
+    "query": "Qoo10 Madagascar Centella Ampoule 최신 리뷰",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RQ-025",
+    "query": "큐텐 채널별 리뷰 수",
+    "category": "review_count",
+    "tier": 1
+  },
+  {
+    "id": "RQ-026",
+    "query": "Qoo10 2025년 2월 리뷰 몇 건이야?",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RQ-027",
+    "query": "큐텐 리뷰 데이터 전체 건수 알려줘",
+    "category": "total_count",
+    "tier": 1
+  },
+  {
+    "id": "RQ-028",
+    "query": "Qoo10 Centella Ampoule 리뷰 월별 추이",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "RQ-029",
+    "query": "큐텐에서 리뷰 최근 50건",
+    "category": "recent_n",
+    "tier": 1
+  },
+  {
+    "id": "RQ-030",
+    "query": "Qoo10 리뷰 제품명별 분류",
+    "category": "review_count",
+    "tier": 1
+  },
+  {
+    "id": "RQ-031",
+    "query": "큐텐 Tone Brightening Capsule Serum 최신 리뷰 내용",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RQ-032",
+    "query": "Qoo10 전체 리뷰 중 최근 7일 리뷰",
+    "category": "recent_reviews",
+    "tier": 1
+  },
+  {
+    "id": "RQ-033",
+    "query": "큐텐 리뷰 수집 날짜 기준 최신순 정렬",
+    "category": "recent_reviews",
+    "tier": 1
+  },
+  {
+    "id": "RQ-034",
+    "query": "Qoo10 2025년 3월 리뷰 있어?",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RQ-035",
+    "query": "큐텐 리뷰 브랜드 SKIN1004만 필터링",
+    "category": "brand_review",
+    "tier": 1
+  },
+  {
+    "id": "RQ-036",
+    "query": "Qoo10 최근 100건 리뷰 데이터",
+    "category": "recent_n",
+    "tier": 1
+  },
+  {
+    "id": "RQ-037",
+    "query": "큐텐 Centella Soothing Cream 리뷰 내용 보여줘",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RQ-038",
+    "query": "Qoo10 월별 리뷰 건수 통계",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "RQ-039",
+    "query": "큐텐 리뷰 제품별 비율",
+    "category": "review_count",
+    "tier": 1
+  },
+  {
+    "id": "RQ-040",
+    "query": "Qoo10 2024년 리뷰 수",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RQ-041",
+    "query": "큐텐 리뷰 원문과 한국어 번역 같이 보여줘",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RQ-042",
+    "query": "Qoo10 Centella Cleansing Oil 최신 리뷰",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RQ-043",
+    "query": "큐텐 리뷰 최근 한 달 몇 건?",
+    "category": "recent_reviews",
+    "tier": 1
+  },
+  {
+    "id": "RQ-044",
+    "query": "Qoo10 제품별 리뷰 수 TOP 5",
+    "category": "top_reviewed",
+    "tier": 1
+  },
+  {
+    "id": "RQ-045",
+    "query": "큐텐 리뷰 날짜별 분포",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "RQ-046",
+    "query": "Qoo10 2025년 1분기 리뷰 수",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RQ-047",
+    "query": "큐텐 최근 리뷰 3건만 보여줘",
+    "category": "recent_n",
+    "tier": 1
+  },
+  {
+    "id": "RQ-048",
+    "query": "Qoo10 Madagascar Centella Ampoule 리뷰 몇 개 있어?",
+    "category": "product_review",
+    "tier": 1
+  },
+  {
+    "id": "RQ-049",
+    "query": "큐텐 리뷰 수집일 기준 정렬",
+    "category": "recent_reviews",
+    "tier": 1
+  },
+  {
+    "id": "RQ-050",
+    "query": "Qoo10 전체 리뷰 데이터 수",
+    "category": "total_count",
+    "tier": 1
+  },
+  {
+    "id": "RQ-051",
+    "query": "큐텐에서 리뷰 가장 많이 달린 제품 TOP 3",
+    "category": "top_reviewed",
+    "tier": 1
+  },
+  {
+    "id": "RQ-052",
+    "query": "Qoo10 2025년 리뷰 월별 건수",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "RQ-053",
+    "query": "큐텐 Centella Ampoule 리뷰 한국어 번역 보여줘",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RQ-054",
+    "query": "Qoo10 리뷰 제품명에 Centella 포함된 것만",
+    "category": "product_review",
+    "tier": 1
+  },
+  {
+    "id": "RQ-055",
+    "query": "큐텐 2024년 11월 리뷰 데이터",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RQ-056",
+    "query": "Qoo10 리뷰 수 상위 10개 제품",
+    "category": "top_reviewed",
+    "tier": 1
+  },
+  {
+    "id": "RQ-057",
+    "query": "큐텐 최근 리뷰 15건 내용",
+    "category": "recent_n",
+    "tier": 1
+  },
+  {
+    "id": "RQ-058",
+    "query": "Qoo10 리뷰 한국어 번역 최근 것",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RQ-059",
+    "query": "큐텐 제품 리뷰 분석해줘",
+    "category": "review_count",
+    "tier": 1
+  },
+  {
+    "id": "RQ-060",
+    "query": "Qoo10 SKIN1004 브랜드 리뷰 전체 보여줘",
+    "category": "brand_review",
+    "tier": 1
+  },
+  {
+    "id": "RQ-061",
+    "query": "큐텐 리뷰 2025년 상반기 데이터",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RQ-062",
+    "query": "Qoo10 리뷰 건수 추이 그래프",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "RQ-063",
+    "query": "큐텐 최근 리뷰 원문 보여줘",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RQ-064",
+    "query": "Qoo10 Tone Brightening Capsule Serum 리뷰 수 추이",
+    "category": "product_review",
+    "tier": 1
+  },
+  {
+    "id": "RQ-065",
+    "query": "큐텐 리뷰 수집일 최신 데이터",
+    "category": "recent_reviews",
+    "tier": 1
+  },
+  {
+    "id": "RQ-066",
+    "query": "Qoo10 2025년 2월 리뷰 내용",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RQ-067",
+    "query": "큐텐 전체 리뷰 건수 합계",
+    "category": "total_count",
+    "tier": 1
+  },
+  {
+    "id": "RQ-068",
+    "query": "Qoo10 제품별 최근 리뷰 1건씩",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RQ-069",
+    "query": "큐텐 리뷰 날짜 범위 알려줘",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RQ-070",
+    "query": "Qoo10 리뷰 수 가장 적은 제품은?",
+    "category": "review_count",
+    "tier": 1
+  },
+  {
+    "id": "RQ-071",
+    "query": "큐텐 Centella Cleansing Oil 리뷰 몇 건?",
+    "category": "product_review",
+    "tier": 1
+  },
+  {
+    "id": "RQ-072",
+    "query": "Qoo10 최근 한 주간 리뷰",
+    "category": "recent_reviews",
+    "tier": 1
+  },
+  {
+    "id": "RQ-073",
+    "query": "큐텐 리뷰 월별 증감 추이",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "RQ-074",
+    "query": "Qoo10 2024년 10월 리뷰 수",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RQ-075",
+    "query": "큐텐 제품 리뷰 순위 알려줘",
+    "category": "top_reviewed",
+    "tier": 1
+  },
+  {
+    "id": "RQ-076",
+    "query": "Qoo10 Madagascar Centella Ampoule 리뷰 원문",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RQ-077",
+    "query": "큐텐 최근 리뷰 25건",
+    "category": "recent_n",
+    "tier": 1
+  },
+  {
+    "id": "RQ-078",
+    "query": "Qoo10 리뷰 데이터 채널 정보",
+    "category": "review_count",
+    "tier": 1
+  },
+  {
+    "id": "RQ-079",
+    "query": "큐텐 2025년 전체 리뷰 수",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RQ-080",
+    "query": "Qoo10 Centella Soothing Cream 리뷰 수 변화",
+    "category": "product_review",
+    "tier": 1
+  },
+  {
+    "id": "RQ-081",
+    "query": "큐텐 리뷰 원문과 번역문 비교",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RQ-082",
+    "query": "Qoo10 제품별 리뷰 비율 차트",
+    "category": "review_count",
+    "tier": 1
+  },
+  {
+    "id": "RQ-083",
+    "query": "큐텐 리뷰 최근 2주간 데이터",
+    "category": "recent_reviews",
+    "tier": 1
+  },
+  {
+    "id": "RQ-084",
+    "query": "Qoo10 리뷰 총 건수와 제품 수",
+    "category": "total_count",
+    "tier": 1
+  },
+  {
+    "id": "RQ-085",
+    "query": "큐텐 2024년 하반기 리뷰",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RQ-086",
+    "query": "Qoo10 리뷰 수 기준 제품 순위표",
+    "category": "top_reviewed",
+    "tier": 1
+  },
+  {
+    "id": "RQ-087",
+    "query": "큐텐 최근 리뷰 내용 요약해줘",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RQ-088",
+    "query": "Qoo10 월별 리뷰 수 평균",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "RQ-089",
+    "query": "큐텐 리뷰 제품명 목록",
+    "category": "review_count",
+    "tier": 1
+  },
+  {
+    "id": "RQ-090",
+    "query": "Qoo10 2025년 1월 리뷰 내용 보여줘",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RQ-091",
+    "query": "큐텐에서 Centella 제품 리뷰 전체",
+    "category": "product_review",
+    "tier": 1
+  },
+  {
+    "id": "RQ-092",
+    "query": "Qoo10 리뷰 최신 데이터 날짜가 언제야?",
+    "category": "recent_reviews",
+    "tier": 1
+  },
+  {
+    "id": "RQ-093",
+    "query": "큐텐 2024년 9월 리뷰 건수",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RQ-094",
+    "query": "Qoo10 리뷰 주간 트렌드",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "RQ-095",
+    "query": "큐텐 SKIN1004 리뷰만 보여줘",
+    "category": "brand_review",
+    "tier": 1
+  },
+  {
+    "id": "RQ-096",
+    "query": "Qoo10 최근 리뷰 7건 한국어로",
+    "category": "recent_n",
+    "tier": 1
+  },
+  {
+    "id": "RQ-097",
+    "query": "큐텐 Tone Brightening Capsule Serum 리뷰 원문",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RQ-098",
+    "query": "Qoo10 리뷰 제품별 최신 날짜",
+    "category": "recent_reviews",
+    "tier": 1
+  },
+  {
+    "id": "RQ-099",
+    "query": "큐텐 리뷰 분기별 추이",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "RQ-100",
+    "query": "Qoo10 전체 리뷰 중 2025년 비율",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RQ-101",
+    "query": "큐텐 리뷰 어떤 제품이 있어?",
+    "category": "review_count",
+    "tier": 1
+  },
+  {
+    "id": "RQ-102",
+    "query": "Qoo10 리뷰 수집 현황 알려줘",
+    "category": "total_count",
+    "tier": 1
+  },
+  {
+    "id": "RQ-103",
+    "query": "큐텐 최근 리뷰 중 Centella Ampoule 관련",
+    "category": "product_review",
+    "tier": 1
+  },
+  {
+    "id": "RQ-104",
+    "query": "Qoo10 2025년 1월~2월 리뷰",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RQ-105",
+    "query": "큐텐 리뷰 수 증가율",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "RQ-106",
+    "query": "Qoo10 제품별 최신 리뷰 내용 정리",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RQ-107",
+    "query": "큐텐 리뷰 데이터에서 브랜드 종류",
+    "category": "brand_review",
+    "tier": 1
+  },
+  {
+    "id": "RQ-108",
+    "query": "Qoo10 최근 리뷰 40건 보여줘",
+    "category": "recent_n",
+    "tier": 1
+  },
+  {
+    "id": "RQ-109",
+    "query": "큐텐 Madagascar Centella Ampoule 월별 리뷰 수",
+    "category": "product_review",
+    "tier": 1
+  },
+  {
+    "id": "RQ-110",
+    "query": "Qoo10 리뷰 최다 제품 TOP 7",
+    "category": "top_reviewed",
+    "tier": 1
+  },
+  {
+    "id": "RQ-111",
+    "query": "큐텐 2024년 리뷰 총 건수",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RQ-112",
+    "query": "Qoo10 리뷰 번역 데이터 최근 것",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RQ-113",
+    "query": "큐텐 Centella Soothing Cream 리뷰 원문 보여줘",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RQ-114",
+    "query": "Qoo10 리뷰 수 제품별 내림차순",
+    "category": "review_count",
+    "tier": 1
+  },
+  {
+    "id": "RQ-115",
+    "query": "큐텐 최근 리뷰 날짜 확인",
+    "category": "recent_reviews",
+    "tier": 1
+  },
+  {
+    "id": "RQ-116",
+    "query": "Qoo10 2024년 8월 리뷰",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RQ-117",
+    "query": "큐텐 리뷰 총합 몇 건이야?",
+    "category": "total_count",
+    "tier": 1
+  },
+  {
+    "id": "RQ-118",
+    "query": "Qoo10 Centella Cleansing Oil 리뷰 내용",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RQ-119",
+    "query": "큐텐 리뷰 제품 수 몇 개야?",
+    "category": "review_count",
+    "tier": 1
+  },
+  {
+    "id": "RQ-120",
+    "query": "Qoo10 월별 리뷰 추이 분석",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "RQ-121",
+    "query": "큐텐 리뷰에서 가장 오래된 리뷰는?",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RQ-122",
+    "query": "Qoo10 리뷰 최근 60건 데이터",
+    "category": "recent_n",
+    "tier": 1
+  },
+  {
+    "id": "RQ-123",
+    "query": "큐텐 Centella Ampoule 리뷰 건수 월별",
+    "category": "product_review",
+    "tier": 1
+  },
+  {
+    "id": "RQ-124",
+    "query": "Qoo10 리뷰 최근 3개월 추이",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "RQ-125",
+    "query": "큐텐 리뷰 데이터 전체 현황",
+    "category": "total_count",
+    "tier": 1
+  },
+  {
+    "id": "RQ-126",
+    "query": "Qoo10 SKIN1004 브랜드 리뷰 수 추이",
+    "category": "brand_review",
+    "tier": 1
+  },
+  {
+    "id": "RQ-127",
+    "query": "큐텐 리뷰 중 최근 것부터 정렬해서 보여줘",
+    "category": "recent_reviews",
+    "tier": 1
+  },
+  {
+    "id": "RQ-128",
+    "query": "Qoo10 2024년 7월 리뷰 데이터",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RQ-129",
+    "query": "큐텐 제품별 리뷰 수 표로 보여줘",
+    "category": "review_count",
+    "tier": 1
+  },
+  {
+    "id": "RQ-130",
+    "query": "Qoo10 리뷰 원문 언어별 분포",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RQ-131",
+    "query": "큐텐 최근 리뷰 요약",
+    "category": "recent_reviews",
+    "tier": 1
+  },
+  {
+    "id": "RQ-132",
+    "query": "Qoo10 Tone Brightening Capsule Serum 리뷰 있어?",
+    "category": "product_review",
+    "tier": 1
+  },
+  {
+    "id": "RQ-133",
+    "query": "큐텐 리뷰 2025년 3월 데이터 있어?",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RQ-134",
+    "query": "Qoo10 리뷰 수 TOP 제품 비율",
+    "category": "top_reviewed",
+    "tier": 1
+  },
+  {
+    "id": "RQ-135",
+    "query": "큐텐 제품 리뷰 수 비교 차트",
+    "category": "review_count",
+    "tier": 1
+  },
+  {
+    "id": "RQ-136",
+    "query": "Qoo10 최근 리뷰 12건",
+    "category": "recent_n",
+    "tier": 1
+  },
+  {
+    "id": "RQ-137",
+    "query": "큐텐 리뷰 수집일과 리뷰 작성일 차이",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RQ-138",
+    "query": "Qoo10 Madagascar Centella Ampoule 한국어 리뷰",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RQ-139",
+    "query": "큐텐 리뷰 주별 통계",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "RQ-140",
+    "query": "Qoo10 리뷰 데이터 날짜 범위",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RQ-141",
+    "query": "큐텐 최다 리뷰 제품 알려줘",
+    "category": "top_reviewed",
+    "tier": 1
+  },
+  {
+    "id": "RQ-142",
+    "query": "Qoo10 리뷰 전체 목록",
+    "category": "total_count",
+    "tier": 1
+  },
+  {
+    "id": "RQ-143",
+    "query": "큐텐 Centella Ampoule 리뷰 최근 5건",
+    "category": "recent_n",
+    "tier": 1
+  },
+  {
+    "id": "RQ-144",
+    "query": "Qoo10 2025년 월별 리뷰 건수 비교",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "RQ-145",
+    "query": "큐텐 리뷰에서 Soothing Cream 검색",
+    "category": "product_review",
+    "tier": 1
+  },
+  {
+    "id": "RQ-146",
+    "query": "Qoo10 리뷰 최근 한 달 건수",
+    "category": "recent_reviews",
+    "tier": 1
+  },
+  {
+    "id": "RQ-147",
+    "query": "큐텐 리뷰 번역 품질 확인",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RQ-148",
+    "query": "Qoo10 리뷰 수 연도별 비교",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RQ-149",
+    "query": "큐텐 제품별 리뷰 트렌드",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "RQ-150",
+    "query": "Qoo10 전체 리뷰 수 현황",
+    "category": "total_count",
+    "tier": 1
+  },
+  {
+    "id": "RQ-151",
+    "query": "큐텐 리뷰 중 Cleansing Oil 관련",
+    "category": "product_review",
+    "tier": 1
+  },
+  {
+    "id": "RQ-152",
+    "query": "Qoo10 최근 리뷰 30건 한국어 번역",
+    "category": "recent_n",
+    "tier": 1
+  },
+  {
+    "id": "RQ-153",
+    "query": "큐텐 리뷰 데이터 수집 주기는?",
+    "category": "total_count",
+    "tier": 1
+  },
+  {
+    "id": "RQ-154",
+    "query": "Qoo10 2024년 4분기 리뷰 수",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RQ-155",
+    "query": "큐텐 리뷰 제품명 중복 제거 목록",
+    "category": "review_count",
+    "tier": 1
+  },
+  {
+    "id": "RQ-156",
+    "query": "Qoo10 리뷰 월별 평균 건수",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "RQ-157",
+    "query": "큐텐 최근 수집된 리뷰 보여줘",
+    "category": "recent_reviews",
+    "tier": 1
+  },
+  {
+    "id": "RQ-158",
+    "query": "Qoo10 Centella Ampoule 리뷰 원문 10건",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RQ-159",
+    "query": "큐텐 리뷰 수 가장 많은 달은?",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "RQ-160",
+    "query": "Qoo10 리뷰 2024년 전체 요약",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RQ-161",
+    "query": "큐텐에서 SKIN1004 리뷰 제일 많은 제품",
+    "category": "top_reviewed",
+    "tier": 1
+  },
+  {
+    "id": "RQ-162",
+    "query": "Qoo10 리뷰 최신 데이터 확인해줘",
+    "category": "recent_reviews",
+    "tier": 1
+  },
+  {
+    "id": "RQ-163",
+    "query": "큐텐 리뷰 collect_date 기준 최근 데이터",
+    "category": "recent_reviews",
+    "tier": 1
+  },
+  {
+    "id": "RQ-164",
+    "query": "Qoo10 제품별 리뷰 건수와 비중",
+    "category": "review_count",
+    "tier": 1
+  },
+  {
+    "id": "RQ-165",
+    "query": "큐텐 2025년 신규 리뷰 수",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RQ-166",
+    "query": "Qoo10 리뷰 데이터 컬럼 정보",
+    "category": "total_count",
+    "tier": 1
+  },
+  {
+    "id": "RQ-167",
+    "query": "큐텐 Madagascar Centella Ampoule 리뷰 추이",
+    "category": "product_review",
+    "tier": 1
+  },
+  {
+    "id": "RQ-168",
+    "query": "Qoo10 최근 리뷰 8건",
+    "category": "recent_n",
+    "tier": 1
+  },
+  {
+    "id": "RQ-169",
+    "query": "큐텐 리뷰 작성일 기준 최신순",
+    "category": "recent_reviews",
+    "tier": 1
+  },
+  {
+    "id": "RQ-170",
+    "query": "Qoo10 리뷰 제품별 월별 교차 분석",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "RQ-171",
+    "query": "큐텐 2025년 2월 리뷰 내용 전부",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RQ-172",
+    "query": "Qoo10 리뷰 Centella 키워드 검색",
+    "category": "product_review",
+    "tier": 1
+  },
+  {
+    "id": "RQ-173",
+    "query": "큐텐 리뷰 한국어 번역본만 보여줘",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RQ-174",
+    "query": "Qoo10 제품별 최근 리뷰 날짜",
+    "category": "recent_reviews",
+    "tier": 1
+  },
+  {
+    "id": "RQ-175",
+    "query": "큐텐 리뷰 수 월 평균은?",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "RQ-176",
+    "query": "Qoo10 전체 리뷰 건수 추이 차트",
+    "category": "total_count",
+    "tier": 1
+  },
+  {
+    "id": "RQ-177",
+    "query": "큐텐 Soothing Cream 리뷰 최근 3건",
+    "category": "recent_n",
+    "tier": 1
+  },
+  {
+    "id": "RQ-178",
+    "query": "Qoo10 2024년 6월 리뷰 데이터 있어?",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RQ-179",
+    "query": "큐텐 리뷰 제품별 통계 요약",
+    "category": "review_count",
+    "tier": 1
+  },
+  {
+    "id": "RQ-180",
+    "query": "Qoo10 리뷰 가장 최근 작성된 것",
+    "category": "recent_reviews",
+    "tier": 1
+  },
+  {
+    "id": "RQ-181",
+    "query": "큐텐 Centella Ampoule 리뷰 번역 보여줘",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RQ-182",
+    "query": "Qoo10 리뷰 데이터 연도별 건수",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RQ-183",
+    "query": "큐텐 리뷰 TOP 5 제품 리스트",
+    "category": "top_reviewed",
+    "tier": 1
+  },
+  {
+    "id": "RQ-184",
+    "query": "Qoo10 최근 2개월 리뷰 건수",
+    "category": "recent_reviews",
+    "tier": 1
+  },
+  {
+    "id": "RQ-185",
+    "query": "큐텐 리뷰 원문으로 된 것만 보여줘",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RQ-186",
+    "query": "Qoo10 2024년 3분기 리뷰",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RQ-187",
+    "query": "큐텐 리뷰 제품 카테고리별 분류",
+    "category": "review_count",
+    "tier": 1
+  },
+  {
+    "id": "RQ-188",
+    "query": "Qoo10 리뷰 최근 90건",
+    "category": "recent_n",
+    "tier": 1
+  },
+  {
+    "id": "RQ-189",
+    "query": "큐텐 리뷰 브랜드 필터링 후 건수",
+    "category": "brand_review",
+    "tier": 1
+  },
+  {
+    "id": "RQ-190",
+    "query": "Qoo10 Centella Cleansing Oil 월별 리뷰",
+    "category": "product_review",
+    "tier": 1
+  },
+  {
+    "id": "RQ-191",
+    "query": "큐텐 리뷰 review_date 기준 분석",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "RQ-192",
+    "query": "Qoo10 전체 데이터 행 수 알려줘",
+    "category": "total_count",
+    "tier": 1
+  },
+  {
+    "id": "RQ-193",
+    "query": "큐텐 최근 리뷰 중 긍정적인 것",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RQ-194",
+    "query": "Qoo10 2024년 5월 리뷰",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RQ-195",
+    "query": "큐텐 리뷰 수 기준 상위 제품",
+    "category": "top_reviewed",
+    "tier": 1
+  },
+  {
+    "id": "RQ-196",
+    "query": "Qoo10 리뷰 수집 날짜 기준 통계",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "RQ-197",
+    "query": "큐텐 리뷰 제품별 최신 리뷰 요약",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RQ-198",
+    "query": "Qoo10 2024년 상반기 리뷰 건수",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RQ-199",
+    "query": "큐텐 리뷰 데이터 전체 요약 통계",
+    "category": "total_count",
+    "tier": 1
+  },
+  {
+    "id": "RQ-200",
+    "query": "Qoo10 최근 리뷰 전체 보여줘",
+    "category": "recent_reviews",
+    "tier": 1
+  },
+  {
+    "id": "RQ-201",
+    "query": "큐텐 리뷰 중 Madagascar Centella Ampoule 비율",
+    "category": "product_review",
+    "tier": 1
+  },
+  {
+    "id": "RQ-202",
+    "query": "Qoo10 리뷰 날짜별 건수 차트",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "RQ-203",
+    "query": "큐텐 Centella Ampoule 관련 리뷰 전부",
+    "category": "product_review",
+    "tier": 1
+  },
+  {
+    "id": "RQ-204",
+    "query": "Qoo10 최근 리뷰 200건 데이터",
+    "category": "recent_n",
+    "tier": 1
+  },
+  {
+    "id": "RQ-205",
+    "query": "큐텐 리뷰 제품별 점유율",
+    "category": "review_count",
+    "tier": 1
+  },
+  {
+    "id": "RQ-206",
+    "query": "Qoo10 2024년 2분기 리뷰 수",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RQ-207",
+    "query": "큐텐 리뷰 최근 순 정렬 보여줘",
+    "category": "recent_reviews",
+    "tier": 1
+  },
+  {
+    "id": "RQ-208",
+    "query": "Qoo10 Tone Brightening Serum 리뷰 건수",
+    "category": "product_review",
+    "tier": 1
+  },
+  {
+    "id": "RQ-209",
+    "query": "큐텐 리뷰 수 전년 대비 변화",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "RQ-210",
+    "query": "Qoo10 리뷰 한국어 번역 최근 20건",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RQ-211",
+    "query": "큐텐 리뷰 데이터 행 건수",
+    "category": "total_count",
+    "tier": 1
+  },
+  {
+    "id": "RQ-212",
+    "query": "Qoo10 2024년 1월 리뷰 데이터",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RQ-213",
+    "query": "큐텐 리뷰 가장 많은 월은?",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "RQ-214",
+    "query": "Qoo10 제품별 리뷰 수 차트 그려줘",
+    "category": "review_count",
+    "tier": 1
+  },
+  {
+    "id": "RQ-215",
+    "query": "큐텐 최근 수집 리뷰 날짜",
+    "category": "recent_reviews",
+    "tier": 1
+  },
+  {
+    "id": "RQ-216",
+    "query": "Qoo10 Centella 관련 제품 리뷰 합계",
+    "category": "product_review",
+    "tier": 1
+  },
+  {
+    "id": "RQ-217",
+    "query": "큐텐 리뷰 월 단위 집계",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "RQ-218",
+    "query": "Qoo10 리뷰 원문 내용 최신 5건",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RQ-219",
+    "query": "큐텐 리뷰 2024년 4월 데이터",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RQ-220",
+    "query": "Qoo10 SKIN1004 리뷰 수 총합",
+    "category": "brand_review",
+    "tier": 1
+  },
+  {
+    "id": "RQ-221",
+    "query": "큐텐 리뷰 가장 최근 수집된 제품",
+    "category": "recent_reviews",
+    "tier": 1
+  },
+  {
+    "id": "RQ-222",
+    "query": "Qoo10 리뷰 제품명별 건수 정리",
+    "category": "review_count",
+    "tier": 1
+  },
+  {
+    "id": "RQ-223",
+    "query": "큐텐 Centella Soothing Cream 최근 리뷰 내용",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RQ-224",
+    "query": "Qoo10 리뷰 2024년 3월 건수",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RQ-225",
+    "query": "큐텐 리뷰 월별 제품별 크로스탭",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "RQ-226",
+    "query": "Qoo10 리뷰 전체 데이터 개수",
+    "category": "total_count",
+    "tier": 1
+  },
+  {
+    "id": "RQ-227",
+    "query": "큐텐 리뷰에서 Cleansing 키워드 검색",
+    "category": "product_review",
+    "tier": 1
+  },
+  {
+    "id": "RQ-228",
+    "query": "Qoo10 최근 리뷰 내용 한국어로 보여줘",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RQ-229",
+    "query": "큐텐 리뷰 TOP 10 제품",
+    "category": "top_reviewed",
+    "tier": 1
+  },
+  {
+    "id": "RQ-230",
+    "query": "Qoo10 2024년 2월 리뷰",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RQ-231",
+    "query": "큐텐 리뷰 collect_date 별 건수",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "RQ-232",
+    "query": "Qoo10 리뷰 최근 것 review_date 기준",
+    "category": "recent_reviews",
+    "tier": 1
+  },
+  {
+    "id": "RQ-233",
+    "query": "큐텐 리뷰 채널 목록 알려줘",
+    "category": "review_count",
+    "tier": 1
+  },
+  {
+    "id": "RQ-234",
+    "query": "Qoo10 리뷰 제품별 번역 리뷰 보여줘",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RQ-235",
+    "query": "큐텐 리뷰 2025년 월별 누적",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "RQ-236",
+    "query": "Qoo10 전체 리뷰 현황 요약",
+    "category": "total_count",
+    "tier": 1
+  },
+  {
+    "id": "RQ-237",
+    "query": "큐텐 리뷰 최근 150건",
+    "category": "recent_n",
+    "tier": 1
+  },
+  {
+    "id": "RQ-238",
+    "query": "Qoo10 Madagascar Centella Ampoule 리뷰 전체 건수",
+    "category": "product_review",
+    "tier": 1
+  },
+  {
+    "id": "RQ-239",
+    "query": "큐텐 리뷰 제품별 최다 리뷰 월",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "RQ-240",
+    "query": "Qoo10 리뷰 데이터 최초 수집일",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RQ-241",
+    "query": "큐텐에서 리뷰 수 증가 추세야?",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "RQ-242",
+    "query": "Qoo10 리뷰 최근 데이터 요약해줘",
+    "category": "recent_reviews",
+    "tier": 1
+  },
+  {
+    "id": "RQ-243",
+    "query": "큐텐 Tone Brightening 제품 리뷰 몇 건?",
+    "category": "product_review",
+    "tier": 1
+  },
+  {
+    "id": "RQ-244",
+    "query": "Qoo10 리뷰 제품 종류 몇 개야?",
+    "category": "review_count",
+    "tier": 1
+  },
+  {
+    "id": "RQ-245",
+    "query": "큐텐 리뷰 번역문 최근 순",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RQ-246",
+    "query": "Qoo10 2024년 1분기 리뷰 데이터",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RQ-247",
+    "query": "큐텐 리뷰 전체 건수 차트",
+    "category": "total_count",
+    "tier": 1
+  },
+  {
+    "id": "RQ-248",
+    "query": "Qoo10 리뷰 제품별 비교 분석",
+    "category": "review_count",
+    "tier": 1
+  },
+  {
+    "id": "RQ-249",
+    "query": "큐텐 최근 리뷰 중 Cream 제품",
+    "category": "product_review",
+    "tier": 1
+  },
+  {
+    "id": "RQ-250",
+    "query": "Qoo10 리뷰 월별 건수 차트 그려줘",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "RQ-251",
+    "query": "큐텐 리뷰 원문 전체 보여줘",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RQ-252",
+    "query": "Qoo10 리뷰 2024년 전체 추이",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RQ-253",
+    "query": "큐텐 리뷰에서 Ampoule 제품만 필터",
+    "category": "product_review",
+    "tier": 1
+  },
+  {
+    "id": "RQ-254",
+    "query": "Qoo10 리뷰 최근 75건 데이터",
+    "category": "recent_n",
+    "tier": 1
+  },
+  {
+    "id": "RQ-255",
+    "query": "큐텐 리뷰 브랜드 분포",
+    "category": "brand_review",
+    "tier": 1
+  },
+  {
+    "id": "RQ-256",
+    "query": "Qoo10 리뷰 제품별 월별 통계표",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "RQ-257",
+    "query": "큐텐 리뷰 전체 데이터 조회",
+    "category": "total_count",
+    "tier": 1
+  },
+  {
+    "id": "RQ-258",
+    "query": "Qoo10 2023년 리뷰 데이터 있어?",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RQ-259",
+    "query": "큐텐 리뷰 최근 리뷰 제품명",
+    "category": "recent_reviews",
+    "tier": 1
+  },
+  {
+    "id": "RQ-260",
+    "query": "Qoo10 Centella Ampoule 리뷰 한국어 요약",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RQ-261",
+    "query": "큐텐 제품별 리뷰 수 그래프",
+    "category": "review_count",
+    "tier": 1
+  },
+  {
+    "id": "RQ-262",
+    "query": "Qoo10 리뷰 수 기준 하위 제품",
+    "category": "review_count",
+    "tier": 1
+  },
+  {
+    "id": "RQ-263",
+    "query": "큐텐 2025년 1월 리뷰 건수",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RQ-264",
+    "query": "Qoo10 리뷰 최신 수집 데이터 날짜",
+    "category": "recent_reviews",
+    "tier": 1
+  },
+  {
+    "id": "RQ-265",
+    "query": "큐텐 리뷰 제품별 평균 리뷰 수",
+    "category": "review_count",
+    "tier": 1
+  },
+  {
+    "id": "RQ-266",
+    "query": "Qoo10 리뷰 2025년 전체 추이",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "RQ-267",
+    "query": "큐텐 리뷰 원문과 번역 같이 10건",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RQ-268",
+    "query": "Qoo10 리뷰 기간별 건수 분석",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RQ-269",
+    "query": "큐텐 리뷰 TOP 3 제품 리뷰 내용",
+    "category": "top_reviewed",
+    "tier": 1
+  },
+  {
+    "id": "RQ-270",
+    "query": "Qoo10 최근 리뷰 전체 건수",
+    "category": "recent_reviews",
+    "tier": 1
+  },
+  {
+    "id": "RQ-271",
+    "query": "큐텐 리뷰 제품별 최신 리뷰 날짜와 내용",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RQ-272",
+    "query": "Qoo10 리뷰 수 제품별 파이 차트",
+    "category": "review_count",
+    "tier": 1
+  },
+  {
+    "id": "RQ-273",
+    "query": "큐텐 리뷰 최근 6개월 추이",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "RQ-274",
+    "query": "Qoo10 리뷰 데이터 전체 요약",
+    "category": "total_count",
+    "tier": 1
+  },
+  {
+    "id": "RQ-275",
+    "query": "큐텐 Centella Cleansing Oil 리뷰 전체",
+    "category": "product_review",
+    "tier": 1
+  },
+  {
+    "id": "RQ-276",
+    "query": "Qoo10 리뷰 최근 35건 보여줘",
+    "category": "recent_n",
+    "tier": 1
+  },
+  {
+    "id": "RQ-277",
+    "query": "큐텐 리뷰 2024년 하반기 건수",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RQ-278",
+    "query": "Qoo10 리뷰 원문 중 긴 리뷰",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RQ-279",
+    "query": "큐텐 리뷰 제품별 최근 3개월 추이",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "RQ-280",
+    "query": "Qoo10 전체 리뷰 수 알려줘",
+    "category": "total_count",
+    "tier": 1
+  },
+  {
+    "id": "RQ-281",
+    "query": "큐텐 리뷰 제품별 리뷰 날짜 분포",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RQ-282",
+    "query": "Qoo10 리뷰 SKIN1004 제품 리스트",
+    "category": "brand_review",
+    "tier": 1
+  },
+  {
+    "id": "RQ-283",
+    "query": "큐텐 리뷰 최근 순으로 50건",
+    "category": "recent_n",
+    "tier": 1
+  },
+  {
+    "id": "RQ-284",
+    "query": "Qoo10 리뷰 제품별 건수 내림차순 정렬",
+    "category": "review_count",
+    "tier": 1
+  },
+  {
+    "id": "RQ-285",
+    "query": "큐텐 리뷰 월별 증감률",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "RQ-286",
+    "query": "Qoo10 리뷰 번역 내용 전체",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RQ-287",
+    "query": "큐텐 리뷰 2024년 연간 통계",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RQ-288",
+    "query": "Qoo10 리뷰 제품별 리뷰 수 합산",
+    "category": "review_count",
+    "tier": 1
+  },
+  {
+    "id": "RQ-289",
+    "query": "큐텐 리뷰 가장 인기 있는 제품",
+    "category": "top_reviewed",
+    "tier": 1
+  },
+  {
+    "id": "RQ-290",
+    "query": "Qoo10 최근 리뷰 review_date 순",
+    "category": "recent_reviews",
+    "tier": 1
+  },
+  {
+    "id": "RQ-291",
+    "query": "큐텐 리뷰 전체 리스트 보여줘",
+    "category": "total_count",
+    "tier": 1
+  },
+  {
+    "id": "RQ-292",
+    "query": "Qoo10 Centella Soothing Cream 리뷰 수 추이",
+    "category": "product_review",
+    "tier": 1
+  },
+  {
+    "id": "RQ-293",
+    "query": "큐텐 리뷰 최근 리뷰 번역문 보기",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RQ-294",
+    "query": "Qoo10 2024년 12월 리뷰 건수",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RQ-295",
+    "query": "큐텐 리뷰 월별 리뷰 수 차트",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "RQ-296",
+    "query": "Qoo10 리뷰 제품별 최근 리뷰 비교",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RQ-297",
+    "query": "큐텐 리뷰 전체 건수는 몇 개?",
+    "category": "total_count",
+    "tier": 1
+  },
+  {
+    "id": "RQ-298",
+    "query": "Qoo10 리뷰 제품 TOP 리스트",
+    "category": "top_reviewed",
+    "tier": 1
+  },
+  {
+    "id": "RQ-299",
+    "query": "큐텐 리뷰 최신 데이터 전체 확인",
+    "category": "recent_reviews",
+    "tier": 1
+  },
+  {
+    "id": "RQ-300",
+    "query": "Qoo10 리뷰 전체 현황 리포트",
+    "category": "total_count",
+    "tier": 1
+  },
+  {
+    "id": "RQ-301",
+    "query": "큐텐 후기 수 전년 대비 변화 좀 알려줘",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-302",
+    "query": "참고로 큐텐 최근 리뷰 날짜 확인 알려주세요",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-303",
+    "query": "Qoo10 리뷰 수 제품 기준 파이 차트",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-304",
+    "query": "큐텐 최다 후기 제품 알려줘 확인 가능한가요?",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-305",
+    "query": "큐텐 후기 최근 순으로 50건",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-306",
+    "query": "요즘 큐탠 2025년 1월 리뷰 어때?",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-307",
+    "query": "큐텐 리뷰데이터 최다 월은?",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-308",
+    "query": "Qoo10 2024년 리뷰 수 알고 싶어",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-309",
+    "query": "qoo10 리뷰 주별 통계 부탁드려요",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-310",
+    "query": "큐텐 Centella Ampoule 리부 최근 5건",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-311",
+    "query": "큐텐 리뷰데이터 날짜별 분포",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-312",
+    "query": "Qoo10 SKIN1004 리뷰데이터 총 몇 건이야",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-313",
+    "query": "Qoo10 평가 제품별 최신 날짜",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-314",
+    "query": "정확한 큐텐 후기 2025년 월별 누적",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-315",
+    "query": "Qoo10 제품별 최근 리뷰 날짜 빨리 알려주세요",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-316",
+    "query": "Qoo10 리뷰 수 가장 적은 제품은? 좀",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-317",
+    "query": "Qoo10 SKIN1004 브렌드 후기 수 추세",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-318",
+    "query": "큐텐 2025년 전체 리뷰데이터 수 알려주세요",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-319",
+    "query": "요즘 Qoo10 평가 최근 한 달 건수",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-320",
+    "query": "Qoo10 2024년 3분기 리뷰데이터 좀 봐줘",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-321",
+    "query": "큐텐 리뷰데이터 제품 수 몇 개야 확인 가능한가요?",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-322",
+    "query": "Qoo10 전체 후기 수 체크해줘 정리해주세요",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-323",
+    "query": "잠깐, qoo10 Centella Cleansing Oil 평가 몇 건 어떻게 되나요?",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-324",
+    "query": "Qoo10 Centella Cleansing Oil 최신 후기",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-325",
+    "query": "간단하게 Qoo10 Centella Ampoule 최신 리뷰 내용",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-326",
+    "query": "Qoo10 리뷰 데이터 날짜 범위 확인 가능한가요?",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-327",
+    "query": "정확한 큐텐 평가 데이터 전체 요약 통계 어떻게 되나요?",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-328",
+    "query": "Qoo10 Centella 관련 제품 리뷰 총액",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-329",
+    "query": "우리 회사 Qoo10 평가 제품 TOP 리스트 알려주세요",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-330",
+    "query": "우리 회사 큐텐 Centella Ampoule 관련 후기 전부",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-331",
+    "query": "혹시 큐텐 2025년 1월 리뷰 확인 가능한가요?",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-332",
+    "query": "큐텐 최다 평가 제품 알려줘",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-333",
+    "query": "큐텐 후기 데이터 전체 실태",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-334",
+    "query": "Qoo10 후기 수 연도별 대조 몇이야?",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-335",
+    "query": "큐텐 리뷰데이터 collect_date 별 건수",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-336",
+    "query": "큐텐 최근 리뷰 중 Cream 제품 얼마임?",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-337",
+    "query": "Qoo10 리뷰데이터 데이터 날짜 범위",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-338",
+    "query": "Qoo10 후기 원문 언어별 분포",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-339",
+    "query": "큐탠 리뷰 브랜드 분포 알려주세요",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-340",
+    "query": "확인 좀 해줘 큐텐 최근 수집된 리뷰 보여줘",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-341",
+    "query": "Qoo10 전체 리뷰데이터 데이터 수",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-342",
+    "query": "요즘 큐텐 리뷰 총합 몇 건이야 부탁드려요",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-343",
+    "query": "잠깐, Qoo10 각 월 리뷰 건수 통계 궁금해 알려주세요",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-344",
+    "query": "Qoo10 2025년 월별 리부 건수 비교 궁금해",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-345",
+    "query": "큐텐 최근 20건 리뷰데이터 조회",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-346",
+    "query": "Qoo10 2025년 리뷰 달별 건수",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-347",
+    "query": "Qoo10에서 가장 최근에 등록된 후기는?",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-348",
+    "query": "궁금한데 Qoo10 후기 최신 데이터 날짜가 언제야",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-349",
+    "query": "큐텐 Centella Cleansing Oil 평가 수",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-350",
+    "query": "큐텐 전체 2025년 리뷰 수",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-351",
+    "query": "Qoo10 Centella 관련 제품 후기 전체 확인 가능한가요?",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-352",
+    "query": "큐텐 리뷰 월별 증감률 확인 가능한가요?",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-353",
+    "query": "큐텐 리뷰 전체 리스트 보여줄래?",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-354",
+    "query": "큐텐에서 Tone Brightening Capsule Serum 리뷰데이터 몇 개야?",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-355",
+    "query": "Qoo10 Centella Ampoule 리뷰데이터 월별 변동",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-356",
+    "query": "정확한 Qoo10 리뷰 최근 35건 보여주세요",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-357",
+    "query": "요즘 Qoo10 제품별 최근 리뷰데이터 날짜 보여줘",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-358",
+    "query": "간단하게 Qoo10 2025년 1분기 리뷰 수 확인해줘",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-359",
+    "query": "큐텐 리뷰 한국어 번역본만 보여줄래 어떻게 되나요?",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-360",
+    "query": "큐텐 리뷰 최근 한 달 몇 건 어떻게 되나요?",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-361",
+    "query": "큐텐 최근 후기 25건",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-362",
+    "query": "Qoo10 리부 상품별 최근 리뷰 비교 알려주시면 감사하겠습니다",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-363",
+    "query": "큐탠 후기 가장 적은 제품은 알 수 있을까요?",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-364",
+    "query": "궁금한데 Qoo10 리뷰 수 각 제품 파이 차트 알려주세요",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-365",
+    "query": "Qoo10 후기 최근 90건",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-366",
+    "query": "큐텐에서 후기 수 증가 추세야 알려주세요",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-367",
+    "query": "우리 회사 Qoo10 최근 후기 전체 건수 어떻게 되나요?",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-368",
+    "query": "큐텐 후기 각 월 증감률",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-369",
+    "query": "확인 좀 해줘 큐텐 리뷰 제품별 최신 리뷰 날짜와 내용 확인 가능한가요?",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-370",
+    "query": "확인 좀 해줘 Qoo10 Centella Ampoule 리뷰 원문 10건",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-371",
+    "query": "큐탠 리뷰데이터 제품별 최신 리뷰 날짜와 내용 어때?",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-372",
+    "query": "Qoo10 2024년 12월 리뷰 보여줄 수 있어?",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-373",
+    "query": "Qoo10 제품별 리뷰데이터 수 TOP 5",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-374",
+    "query": "Qoo10 평가 최근 30일 트렌드",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-375",
+    "query": "잠깐, Qoo10 전체 리뷰 중 최근 7일 리뷰 알려줄래?",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-376",
+    "query": "참고로 Qoo10 Tone Brightening Capsule Serum 리뷰 있어 알 수 있을까요?",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-377",
+    "query": "우리 회사 Qoo10 최근 리뷰 전체 건수",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-378",
+    "query": "확인 좀 해줘 큐텐 리뷰데이터에서 Ampoule 제품만 필터",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-379",
+    "query": "간단하게 큐텐 리뷰 최근 리뷰 제품명",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-380",
+    "query": "우리 회사 큐탠 리뷰 TOP 3 제품 리뷰 내용 어떻게 되나요?",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-381",
+    "query": "큐텐 리뷰 TOP 3 제품 리뷰 내용 어떻게 되나요?",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-382",
+    "query": "큐텐 리뷰 가장 많은 월은 어떻게 되나요?",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-383",
+    "query": "궁금한데 Qoo10 Tone Brightening Capsule Serum 리뷰 수 추이 알려주세요",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-384",
+    "query": "요즘 Qoo10 최근 한 주간 리뷰 알려주세요",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-385",
+    "query": "qoo10 Centella Ampoule 리뷰데이터 건수 월별 부탁드려요",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-386",
+    "query": "Qoo10 2024년 12월 리뷰 보여주세요",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-387",
+    "query": "Qoo10 후기 2025년 전체 추이",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-388",
+    "query": "큐텐에서 리뷰 최근 50건 좀",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-389",
+    "query": "Qoo10 달별 후기 건수 통계 부탁드려요",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-390",
+    "query": "빠르게 Qoo10 평가 SKIN1004 제품 리스트",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-391",
+    "query": "Qoo10 최근 리뷰 40건 보여줘 궁금해 알 수 있을까요?",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-392",
+    "query": "Qoo10 전체 후기 중 2025년 비율",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-393",
+    "query": "Qoo10 리뷰 수 가장 낮은 제품은? 확인해줘",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-394",
+    "query": "궁금한데 큐텐 채널별 리뷰 수 알려주시면 감사하겠습니다",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-395",
+    "query": "궁금한데 큐텐 리뷰 최신 데이터 전체 확인",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-396",
+    "query": "Qoo10 리뷰 각 제품 번역 리뷰 알려줘 알 수 있을까요?",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-397",
+    "query": "참고로 Qoo10 Centella Soothing Cream 리뷰 수 추이 알고 싶어 알려주시면 감사하겠습니다",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-398",
+    "query": "큐텐 리뷰 가장 인기 있는 제품 알려주세요",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-399",
+    "query": "간단하게 qoo10 리뷰 2025년 월별 누적",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-400",
+    "query": "잠깐, 큐텐 Madagascar Centella Ampoule 리뷰 추이",
+    "category": "review_qoo10",
+    "tier": 2
+  },
+  {
+    "id": "RQ-401",
+    "query": "Qoo10 Tone Brightening Serum 후기 건수 알고 싶어 알려주세요",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-402",
+    "query": "궁금한데 Qoo10 리뷰 SKIN1004 제품 리스트 좀 봐줘",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-403",
+    "query": "Qoo10 평가 SKIN1004 제품 리스트",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-404",
+    "query": "Qoo10 월간 리뷰데이터 건수 통계 알려주세요",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-405",
+    "query": "요즘 큐텐 후기 총합 몇 건이야 부탁드려요",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-406",
+    "query": "Qoo10 2025년 평가 달별 건수",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-407",
+    "query": "Qoo10 Tone Brightening Serum 리뷰데이터 건수",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-408",
+    "query": "큐텐 후기 최근 리뷰 번역문 보기",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-409",
+    "query": "Qoo10 후기 수집 날짜 기준 통계",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-410",
+    "query": "간단하게 Qoo10 Centella 관련 제품 후기데이터 총액 확인 가능한가요?",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-411",
+    "query": "요즘 큐텐 최근 리뷰 날짜 확인",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-412",
+    "query": "Qoo10 후기 최근 3개월 추이 보여주세요",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-413",
+    "query": "큐탠 후기 수 전년 대비 변화 좀 알려줘",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-414",
+    "query": "Qoo10 최근 2개월 후기 건수",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-415",
+    "query": "Qoo10 리뷰 수집 날짜 기준 통계 부탁드려요",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-416",
+    "query": "간단하게 Qoo10 후기 원문 언어별 분포 빨리",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-417",
+    "query": "Qoo10 평가 수 가장 적은 제품은? 좀 알려주세요",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-418",
+    "query": "정확한 큐텐 후기 2025년 매월 누적",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-419",
+    "query": "참고로 큐텐 최근 후기 날짜 확인 알려주세요",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-420",
+    "query": "큐텐 리뷰 제품 기준 최근 3개월 추이 좀 알려줘",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-421",
+    "query": "Qoo10 2024년 평가 수 알고 싶어",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-422",
+    "query": "큐텐 리뷰데이터 수 전년 대비 변화",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-423",
+    "query": "요즘 큐텐 리뷰 한국어 번역본만 보여줘",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-424",
+    "query": "큐텐 리뷰데이터 수 월 평균은?",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-425",
+    "query": "큐텐 후기 데이터 전체 실태 알려주세요",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-426",
+    "query": "qoo10 후기 데이터 전체 실태",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-427",
+    "query": "간단하게 큐텐 리뷰 수 월 평균은",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-428",
+    "query": "정확한 큐텐 Centella Soothing Cream 최근 리뷰 내용 보여줘 부탁드려요",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-429",
+    "query": "큐텐 2024년 리뷰 총 건수 확인 가능한가요?",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-430",
+    "query": "요즘 큐텐 제품 리뷰 순위 알려줘",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-431",
+    "query": "큐텐 Centella Soothing Cream 최근 리뷰 내용 알려주세요",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-432",
+    "query": "잠깐, 큐텐 Centella Soothing Cream 최근 리뷰 내용 알 수 있을까요?",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-433",
+    "query": "qoo10 후기 주별 통계 부탁드려요",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-434",
+    "query": "참고로 Qoo10 후기 원문 언어별 분포",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-435",
+    "query": "Qoo10 Centella Cleansing Oil 최신 후기 몇이야?",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-436",
+    "query": "요즘 Qoo10 평가 최근 한 달 건수?",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-437",
+    "query": "Qoo10 평가 제품별 리뷰 수 합산",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-438",
+    "query": "확인 좀 해줘 Qoo10 평가 수집 날짜 기준 통계",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-439",
+    "query": "Qoo10 SKIN1004 브렌드 후기 수 추세 알 수 있을까요?",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-440",
+    "query": "Qoo10에서 가장 최근에 등록된 후기는",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-441",
+    "query": "큐텐 제품별 평가 수 그래프 빨리",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-442",
+    "query": "Qoo10 평가 SKIN1004 제품 리스트 몇이야?",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-443",
+    "query": "잠깐, 큐텐 후기 수 전년 대비 변화 좀 확인해줘 어떻게 되나요?",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-444",
+    "query": "큐텐 최다 후기 제품 체크해줘 확인 가능한가요?",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-445",
+    "query": "큐텐 평가 제품별 점유율",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-446",
+    "query": "정확한 큐텐 리뷰 전체 건수 차트",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-447",
+    "query": "qoo10 Soothing Cream 리뷰 최근 3건",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-448",
+    "query": "Qoo10에서 가장 최근에 등록된 후기는 부탁드려요",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-449",
+    "query": "큐텐 리뷰 번역문 최근 순 어때?",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-450",
+    "query": "우리 회사 요즘 큐텐 리뷰 총합 몇 건이야 부탁드려요",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-451",
+    "query": "참고로 Qoo10 SKIN1004 리뷰데이터 총 몇 건이야? 알고 싶어",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-452",
+    "query": "우리 회사 Qoo10 2024년 12월 리뷰 건수 부탁드려요",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-453",
+    "query": "큐텐 최근 20건 후기데이터 조회 확인 가능한가요?",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-454",
+    "query": "Qoo10 평가 상품별 최신 날짜",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-455",
+    "query": "큐텐 리뷰데이터데이터 최다 월은?",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-456",
+    "query": "큐텐 최근 20건 후기데이터 조회",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-457",
+    "query": "우리 회사 qoo10 Centella Ampoule 관련 후기 전부 확인 부탁드립니다",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-458",
+    "query": "Qoo10 리부 제품별 최신 날짜",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-459",
+    "query": "큐텐 리뷰데이터 전체 건수 차트",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-460",
+    "query": "큐텐 2024년 평가 총 건수",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-461",
+    "query": "큐텐 후기데이터 제품 수 몇 개야 확인 가능한가요",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-462",
+    "query": "큐텐 평가 전체 건수 차트 어떻게 되나요?",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-463",
+    "query": "큐텐 Centella Soothing Cream 최근 후기 내용",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-464",
+    "query": "Qoo10 Madagascar Centella Ampoule 리뷰 몇 개 있어 어떻게 되나요?",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-465",
+    "query": "큐텐 리뷰데이터 한국어 번역본만 보여줘",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-466",
+    "query": "큐텐 리뷰 제품별 점유율 알려주세요",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-467",
+    "query": "혹시 Qoo10 Centella Cleansing Oil 최신 후기 보여줘",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-468",
+    "query": "Qoo10 Centella 관련 제품 리뷰 총액 알려주세요",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-469",
+    "query": "큐텐 하반기 2024년 평가",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-470",
+    "query": "우리 회사 큐텐 평가 가장 적은 제품은?",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-471",
+    "query": "Qoo10 2025년 월별 리부 건수 비교 궁금해 알 수 있을까요?",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-472",
+    "query": "Qoo10 Centella 관련 제품 평가 총액",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-473",
+    "query": "Qoo10 전체 후기데이터 데이터 수",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-474",
+    "query": "큐텐 제품 리뷰 상위 확인해줘 빨리",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-475",
+    "query": "요즘 Qoo10 리뷰 제품별 최신 날짜",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-476",
+    "query": "참고로 Qoo10 리뷰 데이터 날짜 범위 확인 가능한가요?",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-477",
+    "query": "큐텐에서 후기 가장 많이 달린 제품 TOP 3",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-478",
+    "query": "요즘 정확한 큐텐 후기 매월 2025년 누적",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-479",
+    "query": "혹시 확인 좀 해줘 큐텐 최근 수집된 리뷰 보여줘 정리해줘",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-480",
+    "query": "요즘 Qoo10 SKIN1004 평가 총 몇 건이야?",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-481",
+    "query": "궁금한데 궁금한데 Qoo10 후기 최신 데이터 날짜가 언제야",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-482",
+    "query": "요즘 요즘 큐탠 2025년 1월 리뷰 어때?",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-483",
+    "query": "혹시 큐텐 전체 2025년 리뷰 수",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-484",
+    "query": "혹시 큐텐 2025년 1월 리뷰 확인 가능한가요",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-485",
+    "query": "Qoo10 리뷰데이터 데이터 날짜 범위 확인 가능한가요?",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-486",
+    "query": "qoo10 전체 2025년 리뷰데이터 수",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-487",
+    "query": "빠르게 큐텐 후기 제품별 최신 리뷰 날짜와 내용",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-488",
+    "query": "정확한 Qoo10 SKIN1004 리뷰데이터데이터 총 몇 건이야 빨리",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-489",
+    "query": "Qoo10 최근 리뷰 review_date 순 어때?",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-490",
+    "query": "궁금한데 큐텐 2025년 1월 리뷰 좀",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-491",
+    "query": "참고로 큐텐 최근 평가 날짜 확인 알려주세요",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-492",
+    "query": "Qoo10 리뷰데이터 데이터 날짜 범위 알려주세요",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-493",
+    "query": "간단하게 큐텐 리뷰 수 전년 대비 변화 빨리 알려주세요",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-494",
+    "query": "확인 좀 해줘 Qoo10 리뷰 상품별 최신 날짜 부탁드려요",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-495",
+    "query": "Qoo10 SKIN1004 리뷰 총 몇 건이야 알려주세요",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-496",
+    "query": "잠깐, Qoo10 각 월 리뷰데이터 건수 통계 궁금해 알려줘",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-497",
+    "query": "우리 회사 Qoo10 리뷰 SKIN1004 제품 리스트",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-498",
+    "query": "Qoo10 리뷰 원문 중 긴 리뷰 알고 싶어",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-499",
+    "query": "큐텐 최근 리뷰 날짜 확인 알려주세요",
+    "category": "review_qoo10",
+    "tier": 3
+  },
+  {
+    "id": "RQ-500",
+    "query": "참고로 Qoo10 전체 후기 수 체크해줘 정리해주세요",
+    "category": "review_qoo10",
+    "tier": 3
+  }
+]

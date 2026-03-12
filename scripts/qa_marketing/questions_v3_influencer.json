@@ -1,0 +1,3002 @@
+[
+  {
+    "id": "IF-001",
+    "query": "2025년 팀별 인플루언서 비용 얼마야?",
+    "category": "team_performance",
+    "tier": 1
+  },
+  {
+    "id": "IF-002",
+    "query": "2024년 팀별 인플루언서 비용 비교",
+    "category": "team_performance",
+    "tier": 1
+  },
+  {
+    "id": "IF-003",
+    "query": "2025년 팀별 인플루언서 조회수 합계",
+    "category": "team_performance",
+    "tier": 1
+  },
+  {
+    "id": "IF-004",
+    "query": "2024년 팀별 인플루언서 조회수 비교",
+    "category": "team_performance",
+    "tier": 1
+  },
+  {
+    "id": "IF-005",
+    "query": "팀별 인플루언서 마케팅 비용 순위",
+    "category": "team_performance",
+    "tier": 1
+  },
+  {
+    "id": "IF-006",
+    "query": "팀별 인플루언서 마케팅 조회수 순위",
+    "category": "team_performance",
+    "tier": 1
+  },
+  {
+    "id": "IF-007",
+    "query": "팀별 인플루언서 비용 대비 조회수",
+    "category": "team_performance",
+    "tier": 1
+  },
+  {
+    "id": "IF-008",
+    "query": "인플루언서 비용이 가장 높은 팀은?",
+    "category": "team_performance",
+    "tier": 1
+  },
+  {
+    "id": "IF-009",
+    "query": "인플루언서 조회수가 가장 많은 팀은?",
+    "category": "team_performance",
+    "tier": 1
+  },
+  {
+    "id": "IF-010",
+    "query": "2025년 1분기 팀별 인플루언서 비용",
+    "category": "team_performance",
+    "tier": 1
+  },
+  {
+    "id": "IF-011",
+    "query": "2024년 상반기 팀별 인플루언서 비용",
+    "category": "team_performance",
+    "tier": 1
+  },
+  {
+    "id": "IF-012",
+    "query": "팀별 인플루언서 비용 월별 추이",
+    "category": "team_performance",
+    "tier": 1
+  },
+  {
+    "id": "IF-013",
+    "query": "팀별 인플루언서 비용 비중",
+    "category": "team_performance",
+    "tier": 1
+  },
+  {
+    "id": "IF-014",
+    "query": "팀별 인플루언서 비용 전년 대비 증감",
+    "category": "team_performance",
+    "tier": 1
+  },
+  {
+    "id": "IF-015",
+    "query": "팀별 인플루언서 수 비교",
+    "category": "team_performance",
+    "tier": 1
+  },
+  {
+    "id": "IF-016",
+    "query": "팀별 인플루언서 콘텐츠 수 비교",
+    "category": "team_performance",
+    "tier": 1
+  },
+  {
+    "id": "IF-017",
+    "query": "팀별 인플루언서 평균 비용",
+    "category": "team_performance",
+    "tier": 1
+  },
+  {
+    "id": "IF-018",
+    "query": "팀별 인플루언서 평균 조회수",
+    "category": "team_performance",
+    "tier": 1
+  },
+  {
+    "id": "IF-019",
+    "query": "2025년 3월 팀별 인플루언서 비용",
+    "category": "team_performance",
+    "tier": 1
+  },
+  {
+    "id": "IF-020",
+    "query": "팀별 인플루언서 비용 효율성 비교",
+    "category": "team_performance",
+    "tier": 1
+  },
+  {
+    "id": "IF-021",
+    "query": "팀별 인플루언서 좋아요수 비교",
+    "category": "team_performance",
+    "tier": 1
+  },
+  {
+    "id": "IF-022",
+    "query": "팀별 인플루언서 댓글수 비교",
+    "category": "team_performance",
+    "tier": 1
+  },
+  {
+    "id": "IF-023",
+    "query": "팀별 인플루언서 저장수 비교",
+    "category": "team_performance",
+    "tier": 1
+  },
+  {
+    "id": "IF-024",
+    "query": "팀별 인플루언서 공유수 비교",
+    "category": "team_performance",
+    "tier": 1
+  },
+  {
+    "id": "IF-025",
+    "query": "2025년 하반기 팀별 인플루언서 비용",
+    "category": "team_performance",
+    "tier": 1
+  },
+  {
+    "id": "IF-026",
+    "query": "팀별 인플루언서 마케팅 성과 요약",
+    "category": "team_performance",
+    "tier": 1
+  },
+  {
+    "id": "IF-027",
+    "query": "팀별 에이전시별 인플루언서 비용",
+    "category": "team_performance",
+    "tier": 1
+  },
+  {
+    "id": "IF-028",
+    "query": "팀별 CPV (조회당 비용) 비교",
+    "category": "team_performance",
+    "tier": 1
+  },
+  {
+    "id": "IF-029",
+    "query": "팀별 인플루언서 비용 분기별 추이",
+    "category": "team_performance",
+    "tier": 1
+  },
+  {
+    "id": "IF-030",
+    "query": "팀별 인플루언서 비용 USD 합계",
+    "category": "team_performance",
+    "tier": 1
+  },
+  {
+    "id": "IF-031",
+    "query": "인플루언서 티어별 평균 조회수",
+    "category": "tier_analysis",
+    "tier": 1
+  },
+  {
+    "id": "IF-032",
+    "query": "메가 인플루언서 평균 조회수",
+    "category": "tier_analysis",
+    "tier": 1
+  },
+  {
+    "id": "IF-033",
+    "query": "마크로 인플루언서 평균 조회수",
+    "category": "tier_analysis",
+    "tier": 1
+  },
+  {
+    "id": "IF-034",
+    "query": "마이크로 인플루언서 평균 조회수",
+    "category": "tier_analysis",
+    "tier": 1
+  },
+  {
+    "id": "IF-035",
+    "query": "나노 인플루언서 평균 조회수",
+    "category": "tier_analysis",
+    "tier": 1
+  },
+  {
+    "id": "IF-036",
+    "query": "티어별 인플루언서 수",
+    "category": "tier_analysis",
+    "tier": 1
+  },
+  {
+    "id": "IF-037",
+    "query": "티어별 인플루언서 비용 비교",
+    "category": "tier_analysis",
+    "tier": 1
+  },
+  {
+    "id": "IF-038",
+    "query": "티어별 인플루언서 비용 대비 조회수",
+    "category": "tier_analysis",
+    "tier": 1
+  },
+  {
+    "id": "IF-039",
+    "query": "티어별 인플루언서 좋아요 평균",
+    "category": "tier_analysis",
+    "tier": 1
+  },
+  {
+    "id": "IF-040",
+    "query": "티어별 인플루언서 댓글 평균",
+    "category": "tier_analysis",
+    "tier": 1
+  },
+  {
+    "id": "IF-041",
+    "query": "티어별 인플루언서 참여율 비교",
+    "category": "tier_analysis",
+    "tier": 1
+  },
+  {
+    "id": "IF-042",
+    "query": "비용 효율이 가장 좋은 인플루언서 티어는?",
+    "category": "tier_analysis",
+    "tier": 1
+  },
+  {
+    "id": "IF-043",
+    "query": "조회수 대비 비용이 가장 낮은 티어",
+    "category": "tier_analysis",
+    "tier": 1
+  },
+  {
+    "id": "IF-044",
+    "query": "티어별 인플루언서 콘텐츠 수",
+    "category": "tier_analysis",
+    "tier": 1
+  },
+  {
+    "id": "IF-045",
+    "query": "2025년 티어별 인플루언서 비용",
+    "category": "tier_analysis",
+    "tier": 1
+  },
+  {
+    "id": "IF-046",
+    "query": "2024년 티어별 인플루언서 성과 비교",
+    "category": "tier_analysis",
+    "tier": 1
+  },
+  {
+    "id": "IF-047",
+    "query": "티어별 평균 팔로워수",
+    "category": "tier_analysis",
+    "tier": 1
+  },
+  {
+    "id": "IF-048",
+    "query": "티어별 CPV 비교",
+    "category": "tier_analysis",
+    "tier": 1
+  },
+  {
+    "id": "IF-049",
+    "query": "티어별 평균 비용",
+    "category": "tier_analysis",
+    "tier": 1
+  },
+  {
+    "id": "IF-050",
+    "query": "티어별 저장수 평균",
+    "category": "tier_analysis",
+    "tier": 1
+  },
+  {
+    "id": "IF-051",
+    "query": "티어별 공유수 평균",
+    "category": "tier_analysis",
+    "tier": 1
+  },
+  {
+    "id": "IF-052",
+    "query": "티어별 인플루언서 비용 비중",
+    "category": "tier_analysis",
+    "tier": 1
+  },
+  {
+    "id": "IF-053",
+    "query": "티어별 인플루언서 성과 요약",
+    "category": "tier_analysis",
+    "tier": 1
+  },
+  {
+    "id": "IF-054",
+    "query": "가장 효율적인 인플루언서 티어 분석",
+    "category": "tier_analysis",
+    "tier": 1
+  },
+  {
+    "id": "IF-055",
+    "query": "티어별 미디어별 인플루언서 수",
+    "category": "tier_analysis",
+    "tier": 1
+  },
+  {
+    "id": "IF-056",
+    "query": "티어별 콘텐츠 유형별 성과",
+    "category": "tier_analysis",
+    "tier": 1
+  },
+  {
+    "id": "IF-057",
+    "query": "티어별 국가별 인플루언서 분포",
+    "category": "tier_analysis",
+    "tier": 1
+  },
+  {
+    "id": "IF-058",
+    "query": "티어별 브랜드별 인플루언서 수",
+    "category": "tier_analysis",
+    "tier": 1
+  },
+  {
+    "id": "IF-059",
+    "query": "티어별 에이전시별 인플루언서 수",
+    "category": "tier_analysis",
+    "tier": 1
+  },
+  {
+    "id": "IF-060",
+    "query": "티어별 인플루언서 비용 월별 추이",
+    "category": "tier_analysis",
+    "tier": 1
+  },
+  {
+    "id": "IF-061",
+    "query": "국가별 인플루언서 마케팅 성과",
+    "category": "country_performance",
+    "tier": 1
+  },
+  {
+    "id": "IF-062",
+    "query": "인도네시아 인플루언서 마케팅 성과",
+    "category": "country_performance",
+    "tier": 1
+  },
+  {
+    "id": "IF-063",
+    "query": "태국 인플루언서 마케팅 성과",
+    "category": "country_performance",
+    "tier": 1
+  },
+  {
+    "id": "IF-064",
+    "query": "베트남 인플루언서 마케팅 성과",
+    "category": "country_performance",
+    "tier": 1
+  },
+  {
+    "id": "IF-065",
+    "query": "한국 인플루언서 마케팅 성과",
+    "category": "country_performance",
+    "tier": 1
+  },
+  {
+    "id": "IF-066",
+    "query": "일본 인플루언서 마케팅 성과",
+    "category": "country_performance",
+    "tier": 1
+  },
+  {
+    "id": "IF-067",
+    "query": "미국 인플루언서 마케팅 성과",
+    "category": "country_performance",
+    "tier": 1
+  },
+  {
+    "id": "IF-068",
+    "query": "필리핀 인플루언서 마케팅 성과",
+    "category": "country_performance",
+    "tier": 1
+  },
+  {
+    "id": "IF-069",
+    "query": "말레이시아 인플루언서 마케팅 성과",
+    "category": "country_performance",
+    "tier": 1
+  },
+  {
+    "id": "IF-070",
+    "query": "싱가포르 인플루언서 마케팅 성과",
+    "category": "country_performance",
+    "tier": 1
+  },
+  {
+    "id": "IF-071",
+    "query": "국가별 인플루언서 비용 비교",
+    "category": "country_performance",
+    "tier": 1
+  },
+  {
+    "id": "IF-072",
+    "query": "국가별 인플루언서 조회수 비교",
+    "category": "country_performance",
+    "tier": 1
+  },
+  {
+    "id": "IF-073",
+    "query": "국가별 인플루언서 수 비교",
+    "category": "country_performance",
+    "tier": 1
+  },
+  {
+    "id": "IF-074",
+    "query": "인플루언서 비용이 가장 높은 국가는?",
+    "category": "country_performance",
+    "tier": 1
+  },
+  {
+    "id": "IF-075",
+    "query": "인플루언서 조회수가 가장 많은 국가는?",
+    "category": "country_performance",
+    "tier": 1
+  },
+  {
+    "id": "IF-076",
+    "query": "국가별 인플루언서 CPV 비교",
+    "category": "country_performance",
+    "tier": 1
+  },
+  {
+    "id": "IF-077",
+    "query": "국가별 인플루언서 비용 비중",
+    "category": "country_performance",
+    "tier": 1
+  },
+  {
+    "id": "IF-078",
+    "query": "동남아 국가별 인플루언서 성과 비교",
+    "category": "country_performance",
+    "tier": 1
+  },
+  {
+    "id": "IF-079",
+    "query": "인도네시아 vs 태국 인플루언서 비용",
+    "category": "country_performance",
+    "tier": 1
+  },
+  {
+    "id": "IF-080",
+    "query": "한국 vs 일본 인플루언서 성과 비교",
+    "category": "country_performance",
+    "tier": 1
+  },
+  {
+    "id": "IF-081",
+    "query": "국가별 인플루언서 좋아요 평균",
+    "category": "country_performance",
+    "tier": 1
+  },
+  {
+    "id": "IF-082",
+    "query": "국가별 인플루언서 댓글 평균",
+    "category": "country_performance",
+    "tier": 1
+  },
+  {
+    "id": "IF-083",
+    "query": "국가별 인플루언서 콘텐츠 수",
+    "category": "country_performance",
+    "tier": 1
+  },
+  {
+    "id": "IF-084",
+    "query": "2025년 국가별 인플루언서 비용",
+    "category": "country_performance",
+    "tier": 1
+  },
+  {
+    "id": "IF-085",
+    "query": "2024년 국가별 인플루언서 비용",
+    "category": "country_performance",
+    "tier": 1
+  },
+  {
+    "id": "IF-086",
+    "query": "국가별 인플루언서 비용 전년 대비 증감",
+    "category": "country_performance",
+    "tier": 1
+  },
+  {
+    "id": "IF-087",
+    "query": "국가별 인플루언서 비용 월별 추이",
+    "category": "country_performance",
+    "tier": 1
+  },
+  {
+    "id": "IF-088",
+    "query": "국가별 인플루언서 평균 비용",
+    "category": "country_performance",
+    "tier": 1
+  },
+  {
+    "id": "IF-089",
+    "query": "국가별 인플루언서 비용 효율성 순위",
+    "category": "country_performance",
+    "tier": 1
+  },
+  {
+    "id": "IF-090",
+    "query": "국가별 인플루언서 성과 요약 리포트",
+    "category": "country_performance",
+    "tier": 1
+  },
+  {
+    "id": "IF-091",
+    "query": "캠페인별 인플루언서 성과",
+    "category": "campaign",
+    "tier": 1
+  },
+  {
+    "id": "IF-092",
+    "query": "2025년 캠페인별 인플루언서 비용",
+    "category": "campaign",
+    "tier": 1
+  },
+  {
+    "id": "IF-093",
+    "query": "2024년 캠페인별 인플루언서 성과 비교",
+    "category": "campaign",
+    "tier": 1
+  },
+  {
+    "id": "IF-094",
+    "query": "캠페인별 인플루언서 조회수",
+    "category": "campaign",
+    "tier": 1
+  },
+  {
+    "id": "IF-095",
+    "query": "캠페인별 인플루언서 수",
+    "category": "campaign",
+    "tier": 1
+  },
+  {
+    "id": "IF-096",
+    "query": "비용이 가장 높은 캠페인은?",
+    "category": "campaign",
+    "tier": 1
+  },
+  {
+    "id": "IF-097",
+    "query": "조회수가 가장 많은 캠페인은?",
+    "category": "campaign",
+    "tier": 1
+  },
+  {
+    "id": "IF-098",
+    "query": "캠페인별 인플루언서 비용 대비 조회수",
+    "category": "campaign",
+    "tier": 1
+  },
+  {
+    "id": "IF-099",
+    "query": "캠페인별 CPV",
+    "category": "campaign",
+    "tier": 1
+  },
+  {
+    "id": "IF-100",
+    "query": "캠페인별 인플루언서 좋아요 합계",
+    "category": "campaign",
+    "tier": 1
+  },
+  {
+    "id": "IF-101",
+    "query": "캠페인별 인플루언서 댓글 합계",
+    "category": "campaign",
+    "tier": 1
+  },
+  {
+    "id": "IF-102",
+    "query": "캠페인별 인플루언서 저장수",
+    "category": "campaign",
+    "tier": 1
+  },
+  {
+    "id": "IF-103",
+    "query": "캠페인별 인플루언서 참여율",
+    "category": "campaign",
+    "tier": 1
+  },
+  {
+    "id": "IF-104",
+    "query": "캠페인별 인플루언서 비용 순위",
+    "category": "campaign",
+    "tier": 1
+  },
+  {
+    "id": "IF-105",
+    "query": "캠페인별 콘텐츠 수",
+    "category": "campaign",
+    "tier": 1
+  },
+  {
+    "id": "IF-106",
+    "query": "어떤 캠페인들이 있어?",
+    "category": "campaign",
+    "tier": 1
+  },
+  {
+    "id": "IF-107",
+    "query": "2025년 1분기 캠페인별 성과",
+    "category": "campaign",
+    "tier": 1
+  },
+  {
+    "id": "IF-108",
+    "query": "캠페인별 국가 분포",
+    "category": "campaign",
+    "tier": 1
+  },
+  {
+    "id": "IF-109",
+    "query": "캠페인별 미디어 분포",
+    "category": "campaign",
+    "tier": 1
+  },
+  {
+    "id": "IF-110",
+    "query": "캠페인별 성과 요약 리포트",
+    "category": "campaign",
+    "tier": 1
+  },
+  {
+    "id": "IF-111",
+    "query": "캠페인별 티어별 인플루언서 분포",
+    "category": "campaign",
+    "tier": 1
+  },
+  {
+    "id": "IF-112",
+    "query": "캠페인별 비용 효율성 비교",
+    "category": "campaign",
+    "tier": 1
+  },
+  {
+    "id": "IF-113",
+    "query": "캠페인별 브랜드 분포",
+    "category": "campaign",
+    "tier": 1
+  },
+  {
+    "id": "IF-114",
+    "query": "캠페인별 에이전시 비교",
+    "category": "campaign",
+    "tier": 1
+  },
+  {
+    "id": "IF-115",
+    "query": "캠페인별 콘텐츠 유형 비교",
+    "category": "campaign",
+    "tier": 1
+  },
+  {
+    "id": "IF-116",
+    "query": "조회수 TOP 10 인플루언서",
+    "category": "top_influencer",
+    "tier": 1
+  },
+  {
+    "id": "IF-117",
+    "query": "조회수 TOP 20 인플루언서",
+    "category": "top_influencer",
+    "tier": 1
+  },
+  {
+    "id": "IF-118",
+    "query": "좋아요 TOP 10 인플루언서",
+    "category": "top_influencer",
+    "tier": 1
+  },
+  {
+    "id": "IF-119",
+    "query": "댓글 TOP 10 인플루언서",
+    "category": "top_influencer",
+    "tier": 1
+  },
+  {
+    "id": "IF-120",
+    "query": "저장수 TOP 10 인플루언서",
+    "category": "top_influencer",
+    "tier": 1
+  },
+  {
+    "id": "IF-121",
+    "query": "공유수 TOP 10 인플루언서",
+    "category": "top_influencer",
+    "tier": 1
+  },
+  {
+    "id": "IF-122",
+    "query": "비용이 가장 높은 인플루언서 TOP 10",
+    "category": "top_influencer",
+    "tier": 1
+  },
+  {
+    "id": "IF-123",
+    "query": "팔로워수 TOP 10 인플루언서",
+    "category": "top_influencer",
+    "tier": 1
+  },
+  {
+    "id": "IF-124",
+    "query": "조회수 대비 비용이 가장 효율적인 인플루언서 TOP 10",
+    "category": "top_influencer",
+    "tier": 1
+  },
+  {
+    "id": "IF-125",
+    "query": "참여율 TOP 10 인플루언서",
+    "category": "top_influencer",
+    "tier": 1
+  },
+  {
+    "id": "IF-126",
+    "query": "2025년 조회수 TOP 10 인플루언서",
+    "category": "top_influencer",
+    "tier": 1
+  },
+  {
+    "id": "IF-127",
+    "query": "2024년 조회수 TOP 10 인플루언서",
+    "category": "top_influencer",
+    "tier": 1
+  },
+  {
+    "id": "IF-128",
+    "query": "인도네시아 조회수 TOP 인플루언서",
+    "category": "top_influencer",
+    "tier": 1
+  },
+  {
+    "id": "IF-129",
+    "query": "태국 조회수 TOP 인플루언서",
+    "category": "top_influencer",
+    "tier": 1
+  },
+  {
+    "id": "IF-130",
+    "query": "한국 조회수 TOP 인플루언서",
+    "category": "top_influencer",
+    "tier": 1
+  },
+  {
+    "id": "IF-131",
+    "query": "베트남 조회수 TOP 인플루언서",
+    "category": "top_influencer",
+    "tier": 1
+  },
+  {
+    "id": "IF-132",
+    "query": "비용 대비 조회수가 가장 높은 인플루언서",
+    "category": "top_influencer",
+    "tier": 1
+  },
+  {
+    "id": "IF-133",
+    "query": "콘텐츠 조회수 100만 이상인 인플루언서",
+    "category": "top_influencer",
+    "tier": 1
+  },
+  {
+    "id": "IF-134",
+    "query": "조회수 TOP 인플루언서 국가 분포",
+    "category": "top_influencer",
+    "tier": 1
+  },
+  {
+    "id": "IF-135",
+    "query": "조회수 TOP 인플루언서 티어 분포",
+    "category": "top_influencer",
+    "tier": 1
+  },
+  {
+    "id": "IF-136",
+    "query": "콘텐츠 유형별 인플루언서 성과",
+    "category": "content_type",
+    "tier": 1
+  },
+  {
+    "id": "IF-137",
+    "query": "콘텐츠 유형별 평균 조회수",
+    "category": "content_type",
+    "tier": 1
+  },
+  {
+    "id": "IF-138",
+    "query": "콘텐츠 유형별 평균 좋아요",
+    "category": "content_type",
+    "tier": 1
+  },
+  {
+    "id": "IF-139",
+    "query": "콘텐츠 유형별 평균 댓글",
+    "category": "content_type",
+    "tier": 1
+  },
+  {
+    "id": "IF-140",
+    "query": "콘텐츠 유형별 비용 비교",
+    "category": "content_type",
+    "tier": 1
+  },
+  {
+    "id": "IF-141",
+    "query": "콘텐츠 유형별 콘텐츠 수",
+    "category": "content_type",
+    "tier": 1
+  },
+  {
+    "id": "IF-142",
+    "query": "조회수가 가장 높은 콘텐츠 유형은?",
+    "category": "content_type",
+    "tier": 1
+  },
+  {
+    "id": "IF-143",
+    "query": "콘텐츠 유형별 CPV 비교",
+    "category": "content_type",
+    "tier": 1
+  },
+  {
+    "id": "IF-144",
+    "query": "콘텐츠 유형별 참여율",
+    "category": "content_type",
+    "tier": 1
+  },
+  {
+    "id": "IF-145",
+    "query": "어떤 콘텐츠 유형이 있어?",
+    "category": "content_type",
+    "tier": 1
+  },
+  {
+    "id": "IF-146",
+    "query": "콘텐츠 유형별 비용 효율성 비교",
+    "category": "content_type",
+    "tier": 1
+  },
+  {
+    "id": "IF-147",
+    "query": "콘텐츠 유형별 저장수 평균",
+    "category": "content_type",
+    "tier": 1
+  },
+  {
+    "id": "IF-148",
+    "query": "콘텐츠 유형별 공유수 평균",
+    "category": "content_type",
+    "tier": 1
+  },
+  {
+    "id": "IF-149",
+    "query": "2025년 콘텐츠 유형별 성과",
+    "category": "content_type",
+    "tier": 1
+  },
+  {
+    "id": "IF-150",
+    "query": "콘텐츠 유형별 국가별 성과 비교",
+    "category": "content_type",
+    "tier": 1
+  },
+  {
+    "id": "IF-151",
+    "query": "콘텐츠 유형별 미디어별 분포",
+    "category": "content_type",
+    "tier": 1
+  },
+  {
+    "id": "IF-152",
+    "query": "콘텐츠 유형별 티어별 성과",
+    "category": "content_type",
+    "tier": 1
+  },
+  {
+    "id": "IF-153",
+    "query": "콘텐츠 유형별 비용 비중",
+    "category": "content_type",
+    "tier": 1
+  },
+  {
+    "id": "IF-154",
+    "query": "콘텐츠 유형별 성과 요약",
+    "category": "content_type",
+    "tier": 1
+  },
+  {
+    "id": "IF-155",
+    "query": "콘텐츠 유형별 인플루언서 수",
+    "category": "content_type",
+    "tier": 1
+  },
+  {
+    "id": "IF-156",
+    "query": "인플루언서 비용 대비 조회수 분석",
+    "category": "cost_efficiency",
+    "tier": 1
+  },
+  {
+    "id": "IF-157",
+    "query": "인플루언서 CPV (조회당 비용) 분석",
+    "category": "cost_efficiency",
+    "tier": 1
+  },
+  {
+    "id": "IF-158",
+    "query": "CPV가 가장 낮은 인플루언서 TOP 10",
+    "category": "cost_efficiency",
+    "tier": 1
+  },
+  {
+    "id": "IF-159",
+    "query": "CPV가 가장 높은 인플루언서 TOP 10",
+    "category": "cost_efficiency",
+    "tier": 1
+  },
+  {
+    "id": "IF-160",
+    "query": "국가별 인플루언서 CPV",
+    "category": "cost_efficiency",
+    "tier": 1
+  },
+  {
+    "id": "IF-161",
+    "query": "미디어별 인플루언서 CPV",
+    "category": "cost_efficiency",
+    "tier": 1
+  },
+  {
+    "id": "IF-162",
+    "query": "인플루언서 비용 대비 좋아요 비율",
+    "category": "cost_efficiency",
+    "tier": 1
+  },
+  {
+    "id": "IF-163",
+    "query": "인플루언서 비용 대비 댓글 비율",
+    "category": "cost_efficiency",
+    "tier": 1
+  },
+  {
+    "id": "IF-164",
+    "query": "인플루언서 비용 대비 참여율",
+    "category": "cost_efficiency",
+    "tier": 1
+  },
+  {
+    "id": "IF-165",
+    "query": "비용 효율이 가장 좋은 국가",
+    "category": "cost_efficiency",
+    "tier": 1
+  },
+  {
+    "id": "IF-166",
+    "query": "비용 효율이 가장 좋은 미디어",
+    "category": "cost_efficiency",
+    "tier": 1
+  },
+  {
+    "id": "IF-167",
+    "query": "비용 효율이 가장 좋은 콘텐츠 유형",
+    "category": "cost_efficiency",
+    "tier": 1
+  },
+  {
+    "id": "IF-168",
+    "query": "인플루언서 1인당 평균 비용",
+    "category": "cost_efficiency",
+    "tier": 1
+  },
+  {
+    "id": "IF-169",
+    "query": "콘텐츠 1건당 평균 비용",
+    "category": "cost_efficiency",
+    "tier": 1
+  },
+  {
+    "id": "IF-170",
+    "query": "2025년 인플루언서 CPV 추이",
+    "category": "cost_efficiency",
+    "tier": 1
+  },
+  {
+    "id": "IF-171",
+    "query": "비용 효율성 분기별 추이",
+    "category": "cost_efficiency",
+    "tier": 1
+  },
+  {
+    "id": "IF-172",
+    "query": "팀별 인플루언서 CPV 비교",
+    "category": "cost_efficiency",
+    "tier": 1
+  },
+  {
+    "id": "IF-173",
+    "query": "캠페인별 인플루언서 CPV 비교",
+    "category": "cost_efficiency",
+    "tier": 1
+  },
+  {
+    "id": "IF-174",
+    "query": "에이전시별 인플루언서 비용 효율성",
+    "category": "cost_efficiency",
+    "tier": 1
+  },
+  {
+    "id": "IF-175",
+    "query": "인플루언서 비용 KRW vs USD 비교",
+    "category": "cost_efficiency",
+    "tier": 1
+  },
+  {
+    "id": "IF-176",
+    "query": "월별 인플루언서 마케팅 비용 추이",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "IF-177",
+    "query": "2025년 월별 인플루언서 비용 추이",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "IF-178",
+    "query": "2024년 월별 인플루언서 비용 추이",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "IF-179",
+    "query": "월별 인플루언서 조회수 추이",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "IF-180",
+    "query": "월별 인플루언서 콘텐츠 업로드 수 추이",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "IF-181",
+    "query": "인플루언서 비용이 가장 많았던 달은?",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "IF-182",
+    "query": "인플루언서 조회수가 가장 많았던 달은?",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "IF-183",
+    "query": "2025년 분기별 인플루언서 비용",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "IF-184",
+    "query": "2024년 분기별 인플루언서 비용",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "IF-185",
+    "query": "인플루언서 비용 전월 대비 증감률",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "IF-186",
+    "query": "인플루언서 비용 YoY 비교",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "IF-187",
+    "query": "최근 6개월 인플루언서 비용 추이",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "IF-188",
+    "query": "최근 3개월 인플루언서 비용",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "IF-189",
+    "query": "월별 인플루언서 좋아요 추이",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "IF-190",
+    "query": "월별 인플루언서 참여율 추이",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "IF-191",
+    "query": "2025년 상반기 인플루언서 비용 합계",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "IF-192",
+    "query": "2024년 하반기 인플루언서 비용 합계",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "IF-193",
+    "query": "월별 인플루언서 수 추이",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "IF-194",
+    "query": "인플루언서 비용 전년 동기 대비 증감",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "IF-195",
+    "query": "2025년 인플루언서 누적 비용",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "IF-196",
+    "query": "미디어별 인플루언서 성과",
+    "category": "media_platform",
+    "tier": 1
+  },
+  {
+    "id": "IF-197",
+    "query": "인스타그램 인플루언서 성과",
+    "category": "media_platform",
+    "tier": 1
+  },
+  {
+    "id": "IF-198",
+    "query": "유튜브 인플루언서 성과",
+    "category": "media_platform",
+    "tier": 1
+  },
+  {
+    "id": "IF-199",
+    "query": "틱톡 인플루언서 성과",
+    "category": "media_platform",
+    "tier": 1
+  },
+  {
+    "id": "IF-200",
+    "query": "미디어별 인플루언서 비용 비교",
+    "category": "media_platform",
+    "tier": 1
+  },
+  {
+    "id": "IF-201",
+    "query": "미디어별 인플루언서 조회수 비교",
+    "category": "media_platform",
+    "tier": 1
+  },
+  {
+    "id": "IF-202",
+    "query": "미디어별 인플루언서 수",
+    "category": "media_platform",
+    "tier": 1
+  },
+  {
+    "id": "IF-203",
+    "query": "미디어별 인플루언서 좋아요 평균",
+    "category": "media_platform",
+    "tier": 1
+  },
+  {
+    "id": "IF-204",
+    "query": "미디어별 인플루언서 댓글 평균",
+    "category": "media_platform",
+    "tier": 1
+  },
+  {
+    "id": "IF-205",
+    "query": "미디어별 인플루언서 CPV",
+    "category": "media_platform",
+    "tier": 1
+  },
+  {
+    "id": "IF-206",
+    "query": "어떤 미디어 플랫폼이 있어?",
+    "category": "media_platform",
+    "tier": 1
+  },
+  {
+    "id": "IF-207",
+    "query": "미디어별 인플루언서 비용 비중",
+    "category": "media_platform",
+    "tier": 1
+  },
+  {
+    "id": "IF-208",
+    "query": "미디어별 인플루언서 콘텐츠 수",
+    "category": "media_platform",
+    "tier": 1
+  },
+  {
+    "id": "IF-209",
+    "query": "미디어별 인플루언서 참여율",
+    "category": "media_platform",
+    "tier": 1
+  },
+  {
+    "id": "IF-210",
+    "query": "미디어별 인플루언서 비용 월별 추이",
+    "category": "media_platform",
+    "tier": 1
+  },
+  {
+    "id": "IF-211",
+    "query": "미디어별 인플루언서 비용 효율성 비교",
+    "category": "media_platform",
+    "tier": 1
+  },
+  {
+    "id": "IF-212",
+    "query": "2025년 미디어별 인플루언서 성과",
+    "category": "media_platform",
+    "tier": 1
+  },
+  {
+    "id": "IF-213",
+    "query": "미디어별 인플루언서 저장수 비교",
+    "category": "media_platform",
+    "tier": 1
+  },
+  {
+    "id": "IF-214",
+    "query": "미디어별 인플루언서 공유수 비교",
+    "category": "media_platform",
+    "tier": 1
+  },
+  {
+    "id": "IF-215",
+    "query": "미디어별 티어별 인플루언서 분포",
+    "category": "media_platform",
+    "tier": 1
+  },
+  {
+    "id": "IF-216",
+    "query": "팔로워수 기준 인플루언서 분포",
+    "category": "follower_analysis",
+    "tier": 1
+  },
+  {
+    "id": "IF-217",
+    "query": "팔로워수 10만 이상 인플루언서 수",
+    "category": "follower_analysis",
+    "tier": 1
+  },
+  {
+    "id": "IF-218",
+    "query": "팔로워수 100만 이상 인플루언서 수",
+    "category": "follower_analysis",
+    "tier": 1
+  },
+  {
+    "id": "IF-219",
+    "query": "팔로워수 1만~10만 인플루언서 수",
+    "category": "follower_analysis",
+    "tier": 1
+  },
+  {
+    "id": "IF-220",
+    "query": "팔로워수 TOP 10 인플루언서",
+    "category": "follower_analysis",
+    "tier": 1
+  },
+  {
+    "id": "IF-221",
+    "query": "팔로워수 평균",
+    "category": "follower_analysis",
+    "tier": 1
+  },
+  {
+    "id": "IF-222",
+    "query": "팔로워수와 조회수 상관관계",
+    "category": "follower_analysis",
+    "tier": 1
+  },
+  {
+    "id": "IF-223",
+    "query": "팔로워수와 비용 상관관계",
+    "category": "follower_analysis",
+    "tier": 1
+  },
+  {
+    "id": "IF-224",
+    "query": "팔로워수 대비 조회수 비율이 높은 인플루언서",
+    "category": "follower_analysis",
+    "tier": 1
+  },
+  {
+    "id": "IF-225",
+    "query": "국가별 평균 팔로워수",
+    "category": "follower_analysis",
+    "tier": 1
+  },
+  {
+    "id": "IF-226",
+    "query": "미디어별 평균 팔로워수",
+    "category": "follower_analysis",
+    "tier": 1
+  },
+  {
+    "id": "IF-227",
+    "query": "팔로워수 구간별 인플루언서 수",
+    "category": "follower_analysis",
+    "tier": 1
+  },
+  {
+    "id": "IF-228",
+    "query": "팔로워수 구간별 평균 조회수",
+    "category": "follower_analysis",
+    "tier": 1
+  },
+  {
+    "id": "IF-229",
+    "query": "팔로워수 구간별 평균 비용",
+    "category": "follower_analysis",
+    "tier": 1
+  },
+  {
+    "id": "IF-230",
+    "query": "팔로워수 구간별 CPV",
+    "category": "follower_analysis",
+    "tier": 1
+  },
+  {
+    "id": "IF-231",
+    "query": "에이전시별 인플루언서 비용",
+    "category": "agency",
+    "tier": 1
+  },
+  {
+    "id": "IF-232",
+    "query": "에이전시별 인플루언서 수",
+    "category": "agency",
+    "tier": 1
+  },
+  {
+    "id": "IF-233",
+    "query": "에이전시별 인플루언서 조회수",
+    "category": "agency",
+    "tier": 1
+  },
+  {
+    "id": "IF-234",
+    "query": "에이전시별 인플루언서 성과 비교",
+    "category": "agency",
+    "tier": 1
+  },
+  {
+    "id": "IF-235",
+    "query": "비용이 가장 높은 에이전시는?",
+    "category": "agency",
+    "tier": 1
+  },
+  {
+    "id": "IF-236",
+    "query": "어떤 에이전시들이 있어?",
+    "category": "agency",
+    "tier": 1
+  },
+  {
+    "id": "IF-237",
+    "query": "에이전시별 CPV 비교",
+    "category": "agency",
+    "tier": 1
+  },
+  {
+    "id": "IF-238",
+    "query": "에이전시별 평균 비용",
+    "category": "agency",
+    "tier": 1
+  },
+  {
+    "id": "IF-239",
+    "query": "에이전시별 비용 효율성 순위",
+    "category": "agency",
+    "tier": 1
+  },
+  {
+    "id": "IF-240",
+    "query": "에이전시별 티어 분포",
+    "category": "agency",
+    "tier": 1
+  },
+  {
+    "id": "IF-241",
+    "query": "브랜드별 인플루언서 비용",
+    "category": "brand",
+    "tier": 1
+  },
+  {
+    "id": "IF-242",
+    "query": "브랜드별 인플루언서 조회수",
+    "category": "brand",
+    "tier": 1
+  },
+  {
+    "id": "IF-243",
+    "query": "브랜드별 인플루언서 수",
+    "category": "brand",
+    "tier": 1
+  },
+  {
+    "id": "IF-244",
+    "query": "브랜드별 인플루언서 성과 비교",
+    "category": "brand",
+    "tier": 1
+  },
+  {
+    "id": "IF-245",
+    "query": "어떤 브랜드들이 있어?",
+    "category": "brand",
+    "tier": 1
+  },
+  {
+    "id": "IF-246",
+    "query": "브랜드별 CPV 비교",
+    "category": "brand",
+    "tier": 1
+  },
+  {
+    "id": "IF-247",
+    "query": "브랜드별 인플루언서 비용 비중",
+    "category": "brand",
+    "tier": 1
+  },
+  {
+    "id": "IF-248",
+    "query": "브랜드별 콘텐츠 수",
+    "category": "brand",
+    "tier": 1
+  },
+  {
+    "id": "IF-249",
+    "query": "브랜드별 평균 조회수",
+    "category": "brand",
+    "tier": 1
+  },
+  {
+    "id": "IF-250",
+    "query": "브랜드별 인플루언서 성과 요약",
+    "category": "brand",
+    "tier": 1
+  },
+  {
+    "id": "IF-251",
+    "query": "광고 실행 여부별 인플루언서 성과",
+    "category": "ad_execution",
+    "tier": 1
+  },
+  {
+    "id": "IF-252",
+    "query": "유료 광고 실행 인플루언서 수",
+    "category": "ad_execution",
+    "tier": 1
+  },
+  {
+    "id": "IF-253",
+    "query": "무료(시딩) 인플루언서 수",
+    "category": "ad_execution",
+    "tier": 1
+  },
+  {
+    "id": "IF-254",
+    "query": "유료 vs 무료 인플루언서 조회수 비교",
+    "category": "ad_execution",
+    "tier": 1
+  },
+  {
+    "id": "IF-255",
+    "query": "유료 vs 무료 인플루언서 비용 비교",
+    "category": "ad_execution",
+    "tier": 1
+  },
+  {
+    "id": "IF-256",
+    "query": "유료 광고 인플루언서 CPV",
+    "category": "ad_execution",
+    "tier": 1
+  },
+  {
+    "id": "IF-257",
+    "query": "광고 실행 유형별 성과 비교",
+    "category": "ad_execution",
+    "tier": 1
+  },
+  {
+    "id": "IF-258",
+    "query": "컨택 유형별 인플루언서 수",
+    "category": "ad_execution",
+    "tier": 1
+  },
+  {
+    "id": "IF-259",
+    "query": "컨택 유형별 성과 비교",
+    "category": "ad_execution",
+    "tier": 1
+  },
+  {
+    "id": "IF-260",
+    "query": "인플루언서 컨택 유형 분포",
+    "category": "ad_execution",
+    "tier": 1
+  },
+  {
+    "id": "IF-261",
+    "query": "인플루언서 총 비용 (KRW)",
+    "category": "total",
+    "tier": 1
+  },
+  {
+    "id": "IF-262",
+    "query": "인플루언서 총 비용 (USD)",
+    "category": "total",
+    "tier": 1
+  },
+  {
+    "id": "IF-263",
+    "query": "2025년 인플루언서 총 비용",
+    "category": "total",
+    "tier": 1
+  },
+  {
+    "id": "IF-264",
+    "query": "2024년 인플루언서 총 비용",
+    "category": "total",
+    "tier": 1
+  },
+  {
+    "id": "IF-265",
+    "query": "인플루언서 총 조회수",
+    "category": "total",
+    "tier": 1
+  },
+  {
+    "id": "IF-266",
+    "query": "인플루언서 총 좋아요수",
+    "category": "total",
+    "tier": 1
+  },
+  {
+    "id": "IF-267",
+    "query": "인플루언서 총 댓글수",
+    "category": "total",
+    "tier": 1
+  },
+  {
+    "id": "IF-268",
+    "query": "인플루언서 총 저장수",
+    "category": "total",
+    "tier": 1
+  },
+  {
+    "id": "IF-269",
+    "query": "인플루언서 총 공유수",
+    "category": "total",
+    "tier": 1
+  },
+  {
+    "id": "IF-270",
+    "query": "전체 인플루언서 수",
+    "category": "total",
+    "tier": 1
+  },
+  {
+    "id": "IF-271",
+    "query": "전체 인플루언서 콘텐츠 수",
+    "category": "total",
+    "tier": 1
+  },
+  {
+    "id": "IF-272",
+    "query": "2025년 전체 인플루언서 성과 요약",
+    "category": "total",
+    "tier": 1
+  },
+  {
+    "id": "IF-273",
+    "query": "2024년 전체 인플루언서 성과 요약",
+    "category": "total",
+    "tier": 1
+  },
+  {
+    "id": "IF-274",
+    "query": "인플루언서 비용 전년 대비 증감",
+    "category": "total",
+    "tier": 1
+  },
+  {
+    "id": "IF-275",
+    "query": "인플루언서 조회수 전년 대비 증감",
+    "category": "total",
+    "tier": 1
+  },
+  {
+    "id": "IF-276",
+    "query": "인플루언서 언어별 분포",
+    "category": "language",
+    "tier": 1
+  },
+  {
+    "id": "IF-277",
+    "query": "언어별 인플루언서 수",
+    "category": "language",
+    "tier": 1
+  },
+  {
+    "id": "IF-278",
+    "query": "언어별 인플루언서 평균 조회수",
+    "category": "language",
+    "tier": 1
+  },
+  {
+    "id": "IF-279",
+    "query": "언어별 인플루언서 비용",
+    "category": "language",
+    "tier": 1
+  },
+  {
+    "id": "IF-280",
+    "query": "어떤 언어의 인플루언서가 있어?",
+    "category": "language",
+    "tier": 1
+  },
+  {
+    "id": "IF-281",
+    "query": "리전별 인플루언서 분포",
+    "category": "region",
+    "tier": 1
+  },
+  {
+    "id": "IF-282",
+    "query": "리전별 인플루언서 비용",
+    "category": "region",
+    "tier": 1
+  },
+  {
+    "id": "IF-283",
+    "query": "리전별 인플루언서 조회수",
+    "category": "region",
+    "tier": 1
+  },
+  {
+    "id": "IF-284",
+    "query": "어떤 리전이 있어?",
+    "category": "region",
+    "tier": 1
+  },
+  {
+    "id": "IF-285",
+    "query": "리전별 인플루언서 성과 비교",
+    "category": "region",
+    "tier": 1
+  },
+  {
+    "id": "IF-286",
+    "query": "인플루언서 데이터 날짜 범위",
+    "category": "general",
+    "tier": 1
+  },
+  {
+    "id": "IF-287",
+    "query": "인플루언서 데이터 총 건수",
+    "category": "general",
+    "tier": 1
+  },
+  {
+    "id": "IF-288",
+    "query": "가장 최근 인플루언서 콘텐츠 업로드 날짜",
+    "category": "general",
+    "tier": 1
+  },
+  {
+    "id": "IF-289",
+    "query": "인플루언서 전체 현황 분석",
+    "category": "general",
+    "tier": 1
+  },
+  {
+    "id": "IF-290",
+    "query": "인플루언서 마케팅 종합 리포트",
+    "category": "general",
+    "tier": 1
+  },
+  {
+    "id": "IF-291",
+    "query": "인도네시아 2025년 팀별 인플루언서 비용",
+    "category": "combined",
+    "tier": 1
+  },
+  {
+    "id": "IF-292",
+    "query": "태국 미디어별 인플루언서 성과",
+    "category": "combined",
+    "tier": 1
+  },
+  {
+    "id": "IF-293",
+    "query": "2025년 1분기 국가별 인플루언서 비용 및 조회수",
+    "category": "combined",
+    "tier": 1
+  },
+  {
+    "id": "IF-294",
+    "query": "마이크로 인플루언서 국가별 성과 비교",
+    "category": "combined",
+    "tier": 1
+  },
+  {
+    "id": "IF-295",
+    "query": "인스타그램 국가별 인플루언서 성과",
+    "category": "combined",
+    "tier": 1
+  },
+  {
+    "id": "IF-296",
+    "query": "유튜브 티어별 인플루언서 성과",
+    "category": "combined",
+    "tier": 1
+  },
+  {
+    "id": "IF-297",
+    "query": "2025년 캠페인별 국가별 인플루언서 비용",
+    "category": "combined",
+    "tier": 1
+  },
+  {
+    "id": "IF-298",
+    "query": "팀별 미디어별 인플루언서 비용 비교",
+    "category": "combined",
+    "tier": 1
+  },
+  {
+    "id": "IF-299",
+    "query": "에이전시별 국가별 인플루언서 비용",
+    "category": "combined",
+    "tier": 1
+  },
+  {
+    "id": "IF-300",
+    "query": "인플루언서 마케팅 효율성 종합 분석",
+    "category": "combined",
+    "tier": 1
+  },
+  {
+    "id": "IF-301",
+    "query": "팔로워수 구간별 평균 경비 정리해주세요",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-302",
+    "query": "티어별 평균 팔로워수 알려주시면 감사하겠습니다",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-303",
+    "query": "최근 6개월 크리에이터 지출 추세",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-304",
+    "query": "요즘 콘텐츠 유형별 국가별 성과 비교",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-305",
+    "query": "미디어별 인플루언서 비용 매월 변동 확인 부탁드립니다",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-306",
+    "query": "베트남 인플루언서 마케팅 성과 알려주세요",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-307",
+    "query": "어떤 리전이 있어",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-308",
+    "query": "2025년 캠페인별 나라별 인플루언서 예산 어때?",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-309",
+    "query": "에이전시별 KOL 수",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-310",
+    "query": "미디어별 크리에이터 CPV",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-311",
+    "query": "필리핀 인플루언서 마케팅 성과 좀 알려줘",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-312",
+    "query": "브랜드별 CPV 비교 확인 부탁드립니다",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-313",
+    "query": "우리 회사 크리에이터 총 저장수 어때?",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-314",
+    "query": "빠르게 KOL 조회수가 가장 많은 국가는? 알려줄래?",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-315",
+    "query": "가장 최근 크리에이터 콘텐츠 업로드 날짜",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-316",
+    "query": "틱톡 크리에이터 성과",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-317",
+    "query": "뷰수 TOP 10 인플루엔서",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-318",
+    "query": "우리 회사 티어별 인플루엔서 좋아요 평균 알 수 있을까요?",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-319",
+    "query": "2025년 각 팀 인플루언서 조회수 전체",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-320",
+    "query": "리전별 인플루언서 비용 어떻게 되나요?",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-321",
+    "query": "미디어별 인플루언서 저장수 비교 몇이야?",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-322",
+    "query": "2025년 전체 인플루언서 성과 요약?",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-323",
+    "query": "시청수 대비 비용이 가장 효율적인 인플루엔서 TOP 10",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-324",
+    "query": "인플루엔서 총 시청수",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-325",
+    "query": "국가별 인플루언서 비용 전년 대비 증감 확인 부탁드립니다",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-326",
+    "query": "혹시 어떤 캠페인들이 있어?",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-327",
+    "query": "인도네시야 vs 태국 인플루엔서 예산 알려주시면 감사하겠습니다",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-328",
+    "query": "인플루언서 비용금액 대비 좋아요 비율 알려주세요",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-329",
+    "query": "2024년 분기별 KOL 비용 보여줘",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-330",
+    "query": "팀별 크리에이터 콘텐츠 수 비교",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-331",
+    "query": "콘텐츠 유형별 비용 비중 알려주세요",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-332",
+    "query": "어떤 리전이 있어 부탁드려요",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-333",
+    "query": "리전별 인플루언서 분포 부탁드려요",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-334",
+    "query": "요즘 2025년 크리에이터 총 지출 알 수 있을까요?",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-335",
+    "query": "리전별 인플루엔서 비용금액",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-336",
+    "query": "각 티어 인플루언서 비용금액 비중 알 수 있을까요?",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-337",
+    "query": "참고로 크리에이터 비용 대비 좋아요 비율 몇이야?",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-338",
+    "query": "2025년 인플루언서 CPV 추이 어떻게 되나요?",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-339",
+    "query": "콘텐츠 유형별 참여율 알려주세요",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-340",
+    "query": "각 티어 인플루엔서 좋아요 평균",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-341",
+    "query": "국가별 KOL 예산 비중",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-342",
+    "query": "2024년 국가별 KOL 지출 얼마임?",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-343",
+    "query": "캠페인별 브랜드 분포?",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-344",
+    "query": "간단하게 브렌드별 인플루언서 비용",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-345",
+    "query": "2025년 캠페인별 국가별 인플루언서 경비",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-346",
+    "query": "KOL 총 뷰수",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-347",
+    "query": "요즘 콘텐츠 유형별 참여율",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-348",
+    "query": "좋아요 TOP 10 인플루언서 보여줘 확인 부탁드립니다",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-349",
+    "query": "참여율 TOP 10 KOL",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-350",
+    "query": "국가별 인플루언서 CPV 대조",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-351",
+    "query": "콘텐츠 유형별 경비 효율성 비교",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-352",
+    "query": "각 에이전시 국가별 인플루언서 예산 정리해줘",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-353",
+    "query": "인플루언서 총 저장수 부탁드려요",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-354",
+    "query": "정확한 팀별 KOL 비용 효율성 비교",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-355",
+    "query": "팔로워수 평균 알려주시면 감사하겠습니다",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-356",
+    "query": "인스타그램 나라별 인플루엔서 성과 좀 봐줘",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-357",
+    "query": "2025년 팀별 인플루엔서 조회수 합계 알려주세요",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-358",
+    "query": "한국 vs 일본 인플루엔서 성과 비교",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-359",
+    "query": "2025년 미디어별 인플루언서 성과 좀 알려줘",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-360",
+    "query": "월별 2025년 인플루언서 비용금액 추이 좀 알려줘",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-361",
+    "query": "팀별 에이전시별 인플루언서 비용금액 궁금해 알려주세요",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-362",
+    "query": "인스타그램 인플루엔서 성과",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-363",
+    "query": "유료 vs 무료 인플루언서 시청수 비교",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-364",
+    "query": "국가별 크리에이터 비용 월별 추이 어떻게 되나요?",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-365",
+    "query": "티어별 인플루언서 수 몇이야?",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-366",
+    "query": "캠페인 기준 인플루언서 좋아요 합계 빨리 알려주세요",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-367",
+    "query": "2025년 크리에이터 총 지출",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-368",
+    "query": "어떤 에이전시들이 있어 부탁드려요",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-369",
+    "query": "캠페인별 브랜드 분포 몇이야?",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-370",
+    "query": "잠깐, 콘텐츠 유형별 공유수 평균 부탁 알 수 있을까요?",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-371",
+    "query": "캠페인별 인플루언서 뷰수",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-372",
+    "query": "2025년 분기별 인플루엔서 비용금액",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-373",
+    "query": "언어별 KOL 평균 뷰 카운트",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-374",
+    "query": "콘텐츠 유형별 참여율 알려주시면 감사하겠습니다",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-375",
+    "query": "언어별 크리에이터 수",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-376",
+    "query": "인플루언서 총 좋아요수 알고 싶어 좀 알려줘",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-377",
+    "query": "콘텐츠 뷰 카운트 100만 이상인 크리에이터 부탁드려요",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-378",
+    "query": "2025년 상반기 KOL 경비 전체",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-379",
+    "query": "국가별 인플루언서 경비 비중",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-380",
+    "query": "혹시 브랜드별 KOL 성과 요약",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-381",
+    "query": "브랜드별 KOL 성과 비교 알려주세요",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-382",
+    "query": "미디어별 인플루언서 비용 효율성 비교 분석 확인 부탁드립니다",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-383",
+    "query": "정확한 미디어별 인플루언서 성과",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-384",
+    "query": "티어별 인플루언서 예산 대조",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-385",
+    "query": "우리 회사 인플루언서 비용 YoY 비교 알려주세요",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-386",
+    "query": "빠르게 캠페인 기준 국가 분포 알려주세요",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-387",
+    "query": "가장 효율적인 크리에이터 티어 분석 좀",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-388",
+    "query": "필리핀 인플루언서 마캐팅 성과",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-389",
+    "query": "언어별 인플루언서 수 확인 가능한가요?",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-390",
+    "query": "에이전시별 인플루언서 성과 비교 어떻게 되나요?",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-391",
+    "query": "간단하게 2024년 각 티어 인플루언서 성과 비교 부탁드려요",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-392",
+    "query": "팀별 크리에이터 마케팅 비용 순위 알 수 있을까요?",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-393",
+    "query": "미디어별 KOL 좋아요 평균 부탁드려요",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-394",
+    "query": "팔로워수 TOP 10 인플루언서 알 수 있을까요?",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-395",
+    "query": "궁금한데 2025년 미디어별 인플루엔서 성과 보여줘 알 수 있을까요?",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-396",
+    "query": "혹시 시청수가 최다 캠페인은 알려주세요",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-397",
+    "query": "저장수 TOP 10 인플루엔서",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-398",
+    "query": "확인 좀 해줘 2025년 상반기 인플루엔서 비용 합계 보여줘 확인 부탁드립니다",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-399",
+    "query": "태국 인플루언서 마케팅 성과 알려주세요",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-400",
+    "query": "확인 좀 해줘 인플루언서 총 댓글수 알려주세요",
+    "category": "influencer",
+    "tier": 2
+  },
+  {
+    "id": "IF-401",
+    "query": "에이전시별 인플루언서 비용 효율성 어때?",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-402",
+    "query": "간단하게 브렌드별 인플루언서 비용 알려주시면 감사하겠습니다",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-403",
+    "query": "KOL 각 티어 평균 시청수",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-404",
+    "query": "브랜드별 인플루언서 성과 비교 확인 가능한가요?",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-405",
+    "query": "팀 기준 각 에이전시 인플루엔서 지출 알 수 있을까요?",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-406",
+    "query": "참고로 캠페인별 인플루언서 저장수",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-407",
+    "query": "미디어별 크리에이터 CPV 알려줄래?",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-408",
+    "query": "KOL 비용 전년 동기 대비 증감 빨리",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-409",
+    "query": "참고로 뷰수 TOP 10 인플루엔서",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-410",
+    "query": "간단하게 시청수 대비 비용이 가장 효율적인 인플루엔서 TOP 10",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-411",
+    "query": "각 캠페인 CPV",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-412",
+    "query": "리전별 인플루엔서 경비금액",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-413",
+    "query": "인플루언서 비용 전년 동기 대비 증감 부탁드려요",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-414",
+    "query": "KOL 총 뷰수 알려주세요",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-415",
+    "query": "인플루언서 조회수 전년 대비 증감 얼마임?",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-416",
+    "query": "참여율 TOP 10 KOL 확인 가능한가요?",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-417",
+    "query": "우리 회사 인플루엔서 총 시청수 어떻게 되나요?",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-418",
+    "query": "국가 기준 크리에이터 좋아요 평균 확인 부탁드립니다",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-419",
+    "query": "궁금한데 우리 회사 크리에이터 총 저장수 어때? 좀 봐줘",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-420",
+    "query": "2024년 분기별 인플루언서 비용금액",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-421",
+    "query": "국가별 인플루언서 비용금액 전년 대비 증감 알려줄래",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-422",
+    "query": "인플루엔서 비용 대비 댓글 비율",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-423",
+    "query": "빠르게 인플루엔서 총 시청수",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-424",
+    "query": "각 캠페인 인플루언서 저장수 어떻게 되나요?",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-425",
+    "query": "참고로 우리 회사 크리에이터 총 저장수 어때? 정리해줘",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-426",
+    "query": "확인 좀 해줘 인플루언서 비용 대비 댓글 비율 확인 가능한가요?",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-427",
+    "query": "한국 조회수 TOP 크리에이터 알려주세요",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-428",
+    "query": "국가 기준 KOL 좋아요 평균 좀",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-429",
+    "query": "인도네시아 인플루언서 마캐팅 성과",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-430",
+    "query": "2024년 티어별 인플루언서 성과 대조 어떻게 되나요?",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-431",
+    "query": "각 에이전시 KOL 예산 효율성 궁금해",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-432",
+    "query": "2024년 상반기 각 팀 크리에이터 비용 확인 가능한가요?",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-433",
+    "query": "공유수 TOP 10 KOL 알 수 있을까요?",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-434",
+    "query": "인플루언서 데이터 날짜 범위 확인해줘 알 수 있을까요?",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-435",
+    "query": "인플루언서 비용 전월 대비 증감률 몇이야?",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-436",
+    "query": "미디어별 크리에이터 좋아요 평균 정리해줘",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-437",
+    "query": "콘텐츠 유형별 비용 비중 알려주세요 알 수 있을까요?",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-438",
+    "query": "2025년 캠페인 기준 나라별 인플루언서 예산 어때 어떻게 되나요?",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-439",
+    "query": "베트남 인플루엔서 마케팅 성과 알려주세요",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-440",
+    "query": "간단하게 브렌드별 인플루언서 예산",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-441",
+    "query": "정확한 어떤 리전이 있어 부탁드려요",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-442",
+    "query": "우리 회사 인플루엔서 비용금액 대비 좋아요 비율 알려주세요 확인 가능한가요?",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-443",
+    "query": "참고로 필리핀 인플루언서 마케팅 성과 좀 알려줘",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-444",
+    "query": "2025년 분기별 KOL 비용",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-445",
+    "query": "2024년 분기별 KOL 경비 보여줘",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-446",
+    "query": "2024년 분기별 크리에이터 비용금액",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-447",
+    "query": "참고로 에이전시별 KOL 수",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-448",
+    "query": "전체 2025년 인플루언서 성과 요약?",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-449",
+    "query": "각 나라 KOL CPV 대조",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-450",
+    "query": "정확한 가장 최근 크리에이터 콘텐츠 업로드 날짜 알려주시면 감사하겠습니다",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-451",
+    "query": "2025년 캠페인별 나라별 크리에이터 예산 어때",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-452",
+    "query": "빠르게 2024년 국가별 KOL 지출 얼마임?",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-453",
+    "query": "간단하게 틱톡 크리에이터 성과",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-454",
+    "query": "시청수 대비 예산이 가장 효율적인 인플루엔서 TOP 10",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-455",
+    "query": "브랜드별 크리에이터 성과 요약",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-456",
+    "query": "KOL 총 댓글수",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-457",
+    "query": "리전별 인플루엔서 비용금액 좀 봐줘",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-458",
+    "query": "잠깐, 인도네시아 vs 타이 인플루언서 비용 좀",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-459",
+    "query": "한국 인플루엔서 마캐팅 성과",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-460",
+    "query": "각 티어 인플루엔서 좋아요 평균 알 수 있을까요?",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-461",
+    "query": "브랜드별 크리에이터 예산 비중 알려주세요",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-462",
+    "query": "콘텐츠 유형별 참여율 알려줘",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-463",
+    "query": "2024년 분기별 KOL 비용 보여줄래 알 수 있을까요?",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-464",
+    "query": "정확한 인플루언서 티어별 평균 조회수",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-465",
+    "query": "우리 회사 2024년 분기별 KOL 비용 알려줘",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-466",
+    "query": "2025년 상반기 KOL 예산 합산",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-467",
+    "query": "크리에이터 비용 대비 댓글 비율",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-468",
+    "query": "브랜드별 인플루언서 성과 대조 부탁",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-469",
+    "query": "2025년 각 팀 인플루언서 조회수 전체 좀 알려줘",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-470",
+    "query": "2025년 각 팀 인플루언서 시청수 전체",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-471",
+    "query": "인도네시아 vs 태국 크리에이터 비용",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-472",
+    "query": "요즘 콘텐츠 유형별 참여율 알려주세요",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-473",
+    "query": "빠르게 KOL 조회수가 가장 많은 국가는? 알려줄래 얼마임?",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-474",
+    "query": "빠르게 나라별 인플루언서 CPV 대조 부탁드려요",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-475",
+    "query": "혹시 우리 회사 각 티어 인플루엔서 좋아요 평균 알 수 있을까요?",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-476",
+    "query": "뷰수가 가장 높은 콘텐츠 유형은 알려주세요",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-477",
+    "query": "2025년 인플루엔서 CPV 흐름 어떻게 되나요?",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-478",
+    "query": "크리에이터 예산 대비 댓글 비율 알려주세요",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-479",
+    "query": "인플루언서 총 댓글수 알려줄래",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-480",
+    "query": "나라별 KOL 예산 비중",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-481",
+    "query": "확인 좀 해줘 시청수가 가장 높은 콘텐츠 유형은? 정리해줘",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-482",
+    "query": "혹시 어떤 캠페인들이 있어 몇이야?",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-483",
+    "query": "2024년 국가별 KOL 지출 얼마임? 보여줘 확인 부탁드립니다",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-484",
+    "query": "각 에이전시 KOL 수",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-485",
+    "query": "인플루언서 티어별 평균 조회수 알려주세요",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-486",
+    "query": "팀별 에이전시별 크리에이터 비용",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-487",
+    "query": "비용금액 효율이 가장 좋은 콘텐츠 유형 어떻게 되나요?",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-488",
+    "query": "미디어별 인플루언서 저장수 견줘봐 몇이야?",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-489",
+    "query": "혹시 베트남 인플루언서 마케팅 성과 알려주세요",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-490",
+    "query": "KOL 비용금액이 가장 높은 팀은?",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-491",
+    "query": "정확한 참여율 TOP 10 KOL",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-492",
+    "query": "어떤 리전이 있어 부탁드려요?",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-493",
+    "query": "2024년 분기별 KOL 예산 보여줘",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-494",
+    "query": "간단하게 베트남 인플루언서 마케팅 성과 알려주세요",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-495",
+    "query": "리전별 인플루언서 비용 알 수 있을까요?",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-496",
+    "query": "콘텐츠 유형별 경비 비중 알려줘",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-497",
+    "query": "브랜드별 인플루언서 성과 비교 알려주세요",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-498",
+    "query": "캠페인별 경비 효율성 비교",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-499",
+    "query": "에이전시별 KOL 수 부탁드려요",
+    "category": "influencer",
+    "tier": 3
+  },
+  {
+    "id": "IF-500",
+    "query": "2025년 각 캠페인 나라별 인플루언서 예산 어때 알 수 있을까요?",
+    "category": "influencer",
+    "tier": 3
+  }
+]

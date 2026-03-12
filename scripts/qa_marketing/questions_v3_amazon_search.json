@@ -1,0 +1,3002 @@
+[
+  {
+    "id": "AZ-001",
+    "query": "아마존 국가별 검색 성과 보여줘",
+    "category": "funnel_analysis",
+    "tier": 1
+  },
+  {
+    "id": "AZ-002",
+    "query": "아마존 전체 검색 퍼널 분석",
+    "category": "funnel_analysis",
+    "tier": 1
+  },
+  {
+    "id": "AZ-003",
+    "query": "아마존 미국 검색 성과 현황",
+    "category": "funnel_analysis",
+    "tier": 1
+  },
+  {
+    "id": "AZ-004",
+    "query": "아마존 일본 검색 성과 데이터",
+    "category": "funnel_analysis",
+    "tier": 1
+  },
+  {
+    "id": "AZ-005",
+    "query": "아마존 호주 검색 성과",
+    "category": "funnel_analysis",
+    "tier": 1
+  },
+  {
+    "id": "AZ-006",
+    "query": "아마존 캐나다 검색 성과 분석",
+    "category": "funnel_analysis",
+    "tier": 1
+  },
+  {
+    "id": "AZ-007",
+    "query": "아마존 국가별 노출-클릭-구매 퍼널",
+    "category": "funnel_analysis",
+    "tier": 1
+  },
+  {
+    "id": "AZ-008",
+    "query": "아마존 검색 성과 종합 분석",
+    "category": "funnel_analysis",
+    "tier": 1
+  },
+  {
+    "id": "AZ-009",
+    "query": "아마존 국가별 검색 퍼널 비교",
+    "category": "funnel_analysis",
+    "tier": 1
+  },
+  {
+    "id": "AZ-010",
+    "query": "아마존 검색 분석 카탈로그 성과",
+    "category": "funnel_analysis",
+    "tier": 1
+  },
+  {
+    "id": "AZ-011",
+    "query": "아마존 미국 퍼널 단계별 수치",
+    "category": "funnel_analysis",
+    "tier": 1
+  },
+  {
+    "id": "AZ-012",
+    "query": "아마존 일본 노출부터 구매까지 데이터",
+    "category": "funnel_analysis",
+    "tier": 1
+  },
+  {
+    "id": "AZ-013",
+    "query": "아마존 전체 국가 검색 성과 요약",
+    "category": "funnel_analysis",
+    "tier": 1
+  },
+  {
+    "id": "AZ-014",
+    "query": "아마존 캐나다 퍼널 분석",
+    "category": "funnel_analysis",
+    "tier": 1
+  },
+  {
+    "id": "AZ-015",
+    "query": "아마존 호주 퍼널 데이터",
+    "category": "funnel_analysis",
+    "tier": 1
+  },
+  {
+    "id": "AZ-016",
+    "query": "아마존 국가별 검색 분석 대시보드",
+    "category": "funnel_analysis",
+    "tier": 1
+  },
+  {
+    "id": "AZ-017",
+    "query": "아마존 검색 성과 TOP 국가",
+    "category": "funnel_analysis",
+    "tier": 1
+  },
+  {
+    "id": "AZ-018",
+    "query": "아마존 검색 성과 하위 국가",
+    "category": "funnel_analysis",
+    "tier": 1
+  },
+  {
+    "id": "AZ-019",
+    "query": "아마존 퍼널 전환 분석 전체",
+    "category": "funnel_analysis",
+    "tier": 1
+  },
+  {
+    "id": "AZ-020",
+    "query": "아마존 카탈로그 성과 국가 비교",
+    "category": "funnel_analysis",
+    "tier": 1
+  },
+  {
+    "id": "AZ-021",
+    "query": "아마존 CTR 분석 해줘",
+    "category": "ctr",
+    "tier": 1
+  },
+  {
+    "id": "AZ-022",
+    "query": "아마존 국가별 CTR 비교",
+    "category": "ctr",
+    "tier": 1
+  },
+  {
+    "id": "AZ-023",
+    "query": "아마존 CTR이 가장 높은 국가",
+    "category": "ctr",
+    "tier": 1
+  },
+  {
+    "id": "AZ-024",
+    "query": "아마존 CTR이 가장 낮은 국가",
+    "category": "ctr",
+    "tier": 1
+  },
+  {
+    "id": "AZ-025",
+    "query": "아마존 미국 CTR 몇 퍼센트야?",
+    "category": "ctr",
+    "tier": 1
+  },
+  {
+    "id": "AZ-026",
+    "query": "아마존 일본 CTR 알려줘",
+    "category": "ctr",
+    "tier": 1
+  },
+  {
+    "id": "AZ-027",
+    "query": "아마존 호주 CTR 현황",
+    "category": "ctr",
+    "tier": 1
+  },
+  {
+    "id": "AZ-028",
+    "query": "아마존 캐나다 CTR 데이터",
+    "category": "ctr",
+    "tier": 1
+  },
+  {
+    "id": "AZ-029",
+    "query": "아마존 전체 평균 CTR",
+    "category": "ctr",
+    "tier": 1
+  },
+  {
+    "id": "AZ-030",
+    "query": "아마존 CTR 순위 보여줘",
+    "category": "ctr",
+    "tier": 1
+  },
+  {
+    "id": "AZ-031",
+    "query": "아마존 CTR 1% 이상인 국가",
+    "category": "ctr",
+    "tier": 1
+  },
+  {
+    "id": "AZ-032",
+    "query": "아마존 CTR 5% 이상인 국가 있어?",
+    "category": "ctr",
+    "tier": 1
+  },
+  {
+    "id": "AZ-033",
+    "query": "아마존 클릭률 분석 해줘",
+    "category": "ctr",
+    "tier": 1
+  },
+  {
+    "id": "AZ-034",
+    "query": "아마존 국가별 클릭률 순위",
+    "category": "ctr",
+    "tier": 1
+  },
+  {
+    "id": "AZ-035",
+    "query": "아마존 CTR 개선이 필요한 국가",
+    "category": "ctr",
+    "tier": 1
+  },
+  {
+    "id": "AZ-036",
+    "query": "아마존 CTR 3% 이하인 국가",
+    "category": "ctr",
+    "tier": 1
+  },
+  {
+    "id": "AZ-037",
+    "query": "아마존 CTR 평균 대비 높은 국가",
+    "category": "ctr",
+    "tier": 1
+  },
+  {
+    "id": "AZ-038",
+    "query": "아마존 CTR 평균 대비 낮은 국가",
+    "category": "ctr",
+    "tier": 1
+  },
+  {
+    "id": "AZ-039",
+    "query": "아마존 CTR 상위 3개국",
+    "category": "ctr",
+    "tier": 1
+  },
+  {
+    "id": "AZ-040",
+    "query": "아마존 CTR 하위 3개국",
+    "category": "ctr",
+    "tier": 1
+  },
+  {
+    "id": "AZ-041",
+    "query": "아마존 전환율 비교 해줘",
+    "category": "conversion",
+    "tier": 1
+  },
+  {
+    "id": "AZ-042",
+    "query": "아마존 국가별 전환율",
+    "category": "conversion",
+    "tier": 1
+  },
+  {
+    "id": "AZ-043",
+    "query": "아마존 전환율이 가장 높은 국가",
+    "category": "conversion",
+    "tier": 1
+  },
+  {
+    "id": "AZ-044",
+    "query": "아마존 전환율이 가장 낮은 국가",
+    "category": "conversion",
+    "tier": 1
+  },
+  {
+    "id": "AZ-045",
+    "query": "아마존 미국 전환율 몇 퍼센트?",
+    "category": "conversion",
+    "tier": 1
+  },
+  {
+    "id": "AZ-046",
+    "query": "아마존 일본 전환율 알려줘",
+    "category": "conversion",
+    "tier": 1
+  },
+  {
+    "id": "AZ-047",
+    "query": "아마존 호주 전환율",
+    "category": "conversion",
+    "tier": 1
+  },
+  {
+    "id": "AZ-048",
+    "query": "아마존 캐나다 전환율 데이터",
+    "category": "conversion",
+    "tier": 1
+  },
+  {
+    "id": "AZ-049",
+    "query": "아마존 전체 평균 전환율",
+    "category": "conversion",
+    "tier": 1
+  },
+  {
+    "id": "AZ-050",
+    "query": "아마존 전환율 순위",
+    "category": "conversion",
+    "tier": 1
+  },
+  {
+    "id": "AZ-051",
+    "query": "아마존 구매 전환율 분석",
+    "category": "conversion",
+    "tier": 1
+  },
+  {
+    "id": "AZ-052",
+    "query": "아마존 전환율 1% 이상인 국가",
+    "category": "conversion",
+    "tier": 1
+  },
+  {
+    "id": "AZ-053",
+    "query": "아마존 전환율 5% 이상인 국가",
+    "category": "conversion",
+    "tier": 1
+  },
+  {
+    "id": "AZ-054",
+    "query": "아마존 전환율 개선 필요 국가",
+    "category": "conversion",
+    "tier": 1
+  },
+  {
+    "id": "AZ-055",
+    "query": "아마존 국가별 구매 전환율 비교",
+    "category": "conversion",
+    "tier": 1
+  },
+  {
+    "id": "AZ-056",
+    "query": "아마존 전환율 상위 3개국",
+    "category": "conversion",
+    "tier": 1
+  },
+  {
+    "id": "AZ-057",
+    "query": "아마존 전환율 하위 3개국",
+    "category": "conversion",
+    "tier": 1
+  },
+  {
+    "id": "AZ-058",
+    "query": "아마존 전환율 평균 대비 높은 국가",
+    "category": "conversion",
+    "tier": 1
+  },
+  {
+    "id": "AZ-059",
+    "query": "아마존 전환율 평균 대비 낮은 국가",
+    "category": "conversion",
+    "tier": 1
+  },
+  {
+    "id": "AZ-060",
+    "query": "아마존 전환율 10% 이상 국가 있어?",
+    "category": "conversion",
+    "tier": 1
+  },
+  {
+    "id": "AZ-061",
+    "query": "아마존 장바구니 추가 분석",
+    "category": "cart_adds",
+    "tier": 1
+  },
+  {
+    "id": "AZ-062",
+    "query": "아마존 국가별 장바구니 추가 수",
+    "category": "cart_adds",
+    "tier": 1
+  },
+  {
+    "id": "AZ-063",
+    "query": "아마존 장바구니 추가가 가장 많은 국가",
+    "category": "cart_adds",
+    "tier": 1
+  },
+  {
+    "id": "AZ-064",
+    "query": "아마존 장바구니 추가가 가장 적은 국가",
+    "category": "cart_adds",
+    "tier": 1
+  },
+  {
+    "id": "AZ-065",
+    "query": "아마존 미국 장바구니 추가 수",
+    "category": "cart_adds",
+    "tier": 1
+  },
+  {
+    "id": "AZ-066",
+    "query": "아마존 일본 장바구니 추가 현황",
+    "category": "cart_adds",
+    "tier": 1
+  },
+  {
+    "id": "AZ-067",
+    "query": "아마존 호주 장바구니 추가 데이터",
+    "category": "cart_adds",
+    "tier": 1
+  },
+  {
+    "id": "AZ-068",
+    "query": "아마존 캐나다 장바구니 추가 수",
+    "category": "cart_adds",
+    "tier": 1
+  },
+  {
+    "id": "AZ-069",
+    "query": "아마존 전체 장바구니 추가 합계",
+    "category": "cart_adds",
+    "tier": 1
+  },
+  {
+    "id": "AZ-070",
+    "query": "아마존 국가별 장바구니 추가 순위",
+    "category": "cart_adds",
+    "tier": 1
+  },
+  {
+    "id": "AZ-071",
+    "query": "아마존 장바구니 추가율 분석",
+    "category": "cart_adds",
+    "tier": 1
+  },
+  {
+    "id": "AZ-072",
+    "query": "아마존 장바구니에서 구매 전환율",
+    "category": "cart_adds",
+    "tier": 1
+  },
+  {
+    "id": "AZ-073",
+    "query": "아마존 장바구니 추가 대비 구매 비율",
+    "category": "cart_adds",
+    "tier": 1
+  },
+  {
+    "id": "AZ-074",
+    "query": "아마존 국가별 장바구니 이탈률",
+    "category": "cart_adds",
+    "tier": 1
+  },
+  {
+    "id": "AZ-075",
+    "query": "아마존 장바구니 추가 TOP 5 국가",
+    "category": "cart_adds",
+    "tier": 1
+  },
+  {
+    "id": "AZ-076",
+    "query": "아마존 장바구니 추가 100건 이상 국가",
+    "category": "cart_adds",
+    "tier": 1
+  },
+  {
+    "id": "AZ-077",
+    "query": "아마존 장바구니 추가 50건 이하 국가",
+    "category": "cart_adds",
+    "tier": 1
+  },
+  {
+    "id": "AZ-078",
+    "query": "아마존 장바구니 추가율 높은 국가",
+    "category": "cart_adds",
+    "tier": 1
+  },
+  {
+    "id": "AZ-079",
+    "query": "아마존 장바구니 추가 vs 구매 갭 분석",
+    "category": "cart_adds",
+    "tier": 1
+  },
+  {
+    "id": "AZ-080",
+    "query": "아마존 장바구니 전환 효율 분석",
+    "category": "cart_adds",
+    "tier": 1
+  },
+  {
+    "id": "AZ-081",
+    "query": "아마존 미국 vs 일본 검색 성과 비교",
+    "category": "country_comparison",
+    "tier": 1
+  },
+  {
+    "id": "AZ-082",
+    "query": "아마존 미국 vs 호주 성과 비교",
+    "category": "country_comparison",
+    "tier": 1
+  },
+  {
+    "id": "AZ-083",
+    "query": "아마존 미국 vs 캐나다 검색 성과",
+    "category": "country_comparison",
+    "tier": 1
+  },
+  {
+    "id": "AZ-084",
+    "query": "아마존 일본 vs 호주 성과 비교",
+    "category": "country_comparison",
+    "tier": 1
+  },
+  {
+    "id": "AZ-085",
+    "query": "아마존 일본 vs 캐나다 비교",
+    "category": "country_comparison",
+    "tier": 1
+  },
+  {
+    "id": "AZ-086",
+    "query": "아마존 호주 vs 캐나다 성과",
+    "category": "country_comparison",
+    "tier": 1
+  },
+  {
+    "id": "AZ-087",
+    "query": "아마존 미국 vs 일본 CTR 비교",
+    "category": "country_comparison",
+    "tier": 1
+  },
+  {
+    "id": "AZ-088",
+    "query": "아마존 미국 vs 일본 전환율 비교",
+    "category": "country_comparison",
+    "tier": 1
+  },
+  {
+    "id": "AZ-089",
+    "query": "아마존 미국 vs 호주 CTR 차이",
+    "category": "country_comparison",
+    "tier": 1
+  },
+  {
+    "id": "AZ-090",
+    "query": "아마존 미국 vs 캐나다 전환율 차이",
+    "category": "country_comparison",
+    "tier": 1
+  },
+  {
+    "id": "AZ-091",
+    "query": "아마존 일본 vs 호주 클릭수 비교",
+    "category": "country_comparison",
+    "tier": 1
+  },
+  {
+    "id": "AZ-092",
+    "query": "아마존 일본 vs 캐나다 구매수 비교",
+    "category": "country_comparison",
+    "tier": 1
+  },
+  {
+    "id": "AZ-093",
+    "query": "아마존 호주 vs 캐나다 노출수 비교",
+    "category": "country_comparison",
+    "tier": 1
+  },
+  {
+    "id": "AZ-094",
+    "query": "아마존 미국 vs 일본 장바구니 추가 비교",
+    "category": "country_comparison",
+    "tier": 1
+  },
+  {
+    "id": "AZ-095",
+    "query": "아마존 전체 국가 성과 비교 테이블",
+    "category": "country_comparison",
+    "tier": 1
+  },
+  {
+    "id": "AZ-096",
+    "query": "아마존 미국 vs 일본 vs 호주 비교",
+    "category": "country_comparison",
+    "tier": 1
+  },
+  {
+    "id": "AZ-097",
+    "query": "아마존 4개국 전체 비교 분석",
+    "category": "country_comparison",
+    "tier": 1
+  },
+  {
+    "id": "AZ-098",
+    "query": "아마존 국가 간 성과 격차 분석",
+    "category": "country_comparison",
+    "tier": 1
+  },
+  {
+    "id": "AZ-099",
+    "query": "아마존 미국 vs 일본 퍼널 비교",
+    "category": "country_comparison",
+    "tier": 1
+  },
+  {
+    "id": "AZ-100",
+    "query": "아마존 국가별 성과 순위 비교",
+    "category": "country_comparison",
+    "tier": 1
+  },
+  {
+    "id": "AZ-101",
+    "query": "아마존 노출수 분석 해줘",
+    "category": "impressions",
+    "tier": 1
+  },
+  {
+    "id": "AZ-102",
+    "query": "아마존 국가별 노출수 비교",
+    "category": "impressions",
+    "tier": 1
+  },
+  {
+    "id": "AZ-103",
+    "query": "아마존 노출수가 가장 많은 국가",
+    "category": "impressions",
+    "tier": 1
+  },
+  {
+    "id": "AZ-104",
+    "query": "아마존 노출수가 가장 적은 국가",
+    "category": "impressions",
+    "tier": 1
+  },
+  {
+    "id": "AZ-105",
+    "query": "아마존 미국 노출수 몇 건이야?",
+    "category": "impressions",
+    "tier": 1
+  },
+  {
+    "id": "AZ-106",
+    "query": "아마존 일본 노출수 알려줘",
+    "category": "impressions",
+    "tier": 1
+  },
+  {
+    "id": "AZ-107",
+    "query": "아마존 호주 노출수",
+    "category": "impressions",
+    "tier": 1
+  },
+  {
+    "id": "AZ-108",
+    "query": "아마존 캐나다 노출수 데이터",
+    "category": "impressions",
+    "tier": 1
+  },
+  {
+    "id": "AZ-109",
+    "query": "아마존 전체 노출수 합계",
+    "category": "impressions",
+    "tier": 1
+  },
+  {
+    "id": "AZ-110",
+    "query": "아마존 국가별 노출수 순위",
+    "category": "impressions",
+    "tier": 1
+  },
+  {
+    "id": "AZ-111",
+    "query": "아마존 노출수 1만 건 이상 국가",
+    "category": "impressions",
+    "tier": 1
+  },
+  {
+    "id": "AZ-112",
+    "query": "아마존 노출수 대비 클릭 비율",
+    "category": "impressions",
+    "tier": 1
+  },
+  {
+    "id": "AZ-113",
+    "query": "아마존 노출수 점유율 분석",
+    "category": "impressions",
+    "tier": 1
+  },
+  {
+    "id": "AZ-114",
+    "query": "아마존 미국 노출수 비중",
+    "category": "impressions",
+    "tier": 1
+  },
+  {
+    "id": "AZ-115",
+    "query": "아마존 일본 노출수 비중",
+    "category": "impressions",
+    "tier": 1
+  },
+  {
+    "id": "AZ-116",
+    "query": "아마존 노출수 TOP 3 국가",
+    "category": "impressions",
+    "tier": 1
+  },
+  {
+    "id": "AZ-117",
+    "query": "아마존 노출수 하위 국가",
+    "category": "impressions",
+    "tier": 1
+  },
+  {
+    "id": "AZ-118",
+    "query": "아마존 평균 노출수 국가별",
+    "category": "impressions",
+    "tier": 1
+  },
+  {
+    "id": "AZ-119",
+    "query": "아마존 노출수 10만 건 이상 국가",
+    "category": "impressions",
+    "tier": 1
+  },
+  {
+    "id": "AZ-120",
+    "query": "아마존 국가별 노출수 분포",
+    "category": "impressions",
+    "tier": 1
+  },
+  {
+    "id": "AZ-121",
+    "query": "아마존 클릭 대비 구매율 분석",
+    "category": "click_to_purchase",
+    "tier": 1
+  },
+  {
+    "id": "AZ-122",
+    "query": "아마존 클릭에서 구매 전환율",
+    "category": "click_to_purchase",
+    "tier": 1
+  },
+  {
+    "id": "AZ-123",
+    "query": "아마존 국가별 클릭 대비 구매 비율",
+    "category": "click_to_purchase",
+    "tier": 1
+  },
+  {
+    "id": "AZ-124",
+    "query": "아마존 미국 클릭 대비 구매율",
+    "category": "click_to_purchase",
+    "tier": 1
+  },
+  {
+    "id": "AZ-125",
+    "query": "아마존 일본 클릭 대비 구매율",
+    "category": "click_to_purchase",
+    "tier": 1
+  },
+  {
+    "id": "AZ-126",
+    "query": "아마존 클릭수 대비 구매수 비율 국가별",
+    "category": "click_to_purchase",
+    "tier": 1
+  },
+  {
+    "id": "AZ-127",
+    "query": "아마존 클릭에서 구매까지 전환율 높은 국가",
+    "category": "click_to_purchase",
+    "tier": 1
+  },
+  {
+    "id": "AZ-128",
+    "query": "아마존 클릭에서 구매까지 전환율 낮은 국가",
+    "category": "click_to_purchase",
+    "tier": 1
+  },
+  {
+    "id": "AZ-129",
+    "query": "아마존 클릭 100건당 구매 건수",
+    "category": "click_to_purchase",
+    "tier": 1
+  },
+  {
+    "id": "AZ-130",
+    "query": "아마존 클릭 대비 구매 효율 분석",
+    "category": "click_to_purchase",
+    "tier": 1
+  },
+  {
+    "id": "AZ-131",
+    "query": "아마존 호주 클릭 대비 구매율",
+    "category": "click_to_purchase",
+    "tier": 1
+  },
+  {
+    "id": "AZ-132",
+    "query": "아마존 캐나다 클릭 대비 구매율",
+    "category": "click_to_purchase",
+    "tier": 1
+  },
+  {
+    "id": "AZ-133",
+    "query": "아마존 클릭 구매 전환 효율 순위",
+    "category": "click_to_purchase",
+    "tier": 1
+  },
+  {
+    "id": "AZ-134",
+    "query": "아마존 클릭수 대비 구매수 갭 분석",
+    "category": "click_to_purchase",
+    "tier": 1
+  },
+  {
+    "id": "AZ-135",
+    "query": "아마존 클릭 전환 최적화 필요 국가",
+    "category": "click_to_purchase",
+    "tier": 1
+  },
+  {
+    "id": "AZ-136",
+    "query": "아마존 성과 가장 좋은 국가 어디야?",
+    "category": "top_market",
+    "tier": 1
+  },
+  {
+    "id": "AZ-137",
+    "query": "아마존 종합 성과 1위 국가",
+    "category": "top_market",
+    "tier": 1
+  },
+  {
+    "id": "AZ-138",
+    "query": "아마존 성과가 가장 나쁜 국가",
+    "category": "top_market",
+    "tier": 1
+  },
+  {
+    "id": "AZ-139",
+    "query": "아마존 전체 성과 순위",
+    "category": "top_market",
+    "tier": 1
+  },
+  {
+    "id": "AZ-140",
+    "query": "아마존 마켓별 종합 성과 점수",
+    "category": "top_market",
+    "tier": 1
+  },
+  {
+    "id": "AZ-141",
+    "query": "아마존 가장 효율적인 시장",
+    "category": "top_market",
+    "tier": 1
+  },
+  {
+    "id": "AZ-142",
+    "query": "아마존 구매 전환 기준 최고 시장",
+    "category": "top_market",
+    "tier": 1
+  },
+  {
+    "id": "AZ-143",
+    "query": "아마존 CTR 기준 최고 시장",
+    "category": "top_market",
+    "tier": 1
+  },
+  {
+    "id": "AZ-144",
+    "query": "아마존 노출 기준 최대 시장",
+    "category": "top_market",
+    "tier": 1
+  },
+  {
+    "id": "AZ-145",
+    "query": "아마존 클릭 기준 최고 시장",
+    "category": "top_market",
+    "tier": 1
+  },
+  {
+    "id": "AZ-146",
+    "query": "아마존 구매 기준 최고 시장",
+    "category": "top_market",
+    "tier": 1
+  },
+  {
+    "id": "AZ-147",
+    "query": "아마존 장바구니 기준 최고 시장",
+    "category": "top_market",
+    "tier": 1
+  },
+  {
+    "id": "AZ-148",
+    "query": "아마존 종합 성과 TOP 3 국가",
+    "category": "top_market",
+    "tier": 1
+  },
+  {
+    "id": "AZ-149",
+    "query": "아마존 성과 개선 필요 시장",
+    "category": "top_market",
+    "tier": 1
+  },
+  {
+    "id": "AZ-150",
+    "query": "아마존 시장별 성과 등급 분류",
+    "category": "top_market",
+    "tier": 1
+  },
+  {
+    "id": "AZ-151",
+    "query": "아마존 퍼널별 이탈률 분석",
+    "category": "funnel_drop",
+    "tier": 1
+  },
+  {
+    "id": "AZ-152",
+    "query": "아마존 노출 대비 클릭 이탈률",
+    "category": "funnel_drop",
+    "tier": 1
+  },
+  {
+    "id": "AZ-153",
+    "query": "아마존 클릭 대비 장바구니 이탈률",
+    "category": "funnel_drop",
+    "tier": 1
+  },
+  {
+    "id": "AZ-154",
+    "query": "아마존 장바구니 대비 구매 이탈률",
+    "category": "funnel_drop",
+    "tier": 1
+  },
+  {
+    "id": "AZ-155",
+    "query": "아마존 각 퍼널 단계 이탈률 국가별",
+    "category": "funnel_drop",
+    "tier": 1
+  },
+  {
+    "id": "AZ-156",
+    "query": "아마존 이탈률이 가장 높은 단계",
+    "category": "funnel_drop",
+    "tier": 1
+  },
+  {
+    "id": "AZ-157",
+    "query": "아마존 미국 퍼널 이탈률",
+    "category": "funnel_drop",
+    "tier": 1
+  },
+  {
+    "id": "AZ-158",
+    "query": "아마존 일본 퍼널 이탈률",
+    "category": "funnel_drop",
+    "tier": 1
+  },
+  {
+    "id": "AZ-159",
+    "query": "아마존 국가별 퍼널 이탈 포인트",
+    "category": "funnel_drop",
+    "tier": 1
+  },
+  {
+    "id": "AZ-160",
+    "query": "아마존 퍼널 드롭오프 분석",
+    "category": "funnel_drop",
+    "tier": 1
+  },
+  {
+    "id": "AZ-161",
+    "query": "아마존 노출→클릭 전환율 분석",
+    "category": "funnel_drop",
+    "tier": 1
+  },
+  {
+    "id": "AZ-162",
+    "query": "아마존 클릭→장바구니 전환율 분석",
+    "category": "funnel_drop",
+    "tier": 1
+  },
+  {
+    "id": "AZ-163",
+    "query": "아마존 장바구니→구매 전환율 분석",
+    "category": "funnel_drop",
+    "tier": 1
+  },
+  {
+    "id": "AZ-164",
+    "query": "아마존 가장 큰 이탈 구간은?",
+    "category": "funnel_drop",
+    "tier": 1
+  },
+  {
+    "id": "AZ-165",
+    "query": "아마존 퍼널 개선 필요 구간",
+    "category": "funnel_drop",
+    "tier": 1
+  },
+  {
+    "id": "AZ-166",
+    "query": "아마존 호주 퍼널 이탈 분석",
+    "category": "funnel_drop",
+    "tier": 1
+  },
+  {
+    "id": "AZ-167",
+    "query": "아마존 캐나다 퍼널 이탈 분석",
+    "category": "funnel_drop",
+    "tier": 1
+  },
+  {
+    "id": "AZ-168",
+    "query": "아마존 이탈률 개선 우선순위 국가",
+    "category": "funnel_drop",
+    "tier": 1
+  },
+  {
+    "id": "AZ-169",
+    "query": "아마존 퍼널 단계별 잔존율",
+    "category": "funnel_drop",
+    "tier": 1
+  },
+  {
+    "id": "AZ-170",
+    "query": "아마존 국가별 퍼널 효율 비교",
+    "category": "funnel_drop",
+    "tier": 1
+  },
+  {
+    "id": "AZ-171",
+    "query": "아마존 총 구매수 알려줘",
+    "category": "total_purchases",
+    "tier": 1
+  },
+  {
+    "id": "AZ-172",
+    "query": "아마존 국가별 구매수",
+    "category": "total_purchases",
+    "tier": 1
+  },
+  {
+    "id": "AZ-173",
+    "query": "아마존 구매수가 가장 많은 국가",
+    "category": "total_purchases",
+    "tier": 1
+  },
+  {
+    "id": "AZ-174",
+    "query": "아마존 구매수가 가장 적은 국가",
+    "category": "total_purchases",
+    "tier": 1
+  },
+  {
+    "id": "AZ-175",
+    "query": "아마존 미국 구매수 몇 건이야?",
+    "category": "total_purchases",
+    "tier": 1
+  },
+  {
+    "id": "AZ-176",
+    "query": "아마존 일본 구매수 알려줘",
+    "category": "total_purchases",
+    "tier": 1
+  },
+  {
+    "id": "AZ-177",
+    "query": "아마존 호주 구매수",
+    "category": "total_purchases",
+    "tier": 1
+  },
+  {
+    "id": "AZ-178",
+    "query": "아마존 캐나다 구매수 데이터",
+    "category": "total_purchases",
+    "tier": 1
+  },
+  {
+    "id": "AZ-179",
+    "query": "아마존 전체 구매수 합계",
+    "category": "total_purchases",
+    "tier": 1
+  },
+  {
+    "id": "AZ-180",
+    "query": "아마존 국가별 구매수 순위",
+    "category": "total_purchases",
+    "tier": 1
+  },
+  {
+    "id": "AZ-181",
+    "query": "아마존 구매수 100건 이상 국가",
+    "category": "total_purchases",
+    "tier": 1
+  },
+  {
+    "id": "AZ-182",
+    "query": "아마존 구매수 50건 이하 국가",
+    "category": "total_purchases",
+    "tier": 1
+  },
+  {
+    "id": "AZ-183",
+    "query": "아마존 구매수 TOP 3 국가",
+    "category": "total_purchases",
+    "tier": 1
+  },
+  {
+    "id": "AZ-184",
+    "query": "아마존 구매수 비중 분석",
+    "category": "total_purchases",
+    "tier": 1
+  },
+  {
+    "id": "AZ-185",
+    "query": "아마존 국가별 구매수 점유율",
+    "category": "total_purchases",
+    "tier": 1
+  },
+  {
+    "id": "AZ-186",
+    "query": "아마존 국가별 클릭수 분석",
+    "category": "clicks",
+    "tier": 1
+  },
+  {
+    "id": "AZ-187",
+    "query": "아마존 클릭수가 가장 많은 국가",
+    "category": "clicks",
+    "tier": 1
+  },
+  {
+    "id": "AZ-188",
+    "query": "아마존 클릭수가 가장 적은 국가",
+    "category": "clicks",
+    "tier": 1
+  },
+  {
+    "id": "AZ-189",
+    "query": "아마존 미국 클릭수",
+    "category": "clicks",
+    "tier": 1
+  },
+  {
+    "id": "AZ-190",
+    "query": "아마존 일본 클릭수",
+    "category": "clicks",
+    "tier": 1
+  },
+  {
+    "id": "AZ-191",
+    "query": "아마존 호주 클릭수 데이터",
+    "category": "clicks",
+    "tier": 1
+  },
+  {
+    "id": "AZ-192",
+    "query": "아마존 캐나다 클릭수",
+    "category": "clicks",
+    "tier": 1
+  },
+  {
+    "id": "AZ-193",
+    "query": "아마존 전체 클릭수 합계",
+    "category": "clicks",
+    "tier": 1
+  },
+  {
+    "id": "AZ-194",
+    "query": "아마존 국가별 클릭수 순위",
+    "category": "clicks",
+    "tier": 1
+  },
+  {
+    "id": "AZ-195",
+    "query": "아마존 클릭수 1000건 이상 국가",
+    "category": "clicks",
+    "tier": 1
+  },
+  {
+    "id": "AZ-196",
+    "query": "아마존 클릭수 점유율 분석",
+    "category": "clicks",
+    "tier": 1
+  },
+  {
+    "id": "AZ-197",
+    "query": "아마존 국가별 클릭수 비중",
+    "category": "clicks",
+    "tier": 1
+  },
+  {
+    "id": "AZ-198",
+    "query": "아마존 클릭수 TOP 3 국가",
+    "category": "clicks",
+    "tier": 1
+  },
+  {
+    "id": "AZ-199",
+    "query": "아마존 클릭수 하위 국가 목록",
+    "category": "clicks",
+    "tier": 1
+  },
+  {
+    "id": "AZ-200",
+    "query": "아마존 평균 클릭수 국가별",
+    "category": "clicks",
+    "tier": 1
+  },
+  {
+    "id": "AZ-201",
+    "query": "아마존 퍼널 차트 보여줘",
+    "category": "visualization",
+    "tier": 1
+  },
+  {
+    "id": "AZ-202",
+    "query": "아마존 국가별 노출수 바차트",
+    "category": "visualization",
+    "tier": 1
+  },
+  {
+    "id": "AZ-203",
+    "query": "아마존 CTR 비교 차트",
+    "category": "visualization",
+    "tier": 1
+  },
+  {
+    "id": "AZ-204",
+    "query": "아마존 전환율 비교 그래프",
+    "category": "visualization",
+    "tier": 1
+  },
+  {
+    "id": "AZ-205",
+    "query": "아마존 퍼널 깔때기 차트",
+    "category": "visualization",
+    "tier": 1
+  },
+  {
+    "id": "AZ-206",
+    "query": "아마존 국가별 클릭수 파이차트",
+    "category": "visualization",
+    "tier": 1
+  },
+  {
+    "id": "AZ-207",
+    "query": "아마존 국가별 구매수 차트",
+    "category": "visualization",
+    "tier": 1
+  },
+  {
+    "id": "AZ-208",
+    "query": "아마존 장바구니 추가 차트",
+    "category": "visualization",
+    "tier": 1
+  },
+  {
+    "id": "AZ-209",
+    "query": "아마존 퍼널 이탈률 차트",
+    "category": "visualization",
+    "tier": 1
+  },
+  {
+    "id": "AZ-210",
+    "query": "아마존 국가별 성과 비교 차트",
+    "category": "visualization",
+    "tier": 1
+  },
+  {
+    "id": "AZ-211",
+    "query": "아마존 CTR vs 전환율 산점도",
+    "category": "visualization",
+    "tier": 1
+  },
+  {
+    "id": "AZ-212",
+    "query": "아마존 노출수 vs 클릭수 그래프",
+    "category": "visualization",
+    "tier": 1
+  },
+  {
+    "id": "AZ-213",
+    "query": "아마존 국가별 성과 레이더 차트",
+    "category": "visualization",
+    "tier": 1
+  },
+  {
+    "id": "AZ-214",
+    "query": "아마존 퍼널 단계별 잔존율 차트",
+    "category": "visualization",
+    "tier": 1
+  },
+  {
+    "id": "AZ-215",
+    "query": "아마존 국가별 구매 비중 도넛차트",
+    "category": "visualization",
+    "tier": 1
+  },
+  {
+    "id": "AZ-216",
+    "query": "아마존 국가별 데이터 전체 보여줘",
+    "category": "detail_data",
+    "tier": 1
+  },
+  {
+    "id": "AZ-217",
+    "query": "아마존 미국 전체 데이터",
+    "category": "detail_data",
+    "tier": 1
+  },
+  {
+    "id": "AZ-218",
+    "query": "아마존 일본 전체 데이터",
+    "category": "detail_data",
+    "tier": 1
+  },
+  {
+    "id": "AZ-219",
+    "query": "아마존 호주 전체 데이터",
+    "category": "detail_data",
+    "tier": 1
+  },
+  {
+    "id": "AZ-220",
+    "query": "아마존 캐나다 전체 데이터",
+    "category": "detail_data",
+    "tier": 1
+  },
+  {
+    "id": "AZ-221",
+    "query": "아마존 데이터 건수 몇 개야?",
+    "category": "detail_data",
+    "tier": 1
+  },
+  {
+    "id": "AZ-222",
+    "query": "아마존 국가 종류 목록",
+    "category": "detail_data",
+    "tier": 1
+  },
+  {
+    "id": "AZ-223",
+    "query": "아마존 데이터 컬럼 목록",
+    "category": "detail_data",
+    "tier": 1
+  },
+  {
+    "id": "AZ-224",
+    "query": "아마존 미국 전체 지표 요약",
+    "category": "detail_data",
+    "tier": 1
+  },
+  {
+    "id": "AZ-225",
+    "query": "아마존 일본 전체 지표 요약",
+    "category": "detail_data",
+    "tier": 1
+  },
+  {
+    "id": "AZ-226",
+    "query": "아마존 노출 대비 구매 전환율 분석",
+    "category": "efficiency",
+    "tier": 1
+  },
+  {
+    "id": "AZ-227",
+    "query": "아마존 전체 퍼널 효율 분석",
+    "category": "efficiency",
+    "tier": 1
+  },
+  {
+    "id": "AZ-228",
+    "query": "아마존 국가별 마케팅 효율",
+    "category": "efficiency",
+    "tier": 1
+  },
+  {
+    "id": "AZ-229",
+    "query": "아마존 노출 1000건당 구매수",
+    "category": "efficiency",
+    "tier": 1
+  },
+  {
+    "id": "AZ-230",
+    "query": "아마존 클릭 1000건당 구매수",
+    "category": "efficiency",
+    "tier": 1
+  },
+  {
+    "id": "AZ-231",
+    "query": "아마존 노출 대비 장바구니 전환율",
+    "category": "efficiency",
+    "tier": 1
+  },
+  {
+    "id": "AZ-232",
+    "query": "아마존 가장 효율적인 퍼널 국가",
+    "category": "efficiency",
+    "tier": 1
+  },
+  {
+    "id": "AZ-233",
+    "query": "아마존 가장 비효율적인 퍼널 국가",
+    "category": "efficiency",
+    "tier": 1
+  },
+  {
+    "id": "AZ-234",
+    "query": "아마존 퍼널 효율 순위 국가별",
+    "category": "efficiency",
+    "tier": 1
+  },
+  {
+    "id": "AZ-235",
+    "query": "아마존 노출 대비 구매 비율 순위",
+    "category": "efficiency",
+    "tier": 1
+  },
+  {
+    "id": "AZ-236",
+    "query": "아마존 미국 전체 퍼널 효율",
+    "category": "efficiency",
+    "tier": 1
+  },
+  {
+    "id": "AZ-237",
+    "query": "아마존 일본 전체 퍼널 효율",
+    "category": "efficiency",
+    "tier": 1
+  },
+  {
+    "id": "AZ-238",
+    "query": "아마존 호주 퍼널 효율 분석",
+    "category": "efficiency",
+    "tier": 1
+  },
+  {
+    "id": "AZ-239",
+    "query": "아마존 캐나다 퍼널 효율",
+    "category": "efficiency",
+    "tier": 1
+  },
+  {
+    "id": "AZ-240",
+    "query": "아마존 국가별 ROI 효율 비교",
+    "category": "efficiency",
+    "tier": 1
+  },
+  {
+    "id": "AZ-241",
+    "query": "아마존 국가별 노출수 통계 요약",
+    "category": "statistics",
+    "tier": 1
+  },
+  {
+    "id": "AZ-242",
+    "query": "아마존 클릭수 평균과 중앙값",
+    "category": "statistics",
+    "tier": 1
+  },
+  {
+    "id": "AZ-243",
+    "query": "아마존 구매수 표준편차",
+    "category": "statistics",
+    "tier": 1
+  },
+  {
+    "id": "AZ-244",
+    "query": "아마존 CTR 평균 중앙값 비교",
+    "category": "statistics",
+    "tier": 1
+  },
+  {
+    "id": "AZ-245",
+    "query": "아마존 전환율 통계 분석",
+    "category": "statistics",
+    "tier": 1
+  },
+  {
+    "id": "AZ-246",
+    "query": "아마존 노출수 최솟값 최댓값",
+    "category": "statistics",
+    "tier": 1
+  },
+  {
+    "id": "AZ-247",
+    "query": "아마존 클릭수 최솟값 최댓값",
+    "category": "statistics",
+    "tier": 1
+  },
+  {
+    "id": "AZ-248",
+    "query": "아마존 구매수 최솟값 최댓값",
+    "category": "statistics",
+    "tier": 1
+  },
+  {
+    "id": "AZ-249",
+    "query": "아마존 장바구니 추가 평균",
+    "category": "statistics",
+    "tier": 1
+  },
+  {
+    "id": "AZ-250",
+    "query": "아마존 전체 지표 통계 요약 테이블",
+    "category": "statistics",
+    "tier": 1
+  },
+  {
+    "id": "AZ-251",
+    "query": "아마존 국가별 지표 분산 분석",
+    "category": "statistics",
+    "tier": 1
+  },
+  {
+    "id": "AZ-252",
+    "query": "아마존 CTR 분포 분석",
+    "category": "statistics",
+    "tier": 1
+  },
+  {
+    "id": "AZ-253",
+    "query": "아마존 전환율 분포 분석",
+    "category": "statistics",
+    "tier": 1
+  },
+  {
+    "id": "AZ-254",
+    "query": "아마존 노출수 4분위수",
+    "category": "statistics",
+    "tier": 1
+  },
+  {
+    "id": "AZ-255",
+    "query": "아마존 클릭수 4분위수",
+    "category": "statistics",
+    "tier": 1
+  },
+  {
+    "id": "AZ-256",
+    "query": "아마존 CTR과 전환율 상관관계",
+    "category": "correlation",
+    "tier": 1
+  },
+  {
+    "id": "AZ-257",
+    "query": "아마존 노출수와 클릭수 상관관계",
+    "category": "correlation",
+    "tier": 1
+  },
+  {
+    "id": "AZ-258",
+    "query": "아마존 클릭수와 구매수 상관관계",
+    "category": "correlation",
+    "tier": 1
+  },
+  {
+    "id": "AZ-259",
+    "query": "아마존 장바구니와 구매 상관관계",
+    "category": "correlation",
+    "tier": 1
+  },
+  {
+    "id": "AZ-260",
+    "query": "아마존 노출수와 구매수 상관관계",
+    "category": "correlation",
+    "tier": 1
+  },
+  {
+    "id": "AZ-261",
+    "query": "아마존 CTR 높을수록 전환율도 높아?",
+    "category": "correlation",
+    "tier": 1
+  },
+  {
+    "id": "AZ-262",
+    "query": "아마존 노출수가 많으면 구매도 많아?",
+    "category": "correlation",
+    "tier": 1
+  },
+  {
+    "id": "AZ-263",
+    "query": "아마존 클릭과 장바구니 관계 분석",
+    "category": "correlation",
+    "tier": 1
+  },
+  {
+    "id": "AZ-264",
+    "query": "아마존 지표 간 상관관계 매트릭스",
+    "category": "correlation",
+    "tier": 1
+  },
+  {
+    "id": "AZ-265",
+    "query": "아마존 노출-클릭-장바구니-구매 관계",
+    "category": "correlation",
+    "tier": 1
+  },
+  {
+    "id": "AZ-266",
+    "query": "아마존 검색 성과 종합 리포트",
+    "category": "report",
+    "tier": 1
+  },
+  {
+    "id": "AZ-267",
+    "query": "아마존 국가별 성과 보고서",
+    "category": "report",
+    "tier": 1
+  },
+  {
+    "id": "AZ-268",
+    "query": "아마존 퍼널 분석 보고서",
+    "category": "report",
+    "tier": 1
+  },
+  {
+    "id": "AZ-269",
+    "query": "아마존 CTR 분석 리포트",
+    "category": "report",
+    "tier": 1
+  },
+  {
+    "id": "AZ-270",
+    "query": "아마존 전환율 분석 보고서",
+    "category": "report",
+    "tier": 1
+  },
+  {
+    "id": "AZ-271",
+    "query": "아마존 카탈로그 성과 리포트",
+    "category": "report",
+    "tier": 1
+  },
+  {
+    "id": "AZ-272",
+    "query": "아마존 시장별 성과 평가 보고서",
+    "category": "report",
+    "tier": 1
+  },
+  {
+    "id": "AZ-273",
+    "query": "아마존 검색 마케팅 성과 요약",
+    "category": "report",
+    "tier": 1
+  },
+  {
+    "id": "AZ-274",
+    "query": "아마존 분기별 성과 리포트",
+    "category": "report",
+    "tier": 1
+  },
+  {
+    "id": "AZ-275",
+    "query": "아마존 연간 검색 성과 보고서",
+    "category": "report",
+    "tier": 1
+  },
+  {
+    "id": "AZ-276",
+    "query": "아마존 검색 성과 개선 전략",
+    "category": "strategy",
+    "tier": 1
+  },
+  {
+    "id": "AZ-277",
+    "query": "아마존 CTR 개선 방안",
+    "category": "strategy",
+    "tier": 1
+  },
+  {
+    "id": "AZ-278",
+    "query": "아마존 전환율 개선 전략",
+    "category": "strategy",
+    "tier": 1
+  },
+  {
+    "id": "AZ-279",
+    "query": "아마존 장바구니 이탈 줄이는 방법",
+    "category": "strategy",
+    "tier": 1
+  },
+  {
+    "id": "AZ-280",
+    "query": "아마존 국가별 마케팅 전략 제안",
+    "category": "strategy",
+    "tier": 1
+  },
+  {
+    "id": "AZ-281",
+    "query": "아마존 노출수 증가 방안",
+    "category": "strategy",
+    "tier": 1
+  },
+  {
+    "id": "AZ-282",
+    "query": "아마존 미국 시장 성과 개선 제안",
+    "category": "strategy",
+    "tier": 1
+  },
+  {
+    "id": "AZ-283",
+    "query": "아마존 일본 시장 전략",
+    "category": "strategy",
+    "tier": 1
+  },
+  {
+    "id": "AZ-284",
+    "query": "아마존 호주 시장 개선 방안",
+    "category": "strategy",
+    "tier": 1
+  },
+  {
+    "id": "AZ-285",
+    "query": "아마존 캐나다 시장 전략 제안",
+    "category": "strategy",
+    "tier": 1
+  },
+  {
+    "id": "AZ-286",
+    "query": "아마존 검색 최적화 전략",
+    "category": "strategy",
+    "tier": 1
+  },
+  {
+    "id": "AZ-287",
+    "query": "아마존 퍼널 최적화 우선순위",
+    "category": "strategy",
+    "tier": 1
+  },
+  {
+    "id": "AZ-288",
+    "query": "아마존 구매 전환 개선 액션플랜",
+    "category": "strategy",
+    "tier": 1
+  },
+  {
+    "id": "AZ-289",
+    "query": "아마존 시장 확대 전략",
+    "category": "strategy",
+    "tier": 1
+  },
+  {
+    "id": "AZ-290",
+    "query": "아마존 성과 부진 시장 대응 방안",
+    "category": "strategy",
+    "tier": 1
+  },
+  {
+    "id": "AZ-291",
+    "query": "아마존 데이터에 국가 몇 개 있어?",
+    "category": "meta",
+    "tier": 1
+  },
+  {
+    "id": "AZ-292",
+    "query": "아마존 데이터 국가 목록",
+    "category": "meta",
+    "tier": 1
+  },
+  {
+    "id": "AZ-293",
+    "query": "아마존 테이블 데이터 건수",
+    "category": "meta",
+    "tier": 1
+  },
+  {
+    "id": "AZ-294",
+    "query": "아마존 검색 분석 테이블 구조",
+    "category": "meta",
+    "tier": 1
+  },
+  {
+    "id": "AZ-295",
+    "query": "아마존 데이터 필드 목록",
+    "category": "meta",
+    "tier": 1
+  },
+  {
+    "id": "AZ-296",
+    "query": "아마존 데이터 null 값 확인",
+    "category": "data_quality",
+    "tier": 1
+  },
+  {
+    "id": "AZ-297",
+    "query": "아마존 노출수 0인 국가 있어?",
+    "category": "data_quality",
+    "tier": 1
+  },
+  {
+    "id": "AZ-298",
+    "query": "아마존 클릭수 0인 국가 있어?",
+    "category": "data_quality",
+    "tier": 1
+  },
+  {
+    "id": "AZ-299",
+    "query": "아마존 구매수 0인 국가 목록",
+    "category": "data_quality",
+    "tier": 1
+  },
+  {
+    "id": "AZ-300",
+    "query": "아마존 데이터 품질 점검 리포트",
+    "category": "data_quality",
+    "tier": 1
+  },
+  {
+    "id": "AZ-301",
+    "query": "빠르게 amazon 일본 클릭 대비 구매율",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-302",
+    "query": "아마존 CTR vs 구매 전환율 산점도",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-303",
+    "query": "아마존 캐나다 퍼널 이탈 분석 알 수 있을까요?",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-304",
+    "query": "참고로 아마존 성과 가장 좋은 국가 어디야?",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-305",
+    "query": "아마존 클릭 대비 장바구니 이탈률 어때?",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-306",
+    "query": "아마존 장바구니 추가가 가장 많은 국가 알려주세요",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-307",
+    "query": "빠르게 아마존 종합 성과 TOP 3 국가 알 수 있을까요?",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-308",
+    "query": "정확한 아마존 구매 전환 개선 액션플랜 어떻게 되나요?",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-309",
+    "query": "간단하게 amazon 국가 기준 임프레션 분포",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-310",
+    "query": "아마존 CTR 평균 중앙값 비교 분석해줘",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-311",
+    "query": "아마존 미국 vs 캐나다 전환율 차이 정리해줘",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-312",
+    "query": "아마존 카탈로그 성과 국가 대비",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-313",
+    "query": "요즘 아마존 장바구니와 구매 상관관계",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-314",
+    "query": "간단하게 아마존 검색 성과 종합 분석 정리해줘",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-315",
+    "query": "아마존 전체 평균 CVR 정리해줘",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-316",
+    "query": "아마존 퍼널 단계별 잔존율 확인해주세요",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-317",
+    "query": "혹시 아마존 캐나다 퍼널 효율",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-318",
+    "query": "요즘 아마존 노출 대비 클릭 이탈률",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-319",
+    "query": "참고로 아마존 캐나다 클릭수",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-320",
+    "query": "아마존 국가별 전환율 알려줄래 어떻게 되나요?",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-321",
+    "query": "amazon 일본 vs 캐나다 견줘봐 알려주세요",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-322",
+    "query": "우리 회사 아마존 가장 비효율적인 퍼널 국가 좀",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-323",
+    "query": "아마죤 노출수 대비 클릭 비율",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-324",
+    "query": "요즘 아마죤 클릭수 평균과 중앙값",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-325",
+    "query": "아마존 국가별 데이터 전체 알려줘",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-326",
+    "query": "우리 회사 아마존 장바구니 추가 파악해줘 알 수 있을까요?",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-327",
+    "query": "우리 회사 아마존 검색 마케팅 성과 요약",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-328",
+    "query": "아마존 국가별 구매 비중 도넛차트 부탁드려요",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-329",
+    "query": "빠르게 아마존 미국 CTR 몇 퍼센트야?",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-330",
+    "query": "아마존 전체 평균 CTR 확인 가능한가요?",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-331",
+    "query": "아마존 퍼널 개선 필요 구간 얼마임?",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-332",
+    "query": "아마존 검색 최적화 전략 확인 부탁드립니다",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-333",
+    "query": "요즘 아마존 호주 구매수",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-334",
+    "query": "요즘 아마존 구매수 표준편차 부탁드려요",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-335",
+    "query": "참고로 아마존 시장별 성과 평가 보고서 얼마임?",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-336",
+    "query": "궁금한데 아마존 연간 검색 성과 보고서 알려주세요",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-337",
+    "query": "참고로 아마존 4개국 전체 비교 분석",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-338",
+    "query": "빠르게 아마존 검색 성과 종합 분석 좀",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-339",
+    "query": "아마존 전환율 비교 그래프 알 수 있을까요?",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-340",
+    "query": "아마죤 캐나다 퍼널 효율 알려주세요",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-341",
+    "query": "아마존 시장 확대 전략 알려줄래 알려주시면 감사하겠습니다",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-342",
+    "query": "아마존 장바구니 추가 vs 구매 갭 분석 좀 부탁드려요",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-343",
+    "query": "아마존 CTR 분포 분석 확인 가능한가요?",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-344",
+    "query": "아마존 CTR 1% 이상인 국가 좀",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-345",
+    "query": "간단하게 아마존 CTR 개선이 필요한 국가",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-346",
+    "query": "간단하게 아마존 구매수 최솟값 최댓값 좀 알려줘",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-347",
+    "query": "아마존 장바구니 담기 기준 최고 시장 빨리 확인 가능한가요?",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-348",
+    "query": "아마존 클릭 대비 구매 효율 분석해줘",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-349",
+    "query": "아마죤 검색 성과 TOP 국가",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-350",
+    "query": "아마존 전환율이 가장 높은 국가 어떻게 되나요?",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-351",
+    "query": "혹시 아마존 평균 노출수 각 나라 알려주세요",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-352",
+    "query": "아마존 일본 vs 캐나다 구매수 대비",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-353",
+    "query": "아마존 카트 대비 구매 이탈률",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-354",
+    "query": "혹시 아마죤 전환율 비교 해줘",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-355",
+    "query": "아마존 구매 전환율 비교 그래프",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-356",
+    "query": "혹시 아마존 국가 종류 목록 정리해줘",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-357",
+    "query": "아마죤 카트 추가 vs 구매 갭 분석 알려주시면 감사하겠습니다",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-358",
+    "query": "아마존 검색 최적화 전략 확인해줘",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-359",
+    "query": "아마죤 클릭수 TOP 3 국가 알려줄래?",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-360",
+    "query": "확인 좀 해줘 아마존 테이블 데이터 건수 궁금해",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-361",
+    "query": "아마존 구매수 최솟값 최댓값 어떻게 되나요?",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-362",
+    "query": "아마죤 노출 대비 구매 비율 TOP?",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-363",
+    "query": "아마존 국가별 장바구니 담기 추가 순서",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-364",
+    "query": "아마존 캐나다 퍼널 이탈 분석 좀 봐줘",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-365",
+    "query": "아마존 호주 vs 캐나다 노출수 비교 알려주세요",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-366",
+    "query": "아마존 국가 기준 성과 비교 차트 알 수 있을까요?",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-367",
+    "query": "아마존 구매수 0인 국가 목록 좀 알려줘",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-368",
+    "query": "아마존 CVR이 가장 낮은 국가",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-369",
+    "query": "간단하게 아마존 퍼널 깔때기 차트",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-370",
+    "query": "우리 회사 아마존 데이터 필드 목록",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-371",
+    "query": "아마존 노출 대비 클릭 이탈률 부탁",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-372",
+    "query": "아마존 국가별 성과 보고서 알려주세요",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-373",
+    "query": "요즘 아마존 일본 노출부터 구매까지 데이터",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-374",
+    "query": "아마존 국가별 퍼널 효율 비교 알려주세요",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-375",
+    "query": "아마존 국가별 노출 건수 비교 어떻게 되나요?",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-376",
+    "query": "아마죤 클릭수가 최소 국가",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-377",
+    "query": "아마존 전환률 평균 대비 낮은 국가",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-378",
+    "query": "혹시 아마존 전환율이 가장 낮은 국가 부탁드려요",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-379",
+    "query": "아마존 장바구니 담기 추가율 분석 좀",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-380",
+    "query": "아마존 캐나다 CTR 데이터 확인 가능한가요?",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-381",
+    "query": "아마존 임프레션 4분위수",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-382",
+    "query": "아마존 노출수 TOP 3 국가 알려주세요",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-383",
+    "query": "아마존 검색 살펴봐줘 테이블 구조 확인 부탁드립니다",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-384",
+    "query": "아마존 클릭에서 구매까지 CVR 높은 국가",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-385",
+    "query": "아마존 클릭에서 구매 구매 전환율",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-386",
+    "query": "아마존 일본 노출 횟수 체크해줘",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-387",
+    "query": "아마존 전체 평균 전환률",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-388",
+    "query": "아마존 클릭에서 구매까지 전환률 낮은 국가?",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-389",
+    "query": "아마존 전체 클릭수 합계 알려줄래?",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-390",
+    "query": "빠르게 아마존 미국 클릭수",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-391",
+    "query": "아마존 구매수 비중 분석 어때?",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-392",
+    "query": "아마존 구매수가 1위 국가",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-393",
+    "query": "아마존 국가 기준 검색 퍼널 비교 분석 얼마임?",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-394",
+    "query": "아마존 국가 기준 구매수 점유율 궁금해",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-395",
+    "query": "아마존 캐나다 전체 데이터 보여줘 확인 가능한가요?",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-396",
+    "query": "아마존 각 나라 마케팅 효율 알려주세요",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-397",
+    "query": "요즘 아마존 전환률 5% 이상인 국가 어떻게 되나요?",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-398",
+    "query": "혹시 아마존 일본 vs 캐나다 비교 빨리",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-399",
+    "query": "아마존 국가별 클릭수 비중 확인 가능한가요?",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-400",
+    "query": "아마존 구매 기준 최고 시장 확인 가능한가요?",
+    "category": "amazon_search",
+    "tier": 2
+  },
+  {
+    "id": "AZ-401",
+    "query": "확인 좀 해줘 빠르게 amazon 일본 클릭 대비 구매율",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-402",
+    "query": "정확한 아마존 CTR 분석해줘 해줘",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-403",
+    "query": "요즘 간단하게 아마존 CTR 개선이 필요한 국가",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-404",
+    "query": "혹시 혹시 아마존 캐나다 퍼널 효율",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-405",
+    "query": "빠르게 아마존 노출 대비 클릭 이탈률",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-406",
+    "query": "혹시 아마존 노출 횟수가 많으면 구매도 많아 어떻게 되나요?",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-407",
+    "query": "amazon 국가별 클릭 대비 구매 비율",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-408",
+    "query": "아마존 캐나다 CTR 데이터 부탁드려요",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-409",
+    "query": "잠깐, 아마존 연간 검색 성과 보고서 좀",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-410",
+    "query": "아마죤 국가별 클릭 대비 구매 비율 확인 부탁드립니다",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-411",
+    "query": "아마존 미국 노출 횟수 몇 건이야?",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-412",
+    "query": "확인 좀 해줘 아마죤 검색 성과 TOP 국가 알려줄래?",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-413",
+    "query": "잠깐, 아마존 국가별 퍼널 이탈 포인트 정리해줘",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-414",
+    "query": "아마존 나라별 노출-클릭-구매 퍼널 알려주세요",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-415",
+    "query": "아마존 노출수 1만 건 이상 국가 알려주세요",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-416",
+    "query": "아마존 전체 평균 CVR 정리해줘 좀 봐줘",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-417",
+    "query": "아마존 캐나다 장바구니 담기 추가 수 알려주시면 감사하겠습니다",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-418",
+    "query": "아마존 노출 건수 1만 건 이상 국가 빨리 확인 부탁드립니다",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-419",
+    "query": "궁금한데 참고로 아마존 캐나다 클릭수",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-420",
+    "query": "아마죤 캐나다 퍼널 효율 알려줘",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-421",
+    "query": "아마존 전환률 비교 해줘 정리해줘 어떻게 되나요?",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-422",
+    "query": "아마존 카탈로그 성과 리포트 정리해줘",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-423",
+    "query": "정확한 아마존 미국 노출수 몇 건이야 알려주세요",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-424",
+    "query": "아마존 국가별 검색 퍼널 비교 확인 부탁드립니다",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-425",
+    "query": "아마존 국가 기준 마케팅 전략 제안",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-426",
+    "query": "아마존 각 나라 데이터 전체 보여줘 확인 부탁드립니다",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-427",
+    "query": "확인 좀 해줘 참고로 아마존 성과 가장 좋은 국가 어디야?",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-428",
+    "query": "아마존 전환율 비교 해줘 어떻게 되나요?",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-429",
+    "query": "아마존 노출 대비 클릭 이탈률 보여줘",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-430",
+    "query": "amazon 노출수 1만 건 이상 국가",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-431",
+    "query": "요즘 요즘 아마죤 클릭수 평균과 중앙값 확인해줘",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-432",
+    "query": "간단하게 아마존 CTR 개선이 필요한 국가 확인해줘 어떻게 되나요?",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-433",
+    "query": "우리 회사 간단하게 아마존 검색 성과 종합 분석 정리해주세요",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-434",
+    "query": "잠깐, 아마존 카트 추가 vs 구매 갭 분석 부탁",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-435",
+    "query": "아마존 구매 전환율이 가장 높은 국가 어떻게 되나요",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-436",
+    "query": "요즘 아마존 CTR 기준 최고 시장",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-437",
+    "query": "요즘 아마존 카트와 구매 상관관계",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-438",
+    "query": "아마존 카트 전환 효율 살펴봐줘",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-439",
+    "query": "빠르게 아마존 캐나다 CTR 데이터 빨리",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-440",
+    "query": "아마존 CTR 살펴봐줘 해줘 확인해줘",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-441",
+    "query": "빠르게 아마존 전환율 대조 그래프 알 수 있을까요?",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-442",
+    "query": "간단하게 아마존 검색 성과 종합 분석해줘 정리해줘",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-443",
+    "query": "아마존 캐나다 CTR 데이터 확인 부탁드립니다",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-444",
+    "query": "amazon CTR 1% 이상인 국가 좀",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-445",
+    "query": "참고로 아마존 장바구니 담기 추가가 가장 많은 국가 알려주세요 알 수 있을까요?",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-446",
+    "query": "우리 회사 참고로 아마존 시장별 성과 평가 보고서 얼마임 알려주세요",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-447",
+    "query": "아마존 노출 건수가 많으면 구매도 많아",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-448",
+    "query": "혹시 아마존 검색 최적화 전략 확인 부탁드립니다 얼마임?",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-449",
+    "query": "확인 좀 해줘 요즘 아마존 호주 구매수 알려주시면 감사하겠습니다",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-450",
+    "query": "아마존 클릭 전환 최적화 필요 국가 좀 알려줘",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-451",
+    "query": "아마존 캐나다 퍼널 이탈 분석 알 수 있을까요 확인 가능한가요?",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-452",
+    "query": "아마존 미국 vs 캐나다 전환율 차이 정리해줘 확인 가능한가요?",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-453",
+    "query": "요즘 요즘 아마죤 클릭수 평균과 중앙값",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-454",
+    "query": "정확한 아마존 CTR 평균 대비 낮은 국가 빨리",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-455",
+    "query": "아마존 CTR 평균 대비 높은 국가 알려주세요",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-456",
+    "query": "아마죤 노출수 대비 클릭 비율 알려주세요",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-457",
+    "query": "아마존 국가별 성과 레이더 차트 확인 부탁드립니다",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-458",
+    "query": "정확한 아마존 미국 vs 호주 CTR 차이 몇이야?",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-459",
+    "query": "아마존 노출수 4분위수 궁금해",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-460",
+    "query": "잠깐, 아마죤 캐나다 퍼널 효율 알려주세요 정리해줘",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-461",
+    "query": "확인 좀 해줘 아마존 국가별 구매 비중 도넛차트 부탁드려요",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-462",
+    "query": "궁금한데 아마존 클릭수 TOP 3 국가",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-463",
+    "query": "참고로 요즘 아마존 노출 대비 클릭 이탈률 알려주세요",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-464",
+    "query": "잠깐, 간단하게 amazon 국가 기준 임프레션 분포",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-465",
+    "query": "아마존 전체 평균 CVR 정리해줘 확인 부탁드립니다",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-466",
+    "query": "궁금한데 아마존 미국 vs 캐나다 전환율 차이 정리해줘 확인 부탁드립니다",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-467",
+    "query": "참고로 아마존 클릭수가 가장 적은 국가 부탁드려요",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-468",
+    "query": "아마존 퍼널 차트 보여주세요",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-469",
+    "query": "확인 좀 해줘 아마존 클릭 전환 최적화 필요 국가",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-470",
+    "query": "혹시 간단하게 amazon 국가 기준 임프레션 분포 확인해줘",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-471",
+    "query": "우리 회사 아마존 가장 비효율적인 퍼널 국가 좀 어때?",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-472",
+    "query": "아마존 노출 횟수와 클릭수 상관관계 알려주세요",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-473",
+    "query": "우리 회사 우리 회사 아마존 검색 마케팅 성과 요약 알려주시면 감사하겠습니다",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-474",
+    "query": "아마존 이탈률 개선 우선상위 국가",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-475",
+    "query": "궁금한데 아마존 연간 검색 성과 보고서 알려주세요 얼마임?",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-476",
+    "query": "아마존 미국 vs 캐나다 전환률 차이 정리해줘",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-477",
+    "query": "궁금한데 요즘 아마죤 구매수 표준편차 부탁드려요 알 수 있을까요?",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-478",
+    "query": "아마존 CTR 평균 중앙값 견줘봐 파악해줘해줘",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-479",
+    "query": "요즘 아마존 노출수 4분위수",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-480",
+    "query": "빠르게 요즘 아마존 카트와 구매 상관관계",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-481",
+    "query": "확인 좀 해줘 요즘 아마존 장바구니와 구매 상관관계",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-482",
+    "query": "아마존 이탈률 개선 우선순서 국가 알려주세요",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-483",
+    "query": "간단하게 참고로 아마존 4개국 전체 비교 살펴봐줘 분석",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-484",
+    "query": "아마존 국가 기준 클릭수 파이차트",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-485",
+    "query": "amazon 전환률 비교 해줘",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-486",
+    "query": "아마존 장바구니 담기→구매 전환율 분석 알려주세요",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-487",
+    "query": "아마존 노출수 4분위수 알려주세요",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-488",
+    "query": "아마죤 국가별 클릭수 파이차트",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-489",
+    "query": "혹시 아마존 퍼널 단계별 잔존율 확인해주세요",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-490",
+    "query": "amazon CVR 비교 그래프 알 수 있을까요",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-491",
+    "query": "궁금한데 아마존 전환율이 가장 높은 국가 어떻게 되나요?",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-492",
+    "query": "amazon 노출수와 구매수 상관관계",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-493",
+    "query": "요즘 amazon 클릭 대비 장바구니 이탈률 어때 부탁드려요",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-494",
+    "query": "확인 좀 해줘 아마죤 장바구니 기준 최고 시장",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-495",
+    "query": "아마존 전환율 비교 그래프 알 수 있을까요? 좀",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-496",
+    "query": "아마존 국가별 노출-클릭-구매 퍼널 좀 알려줘",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-497",
+    "query": "아마존 노출 대비 클릭 이탈률 확인 부탁드립니다",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-498",
+    "query": "간단하게 아마죤 캐나다 퍼널 이탈 분석 알 수 있을까요 좀 알려줘",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-499",
+    "query": "혹시 아마존 캐나다 퍼널 효율 확인 부탁드립니다",
+    "category": "amazon_search",
+    "tier": 3
+  },
+  {
+    "id": "AZ-500",
+    "query": "우리 회사 아마존 가장 비효율적인 퍼널 국가 좀 부탁 확인 부탁드립니다",
+    "category": "amazon_search",
+    "tier": 3
+  }
+]

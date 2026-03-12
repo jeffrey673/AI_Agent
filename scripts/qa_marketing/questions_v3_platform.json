@@ -1,0 +1,3002 @@
+[
+  {
+    "id": "PL-001",
+    "query": "SKIN1004 제품 채널별 순위 알려줘",
+    "category": "product_ranking",
+    "tier": 1
+  },
+  {
+    "id": "PL-002",
+    "query": "채널별 SKIN1004 제품 랭킹",
+    "category": "product_ranking",
+    "tier": 1
+  },
+  {
+    "id": "PL-003",
+    "query": "SKIN1004 제품 순위 1위인 채널",
+    "category": "product_ranking",
+    "tier": 1
+  },
+  {
+    "id": "PL-004",
+    "query": "채널별 SKIN1004 제품 순위 TOP 5",
+    "category": "product_ranking",
+    "tier": 1
+  },
+  {
+    "id": "PL-005",
+    "query": "SKIN1004 제품 중 랭킹이 가장 높은 것",
+    "category": "product_ranking",
+    "tier": 1
+  },
+  {
+    "id": "PL-006",
+    "query": "각 채널에서 SKIN1004 순위 몇 위야?",
+    "category": "product_ranking",
+    "tier": 1
+  },
+  {
+    "id": "PL-007",
+    "query": "SKIN1004 제품 순위 평균",
+    "category": "product_ranking",
+    "tier": 1
+  },
+  {
+    "id": "PL-008",
+    "query": "채널별 제품 순위 비교",
+    "category": "product_ranking",
+    "tier": 1
+  },
+  {
+    "id": "PL-009",
+    "query": "SKIN1004 순위가 10위 이내인 제품",
+    "category": "product_ranking",
+    "tier": 1
+  },
+  {
+    "id": "PL-010",
+    "query": "SKIN1004 순위가 가장 낮은 채널",
+    "category": "product_ranking",
+    "tier": 1
+  },
+  {
+    "id": "PL-011",
+    "query": "채널별 제품 순위 1위 목록",
+    "category": "product_ranking",
+    "tier": 1
+  },
+  {
+    "id": "PL-012",
+    "query": "SKIN1004 순위 TOP 3 제품",
+    "category": "product_ranking",
+    "tier": 1
+  },
+  {
+    "id": "PL-013",
+    "query": "채널별 SKIN1004 순위 변화",
+    "category": "product_ranking",
+    "tier": 1
+  },
+  {
+    "id": "PL-014",
+    "query": "SKIN1004 전체 채널 평균 순위",
+    "category": "product_ranking",
+    "tier": 1
+  },
+  {
+    "id": "PL-015",
+    "query": "채널별 순위 1~5위 제품 리스트",
+    "category": "product_ranking",
+    "tier": 1
+  },
+  {
+    "id": "PL-016",
+    "query": "SKIN1004 제품 순위 100위 이내",
+    "category": "product_ranking",
+    "tier": 1
+  },
+  {
+    "id": "PL-017",
+    "query": "각 채널 1위 브랜드 뭐야?",
+    "category": "product_ranking",
+    "tier": 1
+  },
+  {
+    "id": "PL-018",
+    "query": "SKIN1004 순위가 개선된 채널",
+    "category": "product_ranking",
+    "tier": 1
+  },
+  {
+    "id": "PL-019",
+    "query": "전체 채널 SKIN1004 순위 요약",
+    "category": "product_ranking",
+    "tier": 1
+  },
+  {
+    "id": "PL-020",
+    "query": "SKIN1004 순위 TOP 20 제품 목록",
+    "category": "product_ranking",
+    "tier": 1
+  },
+  {
+    "id": "PL-021",
+    "query": "채널별 SKIN1004 제품 순위 전체 보여줘",
+    "category": "product_ranking",
+    "tier": 1
+  },
+  {
+    "id": "PL-022",
+    "query": "SKIN1004 순위가 50위 이내인 제품 수",
+    "category": "product_ranking",
+    "tier": 1
+  },
+  {
+    "id": "PL-023",
+    "query": "채널별 SKIN1004 평균 제품 순위 비교",
+    "category": "product_ranking",
+    "tier": 1
+  },
+  {
+    "id": "PL-024",
+    "query": "SKIN1004 순위 하위 10개 제품",
+    "category": "product_ranking",
+    "tier": 1
+  },
+  {
+    "id": "PL-025",
+    "query": "채널별 SKIN1004 순위 분포",
+    "category": "product_ranking",
+    "tier": 1
+  },
+  {
+    "id": "PL-026",
+    "query": "채널별 SKIN1004 평균 가격",
+    "category": "price_comparison",
+    "tier": 1
+  },
+  {
+    "id": "PL-027",
+    "query": "SKIN1004 제품 채널별 가격 비교",
+    "category": "price_comparison",
+    "tier": 1
+  },
+  {
+    "id": "PL-028",
+    "query": "SKIN1004 가장 비싼 채널",
+    "category": "price_comparison",
+    "tier": 1
+  },
+  {
+    "id": "PL-029",
+    "query": "SKIN1004 가장 저렴한 채널",
+    "category": "price_comparison",
+    "tier": 1
+  },
+  {
+    "id": "PL-030",
+    "query": "채널별 SKIN1004 가격 차이",
+    "category": "price_comparison",
+    "tier": 1
+  },
+  {
+    "id": "PL-031",
+    "query": "SKIN1004 제품 평균 가격 얼마야?",
+    "category": "price_comparison",
+    "tier": 1
+  },
+  {
+    "id": "PL-032",
+    "query": "채널별 SKIN1004 제품 최고가",
+    "category": "price_comparison",
+    "tier": 1
+  },
+  {
+    "id": "PL-033",
+    "query": "채널별 SKIN1004 제품 최저가",
+    "category": "price_comparison",
+    "tier": 1
+  },
+  {
+    "id": "PL-034",
+    "query": "SKIN1004 가격대 분포 보여줘",
+    "category": "price_comparison",
+    "tier": 1
+  },
+  {
+    "id": "PL-035",
+    "query": "채널별 SKIN1004 가격 편차",
+    "category": "price_comparison",
+    "tier": 1
+  },
+  {
+    "id": "PL-036",
+    "query": "SKIN1004 제품 가격이 가장 높은 것",
+    "category": "price_comparison",
+    "tier": 1
+  },
+  {
+    "id": "PL-037",
+    "query": "SKIN1004 제품 가격이 가장 낮은 것",
+    "category": "price_comparison",
+    "tier": 1
+  },
+  {
+    "id": "PL-038",
+    "query": "채널별 동일 제품 가격 비교",
+    "category": "price_comparison",
+    "tier": 1
+  },
+  {
+    "id": "PL-039",
+    "query": "SKIN1004 센텔라 토너 채널별 가격",
+    "category": "price_comparison",
+    "tier": 1
+  },
+  {
+    "id": "PL-040",
+    "query": "SKIN1004 마다가스카르 크림 채널별 가격",
+    "category": "price_comparison",
+    "tier": 1
+  },
+  {
+    "id": "PL-041",
+    "query": "SKIN1004 앰플 채널별 가격 비교",
+    "category": "price_comparison",
+    "tier": 1
+  },
+  {
+    "id": "PL-042",
+    "query": "SKIN1004 선크림 채널별 가격",
+    "category": "price_comparison",
+    "tier": 1
+  },
+  {
+    "id": "PL-043",
+    "query": "SKIN1004 클렌저 채널별 가격 비교",
+    "category": "price_comparison",
+    "tier": 1
+  },
+  {
+    "id": "PL-044",
+    "query": "채널별 SKIN1004 가격 중앙값",
+    "category": "price_comparison",
+    "tier": 1
+  },
+  {
+    "id": "PL-045",
+    "query": "SKIN1004 전체 채널 평균 가격",
+    "category": "price_comparison",
+    "tier": 1
+  },
+  {
+    "id": "PL-046",
+    "query": "채널별 SKIN1004 가격 범위",
+    "category": "price_comparison",
+    "tier": 1
+  },
+  {
+    "id": "PL-047",
+    "query": "SKIN1004 같은 제품 채널 간 가격 차이율",
+    "category": "price_comparison",
+    "tier": 1
+  },
+  {
+    "id": "PL-048",
+    "query": "SKIN1004 10달러 이하 제품 채널별",
+    "category": "price_comparison",
+    "tier": 1
+  },
+  {
+    "id": "PL-049",
+    "query": "SKIN1004 20달러 이상 제품 목록",
+    "category": "price_comparison",
+    "tier": 1
+  },
+  {
+    "id": "PL-050",
+    "query": "채널별 SKIN1004 가격 순위",
+    "category": "price_comparison",
+    "tier": 1
+  },
+  {
+    "id": "PL-051",
+    "query": "채널별 할인율 분석",
+    "category": "discount",
+    "tier": 1
+  },
+  {
+    "id": "PL-052",
+    "query": "SKIN1004 제품 할인율 얼마야?",
+    "category": "discount",
+    "tier": 1
+  },
+  {
+    "id": "PL-053",
+    "query": "할인율이 가장 높은 채널",
+    "category": "discount",
+    "tier": 1
+  },
+  {
+    "id": "PL-054",
+    "query": "할인율이 가장 낮은 채널",
+    "category": "discount",
+    "tier": 1
+  },
+  {
+    "id": "PL-055",
+    "query": "채널별 평균 할인율 비교",
+    "category": "discount",
+    "tier": 1
+  },
+  {
+    "id": "PL-056",
+    "query": "SKIN1004 할인가 제품 목록",
+    "category": "discount",
+    "tier": 1
+  },
+  {
+    "id": "PL-057",
+    "query": "할인 적용된 SKIN1004 제품 수",
+    "category": "discount",
+    "tier": 1
+  },
+  {
+    "id": "PL-058",
+    "query": "채널별 할인가와 정상가 차이",
+    "category": "discount",
+    "tier": 1
+  },
+  {
+    "id": "PL-059",
+    "query": "SKIN1004 할인율 30% 이상 제품",
+    "category": "discount",
+    "tier": 1
+  },
+  {
+    "id": "PL-060",
+    "query": "SKIN1004 할인율 50% 이상 제품",
+    "category": "discount",
+    "tier": 1
+  },
+  {
+    "id": "PL-061",
+    "query": "채널별 할인 미적용 제품 수",
+    "category": "discount",
+    "tier": 1
+  },
+  {
+    "id": "PL-062",
+    "query": "SKIN1004 할인가 평균 얼마야?",
+    "category": "discount",
+    "tier": 1
+  },
+  {
+    "id": "PL-063",
+    "query": "채널별 할인 폭 비교",
+    "category": "discount",
+    "tier": 1
+  },
+  {
+    "id": "PL-064",
+    "query": "SKIN1004 할인율 평균 몇 퍼센트?",
+    "category": "discount",
+    "tier": 1
+  },
+  {
+    "id": "PL-065",
+    "query": "채널별 할인가 제품 비중",
+    "category": "discount",
+    "tier": 1
+  },
+  {
+    "id": "PL-066",
+    "query": "SKIN1004 정상가 대비 할인율 분석",
+    "category": "discount",
+    "tier": 1
+  },
+  {
+    "id": "PL-067",
+    "query": "채널별 최대 할인율 제품",
+    "category": "discount",
+    "tier": 1
+  },
+  {
+    "id": "PL-068",
+    "query": "SKIN1004 할인 없는 제품 목록",
+    "category": "discount",
+    "tier": 1
+  },
+  {
+    "id": "PL-069",
+    "query": "채널별 할인 적용 제품 비율",
+    "category": "discount",
+    "tier": 1
+  },
+  {
+    "id": "PL-070",
+    "query": "SKIN1004 할인가가 정상가와 같은 제품",
+    "category": "discount",
+    "tier": 1
+  },
+  {
+    "id": "PL-071",
+    "query": "SKIN1004 할인율 TOP 10 제품",
+    "category": "discount",
+    "tier": 1
+  },
+  {
+    "id": "PL-072",
+    "query": "채널별 할인가 최솟값",
+    "category": "discount",
+    "tier": 1
+  },
+  {
+    "id": "PL-073",
+    "query": "SKIN1004 제품 할인가 범위",
+    "category": "discount",
+    "tier": 1
+  },
+  {
+    "id": "PL-074",
+    "query": "채널별 할인 정책 비교 분석",
+    "category": "discount",
+    "tier": 1
+  },
+  {
+    "id": "PL-075",
+    "query": "SKIN1004 할인율 분포 차트",
+    "category": "discount",
+    "tier": 1
+  },
+  {
+    "id": "PL-076",
+    "query": "순위 1위 제품들 보여줘",
+    "category": "top_ranked",
+    "tier": 1
+  },
+  {
+    "id": "PL-077",
+    "query": "각 채널 1위 제품 목록",
+    "category": "top_ranked",
+    "tier": 1
+  },
+  {
+    "id": "PL-078",
+    "query": "전체 채널에서 순위 1위인 제품",
+    "category": "top_ranked",
+    "tier": 1
+  },
+  {
+    "id": "PL-079",
+    "query": "순위 1~3위 제품 리스트",
+    "category": "top_ranked",
+    "tier": 1
+  },
+  {
+    "id": "PL-080",
+    "query": "채널별 TOP 5 제품",
+    "category": "top_ranked",
+    "tier": 1
+  },
+  {
+    "id": "PL-081",
+    "query": "SKIN1004가 1위인 채널 있어?",
+    "category": "top_ranked",
+    "tier": 1
+  },
+  {
+    "id": "PL-082",
+    "query": "전체 순위 1위 브랜드 분석",
+    "category": "top_ranked",
+    "tier": 1
+  },
+  {
+    "id": "PL-083",
+    "query": "채널별 순위 TOP 10 제품",
+    "category": "top_ranked",
+    "tier": 1
+  },
+  {
+    "id": "PL-084",
+    "query": "SKIN1004 순위가 1위인 제품 있어?",
+    "category": "top_ranked",
+    "tier": 1
+  },
+  {
+    "id": "PL-085",
+    "query": "순위 상위 제품들의 가격 분석",
+    "category": "top_ranked",
+    "tier": 1
+  },
+  {
+    "id": "PL-086",
+    "query": "채널별 상위 순위 브랜드 비교",
+    "category": "top_ranked",
+    "tier": 1
+  },
+  {
+    "id": "PL-087",
+    "query": "순위 1위 제품의 평균 가격",
+    "category": "top_ranked",
+    "tier": 1
+  },
+  {
+    "id": "PL-088",
+    "query": "채널별 순위 TOP 3 브랜드",
+    "category": "top_ranked",
+    "tier": 1
+  },
+  {
+    "id": "PL-089",
+    "query": "SKIN1004 vs 경쟁사 순위 비교",
+    "category": "top_ranked",
+    "tier": 1
+  },
+  {
+    "id": "PL-090",
+    "query": "순위 상위 제품의 할인율",
+    "category": "top_ranked",
+    "tier": 1
+  },
+  {
+    "id": "PL-091",
+    "query": "채널1 vs 채널2 제품 가격 비교해줘",
+    "category": "channel_comparison",
+    "tier": 1
+  },
+  {
+    "id": "PL-092",
+    "query": "Shopee vs Amazon SKIN1004 가격 비교",
+    "category": "channel_comparison",
+    "tier": 1
+  },
+  {
+    "id": "PL-093",
+    "query": "Lazada vs Shopee SKIN1004 순위 비교",
+    "category": "channel_comparison",
+    "tier": 1
+  },
+  {
+    "id": "PL-094",
+    "query": "TikTok Shop vs Shopee 가격 차이",
+    "category": "channel_comparison",
+    "tier": 1
+  },
+  {
+    "id": "PL-095",
+    "query": "Amazon vs Lazada 제품 가격 비교",
+    "category": "channel_comparison",
+    "tier": 1
+  },
+  {
+    "id": "PL-096",
+    "query": "채널 간 SKIN1004 가격 격차",
+    "category": "channel_comparison",
+    "tier": 1
+  },
+  {
+    "id": "PL-097",
+    "query": "Shopee vs TikTok Shop 할인율 비교",
+    "category": "channel_comparison",
+    "tier": 1
+  },
+  {
+    "id": "PL-098",
+    "query": "Amazon vs Shopee SKIN1004 순위 차이",
+    "category": "channel_comparison",
+    "tier": 1
+  },
+  {
+    "id": "PL-099",
+    "query": "채널별 동일 제품 순위 비교 분석",
+    "category": "channel_comparison",
+    "tier": 1
+  },
+  {
+    "id": "PL-100",
+    "query": "Lazada vs TikTok Shop 제품 비교",
+    "category": "channel_comparison",
+    "tier": 1
+  },
+  {
+    "id": "PL-101",
+    "query": "채널 간 SKIN1004 가격 일관성 분석",
+    "category": "channel_comparison",
+    "tier": 1
+  },
+  {
+    "id": "PL-102",
+    "query": "Amazon과 다른 채널 가격 차이",
+    "category": "channel_comparison",
+    "tier": 1
+  },
+  {
+    "id": "PL-103",
+    "query": "Shopee가 가장 저렴한 제품 목록",
+    "category": "channel_comparison",
+    "tier": 1
+  },
+  {
+    "id": "PL-104",
+    "query": "채널별 센텔라 토너 가격 비교",
+    "category": "channel_comparison",
+    "tier": 1
+  },
+  {
+    "id": "PL-105",
+    "query": "채널별 클렌저 제품 순위 비교",
+    "category": "channel_comparison",
+    "tier": 1
+  },
+  {
+    "id": "PL-106",
+    "query": "브랜드별 제품 순위 분석",
+    "category": "brand_ranking",
+    "tier": 1
+  },
+  {
+    "id": "PL-107",
+    "query": "SKIN1004 브랜드 전체 순위 평균",
+    "category": "brand_ranking",
+    "tier": 1
+  },
+  {
+    "id": "PL-108",
+    "query": "브랜드 순위 TOP 10",
+    "category": "brand_ranking",
+    "tier": 1
+  },
+  {
+    "id": "PL-109",
+    "query": "브랜드별 등록 제품 수",
+    "category": "brand_ranking",
+    "tier": 1
+  },
+  {
+    "id": "PL-110",
+    "query": "브랜드별 평균 가격 순위",
+    "category": "brand_ranking",
+    "tier": 1
+  },
+  {
+    "id": "PL-111",
+    "query": "SKIN1004 vs 다른 브랜드 순위 비교",
+    "category": "brand_ranking",
+    "tier": 1
+  },
+  {
+    "id": "PL-112",
+    "query": "브랜드별 채널 수",
+    "category": "brand_ranking",
+    "tier": 1
+  },
+  {
+    "id": "PL-113",
+    "query": "브랜드별 할인율 비교",
+    "category": "brand_ranking",
+    "tier": 1
+  },
+  {
+    "id": "PL-114",
+    "query": "브랜드별 최고 순위 제품",
+    "category": "brand_ranking",
+    "tier": 1
+  },
+  {
+    "id": "PL-115",
+    "query": "브랜드별 평균 순위 랭킹",
+    "category": "brand_ranking",
+    "tier": 1
+  },
+  {
+    "id": "PL-116",
+    "query": "SKIN1004 브랜드 채널별 순위 분포",
+    "category": "brand_ranking",
+    "tier": 1
+  },
+  {
+    "id": "PL-117",
+    "query": "브랜드별 가격대 분석",
+    "category": "brand_ranking",
+    "tier": 1
+  },
+  {
+    "id": "PL-118",
+    "query": "브랜드 종류 몇 개야?",
+    "category": "brand_ranking",
+    "tier": 1
+  },
+  {
+    "id": "PL-119",
+    "query": "브랜드별 제품 순위 분포",
+    "category": "brand_ranking",
+    "tier": 1
+  },
+  {
+    "id": "PL-120",
+    "query": "SKIN1004 브랜드 전체 채널 성과",
+    "category": "brand_ranking",
+    "tier": 1
+  },
+  {
+    "id": "PL-121",
+    "query": "가격대별 제품 분포 보여줘",
+    "category": "price_range",
+    "tier": 1
+  },
+  {
+    "id": "PL-122",
+    "query": "0~10달러 제품 수",
+    "category": "price_range",
+    "tier": 1
+  },
+  {
+    "id": "PL-123",
+    "query": "10~20달러 제품 수",
+    "category": "price_range",
+    "tier": 1
+  },
+  {
+    "id": "PL-124",
+    "query": "20~30달러 제품 수",
+    "category": "price_range",
+    "tier": 1
+  },
+  {
+    "id": "PL-125",
+    "query": "30달러 이상 제품 목록",
+    "category": "price_range",
+    "tier": 1
+  },
+  {
+    "id": "PL-126",
+    "query": "5달러 이하 제품 있어?",
+    "category": "price_range",
+    "tier": 1
+  },
+  {
+    "id": "PL-127",
+    "query": "가격대별 브랜드 분포",
+    "category": "price_range",
+    "tier": 1
+  },
+  {
+    "id": "PL-128",
+    "query": "가격대별 채널 분포",
+    "category": "price_range",
+    "tier": 1
+  },
+  {
+    "id": "PL-129",
+    "query": "SKIN1004 가격대 분석",
+    "category": "price_range",
+    "tier": 1
+  },
+  {
+    "id": "PL-130",
+    "query": "채널별 가격대 분포 비교",
+    "category": "price_range",
+    "tier": 1
+  },
+  {
+    "id": "PL-131",
+    "query": "고가 제품 TOP 10",
+    "category": "price_range",
+    "tier": 1
+  },
+  {
+    "id": "PL-132",
+    "query": "저가 제품 TOP 10",
+    "category": "price_range",
+    "tier": 1
+  },
+  {
+    "id": "PL-133",
+    "query": "평균 가격 이상 제품 수",
+    "category": "price_range",
+    "tier": 1
+  },
+  {
+    "id": "PL-134",
+    "query": "평균 가격 이하 제품 수",
+    "category": "price_range",
+    "tier": 1
+  },
+  {
+    "id": "PL-135",
+    "query": "가격 분포 히스토그램",
+    "category": "price_range",
+    "tier": 1
+  },
+  {
+    "id": "PL-136",
+    "query": "할인가 제품 목록 전체",
+    "category": "discount_price",
+    "tier": 1
+  },
+  {
+    "id": "PL-137",
+    "query": "할인가가 있는 제품 수",
+    "category": "discount_price",
+    "tier": 1
+  },
+  {
+    "id": "PL-138",
+    "query": "할인가 제품 채널별 분포",
+    "category": "discount_price",
+    "tier": 1
+  },
+  {
+    "id": "PL-139",
+    "query": "할인가 TOP 10 제품",
+    "category": "discount_price",
+    "tier": 1
+  },
+  {
+    "id": "PL-140",
+    "query": "할인가 최저 제품 목록",
+    "category": "discount_price",
+    "tier": 1
+  },
+  {
+    "id": "PL-141",
+    "query": "할인가 평균 금액",
+    "category": "discount_price",
+    "tier": 1
+  },
+  {
+    "id": "PL-142",
+    "query": "할인가 제품 브랜드별 분석",
+    "category": "discount_price",
+    "tier": 1
+  },
+  {
+    "id": "PL-143",
+    "query": "할인가 vs 정상가 격차 분석",
+    "category": "discount_price",
+    "tier": 1
+  },
+  {
+    "id": "PL-144",
+    "query": "할인가 5달러 이하 제품",
+    "category": "discount_price",
+    "tier": 1
+  },
+  {
+    "id": "PL-145",
+    "query": "할인가 없는 제품 목록",
+    "category": "discount_price",
+    "tier": 1
+  },
+  {
+    "id": "PL-146",
+    "query": "채널별 등록 제품 수",
+    "category": "product_count",
+    "tier": 1
+  },
+  {
+    "id": "PL-147",
+    "query": "제품이 가장 많은 채널",
+    "category": "product_count",
+    "tier": 1
+  },
+  {
+    "id": "PL-148",
+    "query": "제품이 가장 적은 채널",
+    "category": "product_count",
+    "tier": 1
+  },
+  {
+    "id": "PL-149",
+    "query": "채널별 SKIN1004 제품 수",
+    "category": "product_count",
+    "tier": 1
+  },
+  {
+    "id": "PL-150",
+    "query": "전체 등록 제품 수 몇 개야?",
+    "category": "product_count",
+    "tier": 1
+  },
+  {
+    "id": "PL-151",
+    "query": "채널별 브랜드 수",
+    "category": "product_count",
+    "tier": 1
+  },
+  {
+    "id": "PL-152",
+    "query": "SKIN1004 등록된 채널 수",
+    "category": "product_count",
+    "tier": 1
+  },
+  {
+    "id": "PL-153",
+    "query": "채널별 제품 종류 수",
+    "category": "product_count",
+    "tier": 1
+  },
+  {
+    "id": "PL-154",
+    "query": "채널 전체 제품 수 비교",
+    "category": "product_count",
+    "tier": 1
+  },
+  {
+    "id": "PL-155",
+    "query": "브랜드별 채널 등록 현황",
+    "category": "product_count",
+    "tier": 1
+  },
+  {
+    "id": "PL-156",
+    "query": "채널별 브랜드 다양성 분석",
+    "category": "product_count",
+    "tier": 1
+  },
+  {
+    "id": "PL-157",
+    "query": "SKIN1004 제품이 등록된 채널 목록",
+    "category": "product_count",
+    "tier": 1
+  },
+  {
+    "id": "PL-158",
+    "query": "채널별 신규 제품 수",
+    "category": "product_count",
+    "tier": 1
+  },
+  {
+    "id": "PL-159",
+    "query": "채널별 평균 제품 수",
+    "category": "product_count",
+    "tier": 1
+  },
+  {
+    "id": "PL-160",
+    "query": "채널별 제품 등록 비중",
+    "category": "product_count",
+    "tier": 1
+  },
+  {
+    "id": "PL-161",
+    "query": "통화별 가격 분석",
+    "category": "currency",
+    "tier": 1
+  },
+  {
+    "id": "PL-162",
+    "query": "USD 기준 제품 수",
+    "category": "currency",
+    "tier": 1
+  },
+  {
+    "id": "PL-163",
+    "query": "통화 종류 몇 개야?",
+    "category": "currency",
+    "tier": 1
+  },
+  {
+    "id": "PL-164",
+    "query": "통화별 평균 가격",
+    "category": "currency",
+    "tier": 1
+  },
+  {
+    "id": "PL-165",
+    "query": "통화별 제품 수 비교",
+    "category": "currency",
+    "tier": 1
+  },
+  {
+    "id": "PL-166",
+    "query": "THB 기준 제품 가격",
+    "category": "currency",
+    "tier": 1
+  },
+  {
+    "id": "PL-167",
+    "query": "VND 기준 제품 가격",
+    "category": "currency",
+    "tier": 1
+  },
+  {
+    "id": "PL-168",
+    "query": "MYR 기준 제품 가격",
+    "category": "currency",
+    "tier": 1
+  },
+  {
+    "id": "PL-169",
+    "query": "SGD 기준 제품 가격",
+    "category": "currency",
+    "tier": 1
+  },
+  {
+    "id": "PL-170",
+    "query": "PHP 기준 제품 가격",
+    "category": "currency",
+    "tier": 1
+  },
+  {
+    "id": "PL-171",
+    "query": "IDR 기준 제품 가격",
+    "category": "currency",
+    "tier": 1
+  },
+  {
+    "id": "PL-172",
+    "query": "JPY 기준 제품 가격",
+    "category": "currency",
+    "tier": 1
+  },
+  {
+    "id": "PL-173",
+    "query": "통화별 할인율 비교",
+    "category": "currency",
+    "tier": 1
+  },
+  {
+    "id": "PL-174",
+    "query": "통화별 가격 범위 분석",
+    "category": "currency",
+    "tier": 1
+  },
+  {
+    "id": "PL-175",
+    "query": "각 통화 제품 목록",
+    "category": "currency",
+    "tier": 1
+  },
+  {
+    "id": "PL-176",
+    "query": "전체 채널 수 몇 개야?",
+    "category": "channel_meta",
+    "tier": 1
+  },
+  {
+    "id": "PL-177",
+    "query": "채널 목록 보여줘",
+    "category": "channel_meta",
+    "tier": 1
+  },
+  {
+    "id": "PL-178",
+    "query": "브랜드 목록 전체",
+    "category": "channel_meta",
+    "tier": 1
+  },
+  {
+    "id": "PL-179",
+    "query": "제품명 목록 보여줘",
+    "category": "channel_meta",
+    "tier": 1
+  },
+  {
+    "id": "PL-180",
+    "query": "통화 목록 전체",
+    "category": "channel_meta",
+    "tier": 1
+  },
+  {
+    "id": "PL-181",
+    "query": "데이터 전체 건수",
+    "category": "channel_meta",
+    "tier": 1
+  },
+  {
+    "id": "PL-182",
+    "query": "테이블 컬럼 목록 알려줘",
+    "category": "channel_meta",
+    "tier": 1
+  },
+  {
+    "id": "PL-183",
+    "query": "SKIN1004 제품명 목록",
+    "category": "channel_meta",
+    "tier": 1
+  },
+  {
+    "id": "PL-184",
+    "query": "데이터에 어떤 채널이 있어?",
+    "category": "channel_meta",
+    "tier": 1
+  },
+  {
+    "id": "PL-185",
+    "query": "SKIN1004 외 다른 브랜드 있어?",
+    "category": "channel_meta",
+    "tier": 1
+  },
+  {
+    "id": "PL-186",
+    "query": "SKIN1004 센텔라 제품 채널별 현황",
+    "category": "product_detail",
+    "tier": 1
+  },
+  {
+    "id": "PL-187",
+    "query": "SKIN1004 마다가스카르 제품 정보",
+    "category": "product_detail",
+    "tier": 1
+  },
+  {
+    "id": "PL-188",
+    "query": "SKIN1004 토너 제품 정보 전체",
+    "category": "product_detail",
+    "tier": 1
+  },
+  {
+    "id": "PL-189",
+    "query": "SKIN1004 크림 제품 채널별 가격",
+    "category": "product_detail",
+    "tier": 1
+  },
+  {
+    "id": "PL-190",
+    "query": "SKIN1004 세럼 제품 순위",
+    "category": "product_detail",
+    "tier": 1
+  },
+  {
+    "id": "PL-191",
+    "query": "SKIN1004 앰플 제품 정보",
+    "category": "product_detail",
+    "tier": 1
+  },
+  {
+    "id": "PL-192",
+    "query": "SKIN1004 클렌저 제품 채널별 현황",
+    "category": "product_detail",
+    "tier": 1
+  },
+  {
+    "id": "PL-193",
+    "query": "SKIN1004 선크림 가격 비교",
+    "category": "product_detail",
+    "tier": 1
+  },
+  {
+    "id": "PL-194",
+    "query": "SKIN1004 마스크팩 제품 정보",
+    "category": "product_detail",
+    "tier": 1
+  },
+  {
+    "id": "PL-195",
+    "query": "SKIN1004 에센스 제품 순위와 가격",
+    "category": "product_detail",
+    "tier": 1
+  },
+  {
+    "id": "PL-196",
+    "query": "SKIN1004 워터 제품 채널별 정보",
+    "category": "product_detail",
+    "tier": 1
+  },
+  {
+    "id": "PL-197",
+    "query": "SKIN1004 제품명에 'Centella' 포함된 것",
+    "category": "product_detail",
+    "tier": 1
+  },
+  {
+    "id": "PL-198",
+    "query": "SKIN1004 제품명에 'Madagascar' 포함된 것",
+    "category": "product_detail",
+    "tier": 1
+  },
+  {
+    "id": "PL-199",
+    "query": "SKIN1004 제품명에 'Toner' 포함된 것",
+    "category": "product_detail",
+    "tier": 1
+  },
+  {
+    "id": "PL-200",
+    "query": "SKIN1004 제품명에 'Cream' 포함된 것",
+    "category": "product_detail",
+    "tier": 1
+  },
+  {
+    "id": "PL-201",
+    "query": "채널별 순위와 가격 상관관계",
+    "category": "analysis",
+    "tier": 1
+  },
+  {
+    "id": "PL-202",
+    "query": "순위가 높을수록 가격이 낮은지 분석",
+    "category": "analysis",
+    "tier": 1
+  },
+  {
+    "id": "PL-203",
+    "query": "할인율과 순위 상관관계",
+    "category": "analysis",
+    "tier": 1
+  },
+  {
+    "id": "PL-204",
+    "query": "채널별 가격 경쟁력 분석",
+    "category": "analysis",
+    "tier": 1
+  },
+  {
+    "id": "PL-205",
+    "query": "SKIN1004 채널 전략 분석",
+    "category": "analysis",
+    "tier": 1
+  },
+  {
+    "id": "PL-206",
+    "query": "채널별 가격 정책 비교 분석",
+    "category": "analysis",
+    "tier": 1
+  },
+  {
+    "id": "PL-207",
+    "query": "SKIN1004 채널별 포지셔닝 분석",
+    "category": "analysis",
+    "tier": 1
+  },
+  {
+    "id": "PL-208",
+    "query": "채널별 가격 vs 순위 매트릭스",
+    "category": "analysis",
+    "tier": 1
+  },
+  {
+    "id": "PL-209",
+    "query": "SKIN1004 경쟁사 대비 가격 경쟁력",
+    "category": "analysis",
+    "tier": 1
+  },
+  {
+    "id": "PL-210",
+    "query": "채널별 할인 전략 분석",
+    "category": "analysis",
+    "tier": 1
+  },
+  {
+    "id": "PL-211",
+    "query": "채널별 제품 다양성 분석",
+    "category": "analysis",
+    "tier": 1
+  },
+  {
+    "id": "PL-212",
+    "query": "SKIN1004 채널별 브랜드 인지도 순위",
+    "category": "analysis",
+    "tier": 1
+  },
+  {
+    "id": "PL-213",
+    "query": "채널별 SKIN1004 경쟁 포지션",
+    "category": "analysis",
+    "tier": 1
+  },
+  {
+    "id": "PL-214",
+    "query": "가격 대비 순위 효율 분석",
+    "category": "analysis",
+    "tier": 1
+  },
+  {
+    "id": "PL-215",
+    "query": "채널별 SKIN1004 제품 전략 요약",
+    "category": "analysis",
+    "tier": 1
+  },
+  {
+    "id": "PL-216",
+    "query": "채널별 가격 vs 할인가 비교 테이블",
+    "category": "cross",
+    "tier": 1
+  },
+  {
+    "id": "PL-217",
+    "query": "채널별 브랜드별 평균 가격 크로스탭",
+    "category": "cross",
+    "tier": 1
+  },
+  {
+    "id": "PL-218",
+    "query": "채널별 순위대별 제품 분포",
+    "category": "cross",
+    "tier": 1
+  },
+  {
+    "id": "PL-219",
+    "query": "브랜드별 채널별 순위 매트릭스",
+    "category": "cross",
+    "tier": 1
+  },
+  {
+    "id": "PL-220",
+    "query": "통화별 채널별 가격 비교",
+    "category": "cross",
+    "tier": 1
+  },
+  {
+    "id": "PL-221",
+    "query": "채널별 가격대별 제품 수",
+    "category": "cross",
+    "tier": 1
+  },
+  {
+    "id": "PL-222",
+    "query": "브랜드별 통화별 평균 가격",
+    "category": "cross",
+    "tier": 1
+  },
+  {
+    "id": "PL-223",
+    "query": "채널별 SKIN1004 제품 가격 vs 순위",
+    "category": "cross",
+    "tier": 1
+  },
+  {
+    "id": "PL-224",
+    "query": "채널별 할인율별 제품 분포",
+    "category": "cross",
+    "tier": 1
+  },
+  {
+    "id": "PL-225",
+    "query": "브랜드별 채널별 제품 수 매트릭스",
+    "category": "cross",
+    "tier": 1
+  },
+  {
+    "id": "PL-226",
+    "query": "순위 1~10위 제품의 가격 분석",
+    "category": "rank_analysis",
+    "tier": 1
+  },
+  {
+    "id": "PL-227",
+    "query": "순위 11~50위 제품 목록",
+    "category": "rank_analysis",
+    "tier": 1
+  },
+  {
+    "id": "PL-228",
+    "query": "순위 100위 밖 제품 수",
+    "category": "rank_analysis",
+    "tier": 1
+  },
+  {
+    "id": "PL-229",
+    "query": "순위별 가격 분포",
+    "category": "rank_analysis",
+    "tier": 1
+  },
+  {
+    "id": "PL-230",
+    "query": "순위 상위 10% 제품 특성",
+    "category": "rank_analysis",
+    "tier": 1
+  },
+  {
+    "id": "PL-231",
+    "query": "순위 하위 10% 제품 특성",
+    "category": "rank_analysis",
+    "tier": 1
+  },
+  {
+    "id": "PL-232",
+    "query": "SKIN1004 순위 분포 분석",
+    "category": "rank_analysis",
+    "tier": 1
+  },
+  {
+    "id": "PL-233",
+    "query": "순위별 브랜드 분포",
+    "category": "rank_analysis",
+    "tier": 1
+  },
+  {
+    "id": "PL-234",
+    "query": "순위 개선 필요한 SKIN1004 제품",
+    "category": "rank_analysis",
+    "tier": 1
+  },
+  {
+    "id": "PL-235",
+    "query": "순위 TOP 5 제품의 공통점",
+    "category": "rank_analysis",
+    "tier": 1
+  },
+  {
+    "id": "PL-236",
+    "query": "SKIN1004 센텔라 라인 채널별 현황",
+    "category": "product_line",
+    "tier": 1
+  },
+  {
+    "id": "PL-237",
+    "query": "SKIN1004 마다가스카르 라인 전체 정보",
+    "category": "product_line",
+    "tier": 1
+  },
+  {
+    "id": "PL-238",
+    "query": "SKIN1004 스킨케어 라인 가격 비교",
+    "category": "product_line",
+    "tier": 1
+  },
+  {
+    "id": "PL-239",
+    "query": "SKIN1004 제품 라인별 순위 분석",
+    "category": "product_line",
+    "tier": 1
+  },
+  {
+    "id": "PL-240",
+    "query": "SKIN1004 제품 카테고리별 채널 분포",
+    "category": "product_line",
+    "tier": 1
+  },
+  {
+    "id": "PL-241",
+    "query": "SKIN1004 전체 제품 목록과 가격",
+    "category": "product_line",
+    "tier": 1
+  },
+  {
+    "id": "PL-242",
+    "query": "SKIN1004 제품 라인별 평균 가격",
+    "category": "product_line",
+    "tier": 1
+  },
+  {
+    "id": "PL-243",
+    "query": "SKIN1004 제품 라인별 할인율",
+    "category": "product_line",
+    "tier": 1
+  },
+  {
+    "id": "PL-244",
+    "query": "SKIN1004 제품 라인별 채널 커버리지",
+    "category": "product_line",
+    "tier": 1
+  },
+  {
+    "id": "PL-245",
+    "query": "SKIN1004 제품 라인별 순위 평균",
+    "category": "product_line",
+    "tier": 1
+  },
+  {
+    "id": "PL-246",
+    "query": "전체 데이터 요약 보여줘",
+    "category": "summary",
+    "tier": 1
+  },
+  {
+    "id": "PL-247",
+    "query": "채널별 종합 현황 요약",
+    "category": "summary",
+    "tier": 1
+  },
+  {
+    "id": "PL-248",
+    "query": "SKIN1004 채널 성과 요약 리포트",
+    "category": "summary",
+    "tier": 1
+  },
+  {
+    "id": "PL-249",
+    "query": "브랜드별 종합 순위 요약",
+    "category": "summary",
+    "tier": 1
+  },
+  {
+    "id": "PL-250",
+    "query": "채널별 가격 종합 분석",
+    "category": "summary",
+    "tier": 1
+  },
+  {
+    "id": "PL-251",
+    "query": "SKIN1004 전체 채널 현황 한눈에",
+    "category": "summary",
+    "tier": 1
+  },
+  {
+    "id": "PL-252",
+    "query": "제품 데이터 전체 현황 요약",
+    "category": "summary",
+    "tier": 1
+  },
+  {
+    "id": "PL-253",
+    "query": "채널별 브랜드 현황 종합",
+    "category": "summary",
+    "tier": 1
+  },
+  {
+    "id": "PL-254",
+    "query": "SKIN1004 글로벌 채널 성과",
+    "category": "summary",
+    "tier": 1
+  },
+  {
+    "id": "PL-255",
+    "query": "전체 데이터 인사이트 요약",
+    "category": "summary",
+    "tier": 1
+  },
+  {
+    "id": "PL-256",
+    "query": "채널별 가격 바차트",
+    "category": "visualization",
+    "tier": 1
+  },
+  {
+    "id": "PL-257",
+    "query": "브랜드별 순위 차트",
+    "category": "visualization",
+    "tier": 1
+  },
+  {
+    "id": "PL-258",
+    "query": "채널별 제품 수 파이차트",
+    "category": "visualization",
+    "tier": 1
+  },
+  {
+    "id": "PL-259",
+    "query": "가격 분포 히스토그램 그려줘",
+    "category": "visualization",
+    "tier": 1
+  },
+  {
+    "id": "PL-260",
+    "query": "채널별 할인율 비교 차트",
+    "category": "visualization",
+    "tier": 1
+  },
+  {
+    "id": "PL-261",
+    "query": "순위 vs 가격 산점도",
+    "category": "visualization",
+    "tier": 1
+  },
+  {
+    "id": "PL-262",
+    "query": "채널별 SKIN1004 가격 비교 그래프",
+    "category": "visualization",
+    "tier": 1
+  },
+  {
+    "id": "PL-263",
+    "query": "브랜드별 평균 가격 차트",
+    "category": "visualization",
+    "tier": 1
+  },
+  {
+    "id": "PL-264",
+    "query": "채널별 순위 분포 박스플롯",
+    "category": "visualization",
+    "tier": 1
+  },
+  {
+    "id": "PL-265",
+    "query": "통화별 제품 수 차트",
+    "category": "visualization",
+    "tier": 1
+  },
+  {
+    "id": "PL-266",
+    "query": "SKIN1004 가격이 가장 비싼 채널에서 순위가 어떻게 돼?",
+    "category": "complex",
+    "tier": 1
+  },
+  {
+    "id": "PL-267",
+    "query": "할인율이 높은 채널에서 SKIN1004 순위가 더 좋은지 분석",
+    "category": "complex",
+    "tier": 1
+  },
+  {
+    "id": "PL-268",
+    "query": "채널별 SKIN1004 포지셔닝 맵",
+    "category": "complex",
+    "tier": 1
+  },
+  {
+    "id": "PL-269",
+    "query": "SKIN1004 채널 전략 추천",
+    "category": "complex",
+    "tier": 1
+  },
+  {
+    "id": "PL-270",
+    "query": "채널별 SKIN1004 가격 최적화 분석",
+    "category": "complex",
+    "tier": 1
+  },
+  {
+    "id": "PL-271",
+    "query": "SKIN1004 순위 개선을 위한 채널별 제안",
+    "category": "complex",
+    "tier": 1
+  },
+  {
+    "id": "PL-272",
+    "query": "채널별 경쟁 강도 분석",
+    "category": "complex",
+    "tier": 1
+  },
+  {
+    "id": "PL-273",
+    "query": "SKIN1004 채널별 가격 경쟁력 지수",
+    "category": "complex",
+    "tier": 1
+  },
+  {
+    "id": "PL-274",
+    "query": "채널별 SKIN1004 제품 포트폴리오 분석",
+    "category": "complex",
+    "tier": 1
+  },
+  {
+    "id": "PL-275",
+    "query": "SKIN1004 멀티채널 전략 종합 분석",
+    "category": "complex",
+    "tier": 1
+  },
+  {
+    "id": "PL-276",
+    "query": "채널별 가격 표준편차",
+    "category": "statistics",
+    "tier": 1
+  },
+  {
+    "id": "PL-277",
+    "query": "브랜드별 순위 중앙값",
+    "category": "statistics",
+    "tier": 1
+  },
+  {
+    "id": "PL-278",
+    "query": "채널별 가격 최솟값 최댓값",
+    "category": "statistics",
+    "tier": 1
+  },
+  {
+    "id": "PL-279",
+    "query": "순위 평균과 중앙값 차이",
+    "category": "statistics",
+    "tier": 1
+  },
+  {
+    "id": "PL-280",
+    "query": "채널별 가격 분산 분석",
+    "category": "statistics",
+    "tier": 1
+  },
+  {
+    "id": "PL-281",
+    "query": "브랜드별 순위 표준편차",
+    "category": "statistics",
+    "tier": 1
+  },
+  {
+    "id": "PL-282",
+    "query": "가격 4분위수 분석",
+    "category": "statistics",
+    "tier": 1
+  },
+  {
+    "id": "PL-283",
+    "query": "순위 4분위수 분석",
+    "category": "statistics",
+    "tier": 1
+  },
+  {
+    "id": "PL-284",
+    "query": "채널별 통계 요약 테이블",
+    "category": "statistics",
+    "tier": 1
+  },
+  {
+    "id": "PL-285",
+    "query": "SKIN1004 가격 통계 분석",
+    "category": "statistics",
+    "tier": 1
+  },
+  {
+    "id": "PL-286",
+    "query": "가격이 null인 제품 있어?",
+    "category": "data_quality",
+    "tier": 1
+  },
+  {
+    "id": "PL-287",
+    "query": "할인가가 null인 제품 수",
+    "category": "data_quality",
+    "tier": 1
+  },
+  {
+    "id": "PL-288",
+    "query": "순위가 없는 제품 있어?",
+    "category": "data_quality",
+    "tier": 1
+  },
+  {
+    "id": "PL-289",
+    "query": "브랜드명이 비어있는 데이터",
+    "category": "data_quality",
+    "tier": 1
+  },
+  {
+    "id": "PL-290",
+    "query": "중복 제품 데이터 확인",
+    "category": "data_quality",
+    "tier": 1
+  },
+  {
+    "id": "PL-291",
+    "query": "채널별 데이터 건수",
+    "category": "data_quality",
+    "tier": 1
+  },
+  {
+    "id": "PL-292",
+    "query": "데이터 품질 검증 리포트",
+    "category": "data_quality",
+    "tier": 1
+  },
+  {
+    "id": "PL-293",
+    "query": "가격이 0인 제품 있어?",
+    "category": "data_quality",
+    "tier": 1
+  },
+  {
+    "id": "PL-294",
+    "query": "순위가 0인 데이터 확인",
+    "category": "data_quality",
+    "tier": 1
+  },
+  {
+    "id": "PL-295",
+    "query": "할인가가 정상가보다 높은 이상 데이터",
+    "category": "data_quality",
+    "tier": 1
+  },
+  {
+    "id": "PL-296",
+    "query": "플랫폼 데이터 전체 리포트",
+    "category": "report",
+    "tier": 1
+  },
+  {
+    "id": "PL-297",
+    "query": "채널별 가격 경쟁력 보고서",
+    "category": "report",
+    "tier": 1
+  },
+  {
+    "id": "PL-298",
+    "query": "SKIN1004 채널 분석 보고서",
+    "category": "report",
+    "tier": 1
+  },
+  {
+    "id": "PL-299",
+    "query": "브랜드 포지셔닝 분석 리포트",
+    "category": "report",
+    "tier": 1
+  },
+  {
+    "id": "PL-300",
+    "query": "채널별 종합 성과 평가 보고서",
+    "category": "report",
+    "tier": 1
+  },
+  {
+    "id": "PL-301",
+    "query": "정확한 Lazada vs Shopee SKIN1004 순위 비교",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-302",
+    "query": "채널별 제품 순서 1위 목록 확인 부탁드립니다",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-303",
+    "query": "간단하게 순위별 브랜드 분포 알려주세요",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-304",
+    "query": "SKIN1004 마스크팩 제품 정보 좀",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-305",
+    "query": "채널별 SKIN1004 평균 제품 랭킹 대비 빨리",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-306",
+    "query": "빠르게 채널별 SKIN1004 가격 중앙값",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-307",
+    "query": "혹시 채널별 신규 제품 수 좀",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-308",
+    "query": "확인 좀 해줘 할인율이 가장 높은 채널 알려주시면 감사하겠습니다",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-309",
+    "query": "순위 1위 제품들 보여줄래 알려주세요",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-310",
+    "query": "브랜드별 평균 TOP 랭킹 빨리",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-311",
+    "query": "Shopee vs Amazon SKIN1004 가격 대조",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-312",
+    "query": "제품명 목록 보여주세요",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-313",
+    "query": "빠르게 채널별 SKIN1004 제품 랭킹",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-314",
+    "query": "확인 좀 해줘 채널별 할인가와 정상가 차이 보여줘",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-315",
+    "query": "채널별 상위대별 제품 분포",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-316",
+    "query": "채널별 가격 표준편차 확인 가능한가요?",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-317",
+    "query": "채널별 가격 vs 할인가 비교 테이블 얼마임?",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-318",
+    "query": "채널별 클렌저 제품 상위 비교 확인해줘",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-319",
+    "query": "채널별 할인가 최솟값 알고 싶어",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-320",
+    "query": "SKIN1004 가장 저렴한 채널 부탁 알려주시면 감사하겠습니다",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-321",
+    "query": "우리 회사 SKIN1004 가장 비싼 채널 부탁",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-322",
+    "query": "SKIN1004 앰플 채널별 가격 대비",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-323",
+    "query": "SKIN1004 TOP 개선을 위한 채널별 제안",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-324",
+    "query": "우리 회사 할인 적용된 SKIN1004 제품 수 알려주시면 감사하겠습니다",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-325",
+    "query": "랭킹별 브랜드 분포",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-326",
+    "query": "채널별 SKIN1004 포지셔닝 맵 알려주세요",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-327",
+    "query": "브랜드별 할인율 비교 보여줘",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-328",
+    "query": "잠깐, 채널별 가격 vs 순위 매트릭스 알려주세요",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-329",
+    "query": "궁금한데 SKIN1004 센텔라 제품 채널별 현황 알려주세요",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-330",
+    "query": "참고로 채널별 평균 제품 수 확인 가능한가요?",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-331",
+    "query": "잠깐, 채널별 SKIN1004 평균 제품 순위 비교 궁금해?",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-332",
+    "query": "브랜드별 상위 차트 어떻게 되나요?",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-333",
+    "query": "채널별 제품 수 파이차트 어떻게 되나요?",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-334",
+    "query": "빠르게 채널별 SKIN1004 제품 수 빨리",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-335",
+    "query": "SKIN1004 제품 할인가 범위 확인 가능한가요?",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-336",
+    "query": "채널별 SKIN1004 포지셔닝 맵 좀 알려줘",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-337",
+    "query": "확인 좀 해줘 채널별 가격대별 제품 수",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-338",
+    "query": "순위 1~3위 제품 리스트 좀",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-339",
+    "query": "브랜드별 순위 표준편차 몇이야?",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-340",
+    "query": "채널별 SKIN1004 가격 편차 알려주시면 감사하겠습니다",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-341",
+    "query": "잠깐, SKIN1004 제품 라인별 할인율",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-342",
+    "query": "채널별 가격 정책 대비 파악해줘",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-343",
+    "query": "참고로 가격 분포 히스토그램",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-344",
+    "query": "랭킹가 없는 제품 있어 알려주시면 감사하겠습니다",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-345",
+    "query": "요즘 SKIN1004 10달러 이하 제품 채널별",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-346",
+    "query": "잠깐, 채널별 가격 경쟁력 분석 확인해줘 확인 부탁드립니다",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-347",
+    "query": "할인가 vs 정상가 격차 분석 어떻게 되나요?",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-348",
+    "query": "SKIN1004 에센스 제품 TOP와 가격 알려주세요",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-349",
+    "query": "채널별 브랜드별 평균 가격 크로스탭 빨리 알려주시면 감사하겠습니다",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-350",
+    "query": "궁금한데 SKIN1004 채널 전략 추천",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-351",
+    "query": "잠깐, 통화별 채널별 가격 대조",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-352",
+    "query": "채널별 할인률별 제품 분포",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-353",
+    "query": "잠깐, 채널별 가격 경쟁력 보고서 보여줘",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-354",
+    "query": "순위 1위 제품들 보여줄래?",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-355",
+    "query": "간단하게 채널별 할인가 제품 비중",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-356",
+    "query": "참고로 SKIN1004 마스크팩 제품 정보 알려주세요",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-357",
+    "query": "궁금한데 SKIN1004 세럼 제품 순위",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-358",
+    "query": "순서 개선 필요한 SKIN1004 제품",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-359",
+    "query": "정확한 순위 TOP 5 제품의 공통점 부탁드려요",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-360",
+    "query": "채널별 등록 제품 수 알려주세요",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-361",
+    "query": "할인률이 가장 낮은 채널",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-362",
+    "query": "상위 평균과 중앙값 차이",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-363",
+    "query": "브랜드별 등록 제품 수 알려주세요",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-364",
+    "query": "확인 좀 해줘 통화 목록 전체 확인해줘",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-365",
+    "query": "브랜드별 평균 랭킹 랭킹",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-366",
+    "query": "우리 회사 채널별 SKIN1004 경쟁 포지션",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-367",
+    "query": "통화 종류 몇 개야 확인 부탁드립니다",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-368",
+    "query": "상위가 높을수록 가격이 낮은지 살펴봐줘",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-369",
+    "query": "브랜드별 제품 순서 분포",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-370",
+    "query": "평균 가격 이하 제품 수 알려주세요",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-371",
+    "query": "정확한 채널별 세일률별 제품 분포 확인 부탁드립니다",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-372",
+    "query": "채널별 최대 할인률 제품",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-373",
+    "query": "SKIN1004 멀티채널 전략 종합 분석 알려주세요",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-374",
+    "query": "요즘 할인가 평균 금액 알려주세요",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-375",
+    "query": "빠르게 할인 적용된 SKIN1004 제품 수",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-376",
+    "query": "혹시 SKIN1004 브랜드 전체 순위 평균 알려주시면 감사하겠습니다",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-377",
+    "query": "통화별 가격 분석해줘",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-378",
+    "query": "요즘 채널별 할인 미적용 제품 수",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-379",
+    "query": "고가 제품 TOP 10 어떻게 되나요?",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-380",
+    "query": "요즘 SKIN1004 vs 다른 브렌드 순서 비교",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-381",
+    "query": "제품명 목록 보여줘 확인 부탁드립니다",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-382",
+    "query": "SKIN1004 가격대 살펴봐줘 좀 봐줘",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-383",
+    "query": "채널별 가격 종합 분석 알려주세요",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-384",
+    "query": "요즘 SKIN1004 제품명에 'Centella' 포함된 것",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-385",
+    "query": "채널별 SKIN1004 가격 견줘봐 그래프",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-386",
+    "query": "데이터 전체 건수 확인해줘",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-387",
+    "query": "채널별 동일 제품 가격 대조 알려주세요",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-388",
+    "query": "정확한 SGD 기준 제품 가격 알려주시면 감사하겠습니다",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-389",
+    "query": "궁금한데 브랜드별 등록 제품 수",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-390",
+    "query": "우리 회사 SKIN1004 센텔라 토너 채널별 가격",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-391",
+    "query": "궁금한데 채널별 가격 바차트 좀 알려줘",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-392",
+    "query": "우리 회사 SKIN1004 제품명에 'Centella' 포함된 것",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-393",
+    "query": "우리 회사 SKIN1004 제품 순위 1위인 채널 빨리",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-394",
+    "query": "채널별 SKIN1004 경쟁 포지션 알 수 있을까요?",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-395",
+    "query": "채널별 브랜드 실태 종합",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-396",
+    "query": "할인률이 가장 높은 채널",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-397",
+    "query": "잠깐, 채널별 할인률별 제품 분포 알려주세요",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-398",
+    "query": "평균 가격 이상 제품 수 좀 좀 알려줘",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-399",
+    "query": "SKIN1004 에센스 제품 순서와 가격",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-400",
+    "query": "채널별 종합 성과 평가 보고서 알려주세요",
+    "category": "platform",
+    "tier": 2
+  },
+  {
+    "id": "PL-401",
+    "query": "혹시 랭킹 1~3위 제품 리스트 좀",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-402",
+    "query": "SKIN1004 제품 상위 평균",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-403",
+    "query": "SKIN1004 10달러 이하 제품 채널별 얼마임?",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-404",
+    "query": "혹시 채널별 신규 제품 수 좀 정리해줘",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-405",
+    "query": "SKIN1004 vs 다른 브랜드 랭킹 비교",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-406",
+    "query": "간단하게 SKIN1004 제품 라인별 순위 평균 알고 싶어",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-407",
+    "query": "채널별 제품 순서 1위 목록 확인 부탁드립니다 궁금해",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-408",
+    "query": "채널별 센텔라 토너 가격 비교 부탁",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-409",
+    "query": "잠깐, 제품명 목록 보여주세요",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-410",
+    "query": "SKIN1004 마다가스카르 크림 채널별 가격 얼마임?",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-411",
+    "query": "SKIN1004 제품 평균 가격 얼마야 확인 부탁드립니다",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-412",
+    "query": "우리 회사 Shopee vs Amazon SKIN1004 가격 대조",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-413",
+    "query": "채널별 클렌저 제품 상위 비교 확인해줘 확인해줘",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-414",
+    "query": "SKIN1004 가장 저렴한 채널 부탁 알려주시면 감사하겠습니다 어때?",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-415",
+    "query": "잠깐, SKIN1004 제품 라인별 세일률 알려주세요",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-416",
+    "query": "요즘 채널별 제품 등록 비중 좀",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-417",
+    "query": "SKIN1004 브랜드 전체 랭킹 평균",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-418",
+    "query": "순위별 브랜드 분포 어때?",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-419",
+    "query": "SKIN1004 순위 분포 분석 좀 알려줘",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-420",
+    "query": "우리 회사 가격이 null인 제품 있어?",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-421",
+    "query": "순서 1~3위 제품 리스트 좀 알려주시면 감사하겠습니다",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-422",
+    "query": "SKIN1004 채널 성과 요약 리포트 좀",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-423",
+    "query": "궁금한데 가격이 null인 제품 있어? 확인해줘",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-424",
+    "query": "브랜드별 제품 순서 분석 알려주세요",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-425",
+    "query": "빠르게 가격 분포 히스토그램 그려줘",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-426",
+    "query": "궁금한데 순위 상위 제품들의 가격 분석 부탁드려요",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-427",
+    "query": "SKIN1004 마다가스카르 제품 정보 부탁드려요",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-428",
+    "query": "SKIN1004 제품 카테고리별 채널 분포 좀 봐줘",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-429",
+    "query": "채널별 브랜드별 평균 가격 크로스탭 알려줄래?",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-430",
+    "query": "SKIN1004 채널 전략 분석 확인 부탁드립니다",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-431",
+    "query": "할인가 vs 정상가 격차 살펴봐줘 어떻게 되나요?",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-432",
+    "query": "SKIN1004 TOP 개선을 위한 채널별 제안 정리해줘",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-433",
+    "query": "브랜드별 평균 TOP 랭킹 빨리 알려주세요",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-434",
+    "query": "SKIN1004 순위 분포 분석 확인 가능한가요?",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-435",
+    "query": "채널별 가격 표준편차 확인 가능한가요? 알고 싶어 확인 부탁드립니다",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-436",
+    "query": "정확한 채널별 가격 종합 분석",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-437",
+    "query": "요즘 데이터 전체 건수",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-438",
+    "query": "SKIN1004 클렌저 채널별 가격 비교 빨리",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-439",
+    "query": "정확한 각 통화 제품 목록 부탁",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-440",
+    "query": "브렌드별 상위 차트 어떻게 되나요?",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-441",
+    "query": "빠르게 SKIN1004 가장 저렴한 채널 부탁 알려주시면 감사하겠습니다",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-442",
+    "query": "확인 좀 해줘 채널별 할인가와 정상가 차이 보여줘 확인 부탁드립니다",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-443",
+    "query": "플랫폼 데이터 전체 리포트 정리해줘 알 수 있을까요?",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-444",
+    "query": "SKIN1004 전체 채널 현황 한눈에 알려주세요",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-445",
+    "query": "SKIN1004 글로벌 채널 성과 알 수 있을까요?",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-446",
+    "query": "요즘 채널별 가격 표준편차 확인 가능한가요",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-447",
+    "query": "순위별 브랜드 분포 보여줘",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-448",
+    "query": "우리 회사 할인 적용된 SKIN1004 제품 수 알려주시면 감사하겠습니다 좀 알려줘",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-449",
+    "query": "혹시 랭킹별 브랜드 분포",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-450",
+    "query": "확인 좀 해줘 채널별 할인가와 정상가 차이 보여줄 수 있어?",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-451",
+    "query": "SKIN1004 클렌저 채널별 가격 비교 알 수 있을까요?",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-452",
+    "query": "혹시 데이터 전체 건수",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-453",
+    "query": "플랫폼 데이터 전체 리포트 확인 가능한가요?",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-454",
+    "query": "빠르게 SKIN1004 제품 카테고리별 채널 분포",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-455",
+    "query": "빠르게 채널별 SKIN1004 가격 중앙값 알려주세요",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-456",
+    "query": "요즘 SKIN1004 제품명에 'Madagascar' 포함된 것 어떻게 되나요?",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-457",
+    "query": "빠르게 브랜드별 평균 가격 차트",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-458",
+    "query": "간단하게 SKIN1004 TOP 개선을 위한 채널별 제안 확인 가능한가요?",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-459",
+    "query": "SKIN1004 순위 분포 살펴봐줘",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-460",
+    "query": "순서 1~3위 제품 리스트 알려주세요",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-461",
+    "query": "SKIN1004 가장 저렴한 채널 부탁 알려주시면 감사하겠습니다 보여줘",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-462",
+    "query": "잠깐, 빠르게 채널별 SKIN1004 제품 수 빨리",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-463",
+    "query": "통화별 제품 수 대조 알려주세요",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-464",
+    "query": "SKIN1004 TOP 개선을 위한 채널별 제안 알려주세요",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-465",
+    "query": "우리 회사 SKIN1004 마스크팩 제품 정보 좀 보여줘",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-466",
+    "query": "잠깐, 채널별 상위대별 제품 분포",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-467",
+    "query": "참고로 할인률이 가장 낮은 채널",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-468",
+    "query": "빠르게 요즘 SKIN1004 10달러 이하 제품 채널별 정리해줘 부탁드려요",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-469",
+    "query": "브랜드별 제품 순위 분석해줘",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-470",
+    "query": "정확한 할인가 제품 목록 전체 좀",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-471",
+    "query": "우리 회사 참고로 가격 분포 히스토그램 부탁 어때?",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-472",
+    "query": "궁금한데 잠깐, 채널별 가격 vs 순위 매트릭스 알려주세요",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-473",
+    "query": "궁금한데 SKIN1004 제품 할인가 범위 확인 가능한가요?",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-474",
+    "query": "SKIN1004 채널 전략 분석 알 수 있을까요?",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-475",
+    "query": "궁금한데 빠르게 채널별 SKIN1004 제품 수 빨리?",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-476",
+    "query": "잠깐, SKIN1004 제품 라인별 할인율 부탁 좀 알려줘",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-477",
+    "query": "요즘 SKIN1004 제품명에 'Madagascar' 포함된 것 알고 싶어",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-478",
+    "query": "우리 회사 순위 1위 제품들 보여줄래 알려주세요",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-479",
+    "query": "통화별 제품 수 견줘봐",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-480",
+    "query": "채널별 브랜드별 평균 가격 크로스탭 궁금해",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-481",
+    "query": "정확한 플랫폼 데이터 전체 리포트 좀",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-482",
+    "query": "혹시 브랜드별 평균 가격 차트",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-483",
+    "query": "참고로 가격 분포 히스토그램 부탁드려요",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-484",
+    "query": "우리 회사 참고로 가격 분포 히스토그램 궁금해",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-485",
+    "query": "SKIN1004 10달러 이하 제품 채널별 알려주세요",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-486",
+    "query": "궁금한데 SKIN1004 센텔라 제품 채널별 실태 알려주세요 확인 가능한가요?",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-487",
+    "query": "SKIN1004 마다가스카르 제품 정보 알려주세요",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-488",
+    "query": "브렌드별 평균 TOP 랭킹 빨리 알려주세요",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-489",
+    "query": "상위별 브랜드 분포",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-490",
+    "query": "요즘 30달러 이상 제품 목록 알려주세요",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-491",
+    "query": "간단하게 빠르게 채널별 SKIN1004 제품 수 빨리",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-492",
+    "query": "우리 회사 통화별 제품 수 비교",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-493",
+    "query": "잠깐, 채널별 centella 토너 가격 견줘봐",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-494",
+    "query": "잠깐, SKIN1004 브랜드 채널별 순위 분포",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-495",
+    "query": "빠르게 채널별 SKIN1004 제품 수 빨리 얼마임?",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-496",
+    "query": "간단하게 가격 분포 히스토그램 그려줘",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-497",
+    "query": "요즘 SKIN1004 10달러 이하 제품 채널별 어떻게 되나요?",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-498",
+    "query": "SKIN1004 제품 할인가 범위 확인 가능한가요",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-499",
+    "query": "채널별 클렌저 제품 상위 비교 확인해줘 알 수 있을까요?",
+    "category": "platform",
+    "tier": 3
+  },
+  {
+    "id": "PL-500",
+    "query": "SKIN1004 브랜드 전체 TOP 평균 알려주시면 감사하겠습니다",
+    "category": "platform",
+    "tier": 3
+  }
+]

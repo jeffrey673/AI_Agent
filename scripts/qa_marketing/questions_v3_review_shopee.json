@@ -1,0 +1,3002 @@
+[
+  {
+    "id": "RS-001",
+    "query": "쇼피 제품별 리뷰 수 알려줘",
+    "category": "review_count",
+    "tier": 1
+  },
+  {
+    "id": "RS-002",
+    "query": "Shopee 리뷰 가장 많은 제품은?",
+    "category": "top_reviewed",
+    "tier": 1
+  },
+  {
+    "id": "RS-003",
+    "query": "쇼피 최근 리뷰 보여줘",
+    "category": "recent_reviews",
+    "tier": 1
+  },
+  {
+    "id": "RS-004",
+    "query": "Shopee Madagascar Centella Ampoule 리뷰 수",
+    "category": "product_review",
+    "tier": 1
+  },
+  {
+    "id": "RS-005",
+    "query": "쇼피 SKIN1004 전체 리뷰 수",
+    "category": "total_count",
+    "tier": 1
+  },
+  {
+    "id": "RS-006",
+    "query": "쇼피 월별 리뷰 수 추이 알려줘",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "RS-007",
+    "query": "Shopee 최근 10건 리뷰",
+    "category": "recent_n",
+    "tier": 1
+  },
+  {
+    "id": "RS-008",
+    "query": "쇼피 2025년 1월 리뷰",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RS-009",
+    "query": "Shopee Centella Ampoule 최신 리뷰 내용",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RS-010",
+    "query": "쇼피 브랜드별 리뷰 수 비교",
+    "category": "brand_review",
+    "tier": 1
+  },
+  {
+    "id": "RS-011",
+    "query": "쇼피에서 Tone Brightening Capsule Serum 리뷰 몇 개야?",
+    "category": "product_review",
+    "tier": 1
+  },
+  {
+    "id": "RS-012",
+    "query": "Shopee 리뷰 최근 30일 추이",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "RS-013",
+    "query": "쇼피 Centella Soothing Cream 리뷰 보여줘",
+    "category": "product_review",
+    "tier": 1
+  },
+  {
+    "id": "RS-014",
+    "query": "Shopee에서 가장 최근에 등록된 리뷰는?",
+    "category": "recent_reviews",
+    "tier": 1
+  },
+  {
+    "id": "RS-015",
+    "query": "쇼피 리뷰 수 월별 변화 차트",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "RS-016",
+    "query": "Shopee SKIN1004 리뷰 총 몇 건이야?",
+    "category": "total_count",
+    "tier": 1
+  },
+  {
+    "id": "RS-017",
+    "query": "쇼피 Centella Cleansing Oil 리뷰 수",
+    "category": "product_review",
+    "tier": 1
+  },
+  {
+    "id": "RS-018",
+    "query": "Shopee 최근 5건 리뷰 내용 보여줘",
+    "category": "recent_n",
+    "tier": 1
+  },
+  {
+    "id": "RS-019",
+    "query": "쇼피 2025년 리뷰 수 총합",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RS-020",
+    "query": "Shopee 제품별 리뷰 순위",
+    "category": "review_count",
+    "tier": 1
+  },
+  {
+    "id": "RS-021",
+    "query": "쇼피 리뷰 가장 적은 제품은?",
+    "category": "review_count",
+    "tier": 1
+  },
+  {
+    "id": "RS-022",
+    "query": "Shopee 2024년 12월 리뷰 보여줘",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RS-023",
+    "query": "쇼피 최근 20건 리뷰 조회",
+    "category": "recent_n",
+    "tier": 1
+  },
+  {
+    "id": "RS-024",
+    "query": "Shopee Madagascar Centella Ampoule 최신 리뷰",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RS-025",
+    "query": "쇼피 채널별 리뷰 수",
+    "category": "review_count",
+    "tier": 1
+  },
+  {
+    "id": "RS-026",
+    "query": "Shopee 2025년 2월 리뷰 몇 건이야?",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RS-027",
+    "query": "쇼피 리뷰 데이터 전체 건수 알려줘",
+    "category": "total_count",
+    "tier": 1
+  },
+  {
+    "id": "RS-028",
+    "query": "Shopee Centella Ampoule 리뷰 월별 추이",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "RS-029",
+    "query": "쇼피에서 리뷰 최근 50건",
+    "category": "recent_n",
+    "tier": 1
+  },
+  {
+    "id": "RS-030",
+    "query": "Shopee 리뷰 제품명별 분류",
+    "category": "review_count",
+    "tier": 1
+  },
+  {
+    "id": "RS-031",
+    "query": "쇼피 Tone Brightening Capsule Serum 최신 리뷰 내용",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RS-032",
+    "query": "Shopee 전체 리뷰 중 최근 7일 리뷰",
+    "category": "recent_reviews",
+    "tier": 1
+  },
+  {
+    "id": "RS-033",
+    "query": "쇼피 리뷰 수집 날짜 기준 최신순 정렬",
+    "category": "recent_reviews",
+    "tier": 1
+  },
+  {
+    "id": "RS-034",
+    "query": "Shopee 2025년 3월 리뷰 있어?",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RS-035",
+    "query": "쇼피 리뷰 브랜드 SKIN1004만 필터링",
+    "category": "brand_review",
+    "tier": 1
+  },
+  {
+    "id": "RS-036",
+    "query": "Shopee 최근 100건 리뷰 데이터",
+    "category": "recent_n",
+    "tier": 1
+  },
+  {
+    "id": "RS-037",
+    "query": "쇼피 Centella Soothing Cream 리뷰 내용 보여줘",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RS-038",
+    "query": "Shopee 월별 리뷰 건수 통계",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "RS-039",
+    "query": "쇼피 리뷰 제품별 비율",
+    "category": "review_count",
+    "tier": 1
+  },
+  {
+    "id": "RS-040",
+    "query": "Shopee 2024년 리뷰 수",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RS-041",
+    "query": "쇼피 리뷰 원문과 한국어 번역 같이 보여줘",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RS-042",
+    "query": "Shopee Centella Cleansing Oil 최신 리뷰",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RS-043",
+    "query": "쇼피 리뷰 최근 한 달 몇 건?",
+    "category": "recent_reviews",
+    "tier": 1
+  },
+  {
+    "id": "RS-044",
+    "query": "Shopee 제품별 리뷰 수 TOP 5",
+    "category": "top_reviewed",
+    "tier": 1
+  },
+  {
+    "id": "RS-045",
+    "query": "쇼피 리뷰 날짜별 분포",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "RS-046",
+    "query": "Shopee 2025년 1분기 리뷰 수",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RS-047",
+    "query": "쇼피 최근 리뷰 3건만 보여줘",
+    "category": "recent_n",
+    "tier": 1
+  },
+  {
+    "id": "RS-048",
+    "query": "Shopee Madagascar Centella Ampoule 리뷰 몇 개 있어?",
+    "category": "product_review",
+    "tier": 1
+  },
+  {
+    "id": "RS-049",
+    "query": "쇼피 리뷰 수집일 기준 정렬",
+    "category": "recent_reviews",
+    "tier": 1
+  },
+  {
+    "id": "RS-050",
+    "query": "Shopee 전체 리뷰 데이터 수",
+    "category": "total_count",
+    "tier": 1
+  },
+  {
+    "id": "RS-051",
+    "query": "쇼피에서 리뷰 가장 많이 달린 제품 TOP 3",
+    "category": "top_reviewed",
+    "tier": 1
+  },
+  {
+    "id": "RS-052",
+    "query": "Shopee 2025년 리뷰 월별 건수",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "RS-053",
+    "query": "쇼피 Centella Ampoule 리뷰 한국어 번역 보여줘",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RS-054",
+    "query": "Shopee 리뷰 제품명에 Centella 포함된 것만",
+    "category": "product_review",
+    "tier": 1
+  },
+  {
+    "id": "RS-055",
+    "query": "쇼피 2024년 11월 리뷰 데이터",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RS-056",
+    "query": "Shopee 리뷰 수 상위 10개 제품",
+    "category": "top_reviewed",
+    "tier": 1
+  },
+  {
+    "id": "RS-057",
+    "query": "쇼피 최근 리뷰 15건 내용",
+    "category": "recent_n",
+    "tier": 1
+  },
+  {
+    "id": "RS-058",
+    "query": "Shopee 리뷰 한국어 번역 최근 것",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RS-059",
+    "query": "쇼피 제품 리뷰 분석해줘",
+    "category": "review_count",
+    "tier": 1
+  },
+  {
+    "id": "RS-060",
+    "query": "Shopee SKIN1004 브랜드 리뷰 전체 보여줘",
+    "category": "brand_review",
+    "tier": 1
+  },
+  {
+    "id": "RS-061",
+    "query": "쇼피 리뷰 2025년 상반기 데이터",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RS-062",
+    "query": "Shopee 리뷰 건수 추이 그래프",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "RS-063",
+    "query": "쇼피 최근 리뷰 원문 보여줘",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RS-064",
+    "query": "Shopee Tone Brightening Capsule Serum 리뷰 수 추이",
+    "category": "product_review",
+    "tier": 1
+  },
+  {
+    "id": "RS-065",
+    "query": "쇼피 리뷰 수집일 최신 데이터",
+    "category": "recent_reviews",
+    "tier": 1
+  },
+  {
+    "id": "RS-066",
+    "query": "Shopee 2025년 2월 리뷰 내용",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RS-067",
+    "query": "쇼피 전체 리뷰 건수 합계",
+    "category": "total_count",
+    "tier": 1
+  },
+  {
+    "id": "RS-068",
+    "query": "Shopee 제품별 최근 리뷰 1건씩",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RS-069",
+    "query": "쇼피 리뷰 날짜 범위 알려줘",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RS-070",
+    "query": "Shopee 리뷰 수 가장 적은 제품은?",
+    "category": "review_count",
+    "tier": 1
+  },
+  {
+    "id": "RS-071",
+    "query": "쇼피 Centella Cleansing Oil 리뷰 몇 건?",
+    "category": "product_review",
+    "tier": 1
+  },
+  {
+    "id": "RS-072",
+    "query": "Shopee 최근 한 주간 리뷰",
+    "category": "recent_reviews",
+    "tier": 1
+  },
+  {
+    "id": "RS-073",
+    "query": "쇼피 리뷰 월별 증감 추이",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "RS-074",
+    "query": "Shopee 2024년 10월 리뷰 수",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RS-075",
+    "query": "쇼피 제품 리뷰 순위 알려줘",
+    "category": "top_reviewed",
+    "tier": 1
+  },
+  {
+    "id": "RS-076",
+    "query": "Shopee Madagascar Centella Ampoule 리뷰 원문",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RS-077",
+    "query": "쇼피 최근 리뷰 25건",
+    "category": "recent_n",
+    "tier": 1
+  },
+  {
+    "id": "RS-078",
+    "query": "Shopee 리뷰 데이터 채널 정보",
+    "category": "review_count",
+    "tier": 1
+  },
+  {
+    "id": "RS-079",
+    "query": "쇼피 2025년 전체 리뷰 수",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RS-080",
+    "query": "Shopee Centella Soothing Cream 리뷰 수 변화",
+    "category": "product_review",
+    "tier": 1
+  },
+  {
+    "id": "RS-081",
+    "query": "쇼피 리뷰 원문과 번역문 비교",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RS-082",
+    "query": "Shopee 제품별 리뷰 비율 차트",
+    "category": "review_count",
+    "tier": 1
+  },
+  {
+    "id": "RS-083",
+    "query": "쇼피 리뷰 최근 2주간 데이터",
+    "category": "recent_reviews",
+    "tier": 1
+  },
+  {
+    "id": "RS-084",
+    "query": "Shopee 리뷰 총 건수와 제품 수",
+    "category": "total_count",
+    "tier": 1
+  },
+  {
+    "id": "RS-085",
+    "query": "쇼피 2024년 하반기 리뷰",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RS-086",
+    "query": "Shopee 리뷰 수 기준 제품 순위표",
+    "category": "top_reviewed",
+    "tier": 1
+  },
+  {
+    "id": "RS-087",
+    "query": "쇼피 최근 리뷰 내용 요약해줘",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RS-088",
+    "query": "Shopee 월별 리뷰 수 평균",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "RS-089",
+    "query": "쇼피 리뷰 제품명 목록",
+    "category": "review_count",
+    "tier": 1
+  },
+  {
+    "id": "RS-090",
+    "query": "Shopee 2025년 1월 리뷰 내용 보여줘",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RS-091",
+    "query": "쇼피에서 Centella 제품 리뷰 전체",
+    "category": "product_review",
+    "tier": 1
+  },
+  {
+    "id": "RS-092",
+    "query": "Shopee 리뷰 최신 데이터 날짜가 언제야?",
+    "category": "recent_reviews",
+    "tier": 1
+  },
+  {
+    "id": "RS-093",
+    "query": "쇼피 2024년 9월 리뷰 건수",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RS-094",
+    "query": "Shopee 리뷰 주간 트렌드",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "RS-095",
+    "query": "쇼피 SKIN1004 리뷰만 보여줘",
+    "category": "brand_review",
+    "tier": 1
+  },
+  {
+    "id": "RS-096",
+    "query": "Shopee 최근 리뷰 7건 한국어로",
+    "category": "recent_n",
+    "tier": 1
+  },
+  {
+    "id": "RS-097",
+    "query": "쇼피 Tone Brightening Capsule Serum 리뷰 원문",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RS-098",
+    "query": "Shopee 리뷰 제품별 최신 날짜",
+    "category": "recent_reviews",
+    "tier": 1
+  },
+  {
+    "id": "RS-099",
+    "query": "쇼피 리뷰 분기별 추이",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "RS-100",
+    "query": "Shopee 전체 리뷰 중 2025년 비율",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RS-101",
+    "query": "쇼피 리뷰 어떤 제품이 있어?",
+    "category": "review_count",
+    "tier": 1
+  },
+  {
+    "id": "RS-102",
+    "query": "Shopee 리뷰 수집 현황 알려줘",
+    "category": "total_count",
+    "tier": 1
+  },
+  {
+    "id": "RS-103",
+    "query": "쇼피 최근 리뷰 중 Centella Ampoule 관련",
+    "category": "product_review",
+    "tier": 1
+  },
+  {
+    "id": "RS-104",
+    "query": "Shopee 2025년 1월~2월 리뷰",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RS-105",
+    "query": "쇼피 리뷰 수 증가율",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "RS-106",
+    "query": "Shopee 제품별 최신 리뷰 내용 정리",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RS-107",
+    "query": "쇼피 리뷰 데이터에서 브랜드 종류",
+    "category": "brand_review",
+    "tier": 1
+  },
+  {
+    "id": "RS-108",
+    "query": "Shopee 최근 리뷰 40건 보여줘",
+    "category": "recent_n",
+    "tier": 1
+  },
+  {
+    "id": "RS-109",
+    "query": "쇼피 Madagascar Centella Ampoule 월별 리뷰 수",
+    "category": "product_review",
+    "tier": 1
+  },
+  {
+    "id": "RS-110",
+    "query": "Shopee 리뷰 최다 제품 TOP 7",
+    "category": "top_reviewed",
+    "tier": 1
+  },
+  {
+    "id": "RS-111",
+    "query": "쇼피 2024년 리뷰 총 건수",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RS-112",
+    "query": "Shopee 리뷰 번역 데이터 최근 것",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RS-113",
+    "query": "쇼피 Centella Soothing Cream 리뷰 원문 보여줘",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RS-114",
+    "query": "Shopee 리뷰 수 제품별 내림차순",
+    "category": "review_count",
+    "tier": 1
+  },
+  {
+    "id": "RS-115",
+    "query": "쇼피 최근 리뷰 날짜 확인",
+    "category": "recent_reviews",
+    "tier": 1
+  },
+  {
+    "id": "RS-116",
+    "query": "Shopee 2024년 8월 리뷰",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RS-117",
+    "query": "쇼피 리뷰 총합 몇 건이야?",
+    "category": "total_count",
+    "tier": 1
+  },
+  {
+    "id": "RS-118",
+    "query": "Shopee Centella Cleansing Oil 리뷰 내용",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RS-119",
+    "query": "쇼피 리뷰 제품 수 몇 개야?",
+    "category": "review_count",
+    "tier": 1
+  },
+  {
+    "id": "RS-120",
+    "query": "Shopee 월별 리뷰 추이 분석",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "RS-121",
+    "query": "쇼피 리뷰에서 가장 오래된 리뷰는?",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RS-122",
+    "query": "Shopee 리뷰 최근 60건 데이터",
+    "category": "recent_n",
+    "tier": 1
+  },
+  {
+    "id": "RS-123",
+    "query": "쇼피 Centella Ampoule 리뷰 건수 월별",
+    "category": "product_review",
+    "tier": 1
+  },
+  {
+    "id": "RS-124",
+    "query": "Shopee 리뷰 최근 3개월 추이",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "RS-125",
+    "query": "쇼피 리뷰 데이터 전체 현황",
+    "category": "total_count",
+    "tier": 1
+  },
+  {
+    "id": "RS-126",
+    "query": "Shopee SKIN1004 브랜드 리뷰 수 추이",
+    "category": "brand_review",
+    "tier": 1
+  },
+  {
+    "id": "RS-127",
+    "query": "쇼피 리뷰 중 최근 것부터 정렬해서 보여줘",
+    "category": "recent_reviews",
+    "tier": 1
+  },
+  {
+    "id": "RS-128",
+    "query": "Shopee 2024년 7월 리뷰 데이터",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RS-129",
+    "query": "쇼피 제품별 리뷰 수 표로 보여줘",
+    "category": "review_count",
+    "tier": 1
+  },
+  {
+    "id": "RS-130",
+    "query": "Shopee 리뷰 원문 언어별 분포",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RS-131",
+    "query": "쇼피 최근 리뷰 요약",
+    "category": "recent_reviews",
+    "tier": 1
+  },
+  {
+    "id": "RS-132",
+    "query": "Shopee Tone Brightening Capsule Serum 리뷰 있어?",
+    "category": "product_review",
+    "tier": 1
+  },
+  {
+    "id": "RS-133",
+    "query": "쇼피 리뷰 2025년 3월 데이터 있어?",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RS-134",
+    "query": "Shopee 리뷰 수 TOP 제품 비율",
+    "category": "top_reviewed",
+    "tier": 1
+  },
+  {
+    "id": "RS-135",
+    "query": "쇼피 제품 리뷰 수 비교 차트",
+    "category": "review_count",
+    "tier": 1
+  },
+  {
+    "id": "RS-136",
+    "query": "Shopee 최근 리뷰 12건",
+    "category": "recent_n",
+    "tier": 1
+  },
+  {
+    "id": "RS-137",
+    "query": "쇼피 리뷰 수집일과 리뷰 작성일 차이",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RS-138",
+    "query": "Shopee Madagascar Centella Ampoule 한국어 리뷰",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RS-139",
+    "query": "쇼피 리뷰 주별 통계",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "RS-140",
+    "query": "Shopee 리뷰 데이터 날짜 범위",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RS-141",
+    "query": "쇼피 최다 리뷰 제품 알려줘",
+    "category": "top_reviewed",
+    "tier": 1
+  },
+  {
+    "id": "RS-142",
+    "query": "Shopee 리뷰 전체 목록",
+    "category": "total_count",
+    "tier": 1
+  },
+  {
+    "id": "RS-143",
+    "query": "쇼피 Centella Ampoule 리뷰 최근 5건",
+    "category": "recent_n",
+    "tier": 1
+  },
+  {
+    "id": "RS-144",
+    "query": "Shopee 2025년 월별 리뷰 건수 비교",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "RS-145",
+    "query": "쇼피 리뷰에서 Soothing Cream 검색",
+    "category": "product_review",
+    "tier": 1
+  },
+  {
+    "id": "RS-146",
+    "query": "Shopee 리뷰 최근 한 달 건수",
+    "category": "recent_reviews",
+    "tier": 1
+  },
+  {
+    "id": "RS-147",
+    "query": "쇼피 리뷰 번역 품질 확인",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RS-148",
+    "query": "Shopee 리뷰 수 연도별 비교",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RS-149",
+    "query": "쇼피 제품별 리뷰 트렌드",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "RS-150",
+    "query": "Shopee 전체 리뷰 수 현황",
+    "category": "total_count",
+    "tier": 1
+  },
+  {
+    "id": "RS-151",
+    "query": "쇼피 리뷰 중 Cleansing Oil 관련",
+    "category": "product_review",
+    "tier": 1
+  },
+  {
+    "id": "RS-152",
+    "query": "Shopee 최근 리뷰 30건 한국어 번역",
+    "category": "recent_n",
+    "tier": 1
+  },
+  {
+    "id": "RS-153",
+    "query": "쇼피 리뷰 데이터 수집 주기는?",
+    "category": "total_count",
+    "tier": 1
+  },
+  {
+    "id": "RS-154",
+    "query": "Shopee 2024년 4분기 리뷰 수",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RS-155",
+    "query": "쇼피 리뷰 제품명 중복 제거 목록",
+    "category": "review_count",
+    "tier": 1
+  },
+  {
+    "id": "RS-156",
+    "query": "Shopee 리뷰 월별 평균 건수",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "RS-157",
+    "query": "쇼피 최근 수집된 리뷰 보여줘",
+    "category": "recent_reviews",
+    "tier": 1
+  },
+  {
+    "id": "RS-158",
+    "query": "Shopee Centella Ampoule 리뷰 원문 10건",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RS-159",
+    "query": "쇼피 리뷰 수 가장 많은 달은?",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "RS-160",
+    "query": "Shopee 리뷰 2024년 전체 요약",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RS-161",
+    "query": "쇼피에서 SKIN1004 리뷰 제일 많은 제품",
+    "category": "top_reviewed",
+    "tier": 1
+  },
+  {
+    "id": "RS-162",
+    "query": "Shopee 리뷰 최신 데이터 확인해줘",
+    "category": "recent_reviews",
+    "tier": 1
+  },
+  {
+    "id": "RS-163",
+    "query": "쇼피 리뷰 collect_date 기준 최근 데이터",
+    "category": "recent_reviews",
+    "tier": 1
+  },
+  {
+    "id": "RS-164",
+    "query": "Shopee 제품별 리뷰 건수와 비중",
+    "category": "review_count",
+    "tier": 1
+  },
+  {
+    "id": "RS-165",
+    "query": "쇼피 2025년 신규 리뷰 수",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RS-166",
+    "query": "Shopee 리뷰 데이터 컬럼 정보",
+    "category": "total_count",
+    "tier": 1
+  },
+  {
+    "id": "RS-167",
+    "query": "쇼피 Madagascar Centella Ampoule 리뷰 추이",
+    "category": "product_review",
+    "tier": 1
+  },
+  {
+    "id": "RS-168",
+    "query": "Shopee 최근 리뷰 8건",
+    "category": "recent_n",
+    "tier": 1
+  },
+  {
+    "id": "RS-169",
+    "query": "쇼피 리뷰 작성일 기준 최신순",
+    "category": "recent_reviews",
+    "tier": 1
+  },
+  {
+    "id": "RS-170",
+    "query": "Shopee 리뷰 제품별 월별 교차 분석",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "RS-171",
+    "query": "쇼피 2025년 2월 리뷰 내용 전부",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RS-172",
+    "query": "Shopee 리뷰 Centella 키워드 검색",
+    "category": "product_review",
+    "tier": 1
+  },
+  {
+    "id": "RS-173",
+    "query": "쇼피 리뷰 한국어 번역본만 보여줘",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RS-174",
+    "query": "Shopee 제품별 최근 리뷰 날짜",
+    "category": "recent_reviews",
+    "tier": 1
+  },
+  {
+    "id": "RS-175",
+    "query": "쇼피 리뷰 수 월 평균은?",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "RS-176",
+    "query": "Shopee 전체 리뷰 건수 추이 차트",
+    "category": "total_count",
+    "tier": 1
+  },
+  {
+    "id": "RS-177",
+    "query": "쇼피 Soothing Cream 리뷰 최근 3건",
+    "category": "recent_n",
+    "tier": 1
+  },
+  {
+    "id": "RS-178",
+    "query": "Shopee 2024년 6월 리뷰 데이터 있어?",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RS-179",
+    "query": "쇼피 리뷰 제품별 통계 요약",
+    "category": "review_count",
+    "tier": 1
+  },
+  {
+    "id": "RS-180",
+    "query": "Shopee 리뷰 가장 최근 작성된 것",
+    "category": "recent_reviews",
+    "tier": 1
+  },
+  {
+    "id": "RS-181",
+    "query": "쇼피 Centella Ampoule 리뷰 번역 보여줘",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RS-182",
+    "query": "Shopee 리뷰 데이터 연도별 건수",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RS-183",
+    "query": "쇼피 리뷰 TOP 5 제품 리스트",
+    "category": "top_reviewed",
+    "tier": 1
+  },
+  {
+    "id": "RS-184",
+    "query": "Shopee 최근 2개월 리뷰 건수",
+    "category": "recent_reviews",
+    "tier": 1
+  },
+  {
+    "id": "RS-185",
+    "query": "쇼피 리뷰 원문으로 된 것만 보여줘",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RS-186",
+    "query": "Shopee 2024년 3분기 리뷰",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RS-187",
+    "query": "쇼피 리뷰 제품 카테고리별 분류",
+    "category": "review_count",
+    "tier": 1
+  },
+  {
+    "id": "RS-188",
+    "query": "Shopee 리뷰 최근 90건",
+    "category": "recent_n",
+    "tier": 1
+  },
+  {
+    "id": "RS-189",
+    "query": "쇼피 리뷰 브랜드 필터링 후 건수",
+    "category": "brand_review",
+    "tier": 1
+  },
+  {
+    "id": "RS-190",
+    "query": "Shopee Centella Cleansing Oil 월별 리뷰",
+    "category": "product_review",
+    "tier": 1
+  },
+  {
+    "id": "RS-191",
+    "query": "쇼피 리뷰 review_date 기준 분석",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "RS-192",
+    "query": "Shopee 전체 데이터 행 수 알려줘",
+    "category": "total_count",
+    "tier": 1
+  },
+  {
+    "id": "RS-193",
+    "query": "쇼피 최근 리뷰 중 긍정적인 것",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RS-194",
+    "query": "Shopee 2024년 5월 리뷰",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RS-195",
+    "query": "쇼피 리뷰 수 기준 상위 제품",
+    "category": "top_reviewed",
+    "tier": 1
+  },
+  {
+    "id": "RS-196",
+    "query": "Shopee 리뷰 수집 날짜 기준 통계",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "RS-197",
+    "query": "쇼피 리뷰 제품별 최신 리뷰 요약",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RS-198",
+    "query": "Shopee 2024년 상반기 리뷰 건수",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RS-199",
+    "query": "쇼피 리뷰 데이터 전체 요약 통계",
+    "category": "total_count",
+    "tier": 1
+  },
+  {
+    "id": "RS-200",
+    "query": "Shopee 최근 리뷰 전체 보여줘",
+    "category": "recent_reviews",
+    "tier": 1
+  },
+  {
+    "id": "RS-201",
+    "query": "쇼피 리뷰 중 Madagascar Centella Ampoule 비율",
+    "category": "product_review",
+    "tier": 1
+  },
+  {
+    "id": "RS-202",
+    "query": "Shopee 리뷰 날짜별 건수 차트",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "RS-203",
+    "query": "쇼피 Centella Ampoule 관련 리뷰 전부",
+    "category": "product_review",
+    "tier": 1
+  },
+  {
+    "id": "RS-204",
+    "query": "Shopee 최근 리뷰 200건 데이터",
+    "category": "recent_n",
+    "tier": 1
+  },
+  {
+    "id": "RS-205",
+    "query": "쇼피 리뷰 제품별 점유율",
+    "category": "review_count",
+    "tier": 1
+  },
+  {
+    "id": "RS-206",
+    "query": "Shopee 2024년 2분기 리뷰 수",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RS-207",
+    "query": "쇼피 리뷰 최근 순 정렬 보여줘",
+    "category": "recent_reviews",
+    "tier": 1
+  },
+  {
+    "id": "RS-208",
+    "query": "Shopee Tone Brightening Serum 리뷰 건수",
+    "category": "product_review",
+    "tier": 1
+  },
+  {
+    "id": "RS-209",
+    "query": "쇼피 리뷰 수 전년 대비 변화",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "RS-210",
+    "query": "Shopee 리뷰 한국어 번역 최근 20건",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RS-211",
+    "query": "쇼피 리뷰 데이터 행 건수",
+    "category": "total_count",
+    "tier": 1
+  },
+  {
+    "id": "RS-212",
+    "query": "Shopee 2024년 1월 리뷰 데이터",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RS-213",
+    "query": "쇼피 리뷰 가장 많은 월은?",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "RS-214",
+    "query": "Shopee 제품별 리뷰 수 차트 그려줘",
+    "category": "review_count",
+    "tier": 1
+  },
+  {
+    "id": "RS-215",
+    "query": "쇼피 최근 수집 리뷰 날짜",
+    "category": "recent_reviews",
+    "tier": 1
+  },
+  {
+    "id": "RS-216",
+    "query": "Shopee Centella 관련 제품 리뷰 합계",
+    "category": "product_review",
+    "tier": 1
+  },
+  {
+    "id": "RS-217",
+    "query": "쇼피 리뷰 월 단위 집계",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "RS-218",
+    "query": "Shopee 리뷰 원문 내용 최신 5건",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RS-219",
+    "query": "쇼피 리뷰 2024년 4월 데이터",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RS-220",
+    "query": "Shopee SKIN1004 리뷰 수 총합",
+    "category": "brand_review",
+    "tier": 1
+  },
+  {
+    "id": "RS-221",
+    "query": "쇼피 리뷰 가장 최근 수집된 제품",
+    "category": "recent_reviews",
+    "tier": 1
+  },
+  {
+    "id": "RS-222",
+    "query": "Shopee 리뷰 제품명별 건수 정리",
+    "category": "review_count",
+    "tier": 1
+  },
+  {
+    "id": "RS-223",
+    "query": "쇼피 Centella Soothing Cream 최근 리뷰 내용",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RS-224",
+    "query": "Shopee 리뷰 2024년 3월 건수",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RS-225",
+    "query": "쇼피 리뷰 월별 제품별 크로스탭",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "RS-226",
+    "query": "Shopee 리뷰 전체 데이터 개수",
+    "category": "total_count",
+    "tier": 1
+  },
+  {
+    "id": "RS-227",
+    "query": "쇼피 리뷰에서 Cleansing 키워드 검색",
+    "category": "product_review",
+    "tier": 1
+  },
+  {
+    "id": "RS-228",
+    "query": "Shopee 최근 리뷰 내용 한국어로 보여줘",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RS-229",
+    "query": "쇼피 리뷰 TOP 10 제품",
+    "category": "top_reviewed",
+    "tier": 1
+  },
+  {
+    "id": "RS-230",
+    "query": "Shopee 2024년 2월 리뷰",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RS-231",
+    "query": "쇼피 리뷰 collect_date 별 건수",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "RS-232",
+    "query": "Shopee 리뷰 최근 것 review_date 기준",
+    "category": "recent_reviews",
+    "tier": 1
+  },
+  {
+    "id": "RS-233",
+    "query": "쇼피 리뷰 채널 목록 알려줘",
+    "category": "review_count",
+    "tier": 1
+  },
+  {
+    "id": "RS-234",
+    "query": "Shopee 리뷰 제품별 번역 리뷰 보여줘",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RS-235",
+    "query": "쇼피 리뷰 2025년 월별 누적",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "RS-236",
+    "query": "Shopee 전체 리뷰 현황 요약",
+    "category": "total_count",
+    "tier": 1
+  },
+  {
+    "id": "RS-237",
+    "query": "쇼피 리뷰 최근 150건",
+    "category": "recent_n",
+    "tier": 1
+  },
+  {
+    "id": "RS-238",
+    "query": "Shopee Madagascar Centella Ampoule 리뷰 전체 건수",
+    "category": "product_review",
+    "tier": 1
+  },
+  {
+    "id": "RS-239",
+    "query": "쇼피 리뷰 제품별 최다 리뷰 월",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "RS-240",
+    "query": "Shopee 리뷰 데이터 최초 수집일",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RS-241",
+    "query": "쇼피에서 리뷰 수 증가 추세야?",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "RS-242",
+    "query": "Shopee 리뷰 최근 데이터 요약해줘",
+    "category": "recent_reviews",
+    "tier": 1
+  },
+  {
+    "id": "RS-243",
+    "query": "쇼피 Tone Brightening 제품 리뷰 몇 건?",
+    "category": "product_review",
+    "tier": 1
+  },
+  {
+    "id": "RS-244",
+    "query": "Shopee 리뷰 제품 종류 몇 개야?",
+    "category": "review_count",
+    "tier": 1
+  },
+  {
+    "id": "RS-245",
+    "query": "쇼피 리뷰 번역문 최근 순",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RS-246",
+    "query": "Shopee 2024년 1분기 리뷰 데이터",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RS-247",
+    "query": "쇼피 리뷰 전체 건수 차트",
+    "category": "total_count",
+    "tier": 1
+  },
+  {
+    "id": "RS-248",
+    "query": "Shopee 리뷰 제품별 비교 분석",
+    "category": "review_count",
+    "tier": 1
+  },
+  {
+    "id": "RS-249",
+    "query": "쇼피 최근 리뷰 중 Cream 제품",
+    "category": "product_review",
+    "tier": 1
+  },
+  {
+    "id": "RS-250",
+    "query": "Shopee 리뷰 월별 건수 차트 그려줘",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "RS-251",
+    "query": "쇼피 리뷰 원문 전체 보여줘",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RS-252",
+    "query": "Shopee 리뷰 2024년 전체 추이",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RS-253",
+    "query": "쇼피 리뷰에서 Ampoule 제품만 필터",
+    "category": "product_review",
+    "tier": 1
+  },
+  {
+    "id": "RS-254",
+    "query": "Shopee 리뷰 최근 75건 데이터",
+    "category": "recent_n",
+    "tier": 1
+  },
+  {
+    "id": "RS-255",
+    "query": "쇼피 리뷰 브랜드 분포",
+    "category": "brand_review",
+    "tier": 1
+  },
+  {
+    "id": "RS-256",
+    "query": "Shopee 리뷰 제품별 월별 통계표",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "RS-257",
+    "query": "쇼피 리뷰 전체 데이터 조회",
+    "category": "total_count",
+    "tier": 1
+  },
+  {
+    "id": "RS-258",
+    "query": "Shopee 2023년 리뷰 데이터 있어?",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RS-259",
+    "query": "쇼피 리뷰 최근 리뷰 제품명",
+    "category": "recent_reviews",
+    "tier": 1
+  },
+  {
+    "id": "RS-260",
+    "query": "Shopee Centella Ampoule 리뷰 한국어 요약",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RS-261",
+    "query": "쇼피 제품별 리뷰 수 그래프",
+    "category": "review_count",
+    "tier": 1
+  },
+  {
+    "id": "RS-262",
+    "query": "Shopee 리뷰 수 기준 하위 제품",
+    "category": "review_count",
+    "tier": 1
+  },
+  {
+    "id": "RS-263",
+    "query": "쇼피 2025년 1월 리뷰 건수",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RS-264",
+    "query": "Shopee 리뷰 최신 수집 데이터 날짜",
+    "category": "recent_reviews",
+    "tier": 1
+  },
+  {
+    "id": "RS-265",
+    "query": "쇼피 리뷰 제품별 평균 리뷰 수",
+    "category": "review_count",
+    "tier": 1
+  },
+  {
+    "id": "RS-266",
+    "query": "Shopee 리뷰 2025년 전체 추이",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "RS-267",
+    "query": "쇼피 리뷰 원문과 번역 같이 10건",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RS-268",
+    "query": "Shopee 리뷰 기간별 건수 분석",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RS-269",
+    "query": "쇼피 리뷰 TOP 3 제품 리뷰 내용",
+    "category": "top_reviewed",
+    "tier": 1
+  },
+  {
+    "id": "RS-270",
+    "query": "Shopee 최근 리뷰 전체 건수",
+    "category": "recent_reviews",
+    "tier": 1
+  },
+  {
+    "id": "RS-271",
+    "query": "쇼피 리뷰 제품별 최신 리뷰 날짜와 내용",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RS-272",
+    "query": "Shopee 리뷰 수 제품별 파이 차트",
+    "category": "review_count",
+    "tier": 1
+  },
+  {
+    "id": "RS-273",
+    "query": "쇼피 리뷰 최근 6개월 추이",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "RS-274",
+    "query": "Shopee 리뷰 데이터 전체 요약",
+    "category": "total_count",
+    "tier": 1
+  },
+  {
+    "id": "RS-275",
+    "query": "쇼피 Centella Cleansing Oil 리뷰 전체",
+    "category": "product_review",
+    "tier": 1
+  },
+  {
+    "id": "RS-276",
+    "query": "Shopee 리뷰 최근 35건 보여줘",
+    "category": "recent_n",
+    "tier": 1
+  },
+  {
+    "id": "RS-277",
+    "query": "쇼피 리뷰 2024년 하반기 건수",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RS-278",
+    "query": "Shopee 리뷰 원문 중 긴 리뷰",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RS-279",
+    "query": "쇼피 리뷰 제품별 최근 3개월 추이",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "RS-280",
+    "query": "Shopee 전체 리뷰 수 알려줘",
+    "category": "total_count",
+    "tier": 1
+  },
+  {
+    "id": "RS-281",
+    "query": "쇼피 리뷰 제품별 리뷰 날짜 분포",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RS-282",
+    "query": "Shopee 리뷰 SKIN1004 제품 리스트",
+    "category": "brand_review",
+    "tier": 1
+  },
+  {
+    "id": "RS-283",
+    "query": "쇼피 리뷰 최근 순으로 50건",
+    "category": "recent_n",
+    "tier": 1
+  },
+  {
+    "id": "RS-284",
+    "query": "Shopee 리뷰 제품별 건수 내림차순 정렬",
+    "category": "review_count",
+    "tier": 1
+  },
+  {
+    "id": "RS-285",
+    "query": "쇼피 리뷰 월별 증감률",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "RS-286",
+    "query": "Shopee 리뷰 번역 내용 전체",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RS-287",
+    "query": "쇼피 리뷰 2024년 연간 통계",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RS-288",
+    "query": "Shopee 리뷰 제품별 리뷰 수 합산",
+    "category": "review_count",
+    "tier": 1
+  },
+  {
+    "id": "RS-289",
+    "query": "쇼피 리뷰 가장 인기 있는 제품",
+    "category": "top_reviewed",
+    "tier": 1
+  },
+  {
+    "id": "RS-290",
+    "query": "Shopee 최근 리뷰 review_date 순",
+    "category": "recent_reviews",
+    "tier": 1
+  },
+  {
+    "id": "RS-291",
+    "query": "쇼피 리뷰 전체 리스트 보여줘",
+    "category": "total_count",
+    "tier": 1
+  },
+  {
+    "id": "RS-292",
+    "query": "Shopee Centella Soothing Cream 리뷰 수 추이",
+    "category": "product_review",
+    "tier": 1
+  },
+  {
+    "id": "RS-293",
+    "query": "쇼피 리뷰 최근 리뷰 번역문 보기",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RS-294",
+    "query": "Shopee 2024년 12월 리뷰 건수",
+    "category": "date_range",
+    "tier": 1
+  },
+  {
+    "id": "RS-295",
+    "query": "쇼피 리뷰 월별 리뷰 수 차트",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "RS-296",
+    "query": "Shopee 리뷰 제품별 최근 리뷰 비교",
+    "category": "review_content",
+    "tier": 1
+  },
+  {
+    "id": "RS-297",
+    "query": "쇼피 리뷰 전체 건수는 몇 개?",
+    "category": "total_count",
+    "tier": 1
+  },
+  {
+    "id": "RS-298",
+    "query": "Shopee 리뷰 제품 TOP 리스트",
+    "category": "top_reviewed",
+    "tier": 1
+  },
+  {
+    "id": "RS-299",
+    "query": "쇼피 리뷰 최신 데이터 전체 확인",
+    "category": "recent_reviews",
+    "tier": 1
+  },
+  {
+    "id": "RS-300",
+    "query": "Shopee 리뷰 전체 현황 리포트",
+    "category": "total_count",
+    "tier": 1
+  },
+  {
+    "id": "RS-301",
+    "query": "혹시 Shopee 리뷰데이터 원문 내용 최신 5건 확인 부탁드립니다",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-302",
+    "query": "Shopee 평가 원문 언어별 분포",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-303",
+    "query": "쇼피 리뷰데이터 브랜드 SKIN1004만 필터링",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-304",
+    "query": "정확한 쇼피 평가 제품명 목록",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-305",
+    "query": "혹시 쇼피 Centella Ampoule 관련 리뷰 전부",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-306",
+    "query": "쇼피 리뷰 가장 많은 월은? 알고 싶어",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-307",
+    "query": "잠깐, 쇼피 최근 리뷰 중 Cream 제품",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-308",
+    "query": "Shopee 리뷰 최신 수집 데이터 날짜 알려주세요",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-309",
+    "query": "쇼피 리뷰 브랜드 SKIN1004만 필터링 알 수 있을까요?",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-310",
+    "query": "shopee 리부 2024년 하반기 건수",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-311",
+    "query": "쇼피 평가 2025년 3월 데이터 있어?",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-312",
+    "query": "쇼피 리뷰 최근 리뷰 번역문 보기 확인 부탁드립니다",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-313",
+    "query": "Shopee 리뷰 최근 35건 보여줘 빨리",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-314",
+    "query": "혹시 Shopee 후기 수 TOP 제품 비율 확인 가능한가요?",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-315",
+    "query": "우리 회사 Shopee 월별 리부 추이 분석 부탁드려요",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-316",
+    "query": "정확한 Shopee Madagascar Centella Ampoule 리뷰 몇 개 있어? 좀 봐줘",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-317",
+    "query": "Shopee 상품별 평가 수 TOP 5",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-318",
+    "query": "쇼피 리뷰데이터 중 Madagascar Centella Ampoule 비율",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-319",
+    "query": "Shopee 2025년 1분기 리뷰 수 알려줄래 좀 알려줘",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-320",
+    "query": "Shopee 평가 번역 내용 전체 보여줘",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-321",
+    "query": "정확한 Shopee 최근 평가 200건 데이터 알 수 있을까요?",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-322",
+    "query": "쇼피 후기 제품 기준 최신 리뷰 요약",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-323",
+    "query": "궁금한데 쇼피 리뷰 TOP 5 제품 리스트",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-324",
+    "query": "궁금한데 쇼피 후기 최근 6개월 추이",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-325",
+    "query": "참고로 Shopee 최근 리뷰 전체 건수 좀 봐줘",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-326",
+    "query": "Shopee 리뷰 총 건수와 제품 수 알고 싶어 알려주세요",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-327",
+    "query": "shopee 후기 수 월 평균은?",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-328",
+    "query": "Shopee 리뷰 최근 30일 변화",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-329",
+    "query": "쇼피 상품별 리뷰 트렌드 어떻게 되나요?",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-330",
+    "query": "간단하게 쇼피 리뷰 2025년 3월 데이터 있어?",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-331",
+    "query": "확인 좀 해줘 쇼피 리뷰 최근 150건",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-332",
+    "query": "Shopee 최근 평가 12건",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-333",
+    "query": "Shopee 리뷰 SKIN1004 제품 리스트 좀 알려줘",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-334",
+    "query": "혹시 Shopee 리뷰 수 TOP 제품 비율",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-335",
+    "query": "Shopee 후기 제품명별 분류",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-336",
+    "query": "쇼피 Centella Soothing Cream 리뷰 내용 보여줘 알려주시면 감사하겠습니다",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-337",
+    "query": "간단하게 Shopee 2024년 7월 리뷰 데이터 알려주시면 감사하겠습니다",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-338",
+    "query": "Shopee Madagascar Centella Ampoule 평가 수 알 수 있을까요?",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-339",
+    "query": "Shopee 리뷰데이터 최신 데이터 날짜가 언제야?",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-340",
+    "query": "쇼피 Centella Soothing Cream 최근 리뷰데이터 내용",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-341",
+    "query": "쇼피 후기 원문 전체 보여줘 확인 가능한가요?",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-342",
+    "query": "쇼피 리뷰데이터 수 월별 변화 차트",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-343",
+    "query": "쇼피 리뷰데이터 한국어 번역본만 보여줘",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-344",
+    "query": "요즘 Shopee 후기 원문 내용 최신 5건",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-345",
+    "query": "Shopee SKIN1004 리뷰 수 총합 알려주세요",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-346",
+    "query": "Shopee 최근 평가 전체 보여줄래 알려줄래 확인 가능한가요?",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-347",
+    "query": "쇼핑 후기 데이터 전체 요약 통계 알려주세요",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-348",
+    "query": "궁금한데 쇼피 리뷰 제품명 목록",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-349",
+    "query": "요즘 Shopee 평가 원문 내용 최신 5건 알려줄래?",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-350",
+    "query": "Shopee 2024년 1분기 리뷰데이터 데이터 알 수 있을까요?",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-351",
+    "query": "쇼피 최근 리뷰 내용 요약해줘 알려줄래 어때?",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-352",
+    "query": "Shopee 2024년 3분기 리뷰 정리해줘",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-353",
+    "query": "혹시 쇼피 리뷰 번역 품질 확인 알고 싶어",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-354",
+    "query": "Shopee 2024년 2월 평가",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-355",
+    "query": "궁금한데 Shopee 제품별 리뷰 수 TOP 5",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-356",
+    "query": "Shopee SKIN1004 평가 총 몇 건이야?",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-357",
+    "query": "혹시 Shopee 리뷰 데이터 연도별 건수 알려주세요",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-358",
+    "query": "쇼피 최근 평가 요약 확인 가능한가요?",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-359",
+    "query": "쇼핑 제품 리뷰 순서 말해주세요",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-360",
+    "query": "Shopee 후기 원문 내용 최신 5건?",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-361",
+    "query": "Shopee Centella Ampoule 리뷰 월간 추이 몇이야?",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-362",
+    "query": "Shopee Tone Brightening Capsule Serum 리뷰 수 추세",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-363",
+    "query": "정확한 쇼피 리뷰 전체 건수는 몇 개? 확인해줘",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-364",
+    "query": "Shopee 2024년 1분기 리뷰데이터 데이터",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-365",
+    "query": "쇼피 후기 2024년 하반기 건수",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-366",
+    "query": "혹시 쇼피 평가 원문과 번역 같이 10건 확인 부탁드립니다",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-367",
+    "query": "혹시 쇼피 리부 전체 리스트 보여줄 수 있어? 빨리 알려주세요",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-368",
+    "query": "Shopee Centella Ampoule 최신 평가 내용",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-369",
+    "query": "쇼피 제품별 리뷰 수 그래프 몇이야?",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-370",
+    "query": "간단하게 쇼피 후기 review_date 기준 분석 알려주세요",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-371",
+    "query": "Shopee 리뷰데이터 수 기준 하위 제품",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-372",
+    "query": "Shopee 리뷰 한국어 번역 최근 20건 알려주세요",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-373",
+    "query": "쇼피 리뷰 2025년 월별 누적 확인 부탁드립니다",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-374",
+    "query": "우리 회사 Shopee 리뷰 제품별 월별 교차 분석해주세요",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-375",
+    "query": "빠르게 쇼피 최근 리뷰 3건만 보여줘",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-376",
+    "query": "Shopee Madagascar Centella Ampoule 한국어 리뷰 알려줄래 어떻게 되나요?",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-377",
+    "query": "쇼피 리뷰 중 Cleansing Oil 관련 알려주세요",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-378",
+    "query": "간단하게 쇼피 리뷰 각 제품 최신 리뷰 날짜와 내용 어떻게 되나요?",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-379",
+    "query": "쇼피 평가 제품 카테고리별 분류",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-380",
+    "query": "Shopee 후기 최근 30일 추이",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-381",
+    "query": "Shopee 최근 2개월 리뷰 건수 얼마임?",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-382",
+    "query": "Shopee 후기 상품별 건수 내림차순 정렬",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-383",
+    "query": "Shopee 전체 후기 현황 요약",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-384",
+    "query": "정확한 쇼피 리뷰 상품별 비율",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-385",
+    "query": "쇼핑 리뷰 월별 증감 추이",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-386",
+    "query": "shopee 리뷰 수집일과 리뷰 작성일 차이 어떻게 되나요?",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-387",
+    "query": "정확한 Shopee 리뷰 가장 높은 제품은? 좀?",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-388",
+    "query": "쇼피 최다 리뷰 제품 알려줘 확인 가능한가요?",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-389",
+    "query": "Shopee 최근 리뷰 8건 보여줘",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-390",
+    "query": "쇼피 리뷰데이터 상품별 평균 리뷰 수",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-391",
+    "query": "Shopee 전체 데이터 행 수 알려주세요",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-392",
+    "query": "혹시 쇼피 후기 월별 리뷰 수 차트",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-393",
+    "query": "쇼피 최근 20건 리뷰 조회 좀 봐줘 확인 부탁드립니다",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-394",
+    "query": "쇼피 후기 가장 최근 수집된 제품 확인 가능한가요?",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-395",
+    "query": "Shopee 리뷰 2024년 전체 요약 확인 가능한가요?",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-396",
+    "query": "Shopee 2024년 12월 리뷰데이터 건수 알려주세요",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-397",
+    "query": "궁금한데 Shopee 리뷰 최신 수집 데이터 날짜",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-398",
+    "query": "쇼피 Centella Soothing Cream 리뷰데이터 내용 알려줘",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-399",
+    "query": "Shopee 후기 최다 제품 TOP 7",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-400",
+    "query": "Shopee Centella 관련 제품 리뷰 합계 정리해줘",
+    "category": "review_shopee",
+    "tier": 2
+  },
+  {
+    "id": "RS-401",
+    "query": "궁금한데 Shopee Tone Brightening Serum 리뷰 건수",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-402",
+    "query": "Shopee 후기 전체 목록",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-403",
+    "query": "우리 회사 Shopee Madagascar Centella Ampoule 평가 수 알 수 있을까요 좀 알려줘",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-404",
+    "query": "Shopee 2025년 후기 월별 건수 얼마임?",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-405",
+    "query": "쇼피 Centella Ampoule 리뷰 한국어 번역 보여줄 수 있어?",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-406",
+    "query": "shopee Centella Ampoule 리뷰데이터 한국어 번역 알려줘",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-407",
+    "query": "쇼피 후기 원문 전체 보여줄래? 확인 가능한가요?",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-408",
+    "query": "쇼피 2월 2025년 리뷰 내용 전부 좀 봐줘 알려주세요",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-409",
+    "query": "간단하게 쇼피 리뷰 원문과 한국어 번역 같이 보여줘",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-410",
+    "query": "혹시 Shopee 평가 수 TOP 제품 비율",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-411",
+    "query": "우리 회사 쇼피 후기 최근 150건",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-412",
+    "query": "Shopee 2024년 4분기 리뷰 수 알 수 있을까요?",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-413",
+    "query": "쇼피 평가데이터 수 월별 변화 차트",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-414",
+    "query": "궁금한데 Shopee 후기 제품명별 분류",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-415",
+    "query": "쇼피 리뷰데이터 제품 카테고리별 분류 얼마임?",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-416",
+    "query": "확인 좀 해줘 쇼피 리뷰 총합 몇 건이야",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-417",
+    "query": "참고로 Shopee 최근 후기 전체 건수 좀 봐줘",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-418",
+    "query": "Shopee 2024년 12월 평가 보여줄래",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-419",
+    "query": "간단하게 간단하게 Shopee 2024년 7월 후기 데이터 알려주시면 감사하겠습니다",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-420",
+    "query": "요즘 shopee 리뷰 TOP 10 제품",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-421",
+    "query": "쇼피 리뷰 수 월별 변화 차트 어떻게 되나요?",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-422",
+    "query": "쇼피 평가 데이터 수집 주기는?",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-423",
+    "query": "요즘 Shopee 제품별 리뷰 비율 차트?",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-424",
+    "query": "shopee 리부 2024년 하반기 건수 몇이야?",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-425",
+    "query": "쇼피 후기 제품 카테고리별 분류",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-426",
+    "query": "쇼피 리뷰데이터 collect_date 기준 최근 데이터",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-427",
+    "query": "쇼피 Centella Cleansing Oil 리뷰 몇 건 좀 알려줘",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-428",
+    "query": "간단하게 Shopee 최근 평가 전체 보여줄래 알려줄래 확인 가능한가요? 좀",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-429",
+    "query": "쇼핑 후기 데이터 전체 요약 통계 알려주세요 어떻게 되나요?",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-430",
+    "query": "Shopee 후기 달별 평균 건수",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-431",
+    "query": "Shopee 평가 Centella 키워드 검색",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-432",
+    "query": "shopee 리뷰데이터 중 Madagascar Centella Ampoule 비율",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-433",
+    "query": "Shopee SKIN1004 후기 수 총합 알려주세요",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-434",
+    "query": "쇼피 후기 TOP 10 제품",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-435",
+    "query": "쇼피 Centella Cleansing Oil 평가 몇 건 알려주세요",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-436",
+    "query": "쇼핑 후기데이터 브랜드 SKIN1004만 필터링?",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-437",
+    "query": "혹시 참고로 Shopee 최근 평가 전체 건수 좀 봐줘",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-438",
+    "query": "간단하게 쇼피 리뷰 데이터 수집 주기는? 좀",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-439",
+    "query": "Shopee 평가 주간 트렌드",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-440",
+    "query": "궁금한데 쇼피 후기 TOP 5 제품 리스트 좀?",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-441",
+    "query": "혹시 Shopee 평가데이터 원문 내용 최신 5건 확인 부탁드립니다",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-442",
+    "query": "혹시 Shopee 후기데이터 원문 내용 최신 5건 확인 부탁드립니다",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-443",
+    "query": "요즘 Shopee Centella Ampoule 후기 한국어 요약",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-444",
+    "query": "쇼피 후기 데이터 수집 주기는?",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-445",
+    "query": "혹시 Shopee 리뷰 수 TOP 제품 비율 알려줄래?",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-446",
+    "query": "쇼피 평가 상품별 리뷰 날짜 분포",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-447",
+    "query": "잠깐, 궁금한데 쇼피 후기 최근 6개월 추이",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-448",
+    "query": "쇼피 2025년 2월 리뷰 내용 전부 알려줄래",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-449",
+    "query": "잠깐, Shopee 전체 리뷰 중 2025년 비율 어때?",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-450",
+    "query": "쇼피 평가 최근 150건",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-451",
+    "query": "참고로 쇼피 평가데이터 한국어 번역본만 보여줘",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-452",
+    "query": "쇼피 SKIN1004 전체 리뷰 수 몇이야?",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-453",
+    "query": "Shopee 리뷰데이터 수집 날짜 기준 통계",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-454",
+    "query": "확인 좀 해줘 간단하게 쇼피 후기 2025년 3월 데이터 있어?",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-455",
+    "query": "궁금한데 쇼피 후기 최근 6개월 추이 알고 싶어",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-456",
+    "query": "요즘 Shopee 최근 5건 리뷰 내용 알려줘",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-457",
+    "query": "혹시 Shopee 리뷰 수 TOP 제품 비율 어때?",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-458",
+    "query": "쇼피 평가 원문과 한국어 번역 같이 보여줘",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-459",
+    "query": "간단하게 Shopee 평가 원문 중 긴 리뷰 알려주세요",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-460",
+    "query": "간단하게 Shopee 리뷰 수집 날짜 기준 통계 몇이야?",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-461",
+    "query": "쇼피 후기 가장 많은 월은? 알고 싶어",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-462",
+    "query": "간단하게 Shopee 2024년 7월 평가 데이터 알려주시면 감사하겠습니다",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-463",
+    "query": "우리 회사 shopee 리부 2024년 하반기 건수 좀",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-464",
+    "query": "Shopee 리뷰 SKIN1004 제품 리스트 좀 알려주세요",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-465",
+    "query": "우리 회사 쇼피 평가 최근 150건",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-466",
+    "query": "궁금한데 요즘 Shopee 후기 원문 내용 최신 5건",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-467",
+    "query": "쇼피 리뷰 원문으로 된 것만 보여줄래 알려주세요",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-468",
+    "query": "혹시 Shopee 후기 수 TOP 제품 비율 확인 가능한가요 알 수 있을까요?",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-469",
+    "query": "Shopee 월별 리부 추이 분석",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-470",
+    "query": "쇼피 리뷰데이터 한국어 번역본만 보여줘 확인 부탁드립니다",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-471",
+    "query": "궁금한데 쇼피 Centella Soothing Cream 최근 리뷰데이터 내용",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-472",
+    "query": "쇼피 리뷰 제품 카테고리별 분류 알려주세요",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-473",
+    "query": "우리 회사 Shopee 리뷰 월별 평균 건수 보여줘",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-474",
+    "query": "쇼피 채널별 후기 수",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-475",
+    "query": "빠르게 쇼피 후기 제품 기준 최신 리뷰 요약 좀 알려줘",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-476",
+    "query": "Shopee 리뷰 주간 트렌드 부탁",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-477",
+    "query": "쇼피 리뷰데이터데이터 수 달별 변화 차트",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-478",
+    "query": "요즘 Shopee 평가 원문 언어별 분포",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-479",
+    "query": "쇼피 리뷰데이터 원문과 한국어 번역 같이 보여주세요",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-480",
+    "query": "참고로 Shopee 2025년 1분기 리뷰 수 알려줄래 좀 가르쳐줘 확인해줘",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-481",
+    "query": "간단하게 요즘 Shopee 평가 원문 내용 최신 5건 알려줄래?",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-482",
+    "query": "쇼피 리뷰 제품 카테고리별 분류 부탁드려요",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-483",
+    "query": "쇼피 리뷰 최근 한 달 몇 건",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-484",
+    "query": "확인 좀 해줘 쇼피 리뷰 최근 150건 좀 봐줘",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-485",
+    "query": "shopee 평가 수 월별 변화 차트 몇이야?",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-486",
+    "query": "쇼핑에서 Centella 제품 리부 전체",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-487",
+    "query": "혹시 Shopee 리뷰데이터 수 TOP 제품 비율",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-488",
+    "query": "간단하게 쇼피 리뷰 2025년 3월 데이터 있어",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-489",
+    "query": "확인 좀 해줘 혹시 쇼피 Centella Ampoule 관련 리부 전부",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-490",
+    "query": "쇼피 Centella Soothing Cream 최근 평가데이터 내용",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-491",
+    "query": "Shopee Madagascar Centella Ampoule 평가 수 알 수 있을까요 어떻게 되나요?",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-492",
+    "query": "확인 좀 해줘 쇼피 후기 최근 150건",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-493",
+    "query": "Shopee Centella Ampoule 후기 월별 변화 알려주시면 감사하겠습니다",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-494",
+    "query": "shopee 후기 최근 리뷰 번역문 보기 확인 부탁드립니다",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-495",
+    "query": "혹시 혹시 Shopee 후기 수 TOP 제품 비율 확인 가능한가요? 알고 싶어",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-496",
+    "query": "쇼피 리뷰 데이터 전체 요약 통계 몇이야?",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-497",
+    "query": "쇼피 평가 2025년 3월 데이터 있어",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-498",
+    "query": "shopee 리부 2024년 하반기 건수 좀 봐줘 확인 부탁드립니다",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-499",
+    "query": "잠깐, 쇼피 평가 수 가장 많은 달은 부탁드려요",
+    "category": "review_shopee",
+    "tier": 3
+  },
+  {
+    "id": "RS-500",
+    "query": "쇼피 Centella Ampoule 후기 번역 보여줘 알 수 있을까요?",
+    "category": "review_shopee",
+    "tier": 3
+  }
+]

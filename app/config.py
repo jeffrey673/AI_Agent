@@ -75,6 +75,19 @@ class Settings(BaseSettings):
     jwt_secret_key: str = "skin1004-ai-secret-change-me"
     sqlite_db_path: str = "C:/Users/DB_PC/.open-webui/data/skin1004_chat.db"
 
+    # MariaDB (AD user management)
+    mariadb_host: str = "localhost"
+    mariadb_port: str = "3306"
+    mariadb_user: str = ""
+    mariadb_password: str = ""
+    mariadb_database: str = "skin1004_ai"
+
+    # LDAP / Active Directory
+    ad_server: str = ""
+    ad_user: str = ""
+    ad_password: str = ""
+    ad_search_base: str = ""
+
     # CORS
     cors_origins: str = "http://localhost:3000,http://localhost:3001,http://localhost:8000,http://172.16.1.250:3000,http://172.16.1.250:3001"
     # Cookie

@@ -1,0 +1,3002 @@
+[
+  {
+    "id": "SA-001",
+    "query": "2025년 1월 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-002",
+    "query": "2025년 2월 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-003",
+    "query": "2024년 12월 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-004",
+    "query": "2026년 1월 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-005",
+    "query": "2024년 7월 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-006",
+    "query": "2025년 6월 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-007",
+    "query": "2024년 3월 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-008",
+    "query": "2025년 11월 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-009",
+    "query": "2024년 9월 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-010",
+    "query": "2025년 4월 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-011",
+    "query": "인도네시아 2025년 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-012",
+    "query": "태국 2024년 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-013",
+    "query": "미국 2025년 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-014",
+    "query": "일본 2024년 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-015",
+    "query": "필리핀 2025년 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-016",
+    "query": "베트남 2024년 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-017",
+    "query": "말레이시아 2025년 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-018",
+    "query": "싱가포르 2024년 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-019",
+    "query": "호주 2025년 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-020",
+    "query": "한국 2024년 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-021",
+    "query": "중국 2025년 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-022",
+    "query": "대만 2024년 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-023",
+    "query": "캐나다 2025년 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-024",
+    "query": "독일 2024년 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-025",
+    "query": "프랑스 2025년 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-026",
+    "query": "러시아 2024년 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-027",
+    "query": "인도네시아 쇼피 2025년 1월 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-028",
+    "query": "태국 라자다 2024년 6월 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-029",
+    "query": "베트남 틱톡 2025년 3월 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-030",
+    "query": "미국 아마존 2024년 11월 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-031",
+    "query": "일본 라쿠텐 2025년 5월 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-032",
+    "query": "싱가포르 쇼피 2024년 8월 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-033",
+    "query": "필리핀 라자다 2025년 2월 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-034",
+    "query": "말레이시아 쇼피 2024년 10월 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-035",
+    "query": "태국 틱톡 2025년 7월 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-036",
+    "query": "인도네시아 라자다 2024년 4월 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-037",
+    "query": "한국 큐텐 2025년 9월 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-038",
+    "query": "베트남 쇼피 2024년 12월 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-039",
+    "query": "2025년 인도네시아 월별 매출 추이",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-040",
+    "query": "2024년 태국 월별 매출 추이",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-041",
+    "query": "2025년 미국 월별 매출 추이",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-042",
+    "query": "2024년 일본 월별 매출 추이",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-043",
+    "query": "2025년 베트남 월별 매출 추이",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-044",
+    "query": "2024년 필리핀 월별 매출 추이",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-045",
+    "query": "2025년 말레이시아 월별 매출 추이",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-046",
+    "query": "2024년 싱가포르 월별 매출 추이",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-047",
+    "query": "2025년 호주 월별 매출 추이",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-048",
+    "query": "2024년 한국 월별 매출 추이",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-049",
+    "query": "2025년 동남아 국가별 매출 비교",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-050",
+    "query": "2024년 동남아 국가별 매출 비교",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-051",
+    "query": "2025년 아시아 국가별 매출 비교",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-052",
+    "query": "2024년 전체 국가별 매출 비교",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-053",
+    "query": "2025년 상반기 국가별 매출 순위",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-054",
+    "query": "2024년 하반기 국가별 매출 순위",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-055",
+    "query": "인도네시아에서 가장 많이 팔린 제품 TOP 5",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-056",
+    "query": "태국에서 가장 많이 팔린 제품 TOP 10",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-057",
+    "query": "미국에서 가장 많이 팔린 제품 TOP 3",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-058",
+    "query": "일본에서 가장 많이 팔린 제품 TOP 5",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-059",
+    "query": "베트남에서 매출 높은 제품 TOP 10",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-060",
+    "query": "필리핀에서 인기 제품 TOP 5",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-061",
+    "query": "말레이시아 제품별 매출 순위",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-062",
+    "query": "싱가포르 베스트셀러 제품",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-063",
+    "query": "호주 인기 제품 TOP 3",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-064",
+    "query": "한국 매출 TOP 10 제품",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-065",
+    "query": "Centella 라인 2025년 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-066",
+    "query": "Hyalu_Teca 라인 2024년 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-067",
+    "query": "Suncare 라인 2025년 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-068",
+    "query": "Centella_Teca 라인 2024년 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-069",
+    "query": "Tone_Brightening 라인 2025년 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-070",
+    "query": "Probiocica 라인 매출 추이",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-071",
+    "query": "Teatrica 라인 2024년 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-072",
+    "query": "Poremizing 라인 2025년 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-073",
+    "query": "LabinNature 라인 전체 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-074",
+    "query": "라인별 매출 비교 2025년",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-075",
+    "query": "2025년 GM_EAST1 팀 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-076",
+    "query": "2024년 GM_EAST2 팀 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-077",
+    "query": "2025년 GM_Ecomm 팀 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-078",
+    "query": "2024년 GM_MKT 팀 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-079",
+    "query": "2025년 CBT 팀 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-080",
+    "query": "2024년 JBT 팀 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-081",
+    "query": "2025년 KBT 팀 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-082",
+    "query": "팀별 매출 비교 2025년",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-083",
+    "query": "2024년 BCM 팀 매출 실적",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-084",
+    "query": "DD_DT1 팀 2025년 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-085",
+    "query": "2025년 B2B 매출 합계",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-086",
+    "query": "2024년 B2C 매출 합계",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-087",
+    "query": "2025년 B2B vs B2C 매출 비교",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-088",
+    "query": "2024년 B2B B2C 비율",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-089",
+    "query": "인도네시아 B2B 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-090",
+    "query": "태국 B2C 매출 2025년",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-091",
+    "query": "Ampoule 카테고리 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-092",
+    "query": "Suncare 카테고리 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-093",
+    "query": "SET 카테고리 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-094",
+    "query": "Cream 카테고리 2025년 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-095",
+    "query": "Pack 카테고리 매출 추이",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-096",
+    "query": "Cleanser 카테고리 2024년 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-097",
+    "query": "Oil 카테고리 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-098",
+    "query": "Toner 카테고리 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-099",
+    "query": "카테고리별 매출 비교 2025년",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-100",
+    "query": "2025년 카테고리별 매출 순위",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-101",
+    "query": "인도네시아 쇼피 vs 라자다 매출 비교",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-102",
+    "query": "태국 쇼피 vs 틱톡 매출 비교",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-103",
+    "query": "베트남 쇼피 vs 라자다 매출 비교",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-104",
+    "query": "필리핀 쇼피 vs 틱톡 비교",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-105",
+    "query": "말레이시아 플랫폼별 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-106",
+    "query": "미국 아마존 vs 큐텐 매출 비교",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-107",
+    "query": "일본 라쿠텐 vs 큐텐 매출 비교",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-108",
+    "query": "싱가포르 쇼피 vs 라자다 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-109",
+    "query": "전체 플랫폼별 매출 비교",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-110",
+    "query": "쇼피 전체 매출 2025년",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-111",
+    "query": "2025년 대륙별 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-112",
+    "query": "2024년 대륙별 매출 비교",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-113",
+    "query": "아시아 대륙 매출 2025년",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-114",
+    "query": "북미 대륙 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-115",
+    "query": "유럽 대륙 매출 2024년",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-116",
+    "query": "오세아니아 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-117",
+    "query": "2025년 1분기 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-118",
+    "query": "2024년 2분기 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-119",
+    "query": "2025년 3분기 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-120",
+    "query": "2024년 4분기 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-121",
+    "query": "2025년 분기별 매출 추이",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-122",
+    "query": "2024년 분기별 매출 비교",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-123",
+    "query": "인도네시아 2025년 1분기 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-124",
+    "query": "태국 2024년 4분기 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-125",
+    "query": "미국 2025년 2분기 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-126",
+    "query": "인도네시아 전년 대비 매출 변화",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-127",
+    "query": "태국 전년 대비 매출 비교",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-128",
+    "query": "미국 2024년 vs 2025년 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-129",
+    "query": "일본 전년 대비 매출 성장률",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-130",
+    "query": "베트남 2024년 대비 2025년 매출 변화",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-131",
+    "query": "필리핀 YoY 매출 비교",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-132",
+    "query": "말레이시아 전년 대비 매출 증감",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-133",
+    "query": "동남아 전체 전년 대비 매출 비교",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-134",
+    "query": "해외B2B 매출 TOP 업체",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-135",
+    "query": "B2B 매출 상위 10개 회사",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-136",
+    "query": "인도네시아 B2B 거래처별 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-137",
+    "query": "태국 B2B 업체 매출 순위",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-138",
+    "query": "일본 B2B 거래처 매출 TOP 5",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-139",
+    "query": "2025년 회사별 매출 TOP 10",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-140",
+    "query": "B2B 신규 업체 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-141",
+    "query": "인도네시아 달러 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-142",
+    "query": "태국 달러 기준 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-143",
+    "query": "미국 달러 매출 2025년",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-144",
+    "query": "일본 엔화 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-145",
+    "query": "전체 달러 기준 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-146",
+    "query": "인도네시아 센텔라 앰플 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-147",
+    "query": "태국 선케어 제품 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-148",
+    "query": "미국 토너 제품 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-149",
+    "query": "일본 크림 제품 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-150",
+    "query": "베트남 앰플 제품 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-151",
+    "query": "FOC 금액 전체 분석",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-152",
+    "query": "2025년 FOC 금액 합계",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-153",
+    "query": "국가별 FOC 금액 비교",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-154",
+    "query": "인도네시아 FOC 금액",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-155",
+    "query": "2024년 FOC 금액 추이",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-156",
+    "query": "할인 쿠폰 금액 분석",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-157",
+    "query": "2025년 할인 금액 합계",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-158",
+    "query": "국가별 할인 쿠폰 금액 비교",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-159",
+    "query": "태국 할인 금액 2024년",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-160",
+    "query": "플랫폼별 할인 금액 비교",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-161",
+    "query": "인도네시아 쇼피 2025년 1월 제품별 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-162",
+    "query": "태국 라자다 2024년 6월 제품별 매출 순위",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-163",
+    "query": "베트남 틱톡 2025년 3월 카테고리별 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-164",
+    "query": "미국 아마존 2024년 12월 라인별 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-165",
+    "query": "일본 라쿠텐 2025년 5월 제품별 매출 TOP 5",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-166",
+    "query": "싱가포르 쇼피 2024년 8월 카테고리별 매출 비교",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-167",
+    "query": "필리핀 라자다 2025년 2월 제품 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-168",
+    "query": "말레이시아 쇼피 2024년 10월 제품별 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-169",
+    "query": "인도네시아 2025년 상반기 플랫폼별 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-170",
+    "query": "태국 2024년 하반기 카테고리별 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-171",
+    "query": "2025년 5월 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-172",
+    "query": "2024년 8월 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-173",
+    "query": "2025년 10월 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-174",
+    "query": "2026년 2월 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-175",
+    "query": "중국 2025년 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-176",
+    "query": "대만 2025년 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-177",
+    "query": "캐나다 2024년 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-178",
+    "query": "독일 2025년 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-179",
+    "query": "프랑스 2024년 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-180",
+    "query": "러시아 2025년 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-181",
+    "query": "인도네시아 틱톡 2025년 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-182",
+    "query": "태국 쇼피 2024년 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-183",
+    "query": "베트남 라자다 2025년 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-184",
+    "query": "필리핀 쇼피 2024년 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-185",
+    "query": "말레이시아 틱톡 2025년 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-186",
+    "query": "일본 큐텐 2024년 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-187",
+    "query": "라자다 전체 매출 2025년",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-188",
+    "query": "틱톡 전체 매출 2024년",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-189",
+    "query": "아마존 전체 매출 2025년",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-190",
+    "query": "큐텐 전체 매출 2024년",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-191",
+    "query": "Hyalucica 라인 2025년 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-192",
+    "query": "ZB 라인 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-193",
+    "query": "Others 라인 매출 2024년",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-194",
+    "query": "Centella 라인 인도네시아 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-195",
+    "query": "Suncare 라인 태국 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-196",
+    "query": "Hyalu_Teca 라인 미국 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-197",
+    "query": "Centella_Teca 라인 일본 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-198",
+    "query": "2025년 라인별 매출 순위 TOP 5",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-199",
+    "query": "2024년 라인별 매출 추이",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-200",
+    "query": "센텔라 라인 월별 매출 추이 2025년",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-201",
+    "query": "B2B1 팀 매출 2025년",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-202",
+    "query": "B2B2 팀 매출 2024년",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-203",
+    "query": "DD_DT2 팀 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-204",
+    "query": "OP 팀 매출 2025년",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-205",
+    "query": "2025년 팀별 매출 순위",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-206",
+    "query": "GM_EAST1 팀 인도네시아 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-207",
+    "query": "GM_EAST2 팀 태국 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-208",
+    "query": "CBT 팀 월별 매출 추이",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-209",
+    "query": "JBT 팀 2024년 분기별 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-210",
+    "query": "KBT 팀 전년 대비 매출 변화",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-211",
+    "query": "인도네시아 B2C 쇼피 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-212",
+    "query": "태국 B2B 매출 2025년",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-213",
+    "query": "미국 B2B 매출 회사별 순위",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-214",
+    "query": "일본 B2C 매출 추이",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-215",
+    "query": "국가별 B2B B2C 비율",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-216",
+    "query": "Ampoule 카테고리 인도네시아 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-217",
+    "query": "Suncare 카테고리 태국 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-218",
+    "query": "Cream 카테고리 미국 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-219",
+    "query": "Cleanser 카테고리 일본 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-220",
+    "query": "SET 카테고리 플랫폼별 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-221",
+    "query": "인도네시아 쇼피 Centella 라인 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-222",
+    "query": "태국 라자다 Suncare 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-223",
+    "query": "미국 아마존 Ampoule 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-224",
+    "query": "일본 라쿠텐 Cream 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-225",
+    "query": "베트남 틱톡 Centella 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-226",
+    "query": "2025년 총 주문 건수",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-227",
+    "query": "인도네시아 2024년 주문 건수",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-228",
+    "query": "태국 쇼피 주문 건수 2025년",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-229",
+    "query": "월별 주문 건수 추이 2025년",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-230",
+    "query": "플랫폼별 주문 건수 비교",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-231",
+    "query": "2025년 생산원가 합계",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-232",
+    "query": "인도네시아 생산원가 2024년",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-233",
+    "query": "국가별 생산원가 비교",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-234",
+    "query": "2025년 월별 생산원가 추이",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-235",
+    "query": "카테고리별 생산원가 분석",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-236",
+    "query": "인도네시아 쇼피 2025년 상반기 매출 추이",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-237",
+    "query": "태국 2024년 카테고리별 매출 TOP 5",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-238",
+    "query": "베트남 2025년 라인별 매출 비교",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-239",
+    "query": "미국 2024년 분기별 매출 추이",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-240",
+    "query": "일본 2025년 팀별 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-241",
+    "query": "2025년 3월 인도네시아 쇼피 Ampoule 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-242",
+    "query": "2024년 11월 태국 라자다 Suncare 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-243",
+    "query": "2025년 1월 미국 아마존 Centella 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-244",
+    "query": "2024년 7월 일본 라쿠텐 Cream 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-245",
+    "query": "2025년 5월 베트남 틱톡 제품별 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-246",
+    "query": "SK 브랜드 2025년 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-247",
+    "query": "CL 브랜드 2024년 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-248",
+    "query": "SK vs CL 브랜드 매출 비교",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-249",
+    "query": "SK 브랜드 인도네시아 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-250",
+    "query": "CL 브랜드 태국 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-251",
+    "query": "2025년 매출 TOP 20 제품",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-252",
+    "query": "2024년 매출 하위 10개 제품",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-253",
+    "query": "전체 매출 합계 2025년",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-254",
+    "query": "전체 매출 합계 2024년",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-255",
+    "query": "월별 전체 매출 추이 2025년",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-256",
+    "query": "2025년 매출 가장 높은 달",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-257",
+    "query": "2024년 매출 가장 높은 국가",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-258",
+    "query": "2025년 매출 가장 높은 플랫폼",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-259",
+    "query": "인도네시아 매출 비중",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-260",
+    "query": "쇼피 매출 비중 2025년",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-261",
+    "query": "Centella 라인 매출 비중",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-262",
+    "query": "Ampoule 카테고리 매출 비중",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-263",
+    "query": "인도네시아 2025년 1월 환율 적용 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-264",
+    "query": "태국 2024년 Sales2_R 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-265",
+    "query": "2025년 Sales1_R vs Sales2_R 비교",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-266",
+    "query": "2024년 인도네시아 월별 FOC 금액 추이",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-267",
+    "query": "2025년 태국 할인 쿠폰 금액 월별 추이",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-268",
+    "query": "인도네시아 쇼피 FOC 금액 비교",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-269",
+    "query": "인도네시아 라자다 할인 금액",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-270",
+    "query": "2025년 총 판매 수량",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-271",
+    "query": "인도네시아 판매 수량 2024년",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-272",
+    "query": "태국 쇼피 판매 수량 2025년",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-273",
+    "query": "국가별 판매 수량 순위",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-274",
+    "query": "카테고리별 판매 수량 비교",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-275",
+    "query": "라인별 판매 수량 순위 2025년",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-276",
+    "query": "인도네시아 2025년 2분기 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-277",
+    "query": "태국 2024년 3분기 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-278",
+    "query": "미국 2025년 4분기 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-279",
+    "query": "일본 2024년 1분기 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-280",
+    "query": "베트남 2025년 분기별 매출 추이",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-281",
+    "query": "2025년 매출 성장률 국가별 비교",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-282",
+    "query": "2024년 대비 2025년 플랫폼별 매출 성장",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-283",
+    "query": "인도네시아 쇼피 전년 대비 매출 변화",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-284",
+    "query": "태국 라자다 전년 대비 성장률",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-285",
+    "query": "카테고리별 전년 대비 매출 변화",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-286",
+    "query": "2025년 매출이 감소한 국가",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-287",
+    "query": "2025년 매출이 증가한 플랫폼",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-288",
+    "query": "인도네시아 쇼피 2025년 1분기 Centella 라인 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-289",
+    "query": "태국 B2B 2024년 Suncare 카테고리 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-290",
+    "query": "GM_EAST1 팀 2025년 국가별 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-291",
+    "query": "인도네시아 쇼피 B2C Ampoule 매출 2025년",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-292",
+    "query": "태국 라자다 B2B 회사별 매출 순위",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-293",
+    "query": "2025년 인도네시아 SKU별 매출 TOP 10",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-294",
+    "query": "2024년 태국 바코드별 매출 현황",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-295",
+    "query": "GM_Ecomm 팀 플랫폼별 매출 2025년",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-296",
+    "query": "2024년 매출이 가장 높은 SKU",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-297",
+    "query": "담당자별 매출 현황 2025년",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-298",
+    "query": "인도네시아 담당자별 매출",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-299",
+    "query": "2025년 주문 상태별 매출 분석",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-300",
+    "query": "인도네시아 쇼피 2025년 1분기 월별 카테고리별 매출 분석",
+    "category": "sales_all",
+    "tier": 1
+  },
+  {
+    "id": "SA-301",
+    "query": "일본 라쿠텐 5월 2025년 제품별 메출 TOP 5 알 수 있을까요?",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-302",
+    "query": "쇼피 매출액 비중 2025년 좀 봐줘 확인 부탁드립니다",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-303",
+    "query": "2025년 CBT 팀 매출액 알려주시면 감사하겠습니다",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-304",
+    "query": "LabinNature 라인 전체 수익 알고 싶어 알려주세요",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-305",
+    "query": "일본 큐텐 2024년 수익",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-306",
+    "query": "CL 브랜드 태국 판매액?",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-307",
+    "query": "궁금한데 SET 카테고리 매출",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-308",
+    "query": "2025년 생산원가 총액",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-309",
+    "query": "2025년 6월 매출액",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-310",
+    "query": "일본 라쿠텐 vs 큐텐 매출 견줘봐",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-311",
+    "query": "베트남 2024년 매출 어때?",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-312",
+    "query": "분기별 2025년 매출액 추이 알려주세요",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-313",
+    "query": "말레이시아 쇼피 2024년 10월 제품별 매출 부탁드려요",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-314",
+    "query": "베트남 2025년 라인별 매출 대조",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-315",
+    "query": "동남아 전체 전년 대비 판매액 비교",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-316",
+    "query": "요즘 SET 카테고리 판매액 알려주시면 감사하겠습니다",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-317",
+    "query": "매출 2025년 TOP 20 제품",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-318",
+    "query": "정확한 일본 2024년 1분기 매출 좀 봐줘",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-319",
+    "query": "Suncare 카테고리 판매액",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-320",
+    "query": "11월 2025년 매출액 알려주세요",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-321",
+    "query": "2025년 생산원가 합계 알고 싶어",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-322",
+    "query": "월간 주문 건수 추이 2025년",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-323",
+    "query": "태국 B2B 매출액 2025년",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-324",
+    "query": "태국 쇼피 주문 건수 2025년 알려주시면 감사하겠습니다",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-325",
+    "query": "해외B2B 매출액 TOP 업체",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-326",
+    "query": "아시아 대륙 매출 2025년 알려주세요",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-327",
+    "query": "팀 기준 매출 견줘봐 2025년",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-328",
+    "query": "국가별 B2B B2C 비율 어때?",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-329",
+    "query": "미국 아마존 vs 큐텐 메출 대조 보여줘",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-330",
+    "query": "타이 세일즈 2024년 알려주세요",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-331",
+    "query": "Hyalucica 라인 매출 2025년 알려주세요",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-332",
+    "query": "요즘 인도네시아 쇼핑 2025년 1분기 달별 카테고리별 판매액 분석 좀",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-333",
+    "query": "캐나다 2024년 메출",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-334",
+    "query": "싱가포르 2024년 매상",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-335",
+    "query": "요즘 2025년 카테고리별 매출 순서 확인 가능한가요?",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-336",
+    "query": "인도네시아 2025년 2분기 매출 어떻게 되나요?",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-337",
+    "query": "태국 쇼피 주문 건수 2025년 알고 싶어",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-338",
+    "query": "우리 회사 월간 전체 매출 추세 2025년",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-339",
+    "query": "빠르게 한국 2024년 매월 매출 추이 알고 싶어",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-340",
+    "query": "Hyalu_Teca 라인 2024년 매출 알려주시면 감사하겠습니다",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-341",
+    "query": "Centella_Teca 라인 일본 판매액",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-342",
+    "query": "간단하게 일본 2024년 세일즈 알려주세요",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-343",
+    "query": "참고로 Toner 카테고리 수익 몇이야?",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-344",
+    "query": "Poremizing 라인 2025년 메출금액 보여줘",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-345",
+    "query": "해외B2B 매출 TOP 업체 알려주세요",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-346",
+    "query": "2024년 세일즈 가장 높은 국가",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-347",
+    "query": "SET 카테고리 매출 부탁드려요",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-348",
+    "query": "정확한 태국 쇼피 vs 틱톡 매출 비교 확인 가능한가요?",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-349",
+    "query": "일본 크림 제품 세일즈",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-350",
+    "query": "카테고리별 세일즈 견줘봐 2025년",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-351",
+    "query": "Centella 라인 2025년 매출액",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-352",
+    "query": "2024년 일본 월별 매출 추이 빨리 확인 부탁드립니다",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-353",
+    "query": "혹시 인도네시아 FOC 금액",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-354",
+    "query": "2025년 B2B vs B2C 메출 대조",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-355",
+    "query": "확인 좀 해줘 B2B2 팀 매출금액 2024년 확인해줘 알 수 있을까요?",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-356",
+    "query": "참고로 인도네시아 쇼피 Centella 라인 수익",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-357",
+    "query": "요즘 GM_Ecomm 팀 플랫폼별 매출액 2025년 어떻게 되나요?",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-358",
+    "query": "Hyalu_Teca 라인 미국 매출 알려줄래 알려주세요",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-359",
+    "query": "일본 라쿠텐 2025년 5월 제품별 매출 TOP 5 정리해줘",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-360",
+    "query": "잠깐, 총 2025년 판매 수량 부탁드려요",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-361",
+    "query": "참고로 2024년 GM_EAST2 팀 매출",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-362",
+    "query": "동남아 전체 전년 대비 수익 비교 어때?",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-363",
+    "query": "요즘 필리핀에서 인기 제품 TOP 5?",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-364",
+    "query": "Ampoule 카테고리 인도네시아 매출 알려주세요",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-365",
+    "query": "미국 달러 매출 2025년 알려주세요",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-366",
+    "query": "요즘 2025년 말레이시아 월별 매출 추이 얼마임?",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-367",
+    "query": "월별 전체 매출액 흐름 2025년",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-368",
+    "query": "요즘 2025년 B2B 매출 총액 확인 부탁드립니다",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-369",
+    "query": "잠깐, 타이 쇼피 vs 틱톡 매출 비교",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-370",
+    "query": "일본 B2B 거래처 매상 TOP 5",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-371",
+    "query": "말레이시아 2025년 매출금액",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-372",
+    "query": "2025년 동남아 국가별 매상 비교 부탁드려요",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-373",
+    "query": "러시아 2025년 수익",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-374",
+    "query": "아마죤 전체 매출 2025년",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-375",
+    "query": "혹시 2025년 GM_Ecomm 팀 매출 알려줄래 부탁드려요",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-376",
+    "query": "인도네시아 쇼피 2025년 1분기 Centella 라인 매출 좀?",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-377",
+    "query": "Centella 라인 수익 비중 알려주시면 감사하겠습니다",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-378",
+    "query": "요즘 싱가포르 베스트셀러 제품 확인 가능한가요?",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-379",
+    "query": "일본 엔화 매출액",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-380",
+    "query": "독일 2024년 매출 확인 가능한가요?",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-381",
+    "query": "잠깐, 2025년 매출 가장 높은 플랫폼",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-382",
+    "query": "혹시 2024년 FOC 금액 추이 알려주세요",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-383",
+    "query": "우리 회사 베트남 2025년 분기별 매출 추이 알려주세요",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-384",
+    "query": "2025년 1월 미국 아마존 Centella 세일즈",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-385",
+    "query": "인도네시아 쇼피 B2C Ampoule 매상 2025년",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-386",
+    "query": "2026년 1월 매출 알려주세요",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-387",
+    "query": "참고로 미국 아마존 vs 큐텐 매출 비교",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-388",
+    "query": "4월 2025년 매출액 알 수 있을까요?",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-389",
+    "query": "인도네시아 2025년 2분기 매축 확인 가능한가요?",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-390",
+    "query": "요즘 미국 달러 매출 2025년",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-391",
+    "query": "2025년 인도네시아 매월 매출액 추이",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-392",
+    "query": "2025년 상반기 국가별 매출 순위 얼마임?",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-393",
+    "query": "베트남 쇼피 vs 라자다 메출 비교 어떻게 되나요?",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-394",
+    "query": "2024년 인도네시아 월간 FOC 금액 트렌드",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-395",
+    "query": "정확한 인도네시아 FOC 금액",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-396",
+    "query": "간단하게 GM_EAST1 팀 2025년 국가별 매출금액 좀 봐줘",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-397",
+    "query": "간단하게 2025년 라인별 매출 상위 TOP 5 부탁 알려주세요",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-398",
+    "query": "2025년 월별 생산원가 트렌드",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-399",
+    "query": "필리핀 라자다 2025년 2월 제품 매출 알려주세요",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-400",
+    "query": "요즘 2024년 일본 월별 매출금액 추이 알려주세요",
+    "category": "sales_all",
+    "tier": 2
+  },
+  {
+    "id": "SA-401",
+    "query": "플랫폼별 주문 건수 대비 좀 알려줘",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-402",
+    "query": "인도네시아 쇼피 전년 대비 세일즈 변화 알려주세요",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-403",
+    "query": "국가 기준 판매 개수 상위 보여줘 확인 부탁드립니다",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-404",
+    "query": "대만 2024년 매출금액",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-405",
+    "query": "국가별 B2B B2C 비율 어때 알려주시면 감사하겠습니다",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-406",
+    "query": "월간 주문 건수 흐름 2025년",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-407",
+    "query": "간단하게 Others 라인 세일즈 2024년",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-408",
+    "query": "미국 2025년 월별 판매액 추이 알려주세요",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-409",
+    "query": "Cream 카테고리 2025년 수익 확인 가능한가요?",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-410",
+    "query": "우리 회사 2024년 세일즈 가장 높은 국가",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-411",
+    "query": "궁금한데 Poremizing 라인 2025년 메출금액 보여줘 알고 싶어 몇이야?",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-412",
+    "query": "정확한 요즘 인도네시아 쇼핑 2025년 1분기 달별 카테고리별 판매액 분석 좀",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-413",
+    "query": "태국 쇼피 vs 틱톡 매출금액 비교 몇이야?",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-414",
+    "query": "유럽 대륙 세일즈 2024년",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-415",
+    "query": "쇼피 세일즈액 비중 2025년 좀 봐줘 확인 부탁드립니다",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-416",
+    "query": "싱가포르 2024년 매상 몇이야?",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-417",
+    "query": "Hyalucica 라인 매출 2025년 알려주세요 알려줄래 확인 부탁드립니다",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-418",
+    "query": "SET 카테고리 매출액 부탁드려요",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-419",
+    "query": "말레이시아 쇼피 10월 2024년 제품 기준 매출금액 부탁드려요",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-420",
+    "query": "빠르게 캐나다 2024년 메출 알려주세요",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-421",
+    "query": "혹시 SET 카테고리 매출 부탁드려요",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-422",
+    "query": "궁금한데 매출 2025년 TOP 20 제품",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-423",
+    "query": "Ampoule 카테고리 매상 비중 알려주세요",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-424",
+    "query": "궁금한데 SET 카테고리 매출 알려주세요",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-425",
+    "query": "빠르게 한국 2024년 매월 메출 추이 알고 싶어",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-426",
+    "query": "카테고리별 세일즈 견줘봐 2025년 알고 싶어 확인 가능한가요?",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-427",
+    "query": "혹시 2024년 인도네시아 월별 FOC 금액 흐름 좀 알려줘",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-428",
+    "query": "해외B2B 매출금액 TOP 업체 알려주세요",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-429",
+    "query": "빠르게 타이 세일즈 2024년 알려주세요",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-430",
+    "query": "인도네시아 쇼피 2025년 1분기 월별 카테고리별 수익 분석",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-431",
+    "query": "정확한 태국 쇼피 vs tiktok 매출금액 비교 확인 가능한가요?",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-432",
+    "query": "2024년 수익 가장 높은 국가",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-433",
+    "query": "잠깐, 요즘 2025년 카테고리별 매출 순서 확인 가능한가요",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-434",
+    "query": "참고로 2024년 9월 매출",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-435",
+    "query": "2024년 7월 매상",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-436",
+    "query": "혹시 말레이 쇼피 2024년 10월 제품별 매출금액 부탁드려요 몇이야?",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-437",
+    "query": "잠깐, 태국 B2B 업체 매출금액 순위 몇이야?",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-438",
+    "query": "shopee 매축금액액 비중 좀 2025년 봐줘 확인 부탁드립니다",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-439",
+    "query": "태국 shopee 주문 건수 2025년 알고 싶어",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-440",
+    "query": "2024년 7월 매출 확인 부탁드립니다",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-441",
+    "query": "2025년 팀별 매출 TOP",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-442",
+    "query": "플랫폼 기준 주문 건수 비교 알려주세요",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-443",
+    "query": "잠깐, 2025년 1월 매축",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-444",
+    "query": "태국 shopee vs 틱톡 매출 대비",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-445",
+    "query": "정확한 캐나다 2024년 메출 부탁",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-446",
+    "query": "잠깐, 2024년 7월 매출",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-447",
+    "query": "혹시 일본 크림 제품 세일즈",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-448",
+    "query": "각 나라 할인 쿠폰 금액 비교",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-449",
+    "query": "2024년 인도네시아 월간 FOC 금액 추이",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-450",
+    "query": "혹시 2024년 세일즈 가장 높은 국가 좀",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-451",
+    "query": "Hyalucica 라인 매출 2025년 알려주세요 어때?",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-452",
+    "query": "잠깐, 일본 라쿠텐 5월 2025년 제품별 메출 TOP 5 알 수 있을까요?",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-453",
+    "query": "확인 좀 해줘 2024년 GM_MKT 팀 매상 확인 부탁드립니다",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-454",
+    "query": "2025년 팀별 매출액 TOP",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-455",
+    "query": "혹시 우리 회사 월간 전체 매상 추세 2025년 알려주세요",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-456",
+    "query": "궁금한데 2024년 인도네시아 월별 FOC 금액 추이 알고 싶어 알 수 있을까요?",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-457",
+    "query": "우리 회사 2024년 7월 매출 보여줘",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-458",
+    "query": "Others 라인 매출 2024년 부탁드려요",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-459",
+    "query": "잠깐, B2B 신규 업체 매출 좀 알려줘",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-460",
+    "query": "베트남 2025년 라인별 매출금액 대조",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-461",
+    "query": "궁금한데 2025년 미국 월별 매출 추이",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-462",
+    "query": "참고로 유럽 대륙 매출 2024년",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-463",
+    "query": "정확한 Hyalu_Teca 라인 2024년 매출 알려주시면 감사하겠습니다",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-464",
+    "query": "정확한 월간 주문 건수 추이 2025년",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-465",
+    "query": "빠르게 싱가포르 2024년 매상",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-466",
+    "query": "Cream 카테고리 미국 매출 알고 싶어 알려주세요",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-467",
+    "query": "국가 기준 판매 갯수 순위 알려주세요",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-468",
+    "query": "정확한 국가별 B2B B2C 비율 어때? 보여주세요",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-469",
+    "query": "말레이시아 각 제품 매축 순위",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-470",
+    "query": "Others 라인 매출금액 2024년 부탁드려요",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-471",
+    "query": "참고로 Toner 카테고리 수익 몇이야",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-472",
+    "query": "확인 좀 해줘 태국 쇼피 2024년 매출 확인 부탁드립니다",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-473",
+    "query": "태국 쇼피 2024년 매축 얼마임?",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-474",
+    "query": "Poremizing 라인 2025년 메출금액 보여줘 알려주시면 감사하겠습니다",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-475",
+    "query": "2024년 JBT 팀 매출 확인 부탁드립니다",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-476",
+    "query": "확인 좀 해줘 인니 B2C 쇼피 매축",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-477",
+    "query": "요즘 인도네시아 쇼핑 2025년 1분기 달별 카테고리별 판매액 분석 좀 알려주세요",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-478",
+    "query": "정확한 2024년 9월 매출",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-479",
+    "query": "궁금한데 2024년 세일즈 가장 높은 국가",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-480",
+    "query": "Centella_Teca 라인 일본 판매액 좀 봐줘",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-481",
+    "query": "2025년 호주 매월 세일즈 추세",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-482",
+    "query": "궁금한데 미국 2025년 2분기 매출",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-483",
+    "query": "혹시 2025년 수익 가장 높은 달",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-484",
+    "query": "미국 2025년 2분기 판매액 알려주시면 감사하겠습니다",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-485",
+    "query": "확인 좀 해줘 Tone_Brightening 라인 2025년 매출",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-486",
+    "query": "Cream 카테고리 매출 2025년",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-487",
+    "query": "싱가포르 2024년 매상 어떻게 되나요?",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-488",
+    "query": "태국 쇼피 vs 틱톡 매출 비교?",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-489",
+    "query": "유럽 대륙 매출금액 2024년",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-490",
+    "query": "11월 2025년 수익액 알려주세요",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-491",
+    "query": "미국 vs 2024년 2025년 메출?",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-492",
+    "query": "우리 회사 월간 전체 매출 추세 2025년 어때?",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-493",
+    "query": "베트남 라인별 2025년 매출 대조 알 수 있을까요?",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-494",
+    "query": "혹시 정확한 일본 2024년 1분기 매출 좀 봐줘",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-495",
+    "query": "Tone_Brightening 라인 2025년 매출 얼마임?",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-496",
+    "query": "확인 좀 해줘 Centella_Teca 라인 2024년 매출",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-497",
+    "query": "베트남 2025년 분기별 판매액 추세",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-498",
+    "query": "정확한 2024년 7월 매출금액",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-499",
+    "query": "확인 좀 해줘 카테고리별 세일즈 견줘봐 2025년",
+    "category": "sales_all",
+    "tier": 3
+  },
+  {
+    "id": "SA-500",
+    "query": "국가별 B2B B2C 비율 어때 확인 부탁드립니다",
+    "category": "sales_all",
+    "tier": 3
+  }
+]

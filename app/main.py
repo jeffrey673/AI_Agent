@@ -13,6 +13,7 @@ from fastapi.responses import FileResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
 
 from app.api.admin_api import admin_router
+from app.api.admin_group_api import group_router, ad_router
 from app.api.auth_api import auth_api_router
 from app.api.auth_middleware import get_optional_user
 from app.api.auth_routes import auth_router
@@ -20,7 +21,7 @@ from app.api.conversation_api import conversation_router
 from app.api.middleware import setup_middleware
 from app.api.routes import router
 from app.config import get_settings
-from app.db.database import init_db
+from app.db.mariadb import fetch_one, execute
 
 # Configure structured logging
 structlog.configure(
@@ -50,10 +51,9 @@ def create_app() -> FastAPI:
 
     @asynccontextmanager
     async def lifespan(app: FastAPI):
-        # Initialize SQLite DB
-        init_db()
+        # Ensure admin user exists in MariaDB
         _ensure_admin()
-        logger.info("sqlite_db_initialized", path=settings.sqlite_db_path)
+        logger.info("mariadb_initialized")
 
         logger.info(
             "application_started",
@@ -88,6 +88,8 @@ def create_app() -> FastAPI:
     app.include_router(auth_api_router)  # /api/auth/*
     app.include_router(conversation_router)  # /api/conversations/*
     app.include_router(admin_router)         # /api/admin/*
+    app.include_router(group_router)         # /api/admin/groups/*
+    app.include_router(ad_router)            # /api/admin/ad/*
 
     # --- Frontend routes ---
     @app.get("/login")
@@ -110,27 +112,32 @@ def create_app() -> FastAPI:
 
 
 def _ensure_admin():
-    """Ensure jeffrey@skin1004korea.com is admin with all models."""
+    """Ensure jeffrey@skin1004korea.com is admin with all models in MariaDB."""
     try:
-        from app.db.database import get_session_factory
-        from app.db.models import User
-        Session = get_session_factory()
-        db = Session()
-        try:
-            user = db.query(User).filter(User.email == "jeffrey@skin1004korea.com").first()
-            if user:
-                changed = False
-                if user.role != "admin":
-                    user.role = "admin"
-                    changed = True
-                if not user.allowed_models or "skin1004-Analysis" not in (user.allowed_models or ""):
-                    user.allowed_models = "skin1004-Analysis"
-                    changed = True
-                if changed:
-                    db.commit()
-                    logger.info("admin_ensured", email=user.email)
-        finally:
-            db.close()
+        # Find AD user for jeffrey
+        ad_user = fetch_one(
+            "SELECT id, email FROM ad_users WHERE email = %s AND is_active = 1",
+            ("jeffrey@skin1004korea.com",),
+        )
+        if not ad_user:
+            logger.warning("admin_ad_user_not_found", email="jeffrey@skin1004korea.com")
+            return
+
+        # Check if user exists
+        user = fetch_one(
+            "SELECT id, role, allowed_models FROM users WHERE ad_user_id = %s",
+            (ad_user["id"],),
+        )
+        if user:
+            # Update to admin if needed
+            if user["role"] != "admin" or "skin1004-Analysis" not in (user["allowed_models"] or ""):
+                execute(
+                    "UPDATE users SET role = 'admin', allowed_models = %s WHERE id = %s",
+                    ("skin1004-Analysis", user["id"]),
+                )
+                logger.info("admin_ensured", email="jeffrey@skin1004korea.com")
+        else:
+            logger.info("admin_user_needs_signup", email="jeffrey@skin1004korea.com")
     except Exception as e:
         logger.warning("ensure_admin_failed", error=str(e))
 
@@ -196,12 +203,16 @@ async def _warmup_bq_schema():
 
 async def _warmup_cs_db():
     """Pre-load CS Q&A data from Google Spreadsheet at startup."""
-    try:
-        from app.agents.cs_agent import warmup
-        count = await warmup()
-        logger.info("cs_db_warmup_done", qa_count=count)
-    except Exception as e:
-        logger.warning("cs_db_warmup_failed", error=str(e))
+    from app.agents.cs_agent import warmup
+    for attempt in range(3):
+        try:
+            count = await warmup()
+            logger.info("cs_db_warmup_done", qa_count=count, attempt=attempt + 1)
+            return
+        except Exception as e:
+            logger.warning("cs_db_warmup_failed", error=str(e), attempt=attempt + 1)
+            if attempt < 2:
+                await asyncio.sleep(5)
 
 
 async def _start_maintenance_monitor():

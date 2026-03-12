@@ -187,6 +187,14 @@
    - **메타 광고 테이블** (meta data_test):
      - `LIMIT 200` 필수 (풀스캔 금지)
      - 집계 위주: COUNT, SUM, AVG 사용 권장
+     - **WHERE 조건 주의**: "국가별", "유형별", "전체" 등 집계 질문에는 `WHERE brand = 'skin1004'` 넣지 마라! 전체 데이터를 GROUP BY로 집계해야 함
+     - **국가명은 반드시 영어**: country_name = 'South Korea' (O), '한국' (X). country_code도 사용 가능 (예: 'KR', 'TH', 'VN')
+     - **"SKIN1004 + 국가" 질문만** brand 조건 사용: WHERE country_name = '...' AND brand = 'skin1004'
+     - **publisher_platform은 리스트 형태**: LIKE '%facebook%' 또는 LIKE '%instagram%' 사용 (= 비교 금지)
+     - **ad_type**: 공식계정(official) / 파트너십(partnership) 정보만 있음. 이미지/비디오 유형은 snapshot 컬럼 참조
+     - **이미지/비디오 구분**: snapshot JSON 컬럼에서 `JSON_EXTRACT(snapshot, '$.cards[0].original_image_url')` 등으로 확인
+     - **날짜 정렬**: start_date_formatted 컬럼 사용, ORDER BY start_date_formatted DESC
+     - **활성/비활성 비교**: GROUP BY is_active로 집계 (brand별 X)
    - **플랫폼 테이블** (raw_data):
      - 반드시 `LIMIT 500` 이하
      - 순위/가격 분석 → 집계(GROUP BY + AVG/MAX) 사용, raw 행 나열 금지
@@ -1327,60 +1335,112 @@ LIMIT 1000
 ### 유효 컬럼 스키마
 
 - collect_date (DATE): 수집 날짜
-- country_code (STRING): 국가 코드
-- country_name (STRING): 국가명
-- brand (STRING): 브랜드
+- country_code (STRING): 국가 코드 (예: 'KR', 'TH', 'VN', 'ID', 'PH', 'SG', 'MY', 'JP', 'US')
+- country_name (STRING): 국가명 (반드시 영어! 예: 'South Korea', 'Thailand', 'Vietnam', 'Indonesia', 'Philippines', 'Singapore', 'Malaysia', 'Japan')
+- brand (STRING): 브랜드 (예: 'skin1004', 'cos de baha')
 - page_name (STRING): 페이지명
-- ad_type (STRING): 광고 유형 (공식계정/파트너십)
+- ad_type (STRING): 광고 유형 - 공식계정(official)/파트너십(partnership)만 있음. 이미지/비디오 구분 아님!
 - ad_archive_id (INTEGER): 광고 아카이브 ID
-- snapshot (STRING): 광고 상세 정보 (JSON)
+- snapshot (STRING): 광고 상세 정보 (JSON) - 이미지/비디오 유형 구분에 사용
 - is_active (BOOLEAN): 활성 여부
 - end_date (FLOAT): 종료일
-- publisher_platform (STRING): 게시 플랫폼
-- start_date (FLOAT): 시작일
+- publisher_platform (STRING): 게시 플랫폼 - **리스트 형태!** 예: "facebook,instagram". LIKE '%facebook%' 사용
+- start_date (FLOAT): 시작일 (숫자)
+- start_date_formatted (TIMESTAMP): 시작일 포맷됨 - **날짜 필터/정렬에 사용!**
+- end_date_formatted (TIMESTAMP): 종료일 포맷됨
+- ad_library_url (STRING): 광고 라이브러리 URL
 - url (STRING): 광고 URL
+- page_id (INTEGER): 페이지 ID
+- categories (STRING): 광고 카테고리
+- currency (STRING): 통화
+- total_active_time (FLOAT): 총 활성 시간
 
 ### 예시 쿼리
 
-#### MT1. 브랜드별 활성 광고 수
+#### MT1. 국가별 메타 광고 수 (WHERE 없이 GROUP BY)
 ```sql
--- "브랜드별 활성 메타 광고 수"
-SELECT
-  brand,
-  COUNT(*) AS active_ad_count
-FROM `skin1004-319714.ad_data.meta data_test`
-WHERE is_active = TRUE
-GROUP BY brand
-ORDER BY active_ad_count DESC
-LIMIT 1000
-```
-
-#### MT2. 국가별 광고 분포
-```sql
--- "국가별 메타 광고 수"
+-- "국가별 메타 광고 수" → 전체 집계, WHERE brand 넣지 않음!
 SELECT
   country_name,
-  COUNT(*) AS ad_count,
-  SUM(CASE WHEN is_active = TRUE THEN 1 ELSE 0 END) AS active_count
-FROM `skin1004-319714.ad_data.meta data_test`
-WHERE brand LIKE '%SKIN1004%'
-GROUP BY country_name
-ORDER BY ad_count DESC
-LIMIT 1000
-```
-
-#### MT3. 광고 유형별 분석
-```sql
--- "SKIN1004 광고 유형별 분포"
-SELECT
-  ad_type,
-  publisher_platform,
   COUNT(*) AS ad_count
 FROM `skin1004-319714.ad_data.meta data_test`
-WHERE brand LIKE '%SKIN1004%'
-GROUP BY ad_type, publisher_platform
+GROUP BY country_name
 ORDER BY ad_count DESC
-LIMIT 1000
+LIMIT 200
+```
+
+#### MT2. 특정 국가 + SKIN1004 광고 (WHERE 필요한 경우)
+```sql
+-- "한국 SKIN1004 메타 광고" → 국가+브랜드 AND 조건
+SELECT *
+FROM `skin1004-319714.ad_data.meta data_test`
+WHERE country_name = 'South Korea'
+  AND brand = 'skin1004'
+LIMIT 200
+```
+
+#### MT3. 광고 유형 비율 (전체 기준)
+```sql
+-- "메타 광고 유형 비율" → brand WHERE 없이 전체 집계
+SELECT
+  ad_type,
+  COUNT(*) AS ad_count,
+  COUNT(*) / SUM(COUNT(*)) OVER() AS ad_ratio
+FROM `skin1004-319714.ad_data.meta data_test`
+GROUP BY ad_type
+ORDER BY ad_count DESC
+```
+
+#### MT4. 활성/비활성 비교
+```sql
+-- "활성/비활성 광고 건수 비교" → is_active로 GROUP BY
+SELECT
+  is_active,
+  COUNT(*) AS ad_count
+FROM `skin1004-319714.ad_data.meta data_test`
+GROUP BY is_active
+```
+
+#### MT5. 플랫폼별 광고 수 (리스트 컬럼 LIKE 검색)
+```sql
+-- "Facebook 플랫폼 메타 광고 수" → publisher_platform은 리스트, LIKE 사용
+SELECT COUNT(*) AS facebook_meta_ads
+FROM `skin1004-319714.ad_data.meta data_test`
+WHERE LOWER(publisher_platform) LIKE '%facebook%'
+```
+
+#### MT6. 전체 현황 리포트
+```sql
+-- "메타 광고 전체 현황" → 전체 집계, brand WHERE 사용 안 함
+SELECT
+  COUNT(*) AS total_ads,
+  COUNTIF(is_active = TRUE) AS active_ads,
+  COUNTIF(is_active = FALSE) AS inactive_ads,
+  COUNT(DISTINCT brand) AS total_brands,
+  COUNT(DISTINCT country_name) AS total_countries,
+  COUNT(DISTINCT page_name) AS total_pages
+FROM `skin1004-319714.ad_data.meta data_test`
+```
+
+#### MT7. 페이지별 광고 수 순위
+```sql
+-- "페이지별 광고 수 순위" → page_name GROUP BY
+SELECT
+  page_name,
+  COUNT(*) AS ad_count
+FROM `skin1004-319714.ad_data.meta data_test`
+GROUP BY page_name
+ORDER BY ad_count DESC
+LIMIT 200
+```
+
+#### MT8. 최근 시작된 메타 광고
+```sql
+-- "최근 시작된 메타 광고" → start_date_formatted DESC 정렬
+SELECT *
+FROM `skin1004-319714.ad_data.meta data_test`
+ORDER BY start_date_formatted DESC
+LIMIT 100
 ```
 
 ---

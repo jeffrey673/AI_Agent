@@ -1,0 +1,3002 @@
+[
+  {
+    "id": "MC-001",
+    "query": "2025년 매체별 마케팅 비용 알려줘",
+    "category": "media_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-002",
+    "query": "2024년 매체별 마케팅 비용 합계",
+    "category": "media_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-003",
+    "query": "2025년 1분기 매체별 마케팅 비용",
+    "category": "media_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-004",
+    "query": "2024년 상반기 매체별 마케팅 비용",
+    "category": "media_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-005",
+    "query": "2025년 하반기 매체별 마케팅 비용",
+    "category": "media_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-006",
+    "query": "2024년 4분기 매체별 마케팅 비용",
+    "category": "media_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-007",
+    "query": "2025년 1월 매체별 마케팅 비용",
+    "category": "media_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-008",
+    "query": "2024년 6월 매체별 마케팅 비용",
+    "category": "media_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-009",
+    "query": "2025년 3월 매체별 마케팅 비용 순위",
+    "category": "media_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-010",
+    "query": "마케팅 비용이 가장 높은 매체는?",
+    "category": "media_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-011",
+    "query": "마케팅 비용이 가장 낮은 매체는?",
+    "category": "media_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-012",
+    "query": "매체별 마케팅 비용 비중",
+    "category": "media_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-013",
+    "query": "2025년 매체별 마케팅 비용 월별 추이",
+    "category": "media_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-014",
+    "query": "2024년 매체별 마케팅 비용 분기별 추이",
+    "category": "media_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-015",
+    "query": "매체별 마케팅 비용 전년 대비 증감",
+    "category": "media_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-016",
+    "query": "전체 마케팅 비용 중 상위 3개 매체",
+    "category": "media_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-017",
+    "query": "2025년 총 마케팅 비용",
+    "category": "media_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-018",
+    "query": "2024년 총 마케팅 비용 합계",
+    "category": "media_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-019",
+    "query": "매체별 평균 월 마케팅 비용",
+    "category": "media_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-020",
+    "query": "2025년 2분기 매체별 마케팅 비용",
+    "category": "media_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-021",
+    "query": "2024년 3분기 매체별 마케팅 비용",
+    "category": "media_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-022",
+    "query": "매체별 마케팅 비용 성장률",
+    "category": "media_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-023",
+    "query": "2025년 9월 매체별 마케팅 비용",
+    "category": "media_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-024",
+    "query": "2024년 12월 매체별 마케팅 비용",
+    "category": "media_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-025",
+    "query": "마케팅 비용 월별 증감 추이",
+    "category": "media_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-026",
+    "query": "마케팅 비용이 가장 많이 집행된 달",
+    "category": "media_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-027",
+    "query": "매체별 마케팅 비용 TOP 5",
+    "category": "media_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-028",
+    "query": "2025년 5월 매체별 비용 비교",
+    "category": "media_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-029",
+    "query": "2024년 8월 매체별 마케팅 비용",
+    "category": "media_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-030",
+    "query": "매체별 누적 마케팅 비용",
+    "category": "media_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-031",
+    "query": "마케팅팀 마케팅 비용 얼마야?",
+    "category": "team_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-032",
+    "query": "브랜드팀 마케팅 비용",
+    "category": "team_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-033",
+    "query": "영업팀 마케팅 비용",
+    "category": "team_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-034",
+    "query": "해외사업팀 마케팅 비용",
+    "category": "team_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-035",
+    "query": "디지털팀 마케팅 비용",
+    "category": "team_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-036",
+    "query": "2025년 팀별 마케팅 비용",
+    "category": "team_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-037",
+    "query": "2024년 팀별 마케팅 비용 비교",
+    "category": "team_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-038",
+    "query": "마케팅 비용이 가장 높은 팀은?",
+    "category": "team_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-039",
+    "query": "팀별 마케팅 비용 비중",
+    "category": "team_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-040",
+    "query": "2025년 1분기 팀별 마케팅 비용",
+    "category": "team_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-041",
+    "query": "2024년 상반기 팀별 마케팅 비용",
+    "category": "team_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-042",
+    "query": "팀별 마케팅 비용 월별 추이",
+    "category": "team_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-043",
+    "query": "마케팅팀 월별 비용 추이",
+    "category": "team_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-044",
+    "query": "브랜드팀 2025년 마케팅 비용",
+    "category": "team_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-045",
+    "query": "팀별 마케팅 비용 전년 대비 변화",
+    "category": "team_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-046",
+    "query": "2025년 3월 팀별 마케팅 비용",
+    "category": "team_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-047",
+    "query": "팀별 마케팅 비용 순위",
+    "category": "team_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-048",
+    "query": "마케팅팀 매체별 비용 분석",
+    "category": "team_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-049",
+    "query": "브랜드팀이 사용하는 매체별 비용",
+    "category": "team_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-050",
+    "query": "팀별 평균 마케팅 비용",
+    "category": "team_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-051",
+    "query": "팀별 마케팅 비용 증감률",
+    "category": "team_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-052",
+    "query": "2025년 4분기 팀별 마케팅 비용",
+    "category": "team_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-053",
+    "query": "해외사업팀 2024년 마케팅 비용",
+    "category": "team_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-054",
+    "query": "팀별 마케팅 비용 분기별 추이",
+    "category": "team_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-055",
+    "query": "마케팅팀 2025년 월별 비용 추이",
+    "category": "team_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-056",
+    "query": "팀별 국가별 마케팅 비용 분석",
+    "category": "team_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-057",
+    "query": "팀별 분야별 마케팅 비용",
+    "category": "team_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-058",
+    "query": "마케팅 비용 상위 팀 TOP 3",
+    "category": "team_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-059",
+    "query": "영업팀 월별 마케팅 비용 추이",
+    "category": "team_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-060",
+    "query": "디지털팀 2025년 1분기 마케팅 비용",
+    "category": "team_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-061",
+    "query": "국가별 마케팅 ROI 분석",
+    "category": "country_roi",
+    "tier": 1
+  },
+  {
+    "id": "MC-062",
+    "query": "인도네시아 마케팅 ROI",
+    "category": "country_roi",
+    "tier": 1
+  },
+  {
+    "id": "MC-063",
+    "query": "태국 마케팅 ROI",
+    "category": "country_roi",
+    "tier": 1
+  },
+  {
+    "id": "MC-064",
+    "query": "베트남 마케팅 ROI",
+    "category": "country_roi",
+    "tier": 1
+  },
+  {
+    "id": "MC-065",
+    "query": "필리핀 마케팅 ROI",
+    "category": "country_roi",
+    "tier": 1
+  },
+  {
+    "id": "MC-066",
+    "query": "말레이시아 마케팅 ROI",
+    "category": "country_roi",
+    "tier": 1
+  },
+  {
+    "id": "MC-067",
+    "query": "한국 마케팅 ROI",
+    "category": "country_roi",
+    "tier": 1
+  },
+  {
+    "id": "MC-068",
+    "query": "일본 마케팅 ROI",
+    "category": "country_roi",
+    "tier": 1
+  },
+  {
+    "id": "MC-069",
+    "query": "미국 마케팅 ROI",
+    "category": "country_roi",
+    "tier": 1
+  },
+  {
+    "id": "MC-070",
+    "query": "ROI가 가장 높은 국가는?",
+    "category": "country_roi",
+    "tier": 1
+  },
+  {
+    "id": "MC-071",
+    "query": "ROI가 가장 낮은 국가는?",
+    "category": "country_roi",
+    "tier": 1
+  },
+  {
+    "id": "MC-072",
+    "query": "국가별 마케팅 ROI 순위",
+    "category": "country_roi",
+    "tier": 1
+  },
+  {
+    "id": "MC-073",
+    "query": "2025년 국가별 마케팅 ROI",
+    "category": "country_roi",
+    "tier": 1
+  },
+  {
+    "id": "MC-074",
+    "query": "2024년 국가별 마케팅 ROI 비교",
+    "category": "country_roi",
+    "tier": 1
+  },
+  {
+    "id": "MC-075",
+    "query": "국가별 마케팅 비용 대비 매출 비율",
+    "category": "country_roi",
+    "tier": 1
+  },
+  {
+    "id": "MC-076",
+    "query": "동남아 국가 마케팅 ROI 비교",
+    "category": "country_roi",
+    "tier": 1
+  },
+  {
+    "id": "MC-077",
+    "query": "국가별 마케팅 ROI 월별 추이",
+    "category": "country_roi",
+    "tier": 1
+  },
+  {
+    "id": "MC-078",
+    "query": "인도네시아 마케팅 ROI 월별 변화",
+    "category": "country_roi",
+    "tier": 1
+  },
+  {
+    "id": "MC-079",
+    "query": "태국 마케팅 ROI 분기별 추이",
+    "category": "country_roi",
+    "tier": 1
+  },
+  {
+    "id": "MC-080",
+    "query": "국가별 마케팅 ROI 전년 대비 변화",
+    "category": "country_roi",
+    "tier": 1
+  },
+  {
+    "id": "MC-081",
+    "query": "인도네시아 vs 태국 마케팅 ROI 비교",
+    "category": "country_roi",
+    "tier": 1
+  },
+  {
+    "id": "MC-082",
+    "query": "한국 vs 일본 마케팅 ROI",
+    "category": "country_roi",
+    "tier": 1
+  },
+  {
+    "id": "MC-083",
+    "query": "ROI 100% 이상인 국가는?",
+    "category": "country_roi",
+    "tier": 1
+  },
+  {
+    "id": "MC-084",
+    "query": "국가별 마케팅 수익성 분석",
+    "category": "country_roi",
+    "tier": 1
+  },
+  {
+    "id": "MC-085",
+    "query": "싱가포르 마케팅 ROI",
+    "category": "country_roi",
+    "tier": 1
+  },
+  {
+    "id": "MC-086",
+    "query": "국가별 투자 대비 수익률 순위",
+    "category": "country_roi",
+    "tier": 1
+  },
+  {
+    "id": "MC-087",
+    "query": "2025년 1분기 국가별 ROI",
+    "category": "country_roi",
+    "tier": 1
+  },
+  {
+    "id": "MC-088",
+    "query": "국가별 마케팅 효율성 분석",
+    "category": "country_roi",
+    "tier": 1
+  },
+  {
+    "id": "MC-089",
+    "query": "마케팅 ROI 하위 국가 TOP 3",
+    "category": "country_roi",
+    "tier": 1
+  },
+  {
+    "id": "MC-090",
+    "query": "국가별 매출 대비 마케팅 비용 비율",
+    "category": "country_roi",
+    "tier": 1
+  },
+  {
+    "id": "MC-091",
+    "query": "2025년 월별 마케팅 비용 추이",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "MC-092",
+    "query": "2024년 월별 마케팅 비용 추이",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "MC-093",
+    "query": "마케팅 비용 월별 증감 추이",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "MC-094",
+    "query": "2025년 분기별 마케팅 비용",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "MC-095",
+    "query": "2024년 분기별 마케팅 비용 추이",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "MC-096",
+    "query": "마케팅 비용이 가장 많았던 월은?",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "MC-097",
+    "query": "마케팅 비용이 가장 적었던 월은?",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "MC-098",
+    "query": "2025년 1분기 vs 2분기 마케팅 비용",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "MC-099",
+    "query": "2024년 상반기 vs 하반기 마케팅 비용",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "MC-100",
+    "query": "월별 마케팅 비용 평균",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "MC-101",
+    "query": "2025년 마케팅 비용 전월 대비 증감률",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "MC-102",
+    "query": "마케팅 비용 YoY 비교",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "MC-103",
+    "query": "2024년 대비 2025년 마케팅 비용 증감",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "MC-104",
+    "query": "최근 6개월 마케팅 비용 추이",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "MC-105",
+    "query": "최근 3개월 마케팅 비용",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "MC-106",
+    "query": "2025년 누적 마케팅 비용",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "MC-107",
+    "query": "마케팅 비용 월별 성장률",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "MC-108",
+    "query": "2025년 상반기 마케팅 비용 총합",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "MC-109",
+    "query": "2024년 하반기 마케팅 비용 총합",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "MC-110",
+    "query": "마케팅 비용 전년 동기 대비 증감",
+    "category": "monthly_trend",
+    "tier": 1
+  },
+  {
+    "id": "MC-111",
+    "query": "분야별 마케팅 비용 분석",
+    "category": "field_analysis",
+    "tier": 1
+  },
+  {
+    "id": "MC-112",
+    "query": "2025년 분야별 마케팅 비용",
+    "category": "field_analysis",
+    "tier": 1
+  },
+  {
+    "id": "MC-113",
+    "query": "2024년 분야별 마케팅 비용 비교",
+    "category": "field_analysis",
+    "tier": 1
+  },
+  {
+    "id": "MC-114",
+    "query": "마케팅 비용이 가장 높은 분야는?",
+    "category": "field_analysis",
+    "tier": 1
+  },
+  {
+    "id": "MC-115",
+    "query": "분야별 마케팅 비용 비중",
+    "category": "field_analysis",
+    "tier": 1
+  },
+  {
+    "id": "MC-116",
+    "query": "분야별 마케팅 비용 월별 추이",
+    "category": "field_analysis",
+    "tier": 1
+  },
+  {
+    "id": "MC-117",
+    "query": "분야별 마케팅 비용 순위",
+    "category": "field_analysis",
+    "tier": 1
+  },
+  {
+    "id": "MC-118",
+    "query": "2025년 1분기 분야별 마케팅 비용",
+    "category": "field_analysis",
+    "tier": 1
+  },
+  {
+    "id": "MC-119",
+    "query": "분야별 마케팅 비용 전년 대비 증감",
+    "category": "field_analysis",
+    "tier": 1
+  },
+  {
+    "id": "MC-120",
+    "query": "분야별 마케팅 비용 TOP 5",
+    "category": "field_analysis",
+    "tier": 1
+  },
+  {
+    "id": "MC-121",
+    "query": "분야별 ROI 분석",
+    "category": "field_analysis",
+    "tier": 1
+  },
+  {
+    "id": "MC-122",
+    "query": "분야별 매출 대비 마케팅 비용",
+    "category": "field_analysis",
+    "tier": 1
+  },
+  {
+    "id": "MC-123",
+    "query": "분야별 마케팅 비용 분기별 추이",
+    "category": "field_analysis",
+    "tier": 1
+  },
+  {
+    "id": "MC-124",
+    "query": "분야별 마케팅 비용 평균",
+    "category": "field_analysis",
+    "tier": 1
+  },
+  {
+    "id": "MC-125",
+    "query": "분야별 마케팅 비용 성장률",
+    "category": "field_analysis",
+    "tier": 1
+  },
+  {
+    "id": "MC-126",
+    "query": "분야별 마케팅 비용이 가장 적은 분야",
+    "category": "field_analysis",
+    "tier": 1
+  },
+  {
+    "id": "MC-127",
+    "query": "2025년 5월 분야별 마케팅 비용",
+    "category": "field_analysis",
+    "tier": 1
+  },
+  {
+    "id": "MC-128",
+    "query": "분야별 국가별 마케팅 비용 분석",
+    "category": "field_analysis",
+    "tier": 1
+  },
+  {
+    "id": "MC-129",
+    "query": "분야별 팀별 마케팅 비용",
+    "category": "field_analysis",
+    "tier": 1
+  },
+  {
+    "id": "MC-130",
+    "query": "분야별 마케팅 비용 전년 동기 대비",
+    "category": "field_analysis",
+    "tier": 1
+  },
+  {
+    "id": "MC-131",
+    "query": "마케팅 비용 대비 매출 분석",
+    "category": "cost_vs_revenue",
+    "tier": 1
+  },
+  {
+    "id": "MC-132",
+    "query": "2025년 마케팅 비용 대비 매출",
+    "category": "cost_vs_revenue",
+    "tier": 1
+  },
+  {
+    "id": "MC-133",
+    "query": "2024년 마케팅 비용 대비 매출 비교",
+    "category": "cost_vs_revenue",
+    "tier": 1
+  },
+  {
+    "id": "MC-134",
+    "query": "매체별 마케팅 비용 대비 매출",
+    "category": "cost_vs_revenue",
+    "tier": 1
+  },
+  {
+    "id": "MC-135",
+    "query": "팀별 마케팅 비용 대비 매출",
+    "category": "cost_vs_revenue",
+    "tier": 1
+  },
+  {
+    "id": "MC-136",
+    "query": "국가별 마케팅 비용 대비 매출",
+    "category": "cost_vs_revenue",
+    "tier": 1
+  },
+  {
+    "id": "MC-137",
+    "query": "마케팅 비용 대비 매출 월별 추이",
+    "category": "cost_vs_revenue",
+    "tier": 1
+  },
+  {
+    "id": "MC-138",
+    "query": "마케팅 효율이 가장 높은 매체",
+    "category": "cost_vs_revenue",
+    "tier": 1
+  },
+  {
+    "id": "MC-139",
+    "query": "마케팅 비용 대비 매출 비율 순위",
+    "category": "cost_vs_revenue",
+    "tier": 1
+  },
+  {
+    "id": "MC-140",
+    "query": "2025년 1분기 마케팅 비용 대비 매출",
+    "category": "cost_vs_revenue",
+    "tier": 1
+  },
+  {
+    "id": "MC-141",
+    "query": "마케팅 비용 대비 매출 전년 대비 변화",
+    "category": "cost_vs_revenue",
+    "tier": 1
+  },
+  {
+    "id": "MC-142",
+    "query": "마케팅 비용 대비 매출이 가장 좋은 국가",
+    "category": "cost_vs_revenue",
+    "tier": 1
+  },
+  {
+    "id": "MC-143",
+    "query": "매체별 마케팅 비용 대비 매출 비율",
+    "category": "cost_vs_revenue",
+    "tier": 1
+  },
+  {
+    "id": "MC-144",
+    "query": "마케팅 투자 대비 수익 분석",
+    "category": "cost_vs_revenue",
+    "tier": 1
+  },
+  {
+    "id": "MC-145",
+    "query": "2025년 마케팅 ROI 월별 추이",
+    "category": "cost_vs_revenue",
+    "tier": 1
+  },
+  {
+    "id": "MC-146",
+    "query": "분야별 마케팅 비용 대비 매출",
+    "category": "cost_vs_revenue",
+    "tier": 1
+  },
+  {
+    "id": "MC-147",
+    "query": "마케팅 비용 대비 매출 분기별 추이",
+    "category": "cost_vs_revenue",
+    "tier": 1
+  },
+  {
+    "id": "MC-148",
+    "query": "마케팅 투자 효율성 분석",
+    "category": "cost_vs_revenue",
+    "tier": 1
+  },
+  {
+    "id": "MC-149",
+    "query": "비용 대비 매출 하위 매체 TOP 3",
+    "category": "cost_vs_revenue",
+    "tier": 1
+  },
+  {
+    "id": "MC-150",
+    "query": "마케팅 비용 1원당 매출 비교",
+    "category": "cost_vs_revenue",
+    "tier": 1
+  },
+  {
+    "id": "MC-151",
+    "query": "팀별 마케팅 비용 비교",
+    "category": "team_comparison",
+    "tier": 1
+  },
+  {
+    "id": "MC-152",
+    "query": "2025년 팀별 마케팅 비용 순위",
+    "category": "team_comparison",
+    "tier": 1
+  },
+  {
+    "id": "MC-153",
+    "query": "2024년 팀별 마케팅 비용 순위",
+    "category": "team_comparison",
+    "tier": 1
+  },
+  {
+    "id": "MC-154",
+    "query": "팀별 마케팅 비용 비중 분석",
+    "category": "team_comparison",
+    "tier": 1
+  },
+  {
+    "id": "MC-155",
+    "query": "마케팅팀 vs 브랜드팀 비용 비교",
+    "category": "team_comparison",
+    "tier": 1
+  },
+  {
+    "id": "MC-156",
+    "query": "마케팅팀 vs 영업팀 비용",
+    "category": "team_comparison",
+    "tier": 1
+  },
+  {
+    "id": "MC-157",
+    "query": "팀별 매체 활용 비교",
+    "category": "team_comparison",
+    "tier": 1
+  },
+  {
+    "id": "MC-158",
+    "query": "팀별 마케팅 비용 효율성 비교",
+    "category": "team_comparison",
+    "tier": 1
+  },
+  {
+    "id": "MC-159",
+    "query": "팀별 마케팅 비용 증감률 비교",
+    "category": "team_comparison",
+    "tier": 1
+  },
+  {
+    "id": "MC-160",
+    "query": "팀별 마케팅 비용 월별 추이 비교",
+    "category": "team_comparison",
+    "tier": 1
+  },
+  {
+    "id": "MC-161",
+    "query": "가장 비용이 높은 매체 TOP 3",
+    "category": "top_media",
+    "tier": 1
+  },
+  {
+    "id": "MC-162",
+    "query": "마케팅 비용 상위 매체 순위",
+    "category": "top_media",
+    "tier": 1
+  },
+  {
+    "id": "MC-163",
+    "query": "2025년 비용이 가장 높은 매체",
+    "category": "top_media",
+    "tier": 1
+  },
+  {
+    "id": "MC-164",
+    "query": "2024년 비용이 가장 높은 매체",
+    "category": "top_media",
+    "tier": 1
+  },
+  {
+    "id": "MC-165",
+    "query": "매체 비용 TOP 10",
+    "category": "top_media",
+    "tier": 1
+  },
+  {
+    "id": "MC-166",
+    "query": "비용 증가율이 가장 높은 매체",
+    "category": "top_media",
+    "tier": 1
+  },
+  {
+    "id": "MC-167",
+    "query": "비용 감소가 가장 큰 매체",
+    "category": "top_media",
+    "tier": 1
+  },
+  {
+    "id": "MC-168",
+    "query": "2025년 1분기 비용 상위 매체",
+    "category": "top_media",
+    "tier": 1
+  },
+  {
+    "id": "MC-169",
+    "query": "국가별 비용이 가장 높은 매체",
+    "category": "top_media",
+    "tier": 1
+  },
+  {
+    "id": "MC-170",
+    "query": "팀별 비용이 가장 높은 매체",
+    "category": "top_media",
+    "tier": 1
+  },
+  {
+    "id": "MC-171",
+    "query": "매체별 구매수 분석",
+    "category": "purchases",
+    "tier": 1
+  },
+  {
+    "id": "MC-172",
+    "query": "2025년 매체별 구매수",
+    "category": "purchases",
+    "tier": 1
+  },
+  {
+    "id": "MC-173",
+    "query": "2024년 매체별 구매수 비교",
+    "category": "purchases",
+    "tier": 1
+  },
+  {
+    "id": "MC-174",
+    "query": "구매수가 가장 많은 매체는?",
+    "category": "purchases",
+    "tier": 1
+  },
+  {
+    "id": "MC-175",
+    "query": "매체별 구매수 월별 추이",
+    "category": "purchases",
+    "tier": 1
+  },
+  {
+    "id": "MC-176",
+    "query": "매체별 구매수 순위",
+    "category": "purchases",
+    "tier": 1
+  },
+  {
+    "id": "MC-177",
+    "query": "국가별 구매수",
+    "category": "purchases",
+    "tier": 1
+  },
+  {
+    "id": "MC-178",
+    "query": "2025년 1분기 매체별 구매수",
+    "category": "purchases",
+    "tier": 1
+  },
+  {
+    "id": "MC-179",
+    "query": "매체별 구매 전환율",
+    "category": "purchases",
+    "tier": 1
+  },
+  {
+    "id": "MC-180",
+    "query": "매체별 CPA (구매당 비용)",
+    "category": "purchases",
+    "tier": 1
+  },
+  {
+    "id": "MC-181",
+    "query": "구매수 전년 대비 증감",
+    "category": "purchases",
+    "tier": 1
+  },
+  {
+    "id": "MC-182",
+    "query": "팀별 구매수 비교",
+    "category": "purchases",
+    "tier": 1
+  },
+  {
+    "id": "MC-183",
+    "query": "분야별 구매수",
+    "category": "purchases",
+    "tier": 1
+  },
+  {
+    "id": "MC-184",
+    "query": "2025년 3월 매체별 구매수",
+    "category": "purchases",
+    "tier": 1
+  },
+  {
+    "id": "MC-185",
+    "query": "구매수 증가율이 가장 높은 매체",
+    "category": "purchases",
+    "tier": 1
+  },
+  {
+    "id": "MC-186",
+    "query": "국가별 구매수 순위",
+    "category": "purchases",
+    "tier": 1
+  },
+  {
+    "id": "MC-187",
+    "query": "매체별 구매수 분기별 추이",
+    "category": "purchases",
+    "tier": 1
+  },
+  {
+    "id": "MC-188",
+    "query": "구매당 평균 비용 비교",
+    "category": "purchases",
+    "tier": 1
+  },
+  {
+    "id": "MC-189",
+    "query": "월별 전체 구매수 추이",
+    "category": "purchases",
+    "tier": 1
+  },
+  {
+    "id": "MC-190",
+    "query": "2025년 총 구매수",
+    "category": "purchases",
+    "tier": 1
+  },
+  {
+    "id": "MC-191",
+    "query": "매체별 ROAS 분석",
+    "category": "roas",
+    "tier": 1
+  },
+  {
+    "id": "MC-192",
+    "query": "2025년 매체별 ROAS",
+    "category": "roas",
+    "tier": 1
+  },
+  {
+    "id": "MC-193",
+    "query": "2024년 매체별 ROAS 비교",
+    "category": "roas",
+    "tier": 1
+  },
+  {
+    "id": "MC-194",
+    "query": "ROAS가 가장 높은 매체는?",
+    "category": "roas",
+    "tier": 1
+  },
+  {
+    "id": "MC-195",
+    "query": "ROAS가 가장 낮은 매체는?",
+    "category": "roas",
+    "tier": 1
+  },
+  {
+    "id": "MC-196",
+    "query": "매체별 ROAS 월별 추이",
+    "category": "roas",
+    "tier": 1
+  },
+  {
+    "id": "MC-197",
+    "query": "매체별 ROAS 순위",
+    "category": "roas",
+    "tier": 1
+  },
+  {
+    "id": "MC-198",
+    "query": "국가별 ROAS",
+    "category": "roas",
+    "tier": 1
+  },
+  {
+    "id": "MC-199",
+    "query": "2025년 1분기 매체별 ROAS",
+    "category": "roas",
+    "tier": 1
+  },
+  {
+    "id": "MC-200",
+    "query": "매체별 ROAS 전년 대비 변화",
+    "category": "roas",
+    "tier": 1
+  },
+  {
+    "id": "MC-201",
+    "query": "팀별 ROAS 비교",
+    "category": "roas",
+    "tier": 1
+  },
+  {
+    "id": "MC-202",
+    "query": "분야별 ROAS",
+    "category": "roas",
+    "tier": 1
+  },
+  {
+    "id": "MC-203",
+    "query": "ROAS 100% 이상인 매체",
+    "category": "roas",
+    "tier": 1
+  },
+  {
+    "id": "MC-204",
+    "query": "매체별 ROAS 분기별 추이",
+    "category": "roas",
+    "tier": 1
+  },
+  {
+    "id": "MC-205",
+    "query": "ROAS 증가율이 가장 높은 매체",
+    "category": "roas",
+    "tier": 1
+  },
+  {
+    "id": "MC-206",
+    "query": "인도네시아 매체별 ROAS",
+    "category": "roas",
+    "tier": 1
+  },
+  {
+    "id": "MC-207",
+    "query": "태국 매체별 ROAS",
+    "category": "roas",
+    "tier": 1
+  },
+  {
+    "id": "MC-208",
+    "query": "한국 매체별 ROAS",
+    "category": "roas",
+    "tier": 1
+  },
+  {
+    "id": "MC-209",
+    "query": "전체 평균 ROAS",
+    "category": "roas",
+    "tier": 1
+  },
+  {
+    "id": "MC-210",
+    "query": "ROAS 하위 매체 TOP 3",
+    "category": "roas",
+    "tier": 1
+  },
+  {
+    "id": "MC-211",
+    "query": "국가별 마케팅 비용",
+    "category": "country_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-212",
+    "query": "2025년 국가별 마케팅 비용",
+    "category": "country_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-213",
+    "query": "2024년 국가별 마케팅 비용 비교",
+    "category": "country_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-214",
+    "query": "마케팅 비용이 가장 높은 국가는?",
+    "category": "country_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-215",
+    "query": "국가별 마케팅 비용 순위",
+    "category": "country_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-216",
+    "query": "국가별 마케팅 비용 비중",
+    "category": "country_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-217",
+    "query": "인도네시아 마케팅 비용",
+    "category": "country_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-218",
+    "query": "태국 마케팅 비용",
+    "category": "country_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-219",
+    "query": "베트남 마케팅 비용",
+    "category": "country_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-220",
+    "query": "한국 마케팅 비용",
+    "category": "country_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-221",
+    "query": "일본 마케팅 비용",
+    "category": "country_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-222",
+    "query": "미국 마케팅 비용",
+    "category": "country_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-223",
+    "query": "필리핀 마케팅 비용",
+    "category": "country_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-224",
+    "query": "말레이시아 마케팅 비용",
+    "category": "country_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-225",
+    "query": "싱가포르 마케팅 비용",
+    "category": "country_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-226",
+    "query": "국가별 마케팅 비용 월별 추이",
+    "category": "country_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-227",
+    "query": "인도네시아 마케팅 비용 월별 추이",
+    "category": "country_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-228",
+    "query": "태국 마케팅 비용 분기별 추이",
+    "category": "country_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-229",
+    "query": "국가별 마케팅 비용 전년 대비 증감",
+    "category": "country_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-230",
+    "query": "인도네시아 vs 태국 마케팅 비용",
+    "category": "country_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-231",
+    "query": "한국 vs 일본 마케팅 비용",
+    "category": "country_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-232",
+    "query": "동남아 국가별 마케팅 비용 순위",
+    "category": "country_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-233",
+    "query": "국가별 매체별 마케팅 비용 분석",
+    "category": "country_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-234",
+    "query": "인도네시아 매체별 마케팅 비용",
+    "category": "country_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-235",
+    "query": "태국 매체별 마케팅 비용",
+    "category": "country_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-236",
+    "query": "국가별 마케팅 비용 증가율 순위",
+    "category": "country_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-237",
+    "query": "2025년 1분기 국가별 마케팅 비용",
+    "category": "country_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-238",
+    "query": "국가별 평균 마케팅 비용",
+    "category": "country_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-239",
+    "query": "국가별 마케팅 비용 하위 3개국",
+    "category": "country_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-240",
+    "query": "국가별 마케팅 비용 분포",
+    "category": "country_cost",
+    "tier": 1
+  },
+  {
+    "id": "MC-241",
+    "query": "매체별 노출수 분석",
+    "category": "impressions",
+    "tier": 1
+  },
+  {
+    "id": "MC-242",
+    "query": "2025년 매체별 노출수",
+    "category": "impressions",
+    "tier": 1
+  },
+  {
+    "id": "MC-243",
+    "query": "2024년 매체별 노출수 비교",
+    "category": "impressions",
+    "tier": 1
+  },
+  {
+    "id": "MC-244",
+    "query": "노출수가 가장 많은 매체는?",
+    "category": "impressions",
+    "tier": 1
+  },
+  {
+    "id": "MC-245",
+    "query": "매체별 노출수 월별 추이",
+    "category": "impressions",
+    "tier": 1
+  },
+  {
+    "id": "MC-246",
+    "query": "매체별 CPM (1000회 노출 비용)",
+    "category": "impressions",
+    "tier": 1
+  },
+  {
+    "id": "MC-247",
+    "query": "국가별 노출수 비교",
+    "category": "impressions",
+    "tier": 1
+  },
+  {
+    "id": "MC-248",
+    "query": "2025년 1분기 매체별 노출수",
+    "category": "impressions",
+    "tier": 1
+  },
+  {
+    "id": "MC-249",
+    "query": "노출수 전년 대비 증감",
+    "category": "impressions",
+    "tier": 1
+  },
+  {
+    "id": "MC-250",
+    "query": "매체별 노출수 순위",
+    "category": "impressions",
+    "tier": 1
+  },
+  {
+    "id": "MC-251",
+    "query": "매체별 클릭수 분석",
+    "category": "clicks",
+    "tier": 1
+  },
+  {
+    "id": "MC-252",
+    "query": "2025년 매체별 클릭수",
+    "category": "clicks",
+    "tier": 1
+  },
+  {
+    "id": "MC-253",
+    "query": "2024년 매체별 클릭수 비교",
+    "category": "clicks",
+    "tier": 1
+  },
+  {
+    "id": "MC-254",
+    "query": "클릭수가 가장 많은 매체는?",
+    "category": "clicks",
+    "tier": 1
+  },
+  {
+    "id": "MC-255",
+    "query": "매체별 클릭수 월별 추이",
+    "category": "clicks",
+    "tier": 1
+  },
+  {
+    "id": "MC-256",
+    "query": "매체별 CPC (클릭당 비용)",
+    "category": "clicks",
+    "tier": 1
+  },
+  {
+    "id": "MC-257",
+    "query": "매체별 CTR (클릭률)",
+    "category": "clicks",
+    "tier": 1
+  },
+  {
+    "id": "MC-258",
+    "query": "국가별 클릭수 비교",
+    "category": "clicks",
+    "tier": 1
+  },
+  {
+    "id": "MC-259",
+    "query": "2025년 1분기 매체별 클릭수",
+    "category": "clicks",
+    "tier": 1
+  },
+  {
+    "id": "MC-260",
+    "query": "클릭수 전년 대비 증감",
+    "category": "clicks",
+    "tier": 1
+  },
+  {
+    "id": "MC-261",
+    "query": "매체별 매출 분석",
+    "category": "revenue",
+    "tier": 1
+  },
+  {
+    "id": "MC-262",
+    "query": "2025년 매체별 매출",
+    "category": "revenue",
+    "tier": 1
+  },
+  {
+    "id": "MC-263",
+    "query": "2024년 매체별 매출 비교",
+    "category": "revenue",
+    "tier": 1
+  },
+  {
+    "id": "MC-264",
+    "query": "매출이 가장 높은 매체는?",
+    "category": "revenue",
+    "tier": 1
+  },
+  {
+    "id": "MC-265",
+    "query": "매체별 매출 월별 추이",
+    "category": "revenue",
+    "tier": 1
+  },
+  {
+    "id": "MC-266",
+    "query": "국가별 매출",
+    "category": "revenue",
+    "tier": 1
+  },
+  {
+    "id": "MC-267",
+    "query": "2025년 1분기 매체별 매출",
+    "category": "revenue",
+    "tier": 1
+  },
+  {
+    "id": "MC-268",
+    "query": "매출 전년 대비 증감",
+    "category": "revenue",
+    "tier": 1
+  },
+  {
+    "id": "MC-269",
+    "query": "매체별 매출 순위",
+    "category": "revenue",
+    "tier": 1
+  },
+  {
+    "id": "MC-270",
+    "query": "팀별 매출 비교",
+    "category": "revenue",
+    "tier": 1
+  },
+  {
+    "id": "MC-271",
+    "query": "마케팅 비용 데이터에 어떤 팀이 있어?",
+    "category": "general",
+    "tier": 1
+  },
+  {
+    "id": "MC-272",
+    "query": "마케팅 비용 데이터에 어떤 매체가 있어?",
+    "category": "general",
+    "tier": 1
+  },
+  {
+    "id": "MC-273",
+    "query": "마케팅 비용 데이터에 어떤 국가가 있어?",
+    "category": "general",
+    "tier": 1
+  },
+  {
+    "id": "MC-274",
+    "query": "마케팅 비용 데이터에 어떤 분야가 있어?",
+    "category": "general",
+    "tier": 1
+  },
+  {
+    "id": "MC-275",
+    "query": "마케팅 비용 데이터 날짜 범위",
+    "category": "general",
+    "tier": 1
+  },
+  {
+    "id": "MC-276",
+    "query": "가장 최근 마케팅 비용 데이터 날짜",
+    "category": "general",
+    "tier": 1
+  },
+  {
+    "id": "MC-277",
+    "query": "마케팅 비용 데이터 총 건수",
+    "category": "general",
+    "tier": 1
+  },
+  {
+    "id": "MC-278",
+    "query": "마케팅 비용 전체 요약 리포트",
+    "category": "general",
+    "tier": 1
+  },
+  {
+    "id": "MC-279",
+    "query": "2025년 마케팅 비용 요약",
+    "category": "general",
+    "tier": 1
+  },
+  {
+    "id": "MC-280",
+    "query": "마케팅 비용 전체 현황 분석",
+    "category": "general",
+    "tier": 1
+  },
+  {
+    "id": "MC-281",
+    "query": "인도네시아 2025년 팀별 마케팅 비용",
+    "category": "combined",
+    "tier": 1
+  },
+  {
+    "id": "MC-282",
+    "query": "태국 매체별 마케팅 ROI",
+    "category": "combined",
+    "tier": 1
+  },
+  {
+    "id": "MC-283",
+    "query": "마케팅팀 국가별 마케팅 비용",
+    "category": "combined",
+    "tier": 1
+  },
+  {
+    "id": "MC-284",
+    "query": "브랜드팀 매체별 마케팅 비용",
+    "category": "combined",
+    "tier": 1
+  },
+  {
+    "id": "MC-285",
+    "query": "2025년 1분기 인도네시아 마케팅 비용",
+    "category": "combined",
+    "tier": 1
+  },
+  {
+    "id": "MC-286",
+    "query": "2024년 상반기 태국 매체별 마케팅 비용",
+    "category": "combined",
+    "tier": 1
+  },
+  {
+    "id": "MC-287",
+    "query": "마케팅팀 2025년 1분기 마케팅 비용",
+    "category": "combined",
+    "tier": 1
+  },
+  {
+    "id": "MC-288",
+    "query": "국가별 분야별 마케팅 비용 분석",
+    "category": "combined",
+    "tier": 1
+  },
+  {
+    "id": "MC-289",
+    "query": "팀별 국가별 ROAS 비교",
+    "category": "combined",
+    "tier": 1
+  },
+  {
+    "id": "MC-290",
+    "query": "매체별 분야별 마케팅 비용",
+    "category": "combined",
+    "tier": 1
+  },
+  {
+    "id": "MC-291",
+    "query": "인도네시아 마케팅 비용 대비 매출 분석",
+    "category": "combined",
+    "tier": 1
+  },
+  {
+    "id": "MC-292",
+    "query": "2025년 3월 팀별 매체별 마케팅 비용",
+    "category": "combined",
+    "tier": 1
+  },
+  {
+    "id": "MC-293",
+    "query": "국가별 매체별 구매수 비교",
+    "category": "combined",
+    "tier": 1
+  },
+  {
+    "id": "MC-294",
+    "query": "팀별 매체별 ROAS 비교",
+    "category": "combined",
+    "tier": 1
+  },
+  {
+    "id": "MC-295",
+    "query": "분야별 국가별 ROI 분석",
+    "category": "combined",
+    "tier": 1
+  },
+  {
+    "id": "MC-296",
+    "query": "인도네시아 마케팅 비용 매체별 분석 및 ROI",
+    "category": "combined",
+    "tier": 1
+  },
+  {
+    "id": "MC-297",
+    "query": "2025년 팀별 국가별 마케팅 비용 상세",
+    "category": "combined",
+    "tier": 1
+  },
+  {
+    "id": "MC-298",
+    "query": "마케팅 비용 전체 대시보드 요약",
+    "category": "combined",
+    "tier": 1
+  },
+  {
+    "id": "MC-299",
+    "query": "2025년 마케팅 비용 종합 분석 리포트",
+    "category": "combined",
+    "tier": 1
+  },
+  {
+    "id": "MC-300",
+    "query": "마케팅 투자 효율성 종합 분석",
+    "category": "combined",
+    "tier": 1
+  },
+  {
+    "id": "MC-301",
+    "query": "간단하게 분야별 마케팅 비용이 가장 적은 분야",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-302",
+    "query": "마케팅 비용 데이터에 어떤 분야가 있어 어때?",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-303",
+    "query": "국가별 투자 대비 수익률 TOP 보여줘",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-304",
+    "query": "2024년 매체별 마케팅 비용금액 분기별 변화",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-305",
+    "query": "2024년 6월 매체별 마케팅 지출",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-306",
+    "query": "노출 횟수 전년 대비 증감",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-307",
+    "query": "클릭수가 가장 높은 매체는?",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-308",
+    "query": "요즘 2025년 5월 매체별 비용 비교 어떻게 되나요?",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-309",
+    "query": "ROAS가 가장 낮은 매체는 확인 부탁드립니다",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-310",
+    "query": "마케팅 투자 효율성 분석 확인 가능한가요?",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-311",
+    "query": "팀별 구매수 비교 알려주세요",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-312",
+    "query": "마케팅 비용 대비 세일즈 분석해줘",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-313",
+    "query": "2025년 1월 매체별 마케팅 비용 알려주세요",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-314",
+    "query": "2025년 매체별 마케팅 비용 달별 추이 좀 봐줘",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-315",
+    "query": "요즘 매체별 분야별 마케팅 비용",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-316",
+    "query": "국가 기준 매체별 마케팅 비용 분석 알려주세요",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-317",
+    "query": "매체별 ROAS 매월 트렌드",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-318",
+    "query": "빠르게 국가별 2024년 마케팅 ROI 비교?",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-319",
+    "query": "마케팅 경비이 가장 높은 매체는?",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-320",
+    "query": "매체별 임프레션 월간 추이",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-321",
+    "query": "인니 매체별 ROAS",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-322",
+    "query": "비용금액 대비 매출 하위 매체 TOP 3?",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-323",
+    "query": "우리 회사 브랜드팀 2025년 마케팅 비용 알려주세요",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-324",
+    "query": "마케팅 비용 데이터 총 건수 얼마임?",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-325",
+    "query": "혹시 2024년 매체별 구매수 비교 어떻게 되나요?",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-326",
+    "query": "요즘 2025년 팀별 나라별 마캐팅 지출 상세 좀",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-327",
+    "query": "빠르게 팀 기준 평균 마케팅 비용",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-328",
+    "query": "베트남 마케팅 경비",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-329",
+    "query": "요즘 12월 2024년 매체별 마케팅 비용",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-330",
+    "query": "마케팅 비용금액 전체 대시보드 요약",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-331",
+    "query": "팀별 마케팅 비용 월별 트렌드",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-332",
+    "query": "마캐팅 비용 대비 매출 비율 순위",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-333",
+    "query": "마케팅팀 vs 브랜드팀 비용 대비",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-334",
+    "query": "참고로 클릭수 전년 대비 증감",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-335",
+    "query": "잠깐, 2024년 매체별 노출 건수 비교 확인 부탁드립니다",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-336",
+    "query": "참고로 팀 기준 마케팅 비용 분기별 추이",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-337",
+    "query": "비용금액 감소가 가장 큰 매체 정리해줘",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-338",
+    "query": "마케팅 비용이 가장 높은 팀은 알려주시면 감사하겠습니다",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-339",
+    "query": "ROI가 가장 높은 국가는 몇이야?",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-340",
+    "query": "빠르게 총 2025년 마캐팅 비용",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-341",
+    "query": "인도네시아 vs 태국 마케팅 ROI 비교 파악해줘",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-342",
+    "query": "매체별 마케팅 비용 대비 매상 비율",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-343",
+    "query": "빠르게 팀별 매체별 ROAS 비교 알려주시면 감사하겠습니다",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-344",
+    "query": "팀 기준 마케팅 비용 증감률 알려주세요",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-345",
+    "query": "2025년 3월 매체별 마케팅 경비 순위 보여줘 확인 부탁드립니다",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-346",
+    "query": "2025년 총 구매수 좀 알려줘",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-347",
+    "query": "2025년 총 마케팅 예산",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-348",
+    "query": "2025년 매체별 구매수 확인해줘",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-349",
+    "query": "국가별 마케팅 비용 하위 3개국 알고 싶어 어떻게 되나요?",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-350",
+    "query": "매체별 노출수 월별 추이 좀 알려줘",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-351",
+    "query": "인도네시아 마케팅 비용금액 알 수 있을까요?",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-352",
+    "query": "동남아 국가별 마케팅 비용 순위 보여줘",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-353",
+    "query": "마캐팅 투자 효율성 분석",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-354",
+    "query": "1분기 2025년 매체별 매축 알려주세요",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-355",
+    "query": "마케팅 예산 1원당 수익 비교 확인 가능한가요?",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-356",
+    "query": "태국 마케팅 비용 분기별 추이 알려주세요",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-357",
+    "query": "요즘 동남아 국가 마케팅 ROI 비교",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-358",
+    "query": "타이 마케팅 ROI 분기별 변화",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-359",
+    "query": "빠르게 비용이 2025년 가장 높은 매체",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-360",
+    "query": "간단하게 한국 매체별 ROAS",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-361",
+    "query": "각 팀 비용이 가장 높은 매체",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-362",
+    "query": "매체별 분야별 마케팅 비용 보여줘 어떻게 되나요?",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-363",
+    "query": "팀별 마케팅 비용금액 효율성 비교 분석 알려주세요",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-364",
+    "query": "가장 최근 마케팅 비용 데이터 날짜 확인 가능한가요?",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-365",
+    "query": "2025년 매체별 매출 얼마임?",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-366",
+    "query": "분야별 마캐팅 비용 대비 매출액 부탁드려요",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-367",
+    "query": "2024년 국가 기준 마케팅 비용 대비 좀 봐줘 부탁드려요",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-368",
+    "query": "요즘 2025년 1분기 마케팅 비용 대비 매출 좀 알려줘",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-369",
+    "query": "우리 회사 마케팅팀 vs 영업팀 비용",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-370",
+    "query": "2025년 매체별 노출 횟수",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-371",
+    "query": "분야별 마케팅 예산이 가장 적은 분야",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-372",
+    "query": "노출수가 가장 많은 매체는 어떻게 되나요?",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-373",
+    "query": "나라별 마케팅 예산 대비 매출금액 비율",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-374",
+    "query": "요즘 매출금액이 가장 높은 매체는?",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-375",
+    "query": "마케팅팀 vs 브렌드팀 예산 대조",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-376",
+    "query": "해외사업팀 2024년 마케팅 지출",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-377",
+    "query": "마케팅 비용 데이터에 어떤 국가가 있어",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-378",
+    "query": "2025년 3월 매체별 마케팅 예산 순위",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-379",
+    "query": "혹시 마케팅 ROI 하위 국가 TOP 3",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-380",
+    "query": "팀별 마캐팅 비용 효율성 비교 분석 확인 가능한가요?",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-381",
+    "query": "마캐팅팀 마케팅 비용 얼마야?",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-382",
+    "query": "2025년 누적 마케팅 비용 부탁",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-383",
+    "query": "2025년 팀별 나라별 마케팅 비용 상세 좀 봐줘",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-384",
+    "query": "2025년 마케팅 ROI 매월 변동",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-385",
+    "query": "2024년 분기별 마케팅 비용 추이 알려주세요",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-386",
+    "query": "가장 비용금액이 높은 매체 TOP 3 알려주세요",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-387",
+    "query": "마케팅팀 월별 비용 변화 확인 부탁드립니다",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-388",
+    "query": "2025년 팀별 마케팅 비용 보여줘 확인 가능한가요?",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-389",
+    "query": "요즘 브랜드팀 2025년 마케팅 경비 알고 싶어 확인 부탁드립니다",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-390",
+    "query": "분야별 마케팅 비용 TOP 5 알려주시면 감사하겠습니다",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-391",
+    "query": "노출수가 가장 많은 매체는 알려주세요",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-392",
+    "query": "분야별 팀 기준 마캐팅 비용 확인 가능한가요?",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-393",
+    "query": "2025년 1분기 비용금액 상위 매체 확인 부탁드립니다",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-394",
+    "query": "각 팀 마케팅 비용 비교 좀",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-395",
+    "query": "요즘 국가 기준 마케팅 ROI 분석",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-396",
+    "query": "빠르게 2025년 매체별 클릭수",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-397",
+    "query": "마케팅 비용 데이터 총 건수 부탁드려요",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-398",
+    "query": "잠깐, 구매수 전년 대비 증감",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-399",
+    "query": "마케팅 2025년 비용 종합 살펴봐줘 리포트 좀 알려줘",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-400",
+    "query": "잠깐, 브렌드팀 2025년 마캐팅 비용 정리해줘",
+    "category": "marketing_cost",
+    "tier": 2
+  },
+  {
+    "id": "MC-401",
+    "query": "매체별 2024년 마케팅 비용금액 분기별 변화",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-402",
+    "query": "각 팀 마케팅 비용 비중",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-403",
+    "query": "요즘 우리 회사 브랜드팀 2025년 마캐팅 비용 알려주세요",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-404",
+    "query": "나라별 투자 대비 수익률 TOP 보여줘 어떻게 되나요?",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-405",
+    "query": "궁금한데 마케팅 지출 데이터에 어떤 분야가 있어 어때 알려주세요",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-406",
+    "query": "마캐팅 지출 전년 동기 대비 증감",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-407",
+    "query": "2025년 1월 매체별 마캐팅 비용 알려주세요",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-408",
+    "query": "참고로 팀 기준 마케팅 지출 분기별 추이",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-409",
+    "query": "혹시 2024년 매체별 구매수 비교 어떻게 되나요",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-410",
+    "query": "국가별 마케팅 경비 하위 3개국 알고 싶어 어떻게 되나요",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-411",
+    "query": "2025년 1분기 마케팅 비용금액 대비 매출",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-412",
+    "query": "2025년 1분기 마케팅 비용 대비 매출 좀 봐줘",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-413",
+    "query": "간단하게 국가별 매체별 구매수 비교",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-414",
+    "query": "마케팅 지출이 가장 높은 팀은 알려주시면 감사하겠습니다",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-415",
+    "query": "마케팅팀 매체별 지출 분석 좀 알려주세요",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-416",
+    "query": "간단하게 2025년 1분기 마케팅 비용 대비 매출 정리해줘",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-417",
+    "query": "빠르게 베트남 마케팅 경비",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-418",
+    "query": "구매수가 최다 매체는 확인 가능한가요?",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-419",
+    "query": "국가별 마케팅 비용 하위 3개국 알고 싶어 어떻게 되나요",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-420",
+    "query": "2025년 팀별 각 나라 마케팅 비용 상세",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-421",
+    "query": "마케팅 비용금액 데이터 총 건수 얼마임?",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-422",
+    "query": "마캐팅 지출 전년 동기 대비 증감 어떻게 되나요?",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-423",
+    "query": "마케팅 비용이 가장 낮은 매체는",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-424",
+    "query": "마케팅 예산 데이터 날짜 범위",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-425",
+    "query": "팀 기준 마케팅 비용 증감률 알려주세요 알 수 있을까요?",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-426",
+    "query": "분야별 마캐팅 비용 월별 추이 부탁드려요",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-427",
+    "query": "2024년 6월 매체별 마케팅 지출 좀 좀 알려줘",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-428",
+    "query": "궁금한데 참고로 팀 기준 마케팅 비용 분기별 추이",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-429",
+    "query": "참고로 팀 기준 마케팅 예산 분기별 추이",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-430",
+    "query": "인도네시아 vs 타이 마케팅 ROI 비교 파악해줘 알려주시면 감사하겠습니다",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-431",
+    "query": "빠르게 2025년 각 팀 국가별 마케팅 비용 상세",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-432",
+    "query": "요즘 클릭수가 가장 높은 매체는? 부탁 알려주시면 감사하겠습니다",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-433",
+    "query": "2024년 매체별 구매수 비교 확인해줘 알려주시면 감사하겠습니다",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-434",
+    "query": "2024년 매체별 구매수 비교 빨리",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-435",
+    "query": "2025년 총 구매수 좀 알려주세요",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-436",
+    "query": "빠르게 나라별 2024년 마케팅 ROI 비교? 확인해줘",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-437",
+    "query": "혹시 간단하게 분야별 마캐팅 비용이 가장 적은 분야",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-438",
+    "query": "정확한 빠르게 팀 기준 평균 마케팅 비용",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-439",
+    "query": "우리 회사 팀 기준 마케팅 비용 증감률 알려주세요",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-440",
+    "query": "2025년 총 구매수 좀 체크해줘",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-441",
+    "query": "확인 좀 해줘 매체별 클릭수 분석 좀",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-442",
+    "query": "매체별 클릭수 월별 추세 알려주세요",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-443",
+    "query": "마케팅 비용 데이터 총 건수 알려주시면 감사하겠습니다",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-444",
+    "query": "요즘 12월 2024년 매체별 마캐팅 경비",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-445",
+    "query": "2025년 매체별 마캐팅 비용 달별 추이 좀 봐줘",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-446",
+    "query": "마케팅 경비이 가장 높은 팀은 알려주시면 감사하겠습니다",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-447",
+    "query": "각 나라 투자 대비 수익률 TOP 보여줘",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-448",
+    "query": "매체별 노출 건수 파악해줘 정리해줘 확인 가능한가요?",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-449",
+    "query": "혹시 ROAS가 가장 낮은 매체는 확인 부탁드립니다",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-450",
+    "query": "베트남 마케팅 경비 정리해줘 알려주시면 감사하겠습니다",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-451",
+    "query": "정확한 ROI가 가장 높은 국가는 몇이야? 정리해줘",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-452",
+    "query": "마캐팅 지출 데이터에 어떤 매체가 있어 부탁드려요",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-453",
+    "query": "국가별 투자 대비 수익률 순위 확인 부탁드립니다",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-454",
+    "query": "팀 기준 구매수 비교 알려주세요",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-455",
+    "query": "혹시 매체별 2024년 구매수 대조 어떻게 되나요?",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-456",
+    "query": "매체별 마케팅 경비 대비 매상 비율",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-457",
+    "query": "2025년 1월 매체별 마케팅 경비 알려주세요",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-458",
+    "query": "마캐팅팀 vs 브랜드팀 경비 대비 좀 알려줘",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-459",
+    "query": "매체별 마케팅 예산 대비 매상 비율",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-460",
+    "query": "각 팀 구매수 비교 파악해줘 알려주세요",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-461",
+    "query": "2025년 매체별 마케팅 비용 달별 트렌드 좀 봐줘 어떻게 되나요?",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-462",
+    "query": "비용금액 증가율이 가장 높은 매체 알고 싶어",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-463",
+    "query": "간단하게 2025년 1분기 매체별 클릭수",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-464",
+    "query": "2025년 누적 마케팅 비용 알려주세요",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-465",
+    "query": "간단하게 요즘 12월 매체별 2024년 마케팅 비용 빨리 몇이야?",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-466",
+    "query": "팀 기준 마케팅 경비 증감률 알려줘",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-467",
+    "query": "매체별 클릭수 월간 변동",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-468",
+    "query": "마케팅 경비 데이터 총 건수",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-469",
+    "query": "나라별 투자 대비 수익률 TOP 보여줄래",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-470",
+    "query": "우리 회사 팀별 마케팅 경비 증감률",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-471",
+    "query": "매체별 ROAS 전년 대비 변화 알려줄래?",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-472",
+    "query": "마케팅 경비 데이터에 어떤 매체가 있어?",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-473",
+    "query": "요즘 2025년 5월 매체별 비용 비교 어떻게 되나요",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-474",
+    "query": "매체별 노출수 달별 흐름 좀 체크해줘",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-475",
+    "query": "간단하게 2025년 총 마케팅 예산",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-476",
+    "query": "빠르게 팀 기준 매체별 ROAS 대비 알려주시면 감사하겠습니다",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-477",
+    "query": "ROAS가 가장 낮은 매체는 확인 부탁드립니다 확인 가능한가요?",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-478",
+    "query": "잠깐, 2024년 팀별 마케팅 지출 순위",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-479",
+    "query": "확인 좀 해줘 매체별 마케팅 비용 대비 매상 비율 좀 알려줘",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-480",
+    "query": "마케팅 비용 데이터에 어떤 분야가 있어 어때 부탁드려요",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-481",
+    "query": "간단하게 2025년 1월 매체별 마케팅 비용 알려주세요 확인 가능한가요?",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-482",
+    "query": "요즘 매체별 클릭수 월별 추이",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-483",
+    "query": "베트남 마캐팅 경비 부탁 어때?",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-484",
+    "query": "인도네시아 마케팅 경비 대비 매축 분석 알려주세요",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-485",
+    "query": "요즘 2024년 매체별 마케팅 비용금액 분기별 변화",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-486",
+    "query": "정확한 ROAS가 가장 낮은 매체는 확인 부탁드립니다",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-487",
+    "query": "국가별 투자 대비 수익률 TOP 보여줘 보여줘",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-488",
+    "query": "우리 회사 말레이시아 마케팅 비용",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-489",
+    "query": "빠르게 매체별 ROAS 매월 트렌드",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-490",
+    "query": "참고로 마케팅 경비이 가장 높은 매체는?",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-491",
+    "query": "간단하게 클릭수가 가장 높은 매체는 알려주세요",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-492",
+    "query": "1분기 2025년 팀별 마케팅 비용",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-493",
+    "query": "잠깐, 각 팀 마케팅 비용금액 비중 알려주세요",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-494",
+    "query": "베트남 마케팅 예산 알고 싶어 부탁드려요",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-495",
+    "query": "2025년 총 마케팅 예산 알려주세요",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-496",
+    "query": "간단하게 마캐팅 비용 대비 세일즈 분석 좀해줘 확인 부탁드립니다",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-497",
+    "query": "마캐팅 지출 대비 매출 비율 순위 알려주세요",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-498",
+    "query": "마케팅 투자 효율성 살펴봐줘 확인 가능한가요?",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-499",
+    "query": "마케팅 비용이 가장 높은 팀은 알려주시면 감사하겠습니다 확인 가능한가요?",
+    "category": "marketing_cost",
+    "tier": 3
+  },
+  {
+    "id": "MC-500",
+    "query": "경비 증가율이 가장 높은 매체",
+    "category": "marketing_cost",
+    "tier": 3
+  }
+]

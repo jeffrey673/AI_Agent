@@ -1,26 +1,41 @@
-"""Conversation CRUD API for chat history."""
+"""Conversation CRUD API for chat history (MariaDB)."""
 
-from datetime import datetime, timezone
+import asyncio
+import uuid
 from typing import List, Optional
 
 import structlog
 from fastapi import APIRouter, Depends, HTTPException
 from pydantic import BaseModel
-from sqlalchemy.orm import Session
 
 from app.api.auth_middleware import get_current_user
-from app.db.database import get_db
-from app.db.models import Conversation, Message, User
+from app.db.mariadb import fetch_all, fetch_one, execute, execute_lastid
+from app.db.models import User
 
 logger = structlog.get_logger(__name__)
 
 conversation_router = APIRouter(prefix="/api/conversations", tags=["conversations"])
 
 
-# ---------- Schemas ----------
+# ── Async DB wrappers ──
+
+async def _db_fetch_all(sql: str, params: tuple = ()) -> list[dict]:
+    return await asyncio.to_thread(fetch_all, sql, params)
+
+async def _db_fetch_one(sql: str, params: tuple = ()):
+    return await asyncio.to_thread(fetch_one, sql, params)
+
+async def _db_execute(sql: str, params: tuple = ()) -> int:
+    return await asyncio.to_thread(execute, sql, params)
+
+async def _db_execute_lastid(sql: str, params: tuple = ()) -> int:
+    return await asyncio.to_thread(execute_lastid, sql, params)
+
+
+# ── Schemas ──
 
 class MessageOut(BaseModel):
-    id: str
+    id: int
     role: str
     content: str
     created_at: str
@@ -54,31 +69,30 @@ class AddMessageRequest(BaseModel):
     content: str
 
 
-# ---------- Helpers ----------
+# ── Helpers ──
 
-def _fmt_dt(dt: datetime) -> str:
+def _fmt_dt(dt) -> str:
     if dt is None:
         return ""
-    return dt.isoformat()
+    return str(dt)
 
 
-# ---------- Endpoints ----------
+# ── Endpoints ──
 
 @conversation_router.get("")
 async def list_conversations(
     user: User = Depends(get_current_user),
-    db: Session = Depends(get_db),
 ) -> List[ConversationListItem]:
     """List all conversations for the current user (newest first)."""
-    convos = (
-        db.query(Conversation)
-        .filter(Conversation.user_id == user.id)
-        .order_by(Conversation.updated_at.desc())
-        .all()
+    convos = await _db_fetch_all(
+        "SELECT id, title, model, updated_at FROM conversations "
+        "WHERE user_id = %s ORDER BY updated_at DESC",
+        (user.id,),
     )
     return [
         ConversationListItem(
-            id=c.id, title=c.title, model=c.model, updated_at=_fmt_dt(c.updated_at)
+            id=c["id"], title=c["title"], model=c["model"],
+            updated_at=_fmt_dt(c["updated_at"]),
         )
         for c in convos
     ]
@@ -88,19 +102,20 @@ async def list_conversations(
 async def create_conversation(
     req: CreateConversationRequest,
     user: User = Depends(get_current_user),
-    db: Session = Depends(get_db),
 ) -> ConversationListItem:
     """Create a new conversation."""
-    convo = Conversation(
-        user_id=user.id,
-        title=req.title or "New Chat",
-        model=req.model or "skin1004-ai",
+    convo_id = str(uuid.uuid4())
+    await _db_execute(
+        "INSERT INTO conversations (id, user_id, title, model) VALUES (%s, %s, %s, %s)",
+        (convo_id, user.id, req.title or "New Chat", req.model or "skin1004-ai"),
     )
-    db.add(convo)
-    db.commit()
-    db.refresh(convo)
+    convo = await _db_fetch_one(
+        "SELECT id, title, model, updated_at FROM conversations WHERE id = %s",
+        (convo_id,),
+    )
     return ConversationListItem(
-        id=convo.id, title=convo.title, model=convo.model, updated_at=_fmt_dt(convo.updated_at)
+        id=convo["id"], title=convo["title"], model=convo["model"],
+        updated_at=_fmt_dt(convo["updated_at"]),
     )
 
 
@@ -108,24 +123,27 @@ async def create_conversation(
 async def get_conversation(
     convo_id: str,
     user: User = Depends(get_current_user),
-    db: Session = Depends(get_db),
 ) -> ConversationDetail:
     """Get a conversation with all messages."""
-    convo = (
-        db.query(Conversation)
-        .filter(Conversation.id == convo_id, Conversation.user_id == user.id)
-        .first()
+    convo = await _db_fetch_one(
+        "SELECT id, title, model FROM conversations WHERE id = %s AND user_id = %s",
+        (convo_id, user.id),
     )
     if not convo:
         raise HTTPException(status_code=404, detail="Conversation not found")
 
+    messages = await _db_fetch_all(
+        "SELECT id, role, content, created_at FROM messages "
+        "WHERE conversation_id = %s ORDER BY created_at",
+        (convo_id,),
+    )
     return ConversationDetail(
-        id=convo.id,
-        title=convo.title,
-        model=convo.model,
+        id=convo["id"],
+        title=convo["title"],
+        model=convo["model"],
         messages=[
-            MessageOut(id=m.id, role=m.role, content=m.content, created_at=_fmt_dt(m.created_at))
-            for m in convo.messages
+            MessageOut(id=m["id"], role=m["role"], content=m["content"], created_at=_fmt_dt(m["created_at"]))
+            for m in messages
         ],
     )
 
@@ -135,21 +153,20 @@ async def update_conversation(
     convo_id: str,
     req: UpdateConversationRequest,
     user: User = Depends(get_current_user),
-    db: Session = Depends(get_db),
 ):
     """Update conversation title."""
-    convo = (
-        db.query(Conversation)
-        .filter(Conversation.id == convo_id, Conversation.user_id == user.id)
-        .first()
+    convo = await _db_fetch_one(
+        "SELECT id FROM conversations WHERE id = %s AND user_id = %s",
+        (convo_id, user.id),
     )
     if not convo:
         raise HTTPException(status_code=404, detail="Conversation not found")
 
     if req.title is not None:
-        convo.title = req.title
-    convo.updated_at = datetime.now(timezone.utc)
-    db.commit()
+        await _db_execute(
+            "UPDATE conversations SET title = %s, updated_at = NOW() WHERE id = %s",
+            (req.title, convo_id),
+        )
     return {"ok": True}
 
 
@@ -157,19 +174,17 @@ async def update_conversation(
 async def delete_conversation(
     convo_id: str,
     user: User = Depends(get_current_user),
-    db: Session = Depends(get_db),
 ):
     """Delete a conversation and all its messages."""
-    convo = (
-        db.query(Conversation)
-        .filter(Conversation.id == convo_id, Conversation.user_id == user.id)
-        .first()
+    convo = await _db_fetch_one(
+        "SELECT id FROM conversations WHERE id = %s AND user_id = %s",
+        (convo_id, user.id),
     )
     if not convo:
         raise HTTPException(status_code=404, detail="Conversation not found")
 
-    db.delete(convo)
-    db.commit()
+    await _db_execute("DELETE FROM messages WHERE conversation_id = %s", (convo_id,))
+    await _db_execute("DELETE FROM conversations WHERE id = %s", (convo_id,))
     return {"ok": True}
 
 
@@ -178,32 +193,33 @@ async def add_message(
     convo_id: str,
     req: AddMessageRequest,
     user: User = Depends(get_current_user),
-    db: Session = Depends(get_db),
 ):
     """Add a message to a conversation."""
-    convo = (
-        db.query(Conversation)
-        .filter(Conversation.id == convo_id, Conversation.user_id == user.id)
-        .first()
+    convo = await _db_fetch_one(
+        "SELECT id, title FROM conversations WHERE id = %s AND user_id = %s",
+        (convo_id, user.id),
     )
     if not convo:
         raise HTTPException(status_code=404, detail="Conversation not found")
 
-    msg = Message(
-        conversation_id=convo_id,
-        role=req.role,
-        content=req.content,
+    msg_id = await _db_execute_lastid(
+        "INSERT INTO messages (conversation_id, role, content) VALUES (%s, %s, %s)",
+        (convo_id, req.role, req.content),
     )
-    db.add(msg)
 
     # Auto-title: use first user message as title if still default
-    if convo.title in ("New Chat", "새 대화") and req.role == "user":
+    if convo["title"] in ("New Chat", "새 대화") and req.role == "user":
         title = req.content[:60]
         if len(req.content) > 60:
             title += "..."
-        convo.title = title
+        await _db_execute(
+            "UPDATE conversations SET title = %s, updated_at = NOW() WHERE id = %s",
+            (title, convo_id),
+        )
+    else:
+        await _db_execute(
+            "UPDATE conversations SET updated_at = NOW() WHERE id = %s", (convo_id,)
+        )
 
-    convo.updated_at = datetime.now(timezone.utc)
-    db.commit()
-    db.refresh(msg)
-    return MessageOut(id=msg.id, role=msg.role, content=msg.content, created_at=_fmt_dt(msg.created_at))
+    msg = await _db_fetch_one("SELECT id, role, content, created_at FROM messages WHERE id = %s", (msg_id,))
+    return MessageOut(id=msg["id"], role=msg["role"], content=msg["content"], created_at=_fmt_dt(msg["created_at"]))
