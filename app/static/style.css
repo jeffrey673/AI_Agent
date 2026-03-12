@@ -1062,17 +1062,26 @@ html.light .login-card .logo { mix-blend-mode: multiply; }
 
 /* Chart container */
 .chart-container {
-  margin: 12px 0;
-  background: var(--bg-input);
-  border-radius: var(--radius-sm);
+  margin: 16px 0;
+  border-radius: 12px;
   padding: 16px;
+  transition: box-shadow 0.2s ease;
+}
+
+.chart-container:hover {
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+}
+
+.dark .chart-container:hover {
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
 }
 
 .chart-container canvas {
-  max-height: 400px;
+  width: 100% !important;
+  height: 100% !important;
 }
 
-/* Chart images (Plotly PNG) inside messages */
+/* Chart images (legacy Plotly PNG) inside messages */
 .message-content img {
   max-width: 100%;
   height: auto;

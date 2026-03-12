@@ -870,17 +870,75 @@
 
     try {
       var config = JSON.parse(chartMatch[1]);
+      var isDark = document.documentElement.classList.contains("dark");
+
+      // Theme-aware colors
+      var textColor = isDark ? "rgba(255,255,255,0.85)" : "rgba(0,0,0,0.75)";
+      var gridColor = isDark ? "rgba(255,255,255,0.08)" : "rgba(0,0,0,0.06)";
+      var tooltipBg = isDark ? "rgba(30,30,30,0.95)" : "rgba(0,0,0,0.85)";
+
+      // Apply theme to config
+      if (config.options) {
+        // Title
+        if (config.options.plugins && config.options.plugins.title) {
+          config.options.plugins.title.color = textColor;
+        }
+        // Legend
+        if (config.options.plugins && config.options.plugins.legend && config.options.plugins.legend.labels) {
+          config.options.plugins.legend.labels.color = textColor;
+        }
+        // Tooltip
+        if (config.options.plugins && config.options.plugins.tooltip) {
+          config.options.plugins.tooltip.backgroundColor = tooltipBg;
+        }
+        // Scales
+        if (config.options.scales) {
+          ["x", "y"].forEach(function(axis) {
+            if (config.options.scales[axis]) {
+              if (config.options.scales[axis].ticks) {
+                config.options.scales[axis].ticks.color = textColor;
+              }
+              if (config.options.scales[axis].grid) {
+                config.options.scales[axis].grid.color = gridColor;
+              }
+              if (config.options.scales[axis].title) {
+                config.options.scales[axis].title.color = textColor;
+              }
+            }
+          });
+        }
+      }
+
+      // Create chart container with modern styling
       var chartDiv = document.createElement("div");
       chartDiv.className = "chart-container";
-      var canvas = document.createElement("canvas");
-      chartDiv.appendChild(canvas);
-      container.appendChild(chartDiv);
-      new Chart(canvas.getContext("2d"), config);
+      chartDiv.style.cssText = "position:relative;width:100%;max-width:720px;margin:16px auto;padding:16px;border-radius:12px;background:" + (isDark ? "rgba(255,255,255,0.04)" : "rgba(0,0,0,0.02)") + ";border:1px solid " + (isDark ? "rgba(255,255,255,0.08)" : "rgba(0,0,0,0.06)") + ";";
 
-      var pre = container.querySelector("pre code");
-      if (pre && pre.textContent.includes('"type"') && pre.textContent.includes('"data"')) {
-        pre.closest("pre").style.display = "none";
+      // Canvas with responsive height
+      var canvas = document.createElement("canvas");
+      var isHorizontal = config.options && config.options.indexAxis === "y";
+      var labelCount = config.data && config.data.labels ? config.data.labels.length : 5;
+      var h = isHorizontal ? Math.max(300, labelCount * 36 + 100) : 380;
+      chartDiv.style.height = h + "px";
+      chartDiv.appendChild(canvas);
+
+      // Insert before the code block that contains the config
+      var pres = container.querySelectorAll("pre");
+      var inserted = false;
+      for (var i = 0; i < pres.length; i++) {
+        var code = pres[i].querySelector("code");
+        if (code && code.textContent.indexOf('"type"') !== -1 && code.textContent.indexOf('"data"') !== -1) {
+          pres[i].style.display = "none";
+          pres[i].parentNode.insertBefore(chartDiv, pres[i]);
+          inserted = true;
+          break;
+        }
       }
+      if (!inserted) {
+        container.appendChild(chartDiv);
+      }
+
+      new Chart(canvas.getContext("2d"), config);
     } catch (e) {
       console.warn("Chart render failed:", e);
     }

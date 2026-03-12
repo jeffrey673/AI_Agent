@@ -601,11 +601,12 @@ def _build_smart_preview(results: list, query: str) -> str:
 
 
 def _try_generate_chart(llm, query: str, sql: str, result_preview: str, results: list) -> str:
-    """Attempt to generate a chart for the SQL results.
+    """Attempt to generate an interactive chart for the SQL results.
 
-    Returns markdown/HTML string with interactive chart, or empty string.
+    Returns a ```chart-config``` markdown block with Chart.js JSON, or empty string.
+    The frontend renders this interactively with animations and tooltips.
     """
-    from app.core.chart import generate_chart, get_chart_config_prompt
+    from app.core.chart import build_chartjs_config, get_chart_config_prompt
 
     try:
         config_prompt = get_chart_config_prompt(query, sql, result_preview, len(results))
@@ -619,14 +620,11 @@ def _try_generate_chart(llm, query: str, sql: str, result_preview: str, results:
 
         logger.info("chart_requested", chart_type=config.get("chart_type"), group_column=config.get("group_column"))
 
-        # Generate PNG chart
-        filename = generate_chart(config, results)
-        if filename:
-            # Use relative path so charts work from any host (localhost, IP, domain)
-            chart_url = f"/static/charts/{filename}"
-            logger.info("chart_url_generated", url=chart_url)
-            return f"\n\n![chart]({chart_url})"
-        logger.warning("chart_generate_returned_none")
+        # Build Chart.js config JSON (rendered interactively by frontend)
+        chartjs_json = build_chartjs_config(config, results)
+        if chartjs_json:
+            return f"\n\n```chart-config\n{chartjs_json}\n```"
+        logger.warning("chartjs_config_returned_none")
         return ""
     except Exception as e:
         logger.error("chart_generation_skipped", error=str(e), error_type=type(e).__name__)

@@ -470,8 +470,7 @@ class OrchestratorAgent:
             _maintenance_warning = f"\n\n> ⚠️ 참고: 데이터 테이블이 업데이트 중일 수 있습니다. 수치가 부정확하면 잠시 후 다시 조회해주세요."
             logger.info("maintenance_soft_warning", reason=mm.reason)
         try:
-            # Trim context for SQL — only last 5 turns needed (reduces prompt size ~80%)
-            sql_context = _build_conversation_context(messages, max_turns=5) if messages else ""
+            sql_context = _build_conversation_context(messages) if messages else ""
             answer = await run_sql_agent(
                 query,
                 conversation_context=sql_context,
