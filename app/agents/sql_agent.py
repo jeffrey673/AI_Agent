@@ -480,7 +480,7 @@ def format_answer(state: AgentState) -> Dict[str, Any]:
 간결하게: 1) 데이터 없음 안내 2) 어떤 조건이 문제인지 3) 대안 질문 2개. 한국어."""
             with concurrent.futures.ThreadPoolExecutor(max_workers=1) as pool:
                 f = pool.submit(empty_llm.generate, empty_prompt, None, 0.3)
-                answer = f.result(timeout=5.0)
+                answer = f.result(timeout=2.0)
             if answer and len(answer) > 30:
                 return {"answer": answer}
         except (concurrent.futures.TimeoutError, Exception):

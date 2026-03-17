@@ -385,6 +385,17 @@
       });
     }
 
+    // Empty state
+    if (filtered.length === 0) {
+      var empty = document.createElement("div");
+      empty.className = "convo-empty";
+      empty.innerHTML = searchFilter
+        ? '<span class="convo-empty-icon">🔍</span>검색 결과가 없습니다'
+        : '<span class="convo-empty-icon">💬</span>새 대화를 시작해보세요';
+      convoList.appendChild(empty);
+      return;
+    }
+
     // Group by date
     var groups = groupByDate(filtered);
     var groupLabels = {
@@ -1212,6 +1223,18 @@
 
   function scrollToBottom() {
     chatMessages.scrollTop = chatMessages.scrollHeight;
+  }
+
+  // Scroll-to-bottom button (appears when scrolled up)
+  var btnScrollBottom = document.getElementById("btn-scroll-bottom");
+  if (btnScrollBottom) {
+    chatMessages.addEventListener("scroll", function () {
+      var distFromBottom = chatMessages.scrollHeight - chatMessages.scrollTop - chatMessages.clientHeight;
+      btnScrollBottom.style.display = distFromBottom > 200 ? "flex" : "none";
+    });
+    btnScrollBottom.addEventListener("click", function () {
+      chatMessages.scrollTo({ top: chatMessages.scrollHeight, behavior: "smooth" });
+    });
   }
 
   // ===== Theme =====

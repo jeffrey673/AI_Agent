@@ -581,6 +581,20 @@ html.light .login-card .logo { mix-blend-mode: multiply; }
   padding: 4px 8px;
 }
 
+/* Empty conversation list */
+.convo-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 16px;
+  color: var(--text-muted);
+  font-size: 13px;
+  text-align: center;
+  gap: 4px;
+}
+.convo-empty-icon { font-size: 24px; display: block; margin-bottom: 4px; }
+
 /* Date group headers (오늘, 어제, 지난 7일, etc.) */
 .convo-group-header {
   font-size: 11px;
@@ -928,6 +942,11 @@ html.light .login-card .logo { mix-blend-mode: multiply; }
   border-color: var(--accent);
   color: var(--accent);
   background: var(--bg-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(232, 146, 0, 0.15);
+}
+.chat-welcome .suggestion-chip:active {
+  transform: translateY(0);
 }
 
 /* Message bubbles */
@@ -1063,6 +1082,37 @@ html.light .login-card .logo { mix-blend-mode: multiply; }
   background: color-mix(in srgb, var(--accent) 8%, var(--bg));
 }
 
+/* Scroll-to-bottom button */
+.scroll-to-bottom {
+  position: absolute;
+  bottom: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--bg-sidebar);
+  color: var(--text-secondary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  transition: all 0.2s ease;
+  animation: fadeInUp 0.2s ease;
+}
+.scroll-to-bottom:hover {
+  background: var(--accent);
+  color: #000;
+  border-color: var(--accent);
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateX(-50%) translateY(8px); }
+  to { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
 /* Source footer (AI 생성 답변 / 조회 기준) */
 .message-assistant .message-content em:last-of-type {
   display: block;
@@ -1126,7 +1176,7 @@ pre:hover .code-copy-btn { opacity: 1; }
 }
 
 .typing-indicator span {
-  width: 8px; height: 8px;
+  width: 10px; height: 10px;
   border-radius: 50%;
   background: var(--accent);
   animation: typing-bounce 1.4s infinite both;

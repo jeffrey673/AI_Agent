@@ -21,7 +21,7 @@ logger = structlog.get_logger(__name__)
 # --- Retry Helper ---
 
 _MAX_RETRIES = 3
-_RETRY_DELAYS = [0.3, 0.8, 2]  # seconds (exponential backoff, faster recovery)
+_RETRY_DELAYS = [0.1, 0.3, 1.0]  # seconds (aggressive backoff, fastest recovery)
 
 
 def _is_retryable(error: Exception) -> bool:
