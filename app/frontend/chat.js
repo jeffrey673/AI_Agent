@@ -498,8 +498,21 @@
     });
   }
 
+  function _showSkeleton() {
+    chatMessages.innerHTML = "";
+    chatWelcome.style.display = "none";
+    var skel = document.createElement("div");
+    skel.className = "skeleton-container";
+    skel.innerHTML =
+      '<div class="skeleton-msg"><div class="skeleton-line w70"></div><div class="skeleton-line w40"></div></div>' +
+      '<div class="skeleton-msg right"><div class="skeleton-line w50"></div></div>' +
+      '<div class="skeleton-msg"><div class="skeleton-line w80"></div><div class="skeleton-line w60"></div><div class="skeleton-line w30"></div></div>';
+    chatMessages.appendChild(skel);
+  }
+
   async function loadConversation(id) {
     try {
+      _showSkeleton();
       var resp = await fetch("/api/conversations/" + id);
       if (!resp.ok) return;
       var data = await resp.json();

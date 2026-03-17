@@ -1168,6 +1168,39 @@ pre:hover .code-copy-btn { opacity: 1; }
 }
 .source-badge svg { flex-shrink: 0; opacity: 0.7; }
 
+/* Skeleton loader (conversation loading) */
+@keyframes skeleton-shimmer {
+  0% { background-position: -600px 0; }
+  100% { background-position: 600px 0; }
+}
+.skeleton-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.skeleton-msg {
+  margin-bottom: 20px;
+}
+.skeleton-msg.right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.skeleton-line {
+  height: 14px;
+  background: linear-gradient(90deg, var(--bg-hover) 25%, var(--bg-input) 50%, var(--bg-hover) 75%);
+  background-size: 600px 100%;
+  animation: skeleton-shimmer 1.8s infinite;
+  border-radius: 6px;
+  margin: 6px 0;
+}
+.skeleton-line.w30 { width: 30%; }
+.skeleton-line.w40 { width: 40%; }
+.skeleton-line.w50 { width: 50%; }
+.skeleton-line.w60 { width: 60%; }
+.skeleton-line.w70 { width: 70%; }
+.skeleton-line.w80 { width: 80%; }
+
 /* Typing indicator */
 .typing-indicator {
   display: flex;
