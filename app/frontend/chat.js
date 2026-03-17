@@ -150,24 +150,6 @@
       userAvatar.textContent = (currentUser.name || "U").charAt(0).toUpperCase();
       var welcomeName = document.getElementById("welcome-user-name");
       if (welcomeName) welcomeName.textContent = currentUser.name;
-      // Time-aware greeting
-      var welcomeSub = document.querySelector(".welcome-sub");
-      if (welcomeSub) {
-        var h = new Date().getHours();
-        var greetings = [
-          { min: 5, max: 11, text: "좋은 아침이에요 ☀️", sub: "오늘도 좋은 하루 되세요" },
-          { min: 12, max: 17, text: "좋은 오후에요 🌤️", sub: "무엇이든 물어보세요" },
-          { min: 18, max: 21, text: "좋은 저녁이에요 🌙", sub: "오늘 하루 수고하셨어요" },
-          { min: 22, max: 4, text: "늦은 시간이네요 🌃", sub: "무리하지 마세요" },
-        ];
-        var g = greetings.find(function (g) {
-          return h >= 22 || h <= 4
-            ? (g.min === 22)
-            : (h >= g.min && h <= g.max);
-        }) || greetings[1];
-        welcomeSub.textContent = g.text;
-        welcomeSub.title = g.sub;
-      }
     } catch (e) {
       window.location.href = "/login";
       return;
