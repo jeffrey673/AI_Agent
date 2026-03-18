@@ -55,6 +55,14 @@ def _get_orchestrator():
 router = APIRouter()
 
 
+@router.get("/debug/route")
+async def debug_route(q: str = "test"):
+    """Temporary debug endpoint — returns routing classification."""
+    o = _get_orchestrator()
+    route = o._keyword_classify(q)
+    return {"query": q, "route": route}
+
+
 @router.get("/dashboard")
 async def dashboard():
     """Serve the Dashboard Hub page."""
@@ -123,13 +131,9 @@ async def chat_completions(http_request: Request, request: ChatCompletionRequest
     model_type = resolve_model_type(request.model)
 
     # Build conversation history for context continuity
-    # Truncate to last 50 messages (25 turns) for deeper conversation memory
+    # No message limit — Gemini 2.5 Flash supports 1M token context
     # Strip images from older messages to keep payload small
-    MAX_CONTEXT_MESSAGES = 50
     raw_messages = list(request.messages)
-    if len(raw_messages) > MAX_CONTEXT_MESSAGES + 1:
-        # Always keep the last message (current query) + recent history
-        raw_messages = raw_messages[-(MAX_CONTEXT_MESSAGES + 1):]
 
     messages_for_context = []
     for idx, m in enumerate(raw_messages):

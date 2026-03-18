@@ -691,8 +691,7 @@ def format_answer(state: AgentState) -> Dict[str, Any]:
             if not inserted:
                 answer = answer + f"\n\n#### 시각화\n{chart_markdown}"
 
-        if len(results) >= 10000:
-            answer += f"\n\n<details><summary>실행된 쿼리</summary>\n\n```sql\n{sql}\n```\n</details>"
+        answer += f"\n\n<details><summary>실행된 쿼리</summary>\n\n```sql\n{sql}\n```\n</details>"
 
         return {"answer": answer}
     except Exception as e:

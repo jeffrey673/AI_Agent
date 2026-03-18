@@ -203,17 +203,19 @@
      - "최근 리뷰" → `ORDER BY collect_date DESC LIMIT 20`
      - "전체 리뷰 수" → `SELECT COUNT(*) FROM ...` (raw 반환 금지)
      - LIMIT 없이 전체 스캔 절대 금지!
-   - **메타 광고 테이블** (meta data_test):
+   - **메타 광고 테이블** (meta data_test) — ⚠️ QA 82건 검증 반영:
      - `LIMIT 200` 필수 (풀스캔 금지)
-     - 집계 위주: COUNT, SUM, AVG 사용 권장
-     - **WHERE 조건 주의**: "국가별", "유형별", "전체" 등 집계 질문에는 `WHERE brand = 'skin1004'` 넣지 마라! 전체 데이터를 GROUP BY로 집계해야 함
-     - **국가명은 반드시 영어**: country_name = 'South Korea' (O), '한국' (X). country_code도 사용 가능 (예: 'KR', 'TH', 'VN')
-     - **"SKIN1004 + 국가" 질문만** brand 조건 사용: WHERE country_name = '...' AND brand = 'skin1004'
-     - **publisher_platform은 리스트 형태**: LIKE '%facebook%' 또는 LIKE '%instagram%' 사용 (= 비교 금지)
-     - **ad_type**: 공식계정(official) / 파트너십(partnership) 정보만 있음. 이미지/비디오 유형은 snapshot 컬럼 참조
-     - **이미지/비디오 구분**: snapshot JSON 컬럼에서 `JSON_EXTRACT(snapshot, '$.cards[0].original_image_url')` 등으로 확인
-     - **날짜 정렬**: start_date_formatted 컬럼 사용, ORDER BY start_date_formatted DESC
-     - **활성/비활성 비교**: GROUP BY is_active로 집계 (brand별 X)
+     - **brand 값은 전부 소문자!** `brand = 'skin1004'` ✅ | `brand LIKE '%SKIN1004%'` ❌ (대문자로 조회하면 0건!)
+     - **전체 집계 질문에 brand WHERE 넣지 마라!** "국가별", "유형별", "전체 현황" → WHERE brand 없이 GROUP BY
+     - **"SKIN1004 + 국가" 질문만** brand 조건: `WHERE country_name = '...' AND brand = 'skin1004'`
+     - **publisher_platform은 리스트!** `LOWER(publisher_platform) LIKE '%facebook%'` ✅ | `= 'Facebook'` ❌ (0건!)
+     - **정확한 플랫폼 카운팅**: `UNNEST(JSON_EXTRACT_ARRAY(publisher_platform)) AS platform`
+     - **국가명은 반드시 영어**: 'South Korea' ✅ | '한국' ❌
+     - **이미지/비디오 = snapshot**: `JSON_VALUE(snapshot, '$.display_format') = 'VIDEO'`. ad_type은 official/partnership 구분!
+     - **날짜 필터**: `DATE(start_date_formatted) >= DATE_SUB(...)` — TIMESTAMP이므로 DATE() 래핑 필수!
+     - **start_date(FLOAT) 사용 금지** → start_date_formatted(TIMESTAMP) 사용
+     - **최근 광고 리스트**: null/unknown brand 제외, `WHERE brand IS NOT NULL AND brand != 'unknown'`
+     - **간단하게!** "한국 SKIN1004 광고" → `SELECT * WHERE country_name='South Korea' AND brand='skin1004'` 충분. 과도한 GROUP BY/CASE WHEN 금지
    - **플랫폼 테이블** (raw_data):
      - 반드시 `LIMIT 500` 이하
      - 순위/가격 분석 → 집계(GROUP BY + AVG/MAX) 사용, raw 행 나열 금지
@@ -1391,19 +1393,19 @@ LIMIT 1000
 
 ### 유효 컬럼 스키마
 
-- collect_date (DATE): 수집 날짜
+- collect_date (DATE): 수집 날짜. 최근 데이터 필터링에 사용
 - country_code (STRING): 국가 코드 (예: 'KR', 'TH', 'VN', 'ID', 'PH', 'SG', 'MY', 'JP', 'US')
-- country_name (STRING): 국가명 (반드시 영어! 예: 'South Korea', 'Thailand', 'Vietnam', 'Indonesia', 'Philippines', 'Singapore', 'Malaysia', 'Japan')
-- brand (STRING): 브랜드 (예: 'skin1004', 'cos de baha')
+- country_name (STRING): 국가명 (**반드시 영어!** 예: 'South Korea', 'Vietnam', 'Indonesia'. '한국', '베트남' 한국어 금지!)
+- brand (STRING): 브랜드 (**전부 소문자!** 예: 'skin1004', 'skintific', 'glad2glow'. 절대 'SKIN1004' 대문자 사용 금지!)
 - page_name (STRING): 페이지명
-- ad_type (STRING): 광고 유형 - 공식계정(official)/파트너십(partnership)만 있음. 이미지/비디오 구분 아님!
+- ad_type (STRING): 광고 유형 — **공식(official) / 파트너십(partnership)만 있음. 이미지/비디오 구분 아님!**
 - ad_archive_id (INTEGER): 광고 아카이브 ID
-- snapshot (STRING): 광고 상세 정보 (JSON) - 이미지/비디오 유형 구분에 사용
-- is_active (BOOLEAN): 활성 여부
-- end_date (FLOAT): 종료일
-- publisher_platform (STRING): 게시 플랫폼 - **리스트 형태!** 예: "facebook,instagram". LIKE '%facebook%' 사용
-- start_date (FLOAT): 시작일 (숫자)
-- start_date_formatted (TIMESTAMP): 시작일 포맷됨 - **날짜 필터/정렬에 사용!**
+- snapshot (STRING): 광고 상세 JSON — **이미지/비디오 구분은 여기!** `JSON_VALUE(snapshot, '$.display_format')` = 'VIDEO' 또는 'IMAGE'
+- is_active (BOOLEAN): 활성 여부. 수집 시점 기준이라 과거 데이터도 TRUE일 수 있음
+- end_date (FLOAT): 종료일 (숫자, 사용 비권장)
+- publisher_platform (STRING): 게시 플랫폼 — **쉼표로 구분된 리스트 형태!** 예: "facebook,instagram,audience_network". 반드시 `LOWER(...) LIKE '%facebook%'` 사용. `= 'Facebook'` 등호 비교 절대 금지!
+- start_date (FLOAT): 시작일 (숫자, 사용 비권장 — 사용자가 읽기 어려움)
+- start_date_formatted (TIMESTAMP): 시작일 — **날짜 필터/정렬에 반드시 이 컬럼 사용!** TIMESTAMP 타입이므로 DATE()로 래핑 필요
 - end_date_formatted (TIMESTAMP): 종료일 포맷됨
 - ad_library_url (STRING): 광고 라이브러리 URL
 - url (STRING): 광고 URL
@@ -1412,23 +1414,58 @@ LIMIT 1000
 - currency (STRING): 통화
 - total_active_time (FLOAT): 총 활성 시간
 
+### ⛔ 필수 규칙 (QA 검증 결과 반영 — 위반 시 오답 처리됨!)
+
+1. **brand는 반드시 소문자**: `brand = 'skin1004'` ✅ | `brand LIKE '%SKIN1004%'` ❌ — 테이블에 brand 값이 전부 소문자로 저장됨. 대문자로 비교하면 0건 반환!
+
+2. **publisher_platform은 리스트 → LIKE 필수**: facebook, instagram, messenger, audience_network 등이 쉼표로 조합된 리스트. `LOWER(publisher_platform) LIKE '%facebook%'` ✅ | `publisher_platform = 'Facebook'` ❌ (등호 비교 시 0건 반환!)
+   - 정확한 개별 플랫폼 카운팅: `UNNEST(JSON_EXTRACT_ARRAY(publisher_platform)) AS platform` 사용
+
+3. **불필요한 brand WHERE 넣지 마라**: "국가별 광고 수", "전체 현황", "유형별 분포", "활성 비율" 등 전체 집계 질문에는 `WHERE brand = 'skin1004'` 절대 추가 금지! 사용자가 명시적으로 "SKIN1004의..." 라고 말할 때만 brand 조건 추가
+
+4. **start_date_formatted는 TIMESTAMP → DATE() 래핑 필수**:
+   `WHERE DATE(start_date_formatted) >= DATE_SUB(CURRENT_DATE(), INTERVAL 7 DAY)` ✅
+   `WHERE start_date_formatted >= DATE_SUB(CURRENT_DATE(), INTERVAL 7 DAY)` ❌ (타입 불일치 에러!)
+
+5. **간단하게 생각하라**: "한국 SKIN1004 메타 광고" → `SELECT * FROM ... WHERE country_name = 'South Korea' AND brand = 'skin1004'` 충분. 불필요한 GROUP BY, CASE WHEN, 복잡한 집계 넣지 말 것!
+
+6. **"전체 현황/요약/분석" = 전체 집계**: brand별 GROUP BY 하지 말고 total 집계로. 사용자가 "브랜드별 현황"이라고 명시할 때만 GROUP BY brand 사용
+
+7. **이미지/비디오 구분 = snapshot 컬럼**: `JSON_VALUE(snapshot, '$.display_format') = 'VIDEO'` ✅ | ad_type으로 이미지/비디오 구분 ❌ (ad_type은 official/partnership 구분!)
+
+8. **다른 테이블 혼동 금지**: 메타 광고 질문에 SALES_ALL_Backup, integrated_advertising_data, Platform_Data 등 다른 테이블 사용 절대 금지! 반드시 `ad_data.meta data_test`만 사용
+
+9. **NULL/unknown 제외**: 최근 광고 리스트 출력 시 `WHERE brand IS NOT NULL AND brand != 'unknown'` 추가. ORDER BY에서 NULL은 뒤로: `NULLS LAST`
+
+10. **country_name 값은 영어**: 'South Korea' ✅ | '한국' ❌. 변수값에 한국어 거의 없음
+
+11. **"가장 많은 것" = LIMIT 1**: "가장 많은 유형", "1위 국가" 등 → ORDER BY DESC LIMIT 1
+
+12. **최근 N일/주/월 = collect_date 기준**: "최근 2주 광고" → `WHERE collect_date >= DATE_SUB(CURRENT_DATE(), INTERVAL 14 DAY)` 사용. 사용자는 최근 데이터에 관심 있음
+
+13. **페이지별 최근 광고 = ROW_NUMBER**: `ROW_NUMBER() OVER (PARTITION BY page_name ORDER BY start_date_formatted DESC) AS rn` → `WHERE rn = 1`
+
+14. **멀티 플랫폼 분석 = UNNEST**: publisher_platform 리스트를 개별 플랫폼으로 풀기: `UNNEST(JSON_EXTRACT_ARRAY(publisher_platform)) AS platform` → GROUP BY platform
+
+15. **답변에 null 행 출력하지 말 것**: page_name, brand 등이 null인 행은 사용자에게 무의미. 결과에서 제외
+
+16. **질문이 애매하면 되물어볼 것**: "활성 상태 변경 내역" 같이 범위가 넓은 질문은 구체적으로 무엇이 필요한지 역질문
+
 ### 예시 쿼리
 
 #### MT1. 국가별 메타 광고 수 (WHERE 없이 GROUP BY)
 ```sql
 -- "국가별 메타 광고 수" → 전체 집계, WHERE brand 넣지 않음!
-SELECT
-  country_name,
-  COUNT(*) AS ad_count
+SELECT country_name, COUNT(*) AS ad_count
 FROM `skin1004-319714.ad_data.meta data_test`
 GROUP BY country_name
 ORDER BY ad_count DESC
 LIMIT 200
 ```
 
-#### MT2. 특정 국가 + SKIN1004 광고 (WHERE 필요한 경우)
+#### MT2. 특정 국가 + SKIN1004 광고 (간단하게!)
 ```sql
--- "한국 SKIN1004 메타 광고" → 국가+브랜드 AND 조건
+-- "한국 SKIN1004 메타 광고" → SELECT * + WHERE 2개 조건. 복잡하게 하지 마!
 SELECT *
 FROM `skin1004-319714.ad_data.meta data_test`
 WHERE country_name = 'South Korea'
@@ -1436,39 +1473,35 @@ WHERE country_name = 'South Korea'
 LIMIT 200
 ```
 
-#### MT3. 광고 유형 비율 (전체 기준)
+#### MT3. 광고 유형(official/partnership) 분포
 ```sql
--- "메타 광고 유형 비율" → brand WHERE 없이 전체 집계
-SELECT
-  ad_type,
-  COUNT(*) AS ad_count,
-  COUNT(*) / SUM(COUNT(*)) OVER() AS ad_ratio
+-- ad_type = 공식/파트너십 구분. 이미지/비디오 구분 아님!
+SELECT ad_type, COUNT(*) AS ad_count
 FROM `skin1004-319714.ad_data.meta data_test`
 GROUP BY ad_type
 ORDER BY ad_count DESC
 ```
 
-#### MT4. 활성/비활성 비교
+#### MT4. 활성/비활성 비교 (brand WHERE 없이!)
 ```sql
--- "활성/비활성 광고 건수 비교" → is_active로 GROUP BY
 SELECT
-  is_active,
+  CASE WHEN is_active = TRUE THEN 'Active' ELSE 'Inactive' END AS ad_status,
   COUNT(*) AS ad_count
 FROM `skin1004-319714.ad_data.meta data_test`
-GROUP BY is_active
+GROUP BY ad_status
 ```
 
-#### MT5. 플랫폼별 광고 수 (리스트 컬럼 LIKE 검색)
+#### MT5. 플랫폼별 광고 수 (LIKE 필수!)
 ```sql
--- "Facebook 플랫폼 메타 광고 수" → publisher_platform은 리스트, LIKE 사용
-SELECT COUNT(*) AS facebook_meta_ads
+-- publisher_platform은 리스트! LIKE 사용, = 등호 금지!
+SELECT COUNT(*) AS facebook_ad_count
 FROM `skin1004-319714.ad_data.meta data_test`
 WHERE LOWER(publisher_platform) LIKE '%facebook%'
 ```
 
-#### MT6. 전체 현황 리포트
+#### MT6. 전체 현황 리포트 (brand GROUP BY 하지 말 것!)
 ```sql
--- "메타 광고 전체 현황" → 전체 집계, brand WHERE 사용 안 함
+-- "전체 현황" → 전체 집계! brand별 분류 아님!
 SELECT
   COUNT(*) AS total_ads,
   COUNTIF(is_active = TRUE) AS active_ads,
@@ -1479,25 +1512,71 @@ SELECT
 FROM `skin1004-319714.ad_data.meta data_test`
 ```
 
-#### MT7. 페이지별 광고 수 순위
+#### MT7. 최근 N일 광고 (DATE() 래핑 필수!)
 ```sql
--- "페이지별 광고 수 순위" → page_name GROUP BY
-SELECT
-  page_name,
-  COUNT(*) AS ad_count
+-- start_date_formatted는 TIMESTAMP → DATE() 래핑해야 비교 가능!
+SELECT brand, page_name, ad_type, start_date_formatted, is_active, url
 FROM `skin1004-319714.ad_data.meta data_test`
-GROUP BY page_name
-ORDER BY ad_count DESC
+WHERE DATE(start_date_formatted) >= DATE_SUB(CURRENT_DATE(), INTERVAL 7 DAY)
+ORDER BY start_date_formatted DESC
 LIMIT 200
 ```
 
-#### MT8. 최근 시작된 메타 광고
+#### MT8. 비디오 유형 광고 (snapshot 컬럼 활용!)
 ```sql
--- "최근 시작된 메타 광고" → start_date_formatted DESC 정렬
+-- 이미지/비디오 = snapshot의 display_format. ad_type 아님!
+SELECT COUNT(*) AS video_meta_ads
+FROM `skin1004-319714.ad_data.meta data_test`
+WHERE JSON_VALUE(snapshot, '$.display_format') = 'VIDEO'
+```
+
+#### MT9. 활성 광고 비율 (전체 기준, brand 조건 없이!)
+```sql
+SELECT SAFE_DIVIDE(COUNTIF(is_active = TRUE), COUNT(*)) AS active_ad_ratio
+FROM `skin1004-319714.ad_data.meta data_test`
+```
+
+#### MT10. 플랫폼별 정확한 카운팅 (UNNEST 사용)
+```sql
+-- publisher_platform 리스트를 개별로 풀어서 정확한 플랫폼별 카운팅
+SELECT platform, COUNT(*) AS ad_count
+FROM `skin1004-319714.ad_data.meta data_test`,
+UNNEST(JSON_EXTRACT_ARRAY(publisher_platform)) AS platform
+GROUP BY platform
+ORDER BY ad_count DESC
+```
+
+#### MT11. 페이지별 최근 광고 (ROW_NUMBER 사용)
+```sql
+SELECT * FROM (
+  SELECT *, ROW_NUMBER() OVER (PARTITION BY page_name ORDER BY start_date_formatted DESC) AS rn
+  FROM `skin1004-319714.ad_data.meta data_test`
+) WHERE rn = 1
+```
+
+#### MT12. 2025년 특정 월 광고 (start_date_formatted 사용!)
+```sql
+-- start_date(FLOAT) 아님! start_date_formatted(TIMESTAMP) 사용!
 SELECT *
 FROM `skin1004-319714.ad_data.meta data_test`
-ORDER BY start_date_formatted DESC
-LIMIT 100
+WHERE DATE(start_date_formatted) BETWEEN '2025-02-01' AND '2025-02-28'
+```
+
+#### MT13. 최근 광고 N건 (null/unknown 제외!)
+```sql
+SELECT collect_date, country_name, brand, page_name, ad_type, is_active, url
+FROM `skin1004-319714.ad_data.meta data_test`
+WHERE brand IS NOT NULL AND brand != 'unknown'
+ORDER BY collect_date DESC
+LIMIT 20
+```
+
+#### MT14. 멀티 플랫폼 게시 광고
+```sql
+SELECT *
+FROM `skin1004-319714.ad_data.meta data_test`
+WHERE ARRAY_LENGTH(SPLIT(publisher_platform, ',')) > 1
+LIMIT 200
 ```
 
 ---

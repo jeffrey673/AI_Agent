@@ -43,54 +43,25 @@ def _content_to_text(content) -> str:
     return str(content)
 
 
-def _build_conversation_context(messages: List[Dict[str, str]], max_turns: int = 25) -> str:
-    """Build a conversation context string from recent messages.
+def _build_conversation_context(messages: List[Dict[str, str]]) -> str:
+    """Build conversation context from all previous messages — no truncation.
 
-    Extracts the last N turns (user+assistant pairs) excluding the final user message,
-    so agents can understand references like "아까 그 데이터", "그거 다시", "2월은?" etc.
-
-    Uses tiered truncation: recent messages get more space, older ones less.
-
-    Args:
-        messages: Full conversation history [{"role": ..., "content": ...}].
-        max_turns: Maximum number of previous turns to include (default 25).
-
-    Returns:
-        Context string, or empty string if no history.
+    Gemini 2.5 Flash supports 1M token context, so we keep everything.
     """
     if not messages or len(messages) <= 1:
         return ""
 
-    # Exclude the last message (current query) — take previous messages
     history = messages[:-1]
-
-    # Take only the last N messages (max_turns * 2 for user+assistant pairs)
-    history = history[-(max_turns * 2):]
-
     if not history:
         return ""
 
-    total = len(history)
     lines = []
-    for idx, msg in enumerate(history):
+    for msg in history:
         role = msg.get("role", "user")
         content = _content_to_text(msg.get("content", ""))
         if role == "user":
             lines.append(f"사용자: {content}")
         elif role in ("assistant", "model"):
-            # Tiered truncation: recent messages keep more context
-            # Last 6 messages (3 turns): 4000 chars
-            # Middle messages: 2000 chars
-            # Older messages: 800 chars
-            remaining = total - idx
-            if remaining <= 6:
-                max_len = 4000
-            elif remaining <= 16:
-                max_len = 2000
-            else:
-                max_len = 800
-            if len(content) > max_len:
-                content = content[:max_len] + "..."
             lines.append(f"AI: {content}")
 
     return "\n".join(lines)
@@ -325,7 +296,7 @@ class OrchestratorAgent:
         "ROAS", "roas", "ROI", "roi", "CTR", "ctr",
         "노출", "노출수", "impression", "클릭", "클릭수", "click",
         "전환", "전환율", "conversion", "구매전환",
-        "페이스북", "facebook", "메타", "meta",
+        "페이스북", "facebook", "메타", "meta", "publisher_platform",
         "구글 광고", "google ads", "네이버 광고", "네이버 검색광고",
         "카카오모먼츠", "kakao",
         "GMV", "gmv",
@@ -505,7 +476,7 @@ class OrchestratorAgent:
                 "skin1004", "스킨", "센텔라", "히알루", "커먼랩스", "좀비뷰티", "랩인네이처",
                 "매출", "수량", "주문", "판매", "재고", "실적", "매상", "세일즈",
                 "쇼피", "아마존", "틱톡", "라자다", "큐텐", "shopify", "쇼피파이",
-                "광고비", "roas", "ctr", "마케팅비", "노출수", "클릭수",
+                "광고비", "광고", "메타", "roas", "ctr", "마케팅비", "노출수", "클릭수",
                 "인플루언서", "리뷰", "반품", "환불",
                 "b2b", "b2c", "거래처", "바이어", "업체",
             ]
@@ -529,6 +500,9 @@ class OrchestratorAgent:
             "노출수", "클릭수", "전환율", "전환수",
             "인플루언서", "리뷰", "GMV",
             "신규", "업체", "거래처", "바이어", "b2b", "b2c",
+            # Meta ads — override CS even when "skin1004" present
+            "광고", "메타 광고", "메타광고", "활성 광고", "비활성 광고",
+            "분포", "현황", "건수",
         ]
         has_strong_data = any(kw in q for kw in _STRONG_DATA)
         if any(kw in q for kw in self._CS_KEYWORDS) and not has_strong_data:
@@ -622,7 +596,7 @@ class OrchestratorAgent:
                 return await self._handle_bigquery_fallback(
                     query, messages, conversation_context, model_type, user_email
                 )
-            return {"source": "bigquery", "answer": answer + _maintenance_warning}
+            return {"source": "bigquery", "answer": answer + _maintenance_warning + "\n<!-- ROUTE:BQ -->"}
         except Exception as e:
             logger.error("orchestrator_bigquery_failed", error=str(e))
             return await self._handle_bigquery_fallback(
