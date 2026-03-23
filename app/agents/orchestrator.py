@@ -1213,7 +1213,8 @@ JSON만 반환:
 - 핵심 수치는 **굵게**. 인사이트는 > 인용으로.
 - 후속 질문 제안 (💡 이런 것도 물어보세요).
 - 지식/설명형 답변 끝에 *AI 생성 답변 · {today}*
-- ⚠️ 이전 대화 맥락과 무관한 일반 질문(잡담, 취미, 상식 등)이 오면 이전 맥락을 무시하고 해당 질문에만 집중하여 자연스럽게 답변하세요. 매번 같은 질문에는 일관된 톤과 분량으로 답변하세요."""
+- ⚠️ 이전 대화 맥락과 무관한 일반 질문(잡담, 취미, 상식 등)이 오면 이전 맥락을 무시하고 해당 질문에만 집중하여 자연스럽게 답변하세요. 매번 같은 질문에는 일관된 톤과 분량으로 답변하세요.
+- ⛔ 절대로 내부 사고 과정(thinking)을 사용자에게 노출하지 마세요. "The user is asking...", "I should...", "Let me check..." 같은 영어 사고 과정을 출력하면 안 됩니다. 바로 답변만 출력하세요."""
 
     # Keywords that indicate the query needs real-time web search
     _SEARCH_KEYWORDS = [
@@ -1225,6 +1226,11 @@ JSON만 반환:
         "이벤트", "행사",
         "대통령", "총리", "선거", "국회", "정부",
         "올해", "이번 달", "이번달", "최근",
+        # 엔터테인먼트/외부 정보
+        "넷플릭스", "netflix", "영화", "드라마", "인기작", "순위",
+        "유튜브", "youtube", "스포츠", "축구", "야구",
+        "주식", "비트코인", "코인", "부동산",
+        "맛집", "여행", "관광",
     ]
 
     def _needs_web_search(self, query: str) -> bool:
@@ -1240,9 +1246,12 @@ JSON만 반환:
         # Very short queries (greetings, single words) → no search
         if len(q) <= 10:
             return False
-        # Questions about external topics (not SKIN1004 internal) that are long enough
-        # to be substantive → search for freshness
-        if len(q) > 50 and "?" in query:
+        # Year/date reference in query → likely needs current info
+        import re
+        if re.search(r'202[4-9]년|202[4-9]\s', q):
+            return True
+        # Questions about external topics
+        if len(q) > 30 and "?" in query:
             return True
         return False
 
@@ -1314,6 +1323,7 @@ JSON만 반환:
 - 자기소개를 길게 하지 마세요. 바로 답변 내용으로 시작하세요.
 - "누가 만들었어?", "주인이 누구야?" 등의 질문에는 임재필(Jeffrey Im)이 만들고 운영한다고 답변하세요.
 - ⚠️ 이전 대화가 업무 관련이어도, 일반 질문(잡담, 취미, 상식)이 오면 이전 맥락을 무시하고 해당 질문에만 자연스럽게 답변하세요. 같은 질문에는 항상 일관된 톤과 분량으로 답변하세요.
+- ⛔ 절대로 내부 사고 과정을 사용자에게 노출하지 마세요. "The user is asking...", "I should...", "Let me check..." 같은 텍스트를 출력하면 안 됩니다.
 
 ## 답변 형식 표준
 - **구조화된 답변**: 복잡한 주제는 반드시 섹션(헤더)으로 나누어 정리하세요.
