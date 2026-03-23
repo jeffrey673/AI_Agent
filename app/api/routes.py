@@ -156,6 +156,7 @@ async def chat_completions(http_request: Request, request: ChatCompletionRequest
         return StreamingResponse(
             _stream_response(query, messages_for_context, model_type, request, user_email, images=images, brand_filter=brand_filter, enabled_sources=enabled_sources),
             media_type="text/event-stream",
+            headers={"Cache-Control": "no-cache", "X-Accel-Buffering": "no", "Connection": "keep-alive"},
         )
 
     # Non-streaming response (v3.0: Orchestrator)
@@ -226,14 +227,44 @@ async def _stream_response(
     )
     yield f"data: {initial_chunk.model_dump_json()}\n\n"
 
-    # Generate the full answer
-    result = None
+    # Stream via orchestrator async generator
     try:
-        result = await _get_orchestrator().route_and_execute(
+        async for msg_type, content in _get_orchestrator().route_and_stream(
             query, messages, model_type, user_email=user_email, images=images or [],
             brand_filter=brand_filter, enabled_sources=enabled_sources,
-        )
-        answer = result.get("answer", "")
+        ):
+            if msg_type == "source":
+                sc = ChatCompletionStreamResponse(
+                    id=response_id, created=created, model=request.model,
+                    choices=[ChatCompletionStreamChoice(
+                        delta=ChatCompletionStreamDelta(content=f"<!-- source:{content} -->"),
+                    )],
+                )
+                yield f"data: {sc.model_dump_json()}\n\n"
+
+            elif msg_type == "chunk":
+                # Real-time streamed token
+                sc = ChatCompletionStreamResponse(
+                    id=response_id, created=created, model=request.model,
+                    choices=[ChatCompletionStreamChoice(
+                        delta=ChatCompletionStreamDelta(content=content),
+                    )],
+                )
+                yield f"data: {sc.model_dump_json()}\n\n"
+
+            elif msg_type == "done":
+                # Non-streaming route: send full answer in chunks
+                answer = content
+                chunk_size = 120
+                for i in range(0, len(answer), chunk_size):
+                    piece = answer[i:i + chunk_size]
+                    sc = ChatCompletionStreamResponse(
+                        id=response_id, created=created, model=request.model,
+                        choices=[ChatCompletionStreamChoice(
+                            delta=ChatCompletionStreamDelta(content=piece),
+                        )],
+                    )
+                    yield f"data: {sc.model_dump_json()}\n\n"
     except Exception as e:
         err_chunk = ChatCompletionStreamResponse(
             id=response_id, created=created, model=request.model,
@@ -242,29 +273,6 @@ async def _stream_response(
             )],
         )
         yield f"data: {err_chunk.model_dump_json()}\n\n"
-        answer = ""
-
-    # Send source label
-    source = result.get("source", "direct") if result else "direct"
-    source_chunk = ChatCompletionStreamResponse(
-        id=response_id, created=created, model=request.model,
-        choices=[ChatCompletionStreamChoice(
-            delta=ChatCompletionStreamDelta(content=f"<!-- source:{source} -->"),
-        )],
-    )
-    yield f"data: {source_chunk.model_dump_json()}\n\n"
-
-    # Stream the answer in chunks
-    chunk_size = 120
-    for i in range(0, len(answer), chunk_size):
-        text_chunk = answer[i : i + chunk_size]
-        sc = ChatCompletionStreamResponse(
-            id=response_id, created=created, model=request.model,
-            choices=[ChatCompletionStreamChoice(
-                delta=ChatCompletionStreamDelta(content=text_chunk),
-            )],
-        )
-        yield f"data: {sc.model_dump_json()}\n\n"
 
     # Send final chunk
     final_chunk = ChatCompletionStreamResponse(

@@ -232,6 +232,121 @@ class OrchestratorAgent:
 
         return result
 
+    async def route_and_stream(
+        self,
+        query: str,
+        messages=None,
+        model_type: str = MODEL_GEMINI,
+        user_email: str = "",
+        images=None,
+        brand_filter=None,
+        enabled_sources=None,
+    ):
+        """Async generator: yields (type, data) tuples for real-time streaming.
+
+        Yields:
+            ("source", source_name) — route source tag
+            ("chunk", text) — streamed text chunk
+            ("done", full_answer) — final complete answer (for non-streaming routes)
+        """
+        import asyncio
+
+        messages = messages or []
+        images = images or []
+        conversation_context = _build_conversation_context(messages)
+
+        # Image → non-streaming direct
+        if images:
+            result = await self._handle_direct(
+                query, messages, conversation_context, model_type, user_email, images=images
+            )
+            yield ("source", "direct")
+            yield ("done", ensure_formatting(result.get("answer", ""), domain="direct"))
+            return
+
+        route = self._keyword_classify(query)
+        is_system_task = query.strip().startswith("### Task:")
+        if route == "direct" and conversation_context and not is_system_task:
+            if len(query) < 30 and not any(kw in query.lower() for kw in self._SEARCH_KEYWORDS):
+                flash = get_flash_client()
+                llm_route = await asyncio.to_thread(
+                    flash.generate, self._build_classify_prompt(query, conversation_context),
+                    None, 0.0, 20,
+                )
+                detected = llm_route.strip().lower().replace('"', '').replace("'", "")
+                if detected in ("bigquery", "notion", "gws", "cs", "multi"):
+                    route = detected
+
+        # Direct route → real-time streaming
+        if route == "direct" and not is_system_task:
+            yield ("source", "direct")
+
+            llm = get_llm_client(model_type)
+            today = datetime.now().strftime("%Y년 %m월 %d일 (%A)")
+            system = self._build_direct_system_prompt(today, model_type)
+
+            _needs_search = self._needs_web_search(query)
+            final_system = system
+            if _needs_search:
+                search_context = self._gather_search_context(query)
+                if search_context:
+                    final_system = system + f"\n\n## 참고할 최신 검색 정보 (Google 검색 결과)\n{search_context}"
+
+            # Stream via thread + queue
+            _q: asyncio.Queue = asyncio.Queue()
+            _loop = asyncio.get_running_loop()
+
+            def _worker():
+                try:
+                    if messages and len(messages) > 1 and hasattr(llm, 'generate_with_history_stream'):
+                        gen = llm.generate_with_history_stream(
+                            messages=messages, system_instruction=final_system, temperature=0.5,
+                        )
+                    else:
+                        gen = llm.generate_stream(
+                            query, system_instruction=final_system, temperature=0.5,
+                        )
+                    for chunk in gen:
+                        _loop.call_soon_threadsafe(_q.put_nowait, ("chunk", chunk))
+                except Exception as e:
+                    _loop.call_soon_threadsafe(_q.put_nowait, ("chunk", f"오류: {e}"))
+                _loop.call_soon_threadsafe(_q.put_nowait, ("end", None))
+
+            _loop.run_in_executor(None, _worker)
+
+            full_answer = ""
+            while True:
+                msg_type, data = await _q.get()
+                if msg_type == "end":
+                    break
+                full_answer += data
+                yield ("chunk", data)
+
+            # Post-process
+            full_answer = ensure_formatting(full_answer, domain="direct")
+            yield ("done", full_answer)
+            return
+
+        # Non-streaming routes (BQ, CS, Notion, GWS, Multi)
+        handlers = {
+            "bigquery": self._handle_bigquery,
+            "notion": self._handle_notion,
+            "gws": self._handle_gws,
+            "cs": self._handle_cs,
+            "multi": self._handle_multi,
+        }
+        handler = handlers.get(route, self._handle_direct)
+        if route in ("bigquery", "multi"):
+            result = await handler(query, messages, conversation_context, model_type, user_email, brand_filter=brand_filter, enabled_sources=enabled_sources)
+        else:
+            result = await handler(query, messages, conversation_context, model_type, user_email)
+
+        if "answer" in result:
+            result["answer"] = ensure_formatting(result["answer"], domain=route)
+
+        yield ("source", result.get("source", route))
+        yield ("done", result.get("answer", ""))
+
     async def _classify_with_llm(self, query: str, conversation_context: str, llm) -> str:
         """LLM-based classification (used only when keyword match is ambiguous).
 
@@ -1033,6 +1148,37 @@ JSON만 반환:
         except Exception as e:
             logger.warning("followup_generation_failed", error=str(e))
             return {"source": "direct", "answer": '{"follow_ups": []}'}
+
+    def _build_direct_system_prompt(self, today: str, model_type: str = MODEL_CLAUDE) -> str:
+        """Build system prompt for direct LLM route (shared by _handle_direct and route_and_stream)."""
+        model_name = "Claude Sonnet 4 (Anthropic) — 빠른 대화. SQL 생성/차트에는 Gemini Flash 사용"
+        # Import the full system prompt from _handle_direct inline (it's too long to duplicate)
+        # We reference the same structure
+        return f"""당신은 SKIN1004의 AI 어시스턴트입니다. ({model_name} 기반)
+이 시스템은 **임재필(Jeffrey Im)**이 기획·개발하여 운영하고 있습니다.
+오늘 날짜는 {today}입니다.
+
+{LANGUAGE_DETECTION_RULE}
+
+## 회사 소개 (SKIN1004)
+SKIN1004는 마다가스카르 센텔라 아시아티카 기반 클린 뷰티 스킨케어 브랜드입니다.
+주요 제품: 센텔라 앰플, 크림, 토너. 글로벌 시장: 한국, 미국, 일본, 동남아 등.
+
+## 시스템 기능
+- BigQuery SQL 실행 (매출/수량/순위)
+- Notion 사내 문서 검색
+- Google Workspace 연동 (Gmail/Calendar/Drive)
+- CS 제품 Q&A
+- Google 실시간 웹검색
+- 이미지 분석, 차트 생성
+
+## 핵심 원칙
+- 전문적이면서 친근한 톤. 바로 답변 시작.
+- 질문한 내용만 답변. 모르면 솔직하게.
+- 복잡한 주제는 헤더/표/bullet으로 구조화.
+- 핵심 수치는 **굵게**. 인사이트는 > 인용으로.
+- 후속 질문 제안 (💡 이런 것도 물어보세요).
+- 지식/설명형 답변 끝에 *AI 생성 답변 · {today}*"""
 
     # Keywords that indicate the query needs real-time web search
     _SEARCH_KEYWORDS = [
