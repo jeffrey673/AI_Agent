@@ -226,57 +226,83 @@ async def _stream_response(
     )
     yield f"data: {initial_chunk.model_dump_json()}\n\n"
 
-    # Generate the full answer (v3.0: Orchestrator)
-    result = None
-    try:
-        result = await _get_orchestrator().route_and_execute(
-            query, messages, model_type, user_email=user_email, images=images or [], brand_filter=brand_filter, enabled_sources=enabled_sources
-        )
-        answer = result.get("answer", "")
-    except Exception as e:
-        error_msg = f"오류가 발생했습니다: {str(e)}"
-        error_chunk = ChatCompletionStreamResponse(
-            id=response_id,
-            created=created,
-            model=request.model,
-            choices=[
-                ChatCompletionStreamChoice(
-                    delta=ChatCompletionStreamDelta(content=error_msg),
-                )
-            ],
-        )
-        yield f"data: {error_chunk.model_dump_json()}\n\n"
-        answer = ""
+    # Real-time streaming via asyncio.Queue
+    import asyncio
+    chunk_queue: asyncio.Queue = asyncio.Queue()
+    stream_source = "direct"
 
-    # Send source label before answer content
-    source = result.get("source", "direct") if result else "direct"
-    source_chunk = ChatCompletionStreamResponse(
-        id=response_id,
-        created=created,
-        model=request.model,
-        choices=[
-            ChatCompletionStreamChoice(
-                delta=ChatCompletionStreamDelta(content=f"<!-- source:{source} -->"),
+    async def stream_callback(chunk: str):
+        """Push LLM tokens to queue for real-time SSE."""
+        await chunk_queue.put(chunk)
+
+    async def run_orchestrator():
+        """Run orchestrator in background, push results to queue."""
+        nonlocal stream_source
+        try:
+            result = await _get_orchestrator().route_and_execute(
+                query, messages, model_type, user_email=user_email, images=images or [],
+                brand_filter=brand_filter, enabled_sources=enabled_sources,
+                stream_callback=stream_callback,
             )
-        ],
-    )
-    yield f"data: {source_chunk.model_dump_json()}\n\n"
+            stream_source = result.get("source", "direct")
+            # If no streaming happened (BQ/CS/Notion), push full answer
+            if not chunk_queue.qsize():
+                answer = result.get("answer", "")
+                await chunk_queue.put(answer)
+        except Exception as e:
+            await chunk_queue.put(f"오류가 발생했습니다: {str(e)}")
+        await chunk_queue.put(None)  # sentinel
 
-    # Stream the answer in chunks (larger chunks = fewer SSE frames = faster)
-    chunk_size = 120
-    for i in range(0, len(answer), chunk_size):
-        text_chunk = answer[i : i + chunk_size]
-        stream_chunk = ChatCompletionStreamResponse(
-            id=response_id,
-            created=created,
-            model=request.model,
-            choices=[
-                ChatCompletionStreamChoice(
-                    delta=ChatCompletionStreamDelta(content=text_chunk),
+    # Start orchestrator as background task
+    task = asyncio.create_task(run_orchestrator())
+
+    # Yield source tag first (wait briefly for route detection)
+    await asyncio.sleep(0.05)
+
+    # Stream chunks as they arrive
+    source_sent = False
+    while True:
+        try:
+            chunk = await asyncio.wait_for(chunk_queue.get(), timeout=300)
+        except asyncio.TimeoutError:
+            break
+        if chunk is None:
+            # Send source tag before finishing (if not already streamed)
+            if not source_sent:
+                source_chunk = ChatCompletionStreamResponse(
+                    id=response_id, created=created, model=request.model,
+                    choices=[ChatCompletionStreamChoice(
+                        delta=ChatCompletionStreamDelta(content=f"<!-- source:{stream_source} -->"),
+                    )],
                 )
-            ],
-        )
-        yield f"data: {stream_chunk.model_dump_json()}\n\n"
+                yield f"data: {source_chunk.model_dump_json()}\n\n"
+            break
+
+        # Send source on first real content
+        if not source_sent:
+            source_sent = True
+            # For non-streaming routes (BQ etc), source is known; for direct, use "direct"
+            source_tag = ChatCompletionStreamResponse(
+                id=response_id, created=created, model=request.model,
+                choices=[ChatCompletionStreamChoice(
+                    delta=ChatCompletionStreamDelta(content=f"<!-- source:{stream_source} -->"),
+                )],
+            )
+            yield f"data: {source_tag.model_dump_json()}\n\n"
+
+        # Stream content chunks
+        chunk_size = 120
+        for i in range(0, len(chunk), chunk_size):
+            text_piece = chunk[i:i + chunk_size]
+            sc = ChatCompletionStreamResponse(
+                id=response_id, created=created, model=request.model,
+                choices=[ChatCompletionStreamChoice(
+                    delta=ChatCompletionStreamDelta(content=text_piece),
+                )],
+            )
+            yield f"data: {sc.model_dump_json()}\n\n"
+
+    await task  # ensure completion
 
     # Send final chunk
     final_chunk = ChatCompletionStreamResponse(

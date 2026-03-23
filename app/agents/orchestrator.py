@@ -141,6 +141,7 @@ class OrchestratorAgent:
         images: Optional[List[dict]] = None,
         brand_filter: Optional[str] = None,
         enabled_sources: Optional[List[str]] = None,
+        stream_callback=None,
     ) -> dict:
         """Main entry point: analyze query -> delegate to Sub Agent -> return result.
 
@@ -152,6 +153,7 @@ class OrchestratorAgent:
             images: Extracted images [{"data": bytes, "mime_type": str}].
             brand_filter: Comma-separated brand codes (e.g. "SK,CL,CBT" or "UM").
             enabled_sources: List of enabled source keys from frontend checkboxes.
+            stream_callback: Optional async callable(chunk: str) for real-time streaming.
 
         Returns:
             {"source": str, "answer": str, ...}
@@ -206,6 +208,8 @@ class OrchestratorAgent:
         handler = handlers.get(route, self._handle_direct)
         if route in ("bigquery", "multi"):
             result = await handler(query, messages, conversation_context, model_type, user_email, brand_filter=brand_filter, enabled_sources=enabled_sources)
+        elif route == "direct" or handler == self._handle_direct:
+            result = await self._handle_direct(query, messages, conversation_context, model_type, user_email, images=images, stream_callback=stream_callback)
         else:
             result = await handler(query, messages, conversation_context, model_type, user_email)
 
@@ -1065,6 +1069,7 @@ JSON만 반환:
         model_type: str,
         user_email: str = "",
         images: Optional[List[dict]] = None,
+        stream_callback=None,
     ) -> dict:
         """General question: uses full conversation history for natural dialogue.
 
@@ -1165,8 +1170,41 @@ SKIN1004는 마다가스카르 센텔라 아시아티카 기반 클린 뷰티 �
                             temperature=0.5,
                         )
                 else:
-                    # Simple query — skip search, use direct generation (10s+ faster)
-                    if messages and len(messages) > 1:
+                    # Simple query — skip search, use direct generation
+                    if stream_callback and hasattr(llm, 'generate_stream'):
+                        import asyncio as _aio
+                        # Build prompt (with or without history)
+                        if messages and len(messages) > 1:
+                            history_parts = []
+                            for m in messages[:-1]:
+                                role = m.get("role", "user")
+                                content = _content_to_text(m.get("content", ""))
+                                history_parts.append(f"{'사용자' if role == 'user' else 'AI'}: {content}")
+                            stream_prompt = f"{chr(10).join(history_parts)}\n\n사용자: {query}"
+                        else:
+                            stream_prompt = query
+
+                        # Run sync generator in thread, push chunks to async queue
+                        _q: _aio.Queue = _aio.Queue()
+                        _loop = _aio.get_event_loop()
+
+                        def _stream_worker():
+                            for chunk in llm.generate_stream(
+                                stream_prompt, system_instruction=system, temperature=0.5,
+                            ):
+                                _loop.call_soon_threadsafe(_q.put_nowait, chunk)
+                            _loop.call_soon_threadsafe(_q.put_nowait, None)
+
+                        _aio.get_event_loop().run_in_executor(None, _stream_worker)
+
+                        answer = ""
+                        while True:
+                            chunk = await _q.get()
+                            if chunk is None:
+                                break
+                            answer += chunk
+                            await stream_callback(chunk)
+                    elif messages and len(messages) > 1:
                         answer = llm.generate_with_history(
                             messages=messages,
                             system_instruction=system,
