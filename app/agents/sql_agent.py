@@ -287,24 +287,20 @@ def generate_sql(state: AgentState) -> Dict[str, Any]:
     if conv_context:
         conv_section = f"\n\n## 이전 대화 맥락\n{conv_context}\n\n위 대화 맥락을 참고하여 사용자의 현재 질문에 포함된 '그거', '아까', '다시', '2월은?' 같은 참조를 이해하세요."
 
-    # Brand filter injection: override default Brand IN ('SK', 'CL') with user's group filter
-    brand_section = ""
-    brand_filter = state.get("brand_filter")
-    if brand_filter:
-        brands = [b.strip() for b in brand_filter.split(",") if b.strip()]
-        brand_in = ", ".join(f"'{b}'" for b in brands)
-        brand_section = (
-            f"\n\n## ⚠️ 브랜드 필터 (최우선 적용)\n"
-            f"이 사용자는 Brand IN ({brand_in}) 그룹에 속합니다.\n"
-            f"- 매출/제품 관련 SQL에 반드시 `WHERE Brand IN ({brand_in})` 조건을 추가하세요.\n"
-            f"- 프롬프트의 기본 Brand IN ('SK', 'CL') 규칙 대신 위 조건을 사용하세요.\n"
-        )
+    # Brand filter injection: use user's group filter or default
+    brand_filter = state.get("brand_filter") or "SK,CL"
+    brands = [b.strip() for b in brand_filter.split(",") if b.strip()]
+    brand_in = ", ".join(f"'{b}'" for b in brands)
+    brand_section = (
+        f"\n\n## ⚠️ 브랜드 필터 (최우선 적용)\n"
+        f"매출/제품 관련 SQL에 반드시 `WHERE Brand IN ({brand_in})` 조건을 추가하세요.\n"
+    )
 
     sql_only_reminder = "\n\n⛔ 최종 지시: SELECT로 시작하는 BigQuery SQL만 출력하라. 설명/안내/되묻기 텍스트 출력 시 시스템 오류 발생. 질문이 모호하면 합리적 기본값(최근 3개월, TOP 10 등)으로 SQL 생성."
     full_prompt = f"{system_prompt}{schema_context}{date_context}{conv_section}{brand_section}\n\n## 사용자 질문\n{query}{sql_only_reminder}"
 
     try:
-        sql = llm.generate(full_prompt, temperature=0.0, max_output_tokens=4096)
+        sql = llm.generate(full_prompt, temperature=0.0, max_output_tokens=8192)
         sql = sanitize_sql(sql)
 
         # Retry once if LLM returned text instead of SQL
@@ -316,7 +312,7 @@ def generate_sql(state: AgentState) -> Dict[str, Any]:
                 "반드시 SELECT로 시작하는 BigQuery SQL만 출력하세요. "
                 "설명, 안내, 되묻기 텍스트 절대 금지! SQL만!"
             )
-            sql = llm.generate(retry_prompt, temperature=0.1, max_output_tokens=4096)
+            sql = llm.generate(retry_prompt, temperature=0.1, max_output_tokens=8192)
             sql = sanitize_sql(sql)
             if sql:
                 logger.info("sql_generation_retry_success", sql=sql[:200])
@@ -624,65 +620,33 @@ def format_answer(state: AgentState) -> Dict[str, Any]:
 ## 답변 형식 (반드시 아래 섹션 구조를 따르세요)
 
 ### 📊 [질문에 맞는 제목]
-
 #### 요약
-[1-3문장으로 핵심 결론. 가장 중요한 수치는 **굵게** 표시. 전체 맥락을 한눈에 파악할 수 있도록]
-
+[1-3문장으로 핵심 결론. 가장 중요한 수치는 **굵게** 표시]
 #### 상세 데이터
 [3행 이상의 비교 데이터는 반드시 마크다운 표로 정리. 숫자는 오른쪽 정렬(---:)]
-[표 아래에 소계/합계가 있으면 별도 행으로 표시]
-
 #### 분석 및 인사이트
-[2-3개 핵심 포인트를 bullet으로 작성]
-[가능하면 전기 대비 변화율, 비중(%), 순위 변동 등을 포함]
-[주목할 인사이트는 아래처럼 인용문(blockquote)으로 강조 — 절대 백틱으로 감싸지 마세요:]
-> 핵심 인사이트를 이 형식으로 작성합니다.
-
+[2-3개 핵심 포인트를 bullet으로 작성. 비중/변화율/추세/비교 포함]
 ---
 *조회 기준: {today} | 데이터소스: {table_source}*
-
 > 💡 **이런 것도 물어보세요**
-> - [현재 답변을 확장하는 후속 질문 1 — 다른 기간/국가/제품]
-> - [관련 심화 분석 질문 2 — 비교, 추이, 순위 등]
-> - [다른 관점 질문 3 — 다른 테이블/지표 활용]
+> - [후속 질문 3개]
 
 ## 작성 규칙
-0. **⚠️ 절대 규칙: 위 SQL 실행 결과 데이터만 사용하여 답변하세요! 일반 상식이나 외부 정보를 절대 포함하지 마세요.** 이 답변은 SKIN1004 사내 데이터 분석 결과입니다. 싱가포르 GDP나 유럽 경제 동향 같은 외부 정보를 답변에 넣으면 안 됩니다.
-1. **반드시** 위 섹션 구조(요약 → 상세 데이터 → 분석 및 인사이트 → 후속 질문)를 따르세요.
-2. 핵심 수치는 **굵게** 표시하세요.
-3. 금액 표기: 1억 이상은 "약 OO.O억원", 1억 미만은 천 단위 쉼표 (예: 5,312만원). 퍼센트는 소수점 1자리까지 (예: 23.5%).
-4. 3행 이상 비교 데이터는 반드시 마크다운 표(`| 컬럼 | ... |`)로 정리하세요. 표에는 합계/소계 행을 포함하세요.
-5. 시계열 데이터(월별, 주차별, 일별, 분기별 추이)는 **전체 행을 마크다운 표로** 보여주세요 (절대 생략 금지). 시계열이 아닌 랭킹/비교 데이터가 20행 초과 시에만 상위 항목 표 + 나머지 요약.
-6. **제품명(SET/product 컬럼)은 영어 원본 그대로** 표시 (한국어 번역 금지).
-7. 단순 수치 1개만 반환되는 경우(합계 등)에는 "상세 데이터" 섹션을 생략하고 요약만 작성하세요.
-11. **후속 질문 제안**: 답변 끝에 반드시 "💡 이런 것도 물어보세요" 블록을 포함하세요. 현재 답변을 기반으로 사용자가 추가로 물어볼 만한 구체적 질문 3개를 제안하세요 (다른 기간, 다른 국가, 다른 지표 등).
-12. **비즈니스 분석 인사이트 (매우 중요)**: 단순 수치 나열이 아닌, 비즈니스 관점의 해석을 반드시 포함하세요:
-    - 비중/점유율: "전체의 42% 비중", "1위 국가가 전체의 30% 차지"
-    - 변화율: "전월 대비 15% 증가", "전년 동기 대비 23% 성장"
-    - 추세: "3개월 연속 상승세", "하반기 들어 둔화 추세"
-    - 집중도: "상위 3개국이 전체의 80% 차지", "특정 채널 편중"
-    - 비교 관점: "A가 B보다 2.3배 높음", "격차가 X억원"
-    이런 해석이 없으면 ChatGPT/Claude 대비 분석 품질이 떨어집니다.
-
-## ⚠️ 질문-데이터 정합성 검증 (최우선 규칙)
-**답변 전에 반드시 아래를 확인하세요:**
-8. 사용자가 묻는 **기간 범위**와 실제 데이터의 기간을 비교하세요.
-   - "2026년 매출"을 물었는데 데이터가 1~2월뿐이면: 요약 첫 줄에 "⚠️ 2026년은 현재 1~2월 데이터만 존재합니다 (오늘: {today_kr})" 반드시 명시
-   - "연간 매출"을 물었는데 일부 월만 있으면: 어떤 월까지 데이터가 있는지 명시
-   - 미래 날짜 질문이면: "해당 기간은 아직 데이터가 없습니다" 안내
-9. 사용자가 묻는 **범위**(국가, 채널, 제품 등)와 실제 데이터 범위를 비교하세요.
-   - "전체 국가"를 물었는데 3개국만 있으면: 포함된 국가를 명시
-   - "아마존 매출"을 물었는데 아마존 데이터가 없으면: 데이터 없음을 명시
-10. **절대 질문과 다른 범위의 데이터를 질문에 대한 답인 것처럼 제시하지 마세요.**
-    - 사용자가 "2026년 매출"을 물었으면 "2월 매출"이라고 제목 바꿔 답하지 마세요.
-    - 반드시 원래 질문을 존중하고, 데이터가 부족하면 부족하다고 명시하세요.
+- SQL 결과 데이터만 사용 (외부 정보 절대 금지)
+- 금액: 1억 이상 → "약 OO.O억원", 1억 미만 → 천 단위 쉼표. 퍼센트 소수점 1자리
+- 3행 이상 비교 → 마크다운 표 필수. 시계열은 전체 행 표시 (생략 금지)
+- 제품명(SET) 영어 원본 그대로 (한국어 번역 금지)
+- 단순 수치 1개만 → "상세 데이터" 생략, 요약만
+- 기간 부족 시 첫 줄에 ⚠️ 표시. 질문 범위와 데이터 범위 불일치 시 명시
+- 비즈니스 인사이트 필수: 비중, 변화율, 추세, 집중도, 비교 관점
+- 조건 설명(브랜드, 기간)은 답변 끝에 짧게 괄호로
 """
 
     try:
         # Answer generation: foreground. Chart: parallel with short timeout.
         # User sees answer immediately; chart appended only if ready fast enough.
         with concurrent.futures.ThreadPoolExecutor(max_workers=2) as executor:
-            answer_future = executor.submit(llm.generate, prompt, None, 0.3, 4096)
+            answer_future = executor.submit(llm.generate, prompt, None, 0.3, 8192)
             chart_llm = get_flash_client()
             chart_future = executor.submit(
                 _try_generate_chart, chart_llm, query, sql, result_preview, results

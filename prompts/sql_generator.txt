@@ -234,70 +234,7 @@
    - 서브쿼리(평균 이상 필터 등): `WHERE val > (SELECT AVG(val) FROM ...)`
    - 단일 거래 상세: `ORDER BY Sales1_R DESC LIMIT 1`
 
-   ### 자주 실패하는 패턴 — 반드시 아래 SQL 참고!
-
-   #### P1. 지난달 대비 이번 달 성장률 (MoM):
-   ```sql
-   WITH monthly AS (
-     SELECT FORMAT_DATETIME('%Y-%m', Date) AS month, SUM(Total_Qty) AS qty
-     FROM `skin1004-319714.Sales_Integration.SALES_ALL_Backup`
-     WHERE Date >= '2019-01-01' AND Brand IN ('SK', 'CL')
-     GROUP BY month
-   )
-   SELECT a.month AS this_month, a.qty AS this_qty, b.qty AS last_qty,
-     SAFE_DIVIDE(a.qty - b.qty, b.qty) * 100 AS growth_pct
-   FROM monthly a
-   JOIN monthly b ON FORMAT_DATE('%Y-%m', DATE_SUB(PARSE_DATE('%Y-%m', a.month), INTERVAL 1 MONTH)) = b.month
-   ORDER BY a.month DESC LIMIT 2
-   ```
-
-   #### P2. Country별 가장 많이 팔린 Line + 평균:
-   ```sql
-   WITH ranked AS (
-     SELECT Country, Line, SUM(Total_Qty) AS total_qty, AVG(Total_Qty) AS avg_qty,
-       ROW_NUMBER() OVER (PARTITION BY Country ORDER BY SUM(Total_Qty) DESC) AS rn
-     FROM `skin1004-319714.Sales_Integration.Product`
-     WHERE Date >= '2019-01-01' AND Brand IN ('SK', 'CL')
-     GROUP BY Country, Line
-   )
-   SELECT Country, Line, total_qty, ROUND(avg_qty, 1) AS avg_qty FROM ranked WHERE rn = 1
-   ORDER BY total_qty DESC LIMIT 30
-   ```
-
-   #### P3. 단일 거래 최고 매출 상세:
-   ```sql
-   SELECT Date, Country, Brand, Team_NEW, `SET` AS product_name, SKU, Sales1_R, Total_Qty
-   FROM `skin1004-319714.Sales_Integration.SALES_ALL_Backup`
-   WHERE Date >= '2019-01-01' AND Brand IN ('SK', 'CL')
-   ORDER BY Sales1_R DESC
-   LIMIT 1
-   ```
-
-   #### P4. 상위 N개 Category x 국가 교차분석:
-   ```sql
-   WITH top_cats AS (
-     SELECT Category FROM `skin1004-319714.Sales_Integration.Product`
-     WHERE Date >= '2019-01-01' AND Brand IN ('SK', 'CL')
-     GROUP BY Category ORDER BY SUM(Total_Qty) DESC LIMIT 5
-   )
-   SELECT p.Country, p.Category, SUM(p.Total_Qty) AS total_qty
-   FROM `skin1004-319714.Sales_Integration.Product` p
-   JOIN top_cats t ON p.Category = t.Category
-   WHERE p.Date >= '2019-01-01' AND p.Brand IN ('SK', 'CL')
-   GROUP BY p.Country, p.Category
-   ORDER BY total_qty DESC LIMIT 50
-   ```
-
-   #### P5. 평균 단가 이상 제품 매출:
-   ```sql
-   SELECT SUM(Sales1_R) AS total_revenue, COUNT(DISTINCT `SET`) AS product_count
-   FROM `skin1004-319714.Sales_Integration.SALES_ALL_Backup`
-   WHERE Date >= '2019-01-01' AND Brand IN ('SK', 'CL')
-     AND Unit_Price > (
-       SELECT AVG(Unit_Price) FROM `skin1004-319714.Sales_Integration.SALES_ALL_Backup`
-       WHERE Date >= '2019-01-01' AND Brand IN ('SK', 'CL') AND Unit_Price > 0
-     )
-   ```
+   - MoM/YoY/교차분석/서브쿼리 예시는 Product 테이블 예시 쿼리 P4~P6 참조
 20-1. ⚠️ **Timeout 방지 — 무거운 쿼리 최적화**:
    - 전국가 YoY/누적 → TOP 10 국가만 (`ORDER BY total DESC LIMIT 10` 서브쿼리로 국가 필터)
    - 전체 기간 누적 추이 → 최근 12개월로 제한
@@ -479,132 +416,23 @@
 | 위치팩 | Witch_Pack | `'%Witch_Pack%'` |
 | 호박팩 | Pumpkin_Pack | `'%Pumpkin_Pack%'` |
 
-### 전체 제품 카탈로그 (SET 실제 값)
+### 제품 SET 네이밍 패턴 (축약)
 
-#### SK (스킨1004) — Centella 라인
-- `SK_Centella_Ampoule_100ml` (센텔라 앰플 100ml) ★ 대표 제품
-- `SK_Centella_Ampoule_120ml`, `SK_Centella_Ampoule_55ml`, `SK_Centella_Ampoule_30ml`, `SK_Centella_Ampoule_20ml`
-- `SK_Centella_Ampoule_Foam_125ml`, `SK_Centella_Ampoule_Foam_20ml` (앰플폼)
-- `SK_Centella_Ampoule_Remover_150ml` (앰플 리무버)
-- `SK_Centella_Soothing_Cream_100ml`, `SK_Centella_Soothing_Cream_75ml`, `SK_Centella_Soothing_Cream_30ml`, `SK_Centella_Soothing_Cream_15ml` (수딩크림)
-- `SK_Centella_Cream_75ml`, `SK_Centella_Cream_30ml` (크림)
-- `SK_Centella_Spot_Cream_20ml` (스팟크림)
-- `SK_Centella_Toning_Toner_400ml`, `SK_Centella_Toning_Toner_210ml`, `SK_Centella_Toning_Toner_30ml` (토닝토너)
-- `SK_Centella_Light_Cleansing_Oil_300ml`, `SK_Centella_Light_Cleansing_Oil_200ml`, `SK_Centella_Light_Cleansing_Oil_30ml` (클렌징오일)
-- `SK_Centella_Quick_Calming_Pad_70ea`, `SK_Centella_Quick_Calming_Pad_70ea_Pouch` (카밍패드)
-- `SK_Centella_Airfit_Suncream_50ml`, `SK_Centella_Airfit_Suncream_Light_50ml`, `SK_Centella_Airfit_Suncream_Plus_50ml`, `SK_Centella_Airfit_Suncream_Plus_20ml` (에어핏 선크림)
-- `SK_Centella_Watergel_sheet_ampoule_mask_25ml`, `_5ea`, `_10ea`, `_30ea` (워터겔 시트마스크)
-- `SK_Centella_scar_Oinment_30g` (스카 연고)
+SET 컬럼 값 패턴: `{Brand}_{Line}_{Type}_{Size}` (예: `SK_Centella_Ampoule_100ml`)
 
-#### SK — Centella_Teca 라인 (⚠️ 언더스코어! 하이픈 아님)
-- `SK_Centella_Teca_Ampoule_50ml`, `SK_Centella_Teca_Cream_75ml`, `SK_Centella_Teca_Soothing_Toner_210ml`
-
-#### SK — Hyalu_Teca 라인 (신규)
-- `SK_Hyalu_Teca_Plumping_Ampoule_50ml` (플럼핑 앰플)
-- `SK_Hyalu_Teca_Firming_Cream_50ml` (퍼밍 크림)
-- `SK_Hyalu_Teca_Glass_Skin_Milk_210ml` (글래스스킨 밀크)
-
-#### SK — Hyalucica 라인
-- `SK_Hyalucica_First_Ampoule_100ml`, `SK_Hyalucica_First_Ampoule_50ml`, `SK_Hyalucica_First_Ampoule_15ml` (퍼스트 앰플)
-- `SK_Hyalucica_Blue_Serum_50ml`, `SK_Hyalucica_Blue_Serum_30ml` (블루세럼)
-- `SK_Hyalucica_Moisture_Cream_75ml`, `SK_Hyalucica_Moisture_Cream_30ml` (모이스처크림)
-- `SK_Hyalucica_Brightening_Toner_210ml`, `SK_Hyalucica_Brightening_Toner_30ml` (브라이트닝토너)
-- `SK_Hyalucica_Waterfit_Sun_Serum_100ml`, `_50ml`, `_15ml` (워터핏 선세럼)
-- `SK_Hyalucica_Waterfit_Sun_Serum_UV_50ml` (UV 선세럼)
-- `SK_Hyalucica_Silky_Fit_Sun_Stick_20g`, `_7g` (선스틱)
-- `SK_Hyalucica_Sleeping_Pack_100ml`, `_30ml` (슬리핑팩)
-- `SK_Hyalucica_Gentle_Cleansing_Milk_200ml` (클렌징밀크)
-- `SK_Hyalucica_Cloudy_Mist_120ml` (클라우디미스트)
-- `SK_Hyalucica_Hydrating_Mask_23ml`, `_x_5ea` (수분마스크)
-- `SK_Hyalucica_JellyFit_Ampoule_Pad_60pads` (젤리핏 앰플패드)
-
-#### SK — Tone Brightening 라인
-- `SK_Tone_Brightening_Capsule_Ampoule_100ml`, `_50ml`, `_30ml` (캡슐앰플)
-- `SK_Tone_Brightening_Capsule_Cream_75ml` (캡슐크림)
-- `SK_Tone_Brightening_Boosting_Toner_210ml` (부스팅토너)
-- `SK_Tone_Brightening_Cleansing_Gel_Foam_125ml` (클렌징젤폼)
-- `SK_Tone_Brightening_Tone_Up_Sunscreen_50ml` (톤업 선스크린)
-- `SK_Tone_Brightening_Dark_Spot_Ampoule_Pad_60pads` (다크스팟 앰플패드)
-- `SK_Tone_Brightening_Glow_Mask_1ea`, `_5ea` (글로우마스크)
-
-#### SK — Poremizing 라인
-- `SK_Poremizing_Fresh_Ampoule_100ml`, `_50ml`, `_30ml` (프레시앰플)
-- `SK_Poremizing_Clear_Toner_210ml` (클리어토너)
-- `SK_Poremizing_Light_Gel_Cream_75ml` (라이트젤크림)
-- `SK_Poremizing_Deep_Cleansing_Foam_125ml`, `_75ml` (딥클렌징폼)
-- `SK_Poremizing_Tinted_Sunscreen_50ml` (틴티드선스크린)
-- `SK_Poremizing_Velvet_Finish_Sunscreen_50ml` (벨벳피니쉬선스크린)
-- `SK_Poremizing_Quick_Clay_Stick_Mask_27g` (클레이스틱마스크)
-- `SK_Poremizing_Clarifying_Mask_1ea`, `_5ea` (클래리파잉마스크)
-
-#### SK — Probiocica 라인
-- `SK_Probiocica_Intensive_Ampoule_95ml`, `_50ml`, `_30ml` (인텐시브앰플)
-- `SK_Probiocica_Glow_Sun_Ampoule_50ml` (글로우 선앰플)
-- `SK_Probiocica_Enrich_Cream_50ml`, `_15ml` (엔리치크림)
-- `SK_Probiocica_Essence_Toner_210ml` (에센스토너)
-- `SK_Probiocica_Bakuchiol_Eyecream_20ml` (바쿠치올 아이크림)
-- `SK_Probiocica_Bakuchiol_Eyecream_Twin_pack_20ml` (아이크림 트윈팩)
-- `SK_Probiocica_Nourishing_Mask_22ml`, `_x_5ea` (너리싱마스크)
-
-#### SK — Teatrica 라인
-- `SK_Teatrica_Relief_Ampoule_100ml`, `_30ml` (릴리프앰플)
-- `SK_Teatrica_B5_Cream_75ml` (B5크림)
-- `SK_Teatrica_Purifying_Toner_210ml` (퓨리파잉토너)
-- `SK_Teatrica_BHA_Foam_125ml` (BHA폼)
-- `SK_Teatrica_Mild_Peeling_Gel_125ml` (마일드필링젤)
-- `SK_Teatrica_Soothing_Sun_Milk_50ml` (수딩선밀크)
-- `SK_Teatrica_Relaxing_Mask_24ml`, `_x_5ea` (릴렉싱마스크)
-- `SK_Teatrica_Spot_Cover_Patch_22ea` (스팟커버패치)
-- `SK_Teatrica_Spot_Cream_20ml` (스팟크림)
-
-#### SK — LabinNature 라인
-- `SK_LabinNature_Matrixyl_10_Boosting_Shot_Ampoule_30ml`, `_9ml` (마트릭실 부스팅샷앰플)
-- `SK_LabinNature_Niacinamide_10_Boosting_Shot_Ampoule_30ml`, `_9ml` (나이아신아마이드 부스팅샷앰플)
-- `SK_LabinNature_Retinol_02_Boosting_Shot_Ampoule_30ml`, `_9ml` (레티놀 부스팅샷앰플)
-- `SK_LabinNature_Azelaic_Acid_10_Ampoule_30ml`, `_9ml` (아젤라산 앰플) — 신규
-- `SK_LabinNature_Boosting_Ampoule_Kit` (부스팅앰플키트)
-
-#### SK — 기획세트/에디션/기타
-- `SK_Centella_Travel_Kit`, `SK_Hyalucica_Travel_Kit`, `SK_Poremizing_Travel_Kit`, `SK_Teatrica_Travel_Kit` (트래블키트)
-- `SK_Centella_Spring_Special_Edition`, `SK_Centella_Autumn_Special_Edition`, `SK_Centella_Winter_Special_Edition` (시즌 에디션)
-- `SK_Poremizing_Spring_Special_Edition`, `SK_Probiocica_Spring_Special_Edition`, `SK_Probiocica_Winter_Special_Edition`
-- `SK_Ramadan_Edition_2025VER`, `SK_Ramadan_Edition_2026VER` (라마단 에디션)
-- `SK_1004_Day_Mini_Kit_2024`, `SK_1004day_Signature_Package_2025` (1004데이)
-- `SK_Daily_Essential_kit`, `SK_Sun_Trial_Kit`, `SK_Perfect_Suncare_kit`
-- `SK_Face_Towel`, `SK_Face_Towel_v2`, `SK_Pouch`, `SK_Mini_Keyring_Pouch`, `SK_Mirror_Keyring` (굿즈)
-- `SK_Pure_Cotton_Pads_60ea`, `SK_Pure_Cotton_Pads_10ea` (코튼패드)
-- `SK_Influencer_Gift_Box`, `SK_Sachet_Collecting_Pack` (인플루언서/샘플)
-
-#### CL (커먼랩스)
-- `CL_Vitamin_B5_Moisture_Ampoule_30ml_B_Line`, `_18ml_B_Line` (비타민B5 모이스처앰플)
-- `CL_Vitamin_C_Brightening_Ampoule_30ml_C_Line` (비타민C 브라이트닝앰플)
-- `CL_Vitamin_E_Calming_Ampoule_30ml_E_Line` (비타민E 카밍앰플)
-- `CL_Vitamin_C_Brightening_Gel_Cream_70g_C_Line`, `_50ml`, `_30ml` (비타민C 젤크림)
-- `CL_Vitamin_E_Calming_Light_Cream_70g_E_Line`, `_30ml` (비타민E 카밍라이트크림)
-- `CL_Vitamin_E_Micro_Needle_Spot_Cream_10ml_E_Line` (마이크로니들 스팟크림)
-- `CL_Vitamin_C_Brightening_Peeling_Toner_200_ml_C_Line` (브라이트닝 필링토너)
-- `CL_Vitamin_C_Brightening_Sun_Serum_51ml_C_Line` (브라이트닝 선세럼)
-- `CL_Vitamin_C_Brightening_Sun_Stick_20g_C_Line` (브라이트닝 선스틱)
-- `CL_Vitamin_C_Glow_Boosting_Face_Mask_120ml_C_Line` (글로우부스팅 페이스마스크)
-- `CL_Vita_B5_Mild_Peeling_Pad_B_Line` (비타B5 마일드필링패드)
-- `CL_Dual_Vita_Anti_Oxidant_Ampoule_10ml_Dual_Triple` (듀얼비타 안티옥시던트앰플)
-- `CL_Dual_Vita_Purifying_Cleanser_120ml_Dual_Triple` (듀얼비타 퓨리파잉클렌저)
-- `CL_Triple_Vita_Balancing_Toner_210ml_Dual_Triple`, `_40ml` (트리플비타 밸런싱토너)
-- `CL_Triple_Vita_Facial_Cream_70g_Dual_Triple` (트리플비타 페이셜크림)
-- `CL_Triple_Vita_Balancing_Mask_1ea_Dual_Triple`, `_10ea` (트리플비타 밸런싱마스크)
-- `CL_Ggultamin_B_Real_Gel_Mask_1ea_B_Line`, `_5ea` (꿀라민B 리얼젤마스크)
-- `CL_Ggultamin_C_Real_Gel_Mask_1ea_C_Line`, `_5ea` (꿀라민C)
-- `CL_Ggultamin_E_Real_Gel_Mask_1ea_E_Line`, `_5ea` (꿀라민E)
-
-#### ZB (좀비뷰티) / 기타
-- `ZB_Bloody_Peel_Light_30ml` (블러디필 라이트)
-- `ZB_Hand_Shot_30ml` (핸드샷)
-- `ZB_Pillow_Shot_200ml` (필로우샷)
-- `ZB_Cocoon_Pack_100g` (코쿤팩)
-- `ZB_Heartleaf_Calming_Pack_1ea` (어성초 카밍팩)
-- `ZB_Zombie_Pack_Activator_Kit_8ea`, `ZB_Mummy_Pack_Activator_Kit_8ea` (좀비팩/마미팩 키트)
-- `ZB_Witch_Pack_16ea`, `_8ea` (위치팩)
-- `ZB_Pumpkin_Pack_16ea`, `_8ea` (호박팩)
+**주요 라인 대표 제품 (LIKE 검색용):**
+- SK Centella: `%Centella%Ampoule%`, `%Centella%Cream%`, `%Centella%Toner%`, `%Centella%Suncream%`, `%Centella%Cleansing_Oil%`
+- SK Centella_Teca: `%Centella_Teca%` (언더스코어! 하이픈 아님)
+- SK Hyalu_Teca: `%Hyalu_Teca%` (신규)
+- SK Hyalucica: `%Hyalucica%Ampoule%`, `%Hyalucica%Cream%`, `%Hyalucica%Sun_Serum%`, `%Hyalucica%Sun_Stick%`
+- SK Tone_Brightening: `%Tone_Brightening%Ampoule%`, `%Tone_Brightening%Sunscreen%`
+- SK Poremizing: `%Poremizing%Ampoule%`, `%Poremizing%Sunscreen%`
+- SK Probiocica: `%Probiocica%Ampoule%`, `%Probiocica%Cream%`, `%Probiocica%Eyecream%`
+- SK Teatrica: `%Teatrica%Ampoule%`, `%Teatrica%BHA_Foam%`
+- SK LabinNature: `%LabinNature%Retinol%`, `%LabinNature%Niacinamide%`, `%LabinNature%Matrixyl%`
+- CL: `CL_%Vitamin_B5%`, `CL_%Vitamin_C%`, `CL_%Vitamin_E%`, `CL_%Dual_Vita%`, `CL_%Triple_Vita%`, `CL_%Ggultamin%`
+- ZB: `ZB_%Zombie_Pack%`, `ZB_%Witch_Pack%`, `ZB_%Bloody_Peel%`
+- 기타: `%Travel_Kit%`, `%Ramadan_Edition%`, `%Special_Edition%`
 
 ### 제품 검색 LIKE 조합 예시
 
