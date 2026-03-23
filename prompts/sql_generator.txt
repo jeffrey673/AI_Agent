@@ -1334,7 +1334,8 @@ LIMIT 1000
 
 ### 공통 컬럼 스키마
 
-- collect_date / collected_date (STRING or DATE): 수집 날짜
+- collect_date (DATE): 수집 날짜 — Amazon/Shopee/Qoo10 리뷰 테이블
+- ⚠️ Smartstore_Review만 `collected_date` (d 추가!) — 다른 테이블은 `collect_date`
 - channel (STRING): 수집 플랫폼
 - brand (STRING): 브랜드
 - review_date (STRING or DATE): 리뷰 작성 날짜

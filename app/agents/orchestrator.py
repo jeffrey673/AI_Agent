@@ -671,7 +671,19 @@ class OrchestratorAgent:
             return "multi"
 
         if has_data:
-            return "bigquery"
+            # Guard: data keywords present but NO SKIN1004 business context → direct
+            # e.g. "육룡이 나르샤 평점" → "평점" matches data but not about our products
+            _BIZ_CONTEXT = [
+                "skin1004", "스킨", "센텔라", "히알루", "커먼랩스", "좀비뷰티", "랩인네이처", "크레이버",
+                "매출", "수량", "주문", "판매", "재고", "실적", "매상", "세일즈",
+                "쇼피", "아마존", "틱톡", "라자다", "큐텐", "shopify", "쇼피파이", "올리브영",
+                "광고비", "광고", "메타", "roas", "ctr", "마케팅비", "노출수", "클릭수",
+                "인플루언서", "반품", "환불", "b2b", "b2c", "거래처", "업체",
+                "국가별", "월별", "팀별", "채널별", "제품별", "브랜드별", "사업부",
+            ]
+            if any(t in q for t in _BIZ_CONTEXT):
+                return "bigquery"
+            return "direct"
         return "direct"
 
     # Keywords that indicate user wants full/unlimited data from previous query
