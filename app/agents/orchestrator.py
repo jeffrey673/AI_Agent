@@ -322,9 +322,8 @@ class OrchestratorAgent:
                 full_answer += data
                 yield ("chunk", data)
 
-            # Post-process
-            full_answer = ensure_formatting(full_answer, domain="direct")
-            yield ("done", full_answer)
+            # Streaming complete — signal done (content already sent via chunks)
+            yield ("done", "")
             return
 
         # Non-streaming routes (BQ, CS, Notion, GWS, Multi)

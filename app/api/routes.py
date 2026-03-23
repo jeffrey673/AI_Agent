@@ -228,6 +228,7 @@ async def _stream_response(
     yield f"data: {initial_chunk.model_dump_json()}\n\n"
 
     # Stream via orchestrator async generator
+    streamed_live = False
     try:
         async for msg_type, content in _get_orchestrator().route_and_stream(
             query, messages, model_type, user_email=user_email, images=images or [],
@@ -244,6 +245,7 @@ async def _stream_response(
 
             elif msg_type == "chunk":
                 # Real-time streamed token
+                streamed_live = True
                 sc = ChatCompletionStreamResponse(
                     id=response_id, created=created, model=request.model,
                     choices=[ChatCompletionStreamChoice(
@@ -253,18 +255,22 @@ async def _stream_response(
                 yield f"data: {sc.model_dump_json()}\n\n"
 
             elif msg_type == "done":
-                # Non-streaming route: send full answer in chunks
-                answer = content
-                chunk_size = 120
-                for i in range(0, len(answer), chunk_size):
-                    piece = answer[i:i + chunk_size]
-                    sc = ChatCompletionStreamResponse(
-                        id=response_id, created=created, model=request.model,
-                        choices=[ChatCompletionStreamChoice(
-                            delta=ChatCompletionStreamDelta(content=piece),
-                        )],
-                    )
-                    yield f"data: {sc.model_dump_json()}\n\n"
+                if streamed_live:
+                    # Already streamed via chunks — skip duplicate
+                    pass
+                else:
+                    # Non-streaming route (BQ/CS/Notion): send full answer in chunks
+                    answer = content
+                    chunk_size = 120
+                    for i in range(0, len(answer), chunk_size):
+                        piece = answer[i:i + chunk_size]
+                        sc = ChatCompletionStreamResponse(
+                            id=response_id, created=created, model=request.model,
+                            choices=[ChatCompletionStreamChoice(
+                                delta=ChatCompletionStreamDelta(content=piece),
+                            )],
+                        )
+                        yield f"data: {sc.model_dump_json()}\n\n"
     except Exception as e:
         err_chunk = ChatCompletionStreamResponse(
             id=response_id, created=created, model=request.model,
