@@ -267,15 +267,9 @@ class OrchestratorAgent:
         route = self._keyword_classify(query)
         is_system_task = query.strip().startswith("### Task:")
         if route == "direct" and conversation_context and not is_system_task:
-            if len(query) < 30 and not any(kw in query.lower() for kw in self._SEARCH_KEYWORDS):
+            if len(query.strip()) <= 30:
                 flash = get_flash_client()
-                llm_route = await asyncio.to_thread(
-                    flash.generate, self._build_classify_prompt(query, conversation_context),
-                    None, 0.0, 20,
-                )
-                detected = llm_route.strip().lower().replace('"', '').replace("'", "")
-                if detected in ("bigquery", "notion", "gws", "cs", "multi"):
-                    route = detected
+                route = await self._classify_with_llm(query, conversation_context, flash)
 
         # Direct route → real-time streaming
         if route == "direct" and not is_system_task:
