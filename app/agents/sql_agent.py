@@ -1139,7 +1139,7 @@ def run_sql_agent_stream(
     from app.core.llm import get_flash_client
     llm = get_flash_client()
 
-    result_preview = _build_smart_preview(results) if len(results) > 100 else json.dumps(
+    result_preview = _build_smart_preview(results, query) if len(results) > 100 else json.dumps(
         results[:50], ensure_ascii=False, indent=2, default=str
     )
     today = datetime.now().strftime("%Y-%m-%d")
