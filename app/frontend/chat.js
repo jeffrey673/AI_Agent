@@ -797,8 +797,7 @@
         var result = await reader.read();
         if (result.done) break;
         buffer += decoder.decode(result.value, { stream: true });
-        var lines = buffer.split("
-");
+        var lines = buffer.split("\n");
         buffer = lines.pop();
         for (var i = 0; i < lines.length; i++) {
           var line = lines[i].trim();
