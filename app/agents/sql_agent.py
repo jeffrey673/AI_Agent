@@ -287,14 +287,17 @@ def generate_sql(state: AgentState) -> Dict[str, Any]:
     if conv_context:
         conv_section = f"\n\n## 이전 대화 맥락\n{conv_context}\n\n위 대화 맥락을 참고하여 사용자의 현재 질문에 포함된 '그거', '아까', '다시', '2월은?' 같은 참조를 이해하세요."
 
-    # Brand filter injection: use user's group filter or default
-    brand_filter = state.get("brand_filter") or "SK,CL"
-    brands = [b.strip() for b in brand_filter.split(",") if b.strip()]
-    brand_in = ", ".join(f"'{b}'" for b in brands)
-    brand_section = (
-        f"\n\n## ⚠️ 브랜드 필터 (최우선 적용)\n"
-        f"매출/제품 관련 SQL에 반드시 `WHERE Brand IN ({brand_in})` 조건을 추가하세요.\n"
-    )
+    # Brand filter injection: only if user has a group filter assigned
+    brand_filter = state.get("brand_filter")
+    brand_section = ""
+    if brand_filter:
+        brands = [b.strip() for b in brand_filter.split(",") if b.strip()]
+        brand_in = ", ".join(f"'{b}'" for b in brands)
+        brand_section = (
+            f"\n\n## ⚠️ 브랜드 필터 (최우선 적용)\n"
+            f"매출/제품 관련 SQL에 반드시 `WHERE Brand IN ({brand_in})` 조건을 추가하세요.\n"
+        )
+    # No brand_filter (admin/unassigned) → SQL 프롬프트의 기본 규칙 따름 (ETC 제외 등)
 
     sql_only_reminder = "\n\n⛔ 최종 지시: SELECT로 시작하는 BigQuery SQL만 출력하라. 설명/안내/되묻기 텍스트 출력 시 시스템 오류 발생. 질문이 모호하면 합리적 기본값(최근 3개월, TOP 10 등)으로 SQL 생성."
     full_prompt = f"{system_prompt}{schema_context}{date_context}{conv_section}{brand_section}\n\n## 사용자 질문\n{query}{sql_only_reminder}"
