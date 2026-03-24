@@ -66,14 +66,13 @@ class GWSAgent:
         auth_manager = _get_auth_manager()
         creds = auth_manager.get_credentials(user_email)
 
-        # No valid token → guide user to connect Google account
+        # No valid token → auto-connect prompt with auth URL
         if creds is None:
             auth_url = auth_manager.get_auth_url(user_email)
             return (
                 "Google Workspace에 접근하려면 Google 계정 연결이 필요합니다.\n\n"
-                "**사이드바 하단의 Google 계정 연결 버튼**을 클릭하거나, "
-                f"[여기를 클릭]({auth_url})하여 Google 계정을 연결해주세요.\n\n"
-                "연결 후 같은 질문을 다시 해주세요."
+                "잠시 후 Google 로그인 창이 열립니다. 연결 완료 후 같은 질문을 다시 해주세요.\n\n"
+                f"<!-- gws-auth:{auth_url} -->"
             )
 
         # Build tools with user's credentials bound via closure

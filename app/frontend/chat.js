@@ -865,6 +865,14 @@
     _resetSendBtn();
 
     var cleanContent = aiContent.replace(/<!-- source:\w+ -->/g, "");
+
+    // Auto-open Google OAuth popup if GWS auth required
+    var gwsAuthMatch = cleanContent.match(/<!-- gws-auth:(https?:\/\/[^\s]+) -->/);
+    if (gwsAuthMatch) {
+      cleanContent = cleanContent.replace(/<!-- gws-auth:[^\s]+ -->/, "");
+      setTimeout(function() { window.open(gwsAuthMatch[1], "google_auth", "width=500,height=700,left=200,top=100"); }, 500);
+    }
+
     contentEl.dataset.raw = cleanContent;
     renderMarkdown(contentEl, cleanContent);
     detectAndRenderCharts(contentEl, cleanContent);
