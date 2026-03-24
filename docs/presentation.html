@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SKIN1004 Enterprise AI Agent — 리더미팅 발표</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --orange: #e89200;
+    --dark: #1a1a2e;
+    --darker: #0f0f1a;
+    --light: #f8f9fa;
+    --gray: #6c757d;
+    --white: #ffffff;
+    --gradient: linear-gradient(135deg, #e89200 0%, #f5a623 100%);
+  }
+
+  body {
+    font-family: 'Noto Sans KR', 'Montserrat', sans-serif;
+    background: var(--darker);
+    color: var(--white);
+    overflow: hidden;
+  }
+
+  .slide {
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px 100px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .slide.active { display: flex; }
+
+  .slide::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 40%;
+    height: 100%;
+    background: linear-gradient(135deg, transparent 0%, rgba(232,146,0,0.03) 100%);
+    pointer-events: none;
+  }
+
+  /* Top bar */
+  .topbar {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: var(--gradient);
+  }
+
+  /* Slide number */
+  .slide-num {
+    position: absolute;
+    bottom: 30px;
+    right: 60px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    color: var(--gray);
+    font-weight: 300;
+  }
+
+  /* Title slide */
+  .slide-title h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 52px;
+    font-weight: 900;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 16px;
+    letter-spacing: -1px;
+  }
+
+  .slide-title .subtitle {
+    font-size: 24px;
+    color: var(--gray);
+    font-weight: 300;
+    margin-bottom: 40px;
+    font-style: italic;
+  }
+
+  .slide-title .meta {
+    font-size: 16px;
+    color: #888;
+    line-height: 1.8;
+  }
+
+  .slide-title .meta strong { color: var(--orange); }
+
+  /* Section headers */
+  h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 32px;
+    color: var(--white);
+  }
+
+  h2 .accent {
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  h3 {
+    font-size: 20px;
+    color: var(--orange);
+    margin-bottom: 16px;
+    font-weight: 600;
+  }
+
+  /* Content */
+  p, li { font-size: 18px; line-height: 1.7; color: #ccc; }
+  ul { list-style: none; padding-left: 0; }
+  ul li { padding: 6px 0; padding-left: 28px; position: relative; }
+  ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 14px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--orange);
+  }
+
+  /* Grid layouts */
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+  .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; }
+  .grid-6 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+
+  /* Cards */
+  .card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    padding: 24px;
+    transition: all 0.3s;
+  }
+  .card:hover { border-color: var(--orange); transform: translateY(-2px); }
+  .card .icon { font-size: 32px; margin-bottom: 12px; }
+  .card .label { font-size: 14px; color: var(--orange); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+  .card .value { font-size: 16px; color: #ccc; line-height: 1.5; }
+
+  /* Tables */
+  table { width: 100%; border-collapse: collapse; margin-top: 16px; }
+  th { background: rgba(232,146,0,0.15); color: var(--orange); text-align: left; padding: 12px 16px; font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+  td { padding: 12px 16px; border-bottom: 1px solid rgba(255,255,255,0.06); font-size: 15px; color: #ccc; }
+  tr:hover td { background: rgba(232,146,0,0.04); }
+
+  /* Architecture diagram */
+  .arch-diagram {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    font-family: 'Montserrat', monospace;
+  }
+  .arch-row { display: flex; justify-content: center; gap: 12px; margin: 8px 0; }
+  .arch-box {
+    background: var(--dark);
+    border: 2px solid var(--orange);
+    border-radius: 12px;
+    padding: 12px 20px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--orange);
+    min-width: 100px;
+    text-align: center;
+  }
+  .arch-box.main {
+    background: rgba(232,146,0,0.15);
+    border-color: var(--orange);
+    font-size: 16px;
+    padding: 16px 32px;
+    color: var(--white);
+  }
+  .arch-box.sub { border-color: rgba(255,255,255,0.2); color: #aaa; font-size: 12px; }
+  .arch-arrow { color: var(--orange); font-size: 20px; margin: 4px 0; }
+
+  /* Highlight boxes */
+  .highlight {
+    background: rgba(232,146,0,0.08);
+    border-left: 4px solid var(--orange);
+    padding: 20px 24px;
+    border-radius: 0 12px 12px 0;
+    margin: 16px 0;
+    font-size: 18px;
+    color: #ddd;
+  }
+
+  /* Stat boxes */
+  .stat-row { display: flex; gap: 24px; margin: 24px 0; }
+  .stat {
+    flex: 1;
+    text-align: center;
+    background: rgba(232,146,0,0.06);
+    border-radius: 16px;
+    padding: 24px;
+  }
+  .stat .num {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 42px;
+    font-weight: 900;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .stat .desc { font-size: 14px; color: #999; margin-top: 8px; }
+
+  /* Compare */
+  .compare { display: flex; gap: 24px; align-items: stretch; }
+  .compare-col {
+    flex: 1;
+    border-radius: 16px;
+    padding: 28px;
+    text-align: center;
+  }
+  .compare-col.before { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); }
+  .compare-col.after { background: rgba(232,146,0,0.08); border: 2px solid var(--orange); }
+  .compare-col h3 { margin-bottom: 20px; }
+  .compare-col .big { font-size: 48px; font-weight: 900; font-family: 'Montserrat'; }
+  .compare-col.before .big { color: #666; }
+  .compare-col.after .big { color: var(--orange); }
+
+  /* Navigation */
+  .nav {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 100;
+  }
+  .nav button {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s;
+  }
+  .nav button:hover { background: var(--orange); border-color: var(--orange); }
+
+  /* Progress bar */
+  .progress {
+    position: fixed;
+    top: 0; left: 0;
+    height: 3px;
+    background: var(--gradient);
+    transition: width 0.3s ease;
+    z-index: 200;
+  }
+
+  /* Badge */
+  .badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-right: 6px;
+  }
+  .badge-orange { background: rgba(232,146,0,0.2); color: var(--orange); }
+  .badge-green { background: rgba(34,197,94,0.2); color: #22c55e; }
+  .badge-red { background: rgba(239,68,68,0.2); color: #ef4444; }
+  .badge-blue { background: rgba(59,130,246,0.2); color: #3b82f6; }
+
+  .vs { font-size: 24px; color: var(--orange); font-weight: 900; display: flex; align-items: center; justify-content: center; }
+
+  .emoji-icon { font-size: 48px; margin-bottom: 12px; display: block; }
+  .small { font-size: 13px; color: #888; }
+</style>
+</head>
+<body>
+
+<div class="progress" id="progress"></div>
+
+<!-- Slide 1: 표지 -->
+<div class="slide slide-title active" style="justify-content: center; align-items: center; text-align: center;">
+  <div class="topbar"></div>
+  <h1>SKIN1004<br>Enterprise AI Agent</h1>
+  <div class="subtitle">"What Do You Crave? — 데이터를 묻고, 답을 얻다"</div>
+  <div class="meta">
+    <strong>Craver Corporation</strong><br>
+    발표: 임재필 (Jeffrey Im) | 데이터분석파트<br>
+    2026년 3월
+  </div>
+  <div class="slide-num">1 / 15</div>
+</div>
+
+<!-- Slide 2: 왜 만들었는가? -->
+<div class="slide">
+  <div class="topbar"></div>
+  <h2>왜 <span class="accent">만들었는가?</span></h2>
+  <div class="grid-2">
+    <div>
+      <h3>❌ 기존 업무</h3>
+      <ul>
+        <li>매출 확인: BigQuery 콘솔 → SQL 작성 → 해석 <span class="badge badge-red">20분+</span></li>
+        <li>문서 검색: Notion 페이지 뒤지기, 어디 있는지 모름</li>
+        <li>CS 응대: 스프레드시트 13탭 검색</li>
+        <li>메일/일정: 앱 전환, 수동 확인</li>
+      </ul>
+    </div>
+    <div>
+      <h3>✅ AI Agent 도입 후</h3>
+      <div class="highlight">"이번 달 인도네시아 매출 알려줘"<br>→ <strong style="color:var(--orange)">10초 내 답변 + 차트</strong></div>
+      <ul>
+        <li>자연어로 모든 업무 데이터에 <strong style="color:var(--orange)">즉시 접근</strong></li>
+        <li>SQL 몰라도 데이터 분석 가능</li>
+        <li>전직원 사용 가능 (AD 연동 로그인)</li>
+      </ul>
+    </div>
+  </div>
+  <div class="slide-num">2 / 15</div>
+</div>
+
+<!-- Slide 3: 아키텍처 -->
+<div class="slide">
+  <div class="topbar"></div>
+  <h2>시스템 <span class="accent">아키텍처</span></h2>
+  <div class="arch-diagram">
+    <div class="arch-row"><div class="arch-box main">👤 사용자 (웹 브라우저)</div></div>
+    <div class="arch-arrow">↓ HTTPS</div>
+    <div class="arch-row"><div class="arch-box main">⚡ FastAPI Server + LangGraph Orchestrator</div></div>
+    <div class="arch-arrow">↓ 질문 의도 자동 분류 (6개 경로)</div>
+    <div class="arch-row">
+      <div class="arch-box">📊 BigQuery<br><span class="small">매출/수량</span></div>
+      <div class="arch-box">📋 Notion<br><span class="small">사내 문서</span></div>
+      <div class="arch-box">🧴 CS Q&A<br><span class="small">제품 상담</span></div>
+      <div class="arch-box">📧 GWS<br><span class="small">메일/일정</span></div>
+      <div class="arch-box">📈 Multi<br><span class="small">종합 분석</span></div>
+      <div class="arch-box">💬 Direct<br><span class="small">일반 대화</span></div>
+    </div>
+    <div class="arch-arrow">↓</div>
+    <div class="arch-row">
+      <div class="arch-box sub">Gemini Flash<br>SQL 생성</div>
+      <div class="arch-box sub">Vector Search<br>문서 검색</div>
+      <div class="arch-box sub">Keyword Search<br>1,100개 Q&A</div>
+      <div class="arch-box sub">Gmail/Calendar<br>Drive API</div>
+      <div class="arch-box sub">BQ + Google<br>Search</div>
+      <div class="arch-box sub">Claude Sonnet<br>실시간 스트리밍</div>
+    </div>
+  </div>
+  <div class="slide-num">3 / 15</div>
+</div>
+
+<!-- Slide 4: 6가지 라우팅 -->
+<div class="slide">
+  <div class="topbar"></div>
+  <h2>6가지 <span class="accent">자동 라우팅</span></h2>
+  <table>
+    <tr><th>라우트</th><th>질문 예시</th><th>처리 방식</th></tr>
+    <tr><td><span class="badge badge-orange">📊 BigQuery</span></td><td>"이번 달 매출", "국가별 TOP 5"</td><td>자연어→SQL 자동 변환→실행→차트</td></tr>
+    <tr><td><span class="badge badge-blue">📋 Notion</span></td><td>"틱톡샵 접속 방법", "출장 가이드"</td><td>사내 문서 벡터 검색</td></tr>
+    <tr><td><span class="badge badge-green">🧴 CS Q&A</span></td><td>"센텔라 앰플 성분", "사용법"</td><td>1,100개 CS 데이터 키워드 검색</td></tr>
+    <tr><td><span class="badge badge-blue">📧 GWS</span></td><td>"오늘 일정", "메일 확인"</td><td>Gmail/Calendar/Drive API</td></tr>
+    <tr><td><span class="badge badge-orange">📈 Multi</span></td><td>"매출 하락 원인 분석"</td><td>BQ 데이터 + 웹검색 종합</td></tr>
+    <tr><td><span class="badge badge-green">💬 Direct</span></td><td>"안녕", "날씨", "회사 소개"</td><td>Claude Sonnet 실시간 스트리밍</td></tr>
+  </table>
+  <div class="slide-num">4 / 15</div>
+</div>
+
+<!-- Slide 5: 기술 스택 -->
+<div class="slide">
+  <div class="topbar"></div>
+  <h2>기술 <span class="accent">스택</span></h2>
+  <div class="grid-3">
+    <div class="card"><div class="icon">🤖</div><div class="label">LLM (대화)</div><div class="value">Claude Sonnet 4<br>TTFB 2초 실시간 스트리밍</div></div>
+    <div class="card"><div class="icon">⚡</div><div class="label">LLM (SQL/차트)</div><div class="value">Gemini 2.5 Flash<br>SQL 생성 + 차트 설정</div></div>
+    <div class="card"><div class="icon">🔄</div><div class="label">오케스트레이션</div><div class="value">LangGraph<br>상태 기반 AI 워크플로우</div></div>
+    <div class="card"><div class="icon">📊</div><div class="label">데이터베이스</div><div class="value">BigQuery<br>13개 테이블, 수억 행</div></div>
+    <div class="card"><div class="icon">🔐</div><div class="label">인증</div><div class="value">AD 연동 + JWT<br>그룹별 데이터 권한</div></div>
+    <div class="card"><div class="icon">🌐</div><div class="label">프론트엔드</div><div class="value">자체 SPA<br>SSE 실시간 스트리밍</div></div>
+  </div>
+  <div class="slide-num">5 / 15</div>
+</div>
+
+<!-- Slide 6: 13개 데이터 소스 -->
+<div class="slide">
+  <div class="topbar"></div>
+  <h2>13개 <span class="accent">데이터 소스</span></h2>
+  <div class="grid-6">
+    <div class="card"><span class="emoji-icon">📊</span><div class="label">통합 매출</div><div class="small">전 채널 매출/수량</div></div>
+    <div class="card"><span class="emoji-icon">📦</span><div class="label">제품</div><div class="small">SKU별 판매 수량</div></div>
+    <div class="card"><span class="emoji-icon">💰</span><div class="label">광고비</div><div class="small">ROAS/CTR/CPC</div></div>
+    <div class="card"><span class="emoji-icon">💵</span><div class="label">마케팅 비용</div><div class="small">광고+인플루언서</div></div>
+    <div class="card"><span class="emoji-icon">👤</span><div class="label">인플루언서</div><div class="small">팔로워/조회수/비용</div></div>
+    <div class="card"><span class="emoji-icon">🔍</span><div class="label">아마존 검색</div><div class="small">CTR/전환율</div></div>
+    <div class="card"><span class="emoji-icon">📱</span><div class="label">메타 광고</div><div class="small">FB/IG 광고 라이브러리</div></div>
+    <div class="card"><span class="emoji-icon">🛒</span><div class="label">플랫폼 순위</div><div class="small">경쟁사 포함</div></div>
+    <div class="card"><span class="emoji-icon">🛍️</span><div class="label">Shopify</div><div class="small">자사몰 판매</div></div>
+    <div class="card"><span class="emoji-icon">⭐</span><div class="label">리뷰 4종</div><div class="small">아마존/쇼피/큐텐/스마스</div></div>
+    <div class="card"><span class="emoji-icon">📋</span><div class="label">Notion 문서</div><div class="small">사내 정책/가이드</div></div>
+    <div class="card"><span class="emoji-icon">🧴</span><div class="label">CS Q&A</div><div class="small">1,100개 제품 상담</div></div>
+  </div>
+  <div class="slide-num">6 / 15</div>
+</div>
+
+<!-- Slide 7: 실시간 스트리밍 -->
+<div class="slide">
+  <div class="topbar"></div>
+  <h2>실시간 <span class="accent">스트리밍</span></h2>
+  <div class="compare">
+    <div class="compare-col before">
+      <h3>이전</h3>
+      <div class="big">9.5초</div>
+      <p style="margin-top:16px;color:#888">전체 답변 완성 후<br>한꺼번에 표시</p>
+      <p style="margin-top:12px;color:#666">빈 화면 10초 대기...</p>
+    </div>
+    <div class="vs">→</div>
+    <div class="compare-col after">
+      <h3>현재 (ChatGPT급)</h3>
+      <div class="big">2.0초</div>
+      <p style="margin-top:16px;color:#ddd">첫 텍스트부터<br><strong>실시간 타이핑</strong></p>
+      <p style="margin-top:12px;color:var(--orange)">블링킹 커서 + 50ms 렌더링</p>
+    </div>
+  </div>
+  <div class="highlight" style="margin-top:24px">
+    기술: Claude Sonnet 스트리밍 → Thread + asyncio.Queue → SSE 실시간 전송
+  </div>
+  <div class="slide-num">7 / 15</div>
+</div>
+
+<!-- Slide 8: 속도 개선 -->
+<div class="slide">
+  <div class="topbar"></div>
+  <h2>속도 <span class="accent">최적화 여정</span></h2>
+  <table>
+    <tr><th>항목</th><th>이전 (v8.2)</th><th>이후 (v9.0)</th><th>개선</th></tr>
+    <tr><td>일반 대화 (TTFB)</td><td>9.5초</td><td style="color:var(--orange);font-weight:700">2.0초</td><td><span class="badge badge-green">-79%</span></td></tr>
+    <tr><td>BQ 간단 쿼리</td><td>18.1초</td><td style="color:var(--orange);font-weight:700">9.5초</td><td><span class="badge badge-green">-47%</span></td></tr>
+    <tr><td>BQ 캐시 히트</td><td>18.1초</td><td style="color:var(--orange);font-weight:700">7.5초</td><td><span class="badge badge-green">-59%</span></td></tr>
+    <tr><td>웹검색 질문</td><td>17.7초</td><td style="color:var(--orange);font-weight:700">7.2초</td><td><span class="badge badge-green">-59%</span></td></tr>
+  </table>
+  <div class="stat-row" style="margin-top:24px">
+    <div class="stat"><div class="num">86%</div><div class="desc">간단 대화 속도 개선</div></div>
+    <div class="stat"><div class="num">0건</div><div class="desc">Timeout 에러</div></div>
+    <div class="stat"><div class="num">$400</div><div class="desc">월 운영 비용</div></div>
+  </div>
+  <div class="slide-num">8 / 15</div>
+</div>
+
+<!-- Slide 9: 보안 -->
+<div class="slide">
+  <div class="topbar"></div>
+  <h2>보안 & <span class="accent">권한 관리</span></h2>
+  <div class="grid-2">
+    <div>
+      <h3>🔐 인증 체계</h3>
+      <ul>
+        <li>AD(Active Directory) 연동 — 328명 전직원</li>
+        <li>JWT httpOnly 쿠키 인증</li>
+        <li>부서 → 이름 → 비밀번호 로그인</li>
+        <li>GWS: 개인별 Google OAuth (타인 메일 접근 불가)</li>
+      </ul>
+    </div>
+    <div>
+      <h3>🛡️ 데이터 보안</h3>
+      <ul>
+        <li><strong>그룹별 접근 제한</strong> (brand_filter)
+          <br><span class="small">SK그룹: SK/CL/CBT만 | DD그룹: DD만</span></li>
+        <li>SQL 안전장치: SELECT ONLY</li>
+        <li>테이블 화이트리스트</li>
+        <li>사내 서버 운영 (외부 데이터 전송 없음)</li>
+      </ul>
+    </div>
+  </div>
+  <div class="slide-num">9 / 15</div>
+</div>
+
+<!-- Slide 10: QA 테스트 -->
+<div class="slide">
+  <div class="topbar"></div>
+  <h2>QA <span class="accent">테스트 결과</span> — 총 15,200+ 문항</h2>
+  <div class="stat-row">
+    <div class="stat"><div class="num">15,200+</div><div class="desc">총 테스트 문항</div></div>
+    <div class="stat"><div class="num">100%</div><div class="desc">V3 파이프라인<br>6,500문항 PASS</div></div>
+    <div class="stat"><div class="num">99.6%</div><div class="desc">다양성 테스트<br>900문항</div></div>
+    <div class="stat"><div class="num">87%</div><div class="desc">복잡 쿼리<br>리테스트</div></div>
+  </div>
+  <table style="margin-top:16px">
+    <tr><th>테스트</th><th>규모</th><th>OK</th><th>WARN</th><th>FAIL</th><th>PASS</th><th>평균</th></tr>
+    <tr><td>V1 기본</td><td>13테이블×300 = 3,900</td><td>3,488</td><td>412</td><td>0</td><td style="color:var(--orange);font-weight:700">100%</td><td>40.8s</td></tr>
+    <tr><td>V2 변형</td><td>13테이블×300 = 3,900</td><td>3,634</td><td>266</td><td>0</td><td style="color:var(--orange);font-weight:700">100%</td><td>38.4s</td></tr>
+    <tr><td>V3 엣지케이스</td><td>13테이블×500 = 6,500</td><td>5,132</td><td>1,368</td><td>0</td><td style="color:var(--orange);font-weight:700">100%</td><td>45.7s</td></tr>
+    <tr><td>다양성 QA</td><td>9테이블×100 = 900</td><td>820</td><td>76</td><td>4</td><td style="color:var(--orange);font-weight:700">99.6%</td><td>41.8s</td></tr>
+    <tr><td>복잡 쿼리</td><td>30건 (YoY/MoM/CTE)</td><td>26</td><td>0</td><td>4</td><td style="color:var(--orange);font-weight:700">87%</td><td>26.3s</td></tr>
+  </table>
+  <div class="slide-num">10 / 15</div>
+</div>
+
+<!-- Slide 11: vs ChatGPT -->
+<div class="slide">
+  <div class="topbar"></div>
+  <h2>vs <span class="accent">ChatGPT</span></h2>
+  <table>
+    <tr><th>기능</th><th>ChatGPT</th><th>SKIN1004 AI Agent</th></tr>
+    <tr><td>매출 데이터 조회</td><td><span class="badge badge-red">❌ 불가</span></td><td><span class="badge badge-green">✅ BigQuery 실시간</span></td></tr>
+    <tr><td>사내 문서 검색</td><td><span class="badge badge-red">❌ 불가</span></td><td><span class="badge badge-green">✅ Notion 연동</span></td></tr>
+    <tr><td>CS 제품 Q&A</td><td><span class="badge badge-red">❌ 불가</span></td><td><span class="badge badge-green">✅ 1,100개 DB</span></td></tr>
+    <tr><td>메일/일정</td><td><span class="badge badge-red">❌ 불가</span></td><td><span class="badge badge-green">✅ 개인별 OAuth</span></td></tr>
+    <tr><td>차트 생성</td><td>⚠️ 제한적</td><td><span class="badge badge-green">✅ Chart.js 인터랙티브</span></td></tr>
+    <tr><td>데이터 보안</td><td>⚠️ 외부 전송</td><td><span class="badge badge-green">✅ 사내 서버</span></td></tr>
+    <tr><td>스트리밍</td><td><span class="badge badge-green">✅</span></td><td><span class="badge badge-green">✅ ChatGPT급</span></td></tr>
+  </table>
+  <div class="slide-num">11 / 15</div>
+</div>
+
+<!-- Slide 12: 사용 가이드 -->
+<div class="slide">
+  <div class="topbar"></div>
+  <h2>사용 <span class="accent">가이드</span></h2>
+  <div class="grid-2">
+    <div>
+      <h3>📝 시작하기</h3>
+      <ul>
+        <li>🌐 접속: <strong style="color:var(--orange)">http://172.16.1.250:3000</strong></li>
+        <li>🔐 회원가입: 이름 입력 → AD 자동 매칭 → 부서 선택 → 비밀번호 설정</li>
+        <li>💬 질문: 자연어로 무엇이든 입력하면 AI가 자동 분류</li>
+        <li>📊 결과: 표, 차트, 인사이트 자동 생성</li>
+        <li>🔄 후속: 대화 맥락 유지하며 심화 분석 가능</li>
+      </ul>
+      <p style="font-size:13px;color:#888;margin-top:12px">※ 사내 AD 등록 사원만 가입 가능<br>※ 비밀번호 분실 시 DB팀 임재필에 초기화 요청</p>
+    </div>
+    <div>
+      <h3>💡 부서별 활용 예시</h3>
+      <table>
+        <tr><td><strong>B2B팀</strong></td><td>"거래처별 매출 순위"</td></tr>
+        <tr><td><strong>GM팀</strong></td><td>"인도네시아 쇼피 월별 추이"</td></tr>
+        <tr><td><strong>마케팅</strong></td><td>"Facebook ROAS 국가별 비교"</td></tr>
+        <tr><td><strong>경영관리</strong></td><td>"전사 1분기 실적 요약"</td></tr>
+        <tr><td><strong>CS팀</strong></td><td>"센텔라 앰플 성분 알려줘"</td></tr>
+        <tr><td><strong>IT/DB</strong></td><td>"시스템 상태 확인"</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="slide-num">12 / 15</div>
+</div>
+
+<!-- Slide 13: 고급 기능 -->
+<div class="slide">
+  <div class="topbar"></div>
+  <h2>고급 <span class="accent">기능</span></h2>
+  <div class="grid-3">
+    <div class="card"><div class="icon">📈</div><div class="label">자동 차트</div><div class="value">바/라인/파이 차트<br>자동 생성 + 인터랙티브</div></div>
+    <div class="card"><div class="icon">📊</div><div class="label">Admin 대시보드</div><div class="value">사용자·그룹 관리<br>데이터 소스 온/오프</div></div>
+    <div class="card"><div class="icon">📧</div><div class="label">Google 연동</div><div class="value">Gmail, Calendar, Drive<br>개인 OAuth 자동 연결</div></div>
+    <div class="card"><div class="icon">🖼️</div><div class="label">이미지 분석</div><div class="value">이미지 업로드 →<br>AI가 분석/설명</div></div>
+    <div class="card"><div class="icon">🔍</div><div class="label">웹 검색</div><div class="value">날씨, 뉴스, 환율, 영화<br>Google 실시간 검색</div></div>
+    <div class="card"><div class="icon">🛡️</div><div class="label">System Status</div><div class="value">서비스 상태 모니터링<br>CircuitBreaker 자동 복구</div></div>
+  </div>
+  <div class="slide-num">13 / 15</div>
+</div>
+
+<!-- Slide 14: 로드맵 -->
+<div class="slide">
+  <div class="topbar"></div>
+  <h2>향후 <span class="accent">로드맵</span> — 데이터 확장</h2>
+  <div class="grid-2">
+    <div>
+      <h3>📊 데이터 학습 확장</h3>
+      <ul>
+        <li><span class="badge badge-orange">Phase 1</span> <strong>ERP DB 연동</strong> — 재고, 발주, 물류, 원가 데이터 실시간 학습</li>
+        <li><span class="badge badge-blue">Phase 2</span> <strong>리뷰 데이터 업데이트</strong> — 신규 채널 리뷰 수집 자동화 + 감성 분석 고도화</li>
+        <li><span class="badge badge-green">Phase 3</span> <strong>팀별 Notion 업데이트</strong> — 각 팀 업무 매뉴얼/가이드 문서 실시간 학습 및 검색</li>
+      </ul>
+    </div>
+    <div>
+      <h3>💡 기대 효과</h3>
+      <ul>
+        <li>"재고 현황 알려줘" → ERP 실시간 답변</li>
+        <li>"이번 주 아마존 부정 리뷰" → 자동 감성 분석</li>
+        <li>"GM팀 출장 가이드" → 최신 Notion 문서 즉시 검색</li>
+        <li>모든 부서의 업무 데이터를 하나의 AI에서 통합 접근</li>
+      </ul>
+    </div>
+  </div>
+  <div class="highlight" style="margin-top:24px">
+    비전: "모든 크레이버 직원이 데이터 분석가가 되는 세상"
+  </div>
+  <div class="slide-num">14 / 15</div>
+</div>
+
+<!-- Slide 15: Q&A -->
+<div class="slide slide-title" style="justify-content: center; align-items: center; text-align: center;">
+  <div class="topbar"></div>
+  <h1>Q&A</h1>
+  <div class="subtitle">"무엇이 궁금하신가요?"</div>
+  <div class="meta">
+    🎯 실시간 데모 가능<br><br>
+    <strong>임재필</strong> (Jeffrey Im)<br>
+    jeffrey@skin1004korea.com<br><br>
+    <span style="color:var(--orange);font-size:20px">What Do You Crave?</span>
+  </div>
+  <div class="slide-num">15 / 15</div>
+</div>
+
+<!-- Navigation -->
+<div class="nav">
+  <button onclick="prevSlide()">← 이전</button>
+  <button onclick="nextSlide()">다음 →</button>
+</div>
+
+<script>
+  var slides = document.querySelectorAll('.slide');
+  var current = 0;
+  var total = slides.length;
+  var progress = document.getElementById('progress');
+
+  function showSlide(n) {
+    slides[current].classList.remove('active');
+    current = (n + total) % total;
+    slides[current].classList.add('active');
+    progress.style.width = ((current + 1) / total * 100) + '%';
+    // Update all slide numbers
+    slides[current].querySelector('.slide-num').textContent = (current + 1) + ' / ' + total;
+  }
+
+  function nextSlide() { showSlide(current + 1); }
+  function prevSlide() { showSlide(current - 1); }
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'ArrowRight' || e.key === ' ') { e.preventDefault(); nextSlide(); }
+    if (e.key === 'ArrowLeft') { e.preventDefault(); prevSlide(); }
+    if (e.key === 'f' || e.key === 'F') {
+      if (!document.fullscreenElement) document.documentElement.requestFullscreen();
+      else document.exitFullscreen();
+    }
+  });
+
+  // Touch swipe
+  var touchStart = 0;
+  document.addEventListener('touchstart', function(e) { touchStart = e.touches[0].clientX; });
+  document.addEventListener('touchend', function(e) {
+    var diff = touchStart - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 50) { diff > 0 ? nextSlide() : prevSlide(); }
+  });
+
+  showSlide(0);
+</script>
+</body>
+</html>
