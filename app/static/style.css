@@ -996,16 +996,90 @@ html.light .login-card .logo { mix-blend-mode: multiply; }
   max-width: 100%;
   overflow: hidden;
 }
-/* Streaming: smooth new content appearance */
-.message-assistant .message-content p:last-child,
-.message-assistant .message-content li:last-child,
-.message-assistant .message-content tr:last-child {
-  animation: fadeInContent 0.15s ease-in;
+/* Streaming cursor — ChatGPT-style blinking caret */
+.message-assistant.streaming .message-content::after {
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 1.1em;
+  background: var(--accent);
+  border-radius: 1px;
+  margin-left: 2px;
+  vertical-align: text-bottom;
+  animation: cursor-blink 0.8s steps(2) infinite;
 }
-@keyframes fadeInContent {
-  from { opacity: 0.4; }
-  to { opacity: 1; }
+@keyframes cursor-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }
+
+/* Route-specific loading text */
+.typing-indicator .loading-text {
+  font-size: 13px;
+  color: var(--text-secondary);
+  animation: pulse-text 1.5s ease-in-out infinite;
+}
+@keyframes pulse-text {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+/* Stop button mode */
+#btn-send.stop-mode {
+  background: var(--danger, #ef4444) !important;
+  border-radius: 8px;
+}
+#btn-send.stop-mode svg {
+  display: none;
+}
+#btn-send.stop-mode::after {
+  content: "■";
+  font-size: 14px;
+  color: white;
+}
+
+/* Message action buttons */
+.msg-actions {
+  display: flex;
+  gap: 4px;
+  margin-top: 6px;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.message:hover .msg-actions { opacity: 1; }
+.msg-action-btn {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 4px 8px;
+  cursor: pointer;
+  color: var(--text-secondary);
+  transition: all 0.15s;
+}
+.msg-action-btn:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+/* Error card */
+.error-card {
+  background: var(--bg-hover);
+  border: 1px solid var(--danger, #ef4444);
+  border-radius: 12px;
+  padding: 16px;
+  color: var(--text-primary);
+}
+.error-retry-btn {
+  margin-top: 8px;
+  padding: 6px 16px;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+}
+.error-retry-btn:hover { opacity: 0.9; }
 
 .message-assistant .message-content p { margin-bottom: 10px; }
 .message-assistant .message-content p:last-child { margin-bottom: 0; }

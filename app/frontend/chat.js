@@ -667,6 +667,13 @@
     renderImagePreviews();
   }
 
+  function _resetSendBtn() {
+    btnSend.classList.remove("stop-mode");
+    btnSend.disabled = false;
+    btnSend.title = "전송";
+    btnSend.onclick = null;
+  }
+
   // ===== Send Message =====
   async function sendMessage() {
     var text = chatInput.value.trim();
@@ -746,6 +753,17 @@
     var aiMsgEl = appendMessage("assistant", "", true);
     var contentEl = aiMsgEl.querySelector(".message-content");
 
+    // Add streaming class for cursor animation
+    aiMsgEl.classList.add("streaming");
+
+    // Transform send button → stop button
+    btnSend.disabled = false;
+    btnSend.classList.add("stop-mode");
+    btnSend.title = "생성 중지";
+    btnSend.onclick = function() {
+      if (currentAbortController) currentAbortController.abort();
+    };
+
     try {
       var response = await fetch("/v1/chat/completions", {
         method: "POST",
@@ -785,6 +803,18 @@
               var srcMatch = delta.content.match(/<!-- source:(\w+) -->/);
               if (srcMatch) {
                 detectedSource = srcMatch[1];
+                // Route-specific loading message
+                var loadingMsgs = {
+                  bigquery: "📊 데이터 조회 중...",
+                  notion: "📋 Notion 문서 검색 중...",
+                  cs: "🧴 CS Q&A 검색 중...",
+                  gws: "📧 Google Workspace 확인 중...",
+                  multi: "📈 종합 분석 중...",
+                };
+                var typingEl = aiMsgEl.querySelector(".typing-indicator");
+                if (typingEl && loadingMsgs[detectedSource]) {
+                  typingEl.innerHTML = '<span class="loading-text">' + loadingMsgs[detectedSource] + '</span>';
+                }
                 var stripped = delta.content.replace(/<!-- source:\w+ -->/, "");
                 if (stripped) aiContent += stripped;
               } else {
@@ -792,7 +822,7 @@
               }
               // Smooth streaming: render markdown every 150ms for fluid typing feel
               var now = Date.now();
-              if (!contentEl._lastRender || now - contentEl._lastRender > 150) {
+              if (!contentEl._lastRender || now - contentEl._lastRender > 50) {
                 renderMarkdown(contentEl, aiContent);
                 contentEl._lastRender = now;
                 scrollToBottom();
@@ -802,7 +832,7 @@
                   contentEl._lastRender = Date.now();
                   contentEl._pendingRender = null;
                   scrollToBottom();
-                }, 150);
+                }, 50);
               }
             }
           } catch (e) { /* skip */ }
@@ -812,12 +842,14 @@
       if (e.name === "AbortError") {
         var typing = aiMsgEl.querySelector(".typing-indicator");
         if (typing) typing.remove();
+        aiMsgEl.classList.remove("streaming");
+        _resetSendBtn();
         isStreaming = false;
         currentAbortController = null;
         return;
       }
       aiContent = "오류가 발생했습니다: " + e.message;
-      contentEl.textContent = aiContent;
+      contentEl.innerHTML = '<div class="error-card">⚠️ ' + aiContent + '<br><button class="error-retry-btn" onclick="document.querySelector(\'#chat-input\').value=\'' + lastUserQuery.replace(/'/g, "\\'") + '\';document.querySelector(\'#btn-send\').click();">다시 시도</button></div>';
     }
 
     if (contentEl._pendingRender) {
@@ -828,11 +860,21 @@
     var typing = aiMsgEl.querySelector(".typing-indicator");
     if (typing) typing.remove();
 
+    // Remove streaming cursor
+    aiMsgEl.classList.remove("streaming");
+    _resetSendBtn();
+
     var cleanContent = aiContent.replace(/<!-- source:\w+ -->/g, "");
     contentEl.dataset.raw = cleanContent;
     renderMarkdown(contentEl, cleanContent);
     detectAndRenderCharts(contentEl, cleanContent);
     highlightCodeBlocks(contentEl);
+
+    // Add message action buttons (copy + regenerate)
+    var actionsDiv = document.createElement("div");
+    actionsDiv.className = "msg-actions";
+    actionsDiv.innerHTML = '<button class="msg-action-btn" title="복사" onclick="navigator.clipboard.writeText(this.closest(\'.message\').querySelector(\'.message-content\').dataset.raw || this.closest(\'.message\').querySelector(\'.message-content\').textContent)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button>';
+    aiMsgEl.appendChild(actionsDiv);
 
     if (detectedSource && detectedSource !== "direct") {
       addSourceBadge(aiMsgEl, detectedSource);
