@@ -67,11 +67,11 @@ async def chat_completions(http_request: Request, request: ChatCompletionRequest
 
     Supports both streaming and non-streaming responses.
     """
-    # Extract user_email: header > request body > default fallback
+    # Extract user_email from JWT auth (NO default fallback — prevents accessing other users' GWS)
     user_email = (
         getattr(http_request.state, "user_email", "")
         or request.user
-        or get_settings().gws_default_email
+        or ""
     )
 
     # Server-side brand_filter enforcement: if client didn't send one,
