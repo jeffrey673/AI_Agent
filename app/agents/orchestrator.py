@@ -869,7 +869,7 @@ class OrchestratorAgent:
             logger.error("fulldata_request_failed", error=str(e))
             return {
                 "source": "bigquery",
-                "answer": f"전체 데이터 조회 중 오류가 발생했습니다: {str(e)}",
+                "answer": f"죄송합니다. 데이터 조회 중 일시적인 오류가 발생했습니다. 잠시 후 다시 시도해 주세요.",
             }
 
     async def _handle_notion(
@@ -921,7 +921,7 @@ class OrchestratorAgent:
             return {"source": "cs", "answer": result}
         except Exception as e:
             logger.error("orchestrator_cs_failed", error=str(e))
-            return {"source": "cs", "answer": f"CS 데이터 조회 중 오류가 발생했습니다: {str(e)}"}
+            return {"source": "cs", "answer": f"죄송합니다. CS 데이터 조회 중 일시적인 오류가 발생했습니다. 잠시 후 다시 시도해 주세요."}
 
     async def _handle_multi(
         self,
@@ -1435,7 +1435,7 @@ JSON만 반환:
             return {"source": "direct", "answer": answer}
         except Exception as e:
             logger.error("direct_llm_failed", error=str(e))
-            return {"source": "direct", "answer": f"답변 생성 중 오류가 발생했습니다: {str(e)}"}
+            return {"source": "direct", "answer": f"죄송합니다. 일시적인 오류가 발생했습니다. 잠시 후 다시 시도해 주세요.\n\n> 기술 참고: {str(e)[:100]}"}
 
     async def _verify_coherence(self, query: str, answer: str, route: str) -> str:
         """Verify the answer actually addresses the user's question.
