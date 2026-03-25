@@ -820,19 +820,19 @@
               } else {
                 aiContent += delta.content;
               }
-              // Smooth streaming: textContent for speed, markdown every 500ms
-              contentEl.textContent = aiContent;
-              scrollToBottom();
+              // Streaming render: markdown only, 300ms throttle
               var now = Date.now();
-              if (!contentEl._lastRender || now - contentEl._lastRender > 500) {
+              if (!contentEl._lastRender || now - contentEl._lastRender > 300) {
                 renderMarkdown(contentEl, aiContent);
                 contentEl._lastRender = now;
+                scrollToBottom();
               } else if (!contentEl._pendingRender) {
                 contentEl._pendingRender = setTimeout(function() {
                   renderMarkdown(contentEl, aiContent);
                   contentEl._lastRender = Date.now();
                   contentEl._pendingRender = null;
-                }, 500);
+                  scrollToBottom();
+                }, 300);
               }
             }
           } catch (e) { /* skip */ }
