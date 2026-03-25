@@ -61,6 +61,15 @@ async def dashboard():
     return FileResponse("app/static/dashboard.html", media_type="text/html")
 
 
+@router.post("/api/save-roadmap")
+async def save_roadmap(request: Request):
+    """Save edited roadmap HTML to static file."""
+    body = await request.body()
+    with open("app/static/roadmap.html", "wb") as f:
+        f.write(body)
+    return {"status": "ok"}
+
+
 @router.post("/v1/chat/completions")
 async def chat_completions(http_request: Request, request: ChatCompletionRequest):
     """OpenAI-compatible chat completions endpoint.
