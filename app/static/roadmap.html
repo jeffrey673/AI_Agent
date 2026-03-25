@@ -141,12 +141,13 @@
 
   /* Gantt-style bars */
   .gantt {
-    max-width: 1100px;
-    margin: 50px auto 0;
+    max-width: 95vw;
+    margin: 40px auto 0;
+    padding: 0 20px;
   }
 
   .gantt-title {
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 700;
     margin-bottom: 20px;
     color: #ccc;
@@ -155,12 +156,12 @@
   .gantt-row {
     display: flex;
     align-items: center;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
   }
 
   .gantt-label {
-    width: 160px;
-    font-size: 13px;
+    width: 200px;
+    font-size: 15px;
     color: #aaa;
     text-align: right;
     padding-right: 16px;
@@ -169,7 +170,7 @@
 
   .gantt-track {
     flex: 1;
-    height: 32px;
+    height: 44px;
     background: rgba(255,255,255,0.03);
     border-radius: 6px;
     position: relative;
@@ -183,7 +184,7 @@
     display: flex;
     align-items: center;
     padding: 0 12px;
-    font-size: 11px;
+    font-size: 13px;
     font-weight: 600;
     white-space: nowrap;
     transition: width 0.5s ease;
@@ -204,13 +205,13 @@
   /* Month markers */
   .gantt-months {
     display: flex;
-    margin-left: 160px;
+    margin-left: 200px;
     margin-bottom: 8px;
   }
   .gantt-month {
     flex: 1;
     text-align: center;
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 700;
     color: #666;
     border-bottom: 1px solid rgba(255,255,255,0.1);
@@ -220,13 +221,13 @@
   /* Week markers */
   .gantt-weeks {
     display: flex;
-    margin-left: 160px;
+    margin-left: 200px;
     margin-bottom: 12px;
   }
   .gantt-week {
     flex: 1;
     text-align: center;
-    font-size: 10px;
+    font-size: 12px;
     color: #444;
   }
 
@@ -343,148 +344,6 @@
   
 </div>
 
-<!-- Timeline Detail -->
-<div style="max-width: 1100px; margin: 50px auto 0;">
-  <div class="gantt-title">📋 주차별 상세</div>
-</div>
-
-<div class="timeline">
-  <!-- Header -->
-  <div class="header month">월</div>
-  <div class="header ai">🤖 AI 프로젝트</div>
-  <div class="header crm">💼 CRM 프로젝트</div>
-
-  <!-- April -->
-  <div class="month-cell" style="grid-row: span 4;">
-    <div class="month-label" contenteditable="true" style="outline: none; cursor: text;">4월</div>
-    <div class="month-sub">April</div>
-  </div>
-
-  <div class="week-cell">
-    <div class="week-label" contenteditable="true" style="outline: none; cursor: text;">1주차</div>
-    <div class="task ai" contenteditable="true" style="outline: none; cursor: text;"><span class="icon">🏗️</span> AI 구축 시작</div>
-  </div>
-  <div class="week-cell">
-    <div class="week-label" contenteditable="true" style="outline: none; cursor: text;">1주차</div>
-    <div class="task crm" contenteditable="true" style="outline: none; cursor: text;"><span class="icon">🏗️</span> CRM 구축 시작</div>
-  </div>
-
-  <div class="week-cell">
-    <div class="week-label" contenteditable="true" style="outline: none; cursor: text;">2주차</div>
-    <div class="task ai" contenteditable="true" style="outline: none; cursor: text;"><span class="icon">📊</span> AI 구축 · 데이터 정비</div>
-  </div>
-  <div class="week-cell">
-    <div class="week-label" contenteditable="true" style="outline: none; cursor: text;">2주차</div>
-    <div class="task crm" contenteditable="true" style="outline: none; cursor: text;"><span class="icon">📧</span> Email 마케팅 Test</div>
-  </div>
-
-  <div class="week-cell">
-    <div class="week-label" contenteditable="true" style="outline: none; cursor: text;">3주차 (21일)</div>
-    <div class="task milestone ai" contenteditable="true" style="outline: none; cursor: text;"><span class="icon">🔄</span> 마이그레이션 (21일)</div>
-  </div>
-  <div class="week-cell">
-    <div class="week-label" contenteditable="true" style="outline: none; cursor: text;">3주차</div>
-    <div class="task crm" contenteditable="true" style="outline: none; cursor: text;"><span class="icon">📧</span> Email 마케팅 Test 계속</div>
-  </div>
-
-  <div class="week-cell">
-    <div class="week-label" contenteditable="true" style="outline: none; cursor: text;">4주차</div>
-    <div class="task ai" contenteditable="true" style="outline: none; cursor: text;"><span class="icon">✅</span> 이전 완료</div>
-  </div>
-  <div class="week-cell">
-    <div class="week-label" contenteditable="true" style="outline: none; cursor: text;">4주차</div>
-    <div class="task crm" contenteditable="true" style="outline: none; cursor: text;"><span class="icon">📋</span> 테스트 결과 정리</div>
-  </div>
-
-  <!-- May -->
-  <div class="month-cell" style="grid-row: span 4;">
-    <div class="month-label" contenteditable="true" style="outline: none; cursor: text;">5월</div>
-    <div class="month-sub">May</div>
-  </div>
-
-  <div class="week-cell">
-    <div class="week-label" contenteditable="true" style="outline: none; cursor: text;">1주차</div>
-    <div class="task ai" contenteditable="true" style="outline: none; cursor: text;"><span class="icon">📦</span> ERP 데이터 연동 시작</div>
-  </div>
-  <div class="week-cell">
-    <div class="week-label" contenteditable="true" style="outline: none; cursor: text;">1주차</div>
-    <div class="task crm" contenteditable="true" style="outline: none; cursor: text;"><span class="icon">🔍</span> 내부 검토</div>
-  </div>
-
-  <div class="week-cell">
-    <div class="week-label" contenteditable="true" style="outline: none; cursor: text;">2주차</div>
-    <div class="task ai" contenteditable="true" style="outline: none; cursor: text;"><span class="icon">📦</span> ERP 연동 · 테스트</div>
-  </div>
-  <div class="week-cell">
-    <div class="week-label" contenteditable="true" style="outline: none; cursor: text;">2주차</div>
-    <div class="task crm" contenteditable="true" style="outline: none; cursor: text;"><span class="icon">🔍</span> 내부 검토 계속</div>
-  </div>
-
-  <div class="week-cell">
-    <div class="week-label" contenteditable="true" style="outline: none; cursor: text;">3주차</div>
-    <div class="task ai" contenteditable="true" style="outline: none; cursor: text;"><span class="icon">⚡</span> AI 고도화 시작</div>
-  </div>
-  <div class="week-cell">
-    <div class="week-label" contenteditable="true" style="outline: none; cursor: text;">3주차</div>
-    <div class="task milestone crm" contenteditable="true" style="outline: none; cursor: text;"><span class="icon">🚀</span> 대외적 오픈</div>
-  </div>
-
-  <div class="week-cell">
-    <div class="week-label" contenteditable="true" style="outline: none; cursor: text;">4주차</div>
-    <div class="task ai" contenteditable="true" style="outline: none; cursor: text;"><span class="icon">⚡</span> 고도화 진행</div>
-  </div>
-  <div class="week-cell">
-    <div class="week-label" contenteditable="true" style="outline: none; cursor: text;">4주차</div>
-    <div class="task crm" contenteditable="true" style="outline: none; cursor: text;"><span class="icon">⚙️</span> 자동화 개발</div>
-  </div>
-
-  <!-- June -->
-  <div class="month-cell" style="grid-row: span 4;">
-    <div class="month-label" contenteditable="true" style="outline: none; cursor: text;">6월</div>
-    <div class="month-sub">June</div>
-  </div>
-
-  <div class="week-cell">
-    <div class="week-label" contenteditable="true" style="outline: none; cursor: text;">1주차</div>
-    <div class="task ai" contenteditable="true" style="outline: none; cursor: text;"><span class="icon">🔄</span> Update · 고도화</div>
-  </div>
-  <div class="week-cell">
-    <div class="week-label" contenteditable="true" style="outline: none; cursor: text;">1주차</div>
-    <div class="task crm" contenteditable="true" style="outline: none; cursor: text;"><span class="icon">⚙️</span> 자동화 개발</div>
-  </div>
-
-  <div class="week-cell">
-    <div class="week-label" contenteditable="true" style="outline: none; cursor: text;">2주차</div>
-    <div class="task ai" contenteditable="true" style="outline: none; cursor: text;"><span class="icon">🔄</span> Update 계속</div>
-  </div>
-  <div class="week-cell">
-    <div class="week-label" contenteditable="true" style="outline: none; cursor: text;">2주차</div>
-    <div class="task crm" contenteditable="true" style="outline: none; cursor: text;"><span class="icon">🏃</span> 운영 안정화</div>
-  </div>
-
-  <div class="week-cell">
-    <div class="week-label" contenteditable="true" style="outline: none; cursor: text;">3주차</div>
-    <div class="task ai" contenteditable="true" style="outline: none; cursor: text;"><span class="icon">🛡️</span> 보안 검토</div>
-  </div>
-  <div class="week-cell">
-    <div class="week-label" contenteditable="true" style="outline: none; cursor: text;">3주차</div>
-    <div class="task crm" contenteditable="true" style="outline: none; cursor: text;"><span class="icon">🏃</span> 운영</div>
-  </div>
-
-  <div class="week-cell">
-    <div class="week-label" contenteditable="true" style="outline: none; cursor: text;">4주차</div>
-    <div class="task milestone ai" contenteditable="true" style="outline: none; cursor: text;"><span class="icon">✅</span> 보안 검토 완료</div>
-  </div>
-  <div class="week-cell">
-    <div class="week-label" contenteditable="true" style="outline: none; cursor: text;">4주차</div>
-    <div class="task crm" contenteditable="true" style="outline: none; cursor: text;"><span class="icon">🏃</span> 운영 계속</div>
-  </div>
-</div>
-
-<div class="legend">
-  <div class="legend-item"><div class="legend-dot ai"></div> AI 프로젝트</div>
-  <div class="legend-item"><div class="legend-dot crm"></div> CRM 프로젝트</div>
-</div>
 
 
 <!-- Editable Mode -->
