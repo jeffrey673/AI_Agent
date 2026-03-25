@@ -358,7 +358,7 @@ class OrchestratorAgent:
             yield ("done", "")
             return
 
-        # Non-streaming routes (CS, Notion, GWS, Multi)
+        # Non-streaming routes (CS, Notion, GWS, Multi) → simulate streaming
         handlers = {
             "notion": self._handle_notion,
             "gws": self._handle_gws,
@@ -375,7 +375,26 @@ class OrchestratorAgent:
             result["answer"] = ensure_formatting(result["answer"], domain=route)
 
         yield ("source", result.get("source", route))
-        yield ("done", result.get("answer", ""))
+
+        # Simulate streaming: send answer in small word-based chunks with delays
+        import asyncio as _aio
+        answer = result.get("answer", "")
+        if answer:
+            # Split into ~40 char chunks at word boundaries
+            pos = 0
+            while pos < len(answer):
+                end = min(pos + 40, len(answer))
+                # Find next word boundary
+                if end < len(answer):
+                    space = answer.rfind(" ", pos, end + 10)
+                    newline = answer.rfind("\n", pos, end + 5)
+                    boundary = max(space, newline)
+                    if boundary > pos:
+                        end = boundary + 1
+                yield ("chunk", answer[pos:end])
+                pos = end
+                await _aio.sleep(0.02)  # 20ms between chunks
+        yield ("done", "")
 
     async def _classify_with_llm(self, query: str, conversation_context: str, llm) -> str:
         """LLM-based classification (used only when keyword match is ambiguous).
