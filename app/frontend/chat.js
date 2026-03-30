@@ -6,6 +6,23 @@
 (function () {
   "use strict";
 
+  // ===== Wave 3: Toast notification system =====
+  var _toastContainer = null;
+  function showToast(message, type) {
+    type = type || "info";
+    if (!_toastContainer) {
+      _toastContainer = document.createElement("div");
+      _toastContainer.className = "toast-container";
+      document.body.appendChild(_toastContainer);
+    }
+    var t = document.createElement("div");
+    t.className = "toast toast-" + type;
+    var icon = type === "error" ? "⚠️" : type === "success" ? "✓" : "ℹ";
+    t.innerHTML = '<span>' + icon + '</span><span>' + message + '</span>';
+    _toastContainer.appendChild(t);
+    setTimeout(function() { t.remove(); }, 4000);
+  }
+
   // ===== State =====
   var currentUser = null;
   var conversations = [];
@@ -931,6 +948,7 @@
         return;
       }
       aiContent = "오류가 발생했습니다: " + e.message;
+      showToast("응답 중 오류가 발생했습니다", "error");
       contentEl.innerHTML = '<div class="error-card">⚠️ ' + aiContent + '<br><button class="error-retry-btn" onclick="document.querySelector(\'#chat-input\').value=\'' + lastUserQuery.replace(/'/g, "\\'") + '\';document.querySelector(\'#btn-send\').click();">다시 시도</button></div>';
     }
 
@@ -1201,6 +1219,16 @@
       // Strip follow-up suggestion block from rendered content (shown as chips instead)
       var cleaned = stripFollowupBlock(text);
       el.innerHTML = marked.parse(cleaned, { breaks: true, gfm: true });
+      // Wave 3: Wrap tables in scroll container for responsive overflow
+      var tables = el.querySelectorAll("table");
+      for (var t = 0; t < tables.length; t++) {
+        if (!tables[t].parentElement.classList.contains("table-wrapper")) {
+          var wrapper = document.createElement("div");
+          wrapper.className = "table-wrapper";
+          tables[t].parentNode.insertBefore(wrapper, tables[t]);
+          wrapper.appendChild(tables[t]);
+        }
+      }
     } catch (e) {
       el.textContent = text;
     }
