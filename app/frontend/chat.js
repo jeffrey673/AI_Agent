@@ -755,6 +755,110 @@
   }
 
   // ===== Send Message =====
+  // ===== Token Buffer Queue — smooth streaming like ChatGPT =====
+  var _tokenQueue = [];
+  var _drainRunning = false;
+  var _drainContentEl = null;
+  var _renderTimer = null;
+  var _completedHtml = "";
+  var _lastCompletedText = "";
+
+  function _startTokenDrain(contentEl) {
+    _drainContentEl = contentEl;
+    _drainRunning = true;
+    _completedHtml = "";
+    _lastCompletedText = "";
+    _scheduleDrain();
+  }
+
+  function _scheduleDrain() {
+    if (!_drainRunning) return;
+    requestAnimationFrame(_drainFrame);
+  }
+
+  function _drainFrame() {
+    if (!_drainRunning || !_drainContentEl) return;
+
+    // Adaptive speed: take more chars when queue is large
+    var queueLen = 0;
+    for (var i = 0; i < _tokenQueue.length; i++) queueLen += _tokenQueue[i].length;
+
+    var take = queueLen > 200 ? 20 : queueLen > 50 ? 8 : 3;
+
+    // Drain 'take' characters from queue into aiContent
+    var drained = 0;
+    while (_tokenQueue.length > 0 && drained < take) {
+      var front = _tokenQueue[0];
+      var need = take - drained;
+      if (front.length <= need) {
+        aiContent += front;
+        drained += front.length;
+        _tokenQueue.shift();
+      } else {
+        aiContent += front.slice(0, need);
+        _tokenQueue[0] = front.slice(need);
+        drained += need;
+      }
+    }
+
+    if (drained > 0) {
+      _renderStream();
+    }
+
+    // Continue draining if there's more, or keep alive waiting for new tokens
+    if (_tokenQueue.length > 0) {
+      _scheduleDrain();
+    } else if (_drainRunning) {
+      // Queue empty but stream not done — poll again soon
+      setTimeout(_scheduleDrain, 16);
+    }
+  }
+
+  function _renderStream() {
+    var el = _drainContentEl;
+    if (!el) return;
+
+    // Split into completed paragraphs (\n\n) and in-progress tail
+    var splitIdx = aiContent.lastIndexOf("\n\n");
+    var completedText, tailText;
+    if (splitIdx >= 0) {
+      completedText = aiContent.slice(0, splitIdx + 2);
+      tailText = aiContent.slice(splitIdx + 2);
+    } else {
+      completedText = "";
+      tailText = aiContent;
+    }
+
+    // Re-render completed part only when it changes (stable DOM)
+    if (completedText !== _lastCompletedText) {
+      _lastCompletedText = completedText;
+      try {
+        _completedHtml = marked.parse(stripFollowupBlock(completedText), { breaks: true, gfm: true });
+      } catch (e) {
+        _completedHtml = "<p>" + completedText.replace(/</g, "&lt;") + "</p>";
+      }
+    }
+
+    // Tail: escape HTML and show as raw (fast, no parse needed)
+    var tailHtml = tailText ? '<span class="stream-tail">' + tailText.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/\n/g, "<br>") + '</span>' : "";
+
+    el.innerHTML = _completedHtml + tailHtml;
+
+    // Auto-scroll only if user is near bottom
+    var scrollEl = document.getElementById("chat-messages");
+    if (scrollEl.scrollHeight - scrollEl.scrollTop - scrollEl.clientHeight < 80) {
+      scrollToBottom();
+    }
+  }
+
+  function _stopTokenDrain() {
+    _drainRunning = false;
+    _drainContentEl = null;
+    _tokenQueue = [];
+    _completedHtml = "";
+    _lastCompletedText = "";
+  }
+
   async function sendMessage() {
     var text = chatInput.value.trim();
     var hasImages = pendingImages.length > 0;
@@ -912,7 +1016,7 @@
                   typingEl.innerHTML = '<span class="loading-text">' + loadingMsgs[detectedSource] + '</span>';
                 }
                 var stripped = delta.content.replace(/<!-- source:\w+ -->/, "");
-                if (stripped) aiContent += stripped;
+                if (stripped) _tokenQueue.push(stripped);
               } else {
                 // Filter out thinking/reasoning patterns from Claude
                 var text = delta.content;
@@ -923,32 +1027,12 @@
                 // Strip thinking blocks
                 text = text.replace(/<thinking>[\s\S]*?<\/thinking>/g, "");
                 text = text.replace(/\[thinking\][\s\S]*?\[\/thinking\]/g, "");
-                if (text) aiContent += text;
+                if (text) _tokenQueue.push(text);
               }
-              // ChatGPT-style streaming: 80ms interval markdown render
+              // Start token drain animation if not running
               var typing = aiMsgEl.querySelector(".typing-indicator");
               if (typing) typing.remove();
-
-              if (!contentEl._streamInterval) {
-                // First chunk: render immediately
-                try {
-                  contentEl.innerHTML = marked.parse(stripFollowupBlock(aiContent), { breaks: true, gfm: true });
-                } catch (e) { contentEl.textContent = aiContent; }
-                contentEl._lastRenderedLen = aiContent.length;
-                scrollToBottom();
-
-                // Then render every 80ms (fast enough to feel real-time, slow enough to avoid jank)
-                contentEl._streamInterval = setInterval(function() {
-                  if (aiContent.length === contentEl._lastRenderedLen) return;
-                  try {
-                    var scrollEl = document.getElementById("chat-messages");
-                    var wasAtBottom = scrollEl.scrollHeight - scrollEl.scrollTop - scrollEl.clientHeight < 60;
-                    contentEl.innerHTML = marked.parse(stripFollowupBlock(aiContent), { breaks: true, gfm: true });
-                    contentEl._lastRenderedLen = aiContent.length;
-                    if (wasAtBottom) scrollToBottom();
-                  } catch (e) { contentEl.textContent = aiContent; }
-                }, 80);
-              }
+              if (!_drainRunning) _startTokenDrain(contentEl);
             }
           } catch (e) { /* skip */ }
         }
@@ -968,17 +1052,11 @@
       contentEl.innerHTML = '<div class="error-card">⚠️ ' + aiContent + '<br><button class="error-retry-btn" onclick="document.querySelector(\'#chat-input\').value=\'' + lastUserQuery.replace(/'/g, "\\'") + '\';document.querySelector(\'#btn-send\').click();">다시 시도</button></div>';
     }
 
-    // Clean up streaming render state
-    if (contentEl._pendingRender) {
-      clearTimeout(contentEl._pendingRender);
-      contentEl._pendingRender = null;
+    // Flush remaining tokens from queue into aiContent
+    while (_tokenQueue.length > 0) {
+      aiContent += _tokenQueue.shift();
     }
-    if (contentEl._streamInterval) {
-      clearInterval(contentEl._streamInterval);
-      contentEl._streamInterval = null;
-    }
-    contentEl._mdScheduled = false;
-    contentEl._lastRenderedLen = 0;
+    _stopTokenDrain();
 
     var typing = aiMsgEl.querySelector(".typing-indicator");
     if (typing) typing.remove();

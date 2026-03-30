@@ -1036,7 +1036,11 @@ html.light .login-card .logo { mix-blend-mode: multiply; }
   50% { opacity: 1; }
 }
 
-/* Streaming cursor — appended to last element in content */
+/* Streaming tail — raw text being typed, before markdown parse */
+.stream-tail {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
 
 /* Stop button mode */
 #btn-send.stop-mode {
