@@ -23,6 +23,36 @@
     setTimeout(function() { t.remove(); }, 4000);
   }
 
+  // ===== Clipboard helper (works on HTTP too) =====
+  function _copyText(text, btn) {
+    function _done() {
+      if (btn) {
+        var orig = btn.innerHTML;
+        btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>';
+        setTimeout(function() { btn.innerHTML = orig; }, 1500);
+      }
+      showToast("복사되었습니다", "success");
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(_done).catch(function() {
+        _fallbackCopy(text);
+        _done();
+      });
+    } else {
+      _fallbackCopy(text);
+      _done();
+    }
+  }
+  function _fallbackCopy(text) {
+    var ta = document.createElement("textarea");
+    ta.value = text;
+    ta.style.cssText = "position:fixed;left:-9999px;top:-9999px";
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand("copy"); } catch (e) {}
+    document.body.removeChild(ta);
+  }
+
   // ===== State =====
   var currentUser = null;
   var conversations = [];
@@ -971,10 +1001,20 @@
     detectAndRenderCharts(contentEl, cleanContent);
     highlightCodeBlocks(contentEl);
 
-    // Add message action buttons (copy + regenerate)
+    // Add message action buttons (copy)
     var actionsDiv = document.createElement("div");
     actionsDiv.className = "msg-actions";
-    actionsDiv.innerHTML = '<button class="msg-action-btn" title="복사" onclick="navigator.clipboard.writeText(this.closest(\'.message\').querySelector(\'.message-content\').dataset.raw || this.closest(\'.message\').querySelector(\'.message-content\').textContent)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button>';
+    var copyBtn = document.createElement("button");
+    copyBtn.className = "msg-action-btn";
+    copyBtn.title = "복사";
+    copyBtn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>';
+    copyBtn.addEventListener("click", function() {
+      var msg = this.closest(".message");
+      var ce = msg && msg.querySelector(".message-content");
+      var text = (ce && ce.dataset.raw) || (ce && ce.textContent) || "";
+      _copyText(text, this);
+    });
+    actionsDiv.appendChild(copyBtn);
     aiMsgEl.appendChild(actionsDiv);
 
     if (detectedSource && detectedSource !== "direct") {
@@ -1258,14 +1298,13 @@
         btn.className = "code-copy-btn";
         btn.textContent = "Copy";
         btn.addEventListener("click", function () {
-          navigator.clipboard.writeText(block.textContent).then(function () {
-            btn.textContent = "Copied!";
-            btn.classList.add("copied");
-            setTimeout(function () {
-              btn.textContent = "Copy";
-              btn.classList.remove("copied");
-            }, 1500);
-          });
+          _copyText(block.textContent, null);
+          btn.textContent = "Copied!";
+          btn.classList.add("copied");
+          setTimeout(function () {
+            btn.textContent = "Copy";
+            btn.classList.remove("copied");
+          }, 1500);
         });
         pre.style.position = "relative";
         pre.appendChild(btn);
