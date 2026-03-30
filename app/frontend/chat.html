@@ -7,7 +7,7 @@
   <title>SKIN1004 AI</title>
   <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
   <link rel="icon" type="image/png" href="/static/favicon.png">
-  <link rel="stylesheet" href="/static/style.css?v=112">
+  <link rel="stylesheet" href="/static/style.css?v=113">
   <!-- Markdown + Code highlighting -->
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/github-dark.min.css" id="hljs-theme">
@@ -113,7 +113,7 @@
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
       </button>
       <!-- Messages / Welcome -->
-      <div class="chat-messages" id="chat-messages">
+      <div class="chat-messages" id="chat-messages" role="log" aria-live="polite" aria-label="대화 메시지">
         <div class="chat-welcome" id="chat-welcome">
           <div class="welcome-greeting">
             <div class="welcome-first-line">
@@ -222,6 +222,6 @@
   <!-- Theme Toggle -->
   <button id="skin-theme-toggle" aria-label="Toggle theme"></button>
 
-  <script src="/frontend/chat.js?v=125"></script>
+  <script src="/frontend/chat.js?v=126"></script>
 </body>
 </html>

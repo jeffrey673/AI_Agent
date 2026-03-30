@@ -104,6 +104,32 @@
     }, "image/png");
   }
 
+  // ===== Keyboard Shortcuts Help =====
+  function _showShortcuts() {
+    if (document.getElementById("shortcuts-overlay")) return;
+    var ov = document.createElement("div");
+    ov.id = "shortcuts-overlay";
+    ov.className = "confirm-overlay";
+    ov.innerHTML =
+      '<div class="confirm-dialog" style="min-width:340px;text-align:left;">' +
+      '<p style="font-weight:700;font-size:16px;margin-bottom:16px;">키보드 단축키</p>' +
+      '<table class="shortcuts-table">' +
+      '<tr><td><kbd>Enter</kbd></td><td>메시지 전송</td></tr>' +
+      '<tr><td><kbd>Shift</kbd>+<kbd>Enter</kbd></td><td>줄바꿈</td></tr>' +
+      '<tr><td><kbd>Ctrl</kbd>+<kbd>Enter</kbd></td><td>메시지 전송</td></tr>' +
+      '<tr><td><kbd>Esc</kbd></td><td>패널 닫기 / 생성 중지</td></tr>' +
+      '<tr><td><kbd>?</kbd></td><td>단축키 도움말 (이 화면)</td></tr>' +
+      '</table>' +
+      '<div style="margin-top:16px;text-align:center;">' +
+      '<button class="confirm-cancel" onclick="this.closest(\'.confirm-overlay\').remove()">닫기</button>' +
+      '</div></div>';
+    document.body.appendChild(ov);
+    ov.addEventListener("click", function(e) { if (e.target === ov) ov.remove(); });
+  }
+
+  // ===== Helpers =====
+  function _escHtml(s) { var d = document.createElement("div"); d.textContent = s; return d.innerHTML; }
+
   // ===== Confirm Delete Dialog =====
   function _confirmDelete(id, title) {
     var overlay = document.createElement("div");
@@ -472,7 +498,15 @@
     document.getElementById("skin-admin-overlay").addEventListener("click", closeAdminDrawer);
 
     document.addEventListener("keydown", function (e) {
-      if (e.key === "Escape") { closeDashboard(); closeStatusDrawer(); closeAdminDrawer(); }
+      if (e.key === "Escape") {
+        closeDashboard(); closeStatusDrawer(); closeAdminDrawer();
+        var helpOv = document.getElementById("shortcuts-overlay");
+        if (helpOv) helpOv.remove();
+      }
+      // ? key (when not typing) → show keyboard shortcuts
+      if (e.key === "?" && document.activeElement !== chatInput) {
+        _showShortcuts();
+      }
     });
 
     // Theme toggle
@@ -510,6 +544,18 @@
     }
   }
 
+  // Pin helpers (localStorage-based, no DB change needed)
+  function _getPinnedIds() {
+    try { return JSON.parse(localStorage.getItem("pinned_convos") || "[]"); } catch (e) { return []; }
+  }
+  function _togglePin(id) {
+    var pins = _getPinnedIds();
+    var idx = pins.indexOf(id);
+    if (idx >= 0) { pins.splice(idx, 1); } else { pins.push(id); }
+    localStorage.setItem("pinned_convos", JSON.stringify(pins));
+    renderConvoList();
+  }
+
   function renderConvoList(searchFilter) {
     convoList.innerHTML = "";
 
@@ -531,7 +577,18 @@
       return;
     }
 
-    // Group by date
+    // Render pinned conversations first
+    var pinnedIds = _getPinnedIds();
+    var pinned = filtered.filter(function(c) { return pinnedIds.indexOf(c.id) >= 0; });
+    if (pinned.length > 0 && !searchFilter) {
+      var pinHeader = document.createElement("div");
+      pinHeader.className = "convo-group-header";
+      pinHeader.textContent = "📌 고정됨";
+      convoList.appendChild(pinHeader);
+      pinned.forEach(function(c) { _renderConvoItem(c, searchFilter, true); });
+    }
+
+    // Group by date (exclude pinned from date groups)
     var groups = groupByDate(filtered);
     var groupLabels = {
       today: "오늘",
@@ -552,56 +609,67 @@
       header.textContent = groupLabels[key];
       convoList.appendChild(header);
 
-      items.forEach(function (c) {
-        var div = document.createElement("div");
-        div.className = "convo-item" + (c.id === currentConvoId ? " active" : "");
-        div.dataset.id = c.id;
-
-        // Chat icon
-        var icon = document.createElement("span");
-        icon.className = "convo-icon";
-        icon.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>';
-        div.appendChild(icon);
-
-        var title = document.createElement("span");
-        title.className = "convo-title";
-        title.textContent = c.title;
-        div.appendChild(title);
-
-        // Actions (edit, delete) — show on hover
-        var actions = document.createElement("div");
-        actions.className = "convo-actions";
-
-        var editBtn = document.createElement("button");
-        editBtn.className = "convo-action-btn";
-        editBtn.title = "이름 변경";
-        editBtn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>';
-        editBtn.addEventListener("click", function (e) {
-          e.stopPropagation();
-          renameConversation(c.id, c.title);
-        });
-        actions.appendChild(editBtn);
-
-        var delBtn = document.createElement("button");
-        delBtn.className = "convo-action-btn convo-action-delete";
-        delBtn.title = "삭제";
-        delBtn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>';
-        delBtn.addEventListener("click", function (e) {
-          e.stopPropagation();
-          _confirmDelete(c.id, c.title || "이 대화");
-        });
-        actions.appendChild(delBtn);
-
-        div.appendChild(actions);
-
-        div.addEventListener("click", function () {
-          loadConversation(c.id);
-          closeMobileSidebar();
-        });
-
-        convoList.appendChild(div);
-      });
+      // Filter out pinned from date groups (they're shown in their own section)
+      var unpinned = items.filter(function(c) { return pinnedIds.indexOf(c.id) < 0; });
+      if (unpinned.length === 0) return;
+      unpinned.forEach(function(c) { _renderConvoItem(c, searchFilter, false); });
     });
+  }
+
+  function _renderConvoItem(c, searchFilter, isPinned) {
+    var div = document.createElement("div");
+    div.className = "convo-item" + (c.id === currentConvoId ? " active" : "");
+    div.dataset.id = c.id;
+
+    var icon = document.createElement("span");
+    icon.className = "convo-icon";
+    icon.innerHTML = isPinned
+      ? '<svg width="16" height="16" viewBox="0 0 24 24" fill="var(--accent)" stroke="var(--accent)" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>'
+      : '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>';
+    div.appendChild(icon);
+
+    var title = document.createElement("span");
+    title.className = "convo-title";
+    if (searchFilter) {
+      var idx = c.title.toLowerCase().indexOf(searchFilter);
+      if (idx >= 0) {
+        title.innerHTML = _escHtml(c.title.slice(0, idx)) +
+          '<mark class="search-hl">' + _escHtml(c.title.slice(idx, idx + searchFilter.length)) + '</mark>' +
+          _escHtml(c.title.slice(idx + searchFilter.length));
+      } else { title.textContent = c.title; }
+    } else { title.textContent = c.title; }
+    div.appendChild(title);
+
+    var actions = document.createElement("div");
+    actions.className = "convo-actions";
+
+    // Pin/Unpin button
+    var pinBtn = document.createElement("button");
+    pinBtn.className = "convo-action-btn";
+    pinBtn.title = isPinned ? "고정 해제" : "고정";
+    pinBtn.innerHTML = isPinned
+      ? '<svg width="14" height="14" viewBox="0 0 24 24" fill="var(--accent)" stroke="var(--accent)" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>'
+      : '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
+    pinBtn.addEventListener("click", function(e) { e.stopPropagation(); _togglePin(c.id); });
+    actions.appendChild(pinBtn);
+
+    var editBtn = document.createElement("button");
+    editBtn.className = "convo-action-btn";
+    editBtn.title = "이름 변경";
+    editBtn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>';
+    editBtn.addEventListener("click", function(e) { e.stopPropagation(); renameConversation(c.id, c.title); });
+    actions.appendChild(editBtn);
+
+    var delBtn = document.createElement("button");
+    delBtn.className = "convo-action-btn convo-action-delete";
+    delBtn.title = "삭제";
+    delBtn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>';
+    delBtn.addEventListener("click", function(e) { e.stopPropagation(); _confirmDelete(c.id, c.title || "이 대화"); });
+    actions.appendChild(delBtn);
+
+    div.appendChild(actions);
+    div.addEventListener("click", function() { loadConversation(c.id); closeMobileSidebar(); });
+    convoList.appendChild(div);
   }
 
   function groupByDate(items) {
@@ -722,20 +790,44 @@
     }
   }
 
-  async function renameConversation(id, oldTitle) {
-    var newTitle = prompt("대화 이름 변경:", oldTitle);
-    if (!newTitle || newTitle === oldTitle) return;
-    try {
-      await fetch("/api/conversations/" + id, {
-        method: "PUT",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ title: newTitle }),
-      });
-      var c = conversations.find(function (x) { return x.id === id; });
-      if (c) c.title = newTitle;
-      renderConvoList();
-    } catch (e) {
-      console.error("Failed to rename:", e);
+  function renameConversation(id, oldTitle) {
+    var overlay = document.createElement("div");
+    overlay.className = "confirm-overlay";
+    overlay.innerHTML =
+      '<div class="confirm-dialog">' +
+      '<p style="margin-bottom:12px;font-weight:600;">대화 이름 변경</p>' +
+      '<input class="rename-input" type="text" value="' + (oldTitle || "").replace(/"/g, "&quot;") + '" maxlength="100" autofocus>' +
+      '<div class="confirm-actions" style="margin-top:16px;">' +
+      '<button class="confirm-cancel">취소</button>' +
+      '<button class="confirm-delete" style="background:var(--accent);border-color:var(--accent);">저장</button>' +
+      '</div></div>';
+    document.body.appendChild(overlay);
+    var input = overlay.querySelector(".rename-input");
+    input.select();
+    input.addEventListener("keydown", function(e) {
+      if (e.key === "Enter") doRename();
+      if (e.key === "Escape") overlay.remove();
+    });
+    overlay.querySelector(".confirm-cancel").addEventListener("click", function() { overlay.remove(); });
+    overlay.querySelector(".confirm-delete").addEventListener("click", doRename);
+    overlay.addEventListener("click", function(e) { if (e.target === overlay) overlay.remove(); });
+
+    async function doRename() {
+      var newTitle = input.value.trim();
+      if (!newTitle || newTitle === oldTitle) { overlay.remove(); return; }
+      overlay.remove();
+      try {
+        await fetch("/api/conversations/" + id, {
+          method: "PUT",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ title: newTitle }),
+        });
+        var c = conversations.find(function (x) { return x.id === id; });
+        if (c) c.title = newTitle;
+        renderConvoList();
+      } catch (e) {
+        console.error("Failed to rename:", e);
+      }
     }
   }
 
@@ -1315,6 +1407,8 @@
   function appendUserMessage(text, images) {
     var div = document.createElement("div");
     div.className = "message message-user";
+    div.setAttribute("role", "article");
+    div.setAttribute("aria-label", "사용자 메시지");
 
     // User Avatar
     var avatar = document.createElement("div");
@@ -1371,6 +1465,8 @@
 
     var div = document.createElement("div");
     div.className = "message message-" + role;
+    div.setAttribute("role", "article");
+    div.setAttribute("aria-label", "AI 응답");
 
     // AI Avatar
     var avatar = document.createElement("div");
@@ -1467,9 +1563,17 @@
   function highlightCodeBlocks(container) {
     container.querySelectorAll("pre code").forEach(function (block) {
       hljs.highlightElement(block);
-      // Add copy button to code blocks (enterprise feature)
       var pre = block.parentElement;
-      if (pre && !pre.querySelector(".code-copy-btn")) {
+      if (pre && !pre.querySelector(".code-header")) {
+        pre.style.position = "relative";
+        // Language badge + copy button header
+        var lang = (block.className.match(/language-(\w+)/) || [])[1] || "";
+        var _langNames = { js: "JavaScript", ts: "TypeScript", py: "Python", sql: "SQL", html: "HTML", css: "CSS", json: "JSON", bash: "Bash", sh: "Shell", java: "Java", cpp: "C++", go: "Go", rust: "Rust", rb: "Ruby", php: "PHP" };
+        var langDisplay = _langNames[lang] || (lang ? lang.charAt(0).toUpperCase() + lang.slice(1) : "Code");
+
+        var header = document.createElement("div");
+        header.className = "code-header";
+        header.innerHTML = '<span class="code-lang">' + langDisplay + '</span>';
         var btn = document.createElement("button");
         btn.className = "code-copy-btn";
         btn.textContent = "Copy";
@@ -1477,13 +1581,10 @@
           _copyText(block.textContent, null);
           btn.textContent = "Copied!";
           btn.classList.add("copied");
-          setTimeout(function () {
-            btn.textContent = "Copy";
-            btn.classList.remove("copied");
-          }, 1500);
+          setTimeout(function () { btn.textContent = "Copy"; btn.classList.remove("copied"); }, 1500);
         });
-        pre.style.position = "relative";
-        pre.appendChild(btn);
+        header.appendChild(btn);
+        pre.insertBefore(header, pre.firstChild);
       }
     });
   }
