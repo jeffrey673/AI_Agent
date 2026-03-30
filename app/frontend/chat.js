@@ -53,6 +53,57 @@
     document.body.removeChild(ta);
   }
 
+  // Copy table as TSV (paste-able into Excel/Google Sheets)
+  function _copyTable(table, btn) {
+    var rows = table.querySelectorAll("tr");
+    var tsv = [];
+    for (var r = 0; r < rows.length; r++) {
+      var cells = rows[r].querySelectorAll("th, td");
+      var row = [];
+      for (var c = 0; c < cells.length; c++) {
+        row.push(cells[c].textContent.trim());
+      }
+      tsv.push(row.join("\t"));
+    }
+    _copyText(tsv.join("\n"), btn);
+    if (btn) {
+      btn.textContent = "복사됨!";
+      setTimeout(function() { btn.textContent = "표 복사"; }, 1500);
+    }
+  }
+
+  // Copy chart canvas as PNG image to clipboard
+  function _copyChart(canvas, btn) {
+    canvas.toBlob(function(blob) {
+      if (!blob) { showToast("차트 복사 실패", "error"); return; }
+      try {
+        navigator.clipboard.write([
+          new ClipboardItem({ "image/png": blob })
+        ]).then(function() {
+          showToast("차트가 복사되었습니다 (이미지)", "success");
+          if (btn) {
+            btn.textContent = "복사됨!";
+            setTimeout(function() { btn.textContent = "차트 복사"; }, 1500);
+          }
+        }).catch(function() {
+          // Fallback: download as file
+          var a = document.createElement("a");
+          a.href = URL.createObjectURL(blob);
+          a.download = "chart.png";
+          a.click();
+          showToast("차트가 다운로드되었습니다", "info");
+        });
+      } catch (e) {
+        // ClipboardItem not supported — download
+        var a = document.createElement("a");
+        a.href = URL.createObjectURL(blob);
+        a.download = "chart.png";
+        a.click();
+        showToast("차트가 다운로드되었습니다", "info");
+      }
+    }, "image/png");
+  }
+
   // ===== State =====
   var currentUser = null;
   var conversations = [];
@@ -1322,7 +1373,7 @@
       // Strip follow-up suggestion block from rendered content (shown as chips instead)
       var cleaned = stripFollowupBlock(text);
       el.innerHTML = marked.parse(cleaned, { breaks: true, gfm: true });
-      // Wave 3: Wrap tables in scroll container for responsive overflow
+      // Wave 3: Wrap tables in scroll container + copy button
       var tables = el.querySelectorAll("table");
       for (var t = 0; t < tables.length; t++) {
         if (!tables[t].parentElement.classList.contains("table-wrapper")) {
@@ -1330,6 +1381,14 @@
           wrapper.className = "table-wrapper";
           tables[t].parentNode.insertBefore(wrapper, tables[t]);
           wrapper.appendChild(tables[t]);
+          // Add table copy button
+          var tBtn = document.createElement("button");
+          tBtn.className = "table-copy-btn";
+          tBtn.textContent = "표 복사";
+          tBtn.addEventListener("click", (function(tbl) {
+            return function() { _copyTable(tbl, this); };
+          })(tables[t]));
+          wrapper.insertBefore(tBtn, wrapper.firstChild);
         }
       }
     } catch (e) {
@@ -1518,6 +1577,13 @@
       }
 
       new Chart(canvas.getContext("2d"), config);
+
+      // Add chart copy button
+      var cBtn = document.createElement("button");
+      cBtn.className = "chart-copy-btn";
+      cBtn.textContent = "차트 복사";
+      cBtn.addEventListener("click", function() { _copyChart(canvas, cBtn); });
+      chartDiv.appendChild(cBtn);
     } catch (e) {
       console.warn("Chart render failed:", e);
     }

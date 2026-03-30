@@ -1200,6 +1200,33 @@ html.light .login-card .logo { mix-blend-mode: multiply; }
   margin: 12px 0;
   border-radius: 6px;
   border: 1px solid var(--border);
+  position: relative;
+}
+
+/* Table & Chart copy buttons */
+.table-copy-btn, .chart-copy-btn {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  z-index: 5;
+  padding: 3px 10px;
+  font-size: 11px;
+  background: var(--bg-sidebar);
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.15s ease, background 0.15s ease;
+}
+.table-wrapper:hover .table-copy-btn,
+.chart-container:hover .chart-copy-btn {
+  opacity: 1;
+}
+.table-copy-btn:hover, .chart-copy-btn:hover {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
 }
 .message-assistant .message-content table {
   width: 100%;
