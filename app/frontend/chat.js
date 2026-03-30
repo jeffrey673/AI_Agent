@@ -15,6 +15,39 @@
   var lastUserQuery = "";
   var currentAbortController = null;  // AbortController for active stream
 
+  // ===== Wave 1: Client-side Pre-routing =====
+  // Mirrors top-frequency patterns from orchestrator.py for instant skeleton UI
+  function _clientPreRoute(query) {
+    if (!query) return "direct";
+    var q = query.toLowerCase();
+    // Direct lock keywords (always direct)
+    var _directLock = ["회사", "뭐하는", "소개", "누가 만들", "주인", "안녕", "하이", "hello", "hi", "부동산", "주식", "투자"];
+    for (var i = 0; i < _directLock.length; i++) {
+      if (q.indexOf(_directLock[i]) !== -1) return "direct";
+    }
+    // CS keywords (product-specific)
+    var _csKw = ["성분", "비건", "사용법", "사용 방법", "루틴", "스킨케어", "센텔라", "민감", "트러블", "피부", "자극", "알레르기", "세럼", "앰플", "토너", "클렌저", "선크림", "skin1004"];
+    for (var i = 0; i < _csKw.length; i++) {
+      if (q.indexOf(_csKw[i]) !== -1) return "cs";
+    }
+    // GWS keywords
+    var _gwsKw = ["드라이브", "메일", "gmail", "캘린더", "일정", "내 메일", "내 드라이브"];
+    for (var i = 0; i < _gwsKw.length; i++) {
+      if (q.indexOf(_gwsKw[i]) !== -1) return "gws";
+    }
+    // Notion keywords
+    var _notionKw = ["노션", "notion", "정책", "매뉴얼", "프로세스", "가이드"];
+    for (var i = 0; i < _notionKw.length; i++) {
+      if (q.indexOf(_notionKw[i]) !== -1) return "notion";
+    }
+    // Data keywords (BigQuery)
+    var _dataKw = ["매출", "수량", "주문", "sales", "revenue", "쇼피", "아마존", "틱톡", "광고", "마케팅", "ROAS", "roas", "리뷰", "인플루언서", "shopify", "재고", "판매", "실적", "순위", "데이터", "조회", "차트", "그래프"];
+    for (var i = 0; i < _dataKw.length; i++) {
+      if (q.indexOf(_dataKw[i]) !== -1) return "bigquery";
+    }
+    return "direct";
+  }
+
   // ===== Data Source Filter =====
   // Queryable data sources — shown with checkboxes in System Status
   var DATA_SOURCE_KEYS = [
@@ -756,6 +789,22 @@
     // Add streaming class for cursor animation
     aiMsgEl.classList.add("streaming");
 
+    // Wave 1: Client-side pre-routing — show skeleton UI immediately
+    var _preRoute = _clientPreRoute(text);
+    if (_preRoute !== "direct") {
+      var _preLoadingMsgs = {
+        bigquery: "📊 데이터 조회 중...",
+        notion: "📋 Notion 문서 검색 중...",
+        cs: "🧴 CS Q&A 검색 중...",
+        gws: "📧 Google Workspace 확인 중...",
+        multi: "📈 종합 분석 중...",
+      };
+      var _preTyping = contentEl.querySelector(".typing-indicator");
+      if (_preTyping && _preLoadingMsgs[_preRoute]) {
+        _preTyping.innerHTML = '<span class="loading-text">' + _preLoadingMsgs[_preRoute] + '</span>';
+      }
+    }
+
     // Transform send button → stop button
     btnSend.disabled = false;
     btnSend.classList.add("stop-mode");
@@ -829,19 +878,43 @@
                 text = text.replace(/\[thinking\][\s\S]*?\[\/thinking\]/g, "");
                 if (text) aiContent += text;
               }
-              // Streaming render: markdown only, 300ms throttle
-              var now = Date.now();
-              if (!contentEl._lastRender || now - contentEl._lastRender > 300) {
-                renderMarkdown(contentEl, aiContent);
-                contentEl._lastRender = now;
-                scrollToBottom();
-              } else if (!contentEl._pendingRender) {
-                contentEl._pendingRender = setTimeout(function() {
-                  renderMarkdown(contentEl, aiContent);
-                  contentEl._lastRender = Date.now();
-                  contentEl._pendingRender = null;
+              // Wave 1: incremental append + sentence-boundary markdown render
+              var typing = aiMsgEl.querySelector(".typing-indicator");
+              if (typing) typing.remove();
+              if (!contentEl._streamText) {
+                contentEl._streamText = document.createElement("span");
+                contentEl._streamText.className = "stream-tail";
+                contentEl._renderedMarkdown = document.createElement("div");
+                contentEl._renderedMarkdown.className = "stream-rendered";
+                contentEl.innerHTML = "";
+                contentEl.appendChild(contentEl._renderedMarkdown);
+                contentEl.appendChild(contentEl._streamText);
+                contentEl._lastSentenceEnd = 0;
+                contentEl._mdTimer = null;
+              }
+              // Append new text to tail (instant, no parse)
+              contentEl._streamText.textContent = aiContent.slice(contentEl._lastSentenceEnd);
+              // Render markdown at sentence boundary or 200ms idle
+              var _isSentenceEnd = /[.!?。]\s*$/.test(aiContent) || /\n\n/.test(aiContent.slice(contentEl._lastSentenceEnd));
+              if (_isSentenceEnd && aiContent.length - contentEl._lastSentenceEnd > 10) {
+                contentEl._renderedMarkdown.innerHTML = marked.parse(stripFollowupBlock(aiContent), { breaks: true, gfm: true });
+                contentEl._streamText.textContent = "";
+                contentEl._lastSentenceEnd = aiContent.length;
+                if (contentEl._mdTimer) { clearTimeout(contentEl._mdTimer); contentEl._mdTimer = null; }
+              } else if (!contentEl._mdTimer) {
+                contentEl._mdTimer = setTimeout(function() {
+                  contentEl._renderedMarkdown.innerHTML = marked.parse(stripFollowupBlock(aiContent), { breaks: true, gfm: true });
+                  contentEl._streamText.textContent = "";
+                  contentEl._lastSentenceEnd = aiContent.length;
+                  contentEl._mdTimer = null;
                   scrollToBottom();
-                }, 300);
+                }, 200);
+              }
+              if (!contentEl._rafScroll) {
+                contentEl._rafScroll = requestAnimationFrame(function() {
+                  scrollToBottom();
+                  contentEl._rafScroll = null;
+                });
               }
             }
           } catch (e) { /* skip */ }
@@ -861,10 +934,23 @@
       contentEl.innerHTML = '<div class="error-card">⚠️ ' + aiContent + '<br><button class="error-retry-btn" onclick="document.querySelector(\'#chat-input\').value=\'' + lastUserQuery.replace(/'/g, "\\'") + '\';document.querySelector(\'#btn-send\').click();">다시 시도</button></div>';
     }
 
+    // Clean up streaming render state
     if (contentEl._pendingRender) {
       clearTimeout(contentEl._pendingRender);
       contentEl._pendingRender = null;
     }
+    if (contentEl._mdTimer) {
+      clearTimeout(contentEl._mdTimer);
+      contentEl._mdTimer = null;
+    }
+    if (contentEl._rafScroll) {
+      cancelAnimationFrame(contentEl._rafScroll);
+      contentEl._rafScroll = null;
+    }
+    // Remove streaming DOM structure, do final full render below
+    contentEl._streamText = null;
+    contentEl._renderedMarkdown = null;
+    contentEl._lastSentenceEnd = 0;
 
     var typing = aiMsgEl.querySelector(".typing-indicator");
     if (typing) typing.remove();

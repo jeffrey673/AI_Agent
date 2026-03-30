@@ -30,6 +30,11 @@ def _extract_user_id(request: Request) -> int:
     user_id = payload.get("user_id")
     if not user_id:
         raise HTTPException(status_code=401, detail="Invalid token payload")
+
+    # Wave 1: Cache brand_filter and role from JWT claims
+    request.state.jwt_brand_filter = payload.get("brand_filter", "")
+    request.state.jwt_role = payload.get("role", "")
+
     return int(user_id)
 
 

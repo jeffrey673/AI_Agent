@@ -266,18 +266,32 @@ class OrchestratorAgent:
 
         route = self._keyword_classify(query)
         is_system_task = query.strip().startswith("### Task:")
+
+        # Wave 1: Emit source hint IMMEDIATELY after keyword classification
+        # This lets the frontend show skeleton UI within ~100ms of request
+        yield ("source", route)
+
         # Re-classify short ambiguous queries with LLM (only if no strong direct signal)
         _DIRECT_LOCK = ["회사", "뭐하는", "소개", "누가 만들", "주인", "재밌", "안녕", "하이", "hello", "hi"]
         _is_direct_locked = any(kw in query.lower() for kw in _DIRECT_LOCK)
         if route == "direct" and conversation_context and not is_system_task and not _is_direct_locked:
             if len(query.strip()) <= 30:
                 flash = get_flash_client()
-                route = await self._classify_with_llm(query, conversation_context, flash)
+                new_route = await self._classify_with_llm(query, conversation_context, flash)
+                if new_route != route:
+                    route = new_route
+                    yield ("source", route)  # Update source if LLM changed the route
+
+        # Apply enabled_sources filter
+        allowed = self._allowed_routes(enabled_sources)
+        if allowed is not None and route not in allowed:
+            logger.info("stream_route_filtered", original_route=route, allowed=list(allowed))
+            if route != "direct":
+                route = "direct"
+                yield ("source", route)
 
         # Direct route → real-time streaming
         if route == "direct" and not is_system_task:
-            yield ("source", "direct")
-
             llm = get_llm_client(model_type)
             today = datetime.now().strftime("%Y년 %m월 %d일 (%A)")
             system = self._build_direct_system_prompt(today, model_type)
@@ -327,8 +341,6 @@ class OrchestratorAgent:
         if route == "bigquery":
             import asyncio as _aio
             from app.agents.sql_agent import run_sql_agent_stream
-
-            yield ("source", "bigquery")
 
             _q: _aio.Queue = _aio.Queue()
             _loop = _aio.get_running_loop()

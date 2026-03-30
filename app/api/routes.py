@@ -83,27 +83,32 @@ async def chat_completions(http_request: Request, request: ChatCompletionRequest
         or ""
     )
 
-    # Server-side brand_filter enforcement: if client didn't send one,
-    # look up user's group membership and apply automatically (non-admin)
+    # Server-side brand_filter enforcement: prefer JWT-cached value (Wave 1)
     brand_filter = request.brand_filter
     if not brand_filter:
-        user_id = getattr(http_request.state, "user_id", None)
-        if user_id:
-            try:
-                # Single query instead of two sequential lookups
-                row = await asyncio.to_thread(
-                    fetch_one,
-                    "SELECT u.role, g.brand_filter FROM users u "
-                    "LEFT JOIN user_groups ug ON u.ad_user_id = ug.ad_user_id "
-                    "LEFT JOIN access_groups g ON ug.group_id = g.id AND g.brand_filter IS NOT NULL "
-                    "WHERE u.id = %s LIMIT 1",
-                    (user_id,),
-                )
-                if row and row["role"] != "admin" and row.get("brand_filter"):
-                    brand_filter = row["brand_filter"]
-                    logger.info("brand_filter_enforced", user_id=user_id, brand_filter=brand_filter)
-            except Exception as e:
-                logger.warning("brand_filter_lookup_failed", user_id=user_id, error=str(e))
+        jwt_role = getattr(http_request.state, "jwt_role", "")
+        jwt_bf = getattr(http_request.state, "jwt_brand_filter", "")
+        if jwt_bf and jwt_role != "admin":
+            brand_filter = jwt_bf
+            logger.debug("brand_filter_from_jwt", brand_filter=brand_filter)
+        elif not jwt_bf:
+            # Fallback: DB lookup for tokens issued before Wave 1 JWT update
+            user_id = getattr(http_request.state, "user_id", None)
+            if user_id:
+                try:
+                    row = await asyncio.to_thread(
+                        fetch_one,
+                        "SELECT u.role, g.brand_filter FROM users u "
+                        "LEFT JOIN user_groups ug ON u.ad_user_id = ug.ad_user_id "
+                        "LEFT JOIN access_groups g ON ug.group_id = g.id AND g.brand_filter IS NOT NULL "
+                        "WHERE u.id = %s LIMIT 1",
+                        (user_id,),
+                    )
+                    if row and row["role"] != "admin" and row.get("brand_filter"):
+                        brand_filter = row["brand_filter"]
+                        logger.info("brand_filter_enforced_fallback", user_id=user_id, brand_filter=brand_filter)
+                except Exception as e:
+                    logger.warning("brand_filter_lookup_failed", user_id=user_id, error=str(e))
 
     logger.info(
         "chat_completion_request",

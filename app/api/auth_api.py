@@ -95,14 +95,28 @@ def _user_response(user_row: dict) -> dict:
     }
 
 
-def _create_token(user_id: int, email: str = "") -> str:
+def _create_token(user_id: int, email: str = "", brand_filter: str = "", role: str = "user") -> str:
     settings = get_settings()
     payload = {
         "user_id": user_id,
         "email": email,
         "exp": datetime.now(timezone.utc) + timedelta(days=_TOKEN_EXPIRE_DAYS),
+        "brand_filter": brand_filter,
+        "role": role,
     }
     return jwt.encode(payload, settings.jwt_secret_key, algorithm=_ALGORITHM)
+
+
+def _lookup_brand_filter(user_id: int) -> str:
+    """Look up brand_filter from user's group membership."""
+    row = fetch_one(
+        "SELECT g.brand_filter FROM users u "
+        "LEFT JOIN user_groups ug ON u.ad_user_id = ug.ad_user_id "
+        "LEFT JOIN access_groups g ON ug.group_id = g.id AND g.brand_filter IS NOT NULL "
+        "WHERE u.id = %s LIMIT 1",
+        (user_id,),
+    )
+    return (row.get("brand_filter") or "") if row else ""
 
 
 def _set_cookie(response: Response, token: str):
@@ -219,7 +233,8 @@ async def signup(req: SignupRequest, response: Response):
         (user_email, pw_hash, ad_user["display_name"], "user", "skin1004-Analysis", ad_user["id"]),
     )
 
-    token = _create_token(user_id, ad_user.get("email") or "")
+    bf = await asyncio.to_thread(_lookup_brand_filter, user_id)
+    token = _create_token(user_id, ad_user.get("email") or "", brand_filter=bf, role="user")
     _set_cookie(response, token)
 
     logger.info("user_signup", name=req.name, department=req.department, user_id=user_id)
@@ -262,7 +277,8 @@ async def signin(req: SigninRequest, response: Response):
         "UPDATE users SET last_login = NOW() WHERE id = %s", (user["id"],)
     )
 
-    token = _create_token(user["id"], ad_user.get("email") or "")
+    bf = await asyncio.to_thread(_lookup_brand_filter, user["id"])
+    token = _create_token(user["id"], ad_user.get("email") or "", brand_filter=bf, role=user.get("role", "user"))
     _set_cookie(response, token)
 
     logger.info("user_signin", name=req.name, department=req.department)
