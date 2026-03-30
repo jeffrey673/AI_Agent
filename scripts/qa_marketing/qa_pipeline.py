@@ -42,8 +42,8 @@ RETEST_LOG_FILE = BASE_DIR / "retest_v3_log.json"
 REPORT_FILE = BASE_DIR / "v3_pipeline_report.md"
 
 # ── API ──
-API_URL = "http://localhost:3001/v1/chat/completions"
-HEALTH_URL = "http://localhost:3001/health"
+API_URL = "http://127.0.0.1:3000/v1/chat/completions"
+HEALTH_URL = "http://127.0.0.1:3000/health"
 MODEL = "gemini"
 
 # ── Threading ──
@@ -515,27 +515,16 @@ def _health_check() -> bool:
 
 
 def _restart_server():
-    """Kill existing server and restart."""
-    print("  [RECOVERY] Killing existing server processes...")
-    try:
-        subprocess.run(
-            ["powershell", "-Command", "Get-Process python | Stop-Process -Force"],
-            capture_output=True, timeout=15,
-        )
-    except Exception as e:
-        print(f"  [RECOVERY] Kill error (may be OK): {e}")
-
-    time.sleep(3)
-
-    print("  [RECOVERY] Starting uvicorn...")
-    subprocess.Popen(
-        [sys.executable, "-X", "utf8", "-m", "uvicorn",
-         "app.main:app", "--host", "0.0.0.0", "--port", "3001", "--reload"],
-        cwd=str(PROJECT_DIR),
-        stdout=subprocess.DEVNULL,
-        stderr=subprocess.DEVNULL,
-        creationflags=subprocess.CREATE_NEW_PROCESS_GROUP if sys.platform == "win32" else 0,
-    )
+    """Check if server is running; if not, skip (don't kill other processes)."""
+    print("  [RECOVERY] Waiting for server to come back...")
+    # Don't kill processes — production server may be managed externally
+    for attempt in range(6):
+        time.sleep(5)
+        if _health_check():
+            print("  [RECOVERY] Server is back!")
+            return True
+    print("  [RECOVERY] Server still down after 30s. Please restart manually.")
+    return False
 
     # Poll health
     print(f"  [RECOVERY] Polling /health (max {SERVER_RESTART_TIMEOUT}s)...")
