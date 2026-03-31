@@ -23,6 +23,7 @@
   --radius-lg: 16px;
   --radius-md: 12px;
   --radius-sm: 6px;
+  --radius-full: 999px;
   --transition: cubic-bezier(0.16, 1, 0.3, 1);
   --duration-short: 0.15s;
   --duration-normal: 0.2s;
@@ -101,6 +102,15 @@ html, body {
   overflow: hidden;
   -webkit-font-smoothing: antialiased;
   color-scheme: dark light;
+}
+
+/* Focus-visible — keyboard accessibility */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+:focus:not(:focus-visible) {
+  outline: none;
 }
 
 /* ============================================================
@@ -436,7 +446,7 @@ html.light .login-card .logo { mix-blend-mode: multiply; }
   color: #000;
   font-weight: 800;
   font-family: var(--font-main);
-  border-radius: 999px;
+  border-radius: var(--radius-full);
   border: none;
   padding: 15px 0;
   font-size: 13px;
@@ -476,7 +486,7 @@ html.light .login-card .logo { mix-blend-mode: multiply; }
 .login-card .toggle-link:hover { color: var(--accent); }
 
 .login-card .error-msg {
-  color: #ef4444;
+  color: var(--error);
   font-size: 13px;
   text-align: center;
   margin-top: 12px;
@@ -703,7 +713,7 @@ html.light .login-card .logo { mix-blend-mode: multiply; }
   background: var(--bg-hover);
   color: var(--text);
 }
-.convo-action-btn.convo-action-delete:hover { color: #ef4444; }
+.convo-action-btn.convo-action-delete:hover { color: var(--error); }
 
 /* Legacy delete button (backwards compat) */
 .convo-item .convo-delete {
@@ -719,7 +729,7 @@ html.light .login-card .logo { mix-blend-mode: multiply; }
 }
 
 .convo-item:hover .convo-delete { display: block; }
-.convo-item .convo-delete:hover { color: #ef4444; }
+.convo-item .convo-delete:hover { color: var(--error); }
 
 /* Sidebar footer */
 .sidebar-footer {
@@ -892,8 +902,8 @@ html.light .login-card .logo { mix-blend-mode: multiply; }
   color: #34A853;
 }
 .topbar-gws-btn.connected:hover {
-  border-color: #ef4444;
-  color: #ef4444;
+  border-color: var(--error);
+  color: var(--error);
 }
 
 /* Messages area */
@@ -977,7 +987,7 @@ html.light .login-card .logo { mix-blend-mode: multiply; }
   font-family: var(--font-main);
   font-size: 13px;
   padding: 10px 16px;
-  border-radius: 999px;
+  border-radius: var(--radius-full);
   cursor: pointer;
   transition: background-color var(--duration-normal) ease, color var(--duration-normal) ease, border-color var(--duration-normal) ease, transform var(--duration-normal) ease;
 }
@@ -1104,7 +1114,7 @@ html.light .login-card .logo { mix-blend-mode: multiply; }
 
 /* Stop button mode */
 #btn-send.stop-mode {
-  background: var(--danger, #ef4444) !important;
+  background: var(--error) !important;
   border-radius: 8px;
 }
 #btn-send.stop-mode svg {
@@ -1142,7 +1152,7 @@ html.light .login-card .logo { mix-blend-mode: multiply; }
 /* Error card */
 .error-card {
   background: var(--bg-hover);
-  border: 1px solid var(--danger, #ef4444);
+  border: 1px solid var(--error);
   border-radius: 12px;
   padding: 16px;
   color: var(--text-primary);
@@ -1185,8 +1195,8 @@ html.light .login-card .logo { mix-blend-mode: multiply; }
   align-items: center;
   gap: 8px;
 }
-.toast.toast-error { border-left: 3px solid var(--danger, #ef4444); }
-.toast.toast-success { border-left: 3px solid #22c55e; }
+.toast.toast-error { border-left: 3px solid var(--error); }
+.toast.toast-success { border-left: 3px solid var(--success); }
 .toast.toast-info { border-left: 3px solid var(--accent); }
 @keyframes toast-in {
   from { opacity: 0; transform: translateX(20px); }
@@ -1242,9 +1252,9 @@ html.light .login-card .logo { mix-blend-mode: multiply; }
 }
 .confirm-cancel:hover { background: var(--border); }
 .confirm-delete {
-  background: #ef4444;
+  background: var(--error);
   color: #fff;
-  border-color: #ef4444;
+  border-color: var(--error);
 }
 .confirm-delete:hover { background: #dc2626; }
 .rename-input {
@@ -1496,7 +1506,7 @@ html.light .login-card .logo { mix-blend-mode: multiply; }
 }
 pre:hover .code-copy-btn { opacity: 1; }
 .code-copy-btn:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
-.code-copy-btn.copied { background: #22c55e; color: #fff; border-color: #22c55e; opacity: 1; }
+.code-copy-btn.copied { background: var(--success); color: #fff; border-color: var(--success); opacity: 1; }
 
 /* Source badge (SVG icon + label) */
 .source-badge {
@@ -1507,7 +1517,7 @@ pre:hover .code-copy-btn { opacity: 1; }
   font-weight: 600;
   font-family: var(--font-main);
   padding: 4px 10px;
-  border-radius: 999px;
+  border-radius: var(--radius-full);
   margin-bottom: 8px;
   background: var(--bg-hover);
   color: var(--text-secondary);
@@ -1623,7 +1633,7 @@ pre:hover .code-copy-btn { opacity: 1; }
   font-family: var(--font-main);
   font-size: 12.5px;
   padding: 8px 16px;
-  border-radius: 999px;
+  border-radius: var(--radius-full);
   cursor: pointer;
   transition: background-color var(--duration-normal) ease, color var(--duration-normal) ease, border-color var(--duration-normal) ease;
   white-space: nowrap;
@@ -2083,7 +2093,7 @@ pre:hover .code-copy-btn { opacity: 1; }
   gap: 3px;
   font-size: 11px;
   font-weight: 600;
-  color: #22c55e;
+  color: var(--success);
   white-space: nowrap;
   animation: status-ok-enter 0.4s ease both;
 }
@@ -2184,12 +2194,12 @@ pre:hover .code-copy-btn { opacity: 1; }
 .status-dot {
   width: 6px; height: 6px;
   border-radius: 50%;
-  background: #22c55e;
+  background: var(--success);
   flex-shrink: 0;
 }
 
 .status-dot.error {
-  background: #ef4444;
+  background: var(--error);
   animation: dot-pulse 1s ease-in-out infinite;
 }
 
@@ -2225,11 +2235,11 @@ pre:hover .code-copy-btn { opacity: 1; }
 .status-label {
   font-size: 11px;
   font-weight: 600;
-  color: #22c55e;
+  color: var(--success);
   flex-shrink: 0;
 }
 
-.status-label.error { color: #ef4444; }
+.status-label.error { color: var(--error); }
 .status-label.updating { color: var(--accent); }
 
 /* Status checkbox */
@@ -2532,7 +2542,7 @@ pre:hover .code-copy-btn { opacity: 1; }
   letter-spacing: 0.5px;
   text-transform: uppercase;
   padding: 2px 8px;
-  border-radius: 999px;
+  border-radius: var(--radius-full);
   flex-shrink: 0;
 }
 .admin-role-badge.admin {
@@ -2568,8 +2578,8 @@ pre:hover .code-copy-btn { opacity: 1; }
 }
 
 .admin-model-toggle.active {
-  border-color: #22c55e;
-  color: #22c55e;
+  border-color: var(--success);
+  color: var(--success);
   background: rgba(34,197,94,0.08);
 }
 
@@ -2594,6 +2604,7 @@ pre:hover .code-copy-btn { opacity: 1; }
   font-size: 18px;
   font-weight: 700;
   color: var(--accent);
+  font-variant-numeric: tabular-nums;
 }
 .admin-stat-label {
   font-size: 10px;
@@ -2754,7 +2765,7 @@ pre:hover .code-copy-btn { opacity: 1; }
   cursor: pointer;
 }
 .admin-group-actions button:hover { border-color: var(--accent); color: var(--accent); }
-.admin-group-actions button.danger:hover { border-color: #ef4444; color: #ef4444; }
+.admin-group-actions button.danger:hover { border-color: var(--error); color: var(--error); }
 
 /* AD user row */
 .admin-ad-user {
@@ -2800,7 +2811,7 @@ pre:hover .code-copy-btn { opacity: 1; }
 .admin-ad-group-badge {
   font-size: 10px;
   padding: 2px 8px;
-  border-radius: 999px;
+  border-radius: var(--radius-full);
   background: rgba(232,146,0,0.12);
   color: var(--accent);
   font-weight: 600;
@@ -2966,13 +2977,13 @@ pre:hover .code-copy-btn { opacity: 1; }
 }
 .pw-error {
   font-size: 12px;
-  color: #ef4444;
+  color: var(--error);
   min-height: 18px;
   margin-bottom: 8px;
 }
 .pw-success {
   font-size: 14px;
-  color: #22c55e;
+  color: var(--success);
   text-align: center;
   margin: 20px 0;
 }
