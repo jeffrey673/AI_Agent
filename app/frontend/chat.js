@@ -1273,6 +1273,7 @@
 
     isStreaming = false;
     currentAbortController = null;
+    showFollowups(text, cleanContent);
     scrollToBottom();
   }
 
