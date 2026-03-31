@@ -529,12 +529,14 @@ def format_answer(state: AgentState) -> Dict[str, Any]:
     _is_timeseries = any(kw in query for kw in _ts_keywords)
 
     # Product name columns — convert underscores to spaces for readability
-    _PRODUCT_NAME_COLS = {"Product_Name", "SET", "product_name", "set", "Item_Name", "item_name"}
+    def _is_product_col(col_name: str) -> bool:
+        cl = col_name.lower()
+        return any(kw in cl for kw in ("product", "set", "제품", "item_name", "sku_name"))
 
     def _humanize_row(row, max_text_len=80):
         humanized = {}
         for k, v in row.items():
-            if isinstance(v, str) and k in _PRODUCT_NAME_COLS:
+            if isinstance(v, str) and _is_product_col(k):
                 v = v.replace("_", " ")
             if isinstance(v, str) and len(v) > max_text_len:
                 humanized[k] = v[:max_text_len] + "..."
