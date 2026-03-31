@@ -119,7 +119,7 @@ MARKETING_TABLES = [
     ("skin1004-319714.marketing_analysis.integrated_advertising_data", "통합 광고 데이터",
      ["광고", "ad", "advertising", "클릭", "노출", "roas", "cpc", "cpm", "틱톡광고", "페이스북광고", "구글광고", "카카오", "네이버광고"]),
     ("skin1004-319714.marketing_analysis.Integrated_marketing_cost", "통합 마케팅 비용",
-     ["마케팅", "marketing", "비용", "roi", "매체", "팀별"]),
+     ["마케팅", "마캐팅", "marketing", "비용", "roi", "매체", "팀별"]),
     ("skin1004-319714.marketing_analysis.shopify_analysis_sales", "Shopify 판매 데이터",
      ["shopify", "쇼피파이", "반품", "return", "환불"]),
     ("skin1004-319714.Platform_Data.raw_data", "플랫폼 메트릭스",

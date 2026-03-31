@@ -1,0 +1,30 @@
+[
+  {
+    "iteration": 1,
+    "tested": 1368,
+    "improved": 1361,
+    "unchanged": 7,
+    "remaining_warn_fail": 16
+  },
+  {
+    "iteration": 2,
+    "tested": 16,
+    "improved": 12,
+    "unchanged": 4,
+    "remaining_warn_fail": 4
+  },
+  {
+    "iteration": 3,
+    "tested": 4,
+    "improved": 2,
+    "unchanged": 2,
+    "remaining_warn_fail": 2
+  },
+  {
+    "iteration": 4,
+    "tested": 2,
+    "improved": 2,
+    "unchanged": 0,
+    "remaining_warn_fail": 0
+  }
+]

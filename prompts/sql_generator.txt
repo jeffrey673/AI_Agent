@@ -280,8 +280,10 @@
      - 팔로워/조회수/비용 분석 → 집계(SUM/AVG/COUNT) + `GROUP BY` 필수
      - `LIMIT 100` 이하 필수
    - **스마트스토어 리뷰** (Smartstore_Review):
-     - 주간/월별 트렌드 → `SELECT DATE_TRUNC(collect_date, WEEK) AS week, COUNT(*) AS cnt, AVG(rating) GROUP BY week` (raw 리뷰 X)
-     - `collect_date >= '2025-01-01'` 필수
+     - ⚠️ `collected_date` 사용 (다른 리뷰 테이블의 `collect_date`와 다름!)
+     - 주간/월별 트렌드 → `SELECT DATE_TRUNC(collected_date, WEEK) AS week, COUNT(*) AS cnt GROUP BY week` (raw 리뷰 X)
+     - `collected_date >= '2025-01-01'` 필수
+     - ⚠️ product_name은 **한글**! 영문 → 한글 변환 필수 (예: "Centella Ampoule" → `product_name = '센텔라 앰플'`)
    - **공통 규칙**: 모든 마케팅 테이블에서 집계(COUNT/SUM/AVG/GROUP BY)를 **항상** 사용. raw 데이터 나열은 LIMIT 30 이하. "분석/비교/트렌드/상관관계" 키워드 → 반드시 GROUP BY 집계로 처리
 19. ⚠️ **집계 수준은 사용자 질문에 맞추기 (최우선 규칙!)**:
    - **사용자가 제품명/라인/SKU를 언급하지 않은 매출 질문은 총합(SUM)만 반환하세요. 제품별 GROUP BY `\`SET\`` 추가 금지!**
@@ -1340,9 +1342,28 @@ LIMIT 1000
 - brand (STRING): 브랜드
 - review_date (STRING or DATE): 리뷰 작성 날짜
 - product_name (STRING): 제품명
+- product_name_eng (STRING): 영문 제품명 (Smartstore_Review only)
 - review_original (STRING): 원본 리뷰
 - review_ko (STRING): 한국어 번역 리뷰
 - skin_concern (STRING): 피부 고민 (Smartstore_Review only)
+- sentiment_score (FLOAT64): 감성 점수 (Smartstore_Review only)
+
+⚠️ **스마트스토어 제품명은 한글!** (다른 리뷰 테이블은 영문):
+| product_name (한글) | product_name_eng (영문) |
+|---|---|
+| 센텔라 앰플 | Centella Ampoule |
+| 센텔라 앰플 폼 | Centella Ampoule Foam |
+| 센텔라 라이트 클렌징 오일 | Centella Light Cleansing Oil |
+| 히알루시카 워터핏 선 세럼 | Hyalu-Cica Water-Fit Sun Serum |
+| 센텔라 토닝 토너 | Centella Toning Toner |
+| 센텔라 수딩 크림 | Centella Soothing Cream |
+| 센텔라 퀵 카밍 패드 | Centella Quick Calming Pad |
+| 프로바이오시카 인텐시브 앰플 | Probio-Cica Intensive Ampoule |
+| 센텔라 크림 | Centella Cream |
+
+→ 영문 제품명으로 검색 시: `product_name_eng LIKE '%Centella%Ampoule%'`
+→ 한글 제품명으로 검색 시: `product_name = '센텔라 앰플'` 또는 `product_name LIKE '%센텔라%앰플%'`
+→ **Smartstore에서 product_name 필터 시 한글 우선!** 영문이면 product_name_eng 사용
 
 ### 예시 쿼리
 
@@ -1385,6 +1406,26 @@ GROUP BY skin_concern
 ORDER BY review_count DESC
 LIMIT 1000
 ```
+
+#### RV4. 스마트스토어 특정 제품 최근 리뷰
+```sql
+-- "스마트스토어 센텔라 앰플 최근 리뷰 5건" / "Smartstore Centella Ampoule recent 5 reviews"
+SELECT
+  product_name,
+  review_date,
+  review_original,
+  review_ko,
+  sentiment_score
+FROM `skin1004-319714.Review_Data.Smartstore_Review`
+WHERE collected_date >= '2025-01-01'
+  AND product_name = '센텔라 앰플'
+ORDER BY review_date DESC
+LIMIT 5
+```
+-- ⚠️ Smartstore product_name은 한글! 영문 요청이어도 한글로 변환:
+-- "Centella Ampoule" → product_name = '센텔라 앰플'
+-- "Hyalu-Cica Water-Fit Sun Serum" → product_name = '히알루시카 워터핏 선 세럼'
+-- ⚠️ collected_date 사용 (collect_date 아님!)
 
 ---
 
