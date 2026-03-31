@@ -19,6 +19,16 @@
   --font-data: 'Geist Mono', 'SF Mono', monospace;
   --font-code: 'JetBrains Mono', monospace;
   --font-korean: 'Pretendard', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+
+  /* Type scale (DESIGN.md) */
+  --text-3xl: 2.5rem;    /* 40px — hero brand */
+  --text-2xl: 1.75rem;   /* 28px — page titles */
+  --text-xl: 1.5rem;     /* 24px — section headings */
+  --text-lg: 1.125rem;   /* 18px — sub-headings */
+  --text-md: 1rem;        /* 16px — body text */
+  --text-sm: 0.875rem;   /* 14px — UI labels */
+  --text-xs: 0.75rem;    /* 12px — captions */
+  --text-2xs: 0.625rem;  /* 10px — badges, timestamps */
   --radius-xl: 24px;
   --radius-lg: 16px;
   --radius-md: 12px;
@@ -232,7 +242,7 @@ html.light .craver-solid { color: rgba(0,0,0,0.2); }
 .craver-solid small {
   position: absolute;
   top: -22px; left: 20px;
-  font-size: 14px; font-weight: 500; font-style: normal;
+  font-size: var(--text-sm); font-weight: 500; font-style: normal;
   font-family: var(--font-korean);
   white-space: nowrap;
 }
@@ -410,13 +420,13 @@ html.light .login-card .logo { mix-blend-mode: multiply; }
 
 .ac-name {
   color: var(--text);
-  font-size: 14px;
+  font-size: var(--text-sm);
   font-weight: 500;
 }
 
 .ac-team {
   color: var(--text-secondary);
-  font-size: 12px;
+  font-size: var(--text-xs);
   background: var(--bg-input);
   padding: 2px 8px;
   border-radius: 4px;
@@ -640,7 +650,7 @@ html.light .login-card .logo { mix-blend-mode: multiply; }
 
 /* Date group headers (오늘, 어제, 지난 7일, etc.) */
 .convo-group-header {
-  font-size: 10px;
+  font-size: var(--text-2xs);
   font-weight: 600;
   letter-spacing: 0.08em;
   color: var(--text-muted);
@@ -770,7 +780,7 @@ html.light .login-card .logo { mix-blend-mode: multiply; }
   border: none;
   color: var(--text-muted);
   cursor: pointer;
-  font-size: 12px;
+  font-size: var(--text-xs);
   padding: 4px 8px;
   border-radius: 6px;
   transition: color var(--duration-short) ease, background-color var(--duration-short) ease;
@@ -881,7 +891,7 @@ html.light .login-card .logo { mix-blend-mode: multiply; }
   background: var(--bg-input);
   color: var(--text-secondary);
   font-family: var(--font-main);
-  font-size: 12px;
+  font-size: var(--text-xs);
   font-weight: 500;
   cursor: pointer;
   transition: background-color var(--duration-normal) ease, color var(--duration-normal) ease, border-color var(--duration-normal) ease;
@@ -1043,7 +1053,7 @@ html.light .login-card .logo { mix-blend-mode: multiply; }
 .msg-timestamp {
   position: absolute;
   top: 4px;
-  font-size: 10px;
+  font-size: var(--text-2xs);
   color: var(--text-muted);
   opacity: 0;
   transition: opacity 0.2s ease;
@@ -1064,7 +1074,7 @@ html.light .login-card .logo { mix-blend-mode: multiply; }
   border-radius: 18px 18px 4px 18px;
   padding: 12px 18px;
   max-width: 70%;
-  font-size: 14px;
+  font-size: var(--text-sm);
   line-height: 1.6;
 }
 
@@ -1122,7 +1132,7 @@ html.light .login-card .logo { mix-blend-mode: multiply; }
 }
 #btn-send.stop-mode::after {
   content: "■";
-  font-size: 14px;
+  font-size: var(--text-sm);
   color: white;
 }
 
@@ -1230,7 +1240,7 @@ html.light .login-card .logo { mix-blend-mode: multiply; }
 }
 .confirm-dialog p {
   margin: 0 0 20px;
-  font-size: 14px;
+  font-size: var(--text-sm);
   color: var(--text);
   line-height: 1.5;
 }
@@ -1260,7 +1270,7 @@ html.light .login-card .logo { mix-blend-mode: multiply; }
 .rename-input {
   width: 100%;
   padding: 8px 12px;
-  font-size: 14px;
+  font-size: var(--text-sm);
   background: var(--bg-input);
   color: var(--text);
   border: 1px solid var(--border);
@@ -1698,7 +1708,7 @@ pre:hover .code-copy-btn { opacity: 1; }
   border: none;
   color: var(--text);
   font-family: var(--font-main);
-  font-size: 14px;
+  font-size: var(--text-sm);
   line-height: 1.5;
   resize: none;
   outline: none;
@@ -1819,7 +1829,7 @@ pre:hover .code-copy-btn { opacity: 1; }
   color: #fff;
   border: none;
   border-radius: 50%;
-  font-size: 14px;
+  font-size: var(--text-sm);
   line-height: 1;
   cursor: pointer;
   display: flex;
@@ -1943,7 +1953,7 @@ pre:hover .code-copy-btn { opacity: 1; }
   border: 1px solid var(--border);
   background: transparent;
   color: var(--text-muted);
-  font-size: 18px;
+  font-size: var(--text-lg);
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -2055,7 +2065,7 @@ pre:hover .code-copy-btn { opacity: 1; }
   border: 1px solid var(--border);
   background: transparent;
   color: var(--text-muted);
-  font-size: 18px;
+  font-size: var(--text-lg);
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -2131,7 +2141,7 @@ pre:hover .code-copy-btn { opacity: 1; }
 
 .status-inline-ticker span {
   display: inline-block;
-  font-size: 10px;
+  font-size: var(--text-2xs);
   font-weight: 600;
   color: var(--accent);
   animation: sidebar-ticker 10s linear infinite;
@@ -2272,11 +2282,11 @@ pre:hover .code-copy-btn { opacity: 1; }
   background: var(--bg-input);
   border: 1px solid var(--accent);
   border-radius: 8px;
-  font-size: 12px;
+  font-size: var(--text-xs);
   color: var(--accent);
   margin-bottom: 6px;
 }
-.sfb-icon { font-size: 14px; }
+.sfb-icon { font-size: var(--text-sm); }
 .sfb-text { flex: 1; font-weight: 500; }
 .sfb-clear {
   background: none; border: none; cursor: pointer;
@@ -2476,7 +2486,7 @@ pre:hover .code-copy-btn { opacity: 1; }
   border: 1px solid var(--border);
   background: transparent;
   color: var(--text-muted);
-  font-size: 18px;
+  font-size: var(--text-lg);
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -2542,7 +2552,7 @@ pre:hover .code-copy-btn { opacity: 1; }
 }
 
 .admin-role-badge {
-  font-size: 10px;
+  font-size: var(--text-2xs);
   font-weight: 700;
   letter-spacing: 0.5px;
   text-transform: uppercase;
@@ -2576,7 +2586,7 @@ pre:hover .code-copy-btn { opacity: 1; }
   background: transparent;
   color: var(--text-muted);
   font-family: var(--font-main);
-  font-size: 12px;
+  font-size: var(--text-xs);
   font-weight: 500;
   cursor: pointer;
   transition: background-color var(--duration-normal) ease, color var(--duration-normal) ease, border-color var(--duration-normal) ease;
@@ -2606,13 +2616,13 @@ pre:hover .code-copy-btn { opacity: 1; }
   padding: 10px 4px;
 }
 .admin-stat-num {
-  font-size: 18px;
+  font-size: var(--text-lg);
   font-weight: 700;
   color: var(--accent);
   font-variant-numeric: tabular-nums;
 }
 .admin-stat-label {
-  font-size: 10px;
+  font-size: var(--text-2xs);
   color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -2669,7 +2679,7 @@ pre:hover .code-copy-btn { opacity: 1; }
   background: var(--accent);
   color: #000;
   font-family: var(--font-main);
-  font-size: 12px;
+  font-size: var(--text-xs);
   font-weight: 600;
   cursor: pointer;
 }
@@ -2681,7 +2691,7 @@ pre:hover .code-copy-btn { opacity: 1; }
   background: transparent;
   color: var(--text-muted);
   font-family: var(--font-main);
-  font-size: 12px;
+  font-size: var(--text-xs);
   font-weight: 500;
   cursor: pointer;
 }
@@ -2693,7 +2703,7 @@ pre:hover .code-copy-btn { opacity: 1; }
   background: var(--bg-input);
   color: var(--text);
   font-family: var(--font-main);
-  font-size: 12px;
+  font-size: var(--text-xs);
   min-width: 0;
   flex: 1;
 }
@@ -2715,7 +2725,7 @@ pre:hover .code-copy-btn { opacity: 1; }
   margin-bottom: 8px;
 }
 .admin-group-name {
-  font-size: 14px;
+  font-size: var(--text-sm);
   font-weight: 600;
   color: var(--text);
 }
@@ -2735,7 +2745,7 @@ pre:hover .code-copy-btn { opacity: 1; }
 .modal-brand-filter-section { margin-top: 8px; }
 .modal-label {
   display: block;
-  font-size: 12px;
+  font-size: var(--text-xs);
   font-weight: 600;
   margin-bottom: 4px;
   color: var(--fg);
@@ -2789,7 +2799,7 @@ pre:hover .code-copy-btn { opacity: 1; }
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 12px;
+  font-size: var(--text-xs);
   font-weight: 700;
   flex-shrink: 0;
 }
@@ -2810,11 +2820,11 @@ pre:hover .code-copy-btn { opacity: 1; }
   white-space: nowrap;
 }
 .admin-ad-dept {
-  font-size: 10px;
+  font-size: var(--text-2xs);
   color: var(--text-muted);
 }
 .admin-ad-group-badge {
-  font-size: 10px;
+  font-size: var(--text-2xs);
   padding: 2px 8px;
   border-radius: var(--radius-full);
   background: rgba(232,146,0,0.12);
@@ -2945,7 +2955,7 @@ pre:hover .code-copy-btn { opacity: 1; }
   flex-shrink: 0;
 }
 .dept-user-groups {
-  font-size: 10px;
+  font-size: var(--text-2xs);
   color: var(--accent);
   background: rgba(232,146,0,0.1);
   padding: 2px 8px;
@@ -2976,18 +2986,18 @@ pre:hover .code-copy-btn { opacity: 1; }
 /* Password change modal */
 .pw-label {
   display: block;
-  font-size: 12px;
+  font-size: var(--text-xs);
   color: var(--text-muted);
   margin-bottom: 4px;
 }
 .pw-error {
-  font-size: 12px;
+  font-size: var(--text-xs);
   color: var(--error);
   min-height: 18px;
   margin-bottom: 8px;
 }
 .pw-success {
-  font-size: 14px;
+  font-size: var(--text-sm);
   color: var(--success);
   text-align: center;
   margin: 20px 0;
@@ -3040,7 +3050,7 @@ pre:hover .code-copy-btn { opacity: 1; }
   .craver-line { font-size: clamp(46px, 10vw, 120px); }
   .craver-track { font-size: clamp(32px, 8vw, 100px); }
   .craver-track img { width: clamp(70px, 12vw, 170px); }
-  .craver-solid small { font-size: 10px; top: -15px; }
+  .craver-solid small { font-size: var(--text-2xs); top: -15px; }
 
   .followup-suggestions { padding: 0 8px; }
   .followup-chip { font-size: 11px; padding: 6px 10px; }
