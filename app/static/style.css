@@ -24,6 +24,9 @@
   --radius-md: 12px;
   --radius-sm: 6px;
   --transition: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-short: 0.15s;
+  --duration-normal: 0.2s;
+  --duration-long: 0.3s;
 
   /* Semantic colors */
   --success: #22c55e;
@@ -136,7 +139,7 @@ html, body {
   position: relative;
   line-height: 0.95;
   margin: 0;
-  transition: all ease-out 0.2s, left cubic-bezier(0.42,0,0.2,1.02) 0.6s, color 0.6s ease;
+  transition: opacity ease-out 0.2s, transform ease-out 0.2s, left cubic-bezier(0.42,0,0.2,1.02) 0.6s, color 0.6s ease;
 }
 
 /* Dark mode slide animations */
@@ -441,7 +444,7 @@ html.light .login-card .logo { mix-blend-mode: multiply; }
   text-transform: uppercase;
   cursor: pointer;
   margin-top: 28px;
-  transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
+  transition: background-color var(--duration-long) cubic-bezier(0.4,0,0.2,1), transform var(--duration-long) cubic-bezier(0.4,0,0.2,1), box-shadow var(--duration-long) cubic-bezier(0.4,0,0.2,1);
 }
 
 .login-card .btn-primary:hover {
@@ -573,7 +576,7 @@ html.light .login-card .logo { mix-blend-mode: multiply; }
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.15s ease;
+  transition: color var(--duration-short) ease, background-color var(--duration-short) ease;
 }
 .sidebar-icon-btn:hover {
   background: var(--bg-hover);
@@ -694,7 +697,7 @@ html.light .login-card .logo { mix-blend-mode: multiply; }
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.15s ease;
+  transition: color var(--duration-short) ease, background-color var(--duration-short) ease, opacity var(--duration-short) ease;
 }
 .convo-action-btn:hover {
   background: var(--bg-hover);
@@ -760,7 +763,7 @@ html.light .login-card .logo { mix-blend-mode: multiply; }
   font-size: 12px;
   padding: 4px 8px;
   border-radius: 6px;
-  transition: all 0.15s ease;
+  transition: color var(--duration-short) ease, background-color var(--duration-short) ease;
 }
 
 .sidebar-footer .btn-logout:hover {
@@ -783,7 +786,7 @@ html.light .login-card .logo { mix-blend-mode: multiply; }
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.2s ease;
+  transition: background-color var(--duration-normal) ease, box-shadow var(--duration-normal) ease;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 .sidebar-expand-btn:hover {
@@ -871,7 +874,7 @@ html.light .login-card .logo { mix-blend-mode: multiply; }
   font-size: 12px;
   font-weight: 500;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: background-color var(--duration-normal) ease, color var(--duration-normal) ease, border-color var(--duration-normal) ease;
   white-space: nowrap;
 }
 .topbar-gws-btn:hover {
@@ -976,7 +979,7 @@ html.light .login-card .logo { mix-blend-mode: multiply; }
   padding: 10px 16px;
   border-radius: 999px;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: background-color var(--duration-normal) ease, color var(--duration-normal) ease, border-color var(--duration-normal) ease, transform var(--duration-normal) ease;
 }
 
 .chat-welcome .suggestion-chip:hover {
@@ -1129,7 +1132,7 @@ html.light .login-card .logo { mix-blend-mode: multiply; }
   padding: 4px 8px;
   cursor: pointer;
   color: var(--text-secondary);
-  transition: all 0.15s;
+  transition: color var(--duration-short), background-color var(--duration-short), border-color var(--duration-short);
 }
 .msg-action-btn:hover {
   background: var(--bg-hover);
@@ -1430,7 +1433,7 @@ html.light .login-card .logo { mix-blend-mode: multiply; }
   align-items: center;
   justify-content: center;
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-  transition: all 0.2s ease;
+  transition: background-color var(--duration-normal) ease, color var(--duration-normal) ease, opacity var(--duration-normal) ease;
   animation: fadeInUp 0.2s ease;
 }
 .scroll-to-bottom:hover {
@@ -1622,7 +1625,7 @@ pre:hover .code-copy-btn { opacity: 1; }
   padding: 8px 16px;
   border-radius: 999px;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: background-color var(--duration-normal) ease, color var(--duration-normal) ease, border-color var(--duration-normal) ease;
   white-space: nowrap;
   max-width: 280px;
   overflow: hidden;
@@ -1703,7 +1706,7 @@ pre:hover .code-copy-btn { opacity: 1; }
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.2s ease;
+  transition: background-color var(--duration-normal) ease, opacity var(--duration-normal) ease, transform var(--duration-normal) ease;
   flex-shrink: 0;
 }
 
@@ -1734,7 +1737,7 @@ pre:hover .code-copy-btn { opacity: 1; }
   width: 36px; height: 36px;
   border-radius: 50%;
   flex-shrink: 0;
-  transition: all 0.2s ease;
+  transition: color var(--duration-normal) ease, background-color var(--duration-normal) ease;
 }
 .btn-attach:hover {
   color: var(--accent);
@@ -1751,7 +1754,7 @@ pre:hover .code-copy-btn { opacity: 1; }
   width: 36px; height: 36px;
   border-radius: 50%;
   flex-shrink: 0;
-  transition: all 0.2s ease;
+  transition: color var(--duration-normal) ease, background-color var(--duration-normal) ease;
   position: relative;
 }
 .btn-source-select:hover {
@@ -1867,7 +1870,7 @@ pre:hover .code-copy-btn { opacity: 1; }
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s ease;
+  transition: background-color var(--duration-long) ease, color var(--duration-long) ease, opacity var(--duration-long) ease;
   backdrop-filter: blur(12px);
   box-shadow: 0 4px 16px rgba(0,0,0,0.15);
 }
@@ -1967,7 +1970,7 @@ pre:hover .code-copy-btn { opacity: 1; }
   font-size: 13px;
   font-weight: 500;
   cursor: pointer;
-  transition: all var(--duration-short) ease;
+  transition: background-color var(--duration-short) ease, color var(--duration-short) ease, border-color var(--duration-short) ease;
 }
 
 .sidebar-dashboard-btn:hover {
@@ -2072,7 +2075,7 @@ pre:hover .code-copy-btn { opacity: 1; }
   margin-left: auto;
   flex-shrink: 0;
   overflow: hidden;
-  transition: all 0.3s ease;
+  transition: opacity var(--duration-long) ease, max-width var(--duration-long) ease;
 }
 
 .sidebar-status-inline.all-ok .status-inline-ok {
@@ -2306,7 +2309,7 @@ pre:hover .code-copy-btn { opacity: 1; }
   font-size: 11px;
   color: var(--text);
   cursor: pointer;
-  transition: all 0.15s;
+  transition: background-color var(--duration-short), color var(--duration-short), border-color var(--duration-short);
 }
 .slash-preset-btn:hover {
   background: var(--accent);
@@ -2393,7 +2396,7 @@ pre:hover .code-copy-btn { opacity: 1; }
   font-size: 11px;
   cursor: pointer;
   color: var(--text);
-  transition: all 0.15s;
+  transition: background-color var(--duration-short), color var(--duration-short), border-color var(--duration-short);
 }
 .source-btn-all:hover, .source-btn-none:hover {
   background: var(--accent);
@@ -2563,7 +2566,7 @@ pre:hover .code-copy-btn { opacity: 1; }
   font-size: 12px;
   font-weight: 500;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: background-color var(--duration-normal) ease, color var(--duration-normal) ease, border-color var(--duration-normal) ease;
 }
 
 .admin-model-toggle.active {
@@ -2618,7 +2621,7 @@ pre:hover .code-copy-btn { opacity: 1; }
   font-size: 13px;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: color var(--duration-normal), border-color var(--duration-normal);
 }
 .admin-tab.active {
   color: var(--accent);
