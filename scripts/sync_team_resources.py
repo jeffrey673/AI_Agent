@@ -114,6 +114,31 @@ def _extract_block_content(block: dict) -> tuple:
     return text, href
 
 
+def _query_database(db_id: str, max_records: int = 30) -> list:
+    """Query a Notion database and return records (pages)."""
+    all_records = []
+    body: Dict = {"page_size": min(max_records, 100)}
+    while len(all_records) < max_records:
+        resp = CLIENT.post(f"https://api.notion.com/v1/databases/{db_id}/query", headers=HEADERS, json=body)
+        if resp.status_code != 200:
+            break
+        data = resp.json()
+        all_records.extend(data.get("results", []))
+        if not data.get("has_more"):
+            break
+        body["start_cursor"] = data["next_cursor"]
+    return all_records[:max_records]
+
+
+def _get_record_title(record: dict) -> str:
+    """Extract title from a Notion database record's properties."""
+    props = record.get("properties", {})
+    for key, val in props.items():
+        if val.get("type") == "title":
+            return "".join(t.get("plain_text", "") for t in val.get("title", [])).strip()
+    return ""
+
+
 def _parse_table_rows(table_block_id: str) -> List[Dict[str, str]]:
     rows = _get_block_children(table_block_id)
     if not rows:
@@ -180,9 +205,9 @@ def _add_node(parent_id: Optional[int], team: str, node_type: str, name: str,
     return _node_counter
 
 
-MAX_DEPTH = 5           # Max tree depth
+MAX_DEPTH = 6           # Max tree depth
 MAX_CHILDREN = 50       # Max children per node
-MAX_PAGE_FOLLOWS = 3    # Max Notion pages to follow INTO per team
+MAX_PAGE_FOLLOWS = 8    # Max Notion pages/DBs to follow INTO per team
 _page_follow_count: Dict[str, int] = {}  # team → follow count
 
 def _can_follow_page(team: str) -> bool:
@@ -252,12 +277,27 @@ def _crawl_recursive(block_id: str, parent_tmp_id: int, team: str, depth: int = 
                     _crawl_recursive(bid, node_id, team, depth + 1)
             continue
 
-        # --- Child database ---
+        # --- Child database: query records and crawl each ---
         if btype == "child_database":
             title = child.get("child_database", {}).get("title", "")
             db_url = f"https://www.notion.so/{bid.replace('-', '')}"
-            if title:
-                _add_node(heading_parent, team, "database", title, db_url, depth=depth, block_id=bid, sort_order=sort)
+            db_node_id = _add_node(heading_parent, team, "database", title or "database", db_url, depth=depth, block_id=bid, sort_order=sort)
+            # Query database records
+            if _can_follow_page(team):
+                try:
+                    records = _query_database(bid)
+                    logger.info("querying_database", team=team, title=title[:30], records=len(records))
+                    for rec in records:
+                        rec_id = rec["id"]
+                        rec_title = _get_record_title(rec)
+                        rec_url = f"https://www.notion.so/{rec_id.replace('-', '')}"
+                        if rec_id not in _crawled_pages:
+                            _crawled_pages.add(rec_id)
+                            rec_node = _add_node(db_node_id, team, "page", rec_title or "Untitled", rec_url, depth=depth+1, block_id=rec_id, sort_order=sort)
+                            # Crawl inside each record page
+                            _crawl_recursive(rec_id, rec_node, team, depth + 2)
+                except Exception as e:
+                    logger.warning("database_query_failed", db_id=bid, error=str(e))
             continue
 
         # --- Bookmark / Embed ---
@@ -306,7 +346,7 @@ def _crawl_recursive(block_id: str, parent_tmp_id: int, team: str, depth: int = 
                 _crawl_recursive(bid, heading_parent, team, depth + 1)
 
 
-def crawl_all_teams():
+def crawl_all_teams(only_teams: Optional[set] = None):
     global _nodes, _node_counter, _crawled_pages, _page_follow_count
     _nodes = []
     _node_counter = 0
@@ -321,6 +361,8 @@ def crawl_all_teams():
         team_name = team_name.replace("[GM]", "GM ").replace("  ", " ").strip()
         if team_name in SKIP_TEAMS or "노션x" in team_name.lower() or "노션 x" in team_name.lower():
             logger.info("team_skipped", team=team_name)
+            continue
+        if only_teams and team_name not in only_teams:
             continue
         logger.info("crawling_team", team=team_name)
         # Create team root node
@@ -393,9 +435,11 @@ def print_tree(nodes: List[Dict]):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--dry-run", action="store_true")
+    parser.add_argument("--teams", nargs="+", help="Only crawl specific teams (e.g. CS IT PEOPLE)")
     args = parser.parse_args()
 
-    nodes = crawl_all_teams()
+    only = set(args.teams) if args.teams else None
+    nodes = crawl_all_teams(only_teams=only)
 
     if args.dry_run:
         print(f"\n--- Tree Preview ({len(nodes)} nodes) ---\n")
