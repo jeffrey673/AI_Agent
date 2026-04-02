@@ -2290,11 +2290,9 @@
             '</div>' +
             '<div class="status-group-items">';
           grp.keys.forEach(function(key) {
-            var svc = data.services[key];
-            if (svc) {
-              html += renderItem(key, svc);
-              renderedKeys[key] = true;
-            }
+            var svc = data.services[key] || { status: "ok", detail: "대기" };
+            html += renderItem(key, svc);
+            renderedKeys[key] = true;
           });
           html += '</div></div>';
         });
