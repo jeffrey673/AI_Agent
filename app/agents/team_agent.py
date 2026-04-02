@@ -25,8 +25,9 @@ async def warmup() -> int:
 
     def _load():
         return fetch_all(
-            "SELECT team, category, name, resource_type, url, description, synced_at "
-            "FROM team_resources ORDER BY team, category, name"
+            "SELECT id, parent_id, team, node_type, name, resource_type, url, description, "
+            "depth, sort_order, synced_at "
+            "FROM team_resources ORDER BY depth, sort_order"
         )
 
     rows = await asyncio.to_thread(_load)
@@ -70,16 +71,22 @@ def search_resources(query: str, top_k: int = 10, allowed_resources: Optional[Di
     q_tokens = _tokenize(query)
     q_lower = query.lower()
 
+    # allowed_ids: set of allowed resource IDs (None = all)
+    allowed_ids = None
+    if allowed_resources is not None:
+        allowed_ids = set()
+        for team, ids in allowed_resources.items():
+            if ids:
+                allowed_ids.update(ids)
+
     scored = []
     for r in _resource_cache:
-        # Filter by allowed_resources if provided
-        if allowed_resources is not None:
-            team = r.get("team", "")
-            if team not in allowed_resources:
-                continue
-            allowed_names = allowed_resources[team]
-            if allowed_names and r.get("name", "") not in allowed_names:
-                continue
+        # Skip non-leaf nodes (team, folder)
+        if r.get("node_type") in ("team", "folder"):
+            continue
+        # Filter by allowed IDs
+        if allowed_ids is not None and r.get("id") not in allowed_ids:
+            continue
         score = 0.0
         team_lower = r["team"].lower()
         if team_lower in q_lower:
@@ -88,10 +95,9 @@ def search_resources(query: str, top_k: int = 10, allowed_resources: Optional[Di
             if alias in q_lower and r["team"] == canonical:
                 score += 3.0
                 break
-        if r["category"] and r["category"].lower() in q_lower:
-            score += 2.0
         score += _word_overlap_score(q_tokens, r["name"]) * 2.0
-        score += _word_overlap_score(q_tokens, r["description"]) * 0.5
+        desc = r.get("description") or ""
+        score += _word_overlap_score(q_tokens, desc) * 0.5
         if score > 0:
             scored.append((score, r))
 
@@ -105,13 +111,12 @@ def _format_resource_context(matched: List[Dict]) -> str:
     lines = []
     for i, r in enumerate(matched, 1):
         meta = f"[{r['team']}]"
-        if r["category"]:
-            meta += f" {r['category']}"
         rtype = {"google_sheet": "📊 Google Sheet", "notion": "📋 Notion",
-                 "google_drive": "📁 Google Drive", "other": "🔗 기타"}.get(r["resource_type"], "🔗")
-        lines.append(f"{i}. {meta} | {rtype}\n   이름: {r['name']}\n   링크: {r['url'] or 'N/A'}")
-        if r["description"]:
-            lines.append(f"   비고: {r['description']}")
+                 "google_drive": "📁 Google Drive", "other": "🔗 기타"}.get(r.get("resource_type", "other"), "🔗")
+        lines.append(f"{i}. {meta} | {rtype}\n   이름: {r['name']}\n   링크: {r.get('url') or 'N/A'}")
+        desc = r.get("description", "")
+        if desc:
+            lines.append(f"   비고: {desc[:200]}")
     return "\n".join(lines)
 
 

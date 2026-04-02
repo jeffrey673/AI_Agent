@@ -274,29 +274,30 @@
     if (enabledTeamRes === null) localStorage.removeItem("skin1004_team_resources");
     else localStorage.setItem("skin1004_team_resources", JSON.stringify(enabledTeamRes));
   }
-  function isTeamResEnabled(team, name) {
+  function isTeamResEnabled(team, nodeId) {
     if (!enabledTeamRes) return true;  // null = all
     var list = enabledTeamRes[team];
     if (!list) return true;  // team not filtered
-    return list.indexOf(name) >= 0;
-  }
-  function toggleTeamRes(team, name) {
-    if (!enabledTeamRes) enabledTeamRes = {};
-    if (!enabledTeamRes[team]) {
-      // First uncheck in this team → start with all names, then remove this one
-      enabledTeamRes[team] = _allTeamResNames[team] ? _allTeamResNames[team].filter(function(n) { return n !== name; }) : [];
-    } else {
-      var idx = enabledTeamRes[team].indexOf(name);
-      if (idx >= 0) enabledTeamRes[team].splice(idx, 1);
-      else enabledTeamRes[team].push(name);
-    }
-    saveTeamRes();
+    return list.indexOf(nodeId) >= 0;
   }
   function getEnabledTeamResPayload() {
     if (!enabledTeamRes) return null;
     return enabledTeamRes;
   }
   var _allTeamResNames = {};  // Populated from safety/status response
+
+  // Rebuild enabledTeamRes from DOM checkbox states
+  function _rebuildTeamRes(team, container) {
+    if (!enabledTeamRes) enabledTeamRes = {};
+    var item = container.querySelector('[data-team-key="' + team + '"]');
+    if (!item) return;
+    var checkedIds = [];
+    item.querySelectorAll('.tree-cb:checked').forEach(function(cb) {
+      checkedIds.push(parseInt(cb.getAttribute("data-id")));
+    });
+    enabledTeamRes[team] = checkedIds;
+    saveTeamRes();
+  }
 
   // ===== Image Upload State =====
   var pendingImages = [];  // Array of { file: File, dataUrl: string }
@@ -2255,7 +2256,12 @@
         var maintenanceReason = (data.maintenance && data.maintenance.reason) || "";
         var issues = [];
 
-        // Helper: render a single service row
+        // Node type icons
+        var _nodeIcons = {
+          folder: "📁", sheet: "📊", page: "📋", database: "🗃️", text: "📝"
+        };
+
+        // Helper: render a single service row (non-tree services)
         function renderItem(name, svc) {
           var st = svc.status || "ok";
           var labels = { ok: "정상", updating: "업데이트 중", error: "오류" };
@@ -2274,57 +2280,93 @@
             ? '<label class="status-checkbox-label"><input type="checkbox" class="status-source-cb" data-source="' + name + '"' + (isChecked ? ' checked' : '') + '></label>'
             : '';
 
-          var detailText = (st === "ok" && detail && detail !== "loading" && detail !== "비어있음") ? detail : "";
-          var res = svc.resources || [];
-          var hasRes = res.length > 0;
-          var h = '<div class="status-item' + (st !== "ok" ? " status-alert" : "") + (hasRes ? " has-expand" : "") + '">' +
+          var detailText = (st === "ok" && detail && detail !== "loading") ? detail : "";
+          var h = '<div class="status-item' + (st !== "ok" ? " status-alert" : "") + '">' +
             '<div class="status-item-row">' + checkboxHtml +
             '<span class="status-dot' + (st !== "ok" ? " error" : "") + '"></span>' +
             '<span class="status-icon">' + info.svg + '</span>' +
             '<span class="status-name">' + info.label + '</span>' +
             (detailText ? '<span class="status-detail-text">' + detailText + '</span>' : '') +
             '<span class="status-label' + labelClass + '">' + (labels[st] || st) + '</span>' +
-            (hasRes ? '<span class="status-expand-btn">&#9654;</span>' : '') +
             '</div>';
           if (alertMsg) {
             h += '<div class="status-msg-wrap"><div class="status-msg-ticker"><span>' + alertMsg + '</span></div></div>';
-          }
-          if (hasRes) {
-            h += '<div class="status-sub-items">';
-            res.forEach(function(r) {
-              var resChecked = isTeamResEnabled(name, r.name) ? ' checked' : '';
-              var catLabel = r.cat ? '<span class="sub-cat-tag">' + r.cat + '</span>' : '';
-              h += '<div class="status-sub-item">' +
-                '<input type="checkbox" class="sub-res-cb" data-team="' + name + '" data-name="' + r.name.replace(/"/g, '&quot;') + '"' + resChecked + '>' +
-                catLabel + '<span class="sub-cat-name">' + r.name + '</span></div>';
-            });
-            h += '</div>';
-            // Track all names for this team
-            _allTeamResNames[name] = res.map(function(r) { return r.name; });
           }
           h += '</div>';
           return h;
         }
 
+        // Helper: render tree node recursively (for team group)
+        function renderTreeNode(node, team, depth) {
+          var ntype = node.type || "text";
+          var kids = node.children || [];
+          var isLeaf = ntype !== "folder" && ntype !== "team";
+          var hasKids = kids.length > 0;
+          var icon = _nodeIcons[ntype] || "•";
+          var checkedAttr = isTeamResEnabled(team, node.id) ? ' checked' : '';
+
+          var h = '<div class="tree-node depth-' + depth + (hasKids ? ' has-kids' : '') + '" data-id="' + node.id + '">';
+          h += '<div class="tree-row">';
+          // Checkbox for all nodes
+          h += '<input type="checkbox" class="tree-cb" data-team="' + team + '" data-id="' + node.id + '"' + checkedAttr + '>';
+          if (hasKids) {
+            h += '<span class="tree-toggle">▶</span>';
+          } else {
+            h += '<span class="tree-toggle-spacer"></span>';
+          }
+          h += '<span class="tree-icon">' + icon + '</span>';
+          h += '<span class="tree-name">' + node.name + '</span>';
+          if (hasKids) {
+            var leafCount = _countLeaves(node);
+            if (leafCount > 0) h += '<span class="tree-count">' + leafCount + '</span>';
+          }
+          h += '</div>';
+          if (hasKids) {
+            h += '<div class="tree-children">';
+            kids.forEach(function(kid) { h += renderTreeNode(kid, team, depth + 1); });
+            h += '</div>';
+          }
+          h += '</div>';
+          return h;
+        }
+
+        function _countLeaves(node) {
+          var kids = node.children || [];
+          if (kids.length === 0) return (node.type !== "folder" && node.type !== "team") ? 1 : 0;
+          var c = 0; kids.forEach(function(k) { c += _countLeaves(k); }); return c;
+        }
+
+        // Collect all leaf IDs for a team tree
+        function _collectLeafIds(node, arr) {
+          var kids = node.children || [];
+          if (kids.length === 0 && node.type !== "folder" && node.type !== "team") {
+            arr.push(node.id);
+          }
+          kids.forEach(function(k) { _collectLeafIds(k, arr); });
+        }
+
+        // Collect all node IDs (including folders) under a node
+        function _collectAllIds(node, arr) {
+          arr.push(node.id);
+          (node.children || []).forEach(function(k) { _collectAllIds(k, arr); });
+        }
+
         // Dynamic team keys: inject team names from API into SOURCE_GROUPS
         SOURCE_GROUPS.forEach(function(grp) {
           if (!grp._dynamic) return;
-          var staticKeys = grp.keys.slice();  // Keep BP etc.
+          var staticKeys = grp.keys.slice();
           var teamKeys = [];
           for (var svcName in data.services) {
             var svc = data.services[svcName];
-            if (svc.resources !== undefined && staticKeys.indexOf(svcName) < 0) {
+            if (svc.tree !== undefined && staticKeys.indexOf(svcName) < 0) {
               teamKeys.push(svcName);
-              // Register in route map and icons if missing
               if (!SOURCE_ROUTE_MAP[svcName]) SOURCE_ROUTE_MAP[svcName] = "team";
               if (!SERVICE_ICONS[svcName]) SERVICE_ICONS[svcName] = { label: svcName, svg: _svgGlobe };
             }
           }
           grp.keys = teamKeys.concat(staticKeys);
-          // Rebuild DATA_SOURCE_KEYS
           DATA_SOURCE_KEYS = [];
           SOURCE_GROUPS.forEach(function(g) { g.keys.forEach(function(k) { DATA_SOURCE_KEYS.push(k); }); });
-          // Auto-enable new keys
           teamKeys.forEach(function(k) {
             if (enabledSources.indexOf(k) < 0) enabledSources.push(k);
           });
@@ -2354,7 +2396,28 @@
             '<div class="status-group-items">';
           grp.keys.forEach(function(key) {
             var svc = data.services[key] || { status: "ok", detail: "대기" };
-            html += renderItem(key, svc);
+            if (svc.tree && svc.tree.length > 0) {
+              // Team with tree structure
+              var info = SERVICE_ICONS[key] || { label: key, svg: _svgGlobe };
+              var isChecked = enabledSources.indexOf(key) >= 0;
+              html += '<div class="status-item has-expand" data-team-key="' + key + '">' +
+                '<div class="status-item-row">' +
+                '<label class="status-checkbox-label"><input type="checkbox" class="status-source-cb team-select-all" data-source="' + key + '"' + (isChecked ? ' checked' : '') + '></label>' +
+                '<span class="status-dot"></span>' +
+                '<span class="status-icon">' + info.svg + '</span>' +
+                '<span class="status-name">' + info.label + '</span>' +
+                '<span class="status-detail-text">' + svc.detail + '</span>' +
+                '<span class="status-label">정상</span>' +
+                '<span class="status-expand-btn">▶</span>' +
+                '</div>' +
+                '<div class="status-sub-items tree-root">';
+              svc.tree.forEach(function(child) {
+                html += renderTreeNode(child, key, 1);
+              });
+              html += '</div></div>';
+            } else {
+              html += renderItem(key, svc);
+            }
             renderedKeys[key] = true;
           });
           html += '</div></div>';
@@ -2376,19 +2439,54 @@
           });
         });
 
-        // Expandable team items — click row or arrow to expand sub-items
-        container.querySelectorAll(".status-item.has-expand").forEach(function(item) {
-          item.querySelector(".status-item-row").addEventListener("click", function(e) {
+        // Expandable team items — click row to expand
+        container.querySelectorAll(".status-item.has-expand > .status-item-row").forEach(function(row) {
+          row.addEventListener("click", function(e) {
             if (e.target.tagName === "INPUT") return;
-            item.classList.toggle("expanded");
+            row.parentElement.classList.toggle("expanded");
           });
         });
 
-        // Sub-resource checkboxes
-        container.querySelectorAll(".sub-res-cb").forEach(function(cb) {
+        // Tree node toggle (expand/collapse folder)
+        container.querySelectorAll(".tree-toggle").forEach(function(toggle) {
+          toggle.addEventListener("click", function(e) {
+            e.stopPropagation();
+            var node = toggle.closest(".tree-node");
+            if (node) node.classList.toggle("open");
+          });
+        });
+
+        // Tree checkbox cascade
+        container.querySelectorAll(".tree-cb").forEach(function(cb) {
           cb.addEventListener("change", function(e) {
             e.stopPropagation();
-            toggleTeamRes(this.getAttribute("data-team"), this.getAttribute("data-name"));
+            var team = this.getAttribute("data-team");
+            var nodeId = parseInt(this.getAttribute("data-id"));
+            var checked = this.checked;
+            // Cascade down: check/uncheck all children
+            var parentNode = this.closest(".tree-node");
+            if (parentNode) {
+              parentNode.querySelectorAll(".tree-cb").forEach(function(childCb) {
+                childCb.checked = checked;
+              });
+            }
+            // Update enabledTeamRes
+            _rebuildTeamRes(team, container);
+          });
+        });
+
+        // Team select-all checkbox
+        container.querySelectorAll(".team-select-all").forEach(function(cb) {
+          cb.addEventListener("change", function(e) {
+            e.stopPropagation();
+            var team = this.getAttribute("data-source");
+            var item = this.closest(".status-item");
+            if (item) {
+              item.querySelectorAll(".tree-cb").forEach(function(childCb) {
+                childCb.checked = cb.checked;
+              });
+              _rebuildTeamRes(team, container);
+            }
           });
         });
 

@@ -227,30 +227,54 @@ def get_safety_status() -> dict:
     # BP — mirrors CS Q&A (CS Q&A not shown in UI separately)
     services["BP"] = {"status": cs_status, "detail": cs_detail}
 
-    # Team Resources (DB HUB) — all teams with individual resource names
+    # Team Resources (DB HUB) — tree structure per team
     try:
         from app.agents.team_agent import _resource_cache, _cache_loaded, _last_sync
-        if _cache_loaded:
-            # Build from actual data — all teams that have resources
-            _team_items: Dict[str, list] = {}
+        if _cache_loaded and _resource_cache:
+            # Build tree: id → node, children map
+            node_map: Dict[int, dict] = {}
+            children_map: Dict[int, list] = {}
+            team_roots: Dict[str, int] = {}
             for r in _resource_cache:
-                t = r.get("team", "")
-                if not t:
-                    continue
-                _team_items.setdefault(t, []).append({
-                    "cat": r.get("category", "") or "",
-                    "name": r.get("name", ""),
-                })
-            for team in sorted(_team_items.keys()):
-                items = _team_items[team]
+                nid = r.get("id")
+                pid = r.get("parent_id")
+                node_map[nid] = {
+                    "id": nid, "name": r["name"],
+                    "type": r.get("node_type", "text"),
+                    "url": r.get("url", ""),
+                    "children": [],
+                }
+                children_map.setdefault(pid, []).append(nid)
+                if r.get("node_type") == "team":
+                    team_roots[r["team"]] = nid
+
+            def _build_tree(node_id: int, max_depth: int = 8) -> dict:
+                node = dict(node_map.get(node_id, {}))
+                if max_depth <= 0:
+                    return node
+                child_ids = children_map.get(node_id, [])
+                node["children"] = [_build_tree(cid, max_depth - 1) for cid in child_ids]
+                return node
+
+            def _count_leaves(node_id: int) -> int:
+                kids = children_map.get(node_id, [])
+                if not kids:
+                    return 1 if node_map.get(node_id, {}).get("type") not in ("team", "folder") else 0
+                return sum(_count_leaves(cid) for cid in kids)
+
+            for team in sorted(team_roots.keys()):
+                root_id = team_roots[team]
+                tree = _build_tree(root_id)
+                leaves = _count_leaves(root_id)
                 services[team] = {
                     "status": "ok",
-                    "detail": f"{len(items)}건",
-                    "resources": items,
+                    "detail": f"{leaves}건",
+                    "tree": tree.get("children", []),
                 }
         else:
             services["팀자료"] = {"status": "error", "detail": "loading"}
-    except Exception:
+    except Exception as e:
+        logger.error("safety_team_tree_error", error=str(e))
         services["팀자료"] = {"status": "ok", "detail": "not loaded"}
 
     # Google Workspace
