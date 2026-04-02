@@ -41,9 +41,8 @@
 ⚠️ 아래에 없는 컬럼은 사용 금지! 반드시 아래 컬럼만 사용하세요.
 
 #### 기본 정보
-- Brand (STRING): 브랜드 — 'SK'(스킨1004), 'CL'(커먼랩스/CommonLabs), 'ETC'(아워 바이오), 'UM'(우마), 'DD'
-  - ⚠️ **매출 조회 시 `Brand != 'ETC'` 기본 적용!** ETC(아워바이오)는 기본 제외. 사용자가 명시적으로 "ETC 포함", "아워바이오 포함", "전 브랜드" 요청 시에만 ETC 포함
-  - ⚠️ **크레이버코퍼레이션 = 전체 회사**. "크레이버", "크레이버코퍼레이션", "Craver", "우리 회사 전체" → Brand 필터 넣지 마라 (Admin에서 AD 그룹별 brand_filter가 별도 적용됨). 단, ETC는 기본 제외
+- Brand (STRING): 브랜드 — 'SK'(스킨1004), 'CL'(커먼랩스/CommonLabs), 'UM'(우마), 'DD'
+  - ⚠️ **크레이버코퍼레이션 = 전체 회사**. "크레이버", "크레이버코퍼레이션", "Craver", "우리 회사 전체" → Brand 필터 넣지 마라 (Admin에서 AD 그룹별 brand_filter가 별도 적용됨)
 - Mall_Classification (STRING): 몰/채널 분류 코드
   - SK_B2B_Domestic (스킨1004 국내 도매), SK_B2B_Overseas (스킨1004 해외 도매)
   - SK_B2C_Flagship (플래그십/오프라인/메인), SK_B2C_cafe24_skin1004 (국문/글로벌 자사몰), SK_B2C_sabangnet (사방넷/국내 종합몰), SK_B2C_cafe24_zombiebeauty (좀비뷰티 자사몰)
@@ -55,7 +54,6 @@
   - SK_B2C_JP_Amazon (일본 아마존), SK_B2C_JP_Rakuten (일본 라쿠텐), SK_B2C_JP_Q10_Craver (일본 큐텐)
   - SK_B2C_Q10 (큐텐 글로벌), SK_B2C_TW_Shopee (대만 쇼피), SK_B2C_RUS_Ozon (러시아 오존), SK_B2C_AU_Amazon (호주 아마존)
   - DD_B2B (UM 브랜드 도매), DD_RTL (UM 유통)
-  - ETC_B2C_Silii_Amazon → ⚠️ 이 데이터는 무시!
   - CL_B2B_Domestic (커먼랩스 국내 도매), CL_B2B_Overseas (커먼랩스 해외 수출), CL_B2C_CompanyMall (커먼랩스 자사몰), CL_B2C_ExMall (커먼랩스 외부/제휴몰), CL_B2C_USA_CompanyMall (커먼랩스 미국 자사몰), CL_B2C_MY_CompanyMall (커먼랩스 말레이시아 자사몰)
   - CL_B2C_ID_Shopee, CL_B2C_ID_Lazada, CL_B2C_PH_Shopee, CL_B2C_PH_Lazada, CL_B2C_PH_DPMall, CL_B2C_MY_Shopee, CL_B2C_MY_Lazada, CL_B2C_MY_DPMall, CL_B2C_SG_Shopee, CL_B2C_VN_Shopee, CL_B2C_TW_Shopee, CL_B2C_JP_Q10
   - CBT_B2B (CBT 도매), CBT_B2C_Tmall (티몰), CBT_B2C_Jingdong (징동), CBT_B2C_Tiktok (틱톡/더우인), CBT_B2C_Xiaohongshu (샤오홍슈) 등
@@ -107,7 +105,7 @@
   - 한국어 매핑: 앰플/세럼 → 'Ampoule', 선크림/자외선차단 → 'Suncare', 크림 → 'Cream', 팩/마스크 → 'Pack', 클렌저/클렌징/세안 → 'Cleanser', 오일 → 'Oil', 토너 → 'Toner', 세트 → 'SET'
 
 #### ⚠️ 제품 관련 매출 질문 시 Brand 필터 필수!
-- **제품/카테고리/라인 관련 매출 질문은 `Brand IN ('SK', 'CL')` 조건 필수!** — ETC, DD, UM 브랜드 제외
+- **제품/카테고리/라인 관련 매출 질문은 `Brand IN ('SK', 'CL')` 조건 필수!** — DD, UM 브랜드 제외
 - 예: "앰플 매출", "센텔라 라인 매출", "카테고리별 매출" 등 → `WHERE Brand IN ('SK', 'CL')` 추가
 - 단, 브랜드 전체 비교 질문(예: "브랜드별 매출 비교")은 필터 없이 전체 브랜드 포함
 
@@ -133,7 +131,7 @@
     - **GM 사업부** (글로벌마케팅): Team_NEW IN ('CBT', 'GM_EAST1', 'GM_EAST2', 'GM_Ecomm', 'GM_MKT', 'JBT', 'KBT')
     - **PR 사업부** (브랜드커머스): Team_NEW IN ('BCM')
     - **DD 사업부**: Team_NEW IN ('DD_DT1', 'DD_DT2')
-  - "전사 실적" = 모든 팀 합산 (Brand != 'ETC' 기본 적용)
+  - "전사 실적" = 모든 팀 합산
   - "사업부별 실적" = CASE WHEN으로 사업부 그룹핑 + 팀별 소계 (depth: 사업부/팀)
   - "실적" = Sales1_R(매출액). 주문수량 = Order_Count
 - Manager_NEW (STRING): 담당자
@@ -191,7 +189,7 @@
    - ✅ 올바름: `WHERE Date >= '2019-01-01'` 만 사용 (전체 기간)
    - "올해", "2025년", "지난달" 등 **명시적 기간 표현이 있을 때만** 날짜 필터 추가
 16. ⚠️ **시각화/차트/그래프 요청 시 반드시 GROUP BY로 집계**:
-   - 사용자가 "시각화", "차트", "그래프", "추이", "비교", "보여줘" 등을 요청하면, 반드시 SUM/COUNT 등의 집계 함수와 GROUP BY를 사용해서 요약된 결과를 반환하세요.
+   - 사용자가 "시각화", "차트", "그래프", "추이", "비교", "보여줘", "도표", "플롯", "그려", "그려줘", "시각화해", "막대그래프", "원형그래프", "꺾은선", "파이차트", "바차트", "그래프로", "차트로" 등을 요청하면, 반드시 SUM/COUNT 등의 집계 함수와 GROUP BY를 사용해서 요약된 결과를 반환하세요.
    - 결과가 차트로 표현 가능하도록 행 수를 적절히 제한하세요 (보통 5~30행).
    - 월별 추이: `FORMAT_DATETIME('%Y-%m', Date) AS month` + `GROUP BY month ORDER BY month`
    - 국가별 비교: `Country` + `GROUP BY Country ORDER BY total_revenue DESC`
@@ -251,6 +249,19 @@
      - "최근 리뷰" → `ORDER BY collect_date DESC LIMIT 20`
      - "전체 리뷰 수" → `SELECT COUNT(*) FROM ...` (raw 반환 금지)
      - LIMIT 없이 전체 스캔 절대 금지!
+   - **광고 테이블 (integrated_advertising_data) — ⚠️ 컬럼 혼동 주의!**:
+     - ⛔ **Brand 컬럼 없음!** SALES_ALL_Backup의 `Brand`를 광고 테이블에 사용하면 `Unrecognized name: Brand` 에러 발생!
+     - "메타", "페이스북", "인스타" 광고 질문 → **Facebook_** 접두사 컬럼 사용:
+       - 광고비: `Facebook_Cost`, 노출: `Facebook_Impressions`, 클릭: `Facebook_Link_clicks`
+       - 구매전환값: `Facebook_Website_purchases_conversion_value` (단일 컬럼! Omni 컬럼과 중복 합산 금지)
+       - 구매건수: `Facebook_Website_purchases`
+     - "틱톡" 광고 → `TikTok_Cost`, `TikTok_Impressions`, `TikTok_Clicks`, `TikTok_Total_complete_payment_value`
+     - "구글" 광고 → `Google_Cost`, `Google_Impressions`, `Google_Clicks`, `Google_Total_conversion_value`
+     - "쇼피" 광고 → `Shopee_Expense_KRW`, `Shopee_Impressions`, `Shopee_Clicks`, `Shopee_GMV_KRW`
+     - ROAS 계산: `SAFE_DIVIDE(SUM(Facebook_Website_purchases_conversion_value), SUM(Facebook_Cost))` (플랫폼별 개별 계산)
+     - "전체 광고비" = `SUM(Facebook_Cost) + SUM(TikTok_Cost) + SUM(Google_Cost) + SUM(Shopee_Expense_KRW) + ...`
+     - ⚠️ 날짜 컬럼: `Date` (DATE 타입) — SALES_ALL의 DATETIME과 다름!
+     - ⚠️ 국가 컬럼: `Country` (한국어! '미국', '인도네시아' 등)
    - **메타 광고 테이블** (meta data_test) — ⚠️ QA 82건 검증 반영:
      - `LIMIT 200` 필수 (풀스캔 금지)
      - **brand 값은 전부 소문자!** `brand = 'skin1004'` ✅ | `brand LIKE '%SKIN1004%'` ❌ (대문자로 조회하면 0건!)
@@ -695,18 +706,17 @@ LIMIT 1000
 - Product (STRING): **개별 제품명** — SALES_ALL의 SET과 동일한 네이밍 규칙 (예: `SK_Centella_Ampoule_100ml`) ⭐ 제품을 물어봤을때, 제품명을 가져오면서 설명해주기
 - Total_Qty (FLOAT): **전체수량 / 수량** — 수량 조회 시 이 컬럼 사용! `SUM(Total_Qty)` ⭐
 - ⚠️ **Quantity, Event_Qty 컬럼은 사용 금지 (X 표시됨)** — 반드시 `Total_Qty`만 사용하세요!
-- ⚠️ **제품 관련 질문은 Brand IN ('SK', 'CL') 내에서만 답변!** — ETC, DD, UM 브랜드 제외 필수
+- ⚠️ **제품 관련 질문은 Brand IN ('SK', 'CL') 내에서만 답변!** — DD, UM 브랜드 제외
 - ⚠️ **Sachet 제외 필수!** 제품별 수량 조회 시 `AND Product != 'Sachet'` 추가 (샘플/증정품이므로). 단, FOC 관련 질문은 Sachet 포함!
 
 #### 공통 필터 컬럼 (SALES_ALL과 동일)
-- Mall_Classification (STRING): 몰 분류 (동일). ⚠️ 맨 앞 접두사가 브랜드를 나타냄 (SK_=스킨1004, CL_=커먼랩스, CBT_=중국, DD_=UM, ETC_=무시)
+- Mall_Classification (STRING): 몰 분류 (동일). ⚠️ 맨 앞 접두사가 브랜드를 나타냄 (SK_=스킨1004, CL_=커먼랩스, CBT_=중국, DD_=UM)
   - 추가: `SK_B2C_cafe24_skin1004` (스킨1004 국문/글로벌 자사몰), `SK_B2C_cafe24_zombiebeauty` (좀비뷰티 자사몰)
-  - ⚠️ `ETC_B2C_Silii_Amazon` → 이 데이터는 무시!
 - Country (STRING): 국가 (한국어, 동일)
 - Company_Name (STRING): 업체명 (동일)
 - Date (DATETIME): 날짜 (동일)
 - Sales_Type (STRING): **판매유형** — 'B2B' / 'B2C'
-- Brand (STRING): 브랜드 — SK=스킨천사, CL=커먼랩스, **ETC=아예 무시**, UM=우마, DD
+- Brand (STRING): 브랜드 — SK=스킨1004, CL=커먼랩스, UM=우마, DD
 - Team_NEW (STRING): 팀 (동일)
 - Line (STRING): 라인 (동일)
 - FOC_Qty (FLOAT): **FOC 수량** — 무료 제공 수량 ⭐ (Product 테이블에만 존재!)
@@ -842,7 +852,7 @@ ORDER BY a.month DESC LIMIT 2
 - Product 테이블의 `Product` 컬럼도 **영어**임. 한국어-영어 매핑은 위 SALES_ALL 섹션과 동일하게 적용
 - `Product` 컬럼 = SALES_ALL의 `SET`을 unpivot한 것이므로 같은 제품명 사용
 - ⚠️ Product 테이블에는 세트 조합(` + `)이 이미 분리되어 있으므로 `NOT LIKE '% + %'` 조건 불필요
-- ⚠️ **제품 질문 시 반드시 `Brand IN ('SK', 'CL')` 조건 추가** — ETC/DD/UM 브랜드는 제외!
+- ⚠️ **제품 질문 시 반드시 `Brand IN ('SK', 'CL')` 조건 추가** — DD/UM 브랜드는 제외
 
 ---
 
