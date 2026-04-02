@@ -373,3 +373,30 @@ else:
 def get_maria_conn():
     """Get a pooled MariaDB connection (production only)."""
     return _get_pool().connection()
+
+
+# ===========================================================================
+# team_resources table DDL
+# ===========================================================================
+_TEAM_RESOURCES_DDL = """
+CREATE TABLE IF NOT EXISTS team_resources (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    team VARCHAR(50) NOT NULL COMMENT '팀명 (JBT, BCM, GM_EAST 등)',
+    category VARCHAR(100) DEFAULT '' COMMENT '하위 카테고리 (MKT, BEA, BXM, 이커머스 등)',
+    name VARCHAR(255) NOT NULL COMMENT '시트/페이지 이름',
+    resource_type ENUM('google_sheet', 'notion', 'google_drive', 'other') NOT NULL DEFAULT 'other',
+    url TEXT COMMENT '링크 URL',
+    description TEXT DEFAULT '' COMMENT '비고/설명',
+    synced_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '마지막 동기화 시각',
+    INDEX idx_team (team),
+    INDEX idx_team_cat (team, category)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+"""
+
+
+def ensure_team_resources_table():
+    """Create team_resources table if not exists."""
+    try:
+        execute(_TEAM_RESOURCES_DDL)
+    except Exception as e:
+        logger.warning("team_resources_table_error", error=str(e))
