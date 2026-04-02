@@ -139,6 +139,20 @@ def _parse_table_rows(table_block_id: str) -> List[Dict[str, str]]:
 # Tree-based crawler — inserts nodes with parent_id
 # ============================================================
 
+_NOTION_PAGE_RE = re.compile(r'notion\.so/(?:skin1004/)?(?:[^/]*-)?([0-9a-f]{32})')
+
+def _extract_notion_page_id(url: str) -> Optional[str]:
+    """Extract Notion page/block ID from URL, format as UUID."""
+    m = _NOTION_PAGE_RE.search(url)
+    if not m:
+        return None
+    raw = m.group(1)
+    # Format as UUID: 8-4-4-4-12
+    return f"{raw[:8]}-{raw[8:12]}-{raw[12:16]}-{raw[16:20]}-{raw[20:]}"
+
+# Track crawled page IDs to avoid infinite loops
+_crawled_pages: set = set()
+
 # Accumulate nodes in-memory, insert to DB after crawl
 _nodes: List[Dict] = []
 _node_counter = 0
@@ -166,12 +180,25 @@ def _add_node(parent_id: Optional[int], team: str, node_type: str, name: str,
     return _node_counter
 
 
+MAX_DEPTH = 5           # Max tree depth
+MAX_CHILDREN = 50       # Max children per node
+MAX_PAGE_FOLLOWS = 3    # Max Notion pages to follow INTO per team
+_page_follow_count: Dict[str, int] = {}  # team → follow count
+
+def _can_follow_page(team: str) -> bool:
+    count = _page_follow_count.get(team, 0)
+    if count >= MAX_PAGE_FOLLOWS:
+        return False
+    _page_follow_count[team] = count + 1
+    return True
+
 def _crawl_recursive(block_id: str, parent_tmp_id: int, team: str, depth: int = 1):
-    if depth > 10:
+    if depth > MAX_DEPTH:
         return
     children = _get_block_children(block_id)
+    if len(children) > MAX_CHILDREN:
+        children = children[:MAX_CHILDREN]
     sort = 0
-    # Track current heading folder for grouping
     heading_parent = parent_tmp_id
 
     for child in children:
@@ -195,7 +222,14 @@ def _crawl_recursive(block_id: str, parent_tmp_id: int, team: str, depth: int = 
                     urls = _URL_RE.findall(" ".join(row.values()))
                     url = urls[0] if urls else ""
                 nt = _detect_node_type(url) if url else "text"
-                _add_node(heading_parent, team, nt, name, url, desc, depth, bid, sort)
+                node_id = _add_node(heading_parent, team, nt, name, url, desc, depth, bid, sort)
+                # Follow into Notion pages to get deeper content
+                if nt == "page" and url and _can_follow_page(team):
+                    page_id = _extract_notion_page_id(url)
+                    if page_id and page_id not in _crawled_pages:
+                        _crawled_pages.add(page_id)
+                        logger.info("following_notion_page", team=team, name=name[:40], depth=depth)
+                        _crawl_recursive(page_id, node_id, team, depth + 1)
             continue
 
         # --- Toggle: create folder, recurse ---
@@ -211,7 +245,8 @@ def _crawl_recursive(block_id: str, parent_tmp_id: int, team: str, depth: int = 
         if btype == "child_page":
             title = child.get("child_page", {}).get("title", "")
             page_url = f"https://www.notion.so/{bid.replace('-', '')}"
-            if title:
+            if title and bid not in _crawled_pages:
+                _crawled_pages.add(bid)
                 node_id = _add_node(heading_parent, team, "page", title, page_url, depth=depth, block_id=bid, sort_order=sort)
                 if has_ch:
                     _crawl_recursive(bid, node_id, team, depth + 1)
@@ -251,7 +286,14 @@ def _crawl_recursive(block_id: str, parent_tmp_id: int, team: str, depth: int = 
         if href:
             name_part = text.split("http")[0].strip() if "http" in text else text
             nt = _detect_node_type(href)
-            _add_node(heading_parent, team, nt, name_part or href[:80], href, depth=depth, block_id=bid, sort_order=sort)
+            node_id = _add_node(heading_parent, team, nt, name_part or href[:80], href, depth=depth, block_id=bid, sort_order=sort)
+            # Follow into Notion pages
+            if nt == "page" and href and _can_follow_page(team):
+                page_id = _extract_notion_page_id(href)
+                if page_id and page_id not in _crawled_pages:
+                    _crawled_pages.add(page_id)
+                    logger.info("following_notion_page", team=team, name=(name_part or "")[:40], depth=depth)
+                    _crawl_recursive(page_id, node_id, team, depth + 1)
         elif text and len(text) >= 5:
             _add_node(heading_parent, team, "text", text[:120], desc=text, depth=depth, block_id=bid, sort_order=sort)
 
@@ -265,9 +307,11 @@ def _crawl_recursive(block_id: str, parent_tmp_id: int, team: str, depth: int = 
 
 
 def crawl_all_teams():
-    global _nodes, _node_counter
+    global _nodes, _node_counter, _crawled_pages, _page_follow_count
     _nodes = []
     _node_counter = 0
+    _crawled_pages = set()
+    _page_follow_count = {}
 
     team_blocks = _get_block_children(TEAM_DATA_TOGGLE_ID)
     for block in team_blocks:
