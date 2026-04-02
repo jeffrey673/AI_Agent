@@ -111,6 +111,8 @@ class OrchestratorAgent:
         "BQ 메타광고": "bigquery",
         "Notion 문서": "notion",
         "CS Q&A": "cs",
+        "BP (CS Q&A)": "cs",
+        "팀별 자료": "team",
         "Google Workspace": "gws",
     }
 
@@ -122,7 +124,7 @@ class OrchestratorAgent:
         """
         if enabled_sources is None:
             return None
-        routes = {"direct"}  # direct is always allowed
+        routes = {"direct", "team"}  # direct + team은 항상 허용
         for src in enabled_sources:
             route = self._SOURCE_ROUTE_MAP.get(src)
             if route:
@@ -387,6 +389,7 @@ class OrchestratorAgent:
             "notion": self._handle_notion,
             "gws": self._handle_gws,
             "cs": self._handle_cs,
+            "team": self._handle_team,
             "multi": self._handle_multi,
         }
         handler = handlers.get(route, self._handle_direct)
@@ -593,6 +596,16 @@ class OrchestratorAgent:
         "기름지", "피부 관리", "피부관리",
     ]
 
+    _TEAM_KEYWORDS = [
+        "자료 어디", "시트 어디", "시트 찾아", "링크 찾아", "링크 줘",
+        "어디있어", "어디 있어", "자료 줘",
+        "jbt 시트", "bcm 시트", "east 시트", "west 시트",
+        "jbt 자료", "bcm 자료", "east 자료", "west 자료",
+        "bea", "bxm", "플래그십",
+        "예산 시트", "pr 시트", "운영 시트", "대시보드 링크",
+        "팀 자료", "팀별 자료", "db hub", "데이터 허브",
+    ]
+
     # How-to / guide keywords — when combined with platform/tool names, route to Notion
     # e.g. "틱톡샵 접속 방법 알려줘" → Notion (documented process), NOT sales data
     _HOWTO_KEYWORDS = [
@@ -743,6 +756,10 @@ class OrchestratorAgent:
             "광고", "메타 광고", "메타광고", "활성 광고", "비활성 광고",
             "분포", "현황", "건수",
         ]
+        # Team resource check — team data lookups (before CS to avoid overlap)
+        if any(kw in q for kw in self._TEAM_KEYWORDS):
+            return "team"
+
         has_strong_data = any(kw in q for kw in _STRONG_DATA)
         if any(kw in q for kw in self._CS_KEYWORDS) and not has_strong_data:
             return "cs"
@@ -1013,6 +1030,27 @@ class OrchestratorAgent:
         except Exception as e:
             logger.error("orchestrator_cs_failed", error=str(e))
             return {"source": "cs", "answer": f"죄송합니다. CS 데이터 조회 중 일시적인 오류가 발생했습니다. 잠시 후 다시 시도해 주세요."}
+
+    async def _handle_team(
+        self,
+        query: str,
+        messages: List[Dict[str, str]],
+        conversation_context: str,
+        model_type: str,
+        user_email: str = "",
+    ) -> dict:
+        """Team Resource Agent — 팀별 자료 검색."""
+        from app.agents.team_agent import run as run_team_agent
+
+        contextualized_query = query
+        if conversation_context:
+            contextualized_query = f"[이전 대화]\n{conversation_context}\n\n[현재 질문]\n{query}"
+        try:
+            result = await run_team_agent(contextualized_query, model_type=model_type)
+            return {"source": "team", "answer": result}
+        except Exception as e:
+            logger.error("orchestrator_team_failed", error=str(e))
+            return {"source": "team", "answer": f"팀별 자료 검색 중 오류가 발생했습니다: {str(e)}"}
 
     async def _handle_multi(
         self,
