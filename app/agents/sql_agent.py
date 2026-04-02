@@ -289,7 +289,7 @@ def generate_sql(state: AgentState) -> Dict[str, Any]:
     conv_context = state.get("conversation_context", "")
     conv_section = ""
     if conv_context:
-        conv_section = f"\n\n## 이전 대화 맥락\n{conv_context}\n\n위 대화 맥락을 참고하여 사용자의 현재 질문에 포함된 '그거', '아까', '다시', '2월은?' 같은 참조를 이해하세요."
+        conv_section = f"\n\n## 이전 대화 맥락\n{conv_context}\n\n위 대화 맥락을 참고하여 사용자의 현재 질문에 포함된 '그거', '아까', '다시', '2월은?', '시각화해줘', '차트로 보여줘' 같은 참조를 이해하세요.\n⚠️ '시각화해줘', '차트로 그려줘' 같은 후속 요청이 오면, 이전 답변에서 사용된 동일한 데이터 범위/조건/집계 수준으로 SQL을 생성하세요. 이전에 분기별 비교였다면 분기별로, 월별이었다면 월별로 유지하세요."
 
     # Brand filter injection: only if user has a group filter assigned
     brand_filter = state.get("brand_filter")
@@ -646,7 +646,7 @@ def format_answer(state: AgentState) -> Dict[str, Any]:
 
 ## 작성 규칙
 - SQL 결과 데이터만 사용 (외부 정보 절대 금지)
-- 금액: 1억 이상 → "약 OO.O억원", 1억 미만 → 천 단위 쉼표. 퍼센트 소수점 1자리
+- 금액 표기: 1억 이상 → "약 12.3억원" 형태(실제 숫자 대입!), 1억 미만 → 천 단위 쉼표(예: 7,700만원). 퍼센트 소수점 1자리. ⚠️ "OO.O억원" 같은 플레이스홀더 출력 절대 금지! 반드시 실제 계산된 숫자를 넣으세요
 - 3행 이상 비교 → 마크다운 표 필수. 시계열은 전체 행 표시 (생략 금지)
 - 제품명(SET) 영어 원본 그대로 공백 포함 (한국어 번역 금지, 언더스코어 사용 금지)
 - 단순 수치 1개만 → "상세 데이터" 생략, 요약만

@@ -158,6 +158,7 @@
   var isStreaming = false;
   var lastUserQuery = "";
   var currentAbortController = null;  // AbortController for active stream
+  var _autoScrollActive = true;  // Auto-scroll during streaming (user scroll-up disables)
 
   // ===== Wave 1: Client-side Pre-routing =====
   // Mirrors top-frequency patterns from orchestrator.py for instant skeleton UI
@@ -1012,9 +1013,8 @@
 
     el.innerHTML = _S.completedHtml + tailHtml;
 
-    // Auto-scroll only if user is near bottom
-    var scrollEl = document.getElementById("chat-messages");
-    if (scrollEl.scrollHeight - scrollEl.scrollTop - scrollEl.clientHeight < 80) {
+    // Auto-scroll: follow streaming content unless user scrolled up
+    if (_autoScrollActive) {
       scrollToBottom();
     }
   }
@@ -1099,6 +1099,7 @@
     // Stream response — reset ALL previous streaming state first
     _stopTokenDrain();
     isStreaming = true;
+    _autoScrollActive = true;  // Re-enable auto-scroll on new message
     if (currentAbortController) currentAbortController.abort();
     currentAbortController = new AbortController();
     _S.text = "";  // Reset stream text for new message
@@ -1208,12 +1209,14 @@
       }
     } catch (e) {
       if (e.name === "AbortError") {
+        _stopTokenDrain();  // Stop token drain to prevent freeze
         var typing = aiMsgEl.querySelector(".typing-indicator");
         if (typing) typing.remove();
         aiMsgEl.classList.remove("streaming");
         _resetSendBtn();
         isStreaming = false;
         currentAbortController = null;
+        _autoScrollActive = true;
         return;
       }
       _S.text = "오류가 발생했습니다: " + e.message;
@@ -1447,9 +1450,131 @@
       bubble.appendChild(textEl);
     }
 
+    // Edit button for user messages
+    var editBtn = document.createElement("button");
+    editBtn.className = "msg-edit-btn";
+    editBtn.title = "수정";
+    editBtn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>';
+    editBtn.addEventListener("click", function() {
+      _startEditMessage(div, bubble);
+    });
+    div.appendChild(editBtn);
+
     div.appendChild(bubble);
     chatMessages.appendChild(div);
     return div;
+  }
+
+  function _startEditMessage(msgEl, bubbleEl) {
+    var rawText = bubbleEl.dataset.raw || bubbleEl.textContent || "";
+    var textarea = document.createElement("textarea");
+    textarea.className = "msg-edit-textarea";
+    textarea.value = rawText;
+    textarea.rows = Math.min(Math.max(rawText.split("\n").length, 2), 8);
+
+    var btnRow = document.createElement("div");
+    btnRow.className = "msg-edit-actions";
+    var saveBtn = document.createElement("button");
+    saveBtn.className = "msg-edit-save";
+    saveBtn.textContent = "전송";
+    var cancelBtn = document.createElement("button");
+    cancelBtn.className = "msg-edit-cancel";
+    cancelBtn.textContent = "취소";
+
+    btnRow.appendChild(cancelBtn);
+    btnRow.appendChild(saveBtn);
+
+    // Hide original content, show editor
+    bubbleEl.style.display = "none";
+    var editBtn = msgEl.querySelector(".msg-edit-btn");
+    if (editBtn) editBtn.style.display = "none";
+    msgEl.appendChild(textarea);
+    msgEl.appendChild(btnRow);
+    textarea.focus();
+    textarea.setSelectionRange(textarea.value.length, textarea.value.length);
+
+    cancelBtn.addEventListener("click", function() {
+      textarea.remove();
+      btnRow.remove();
+      bubbleEl.style.display = "";
+      if (editBtn) editBtn.style.display = "";
+    });
+
+    saveBtn.addEventListener("click", function() {
+      var newText = textarea.value.trim();
+      if (!newText) return;
+      textarea.remove();
+      btnRow.remove();
+      bubbleEl.style.display = "";
+      if (editBtn) editBtn.style.display = "";
+      _resendEditedMessage(msgEl, newText);
+    });
+
+    textarea.addEventListener("keydown", function(e) {
+      if (e.key === "Enter" && !e.shiftKey) {
+        e.preventDefault();
+        saveBtn.click();
+      }
+      if (e.key === "Escape") {
+        cancelBtn.click();
+      }
+    });
+  }
+
+  function _resendEditedMessage(msgEl, newText) {
+    // Remove all messages after this one (including AI responses)
+    var siblings = Array.from(chatMessages.children);
+    var idx = siblings.indexOf(msgEl);
+    if (idx >= 0) {
+      for (var i = siblings.length - 1; i > idx; i--) {
+        siblings[i].remove();
+      }
+    }
+
+    // Update the message bubble with new text
+    var bubble = msgEl.querySelector(".message-content");
+    if (bubble) {
+      bubble.dataset.raw = newText;
+      bubble.textContent = "";
+      var textEl = document.createElement("div");
+      textEl.textContent = newText;
+      bubble.appendChild(textEl);
+    }
+
+    // Truncate in-memory messages to match
+    var userMsgCount = 0;
+    for (var j = 0; j < currentMessages.length; j++) {
+      if (currentMessages[j].role === "user") userMsgCount++;
+      if (userMsgCount > 0 && j >= idx) break;
+    }
+    // Find the index in currentMessages that corresponds to this user msg
+    var msgIndex = -1;
+    var uCount = 0;
+    var domUserMsgs = chatMessages.querySelectorAll(".message-user");
+    for (var k = 0; k < domUserMsgs.length; k++) {
+      if (domUserMsgs[k] === msgEl) { msgIndex = k; break; }
+    }
+    if (msgIndex >= 0) {
+      // Map DOM user message index to currentMessages index
+      var cmIdx = -1;
+      var uIdx = 0;
+      for (var m = 0; m < currentMessages.length; m++) {
+        if (currentMessages[m].role === "user") {
+          if (uIdx === msgIndex) { cmIdx = m; break; }
+          uIdx++;
+        }
+      }
+      if (cmIdx >= 0) {
+        currentMessages[cmIdx].content = newText;
+        currentMessages.splice(cmIdx + 1);  // Remove everything after
+      }
+    }
+
+    // Re-send via input
+    hideFollowups();
+    chatInput.value = newText;
+    chatInput.dispatchEvent(new Event("input"));
+    sendMessage();
   }
 
   function _formatTimestamp() {
@@ -1735,14 +1860,27 @@
     chatMessages.scrollTop = chatMessages.scrollHeight;
   }
 
-  // Scroll-to-bottom button (appears when scrolled up)
+  // Scroll-to-bottom button + auto-scroll disable on user scroll-up
   var btnScrollBottom = document.getElementById("btn-scroll-bottom");
-  if (btnScrollBottom) {
-    chatMessages.addEventListener("scroll", function () {
-      var distFromBottom = chatMessages.scrollHeight - chatMessages.scrollTop - chatMessages.clientHeight;
+  var _lastScrollTop = 0;
+  chatMessages.addEventListener("scroll", function () {
+    var distFromBottom = chatMessages.scrollHeight - chatMessages.scrollTop - chatMessages.clientHeight;
+    if (btnScrollBottom) {
       btnScrollBottom.style.display = distFromBottom > 200 ? "flex" : "none";
-    });
+    }
+    // Disable auto-scroll if user scrolls UP during streaming
+    if (isStreaming && chatMessages.scrollTop < _lastScrollTop && distFromBottom > 100) {
+      _autoScrollActive = false;
+    }
+    // Re-enable if user scrolls back to bottom
+    if (distFromBottom < 30) {
+      _autoScrollActive = true;
+    }
+    _lastScrollTop = chatMessages.scrollTop;
+  });
+  if (btnScrollBottom) {
     btnScrollBottom.addEventListener("click", function () {
+      _autoScrollActive = true;
       chatMessages.scrollTo({ top: chatMessages.scrollHeight, behavior: "smooth" });
     });
   }
