@@ -201,10 +201,6 @@ def get_safety_status() -> dict:
         "BQ \ud50c\ub7ab\ud3fc": ("Platform_Data", "raw_data"),
         "BQ \uc778\ud50c\ub8e8\uc5b8\uc11c": ("marketing_analysis", "influencer_input_ALL_TEAMS"),
         "BQ \uc544\ub9c8\uc874\uac80\uc0c9": ("marketing_analysis", "amazon_search_analytics_catalog_performance"),
-        "BQ \uc544\ub9c8\uc874\ub9ac\ubdf0": ("Review_Data", "Amazon_Review"),
-        "BQ \ud050\ud150\ub9ac\ubdf0": ("Review_Data", "Qoo10_Review"),
-        "BQ \uc1fc\ud53c\ub9ac\ubdf0": ("Review_Data", "Shopee_Review"),
-        "BQ \uc2a4\ub9c8\ud2b8\uc2a4\ud1a0\uc5b4": ("Review_Data", "Smartstore_Review"),
         "BQ \uba54\ud0c0\uad11\uace0": ("ad_data", "meta data_test"),
     }
     for label, (dataset, table) in _marketing_tables.items():
@@ -240,15 +236,25 @@ def get_safety_status() -> dict:
     # BP (CS Q&A) — mirrors CS Q&A status
     services["BP (CS Q&A)"] = dict(services.get("CS Q&A", {"status": "ok", "detail": ""}))
 
-    # Team Resources (DB HUB)
+    # Team Resources (DB HUB) — per-team breakdown
+    _TEAM_LABELS = {"JBT": "JBT (일본사업)", "BCM": "BCM (브랜드커뮤니케이션)", "IT": "IT"}
     try:
         from app.agents.team_agent import _resource_cache, _cache_loaded, _last_sync
         if _cache_loaded:
-            services["팀별 자료"] = {"status": "ok", "detail": f"{len(_resource_cache)} entries, sync: {_last_sync[:16]}"}
+            # Count per team
+            _team_counts: Dict[str, int] = {}
+            for r in _resource_cache:
+                t = r.get("team", "")
+                _team_counts[t] = _team_counts.get(t, 0) + 1
+            for team, cnt in sorted(_team_counts.items()):
+                label = _TEAM_LABELS.get(team, team)
+                services[f"팀자료:{team}"] = {"status": "ok", "detail": f"{label} {cnt}건"}
+            if not _team_counts:
+                services["팀자료:없음"] = {"status": "error", "detail": "0 entries"}
         else:
-            services["팀별 자료"] = {"status": "error", "detail": "loading"}
+            services["팀자료:loading"] = {"status": "error", "detail": "loading"}
     except Exception:
-        services["팀별 자료"] = {"status": "ok", "detail": "not loaded"}
+        services["팀자료:unknown"] = {"status": "ok", "detail": "not loaded"}
 
     # Google Workspace
     services["Google Workspace"] = {"status": "ok", "detail": "OAuth ready"}

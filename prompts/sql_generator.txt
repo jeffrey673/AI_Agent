@@ -1333,47 +1333,45 @@ LIMIT 1000
 
 ## 테이블 9~12: 리뷰 데이터 (Review Tables)
 
-4개 리뷰 테이블이 있으며, 유사한 스키마를 공유합니다.
+4개 리뷰 테이블이 있으며, **동일한 스키마**를 공유합니다. (2026-04 New_ 스키마)
 
 ### 테이블 목록
 
 | 테이블명 | Full Path | 설명 |
 |----------|-----------|------|
-| Amazon_Review | `skin1004-319714.Review_Data.Amazon_Review` | 아마존 리뷰 |
-| Qoo10_Review | `skin1004-319714.Review_Data.Qoo10_Review` | 큐텐 리뷰 |
-| Shopee_Review | `skin1004-319714.Review_Data.Shopee_Review` | 쇼피 리뷰 |
-| Smartstore_Review | `skin1004-319714.Review_Data.Smartstore_Review` | 스마트스토어 리뷰 |
+| New_Amazon_Review | `skin1004-319714.Review_Data.New_Amazon_Review` | 아마존 리뷰 |
+| New_Qoo10_Review | `skin1004-319714.Review_Data.New_Qoo10_Review` | 큐텐 리뷰 |
+| New_Shopee_Review | `skin1004-319714.Review_Data.New_Shopee_Review` | 쇼피 리뷰 |
+| New_Smartstore_Review | `skin1004-319714.Review_Data.New_Smartstore_Review` | 스마트스토어 리뷰 |
 
-### 공통 컬럼 스키마
+### 공통 컬럼 스키마 (23 컬럼, 4개 테이블 동일)
 
-- collect_date (DATE): 수집 날짜 — Amazon/Shopee/Qoo10 리뷰 테이블
-- ⚠️ Smartstore_Review만 `collected_date` (d 추가!) — 다른 테이블은 `collect_date`
-- channel (STRING): 수집 플랫폼
-- brand (STRING): 브랜드
-- review_date (STRING or DATE): 리뷰 작성 날짜
+- collected_date (DATE): 리뷰 수집일
+- channel (STRING): 수집 채널 (Amazon / Shopee / Qoo10 / Smartstore)
+- brand (STRING): 제품 브랜드
+- review_date (DATE): 리뷰 작성일
 - product_name (STRING): 제품명
-- product_name_eng (STRING): 영문 제품명 (Smartstore_Review only)
-- review_original (STRING): 원본 리뷰
-- review_ko (STRING): 한국어 번역 리뷰
-- skin_concern (STRING): 피부 고민 (Smartstore_Review only)
-- sentiment_score (FLOAT64): 감성 점수 (Smartstore_Review only)
+- product_name_eng (STRING): 제품 영문명
+- review_original (STRING): 리뷰 원문
+- review_ko (STRING): 리뷰 한글번역
+- sentiment_score (FLOAT64): 리뷰 감성 점수 (-1.0 ~ 1.0, 연속값)
+- moisture_score (FLOAT64): 보습/수분 평가 (-1.0 / 0.0 / 1.0)
+- soothing_irritation_score (FLOAT64): 진정/자극 평가 (-1.0 / 0.0 / 1.0)
+- trouble_sebum_pore_score (FLOAT64): 트러블/피지/모공 평가 (-1.0 / 0.0 / 1.0)
+- texture_score (FLOAT64): 사용감/텍스처 평가 (-1.0 / 0.0 / 1.0)
+- absorption_layering_score (FLOAT64): 흡수/밀림/레이어링 평가 (-1.0 / 0.0 / 1.0)
+- makeup_compatibility_score (FLOAT64): 메이크업 호환성 평가 (-1.0 / 0.0 / 1.0)
+- scent_score (FLOAT64): 향 평가 (-1.0 / 0.0 / 1.0)
+- tone_brightening_score (FLOAT64): 톤/미백 평가 (-1.0 / 0.0 / 1.0)
+- price_perception_score (FLOAT64): 가격 평가 (-1.0 / 0.0 / 1.0)
+- skin_type_compatibility_score (FLOAT64): 피부타입 적합성 평가 (-1.0 / 0.0 / 1.0)
+- lasting_effect_score (FLOAT64): 지속력 평가 (-1.0 / 0.0 / 1.0)
+- packaging_usability_score (FLOAT64): 패키징/사용 편의성 평가 (-1.0 / 0.0 / 1.0)
+- shipping_delivery_score (FLOAT64): 배송/포장 평가 (-1.0 / 0.0 / 1.0)
 
-⚠️ **스마트스토어 제품명은 한글!** (다른 리뷰 테이블은 영문):
-| product_name (한글) | product_name_eng (영문) |
-|---|---|
-| 센텔라 앰플 | Centella Ampoule |
-| 센텔라 앰플 폼 | Centella Ampoule Foam |
-| 센텔라 라이트 클렌징 오일 | Centella Light Cleansing Oil |
-| 히알루시카 워터핏 선 세럼 | Hyalu-Cica Water-Fit Sun Serum |
-| 센텔라 토닝 토너 | Centella Toning Toner |
-| 센텔라 수딩 크림 | Centella Soothing Cream |
-| 센텔라 퀵 카밍 패드 | Centella Quick Calming Pad |
-| 프로바이오시카 인텐시브 앰플 | Probio-Cica Intensive Ampoule |
-| 센텔라 크림 | Centella Cream |
-
-→ 영문 제품명으로 검색 시: `product_name_eng LIKE '%Centella%Ampoule%'`
-→ 한글 제품명으로 검색 시: `product_name = '센텔라 앰플'` 또는 `product_name LIKE '%센텔라%앰플%'`
-→ **Smartstore에서 product_name 필터 시 한글 우선!** 영문이면 product_name_eng 사용
+⚠️ **스코어 컬럼**: sentiment_score는 -1.0 ~ 1.0 연속값, 나머지 12개 스코어는 tri-state (-1.0 부정 / 0.0 중립 / 1.0 긍정)
+⚠️ **4개 테이블 모두 동일 스키마** — 채널별로 분리 저장 (테이블명의 채널명만 다름)
+⚠️ **날짜 컬럼**: 모든 테이블에서 `collected_date` 사용 (이전 collect_date 아님!)
 
 ### 예시 쿼리
 
@@ -1383,59 +1381,60 @@ LIMIT 1000
 SELECT
   product_name,
   COUNT(*) AS review_count
-FROM `skin1004-319714.Review_Data.Amazon_Review`
+FROM `skin1004-319714.Review_Data.New_Amazon_Review`
 WHERE brand LIKE '%SKIN1004%'
 GROUP BY product_name
 ORDER BY review_count DESC
 LIMIT 1000
 ```
 
-#### RV2. 쇼피 최근 리뷰
+#### RV2. 쇼피 최근 리뷰 (감성 점수 포함)
 ```sql
 -- "쇼피 최근 리뷰 50건"
 SELECT
   product_name,
   review_date,
   review_original,
-  review_ko
-FROM `skin1004-319714.Review_Data.Shopee_Review`
+  review_ko,
+  sentiment_score
+FROM `skin1004-319714.Review_Data.New_Shopee_Review`
 WHERE brand LIKE '%SKIN1004%'
 ORDER BY review_date DESC
 LIMIT 50
 ```
 
-#### RV3. 스마트스토어 피부고민별 리뷰 분석
+#### RV3. 스마트스토어 카테고리별 감성 분석
 ```sql
--- "스마트스토어 피부고민별 리뷰 수"
+-- "스마트스토어 제품별 보습/진정 평가 평균"
 SELECT
-  skin_concern,
-  COUNT(*) AS review_count
-FROM `skin1004-319714.Review_Data.Smartstore_Review`
-WHERE skin_concern IS NOT NULL AND skin_concern != ''
-GROUP BY skin_concern
+  product_name,
+  COUNT(*) AS review_count,
+  ROUND(AVG(sentiment_score), 2) AS avg_sentiment,
+  ROUND(AVG(moisture_score), 2) AS avg_moisture,
+  ROUND(AVG(soothing_irritation_score), 2) AS avg_soothing
+FROM `skin1004-319714.Review_Data.New_Smartstore_Review`
+GROUP BY product_name
 ORDER BY review_count DESC
 LIMIT 1000
 ```
 
-#### RV4. 스마트스토어 특정 제품 최근 리뷰
+#### RV4. 특정 제품 최근 리뷰 + 상세 평가
 ```sql
--- "스마트스토어 센텔라 앰플 최근 리뷰 5건" / "Smartstore Centella Ampoule recent 5 reviews"
+-- "센텔라 앰플 최근 리뷰 5건 상세 평가"
 SELECT
   product_name,
   review_date,
-  review_original,
   review_ko,
-  sentiment_score
-FROM `skin1004-319714.Review_Data.Smartstore_Review`
+  sentiment_score,
+  moisture_score,
+  texture_score,
+  scent_score
+FROM `skin1004-319714.Review_Data.New_Smartstore_Review`
 WHERE collected_date >= '2025-01-01'
-  AND product_name = '센텔라 앰플'
+  AND product_name LIKE '%센텔라%앰플%'
 ORDER BY review_date DESC
 LIMIT 5
 ```
--- ⚠️ Smartstore product_name은 한글! 영문 요청이어도 한글로 변환:
--- "Centella Ampoule" → product_name = '센텔라 앰플'
--- "Hyalu-Cica Water-Fit Sun Serum" → product_name = '히알루시카 워터핏 선 세럼'
--- ⚠️ collected_date 사용 (collect_date 아님!)
 
 ---
 

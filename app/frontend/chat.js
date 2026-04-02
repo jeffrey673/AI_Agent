@@ -196,12 +196,12 @@
   // ===== Data Source Filter (Grouped) =====
   var SOURCE_GROUPS = [
     { id: "sales", label: "매출 데이터", emoji: "\uD83D\uDCCA",
-      keys: ["BigQuery 매출", "BigQuery 제품", "BQ Shopify", "BQ 플랫폼"] },
+      keys: ["BigQuery 매출", "BigQuery 제품"] },
     { id: "marketing", label: "마케팅 데이터", emoji: "\uD83D\uDCC8",
-      keys: ["BQ 광고데이터", "BQ 마케팅비용", "BQ 인플루언서", "BQ 아마존검색",
-             "BQ 아마존리뷰", "BQ 큐텐리뷰", "BQ 쇼피리뷰", "BQ 스마트스토어", "BQ 메타광고"] },
+      keys: ["BQ 광고데이터", "BQ 마케팅비용", "BQ Shopify", "BQ 플랫폼",
+             "BQ 인플루언서", "BQ 아마존검색", "BQ 메타광고"] },
     { id: "team", label: "팀별 자료", emoji: "\uD83C\uDFE2",
-      keys: ["팀별 자료", "BP (CS Q&A)"] },
+      keys: ["팀자료:JBT", "팀자료:BCM", "팀자료:IT", "BP (CS Q&A)"] },
     { id: "tools", label: "업무 도구", emoji: "\uD83D\uDCE7",
       keys: ["Notion 문서", "Google Workspace"] },
   ];
@@ -213,11 +213,10 @@
     "BQ 광고데이터": "bigquery", "BQ 마케팅비용": "bigquery",
     "BQ Shopify": "bigquery", "BQ 플랫폼": "bigquery",
     "BQ 인플루언서": "bigquery", "BQ 아마존검색": "bigquery",
-    "BQ 아마존리뷰": "bigquery", "BQ 큐텐리뷰": "bigquery",
-    "BQ 쇼피리뷰": "bigquery", "BQ 스마트스토어": "bigquery",
     "BQ 메타광고": "bigquery",
     "Notion 문서": "notion", "CS Q&A": "cs", "BP (CS Q&A)": "cs",
-    "팀별 자료": "team", "Google Workspace": "gws"
+    "팀자료:JBT": "team", "팀자료:BCM": "team", "팀자료:IT": "team",
+    "Google Workspace": "gws"
   };
   var enabledSources = loadEnabledSources();
 
@@ -1994,22 +1993,6 @@
         label: "AZ검색",
         svg: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>'
     },
-    "BQ 아마존리뷰": {
-        label: "AZ리뷰",
-        svg: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>'
-    },
-    "BQ 큐텐리뷰": {
-        label: "큐텐리뷰",
-        svg: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>'
-    },
-    "BQ 쇼피리뷰": {
-        label: "쇼피리뷰",
-        svg: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>'
-    },
-    "BQ 스마트스토어": {
-        label: "스마트스토어",
-        svg: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>'
-    },
     "BQ 메타광고": {
         label: "메타광고",
         svg: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>'
@@ -2022,9 +2005,17 @@
       label: "CS Q&A",
       svg: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>'
     },
-    "팀별 자료": {
-      label: "팀자료",
-      svg: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>'
+    "팀자료:JBT": {
+      label: "JBT",
+      svg: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>'
+    },
+    "팀자료:BCM": {
+      label: "BCM",
+      svg: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg>'
+    },
+    "팀자료:IT": {
+      label: "IT",
+      svg: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>'
     },
     "BP (CS Q&A)": {
       label: "BP Q&A",
@@ -2053,10 +2044,9 @@
     { cmd: "매출", label: "매출 데이터", keys: ["BigQuery 매출"] },
     { cmd: "제품", label: "제품 데이터", keys: ["BigQuery 제품"] },
     { cmd: "광고", label: "광고 데이터", keys: ["BQ 광고데이터", "BQ 메타광고"] },
-    { cmd: "리뷰", label: "리뷰 전체", keys: ["BQ 아마존리뷰", "BQ 큐텐리뷰", "BQ 쇼피리뷰", "BQ 스마트스토어"] },
     { cmd: "notion", label: "Notion 문서", keys: ["Notion 문서"] },
     { cmd: "cs", label: "CS Q&A", keys: ["CS Q&A"] },
-    { cmd: "팀", label: "팀별 자료", keys: ["팀별 자료", "BP (CS Q&A)"] },
+    { cmd: "팀", label: "팀별 자료", keys: ["팀자료:JBT", "팀자료:BCM", "팀자료:IT", "BP (CS Q&A)"] },
     { cmd: "gws", label: "Google Workspace", keys: ["Google Workspace"] },
   ];
 

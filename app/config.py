@@ -132,11 +132,11 @@ class Settings(BaseSettings):
             "skin1004-319714.Platform_Data.raw_data",
             "skin1004-319714.marketing_analysis.influencer_input_ALL_TEAMS",
             "skin1004-319714.marketing_analysis.amazon_search_analytics_catalog_performance",
-            # Reviews
-            "skin1004-319714.Review_Data.Amazon_Review",
-            "skin1004-319714.Review_Data.Qoo10_Review",
-            "skin1004-319714.Review_Data.Shopee_Review",
-            "skin1004-319714.Review_Data.Smartstore_Review",
+            # Reviews (New_ schema — 2026-04 updated)
+            "skin1004-319714.Review_Data.New_Amazon_Review",
+            "skin1004-319714.Review_Data.New_Qoo10_Review",
+            "skin1004-319714.Review_Data.New_Shopee_Review",
+            "skin1004-319714.Review_Data.New_Smartstore_Review",
             # Ad data
             "skin1004-319714.ad_data.meta data_test",
         ]

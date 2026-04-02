@@ -106,13 +106,11 @@ class OrchestratorAgent:
         "BQ 광고데이터": "bigquery", "BQ 마케팅비용": "bigquery",
         "BQ Shopify": "bigquery", "BQ 플랫폼": "bigquery",
         "BQ 인플루언서": "bigquery", "BQ 아마존검색": "bigquery",
-        "BQ 아마존리뷰": "bigquery", "BQ 큐텐리뷰": "bigquery",
-        "BQ 쇼피리뷰": "bigquery", "BQ 스마트스토어": "bigquery",
         "BQ 메타광고": "bigquery",
         "Notion 문서": "notion",
         "CS Q&A": "cs",
         "BP (CS Q&A)": "cs",
-        "팀별 자료": "team",
+        "팀자료:JBT": "team", "팀자료:BCM": "team", "팀자료:IT": "team",
         "Google Workspace": "gws",
     }
 

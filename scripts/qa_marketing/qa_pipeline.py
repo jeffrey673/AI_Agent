@@ -147,32 +147,36 @@ TABLE_CONFIG = {
         "prefix": "RA",
         "category": "review_amazon",
         "schema_hint": (
-            "Review_Data.Amazon_Review: rating, review_text, collect_date, "
-            "product_name, country, verified_purchase"
+            "Review_Data.New_Amazon_Review: collected_date, channel, brand, review_date, "
+            "product_name, product_name_eng, review_original, review_ko, sentiment_score, "
+            "moisture_score, soothing_irritation_score, texture_score"
         ),
     },
     "review_qoo10": {
         "prefix": "RQ",
         "category": "review_qoo10",
         "schema_hint": (
-            "Review_Data.Qoo10_Review: rating, review_text, collect_date, "
-            "product_name, reviewer"
+            "Review_Data.New_Qoo10_Review: collected_date, channel, brand, review_date, "
+            "product_name, product_name_eng, review_original, review_ko, sentiment_score, "
+            "moisture_score, soothing_irritation_score, texture_score"
         ),
     },
     "review_shopee": {
         "prefix": "RS",
         "category": "review_shopee",
         "schema_hint": (
-            "Review_Data.Shopee_Review: rating, content, collect_date, "
-            "product_name, country, shop_name"
+            "Review_Data.New_Shopee_Review: collected_date, channel, brand, review_date, "
+            "product_name, product_name_eng, review_original, review_ko, sentiment_score, "
+            "moisture_score, soothing_irritation_score, texture_score"
         ),
     },
     "review_smartstore": {
         "prefix": "RT",
         "category": "review_smartstore",
         "schema_hint": (
-            "Review_Data.Smartstore_Review: rating, content, collect_date, "
-            "product_name, reviewer, purchase_option"
+            "Review_Data.New_Smartstore_Review: collected_date, channel, brand, review_date, "
+            "product_name, product_name_eng, review_original, review_ko, sentiment_score, "
+            "moisture_score, soothing_irritation_score, texture_score"
         ),
     },
     "shopify": {
