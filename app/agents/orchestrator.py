@@ -111,7 +111,10 @@ class OrchestratorAgent:
         "쇼피 리뷰": "bigquery", "스마트스토어 리뷰": "bigquery",
         "Notion": "notion",
         "CS Q&A": "cs", "BP": "cs",
-        "JBT": "team", "BCM": "team", "IT": "team",
+        "Craver": "team", "DB": "team", "KBT": "team", "JBT": "team",
+        "[GM]EAST": "team", "[GM]WEST": "team", "OP": "team", "BCM": "team",
+        "FI": "team", "PEOPLE": "team", "LOG": "team", "IT": "team",
+        "CS": "team", "B2B1": "team", "B2B2": "team", "SCM": "team",
         "Google Workspace": "gws",
     }
 

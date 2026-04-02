@@ -2430,11 +2430,23 @@ pre:hover .code-copy-btn { opacity: 1; }
   border-radius: 4px;
 }
 .status-sub-item:hover { background: color-mix(in srgb, var(--accent) 6%, transparent); }
-.sub-cat-name { flex: 1; }
-.sub-cat-count {
+.sub-cat-tag {
+  display: inline-block;
+  padding: 1px 6px;
+  border-radius: 4px;
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+  color: var(--accent);
+  font-size: 10px;
   font-weight: 600;
-  color: var(--text);
-  font-size: var(--text-xs, 11px);
+  margin-right: 6px;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+.sub-cat-name {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 /* ============================================================

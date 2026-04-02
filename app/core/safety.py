@@ -227,31 +227,37 @@ def get_safety_status() -> dict:
     # BP — mirrors CS Q&A (CS Q&A not shown in UI separately)
     services["BP"] = {"status": cs_status, "detail": cs_detail}
 
-    # Team Resources (DB HUB) — per-team with categories for expandable UI
+    # Team Resources (DB HUB) — all teams with individual resource names
+    _ALL_TEAMS = [
+        "Craver", "DB", "KBT", "JBT", "[GM]EAST", "[GM]WEST",
+        "OP", "BCM", "FI", "PEOPLE", "LOG", "IT", "CS",
+        "B2B1", "B2B2", "SCM",
+    ]
     try:
         from app.agents.team_agent import _resource_cache, _cache_loaded, _last_sync
         if _cache_loaded:
-            _team_data: Dict[str, Dict[str, int]] = {}
+            # Group resources by team → list of {category, name}
+            _team_items: Dict[str, list] = {t: [] for t in _ALL_TEAMS}
             for r in _resource_cache:
                 t = r.get("team", "")
-                c = r.get("category", "") or "기타"
-                _team_data.setdefault(t, {})
-                _team_data[t][c] = _team_data[t].get(c, 0) + 1
-            for team in sorted(_team_data.keys()):
-                cats = _team_data[team]
-                total = sum(cats.values())
-                # Include full categories dict for frontend expandable view
+                if t in _team_items:
+                    _team_items[t].append({
+                        "cat": r.get("category", "") or "",
+                        "name": r.get("name", ""),
+                    })
+            for team in _ALL_TEAMS:
+                items = _team_items[team]
                 services[team] = {
-                    "status": "ok",
-                    "detail": f"{total}건",
-                    "categories": dict(sorted(cats.items(), key=lambda x: -x[1])),
+                    "status": "ok" if items else "ok",
+                    "detail": f"{len(items)}건" if items else "비어있음",
+                    "resources": items,
                 }
-            if not _team_data:
-                services["팀자료"] = {"status": "error", "detail": "0건"}
         else:
-            services["팀자료"] = {"status": "error", "detail": "loading"}
+            for team in _ALL_TEAMS:
+                services[team] = {"status": "error", "detail": "loading"}
     except Exception:
-        services["팀자료"] = {"status": "ok", "detail": "not loaded"}
+        for team in _ALL_TEAMS:
+            services[team] = {"status": "ok", "detail": "not loaded"}
 
     # Google Workspace
     services["Google Workspace"] = {"status": "ok", "detail": "OAuth ready"}

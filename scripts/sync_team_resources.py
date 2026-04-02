@@ -31,8 +31,7 @@ CLIENT = httpx.Client(timeout=30)
 TEAM_DATA_TOGGLE_ID = "3272b428-3b00-806d-aabf-cfbcd9237fb0"
 
 SKIP_TEAMS = {
-    "DB", "KBT", "OP", "FI", "PEOPLE", "LOG",
-    "유통1(노션x)", "유통2(노션x)", "B2B1", "B2B2", "SCM",
+    "유통1(노션x)", "유통2(노션x)",
     "",
 }
 
