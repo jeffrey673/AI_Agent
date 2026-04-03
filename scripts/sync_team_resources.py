@@ -432,10 +432,55 @@ def print_tree(nodes: List[Dict]):
     _print(None)
 
 
+def _enrich_with_playwright(teams: List[str], min_desc_len: int = 200):
+    """Post-sync: use Playwright to crawl Notion pages with short descriptions."""
+    try:
+        from scripts.crawl_notion_pages import get_pages_to_crawl, crawl_page_playwright, update_description
+    except ImportError:
+        logger.warning("playwright_enrichment_skipped", reason="crawl_notion_pages not importable")
+        return
+
+    pages = get_pages_to_crawl(teams, min_desc_len=min_desc_len)
+    if not pages:
+        logger.info("playwright_enrichment_skip", reason="no short-desc pages")
+        return
+
+    logger.info("playwright_enrichment_start", teams=teams, pages=len(pages))
+    crawled = 0
+    for row in pages[:30]:  # Cap at 30 pages per sync
+        url = row.get("url", "")
+        if not url or not url.startswith("http"):
+            continue
+        try:
+            title, text = crawl_page_playwright(url, timeout_ms=15000)
+            if text and len(text) > 50:
+                update_description(row["id"], title, text)
+                crawled += 1
+                logger.info("playwright_page_enriched", id=row["id"], name=row["name"][:30], chars=len(text))
+        except Exception as e:
+            logger.warning("playwright_page_failed", id=row["id"], error=str(e)[:60])
+    logger.info("playwright_enrichment_done", crawled=crawled, total=len(pages))
+
+
+def sync(dry_run: bool = False, teams: Optional[list] = None, no_playwright: bool = False) -> int:
+    """Programmatic entry point for daily cron job."""
+    only = set(teams) if teams else None
+    nodes = crawl_all_teams(only_teams=only)
+    if dry_run:
+        return len(nodes)
+    count = save_to_mariadb(nodes)
+    if not no_playwright:
+        enrich_teams = list(only) if only else list({n["team"] for n in nodes if n["node_type"] == "team"})
+        if enrich_teams:
+            _enrich_with_playwright(enrich_teams)
+    return count
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--teams", nargs="+", help="Only crawl specific teams (e.g. CS IT PEOPLE)")
+    parser.add_argument("--no-playwright", action="store_true", help="Skip Playwright enrichment")
     args = parser.parse_args()
 
     only = set(args.teams) if args.teams else None
@@ -449,6 +494,13 @@ def main():
 
     count = save_to_mariadb(nodes)
     print(f"Sync complete: {count} nodes")
+
+    # Post-sync: enrich short descriptions with Playwright
+    if not args.no_playwright:
+        enrich_teams = list(only) if only else [n["team"] for n in nodes if n["node_type"] == "team"]
+        enrich_teams = list(set(enrich_teams))
+        if enrich_teams:
+            _enrich_with_playwright(enrich_teams)
 
 
 if __name__ == "__main__":

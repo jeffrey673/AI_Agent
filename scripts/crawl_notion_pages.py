@@ -22,8 +22,14 @@ import structlog
 logger = structlog.get_logger(__name__)
 
 
-def get_pages_to_crawl(teams: List[str]) -> List[Dict]:
-    """Get Notion page URLs with empty/short descriptions from team_resources."""
+def get_pages_to_crawl(teams: List[str], min_desc_len: int = 200) -> List[Dict]:
+    """Get Notion page URLs with empty/short descriptions from team_resources.
+
+    Args:
+        teams: Team names to crawl.
+        min_desc_len: Pages with description shorter than this will be re-crawled.
+                      Default 200 to catch pages where only toggle titles were captured.
+    """
     from app.db.mariadb import fetch_all
     placeholders = ",".join(["%s"] * len(teams))
     rows = fetch_all(
@@ -31,9 +37,9 @@ def get_pages_to_crawl(teams: List[str]) -> List[Dict]:
         f"WHERE team IN ({placeholders}) "
         f"AND url LIKE '%%notion.so%%' "
         f"AND node_type IN ('page','database') "
-        f"AND (description IS NULL OR description = '' OR LENGTH(description) < 10) "
+        f"AND (description IS NULL OR description = '' OR LENGTH(description) < %s) "
         f"ORDER BY team, depth, id",
-        tuple(teams)
+        tuple(teams) + (min_desc_len,)
     )
     return rows
 
@@ -51,6 +57,39 @@ def crawl_page_playwright(url: str, timeout_ms: int = 15000) -> str:
         try:
             page.goto(url, wait_until="domcontentloaded", timeout=timeout_ms)
             page.wait_for_timeout(4000)
+
+            # Expand all toggle blocks to reveal hidden content
+            try:
+                # Method 1: Click triangle/arrow icons in toggle blocks
+                toggle_selectors = [
+                    "div[class*='toggleTriangle']",
+                    "div[role='button'][class*='triangle']",
+                    "svg[class*='triangle']",
+                    "div[class*='toggle'] > div:first-child",
+                    "details > summary",
+                ]
+                expanded = 0
+                for sel in toggle_selectors:
+                    try:
+                        els = page.query_selector_all(sel)
+                        for el in els:
+                            try:
+                                el.click()
+                                expanded += 1
+                            except Exception:
+                                pass
+                    except Exception:
+                        pass
+                # Method 2: JavaScript to open all <details> elements
+                page.evaluate("""() => {
+                    document.querySelectorAll('details').forEach(d => d.open = true);
+                    // Notion-specific: click all collapsed toggles
+                    document.querySelectorAll('[aria-expanded="false"]').forEach(el => el.click());
+                }""")
+                if expanded > 0:
+                    page.wait_for_timeout(2000)
+            except Exception:
+                pass
 
             # Extract page title
             title = ""
@@ -109,17 +148,18 @@ def crawl_page_playwright(url: str, timeout_ms: int = 15000) -> str:
 
 
 def update_description(row_id: int, title: str, description: str):
-    """Update team_resources row with crawled content."""
+    """Update team_resources row with crawled content (always overwrite if new content is longer)."""
     from app.db.mariadb import execute
     # Update name if it was "Untitled" and we found a real title
     if title:
         execute(
-            "UPDATE team_resources SET name = %s, description = %s WHERE id = %s AND (name = 'Untitled' OR name = '')",
-            (title[:500], description[:10000], row_id)
+            "UPDATE team_resources SET name = %s WHERE id = %s AND (name = 'Untitled' OR name = '')",
+            (title[:500], row_id)
         )
+    # Always update description if new content is longer than existing
     execute(
-        "UPDATE team_resources SET description = %s WHERE id = %s AND (description IS NULL OR description = '' OR LENGTH(description) < 10)",
-        (description[:10000], row_id)
+        "UPDATE team_resources SET description = %s WHERE id = %s AND (description IS NULL OR LENGTH(description) < LENGTH(%s))",
+        (description[:10000], row_id, description[:10000])
     )
 
 
@@ -128,9 +168,11 @@ def main():
     parser.add_argument("--teams", nargs="+", required=True)
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--limit", type=int, default=50)
+    parser.add_argument("--min-desc", type=int, default=200,
+                        help="Re-crawl pages with description shorter than this (default 200)")
     args = parser.parse_args()
 
-    pages = get_pages_to_crawl(args.teams)
+    pages = get_pages_to_crawl(args.teams, min_desc_len=args.min_desc)
     print(f"Found {len(pages)} pages to crawl for teams: {args.teams}")
 
     crawled = 0

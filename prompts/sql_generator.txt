@@ -1229,18 +1229,18 @@ LIMIT 1000
 
 ### 예시 쿼리
 
-#### I1. 팀별 인플루언서 비용/성과
+#### I1. 팀(add_part)별 인플루언서 비용/성과
 ```sql
 -- "2025년 팀별 인플루언서 마케팅 비용 및 조회수"
 SELECT
-  Team,
-  COUNT(DISTINCT Influencer_ID) AS influencer_count,
+  add_part AS team,
+  COUNT(*) AS content_count,
   SUM(Cost_krw) AS total_cost_krw,
   SUM(Num_views) AS total_views,
   SUM(Num_likes) AS total_likes
 FROM `skin1004-319714.marketing_analysis.influencer_input_ALL_TEAMS`
 WHERE EXTRACT(YEAR FROM Content_upload_date) = 2025
-GROUP BY Team
+GROUP BY add_part
 ORDER BY total_cost_krw DESC
 LIMIT 1000
 ```
@@ -1277,6 +1277,82 @@ GROUP BY Target_country
 ORDER BY total_cost_krw DESC
 LIMIT 1000
 ```
+
+#### I4. 매니저별 월별 협업 현황
+```sql
+-- "EAST1 매니저별 25년 8월~26년 3월 월별 협업건수/조회수/저장수"
+SELECT
+  Manager,
+  add_part AS team,
+  FORMAT_DATE("%Y-%m", Content_upload_date) AS month,
+  COUNT(*) AS collaboration_count,
+  SUM(IFNULL(Num_views, 0)) AS total_views,
+  SUM(IFNULL(Num_saves, 0)) AS total_saves
+FROM `skin1004-319714.marketing_analysis.influencer_input_ALL_TEAMS`
+WHERE add_part LIKE "East1%"
+AND Content_upload_date BETWEEN "2025-08-01" AND "2026-03-31"
+GROUP BY Manager, add_part, month
+ORDER BY Manager, month
+LIMIT 1000
+```
+
+#### I5. 플랫폼별 인플루언서 성과
+```sql
+-- "인스타그램 인플루언서 성과"
+SELECT
+  Media,
+  COUNT(DISTINCT Influencer_ID) AS influencer_count,
+  SUM(Num_views) AS total_views,
+  SUM(Num_likes) AS total_likes,
+  AVG(Num_views) AS avg_views
+FROM `skin1004-319714.marketing_analysis.influencer_input_ALL_TEAMS`
+WHERE Media LIKE "%인스타그램%"
+AND EXTRACT(YEAR FROM Content_upload_date) >= 2025
+GROUP BY Media
+LIMIT 1000
+```
+
+### 인플루언서 용어 매핑 (매우 중요! — DB 실제 값 기준)
+
+#### Media (미디어 플랫폼) — 한국어로 저장됨!
+- **"인스타", "인스타그램", "Instagram"** → WHERE Media LIKE "%인스타그램%"  (⚠️ 절대 "Instagram" 쓰지 마! DB값: "인스타그램(포스트)", "인스타그램(릴스)", "인스타그램(스토리)")
+- **"틱톡", "TikTok"** → WHERE Media = "틱톡"  (⚠️ 절대 "TikTok" 쓰지 마! DB값: "틱톡")
+- **"유튜브", "YouTube"** → WHERE Media LIKE "%유튜브%"  (⚠️ 절대 "YouTube" 쓰지 마! DB값: "유튜브", "유튜브(쇼츠)")
+- **"트위터", "X"** → WHERE Media LIKE "%트위터%" OR Media LIKE "%X(트위터)%"
+- **"페이스북", "Facebook"** → WHERE Media = "페이스북"
+- ⛔ 절대 규칙: Media 컬럼은 한국어 값만 존재! 영어(Instagram, TikTok, YouTube)로 LIKE 검색하면 0건!
+
+#### Influencer_tier (티어) — 대문자 영어로 저장
+- **"메가"** = Influencer_tier = "MEGA" 또는 "Mega"
+- **"매크로"** = Influencer_tier = "MACRO" 또는 "Macro"
+- **"마이크로"** = Influencer_tier = "MICRO" 또는 "Micro"
+- **"리뷰어"** = Influencer_tier = "REVIEWER" 또는 "Reviewer"
+- **"나노"** = 이 테이블에 없음! REVIEWER가 최소 티어
+- ⚠️ 대소문자 혼재 주의: UPPER(Influencer_tier) 사용 권장
+
+#### 유가/무가 협업
+- **"유가 협업"** = Cost > 0 또는 Cost_krw > 0 (유료)
+- **"무가 협업", "시딩"** = Cost IS NULL 또는 Cost = 0 (무료/시딩)
+
+#### Team vs add_part (팀 구분 — 매우 중요!)
+- ⛔ **Team 컬럼 무시!** 대신 **add_part** 컬럼을 팀으로 사용하세요.
+- add_part 유효 값:
+  - **"East1_파트1", "East1_파트2", "East1_파트3"** — EAST1 팀 (파트별)
+  - **"East2_파트1"** — EAST2 팀
+  - **"East_퇴사자"** — EAST 퇴사자
+  - **"West_파트1" ~ "West_파트5", "West_파트3-1"** — WEST 팀 (파트별)
+  - **"JBT"** — 일본사업팀
+  - **"KBT"** — KBT팀
+  - **"BCM"** — BCM팀
+  - **"B2B2", "B2B3"** — B2B팀
+  - **"GM"** — GM 본부
+  - **"KM"** — KM
+- **"GM EAST1", "EAST1", "이스트1"** → add_part LIKE "East1%"
+- **"GM EAST", "이스트"** → add_part LIKE "East%"
+- **"GM WEST", "웨스트"** → add_part LIKE "West%"
+- 팀별 질문 시 반드시 `add_part` 사용: `WHERE add_part LIKE "East1%"` (Team 컬럼 사용 금지!)
+
+#### Manager = 담당 매니저 이름 (한국어)
 
 ---
 

@@ -77,12 +77,40 @@ _TEAM_ALIASES = {
 }
 
 
+_QUERY_EXPAND = {
+    "복지포인트": "사내근로복지기금 복지 포인트",
+    "복지카드": "사내근로복지기금 복지 카드 비즈플레이",
+    "와이파이": "네트워크 Wi-Fi wifi 사용 안내",
+    "인센티브": "성과급 보상 인센티브",
+    "성과금": "성과급 보상",
+}
+
+# HR/People 관련 키워드 → PEOPLE 팀 가중치
+_PEOPLE_BOOST_KW = [
+    "퇴사", "퇴직", "연차", "휴가", "경조", "성과급", "성과금", "보상", "인센티브",
+    "채용", "면접", "명함", "서류", "증명서", "급여", "복지", "교육", "핵심가치",
+    "역량", "평가", "졸업", "출산", "건강검진", "전사휴무", "휴일대체",
+    "잔디", "다우오피스", "vpn", "프린터", "와이파이", "wifi", "메일", "캘린더",
+    "회의실", "커피", "분리수거", "시설", "비품",
+]
+
+
 def search_resources(query: str, top_k: int = 10, allowed_resources: Optional[Dict[str, list]] = None) -> List[Dict]:
     if not _cache_loaded or not _resource_cache:
         return []
 
-    q_tokens = _tokenize(query)
-    q_lower = query.lower()
+    # Expand query with synonyms
+    expanded = query
+    for key, expansion in _QUERY_EXPAND.items():
+        if key in query:
+            expanded = f"{query} {expansion}"
+            break
+
+    q_tokens = _tokenize(expanded)
+    q_lower = expanded.lower()
+
+    # Detect if query is HR/People-related → boost PEOPLE team results
+    _people_boost = any(kw in q_lower for kw in _PEOPLE_BOOST_KW)
 
     # allowed_ids: set of allowed resource IDs (None = all)
     allowed_ids = None
@@ -104,6 +132,9 @@ def search_resources(query: str, top_k: int = 10, allowed_resources: Optional[Di
         team_lower = r["team"].lower()
         if team_lower in q_lower:
             score += 3.0
+        # PEOPLE team boost for HR/IT queries
+        if _people_boost and r["team"] == "PEOPLE":
+            score += 2.0
         for alias, canonical in _TEAM_ALIASES.items():
             if alias in q_lower and r["team"] == canonical:
                 score += 3.0
@@ -114,6 +145,19 @@ def search_resources(query: str, top_k: int = 10, allowed_resources: Optional[Di
         score += _word_overlap_score(q_tokens, ancestor) * 1.5
         desc = r.get("description") or ""
         score += _word_overlap_score(q_tokens, desc) * 0.5
+        # Direct chunk matching (handles Korean 붙여쓰기)
+        name_lower = r["name"].lower()
+        desc_lower = desc.lower()
+        for size in (3, 2):
+            for i in range(len(q_lower) - size + 1):
+                chunk = q_lower[i:i+size]
+                if not re.match(r'[가-힣a-z]+$', chunk):
+                    continue
+                w = 0.8 if size == 3 else 0.4
+                if chunk in name_lower:
+                    score += w
+                if chunk in desc_lower:
+                    score += w * 0.4
         if score > 0:
             scored.append((score, r))
 

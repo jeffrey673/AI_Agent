@@ -400,6 +400,14 @@ async def safety_status():
     return get_safety_status()
 
 
+@router.get("/api/datasources")
+async def list_datasources():
+    """Return available @@ data sources for frontend autocomplete."""
+    from app.agents.orchestrator import OrchestratorAgent
+    registry = OrchestratorAgent.get_db_registry()
+    return [{"key": e["key"], "aliases": e["aliases"], "label": e["label"], "desc": e["desc"], "group": e.get("group", ""), "icon": e.get("icon", "")} for e in registry]
+
+
 @router.get("/health")
 async def health_check():
     """Health check endpoint (liveness)."""

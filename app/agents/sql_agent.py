@@ -324,6 +324,21 @@ def generate_sql(state: AgentState) -> Dict[str, Any]:
             if sql:
                 logger.info("sql_generation_retry_success", sql=sql[:200])
 
+        # Fix English media names → Korean (influencer table uses Korean values)
+        if sql and "influencer_input_ALL_TEAMS" in sql:
+            sql = sql.replace("%Instagram%", "%인스타그램%")
+            sql = sql.replace("%TikTok%", "%틱톡%")
+            sql = sql.replace("%YouTube%", "%유튜브%")
+            sql = sql.replace("%Facebook%", "%페이스북%")
+            sql = sql.replace('"Instagram"', '"인스타그램"')
+            sql = sql.replace('"TikTok"', '"틱톡"')
+            sql = sql.replace('"YouTube"', '"유튜브"')
+            sql = sql.replace('"Facebook"', '"페이스북"')
+            sql = sql.replace("'Instagram'", "'인스타그램'")
+            sql = sql.replace("'TikTok'", "'틱톡'")
+            sql = sql.replace("'YouTube'", "'유튜브'")
+            sql = sql.replace("'Facebook'", "'페이스북'")
+
         logger.info("sql_generated", sql=sql[:200])
 
         # Store in cache for future use (only standalone queries)

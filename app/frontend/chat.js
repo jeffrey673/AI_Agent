@@ -201,7 +201,7 @@
       keys: ["광고데이터", "마케팅비용", "Shopify", "플랫폼",
              "인플루언서", "아마존검색", "메타광고",
              "아마존 리뷰", "큐텐 리뷰", "쇼피 리뷰", "스마트스토어 리뷰"] },
-    { id: "team", label: "팀별 자료", emoji: "\uD83C\uDFE2",
+    { id: "team", label: "팀별자료(노션)", emoji: "\uD83C\uDFE2",
       keys: ["BP"],  // Team keys are dynamically added from API
       _dynamic: true },
     { id: "system", label: "시스템", emoji: "\u2699",
@@ -441,6 +441,111 @@
       this.value = "";  // Reset so same file can be re-selected
     });
 
+    // ═══ @@ 데이터소스 자동완성 (그룹화 + SVG 아이콘 + 컴팩트) ═══
+    var _dbSources = [];
+    var _dbDropdown = null;
+
+    var _DB_ICONS = {
+      chart:'<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>',
+      box:'<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>',
+      megaphone:'<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11l18-5v12L3 13v-2z"/><path d="M11.6 16.8a3 3 0 11-5.8-1.6"/></svg>',
+      dollar:'<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>',
+      users:'<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>',
+      cart:'<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>',
+      store:'<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>',
+      search:'<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>',
+      phone:'<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>',
+      star:'<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>',
+      people:'<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>',
+      doc:'<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>',
+      flask:'<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3h6M10 3v7.4a2 2 0 01-.5 1.3L4 19a2 2 0 001.5 3h13a2 2 0 001.5-3l-5.5-7.3a2 2 0 01-.5-1.3V3"/></svg>',
+      headset:'<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 18v-6a9 9 0 0118 0v6"/><path d="M21 19a2 2 0 01-2 2h-1a2 2 0 01-2-2v-3a2 2 0 012-2h3zM3 19a2 2 0 002 2h1a2 2 0 002-2v-3a2 2 0 00-2-2H3z"/></svg>',
+      link:'<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>',
+      all:'<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>',
+    };
+
+    (function loadDbSources() {
+      fetch("/api/datasources").then(function(r) { return r.json(); }).then(function(data) {
+        _dbSources = data;
+      }).catch(function() {});
+    })();
+
+    function _createDbDropdown() {
+      if (_dbDropdown) return;
+      _dbDropdown = document.createElement("div");
+      _dbDropdown.className = "db-autocomplete-dropdown";
+      _dbDropdown.style.display = "none";
+      chatInputArea.style.position = "relative";
+      chatInputArea.appendChild(_dbDropdown);
+    }
+    _createDbDropdown();
+
+    function _showDbDropdown(filter) {
+      if (!_dbDropdown || !_dbSources.length) return;
+      var f = (filter || "").toLowerCase();
+      var matches = _dbSources.filter(function(s) {
+        return !f || s.key.toLowerCase().indexOf(f) === 0
+            || s.aliases.some(function(a) { return a.toLowerCase().indexOf(f) === 0; })
+            || s.label.toLowerCase().indexOf(f) >= 0;
+      });
+
+      // Build grouped HTML
+      var html = '<div class="db-ac-special">';
+      html += '<div class="db-ac-chip" data-key="전체">' + _DB_ICONS.all + ' 전체</div>';
+      html += '<div class="db-ac-chip" data-key="전체해제">' + _DB_ICONS.all + ' 해제</div>';
+      html += '</div>';
+
+      var groups = {};
+      matches.forEach(function(s) {
+        var g = s.group || "기타";
+        if (!groups[g]) groups[g] = [];
+        groups[g].push(s);
+      });
+
+      Object.keys(groups).forEach(function(gName) {
+        html += '<div class="db-ac-group-label">' + gName + '</div>';
+        html += '<div class="db-ac-grid">';
+        groups[gName].forEach(function(s) {
+          var icon = _DB_ICONS[s.icon] || _DB_ICONS.doc;
+          html += '<div class="db-ac-item" data-key="' + s.key + '" title="' + s.desc + '">'
+               + '<span class="db-ac-icon">' + icon + '</span>'
+               + '<span class="db-ac-name">' + s.label + '</span></div>';
+        });
+        html += '</div>';
+      });
+
+      _dbDropdown.innerHTML = html;
+      _dbDropdown.style.display = "block";
+
+      _dbDropdown.querySelectorAll(".db-ac-item, .db-ac-chip").forEach(function(el) {
+        el.addEventListener("mousedown", function(e) {
+          e.preventDefault();
+          var key = el.dataset.key;
+          chatInput.value = "@@" + key + " ";
+          chatInput.focus();
+          _dbDropdown.style.display = "none";
+        });
+      });
+    }
+
+    chatInput.addEventListener("input", function() {
+      var val = this.value;
+      if (val.startsWith("@@")) {
+        var prefix = val.substring(2).split(/\s/)[0];
+        if (!val.includes(" ") || val === "@@") {
+          _showDbDropdown(prefix);
+        } else {
+          _dbDropdown.style.display = "none";
+        }
+      } else {
+        if (_dbDropdown) _dbDropdown.style.display = "none";
+      }
+    });
+
+    chatInput.addEventListener("blur", function() {
+      setTimeout(function() { if (_dbDropdown) _dbDropdown.style.display = "none"; }, 200);
+    });
+
     // Paste image from clipboard
     chatInput.addEventListener("paste", function (e) {
       var items = e.clipboardData && e.clipboardData.items;
@@ -477,6 +582,17 @@
 
     // New chat
     btnNewChat.addEventListener("click", function () {
+      // Abort active stream — full cleanup
+      if (isStreaming || currentAbortController) {
+        if (currentAbortController) currentAbortController.abort();
+        _stopTokenDrain();
+        isStreaming = false;
+        currentAbortController = null;
+        _autoScrollActive = true;
+        _resetSendBtn();
+        var streamingMsg = chatMessages.querySelector(".message.streaming");
+        if (streamingMsg) streamingMsg.classList.remove("streaming");
+      }
       currentConvoId = null;
       currentMessages = [];
       showWelcome();
@@ -769,11 +885,17 @@
   }
 
   async function loadConversation(id) {
-    // Abort active stream if switching conversations
-    if (isStreaming && currentAbortController) {
-      currentAbortController.abort();
+    // Abort active stream if switching conversations — full cleanup
+    if (isStreaming || currentAbortController) {
+      if (currentAbortController) currentAbortController.abort();
+      _stopTokenDrain();
       isStreaming = false;
       currentAbortController = null;
+      _autoScrollActive = true;
+      _resetSendBtn();
+      // Remove streaming cursor from any active message
+      var streamingMsg = chatMessages.querySelector(".message.streaming");
+      if (streamingMsg) streamingMsg.classList.remove("streaming");
     }
     try {
       _showSkeleton();

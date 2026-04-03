@@ -115,6 +115,79 @@ class OrchestratorAgent:
         # Team keys are matched dynamically by _allowed_routes
     }
 
+    # ═══ @@ 데이터소스 선택 시스템 ═══
+    # 사용자가 "@@매출 이번달 합계" 형태로 데이터소스를 직접 지정
+    # route: 라우팅 대상, label: 사용자에게 표시되는 이름, desc: 설명
+    _DB_REGISTRY = [
+        # ── BigQuery 매출 ──
+        {"key": "매출", "aliases": ["sales", "매출데이터", "세일즈"], "route": "bigquery", "group": "매출 데이터", "icon": "chart", "label": "매출", "desc": "통합 매출 — 글로벌 전 플랫폼"},
+        {"key": "제품", "aliases": ["product", "제품데이터"], "route": "bigquery", "group": "매출 데이터", "icon": "box", "label": "제품", "desc": "제품별 판매 수량"},
+        # ── BigQuery 마케팅 ──
+        {"key": "광고", "aliases": ["ad", "ads", "광고데이터", "광고비"], "route": "bigquery", "group": "마케팅 데이터", "icon": "megaphone", "label": "광고", "desc": "TikTok, Facebook, Google 등"},
+        {"key": "마케팅비용", "aliases": ["marketing", "마케팅"], "route": "bigquery", "group": "마케팅 데이터", "icon": "dollar", "label": "마케팅비용", "desc": "광고+인플루언서 비용 통합"},
+        {"key": "인플루언서", "aliases": ["influencer", "인플"], "route": "bigquery", "group": "마케팅 데이터", "icon": "users", "label": "인플루언서", "desc": "팀별 인플루언서 마케팅"},
+        {"key": "쇼피파이", "aliases": ["shopify"], "route": "bigquery", "group": "마케팅 데이터", "icon": "cart", "label": "Shopify", "desc": "자사몰 판매"},
+        {"key": "플랫폼", "aliases": ["platform", "플랫폼데이터"], "route": "bigquery", "group": "마케팅 데이터", "icon": "store", "label": "플랫폼", "desc": "플랫폼별 순위/가격"},
+        {"key": "아마존검색", "aliases": ["amazon", "아마존"], "route": "bigquery", "group": "마케팅 데이터", "icon": "search", "label": "아마존검색", "desc": "아마존 검색 분석 퍼널"},
+        {"key": "메타광고", "aliases": ["meta", "메타"], "route": "bigquery", "group": "마케팅 데이터", "icon": "phone", "label": "메타광고", "desc": "메타 광고 라이브러리"},
+        # ── BigQuery 리뷰 ──
+        {"key": "리뷰", "aliases": ["review", "리뷰데이터"], "route": "bigquery", "group": "리뷰 데이터", "icon": "star", "label": "리뷰", "desc": "아마존/큐텐/쇼피/스마트스토어"},
+        # ── 팀별자료 (노션) ──
+        {"key": "피플", "aliases": ["people", "인사", "hr", "피플팀"], "route": "team", "group": "팀별자료(노션)", "icon": "people", "label": "PEOPLE", "desc": "연차, 보상, 퇴사, 복지, IT"},
+        {"key": "노션", "aliases": ["notion"], "route": "notion", "group": "팀별자료(노션)", "icon": "doc", "label": "Notion", "desc": "사내 문서 검색"},
+        # ── CS / BP ──
+        {"key": "bp", "aliases": ["뷰티파트너", "제품qa", "제품문의"], "route": "cs", "group": "CS", "icon": "flask", "label": "BP", "desc": "제품 성분/사용법/교환반품"},
+        {"key": "cs", "aliases": ["고객상담", "고객서비스"], "route": "cs", "group": "CS", "icon": "headset", "label": "CS", "desc": "고객 서비스"},
+        # ── 시스템 ──
+        {"key": "gws", "aliases": ["google", "구글", "지메일", "gmail", "캘린더", "드라이브"], "route": "gws", "group": "시스템", "icon": "link", "label": "Google Workspace", "desc": "Gmail, Calendar, Drive"},
+        # ── 확장 ──
+    ]
+
+    # 특수 명령어 (@@전체, @@ALL, @@전체해제, @@목록)
+    _DB_SPECIAL = {
+        "전체": "select_all", "all": "select_all",
+        "전체해제": "deselect_all", "해제": "deselect_all", "none": "deselect_all",
+        "목록": "list", "list": "list", "help": "list",
+    }
+
+    @classmethod
+    def get_db_registry(cls):
+        """Return the full DB registry (for API/frontend)."""
+        return cls._DB_REGISTRY
+
+    @classmethod
+    def parse_db_prefix(cls, query: str):
+        """Parse @@prefix from query.
+
+        Returns:
+            (db_entry_or_special, clean_query)
+            - db_entry dict → route to specific source
+            - "select_all"/"deselect_all"/"list" string → special command
+            - None → no @@ prefix
+        """
+        q = query.strip()
+        if not q.startswith("@@"):
+            return None, query
+
+        parts = q[2:].split(None, 1)
+        if not parts:
+            # Just "@@" → show list
+            return "list", ""
+        prefix = parts[0].lower().rstrip(":")
+        clean_query = parts[1] if len(parts) > 1 else ""
+
+        # Check special commands first
+        special = cls._DB_SPECIAL.get(prefix)
+        if special:
+            return special, clean_query.strip()
+
+        # Match against registry
+        for entry in cls._DB_REGISTRY:
+            if prefix == entry["key"].lower() or prefix in [a.lower() for a in entry["aliases"]]:
+                return entry, clean_query.strip()
+
+        return None, query  # Unknown prefix → pass through
+
     def _allowed_routes(self, enabled_sources: Optional[List[str]]) -> Optional[set]:
         """Derive the set of allowed routes from enabled_sources.
 
@@ -132,6 +205,35 @@ class OrchestratorAgent:
         if "bigquery" in routes:
             routes.add("multi")
         return routes
+
+    @classmethod
+    def _build_db_command_response(cls, command: str) -> str:
+        """Build response for @@전체, @@전체해제, @@목록 special commands."""
+        if command == "list":
+            lines = ["## 📂 사용 가능한 데이터소스\n"]
+            lines.append("`@@데이터소스명 질문` 형태로 특정 데이터만 검색합니다.\n")
+            current_group = ""
+            for e in cls._DB_REGISTRY:
+                g = e.get("group", "")
+                if g != current_group:
+                    current_group = g
+                    lines.append(f"\n### {g}")
+                aliases = ", ".join(f"`@@{a}`" for a in e["aliases"][:2]) if e["aliases"] else ""
+                alias_text = f" ({aliases})" if aliases else ""
+                lines.append(f"- `@@{e['key']}`{alias_text} — {e['desc']}")
+            lines.append("\n### 특수 명령")
+            lines.append("- `@@전체` — 모든 데이터소스 활성화")
+            lines.append("- `@@전체해제` — 모든 데이터소스 비활성화 (직접 대화만)")
+            lines.append("- `@@목록` — 이 목록 표시")
+            return "\n".join(lines)
+
+        if command == "select_all":
+            return "✅ **모든 데이터소스가 활성화**되었습니다.\n\n질문하시면 AI가 자동으로 적절한 데이터소스를 선택합니다.\n\n> 💡 특정 소스만 사용하려면 `@@매출 이번달 합계` 형태로 입력하세요."
+
+        if command == "deselect_all":
+            return "🔕 **모든 데이터소스가 비활성화**되었습니다.\n\n데이터 검색 없이 AI 직접 대화만 가능합니다.\n\n> 다시 활성화하려면 `@@전체` 또는 `@@ALL`을 입력하세요."
+
+        return ""
 
     async def route_and_execute(
         self,
@@ -164,6 +266,45 @@ class OrchestratorAgent:
         images = images or []
         conversation_context = _build_conversation_context(messages)
 
+        # ═══ @@ 데이터소스 직접 지정 ═══
+        db_entry, clean_query = self.parse_db_prefix(query)
+
+        # Special commands: @@전체, @@전체해제, @@목록
+        if isinstance(db_entry, str):
+            return {"source": "direct", "answer": self._build_db_command_response(db_entry)}
+
+        if db_entry:
+            route = db_entry["route"]
+            query = clean_query or query
+            logger.info("db_prefix_routed", prefix=db_entry["key"], route=route, query=query[:80])
+
+            if not query.strip():
+                help_text = f"**{db_entry['label']}** 데이터소스가 선택되었습니다.\n\n{db_entry['desc']}\n\n질문을 입력해주세요. 예: `@@{db_entry['key']} 이번달 현황 알려줘`"
+                return {"source": route, "answer": help_text}
+
+            # Route directly to the handler
+            handlers = {
+                "bigquery": self._handle_bigquery,
+                "notion": self._handle_notion,
+                "gws": self._handle_gws,
+                "cs": self._handle_cs,
+                "team": self._handle_team,
+                "multi": self._handle_multi,
+            }
+            handler = handlers.get(route, self._handle_direct)
+            if route in ("bigquery", "multi"):
+                result = await handler(query, messages, conversation_context, model_type, user_email, brand_filter=brand_filter, enabled_sources=enabled_sources)
+            elif route == "team":
+                result = await self._handle_team(query, messages, conversation_context, model_type, user_email, enabled_team_resources=enabled_team_resources)
+            elif route == "direct":
+                result = await self._handle_direct(query, messages, conversation_context, model_type, user_email)
+            else:
+                result = await handler(query, messages, conversation_context, model_type, user_email)
+
+            if "answer" in result:
+                result["answer"] = ensure_formatting(result["answer"], domain=route)
+            return result
+
         # Image present → force direct route (vision LLM)
         if images:
             logger.info("orchestrator_image_route_forced", image_count=len(images), query=query[:100])
@@ -178,7 +319,7 @@ class OrchestratorAgent:
         # Fast path: keyword match first, LLM fallback only for short ambiguous queries
         route = self._keyword_classify(query)
         is_system_task = query.strip().startswith("### Task:")
-        _DIRECT_LOCK_KW = ["회사", "뭐하는", "소개", "누가 만들", "주인", "재밌", "안녕", "하이", "hello", "hi", "부동산", "주식", "투자", "아파트", "전세", "월세", "대출", "연봉", "이직"]
+        _DIRECT_LOCK_KW = ["회사", "뭐하는", "소개", "누가 만들", "주인", "재밌", "안녕", "하이", "hello", "hi", "부동산", "주식", "투자", "아파트", "전세", "월세", "대출", "연봉", "이직", "항공", "비행기", "호텔", "숙소", "맛집"]
         _is_direct_locked = any(kw in query.lower() for kw in _DIRECT_LOCK_KW)
         if route == "direct" and conversation_context and not is_system_task and not _is_direct_locked:
             if len(query.strip()) <= 30:
@@ -205,11 +346,14 @@ class OrchestratorAgent:
             "notion": self._handle_notion,
             "gws": self._handle_gws,
             "cs": self._handle_cs,
+            "team": self._handle_team,
             "multi": self._handle_multi,
         }
         handler = handlers.get(route, self._handle_direct)
         if route in ("bigquery", "multi"):
             result = await handler(query, messages, conversation_context, model_type, user_email, brand_filter=brand_filter, enabled_sources=enabled_sources)
+        elif route == "team":
+            result = await self._handle_team(query, messages, conversation_context, model_type, user_email, enabled_team_resources=enabled_team_resources)
         elif route == "direct" or handler == self._handle_direct:
             result = await self._handle_direct(query, messages, conversation_context, model_type, user_email, images=images, stream_callback=stream_callback)
         else:
@@ -258,6 +402,75 @@ class OrchestratorAgent:
         images = images or []
         conversation_context = _build_conversation_context(messages)
 
+        # ═══ @@ 데이터소스 직접 지정 (streaming) ═══
+        db_entry, clean_query = self.parse_db_prefix(query)
+
+        # Special commands
+        if isinstance(db_entry, str):
+            yield ("source", "direct")
+            yield ("done", self._build_db_command_response(db_entry))
+            return
+
+        if db_entry:
+            route = db_entry["route"]
+            query = clean_query or query
+            logger.info("db_prefix_routed_stream", prefix=db_entry["key"], route=route)
+            yield ("source", route)
+
+            if not query.strip():
+                yield ("done", f"**{db_entry['label']}** 데이터소스가 선택되었습니다.\n\n{db_entry['desc']}\n\n질문을 입력해주세요.")
+                return
+
+            # For BQ → streaming SQL
+            if route == "bigquery":
+                import asyncio as _aio
+                from app.agents.sql_agent import run_sql_agent_stream
+                _q = asyncio.Queue()
+                _loop = asyncio.get_running_loop()
+                def _bq():
+                    try:
+                        for chunk in run_sql_agent_stream(query, conversation_context=conversation_context, model_type=model_type, brand_filter=brand_filter, enabled_sources=enabled_sources):
+                            _loop.call_soon_threadsafe(_q.put_nowait, ("chunk", chunk))
+                    except Exception as e:
+                        _loop.call_soon_threadsafe(_q.put_nowait, ("chunk", f"오류: {e}"))
+                    _loop.call_soon_threadsafe(_q.put_nowait, ("end", None))
+                _loop.run_in_executor(None, _bq)
+                while True:
+                    mt, data = await _q.get()
+                    if mt == "end":
+                        break
+                    yield ("chunk", data)
+                yield ("done", "")
+                return
+
+            # Non-streaming routes (team, cs, notion, etc.)
+            from app.core.safety import get_circuit
+            circuit = get_circuit(route)
+            handlers = {"notion": self._handle_notion, "gws": self._handle_gws, "cs": self._handle_cs, "team": self._handle_team, "multi": self._handle_multi}
+            handler = handlers.get(route, self._handle_direct)
+            try:
+                if route == "team":
+                    result = await asyncio.wait_for(handler(query, messages, conversation_context, model_type, user_email, enabled_team_resources=enabled_team_resources), timeout=15.0)
+                else:
+                    result = await asyncio.wait_for(handler(query, messages, conversation_context, model_type, user_email), timeout=15.0)
+            except asyncio.TimeoutError:
+                result = {"answer": f"⚠️ 분석이 예상보다 오래 걸리고 있습니다.", "source": route}
+            if "answer" in result:
+                result["answer"] = ensure_formatting(result["answer"], domain=route)
+            answer = result.get("answer", "")
+            pos = 0
+            while pos < len(answer):
+                end = min(pos + 80, len(answer))
+                if end < len(answer):
+                    nl = answer.find("\n", pos, end + 20)
+                    if nl > pos:
+                        end = nl + 1
+                yield ("chunk", answer[pos:end])
+                pos = end
+                await asyncio.sleep(0.02)
+            yield ("done", "")
+            return
+
         # Image → non-streaming direct
         if images:
             result = await self._handle_direct(
@@ -295,6 +508,14 @@ class OrchestratorAgent:
 
         # Direct route → real-time streaming
         if route == "direct" and not is_system_task:
+            # Domain guardrail — hard block
+            _BLOCKED_TOPICS = ["항공권", "비행기표", "비행기 표", "호텔 예약", "호텔예약", "호텔 추천", "숙소 추천",
+                               "맛집", "여행지 추천", "의료 진단", "병원 추천", "법률 상담", "변호사"]
+            if any(kw in query.lower() for kw in _BLOCKED_TOPICS):
+                blocked_msg = "해당 정보는 저희 시스템의 지원 범위를 벗어납니다. SKIN1004 관련 질문을 도와드릴게요! 😊\n\n> 💡 **이런 것도 물어보세요**\n> - 이번 달 매출 현황은 어때?\n> - 센텔라 앰플 성분이 뭐야?\n> - 연차 규정 알려줘"
+                yield ("done", blocked_msg)
+                return
+
             llm = get_llm_client(model_type)
             today = datetime.now().strftime("%Y년 %m월 %d일 (%A)")
             system = self._build_direct_system_prompt(today, model_type)
@@ -529,6 +750,7 @@ class OrchestratorAgent:
         "인플루언서", "influencer", "팔로워", "좋아요",
         "조회수", "공유수", "댓글수", "저장수",
         "콘텐츠", "캠페인", "에이전시", "티어",
+        "유가 협업", "무가 협업", "시딩", "매니저별",
         # Review (리뷰 테이블)
         "리뷰", "review", "평점", "별점",
         "리뷰 분석", "고객 리뷰", "제품 리뷰",
@@ -611,11 +833,11 @@ class OrchestratorAgent:
         "예산 시트", "pr 시트", "운영 시트", "대시보드 링크",
         "팀 자료", "팀별 자료", "db hub", "데이터 허브",
         # PEOPLE/HR keywords
-        "연차", "휴가", "퇴사", "퇴직금", "경조", "경조휴가",
-        "회의실 예약", "명함", "법인서류", "증명서",
-        "채용", "면접", "인수인계", "성과급", "보상",
+        "연차", "휴가", "휴일대체", "퇴사", "퇴직금", "경조", "경조휴가", "졸업",
+        "회의실 예약", "명함", "법인서류", "증명서", "급여", "계약서",
+        "채용", "면접", "인수인계", "성과급", "성과금", "보상", "인센티브",
         "vpn", "프린터", "잔디", "다우오피스",
-        "복지", "사내근로복지", "피플팀",
+        "복지", "사내근로복지", "피플팀", "교육 신청",
     ]
 
     # How-to / guide keywords — when combined with platform/tool names, route to Notion
@@ -671,6 +893,7 @@ class OrchestratorAgent:
         # External topics (never route to BQ/Notion)
         "부동산", "주식", "투자", "아파트", "전세", "월세", "대출", "연봉", "이직",
         "비트코인", "코인", "암호화폐", "주가", "상장",
+        "항공", "비행기", "호텔", "숙소", "여행지", "맛집",
         "날씨 알려", "오늘 날씨",
         # Fun / chitchat
         "재밌", "농담", "웃긴", "심심",
@@ -704,12 +927,20 @@ class OrchestratorAgent:
             return "bigquery"
 
         # Team/HR resource check — BEFORE howto/notion to catch HR queries
+        # BUT if strong data keywords present → bigquery takes priority
         _TEAM_SPECIFIC = ["jbt ", "bcm ", "east ", "west ", "bea ", "bxm ", "플래그십",
                           "팀 자료", "팀별 자료", "db hub", "데이터 허브",
-                          "연차", "휴가", "퇴사", "퇴직금", "경조", "성과급",
+                          "연차", "휴가", "휴일대체", "퇴사", "퇴직금", "경조", "졸업",
+                          "성과급", "성과금", "보상", "인센티브",
                           "회의실 예약", "명함", "법인서류", "채용", "면접",
-                          "vpn", "프린터", "피플팀", "복지"]
-        if any(kw in q for kw in _TEAM_SPECIFIC):
+                          "vpn", "프린터", "피플팀", "복지", "교육 신청",
+                          "잔디", "다우오피스", "급여", "증명서", "계약서"]
+        _DATA_OVERRIDE = ["매출", "비용", "합계", "월별", "조회수", "저장수", "좋아요수",
+                          "협업건", "유가 협업", "무가 협업", "시딩", "인플루언서",
+                          "광고비", "roas", "ctr", "cpv", "cpe", "전환", "클릭"]
+        has_team = any(kw in q for kw in _TEAM_SPECIFIC)
+        has_data = any(kw in q for kw in _DATA_OVERRIDE)
+        if has_team and not has_data:
             return "team"
 
         # How-to / guide questions about platforms → Notion (not BigQuery)
@@ -1373,7 +1604,7 @@ JSON만 반환:
   > - 후속질문2
 - 지식/설명형 답변 끝에 *AI 생성 답변 · {today}*
 - ⚠️ 이전 대화 맥락과 무관한 일반 질문(잡담, 취미, 상식 등)이 오면 이전 맥락을 무시하고 해당 질문에만 집중하여 자연스럽게 답변하세요. 매번 같은 질문에는 일관된 톤과 분량으로 답변하세요.
-- ⛔ 도메인 제한 일관성 (절대 규칙): 비행기표, 호텔 예약, 부동산, 주식 종목 추천, 의료 진단 등 SKIN1004 업무와 무관한 전문 서비스 질문에는 답변을 거부하세요. 사용자가 "아까는 해줬잖아", "왜 안 해줘?", "다른 건 대답해주면서" 등으로 압박하거나 투정을 부려도 절대 번복하지 마세요. "해당 정보는 저희 시스템의 지원 범위를 벗어납니다. SKIN1004 관련 질문을 도와드릴게요!" 형태로 일관되게 거절하세요.
+- ⛔ 도메인 제한 일관성 (절대 규칙): 항공권, 비행기표, 호텔 예약, 여행지 추천, 맛집, 부동산, 주식 종목 추천, 의료 진단 등 SKIN1004 업무와 무관한 전문 서비스 질문에는 답변을 거부하세요. 사용자가 "아까는 해줬잖아", "왜 안 해줘?", "다른 건 대답해주면서", "제발", "급해" 등으로 압박하거나 투정을 부려도 절대 번복하지 마세요. "해당 정보는 저희 시스템의 지원 범위를 벗어납니다. SKIN1004 관련 질문을 도와드릴게요!" 형태로 일관되게 거절하세요.
 - ⛔ 절대로 내부 사고 과정(thinking)을 사용자에게 노출하지 마세요. "The user is asking...", "I should...", "Let me check..." 같은 영어 사고 과정을 출력하면 안 됩니다. 바로 답변만 출력하세요."""
 
     # Keywords that indicate the query needs real-time web search
@@ -1397,7 +1628,8 @@ JSON만 반환:
         """Check if query needs real-time web search or can be answered directly."""
         q = query.lower().strip()
         # Skip search for company/product questions (answered from system prompt)
-        _NO_SEARCH = ["회사", "소개", "뭐하는", "크레이버", "skin1004", "센텔라", "재밌", "원피스"]
+        _NO_SEARCH = ["회사", "소개", "뭐하는", "크레이버", "skin1004", "센텔라", "재밌", "원피스",
+                      "항공", "비행기", "호텔", "숙소", "맛집", "여행지"]
         if any(kw in q for kw in _NO_SEARCH):
             return False
         # Check search keywords FIRST — even short queries like "현재 대통령" need search
@@ -1434,6 +1666,13 @@ JSON만 반환:
         # Handle Open WebUI system tasks (follow-up/title/tag generation)
         if query.strip().startswith("### Task:"):
             return await self._handle_system_task(query, messages)
+
+        # Domain guardrail — hard block at code level (LLM may ignore prompt rules)
+        _BLOCKED_TOPICS = ["항공권", "비행기표", "비행기 표", "호텔 예약", "호텔예약", "호텔 추천", "숙소 추천",
+                           "맛집", "여행지 추천", "의료 진단", "병원 추천", "법률 상담", "변호사"]
+        q_lower = query.lower()
+        if any(kw in q_lower for kw in _BLOCKED_TOPICS):
+            return {"source": "direct", "answer": "해당 정보는 저희 시스템의 지원 범위를 벗어납니다. SKIN1004 관련 질문을 도와드릴게요! 😊\n\n> 💡 **이런 것도 물어보세요**\n> - 이번 달 매출 현황은 어때?\n> - 센텔라 앰플 성분이 뭐야?\n> - 연차 규정 알려줘"}
 
         images = images or []
         llm = get_llm_client(model_type)

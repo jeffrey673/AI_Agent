@@ -1939,6 +1939,93 @@ pre:hover .code-copy-btn { opacity: 1; }
   border-color: var(--accent);
 }
 
+/* --- @@ Datasource autocomplete (compact grid) --- */
+.db-autocomplete-dropdown {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  max-height: 340px;
+  overflow-y: auto;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: 0 -4px 16px rgba(0,0,0,0.12);
+  z-index: 100;
+  margin-bottom: 4px;
+  padding: 8px;
+}
+.db-ac-special {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 6px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--border);
+}
+.db-ac-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  background: var(--accent-glow, rgba(232,146,0,0.08));
+  color: var(--accent, #e89200);
+  border: 1px solid var(--accent, #e89200);
+  transition: all 0.15s;
+}
+.db-ac-chip:hover {
+  background: var(--accent, #e89200);
+  color: #fff;
+}
+.db-ac-group-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-secondary);
+  opacity: 0.6;
+  margin: 6px 2px 3px;
+}
+.db-ac-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  gap: 4px;
+  margin-bottom: 2px;
+}
+.db-ac-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.12s;
+  border: 1px solid transparent;
+}
+.db-ac-item:hover {
+  background: var(--accent-glow, rgba(232,146,0,0.08));
+  border-color: var(--accent, #e89200);
+}
+.db-ac-icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  color: var(--text-secondary);
+  opacity: 0.7;
+}
+.db-ac-item:hover .db-ac-icon { opacity: 1; color: var(--accent, #e89200); }
+.db-ac-name {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 /* ============================================================
    D. THEME TOGGLE (bottom-right)
    ============================================================ */

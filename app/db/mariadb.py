@@ -1,9 +1,8 @@
-"""DB layer — auto-selects backend by server port.
+"""DB layer — MariaDB backend for all environments.
 
-Port 3000 (production) → MariaDB (shared, persistent)
-Port 3001 (development) → SQLite  (local file, isolated)
+Both production (3000) and development (3002) use MariaDB.
 
-Interface is identical: fetch_all, fetch_one, execute, execute_lastid.
+Interface: fetch_all, fetch_one, execute, execute_lastid.
 """
 import os
 import sqlite3
@@ -19,10 +18,10 @@ from app.config import get_settings
 logger = structlog.get_logger(__name__)
 
 # ---------------------------------------------------------------------------
-# Auto-detect mode: PORT env var or fallback to config
+# Always use MariaDB (prod=3000, dev=3002 share the same DB)
 # ---------------------------------------------------------------------------
 _PORT = int(os.environ.get("PORT", "0")) or get_settings().port
-_DEV_MODE = _PORT != 3000
+_DEV_MODE = False  # Always MariaDB
 
 if _DEV_MODE:
     logger.info("db_mode_sqlite", port=_PORT, path="data/dev.db")
