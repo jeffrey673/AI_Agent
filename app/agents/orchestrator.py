@@ -702,15 +702,15 @@ class OrchestratorAgent:
 
             _loop.run_in_executor(None, _bq_worker)
 
-            # Wave 2: 30s timeout for BQ route (SQL gen + execute + format)
+            # Wave 2: 5min timeout for BQ route (SQL gen + execute + format)
             _bq_start = asyncio.get_event_loop().time()
             while True:
                 try:
                     msg_type, data = await asyncio.wait_for(_q.get(), timeout=5.0)
                 except asyncio.TimeoutError:
                     elapsed = asyncio.get_event_loop().time() - _bq_start
-                    if elapsed > 30.0:
-                        yield ("chunk", "\n\n⚠️ 데이터 분석이 30초를 초과했습니다. 더 구체적인 조건으로 다시 질문해주세요.")
+                    if elapsed > 300.0:
+                        yield ("chunk", "\n\n⚠️ 데이터 분석이 5분을 초과했습니다. 더 구체적인 조건으로 다시 질문해주세요.")
                         break
                     continue
                 if msg_type == "end":
@@ -1115,7 +1115,7 @@ class OrchestratorAgent:
             "비교", "비중", "비율", "전년 대비", "전년대비", "대비",
             "베스트셀러", "인기 제품", "가장 많이 팔",
             # Marketing strong data keywords
-            "광고비", "광고 비용", "마케팅비", "ROAS", "CTR",
+            "광고비", "광고 비용", "마케팅비", "마케팅 비용", "퍼포먼스", "시딩", "총액", "메가와리", "ROAS", "CTR",
             "노출수", "클릭수", "전환율", "전환수",
             "인플루언서", "리뷰", "GMV",
             "신규", "업체", "거래처", "바이어", "b2b", "b2c",
@@ -1151,7 +1151,8 @@ class OrchestratorAgent:
                 "skin1004", "스킨", "센텔라", "히알루", "커먼랩스", "좀비뷰티", "랩인네이처", "크레이버",
                 "매출", "수량", "주문", "판매", "재고", "실적", "매상", "세일즈",
                 "쇼피", "아마존", "틱톡", "라자다", "큐텐", "shopify", "쇼피파이", "올리브영",
-                "광고비", "광고", "메타", "roas", "ctr", "마케팅비", "노출수", "클릭수",
+                "광고비", "광고", "메타", "roas", "ctr", "마케팅비", "마케팅 비용", "마케팅", "비용", "노출수", "클릭수",
+                "퍼포먼스", "시딩", "총액", "얼마", "메가와리",
                 "인플루언서", "반품", "환불", "b2b", "b2c", "거래처", "업체",
                 "리뷰", "평점", "별점", "스마트스토어", "네이버스토어",
                 "국가별", "월별", "팀별", "채널별", "제품별", "브랜드별", "사업부",

@@ -155,7 +155,7 @@ def build_chartjs_config(
         limit = max_items.get(chart_type, 20)
 
         # For grouped charts, check unique x-values (not total rows)
-        if group_col and chart_type == "line":
+        if group_col and chart_type in ("line", "stacked_bar", "grouped_bar"):
             unique_x = len(set(str(row.get(x_col, "")) for row in data))
             unique_g = len(set(str(row.get(group_col, "")) for row in data))
             if unique_x > 36 or unique_g > 15:

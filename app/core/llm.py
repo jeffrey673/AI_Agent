@@ -278,7 +278,7 @@ class GeminiClient:
 
         config = types.GenerateContentConfig(
             temperature=temperature,
-            max_output_tokens=1024,
+            max_output_tokens=4096,
             response_mime_type="application/json",
         )
         if system_instruction:

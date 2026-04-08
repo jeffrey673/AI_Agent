@@ -329,14 +329,16 @@ def generate_sql(state: AgentState) -> Dict[str, Any]:
         sql = llm.generate(full_prompt, temperature=0.0, max_output_tokens=4096)
         sql = sanitize_sql(sql)
 
-        # Retry once if LLM returned text instead of SQL
+        # Retry once if LLM returned text/truncated SQL instead of valid SQL
         if not sql or len(sql) < 10:
             logger.warning("sql_generation_empty_retry", query=query[:80])
             retry_prompt = (
                 full_prompt
-                + "\n\n⛔ 이전 시도에서 SQL이 아닌 텍스트를 출력했습니다. "
-                "반드시 SELECT로 시작하는 BigQuery SQL만 출력하세요. "
-                "설명, 안내, 되묻기 텍스트 절대 금지! SQL만!"
+                + "\n\n⛔ 이전 시도에서 SQL이 잘리거나 유효하지 않았습니다. "
+                "⚠️ 질문에 여러 항목(매출+마케팅비용 등)이 포함되면, **가장 핵심 항목(매출)만 SQL로 생성**하세요. "
+                "나머지는 답변에서 '별도 질문 필요'로 안내. "
+                "UNION ALL 사용 금지! CASE WHEN 패턴만 사용! "
+                "반드시 괄호가 모두 닫힌 완전한 SQL을 출력하세요."
             )
             sql = llm.generate(retry_prompt, temperature=0.1, max_output_tokens=4096)
             sql = sanitize_sql(sql)
@@ -440,8 +442,34 @@ def execute_sql(state: AgentState) -> Dict[str, Any]:
         logger.info("sql_executed", row_count=len(results))
         return {"sql_result": results, "error": None}
     except Exception as e:
-        logger.error("sql_execution_failed", error=str(e))
-        return {"sql_result": None, "error": f"SQL 실행 실패: {str(e)}"}
+        error_str = str(e)
+        # Syntax error → likely truncated/complex SQL. Retry with simplified query.
+        if "Syntax error" in error_str:
+            logger.warning("sql_syntax_error_retry", error=error_str[:200], original_sql=sql[:300])
+            try:
+                llm = get_flash_client()
+                query = state.get("query", "")
+                retry_prompt = (
+                    _load_prompt("sql_generator.txt")
+                    + f"\n\n## 사용자 질문\n{query}"
+                    + "\n\n⛔⛔⛔ 이전 SQL이 구문 오류 발생! 다음 규칙을 반드시 지키세요:"
+                    + "\n1. 질문에 여러 항목(매출+마케팅비 등)이 있으면 **매출 SQL만 생성**"
+                    + "\n2. UNION ALL 금지! CASE WHEN 패턴만 사용!"
+                    + "\n3. 모든 괄호를 반드시 닫을 것! CTE 사용 시 WITH ... AS (...) SELECT ... 완전한 형태"
+                    + "\n4. 짧고 간결한 SQL만! 20줄 이내!"
+                )
+                retry_sql = llm.generate(retry_prompt, temperature=0.0, max_output_tokens=4096)
+                from app.core.security import sanitize_sql
+                retry_sql = sanitize_sql(retry_sql)
+                if retry_sql:
+                    logger.info("sql_retry_executing", sql=retry_sql[:200])
+                    results = bq.execute_query(retry_sql, timeout=45.0, max_rows=1000)
+                    logger.info("sql_retry_success", row_count=len(results))
+                    return {"sql_result": results, "error": None, "generated_sql": retry_sql}
+            except Exception as retry_e:
+                logger.error("sql_retry_also_failed", error=str(retry_e)[:200])
+        logger.error("sql_execution_failed", error=error_str[:200])
+        return {"sql_result": None, "error": f"SQL 실행 실패: {error_str}"}
 
 
 # Friendly display names for BigQuery tables
@@ -666,17 +694,23 @@ def format_answer(state: AgentState) -> Dict[str, Any]:
 
 ## 답변 형식 (반드시 아래 섹션 구조를 따르세요)
 
-### 📊 [질문에 맞는 제목]
+### 📊 [질문에 맞는 간결한 제목]
 #### 요약
-[1-3문장으로 핵심 결론. 가장 중요한 수치는 **굵게** 표시]
-#### 상세 데이터
-[3행 이상의 비교 데이터는 반드시 마크다운 표로 정리. 숫자는 오른쪽 정렬(---:)]
+[1-2문장으로 핵심 결론만. 가장 중요한 수치는 **굵게** 표시. 장황한 설명 금지!]
+#### 상세 데이터 (표)
+[마크다운 표로 정리. 숫자는 오른쪽 정렬(---:). 시계열은 전체 행 표시]
 #### 분석 및 인사이트
-[2-3개 핵심 포인트를 bullet으로 작성. 비중/변화율/추세/비교 포함]
+[2-3개 bullet만. 각 1줄 이내. 비중/변화율/추세 중심. 문단형 서술 금지!]
 ---
-*조회 기준: {today} | 데이터소스: {table_source}*
+*조회 기준: {today} | {table_source}*
 > 💡 **이런 것도 물어보세요**
 > - [후속 질문 3개]
+
+⚠️ **분량 제한 (최우선)**:
+- 전체 답변은 **800자 이내**로 작성! 표는 글자수에 포함하지 않음
+- 요약은 2문장 이내, 인사이트는 bullet 3개 이내 (각 1줄)
+- 장황한 해석/배경설명/가정 금지. 숫자와 팩트만!
+- SQL FORMAT 이슈 설명 금지 — 데이터 그대로 보여주기만 하면 됨
 
 ## 작성 규칙
 - SQL 결과 데이터만 사용 (외부 정보 절대 금지)
@@ -694,7 +728,7 @@ def format_answer(state: AgentState) -> Dict[str, Any]:
         # Answer generation: foreground. Chart: parallel with short timeout.
         # User sees answer immediately; chart appended only if ready fast enough.
         with concurrent.futures.ThreadPoolExecutor(max_workers=2) as executor:
-            answer_future = executor.submit(llm.generate, prompt, None, 0.3, 4096)
+            answer_future = executor.submit(llm.generate, prompt, None, 0.3, 3072)
             chart_llm = get_flash_client()
             chart_future = executor.submit(
                 _try_generate_chart, chart_llm, query, sql, result_preview, results
@@ -896,13 +930,16 @@ def _try_generate_chart(llm, query: str, sql: str, result_preview: str, results:
     from app.core.chart import build_chartjs_config, get_chart_config_prompt
 
     try:
-        config_prompt = get_chart_config_prompt(query, sql, result_preview, len(results))
+        # Truncate SQL and results to prevent prompt overflow → chart config JSON truncation
+        sql_short = sql[:300] + "..." if len(sql) > 300 else sql
+        preview_short = result_preview[:800] + "..." if len(result_preview) > 800 else result_preview
+        config_prompt = get_chart_config_prompt(query, sql_short, preview_short, len(results))
         config_json = llm.generate_json(config_prompt)
         logger.info("chart_config_raw", config_json=config_json[:500])
         config = json.loads(config_json)
 
         # Force chart when user explicitly requested visualization
-        _CHART_REQUEST = ("차트", "그래프", "시각화", "그려", "그려줘", "chart", "graph", "시각화해", "도표", "플롯")
+        _CHART_REQUEST = ("차트", "그래프", "시각화", "그려", "그려줘", "chart", "graph", "시각화해", "도표", "플롯", "분기별", "월별", "추이", "비중")
         user_requested_chart = any(kw in query.lower() for kw in _CHART_REQUEST)
         if not config.get("needs_chart"):
             if user_requested_chart:

@@ -176,6 +176,38 @@ def sanitize_sql(sql: str) -> str:
         if match:
             sql = sql[:match.start()].strip()
 
+    # Detect truncated SQL (unclosed parentheses/CTE)
+    open_parens = sql.count('(')
+    close_parens = sql.count(')')
+    if open_parens > close_parens + 2:
+        logger.warning("sanitize_sql_truncated", open=open_parens, close=close_parens, preview=sql[:200])
+        return ""
+
+    # Fix truncated CTE SQL: if WITH + final SELECT has incomplete columns, trim last column + add FROM
+    upper_trimmed = sql.rstrip().upper()
+    if 'WITH ' in sql.upper() and not any(upper_trimmed.endswith(kw) for kw in ['LIMIT 1000', 'LIMIT 10000', 'DESC', 'ASC']):
+        # Check if last SELECT is missing FROM clause
+        last_select_idx = sql.upper().rfind('\nSELECT')
+        if last_select_idx > 0:
+            after_select = sql[last_select_idx:]
+            if 'FROM ' not in after_select.upper():
+                # Truncated: remove incomplete last line, find CTE name, add FROM
+                lines = sql.rstrip().split('\n')
+                # Remove last incomplete line
+                while lines and not lines[-1].strip().endswith(',') and 'AS ' not in lines[-1].upper() and 'FROM' not in lines[-1].upper():
+                    removed = lines.pop()
+                    if lines and (lines[-1].strip().endswith(',') or 'total_revenue' in lines[-1].lower()):
+                        break
+                # Find CTE name to add FROM clause
+                cte_names = re.findall(r'(\w+)\s+AS\s*\(', sql, re.IGNORECASE)
+                last_cte = cte_names[-1] if cte_names else None
+                if last_cte and lines:
+                    # Remove trailing comma from last remaining column
+                    if lines[-1].rstrip().endswith(','):
+                        lines[-1] = lines[-1].rstrip().rstrip(',')
+                    sql = '\n'.join(lines) + f'\nFROM {last_cte}\nORDER BY 1'
+                    logger.info("sanitize_sql_fixed_truncated_cte", cte=last_cte)
+
     # Ensure LIMIT exists
     normalized = sql.upper()
     if "LIMIT" not in normalized:

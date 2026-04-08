@@ -24,8 +24,10 @@
 | **매출 + 수량** 동시 | `SALES_ALL_Backup` | Total_Qty도 있으므로 한 테이블에서 해결 |
 | **제품 리스트** (어떤 제품 있어?, 제품 목록) | `Product` | 개별 제품 단위로 정확 |
 | **광고 데이터** (광고비, ROAS, CTR, 노출, 클릭, 전환) | `integrated_advertising_data` | 플랫폼별 광고 성과 통합 |
-| **마케팅 비용** (광고+인플루언서 비용 통합) | `Integrated_marketing_cost` | 광고+인플루언서 비용 통합 |
-| **인플루언서** (팔로워, 좋아요, 조회수, 인플루언서 비용) | `influencer_input_ALL_TEAMS` | 팀별 인플루언서 마케팅 데이터 |
+| **마케팅 비용** (퍼포먼스/인플루언서 비용, 광고비, 시딩비) | `Integrated_marketing_cost` | Field='광고'→퍼포먼스, Field='시딩'→인플루언서 |
+| **퍼포먼스 마케팅 비용** (광고비, 광고 비용) | `Integrated_marketing_cost` | `WHERE Field = '광고'` |
+| **인플루언서 마케팅 비용** (시딩비, 시딩 비용) | `Integrated_marketing_cost` | `WHERE Field = '시딩'` |
+| **인플루언서 상세** (팔로워, 좋아요, 조회수, CPV) | `influencer_input_ALL_TEAMS` | 팀별 인플루언서 마케팅 상세 데이터 |
 | **Shopify 자사몰 판매** (자사몰, shopify) | `shopify_analysis_sales` | 글로벌 Shopify 판매 데이터 |
 | **플랫폼 순위/가격** (랭킹, 가격, 할인가) | `Platform_Data.raw_data` | 플랫폼별 제품 순위/가격 |
 | **아마존 검색 성과** (아마존 CTR, 전환율, 장바구니) | `amazon_search_analytics_catalog_performance` | 아마존 검색 카탈로그 성과 |
@@ -46,7 +48,8 @@
 ⚠️ 아래에 없는 컬럼은 사용 금지! 반드시 아래 컬럼만 사용하세요.
 
 #### 기본 정보
-- Brand (STRING): 브랜드 — 'SK'(스킨1004), 'CL'(커먼랩스/CommonLabs), 'UM'(우마), 'DD'
+- Brand (STRING): 브랜드 — 'SK'(스킨1004/스킨천사), 'CL'(커먼랩스/CommonLabs), 'UM'(우마), 'DD', 'ETC'(아예 무시 — 이 브랜드 데이터는 무시!)
+  - ⚠️ **ETC 브랜드는 무시!** WHERE Brand != 'ETC' 또는 Brand IN ('SK', 'CL') 등으로 제외
   - ⚠️ **크레이버코퍼레이션 = 전체 회사**. "크레이버", "크레이버코퍼레이션", "Craver", "우리 회사 전체" → Brand 필터 넣지 마라 (Admin에서 AD 그룹별 brand_filter가 별도 적용됨)
 - Mall_Classification (STRING): 몰/채널 분류 코드
   - SK_B2B_Domestic (스킨1004 국내 도매), SK_B2B_Overseas (스킨1004 해외 도매)
@@ -61,7 +64,8 @@
   - DD_B2B (UM 브랜드 도매), DD_RTL (UM 유통)
   - CL_B2B_Domestic (커먼랩스 국내 도매), CL_B2B_Overseas (커먼랩스 해외 수출), CL_B2C_CompanyMall (커먼랩스 자사몰), CL_B2C_ExMall (커먼랩스 외부/제휴몰), CL_B2C_USA_CompanyMall (커먼랩스 미국 자사몰), CL_B2C_MY_CompanyMall (커먼랩스 말레이시아 자사몰)
   - CL_B2C_ID_Shopee, CL_B2C_ID_Lazada, CL_B2C_PH_Shopee, CL_B2C_PH_Lazada, CL_B2C_PH_DPMall, CL_B2C_MY_Shopee, CL_B2C_MY_Lazada, CL_B2C_MY_DPMall, CL_B2C_SG_Shopee, CL_B2C_VN_Shopee, CL_B2C_TW_Shopee, CL_B2C_JP_Q10
-  - CBT_B2B (CBT 도매), CBT_B2C_Tmall (티몰), CBT_B2C_Jingdong (징동), CBT_B2C_Tiktok (틱톡/더우인), CBT_B2C_Xiaohongshu (샤오홍슈) 등
+  - CBT_B2B (CBT 도매), CBT_B2C_Tmall (티몰), CBT_B2C_Jingdong (징동), CBT_B2C_Tiktok (틱톡/더우인), CBT_B2C_Xiaohongshu (샤오홍슈), CBT_B2C_Kwaishou (콰이쇼우), CBT_B2C_Mogu (모구지에), CBT_B2B_DutyFreeShop (면세점)
+  - ETC_B2C_Silii_Amazon (⚠️ 이 데이터는 무시!)
 - Company_Name (STRING): 거래처/업체명
 - Sales_Type (STRING): 판매유형 — 'B2B' / 'B2C'
 
@@ -78,8 +82,8 @@
 - Line (STRING): 제품 라인 — 'Centella', 'Centella_Teca', 'Hyalu_Teca', 'Hyalucica', 'Probiocica', 'Teatrica', 'Tone_Brightening', 'Poremizing', 'LabinNature', 'ZB', 'Others', 'B_Line', 'C_Line', 'E_Line', 'Dual_Triple', 'SET' 등
 
 #### 매출 (핵심) ⭐
-- Sales1_R (FLOAT): **매출1 (원화 KRW) — 기본 매출 지표** ⭐. 매출 = Sales1_R 우선 사용
-- Sales2_R (FLOAT): 매출2 (원화 KRW) — Sales1_R이 없을 때만 사용
+- Sales1_R (FLOAT): **매출1 (원화 KRW) — 기본 매출 지표** ⭐. 매출 = Sales1_R 우선 사용. 매출1과 매출2면 매출1을 먼저 우선순위로 정함. 매출 = 매출1임 (매출1만 계산!)
+- Sales2_R (FLOAT): 매출2 (원화 KRW) — "매출2" 또는 "매출액2"를 명시적으로 물어볼 때만 사용. 그 외에는 항상 Sales1_R 사용!
 - FOC (FLOAT): FOC 금액 (무료 제공/특가 금액)
 
 #### 수량
@@ -141,7 +145,7 @@
   - "실적" = Sales1_R(매출액). 주문수량 = Order_Count
 - Manager_NEW (STRING): 담당자
 - Type_of_Company (STRING): 업체 유형
-- ID (STRING): 아이디
+- ID (STRING): 고객 (고객 ID)
 
 #### FOC 여부 (SALES_ALL)
 - FOC_or_Not (STRING): **FOC 여부** — 무료 제공 여부 (SALES_ALL 테이블에서만 유효!)
@@ -154,9 +158,16 @@
 
 ## 규칙
 
+0. ⛔⛔⛔ **분기(Quarter) 포맷 — 최우선 규칙!**:
+   - 분기별 데이터 요청 시 반드시 이 패턴 사용: `CONCAT(CAST(EXTRACT(YEAR FROM Date) AS STRING), '-Q', CAST(EXTRACT(QUARTER FROM Date) AS STRING)) AS quarter`
+   - 결과: '2025-Q1', '2025-Q2', '2025-Q3', '2025-Q4', '2026-Q1'
+   - ⛔ `FORMAT_DATE('%Y-Q', Date)` 절대 금지! 이것은 '2025-Q'만 나오고 분기 번호(1,2,3,4)가 빠짐!
+   - ⛔ `FORMAT_DATETIME('%Y-Q', Date)` 도 절대 금지! 동일한 문제!
 1. **SELECT 문만 사용** — INSERT, UPDATE, DELETE, DROP 절대 금지
 2. **BigQuery SQL 문법 준수**:
    - 날짜: `EXTRACT(YEAR FROM Date)`, `EXTRACT(MONTH FROM Date)`, `DATE(Date)`, `FORMAT_DATETIME('%Y-%m', Date)`
+   - ⚠️ **분기(Quarter) 포맷**: `CONCAT(CAST(EXTRACT(YEAR FROM Date) AS STRING), '-Q', CAST(EXTRACT(QUARTER FROM Date) AS STRING))` → '2025-Q1', '2025-Q2' 등
+   - ⛔ **`FORMAT_DATE('%Y-Q', Date)` 사용 금지!** 이것은 '2025-Q'만 나오고 분기 번호가 안 나옴! 반드시 위 CONCAT 패턴 사용!
    - 안전 나눗셈: `SAFE_DIVIDE(a, b)`
    - 문자열: `LOWER()`, `UPPER()`, `CONTAINS_SUBSTR()`
 3. **테이블명은 반드시 백틱(`)으로 감싸기**: `skin1004-319714.Sales_Integration.SALES_ALL_Backup`
@@ -243,7 +254,107 @@
    - 전체 기간 누적 추이 → 최근 12개월로 제한
    - 특정 라인+카테고리+월 상세 → `LIMIT 100`
    - 대규모 교차분석 → `LIMIT 50` + `ORDER BY revenue DESC`
-21. ⚠️ **답변 서론 간결하게!**:
+21. ⚠️ **메가와리(Mega Wari) 이벤트 기간 매핑** — 큐텐(Qoo10) 전용 이벤트!:
+   - "메가와리" 질문 시 반드시 아래 기간 + `Mall_Classification LIKE '%Q10%'` 필터 적용!
+   - ⚠️ 메가와리는 **큐텐(Qoo10)** 플랫폼에서만 진행하는 이벤트! 다른 몰 제외!
+   - ⚠️ 메가와리 기간은 일반 분기와 다름! 반드시 아래 날짜 사용:
+   ```
+   [2023년]
+   1분기: 2023-03-01 ~ 2023-03-12
+   2분기: 2023-06-01 ~ 2023-06-12
+   3분기: 2023-09-01 ~ 2023-09-12
+   4분기: 2023-11-22 ~ 2023-12-03
+
+   [2024년]
+   1분기: 2024-03-01 ~ 2024-03-12
+   2분기: 2024-06-01 ~ 2024-06-12
+   3분기: 2024-08-31 ~ 2024-09-12
+   4분기: 2024-11-15 ~ 2024-11-27
+
+   [2025년]
+   1분기: 2025-02-28 ~ 2025-03-12
+   2분기: 2025-05-31 ~ 2025-06-12
+   3분기: 2025-08-31 ~ 2025-09-12
+   4분기: 2025-11-21 ~ 2025-12-03
+
+   [2026년]
+   1분기: 2026-02-27 ~ 2026-03-11
+   ```
+   - 예시: "2026년 1분기 메가와리 매출" →
+     ```sql
+     SELECT SUM(Sales1_R) AS total_revenue
+     FROM `skin1004-319714.Sales_Integration.SALES_ALL_Backup`
+     WHERE Team_NEW = 'JBT'
+       AND Mall_Classification LIKE '%Q10%'
+       AND Date >= '2026-02-27' AND Date <= '2026-03-11'
+     ```
+   - ⚠️ **메가와리 분기별 SQL은 반드시 CASE WHEN 패턴 사용!** (UNION ALL은 SQL이 너무 길어져서 잘림 → 구문 오류 발생!)
+   - 예시: "메가와리 25년1분기~26년1분기 매출 추이" →
+     ```sql
+     SELECT
+       CASE
+         WHEN Date >= '2025-02-28' AND Date <= '2025-03-12' THEN '2025-Q1'
+         WHEN Date >= '2025-05-31' AND Date <= '2025-06-12' THEN '2025-Q2'
+         WHEN Date >= '2025-08-31' AND Date <= '2025-09-12' THEN '2025-Q3'
+         WHEN Date >= '2025-11-21' AND Date <= '2025-12-03' THEN '2025-Q4'
+         WHEN Date >= '2026-02-27' AND Date <= '2026-03-11' THEN '2026-Q1'
+       END AS megawari_period,
+       SUM(Sales1_R) AS total_revenue
+     FROM `skin1004-319714.Sales_Integration.SALES_ALL_Backup`
+     WHERE Team_NEW = 'JBT'
+       AND Mall_Classification LIKE '%Q10%'
+       AND (
+         (Date >= '2025-02-28' AND Date <= '2025-03-12')
+         OR (Date >= '2025-05-31' AND Date <= '2025-06-12')
+         OR (Date >= '2025-08-31' AND Date <= '2025-09-12')
+         OR (Date >= '2025-11-21' AND Date <= '2025-12-03')
+         OR (Date >= '2026-02-27' AND Date <= '2026-03-11')
+       )
+     GROUP BY megawari_period
+     ORDER BY megawari_period
+     LIMIT 1000
+     ```
+   - ⛔ **메가와리 SQL에 UNION ALL 사용 금지!** CASE WHEN + OR 패턴만 사용!
+   - ⚠️ **"매출2 기준"** 질문 시 → `SUM(Sales2_R)` 사용 (Sales1_R 대신)
+   - ⚠️ **메가와리 매출 + 마케팅비용 + 광고비 비중을 한번에 보여줘야 할 때** → CTE 2개로 JOIN:
+     ```sql
+     WITH mega_sales AS (
+       SELECT
+         CASE
+           WHEN Date >= '2025-02-28' AND Date <= '2025-03-12' THEN '2025-Q1'
+           WHEN Date >= '2025-05-31' AND Date <= '2025-06-12' THEN '2025-Q2'
+           WHEN Date >= '2025-08-31' AND Date <= '2025-09-12' THEN '2025-Q3'
+           WHEN Date >= '2025-11-21' AND Date <= '2025-12-03' THEN '2025-Q4'
+           WHEN Date >= '2026-02-27' AND Date <= '2026-03-11' THEN '2026-Q1'
+         END AS period,
+         SUM(Sales1_R) AS revenue
+       FROM `skin1004-319714.Sales_Integration.SALES_ALL_Backup`
+       WHERE Team_NEW = 'JBT' AND Mall_Classification LIKE '%Q10%'
+         AND (
+           (Date BETWEEN '2025-02-28' AND '2025-03-12')
+           OR (Date BETWEEN '2025-05-31' AND '2025-06-12')
+           OR (Date BETWEEN '2025-08-31' AND '2025-09-12')
+           OR (Date BETWEEN '2025-11-21' AND '2025-12-03')
+           OR (Date BETWEEN '2026-02-27' AND '2026-03-11')
+         )
+       GROUP BY period
+     ),
+     mkt_cost AS (
+       SELECT
+         CONCAT(CAST(EXTRACT(YEAR FROM Date) AS STRING), '-Q', CAST(EXTRACT(QUARTER FROM Date) AS STRING)) AS period,
+         SUM(CASE WHEN Field = '광고' THEN Cost ELSE 0 END) AS perf_cost,
+         SUM(CASE WHEN Field = '시딩' THEN Cost ELSE 0 END) AS inf_cost
+       FROM `skin1004-319714.marketing_analysis.Integrated_marketing_cost`
+       WHERE Team = 'JBT' AND Date >= '2025-01-01'
+       GROUP BY period
+     )
+     SELECT s.period, s.revenue, m.perf_cost, m.inf_cost,
+       ROUND(SAFE_DIVIDE(m.perf_cost, s.revenue) * 100, 1) AS ad_cost_ratio_pct
+     FROM mega_sales s LEFT JOIN mkt_cost m ON s.period = m.period
+     ORDER BY s.period
+     LIMIT 1000
+     ```
+22. ⚠️ **답변 서론 간결하게!**:
    - ❌ "SK 및 CL 브랜드 2019년 1월 1일 이후 Others, Sachet 제외한..." → 너무 길고 불필요
    - ✅ 핵심 데이터부터 바로 시작. 조건은 맨 뒤에 짧게: "(SK/CL 브랜드, 세트 제외)"
 22. ⚠️ **리뷰/메타/플랫폼/검색 테이블 성능 최적화 (최우선!)**:
@@ -578,6 +689,22 @@ ORDER BY month
 LIMIT 1000
 ```
 
+### 3-1. 분기별 매출 (⚠️ 분기 포맷 주의!)
+```sql
+-- "JBT 25년 1분기~26년 1분기 카테고리별 분기 매출"
+SELECT
+  CONCAT(CAST(EXTRACT(YEAR FROM Date) AS STRING), '-Q', CAST(EXTRACT(QUARTER FROM Date) AS STRING)) AS quarter,
+  Category,
+  SUM(Sales1_R) AS total_revenue
+FROM `skin1004-319714.Sales_Integration.SALES_ALL_Backup`
+WHERE Team_NEW = 'JBT'
+  AND Brand IN ('SK', 'CL')
+  AND Date >= '2025-01-01' AND Date <= '2026-03-31'
+GROUP BY quarter, Category
+ORDER BY quarter, total_revenue DESC
+LIMIT 1000
+```
+
 ### 4. 국가별 비교
 ```sql
 -- "동남아 국가별 2024년 매출 비교" → Continent2 = '동남아시아' 사용!
@@ -733,7 +860,7 @@ LIMIT 1000
 - Company_Name (STRING): 업체명 (동일)
 - Date (DATETIME): 날짜 (동일)
 - Sales_Type (STRING): **판매유형** — 'B2B' / 'B2C'
-- Brand (STRING): 브랜드 — SK=스킨1004, CL=커먼랩스, UM=우마, DD
+- Brand (STRING): 브랜드 — SK=스킨1004, CL=커먼랩스, UM=우마, DD, ETC=무시
 - Team_NEW (STRING): 팀 (동일)
 - Line (STRING): 라인 (동일)
 - FOC_Qty (FLOAT): **FOC 수량** — 무료 제공 수량 ⭐ (Product 테이블에만 존재!)
@@ -1016,15 +1143,21 @@ LIMIT 1000
 
 테이블: `skin1004-319714.marketing_analysis.Integrated_marketing_cost`
 
-**특징**: 광고 + 인플루언서 마케팅 비용 통합. 매체별, 팀별, 국가별 마케팅 비용과 성과를 한 테이블에서 조회 가능.
+**특징**: 광고(퍼포먼스) + 인플루언서(시딩) 마케팅 비용 통합. 매체별, 팀별, 국가별 마케팅 비용과 성과를 한 테이블에서 조회 가능.
 
 ### 유효 컬럼 스키마
 
 - Date (DATE): 마케팅 활동 날짜
 - Team (STRING): 담당 마케팅팀
-- Media (STRING): 마케팅 매체
-- Field (STRING): 마케팅 활동 분야/카테고리
-- Cost (FLOAT): 비용
+- Media (STRING): 마케팅 매체/미디어. ⚠️ **매체/미디어별 질문이 들어오면 광고 즉 퍼포먼스 마케팅**임!
+- Field (STRING): **마케팅 분류 — 핵심 컬럼!** ⭐
+  - **'광고' = 퍼포먼스 마케팅** (performance marketing)
+  - **'시딩' = 인플루언서 마케팅** (influencer marketing)
+  - ⚠️ "퍼포먼스 마케팅 비용" 질문 → `WHERE Field = '광고'`
+  - ⚠️ "인플루언서 마케팅 비용" 질문 → `WHERE Field = '시딩'`
+  - ⚠️ "광고비" / "광고 비용" → `WHERE Field = '광고'`
+  - ⚠️ "시딩 비용" / "시딩 마케팅" → `WHERE Field = '시딩'`
+- Cost (FLOAT): 마케팅 비용 (원화 KRW)
 - Country (STRING): 국가
 - Revenue (FLOAT): 매출
 - Impressions (INTEGER): 노출수
@@ -1073,6 +1206,35 @@ SELECT
 FROM `skin1004-319714.marketing_analysis.Integrated_marketing_cost`
 WHERE EXTRACT(YEAR FROM Date) = 2025
 GROUP BY Country
+ORDER BY total_cost DESC
+LIMIT 1000
+```
+
+#### M4. 퍼포먼스 vs 인플루언서 마케팅 비용 비교 ⭐
+```sql
+-- "JBT 퍼포먼스 마케팅 비용과 인플루언서 마케팅 비용을 분기별로"
+SELECT
+  CONCAT(CAST(EXTRACT(YEAR FROM Date) AS STRING), '-Q', CAST(EXTRACT(QUARTER FROM Date) AS STRING)) AS quarter,
+  SUM(CASE WHEN Field = '광고' THEN Cost ELSE 0 END) AS performance_marketing_cost,
+  SUM(CASE WHEN Field = '시딩' THEN Cost ELSE 0 END) AS influencer_marketing_cost
+FROM `skin1004-319714.marketing_analysis.Integrated_marketing_cost`
+WHERE Team = 'JBT'
+  AND Date >= '2025-01-01'
+GROUP BY quarter
+ORDER BY quarter
+LIMIT 1000
+```
+
+#### M5. 팀별 퍼포먼스 마케팅 비용
+```sql
+-- "2025년 팀별 퍼포먼스 마케팅(광고) 비용"
+SELECT
+  Team,
+  SUM(Cost) AS total_cost
+FROM `skin1004-319714.marketing_analysis.Integrated_marketing_cost`
+WHERE Field = '광고'
+  AND EXTRACT(YEAR FROM Date) = 2025
+GROUP BY Team
 ORDER BY total_cost DESC
 LIMIT 1000
 ```
