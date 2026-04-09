@@ -226,6 +226,41 @@
     "KBT": "notion", "JBT": "notion",
     "Google Workspace": "gws"
   };
+  var _DB_ALIASES = {};  // @@alias → canonical key (populated by loadDbSources)
+  var _sourceChipsContainer = null;
+  function _ensureChipsContainer() {
+    if (_sourceChipsContainer) return _sourceChipsContainer;
+    _sourceChipsContainer = document.createElement("div");
+    _sourceChipsContainer.id = "active-source-chips";
+    _sourceChipsContainer.className = "active-source-chips";
+    var inputArea = document.querySelector(".chat-input-wrapper") || (document.getElementById("chat-input") || {}).parentElement;
+    if (inputArea && inputArea.parentElement) inputArea.parentElement.insertBefore(_sourceChipsContainer, inputArea);
+    return _sourceChipsContainer;
+  }
+  function showActiveSourceChips(keys) {
+    var container = _ensureChipsContainer();
+    if (!container) return;
+    container.innerHTML = "";
+    if (!keys || keys.length === 0) { container.style.display = "none"; return; }
+    var colorMap = { bigquery: "#4285f4", notion: "#9b59b6", cs: "#27ae60", gws: "#e89200", team: "#9b59b6" };
+    keys.forEach(function(k) {
+      var route = SOURCE_ROUTE_MAP[k] || "bigquery";
+      var color = colorMap[route] || "#666";
+      var chip = document.createElement("span");
+      chip.className = "source-chip";
+      chip.style.cssText = "background:" + color + "22;color:" + color + ";border:1px solid " + color + "44;padding:2px 8px;border-radius:12px;font-size:12px;font-weight:600;display:inline-flex;align-items:center;gap:4px;";
+      chip.innerHTML = "@@" + k + ' <span class="chip-x" style="cursor:pointer;opacity:0.6;font-size:14px;">&times;</span>';
+      chip.querySelector(".chip-x").addEventListener("click", function() {
+        chip.remove();
+        if (container.children.length === 0) container.style.display = "none";
+      });
+      container.appendChild(chip);
+    });
+    container.style.display = "flex";
+  }
+  function clearActiveSourceChips() {
+    if (_sourceChipsContainer) { _sourceChipsContainer.innerHTML = ""; _sourceChipsContainer.style.display = "none"; }
+  }
   var enabledSources = loadEnabledSources();
 
   function loadEnabledSources() {
@@ -419,8 +454,11 @@
     });
 
     chatInput.addEventListener("input", function () {
-      this.style.height = "auto";
-      this.style.height = Math.min(this.scrollHeight, 150) + "px";
+      var self = this;
+      requestAnimationFrame(function() {
+        self.style.height = "auto";
+        self.style.height = Math.min(self.scrollHeight, 150) + "px";
+      });
       updateSendButton();
     });
 
@@ -466,11 +504,19 @@
       all:'<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>',
     };
 
+    // @@ alias → canonical key mapping (populated into module-level _DB_ALIASES)
     (function loadDbSources() {
       fetch("/api/datasources").then(function(r) { return r.json(); }).then(function(data) {
         _dbSources = data;
+        // Build alias map: key + aliases → canonical key
+        data.forEach(function(d) {
+          _DB_ALIASES[d.key.toLowerCase()] = d.key;
+          (d.aliases || []).forEach(function(a) { _DB_ALIASES[a.toLowerCase()] = d.key; });
+        });
       }).catch(function() {});
     })();
+
+    // ═══ Active Source Chips — uses module-level functions (see IIFE top) ═══
 
     function _createDbDropdown() {
       if (_dbDropdown) return;
@@ -739,8 +785,13 @@
     document.getElementById("btn-expand-sidebar").addEventListener("click", expandSidebar);
 
     // Search
+    var _searchTimer = null;
     convoSearch.addEventListener("input", function () {
-      renderConvoList(this.value.trim().toLowerCase());
+      var val = this.value.trim().toLowerCase();
+      clearTimeout(_searchTimer);
+      _searchTimer = setTimeout(function() {
+        renderConvoList(val);
+      }, 300);
     });
 
     // Dashboard drawer
@@ -987,6 +1038,25 @@
       var streamingMsg = chatMessages.querySelector(".message.streaming");
       if (streamingMsg) streamingMsg.classList.remove("streaming");
     }
+    // === Cleanup: prevent memory leaks when switching conversations ===
+    // Even if no stream is active, _S.el may still reference a previous
+    // assistant message DOM node (set on the last _startTokenDrain and
+    // never nulled after a normal stream completion). The _mdDebounce
+    // timer's closure captures _S.el too — clear it to release refs.
+    if (_S) {
+      if (_S._mdDebounce) {
+        clearTimeout(_S._mdDebounce);
+        _S._mdDebounce = null;
+      }
+      _S.el = null;
+      _S.text = "";
+      _S.completedHtml = "";
+      _S.lastCompleted = "";
+      _S.queue = [];
+    }
+    // Reset pending scroll RAF so it doesn't race with the new DOM
+    _scrollRafPending = false;
+    _autoScrollActive = true;
     try {
       _showSkeleton();
       var resp = await fetch("/api/conversations/" + id);
@@ -1195,6 +1265,7 @@
     text: "",           // accumulated full text (replaces local aiContent during streaming)
     completedHtml: "",
     lastCompleted: "",
+    _mdDebounce: null,  // markdown parse debounce timer
   };
 
   function _startTokenDrain(contentEl) {
@@ -1264,14 +1335,21 @@
       tailText = _S.text;
     }
 
-    // Re-render completed part only when it changes (stable DOM)
+    // Re-render completed part only when it changes (stable DOM) — debounced 50ms
     if (completedText !== _S.lastCompleted) {
       _S.lastCompleted = completedText;
-      try {
-        _S.completedHtml = marked.parse(stripFollowupBlock(completedText), { breaks: true, gfm: true });
-      } catch (e) {
-        _S.completedHtml = "<p>" + completedText.replace(/</g, "&lt;") + "</p>";
-      }
+      clearTimeout(_S._mdDebounce);
+      _S._mdDebounce = setTimeout(function () {
+        try {
+          _S.completedHtml = marked.parse(stripFollowupBlock(completedText), { breaks: true, gfm: true });
+        } catch (e) {
+          _S.completedHtml = "<p>" + completedText.replace(/</g, "&lt;") + "</p>";
+        }
+        // Re-render after debounced parse
+        var tailH = _S.text.slice((_S.text.lastIndexOf("\n\n") >= 0 ? _S.text.lastIndexOf("\n\n") + 2 : 0));
+        var tailHtm = tailH ? '<span class="stream-tail">' + tailH.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/\n/g, "<br>") + '</span>' : "";
+        if (_S.el) _S.el.innerHTML = _S.completedHtml + tailHtm;
+      }, 50);
     }
 
     // Tail: escape HTML and show as raw (fast, no parse needed)
@@ -1291,6 +1369,8 @@
     _S.queue = [];
     _S.completedHtml = "";
     _S.lastCompleted = "";
+    clearTimeout(_S._mdDebounce);
+    _S._mdDebounce = null;
   }
 
   async function sendMessage() {
@@ -1307,6 +1387,19 @@
         text = chips[chipIdx].textContent;
         chatInput.value = text;
       }
+    }
+
+    // Parse @@ source selections from input text
+    var atAtMatches = text.match(/@@(\S+)/g) || [];
+    var atAtKeys = atAtMatches.map(function(m) { return m.substring(2); })
+      .filter(function(k) { return DATA_SOURCE_KEYS.indexOf(k) >= 0 || Object.keys(_DB_ALIASES).indexOf(k.toLowerCase()) >= 0; });
+    // Resolve aliases
+    atAtKeys = atAtKeys.map(function(k) { return _DB_ALIASES[k.toLowerCase()] || k; });
+    // Remove @@ tokens from the displayed text
+    var cleanText = text.replace(/@@\S+\s*/g, "").trim();
+    if (atAtKeys.length > 0) {
+      text = cleanText;
+      showActiveSourceChips(atAtKeys);
     }
 
     lastUserQuery = text;
@@ -1326,8 +1419,13 @@
     chatInput.style.height = "auto";
     clearPendingImages();
     btnSend.disabled = true;
-    // Snapshot slash override BEFORE clearing (used in fetch body below)
-    var _sendSources = slashOverrideSource || enabledSources.slice();
+    // Determine sources: @@ explicit > slash override > null (server default: BQ+GWS+Direct)
+    var _sendSources = null;  // null = server decides (BQ+GWS+Direct only)
+    if (atAtKeys.length > 0) {
+      _sendSources = atAtKeys;  // @@ explicitly selected
+    } else if (slashOverrideSource) {
+      _sendSources = slashOverrideSource;
+    }
     // Clear one-time slash override after snapshot
     if (slashOverrideSource) {
       slashOverrideSource = null;
@@ -1518,9 +1616,12 @@
     }
 
     contentEl.dataset.raw = cleanContent;
+    // Batch all 3 rendering passes in a single RAF to minimize layout thrashing
     renderMarkdown(contentEl, cleanContent);
-    detectAndRenderCharts(contentEl, cleanContent);
-    highlightCodeBlocks(contentEl);
+    requestAnimationFrame(function() {
+      detectAndRenderCharts(contentEl, cleanContent);
+      highlightCodeBlocks(contentEl);
+    });
 
     // Add message action buttons (copy)
     var actionsDiv = document.createElement("div");
@@ -1547,6 +1648,7 @@
 
     isStreaming = false;
     currentAbortController = null;
+    clearActiveSourceChips();  // Clear @@ chips after response complete
     showFollowups(text, cleanContent);
     scrollToBottom();
   }
@@ -2138,28 +2240,40 @@
     chatWelcome.style.display = "flex";
   }
 
+  var _scrollRafPending = false;
   function scrollToBottom() {
-    chatMessages.scrollTop = chatMessages.scrollHeight;
+    if (_scrollRafPending) return;
+    _scrollRafPending = true;
+    requestAnimationFrame(function() {
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+      _scrollRafPending = false;
+    });
   }
 
   // Scroll-to-bottom button + auto-scroll disable on user scroll-up
   var btnScrollBottom = document.getElementById("btn-scroll-bottom");
   var _lastScrollTop = 0;
+  var _scrollThrottled = false;
   chatMessages.addEventListener("scroll", function () {
-    var distFromBottom = chatMessages.scrollHeight - chatMessages.scrollTop - chatMessages.clientHeight;
-    if (btnScrollBottom) {
-      btnScrollBottom.style.display = distFromBottom > 200 ? "flex" : "none";
-    }
-    // Disable auto-scroll if user scrolls UP during streaming
-    if (isStreaming && chatMessages.scrollTop < _lastScrollTop && distFromBottom > 100) {
-      _autoScrollActive = false;
-    }
-    // Re-enable if user scrolls back to bottom
-    if (distFromBottom < 30) {
-      _autoScrollActive = true;
-    }
-    _lastScrollTop = chatMessages.scrollTop;
-  });
+    if (_scrollThrottled) return;
+    _scrollThrottled = true;
+    requestAnimationFrame(function() {
+      var distFromBottom = chatMessages.scrollHeight - chatMessages.scrollTop - chatMessages.clientHeight;
+      if (btnScrollBottom) {
+        btnScrollBottom.style.display = distFromBottom > 200 ? "flex" : "none";
+      }
+      // Disable auto-scroll if user scrolls UP during streaming
+      if (isStreaming && chatMessages.scrollTop < _lastScrollTop && distFromBottom > 100) {
+        _autoScrollActive = false;
+      }
+      // Re-enable if user scrolls back to bottom
+      if (distFromBottom < 30) {
+        _autoScrollActive = true;
+      }
+      _lastScrollTop = chatMessages.scrollTop;
+      _scrollThrottled = false;
+    });
+  }, { passive: true });
   if (btnScrollBottom) {
     btnScrollBottom.addEventListener("click", function () {
       _autoScrollActive = true;
