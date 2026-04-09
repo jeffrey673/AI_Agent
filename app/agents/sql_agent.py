@@ -217,37 +217,13 @@ def generate_sql(state: AgentState) -> Dict[str, Any]:
             logger.info("sql_cache_hit", query=query[:60], cache_key=cache_key)
             return {"generated_sql": cached_sql, "error": None}
 
-    # 1) Include primary sales table only if allowed
+    # 1) Determine which schemas to include
     include_sales = (allowed_tables is None) or (settings.sales_table_full_path in allowed_tables)
-    if include_sales:
-        if not _schema_cache_sales:
-            try:
-                schema = bq.get_table_schema(settings.sales_table_full_path)
-                schema_lines = [
-                    f"  - {col['name']} ({col['type']}): {col['description']}"
-                    for col in schema
-                ]
-                table_short = settings.sales_table_full_path.rsplit(".", 1)[-1]
-                _schema_cache_sales = f"\n\n### 실제 테이블 스키마 ({table_short})\n" + "\n".join(schema_lines)
-            except Exception as e:
-                logger.warning("schema_fetch_failed", table="SALES_ALL_Backup", error=str(e))
-        schema_context = _schema_cache_sales
-    else:
-        schema_context = ""
 
-    # 1b) Include Product table if allowed
+    # 1b) Determine Product inclusion
     product_path = f"{settings.gcp_project_id}.{settings.bq_dataset_sales}.Product"
     include_product = (allowed_tables is None and any(kw in query.lower() for kw in ["제품", "product", "sku", "카테고리"])) or \
                       (allowed_tables is not None and product_path in allowed_tables)
-    if include_product and product_path not in _schema_cache_tables:
-        try:
-            tbl_schema = bq.get_table_schema(product_path)
-            tbl_lines = [f"  - {col['name']} ({col['type']}): {col['description']}" for col in tbl_schema]
-            _schema_cache_tables[product_path] = f"\n\n### 제품 마스터 (Product)\n" + "\n".join(tbl_lines)
-        except Exception as e:
-            logger.warning("schema_fetch_failed", table="Product", error=str(e))
-    if include_product:
-        schema_context += _schema_cache_tables.get(product_path, "")
 
     # 2) Lazy-load: only include marketing tables whose keywords match AND are allowed
     query_lower = query.lower()
@@ -257,10 +233,22 @@ def generate_sql(state: AgentState) -> Dict[str, Any]:
         and (allowed_tables is None or t[0] in allowed_tables)
     ]
 
-    # Parallel-fetch uncached schemas (avoid serial BQ roundtrips)
-    uncached = [(tp, lb) for tp, lb, _ in matched_entries if tp not in _schema_cache_tables]
-    if uncached:
-        def _fetch_schema(table_path, label):
+    # ── Parallel schema fetch: sales + product + marketing in one pool ──
+    # Build list of uncached fetch jobs. Each job is a tuple:
+    #   (kind, table_path, label)
+    # kind ∈ {"sales", "product", "marketing"} — used to route the result
+    # back into the correct cache slot after fetching.
+    fetch_jobs = []
+    if include_sales and not _schema_cache_sales:
+        fetch_jobs.append(("sales", settings.sales_table_full_path, None))
+    if include_product and product_path not in _schema_cache_tables:
+        fetch_jobs.append(("product", product_path, "제품 마스터"))
+    for tp, lb, _ in matched_entries:
+        if tp not in _schema_cache_tables:
+            fetch_jobs.append(("marketing", tp, lb))
+
+    if fetch_jobs:
+        def _fetch_schema(kind, table_path, label):
             try:
                 tbl_schema = bq.get_table_schema(table_path)
                 tbl_lines = [
@@ -268,17 +256,42 @@ def generate_sql(state: AgentState) -> Dict[str, Any]:
                     for col in tbl_schema
                 ]
                 table_short = table_path.rsplit(".", 1)[-1]
-                return table_path, f"\n\n### {label} ({table_short})\n" + "\n".join(tbl_lines)
+                if kind == "sales":
+                    text = f"\n\n### 실제 테이블 스키마 ({table_short})\n" + "\n".join(tbl_lines)
+                elif kind == "product":
+                    text = f"\n\n### 제품 마스터 (Product)\n" + "\n".join(tbl_lines)
+                else:  # marketing
+                    text = f"\n\n### {label} ({table_short})\n" + "\n".join(tbl_lines)
+                return kind, table_path, text
             except Exception as e:
-                logger.warning("schema_fetch_failed", table=table_path, error=str(e))
-                return table_path, ""
+                # Preserve original per-table warning labels
+                warn_label = (
+                    "SALES_ALL_Backup" if kind == "sales"
+                    else "Product" if kind == "product"
+                    else table_path
+                )
+                logger.warning("schema_fetch_failed", table=warn_label, error=str(e))
+                return kind, table_path, ""
 
-        with concurrent.futures.ThreadPoolExecutor(max_workers=min(len(uncached), 5)) as pool:
-            futures = [pool.submit(_fetch_schema, tp, lb) for tp, lb in uncached]
+        with concurrent.futures.ThreadPoolExecutor(max_workers=min(len(fetch_jobs), 5)) as pool:
+            futures = [pool.submit(_fetch_schema, k, tp, lb) for k, tp, lb in fetch_jobs]
             for f in concurrent.futures.as_completed(futures):
-                tp, schema_text = f.result()
-                _schema_cache_tables[tp] = schema_text
+                kind, tp, schema_text = f.result()
+                if kind == "sales":
+                    # Only update cache on success; on failure leave empty so next call retries
+                    if schema_text:
+                        _schema_cache_sales = schema_text
+                elif kind == "product":
+                    # Original behavior: don't cache failures for Product (retry next call)
+                    if schema_text:
+                        _schema_cache_tables[tp] = schema_text
+                else:  # marketing — original cached empty string on failure
+                    _schema_cache_tables[tp] = schema_text
 
+    # ── Assemble schema_context in stable order: sales → product → marketing ──
+    schema_context = _schema_cache_sales if include_sales else ""
+    if include_product:
+        schema_context += _schema_cache_tables.get(product_path, "")
     for table_path, _, _ in matched_entries:
         schema_context += _schema_cache_tables.get(table_path, "")
 
@@ -704,7 +717,11 @@ def format_answer(state: AgentState) -> Dict[str, Any]:
 ---
 *조회 기준: {today} | {table_source}*
 > 💡 **이런 것도 물어보세요**
-> - [후속 질문 3개]
+> - [구체적 후속 질문 1 — 다른 기간/국가/제품 등 범위 확장]
+> - [구체적 후속 질문 2 — 관련 데이터 심화 분석]
+> - [구체적 후속 질문 3 — 다른 관점의 분석]
+
+⚠️ 반드시 구체적인 후속 질문 3개를 생성하세요. "[후속 질문 3개]" 같은 플레이스홀더 텍스트를 절대 출력하지 마세요. 실제 사용자가 클릭해서 바로 질문할 수 있는 구체적 문장이어야 합니다.
 
 ⚠️ **분량 제한 (최우선)**:
 - 전체 답변은 **800자 이내**로 작성! 표는 글자수에 포함하지 않음
@@ -728,7 +745,7 @@ def format_answer(state: AgentState) -> Dict[str, Any]:
         # Answer generation: foreground. Chart: parallel with short timeout.
         # User sees answer immediately; chart appended only if ready fast enough.
         with concurrent.futures.ThreadPoolExecutor(max_workers=2) as executor:
-            answer_future = executor.submit(llm.generate, prompt, None, 0.3, 3072)
+            answer_future = executor.submit(llm.generate, prompt, None, 0.05, 3072)
             chart_llm = get_flash_client()
             chart_future = executor.submit(
                 _try_generate_chart, chart_llm, query, sql, result_preview, results
@@ -1126,7 +1143,7 @@ async def run_sql_agent_unlimited(
 4. 한국어로 답변하세요.
 5. 금액: 1억 이상은 "약 OO.O억원", 1억 미만은 천 단위 쉼표."""
 
-        answer = llm.generate(prompt, temperature=0.3)
+        answer = llm.generate(prompt, temperature=0.05)
         return answer
 
     except Exception as e:
@@ -1249,9 +1266,13 @@ def run_sql_agent_stream(
 ### 📊 [제목] → #### 요약 → #### 상세 데이터 (표) → #### 분석 및 인사이트
 ---
 *조회 기준: {today} | {table_source}*
-> 💡 후속 질문 3개
+> 💡 **이런 것도 물어보세요**
+> - [구체적 후속 질문 1 — 다른 기간/국가/제품 등 범위 확장]
+> - [구체적 후속 질문 2 — 관련 데이터 심화 분석]
+> - [구체적 후속 질문 3 — 다른 관점의 분석]
 
-규칙: SQL 결과만 사용. 금액 1억+→"약 OO.O억원". 표 필수. 인사이트 필수. 조건은 끝에 괄호로."""
+규칙: SQL 결과만 사용. 금액 1억+→"약 OO.O억원". 표 필수. 인사이트 필수. 조건은 끝에 괄호로.
+⚠️ 반드시 구체적인 후속 질문 3개를 생성하세요. "[후속 질문]" 같은 플레이스홀더를 절대 출력하지 마세요."""
 
     # Start chart generation in background BEFORE streaming answer
     import concurrent.futures
@@ -1260,7 +1281,7 @@ def run_sql_agent_stream(
     chart_future = _chart_executor.submit(_try_generate_chart, chart_llm, query, sql, result_preview, results)
 
     # Stream answer (chart generates in parallel)
-    for chunk in llm.generate_stream(prompt, temperature=0.3, max_output_tokens=4096):
+    for chunk in llm.generate_stream(prompt, temperature=0.05, max_output_tokens=4096):
         yield chunk
 
     # Chart should be done by now (ran in parallel with answer streaming)
