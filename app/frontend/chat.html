@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko" class="dark">
 <head>
+  <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#111111">
@@ -10,7 +11,7 @@
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
   <link rel="icon" type="image/png" href="/static/favicon.png">
-  <link rel="stylesheet" href="/static/style.css?v=139">
+  <link rel="stylesheet" href="/static/style.css?v=143">
   <!-- Markdown + Code highlighting -->
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/github-dark.min.css" id="hljs-theme">
@@ -69,6 +70,14 @@
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
           <span>System Status</span>
           <div class="sidebar-status-inline" id="sidebar-status-inline"></div>
+        </button>
+      </div>
+
+      <!-- Wiki button (visible to admin only) -->
+      <div class="sidebar-dashboard sidebar-bottom-btn" id="wiki-btn-wrap" style="display:none">
+        <button class="sidebar-dashboard-btn" id="btn-wiki">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          <span>Knowledge Wiki</span>
         </button>
       </div>
 
@@ -184,6 +193,35 @@
     <div class="status-drawer-body" id="status-items"></div>
   </div>
 
+  <!-- Wiki Drawer -->
+  <div id="skin-wiki-overlay" class="closed"></div>
+  <div id="skin-wiki-drawer" class="closed" role="dialog" aria-label="Knowledge Wiki">
+    <div class="drawer-header">
+      <span class="drawer-title">Knowledge Wiki</span>
+      <button class="drawer-close" id="wiki-drawer-close">&times;</button>
+    </div>
+    <div class="wiki-stats-bar" id="wiki-stats-bar"></div>
+    <div class="wiki-tabs">
+      <button class="wiki-tab active" data-tab="map">지도</button>
+      <button class="wiki-tab" data-tab="insights">🧠 인사이트</button>
+      <button class="wiki-tab" data-tab="recent">최근 추출</button>
+      <button class="wiki-tab" data-tab="reports">🚩 신고</button>
+      <button class="wiki-tab" data-tab="graph">관계 그래프</button>
+    </div>
+    <div class="wiki-tab-content active" id="wiki-tab-map"></div>
+    <div class="wiki-tab-content" id="wiki-tab-insights"></div>
+    <div class="wiki-tab-content" id="wiki-tab-recent"></div>
+    <div class="wiki-tab-content" id="wiki-tab-reports"></div>
+    <div class="wiki-tab-content" id="wiki-tab-graph"></div>
+    <!-- Entity page modal -->
+    <div id="wiki-entity-modal" class="closed">
+      <div class="wiki-entity-modal-body">
+        <button class="wiki-entity-modal-close" id="wiki-entity-modal-close">&times;</button>
+        <div id="wiki-entity-modal-content"></div>
+      </div>
+    </div>
+  </div>
+
   <!-- Admin Drawer -->
   <div id="skin-admin-overlay" class="closed"></div>
   <div id="skin-admin-drawer" class="closed" role="dialog" aria-label="User Management">
@@ -225,6 +263,6 @@
   <!-- Theme Toggle -->
   <button id="skin-theme-toggle" aria-label="Toggle theme"></button>
 
-  <script src="/frontend/chat.js?v=203"></script>
+  <script src="/frontend/chat.js?v=209"></script>
 </body>
 </html>

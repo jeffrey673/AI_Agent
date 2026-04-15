@@ -4,7 +4,7 @@ module.exports = {
     {
       name: "skin1004-prod",
       script: "python",
-      args: "-X utf8 -m uvicorn app.main:app --host 0.0.0.0 --port 3000 --reload",
+      args: "-X utf8 -m uvicorn app.main:app --host 0.0.0.0 --port 3000 --workers 4",
       cwd: "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent",
       interpreter: "none",
       windowsHide: true,
@@ -28,7 +28,7 @@ module.exports = {
     {
       name: "skin1004-dev",
       script: "python",
-      args: "-X utf8 -m uvicorn app.main:app --host 0.0.0.0 --port 3001 --reload",
+      args: "-X utf8 -m uvicorn app.main:app --host 0.0.0.0 --port 3001 --workers 2",
       cwd: "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent",
       interpreter: "none",
       windowsHide: true,

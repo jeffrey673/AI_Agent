@@ -279,7 +279,7 @@
   // Source key → route mapping for orchestrator
   var SOURCE_ROUTE_MAP = {
     "매출": "bigquery", "제품": "bigquery",
-    "광고데이터": "bigquery", "마케팅비용": "bigquery",
+    "광고": "bigquery", "마케팅": "bigquery",
     "Shopify": "bigquery", "플랫폼": "bigquery",
     "인플루언서": "bigquery", "아마존검색": "bigquery",
     "메타광고": "bigquery",
@@ -874,12 +874,26 @@
 
     // Admin drawer
     document.getElementById("btn-admin").addEventListener("click", openAdminDrawer);
+    var _wikiBtn = document.getElementById("btn-wiki");
+    if (_wikiBtn) _wikiBtn.addEventListener("click", openWikiDrawer);
+    var _wikiClose = document.getElementById("wiki-drawer-close");
+    if (_wikiClose) _wikiClose.addEventListener("click", closeWikiDrawer);
+    var _wikiOverlay = document.getElementById("skin-wiki-overlay");
+    if (_wikiOverlay) _wikiOverlay.addEventListener("click", closeWikiDrawer);
+    var _wikiModal = document.getElementById("wiki-entity-modal");
+    if (_wikiModal) _wikiModal.addEventListener("click", function(e) {
+      if (e.target === _wikiModal) _wikiModal.className = "closed";
+    });
+    var _wikiModalClose = document.getElementById("wiki-entity-modal-close");
+    if (_wikiModalClose) _wikiModalClose.addEventListener("click", function() {
+      document.getElementById("wiki-entity-modal").className = "closed";
+    });
     document.getElementById("admin-drawer-close").addEventListener("click", closeAdminDrawer);
     document.getElementById("skin-admin-overlay").addEventListener("click", closeAdminDrawer);
 
     document.addEventListener("keydown", function (e) {
       if (e.key === "Escape") {
-        closeDashboard(); closeStatusDrawer(); closeAdminDrawer();
+        closeDashboard(); closeStatusDrawer(); closeAdminDrawer(); closeWikiDrawer();
         var helpOv = document.getElementById("shortcuts-overlay");
         if (helpOv) helpOv.remove();
       }
@@ -2467,8 +2481,8 @@
     "매출":           { label: "매출", svg: _svgBar },
     "제품":           { label: "제품", svg: _svgBox },
     // 마케팅
-    "광고데이터":      { label: "광고데이터", svg: _svgUpload },
-    "마케팅비용":      { label: "마케팅비용", svg: _svgDollar },
+    "광고":           { label: "광고", svg: _svgUpload },
+    "마케팅":          { label: "마케팅", svg: _svgDollar },
     "Shopify":        { label: "Shopify", svg: _svgBag },
     "플랫폼":         { label: "플랫폼", svg: _svgMonitor },
     "인플루언서":      { label: "인플루언서", svg: _svgUsers },
@@ -2485,6 +2499,8 @@
     "JBT":            { label: "JBT", svg: _svgGlobe },
     "GM EAST":        { label: "GM EAST", svg: _svgGlobe },
     "GM WEST":        { label: "GM WEST", svg: _svgGlobe },
+    "B2B1":           { label: "B2B1", svg: _svgGlobe },
+    "B2B2":           { label: "B2B2", svg: _svgGlobe },
     "BCM":            { label: "BCM", svg: _svgBar },
     "PEOPLE":         { label: "PEOPLE", svg: _svgUsers },
     "IT":             { label: "IT", svg: _svgMonitor },
@@ -2507,7 +2523,7 @@
   // Quick-select presets for // command
   var SLASH_PRESETS = [
     { cmd: "매출", label: "매출 데이터", keys: ["매출", "제품"] },
-    { cmd: "광고", label: "광고 데이터", keys: ["광고데이터", "메타광고"] },
+    { cmd: "광고", label: "광고 데이터", keys: ["광고", "메타광고"] },
     { cmd: "리뷰", label: "리뷰 전체", keys: ["아마존 리뷰", "큐텐 리뷰", "쇼피 리뷰", "스마트스토어 리뷰"] },
     { cmd: "notion", label: "Notion", keys: ["Notion"] },
     { cmd: "cs", label: "CS Q&A", keys: ["CS Q&A"] },
@@ -3068,6 +3084,8 @@
   function showAdminButton() {
     if (currentUser && currentUser.role === "admin") {
       document.getElementById("admin-btn-wrap").style.display = "";
+      var wb = document.getElementById("wiki-btn-wrap");
+      if (wb) wb.style.display = "";
     }
   }
 
@@ -3100,6 +3118,510 @@
   function closeAdminDrawer() {
     document.getElementById("skin-admin-overlay").className = "closed";
     document.getElementById("skin-admin-drawer").className = "closed";
+  }
+
+  // ===== Knowledge Wiki Drawer =====
+  function openWikiDrawer() {
+    document.getElementById("skin-wiki-overlay").className = "open";
+    document.getElementById("skin-wiki-drawer").className = "open";
+    _wikiSwitchTab("map");
+    _wikiLoadStats();
+    _wikiLoadMap();
+  }
+  function closeWikiDrawer() {
+    document.getElementById("skin-wiki-overlay").className = "closed";
+    document.getElementById("skin-wiki-drawer").className = "closed";
+  }
+
+  function _wikiSwitchTab(name) {
+    document.querySelectorAll(".wiki-tab").forEach(function(t) {
+      t.classList.toggle("active", t.getAttribute("data-tab") === name);
+    });
+    document.querySelectorAll(".wiki-tab-content").forEach(function(c) {
+      c.classList.toggle("active", c.id === "wiki-tab-" + name);
+    });
+    if (name === "recent") _wikiLoadRecent();
+    if (name === "graph") _wikiLoadGraph();
+    if (name === "reports") _wikiLoadReports();
+    if (name === "insights") _wikiLoadInsights();
+  }
+  document.querySelectorAll(".wiki-tab").forEach(function(tab) {
+    tab.addEventListener("click", function() {
+      _wikiSwitchTab(tab.getAttribute("data-tab"));
+    });
+  });
+
+  function _escape(s) {
+    if (s == null) return "";
+    return String(s).replace(/[&<>"]/g, function(c) {
+      return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c];
+    });
+  }
+
+  function _wikiLoadStats() {
+    fetch("/api/admin/wiki").then(function(r) { return r.json(); }).then(function(d) {
+      var stats = d.counts_by_status || {};
+      var domains = d.counts_by_domain || [];
+      var total = 0;
+      Object.values(stats).forEach(function(v) { total += v; });
+      var bar = document.getElementById("wiki-stats-bar");
+      if (!bar) return;
+      var domainStr = domains.map(function(x) {
+        return '<span class="wiki-chip">' + _escape(x.domain) + ' <b>' + x.cnt + '</b></span>';
+      }).join(" ");
+      bar.innerHTML =
+        '<span class="wiki-stat-item">총 <b>' + total + '</b>건</span>' +
+        '<span class="wiki-stat-item">active <b>' + (stats.active || 0) + '</b></span>' +
+        '<span class="wiki-stat-item">pending <b>' + (stats.pending || 0) + '</b></span>' +
+        '<span class="wiki-stat-item">archived <b>' + (stats.archived || 0) + '</b></span>' +
+        '<span class="wiki-stat-sep">|</span>' + domainStr;
+    }).catch(function(e) { console.error("wiki stats failed", e); });
+  }
+
+  function _wikiLoadMap() {
+    var el = document.getElementById("wiki-tab-map");
+    el.innerHTML = '<div class="wiki-loading">지도 불러오는 중...</div>';
+    fetch("/api/admin/wiki/map").then(function(r) { return r.json(); }).then(function(d) {
+      var html = '<div class="wiki-map-summary">도메인 <b>' + d.total_domains + '</b> / 엔티티 <b>' + d.total_entities + '</b> / 팩트 <b>' + d.total_facts + '</b></div>';
+      var tree = d.tree || {};
+      Object.keys(tree).sort().forEach(function(dom) {
+        var entry = tree[dom];
+        html += '<details class="wiki-domain"><summary><b>' + _escape(dom) + '</b> <span class="wiki-count">' + entry.entity_count + ' entities</span></summary>';
+        var entities = entry.entities || {};
+        var names = Object.keys(entities).sort();
+        names.forEach(function(name) {
+          var ent = entities[name];
+          var periods = (ent.periods || []).slice(0, 6).map(_escape).join(", ");
+          var more = ent.periods.length > 6 ? " +" + (ent.periods.length - 6) : "";
+          html += '<div class="wiki-entity-row" data-entity="' + _escape(name) + '">'
+            + '<div class="wiki-entity-name">' + _escape(name) + '</div>'
+            + '<div class="wiki-entity-meta">'
+            + '<span class="wiki-fact-count">' + ent.fact_count + '건</span>'
+            + (periods ? '<span class="wiki-entity-periods">' + periods + more + '</span>' : '')
+            + '</div>'
+            + '</div>';
+        });
+        html += '</details>';
+      });
+      el.innerHTML = html || '<div class="wiki-empty">아직 추출된 팩트가 없습니다.</div>';
+      el.querySelectorAll(".wiki-entity-row").forEach(function(row) {
+        row.addEventListener("click", function() {
+          _wikiShowEntity(row.getAttribute("data-entity"));
+        });
+      });
+    }).catch(function(e) {
+      el.innerHTML = '<div class="wiki-error">지도 로드 실패: ' + _escape(e) + '</div>';
+    });
+  }
+
+  function _wikiLoadRecent() {
+    var el = document.getElementById("wiki-tab-recent");
+    el.innerHTML = '<div class="wiki-loading">최근 항목 불러오는 중...</div>';
+    fetch("/api/admin/wiki").then(function(r) { return r.json(); }).then(function(d) {
+      var items = d.recent || [];
+      if (!items.length) { el.innerHTML = '<div class="wiki-empty">항목 없음</div>'; return; }
+      var html = '';
+      items.forEach(function(it) {
+        html += '<div class="wiki-card" data-id="' + it.id + '">'
+          + '<div class="wiki-card-head">'
+          + '<span class="wiki-card-domain">' + _escape(it.domain) + '</span>'
+          + '<span class="wiki-card-entity">' + _escape(it.entity) + '</span>'
+          + (it.period ? '<span class="wiki-card-period">' + _escape(it.period) + '</span>' : '')
+          + '</div>'
+          + '<div class="wiki-card-summary">' + _escape(it.summary) + '</div>'
+          + '<div class="wiki-card-foot">'
+          + '<span class="wiki-card-conf">conf ' + it.confidence.toFixed(2) + '</span>'
+          + '<span class="wiki-card-route">' + _escape(it.route || "") + '</span>'
+          + '<button class="wiki-btn-up" data-id="' + it.id + '">👍</button>'
+          + '<button class="wiki-btn-down" data-id="' + it.id + '">👎</button>'
+          + '</div>'
+          + '</div>';
+      });
+      el.innerHTML = html;
+      el.querySelectorAll(".wiki-btn-up").forEach(function(b) {
+        b.addEventListener("click", function() { _wikiVote(b.getAttribute("data-id"), "up"); });
+      });
+      el.querySelectorAll(".wiki-btn-down").forEach(function(b) {
+        b.addEventListener("click", function() { _wikiVote(b.getAttribute("data-id"), "down"); });
+      });
+    }).catch(function(e) {
+      el.innerHTML = '<div class="wiki-error">로드 실패</div>';
+    });
+  }
+
+  function _wikiVote(id, vote) {
+    fetch("/api/admin/wiki/" + id + "/feedback", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ vote: vote }),
+    }).then(function(r) { return r.json(); }).then(function(d) {
+      _wikiLoadRecent();
+      _wikiLoadStats();
+    });
+  }
+
+  function _wikiLoadReports() {
+    var el = document.getElementById("wiki-tab-reports");
+    el.innerHTML = '<div class="wiki-loading">신고 내역 불러오는 중...</div>';
+    Promise.all([
+      fetch("/api/admin/wiki/reports").then(function(r) { return r.json(); }),
+      fetch("/api/admin/wiki/insights").then(function(r) { return r.json(); }),
+    ]).then(function(results) {
+      var d = results[0];
+      var ins = results[1];
+      var contradictions = ins.contradictions || [];
+      var needs = d.needs_review || [];
+      var resolved = d.resolved || [];
+      var html = '';
+
+      // Contradictions section
+      if (contradictions.length) {
+        html += '<div class="wiki-reports-section">';
+        html += '<h3 class="wiki-reports-title wiki-reports-conflict">🔥 모순 <span class="wiki-reports-count">' + contradictions.length + '</span></h3>';
+        contradictions.forEach(function(c) {
+          html += '<div class="wiki-card wiki-card-conflict">'
+            + '<div class="wiki-card-head">'
+            + '<span class="wiki-card-entity">' + _escape(c.entity || '') + '</span>'
+            + (c.period ? '<span class="wiki-card-period">' + _escape(c.period) + '</span>' : '')
+            + (c.metric ? '<span class="wiki-card-period">' + _escape(c.metric) + '</span>' : '')
+            + '</div>'
+            + '<div class="wiki-conflict-diff">'
+            + '<div class="conflict-side"><b>#' + c.id + '</b> → <code>' + _escape(c.value_a || '') + '</code><br/><span class="wiki-card-summary">' + _escape(c.summary_a || '') + '</span></div>'
+            + '<div class="conflict-vs">vs</div>'
+            + '<div class="conflict-side"><b>#' + c.conflict_with_id + '</b> → <code>' + _escape(c.value_b || '') + '</code><br/><span class="wiki-card-summary">' + _escape(c.summary_b || '') + '</span></div>'
+            + '</div>'
+            + '<div class="wiki-card-foot">'
+            + '<button class="wiki-btn-resolve" data-id="' + c.id + '">✅ 이쪽 맞음</button>'
+            + '<button class="wiki-btn-resolve" data-id="' + c.conflict_with_id + '">✅ 저쪽 맞음</button>'
+            + '<button class="wiki-btn-delete" data-id="' + c.id + '">🗑️ #' + c.id + ' 삭제</button>'
+            + '<button class="wiki-btn-delete" data-id="' + c.conflict_with_id + '">🗑️ #' + c.conflict_with_id + ' 삭제</button>'
+            + '</div>'
+            + '</div>';
+        });
+        html += '</div>';
+      }
+
+      // Needs review section
+      html += '<div class="wiki-reports-section">';
+      html += '<h3 class="wiki-reports-title wiki-reports-needs">🔴 미해결 <span class="wiki-reports-count">' + needs.length + '</span></h3>';
+      if (!needs.length) {
+        html += '<div class="wiki-empty-small">검토가 필요한 팩트가 없습니다. 👍</div>';
+      } else {
+        needs.forEach(function(it) { html += _wikiReportCard(it, "needs"); });
+      }
+      html += '</div>';
+
+      // Resolved section
+      html += '<div class="wiki-reports-section">';
+      html += '<h3 class="wiki-reports-title wiki-reports-resolved">✅ 해결됨 <span class="wiki-reports-count">' + resolved.length + '</span></h3>';
+      if (!resolved.length) {
+        html += '<div class="wiki-empty-small">아직 해결 처리된 항목이 없습니다.</div>';
+      } else {
+        resolved.forEach(function(it) { html += _wikiReportCard(it, "resolved"); });
+      }
+      html += '</div>';
+
+      el.innerHTML = html;
+
+      // Bind action buttons
+      el.querySelectorAll(".wiki-btn-resolve").forEach(function(b) {
+        b.addEventListener("click", function() {
+          _wikiReportAction(b.getAttribute("data-id"), "resolve");
+        });
+      });
+      el.querySelectorAll(".wiki-btn-restore").forEach(function(b) {
+        b.addEventListener("click", function() {
+          _wikiReportAction(b.getAttribute("data-id"), "restore");
+        });
+      });
+      el.querySelectorAll(".wiki-btn-delete").forEach(function(b) {
+        b.addEventListener("click", function() {
+          if (!confirm("이 팩트를 영구 삭제하시겠습니까?")) return;
+          _wikiDeleteFact(b.getAttribute("data-id"));
+        });
+      });
+    }).catch(function(e) {
+      el.innerHTML = '<div class="wiki-error">신고 로드 실패</div>';
+    });
+  }
+
+  function _wikiReportCard(it, section) {
+    var badgeCls = "wiki-review-badge-" + (it.review_status || "none");
+    var badgeText = it.review_status === "needs_review" ? "미해결" :
+                    (it.review_status === "resolved" ? "해결" :
+                     (it.status === "archived" ? "자동 보관" : ""));
+    var archivedTag = it.status === "archived" ? '<span class="wiki-card-archived">ARCHIVED</span>' : '';
+
+    var actions = '';
+    if (section === "needs") {
+      actions += '<button class="wiki-btn-resolve" data-id="' + it.id + '">✅ 해결 완료</button>';
+      actions += '<button class="wiki-btn-delete" data-id="' + it.id + '">🗑️ 영구 삭제</button>';
+    } else {
+      if (it.status === "archived") {
+        actions += '<button class="wiki-btn-restore" data-id="' + it.id + '">↺ 복원</button>';
+      }
+      actions += '<button class="wiki-btn-delete" data-id="' + it.id + '">🗑️ 영구 삭제</button>';
+    }
+
+    return '<div class="wiki-card wiki-card-report" data-id="' + it.id + '">'
+      + '<div class="wiki-card-head">'
+      + '<span class="wiki-card-domain">' + _escape(it.domain) + '</span>'
+      + '<span class="wiki-card-entity">' + _escape(it.entity) + '</span>'
+      + (it.period ? '<span class="wiki-card-period">' + _escape(it.period) + '</span>' : '')
+      + (badgeText ? '<span class="wiki-review-badge ' + badgeCls + '">' + badgeText + '</span>' : '')
+      + archivedTag
+      + '</div>'
+      + '<div class="wiki-card-summary">' + _escape(it.summary) + '</div>'
+      + '<div class="wiki-card-foot">'
+      + '<span class="wiki-card-conf">conf ' + it.confidence.toFixed(2) + '</span>'
+      + '<span class="wiki-card-votes">👍 ' + it.thumbs_up + ' · 👎 ' + it.thumbs_down + '</span>'
+      + (it.validated_at ? '<span class="wiki-card-validated">최근 처리: ' + _escape(it.validated_at.slice(0,16).replace("T"," ")) + '</span>' : '')
+      + '<span class="wiki-card-actions">' + actions + '</span>'
+      + '</div>'
+      + '</div>';
+  }
+
+  function _wikiReportAction(id, action) {
+    fetch("/api/admin/wiki/" + id + "/feedback", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ vote: action }),
+    }).then(function(r) { return r.json(); }).then(function(d) {
+      _wikiLoadReports();
+      _wikiLoadStats();
+    });
+  }
+
+  function _wikiDeleteFact(id) {
+    fetch("/api/admin/wiki/" + id, { method: "DELETE" })
+      .then(function(r) { return r.json(); })
+      .then(function(d) {
+        _wikiLoadReports();
+        _wikiLoadStats();
+      });
+  }
+
+  function _wikiLoadGraph() {
+    var el = document.getElementById("wiki-tab-graph");
+    el.innerHTML = '<div class="wiki-loading">그래프 불러오는 중...</div>';
+    fetch("/api/admin/wiki/graph?limit=200&full=true").then(function(r) { return r.json(); }).then(function(d) {
+      var edges = d.edges || [];
+      if (!edges.length) {
+        el.innerHTML = '<div class="wiki-empty">관계 그래프가 아직 비어 있습니다.</div>';
+        return;
+      }
+      var nodes = d.nodes || [];
+      var html = '<div class="wiki-graph-summary">' + edges.length + ' edges / ' + nodes.length + ' nodes · '
+        + (d.communities ? d.communities.length + ' communities' : '') + '</div>';
+      html += '<div class="wiki-graph-toolbar">';
+      html += '<button class="wiki-graph-toggle active" data-view="visual">🎨 시각</button>';
+      html += '<button class="wiki-graph-toggle" data-view="table">📋 표</button>';
+      html += '</div>';
+      html += '<div class="wiki-graph-visual" id="wiki-graph-visual"></div>';
+      html += '<div class="wiki-graph-tabular" id="wiki-graph-tabular" style="display:none">';
+      html += '<table class="wiki-graph-table"><thead><tr><th>src</th><th>relation</th><th>dst</th><th>weight</th></tr></thead><tbody>';
+      edges.forEach(function(e) {
+        html += '<tr><td>' + _escape(e.src) + '</td><td><span class="wiki-rel">' + _escape(e.relation) + '</span></td><td>' + _escape(e.dst) + '</td><td>' + e.weight.toFixed(1) + '</td></tr>';
+      });
+      html += '</tbody></table>';
+      html += '</div>';
+      el.innerHTML = html;
+
+      // Render vis.js
+      _renderVisGraph(nodes, edges);
+
+      // Toggle
+      el.querySelectorAll(".wiki-graph-toggle").forEach(function(btn) {
+        btn.addEventListener("click", function() {
+          el.querySelectorAll(".wiki-graph-toggle").forEach(function(b) { b.classList.remove("active"); });
+          btn.classList.add("active");
+          var view = btn.getAttribute("data-view");
+          document.getElementById("wiki-graph-visual").style.display = view === "visual" ? "block" : "none";
+          document.getElementById("wiki-graph-tabular").style.display = view === "table" ? "block" : "none";
+        });
+      });
+    }).catch(function(e) {
+      el.innerHTML = '<div class="wiki-error">그래프 로드 실패</div>';
+    });
+  }
+
+  function _renderVisGraph(nodes, edges) {
+    if (typeof vis === "undefined") {
+      document.getElementById("wiki-graph-visual").innerHTML = '<div class="wiki-empty">vis.js 로드 실패 (네트워크 확인)</div>';
+      return;
+    }
+    // Color palette for communities
+    var palette = ['#e89200','#3b82f6','#22c55e','#ef4444','#a855f7','#06b6d4','#f59e0b','#ec4899','#10b981','#6366f1','#84cc16','#f97316'];
+    var visNodes = nodes.map(function(n) {
+      var cid = n.community_id;
+      var color = cid ? palette[(cid - 1) % palette.length] : '#666';
+      return {
+        id: n.id,
+        label: n.id.length > 18 ? n.id.slice(0, 16) + '…' : n.id,
+        title: n.id + (cid ? ' (community ' + cid + ')' : ''),
+        color: { background: color, border: color },
+        font: { color: '#fff', size: 11 },
+        shape: 'dot',
+        size: 10,
+      };
+    });
+    var visEdges = edges.map(function(e) {
+      return {
+        from: e.src, to: e.dst,
+        label: e.relation,
+        title: e.relation + ' · weight ' + e.weight.toFixed(1),
+        width: Math.min(5, 0.5 + e.weight * 0.3),
+        color: { color: 'rgba(255,255,255,0.15)', highlight: '#e89200' },
+        font: { size: 9, color: 'rgba(255,255,255,0.4)', strokeWidth: 0 },
+        smooth: { type: 'continuous' },
+      };
+    });
+    var container = document.getElementById("wiki-graph-visual");
+    container.innerHTML = '';
+    var network = new vis.Network(container, { nodes: new vis.DataSet(visNodes), edges: new vis.DataSet(visEdges) }, {
+      physics: { barnesHut: { gravitationalConstant: -8000, springLength: 120 }, stabilization: { iterations: 100 } },
+      interaction: { hover: true, tooltipDelay: 200 },
+      nodes: { borderWidth: 2 },
+    });
+    network.on("click", function(params) {
+      if (params.nodes && params.nodes.length) {
+        _wikiShowEntity(params.nodes[0]);
+      }
+    });
+  }
+
+  function _wikiLoadInsights() {
+    var el = document.getElementById("wiki-tab-insights");
+    el.innerHTML = '<div class="wiki-loading">인사이트 계산 중...</div>';
+    fetch("/api/admin/wiki/insights").then(function(r) { return r.json(); }).then(function(d) {
+      var html = '';
+
+      // God nodes
+      html += '<div class="insight-section"><h3>👑 허브 엔티티 (가장 많이 연결됨)</h3>';
+      if (d.god_nodes && d.god_nodes.length) {
+        html += '<ul class="insight-list">';
+        d.god_nodes.forEach(function(g) {
+          html += '<li><a class="insight-entity" data-entity="' + _escape(g.entity) + '">' + _escape(g.entity)
+            + '</a> <span class="insight-meta">degree ' + g.degree + ' · weight ' + g.weight_sum.toFixed(1) + '</span></li>';
+        });
+        html += '</ul>';
+      } else { html += '<div class="wiki-empty-small">데이터 없음</div>'; }
+      html += '</div>';
+
+      // Communities
+      html += '<div class="insight-section"><h3>🧩 커뮤니티</h3>';
+      if (d.communities && d.communities.length) {
+        html += '<div class="insight-communities">';
+        d.communities.forEach(function(c) {
+          var top = typeof c.top_entities === "string" ? JSON.parse(c.top_entities) : c.top_entities;
+          html += '<div class="insight-community"><b>#' + c.id + ' ' + _escape(c.label) + '</b>'
+            + ' <span class="insight-meta">size ' + c.size + ' · density ' + (c.density ? c.density.toFixed(2) : '-') + '</span>';
+          if (top && top.length) {
+            html += '<div class="insight-community-members">'
+              + top.map(function(x) { return '<span class="insight-tag">' + _escape(x) + '</span>'; }).join(' ') + '</div>';
+          }
+          html += '</div>';
+        });
+        html += '</div>';
+      } else { html += '<div class="wiki-empty-small">커뮤니티 없음 — `python scripts/build_wiki_communities.py` 필요</div>'; }
+      html += '</div>';
+
+      // Surprising
+      html += '<div class="insight-section"><h3>✨ 횡단 연결 (다른 도메인)</h3>';
+      if (d.surprising && d.surprising.length) {
+        html += '<ul class="insight-list">';
+        d.surprising.forEach(function(s) {
+          html += '<li>'
+            + '<a class="insight-entity" data-entity="' + _escape(s.src_entity) + '">' + _escape(s.src_entity) + '</a>'
+            + ' <span class="insight-domain">' + _escape(s.src_domain) + '</span>'
+            + ' <span class="insight-arrow">→</span>'
+            + ' <a class="insight-entity" data-entity="' + _escape(s.dst_entity) + '">' + _escape(s.dst_entity) + '</a>'
+            + ' <span class="insight-domain">' + _escape(s.dst_domain) + '</span>'
+            + ' <span class="insight-meta">w ' + s.weight.toFixed(1) + '</span>'
+            + '</li>';
+        });
+        html += '</ul>';
+      } else { html += '<div class="wiki-empty-small">횡단 연결 없음</div>'; }
+      html += '</div>';
+
+      // Orphans
+      html += '<div class="insight-section"><h3>🪹 고아 엔티티 (팩트 1개, 연결 0)</h3>';
+      if (d.orphans && d.orphans.length) {
+        html += '<ul class="insight-list">';
+        d.orphans.slice(0, 15).forEach(function(o) {
+          html += '<li><a class="insight-entity" data-entity="' + _escape(o.entity) + '">' + _escape(o.entity) + '</a>'
+            + ' <span class="insight-domain">' + _escape(o.domain) + '</span>'
+            + '<div class="insight-meta">' + _escape((o.sample_summary||'').slice(0,120)) + '</div></li>';
+        });
+        html += '</ul>';
+      } else { html += '<div class="wiki-empty-small">모두 연결됨</div>'; }
+      html += '</div>';
+
+      // Stale
+      html += '<div class="insight-section"><h3>🕒 오래된 팩트 (14일+ 경과, BQ 데이터)</h3>';
+      if (d.stale && d.stale.length) {
+        html += '<ul class="insight-list">';
+        d.stale.forEach(function(s) {
+          html += '<li><b>' + _escape(s.entity) + '</b>'
+            + ' <span class="insight-domain">' + _escape(s.period||'') + '</span>'
+            + '<div class="insight-meta">' + _escape((s.summary||'').slice(0,140)) + '</div></li>';
+        });
+        html += '</ul>';
+      } else { html += '<div class="wiki-empty-small">오래된 팩트 없음</div>'; }
+      html += '</div>';
+
+      // Suggested queries
+      html += '<div class="insight-section"><h3>💡 제안 질문</h3>';
+      if (d.suggested_queries && d.suggested_queries.length) {
+        html += '<ul class="insight-list insight-queries">';
+        d.suggested_queries.forEach(function(q) {
+          html += '<li>' + _escape(q) + '</li>';
+        });
+        html += '</ul>';
+      } else { html += '<div class="wiki-empty-small">제안 없음</div>'; }
+      html += '</div>';
+
+      el.innerHTML = html;
+      el.querySelectorAll(".insight-entity").forEach(function(a) {
+        a.addEventListener("click", function() {
+          _wikiShowEntity(a.getAttribute("data-entity"));
+        });
+      });
+    }).catch(function(e) {
+      el.innerHTML = '<div class="wiki-error">인사이트 로드 실패</div>';
+    });
+  }
+
+  function _wikiShowEntity(entity) {
+    var modal = document.getElementById("wiki-entity-modal");
+    var content = document.getElementById("wiki-entity-modal-content");
+    content.innerHTML = '<div class="wiki-loading">로딩 중...</div>';
+    modal.className = "open";
+    fetch("/api/admin/wiki/entity/" + encodeURIComponent(entity))
+      .then(function(r) { return r.json(); })
+      .then(function(d) {
+        var md = (d.page && d.page.markdown) || '_페이지가 아직 컴파일되지 않았습니다._';
+        // Simple markdown to HTML (headings + list + bold + italic)
+        var html = _mdRender(md);
+        content.innerHTML = html;
+      })
+      .catch(function(e) {
+        content.innerHTML = '<div class="wiki-error">엔티티 로드 실패</div>';
+      });
+  }
+  function _mdRender(md) {
+    var html = _escape(md);
+    html = html.replace(/^### (.*)$/gm, '<h4>$1</h4>');
+    html = html.replace(/^## (.*)$/gm, '<h3>$1</h3>');
+    html = html.replace(/^# (.*)$/gm, '<h2>$1</h2>');
+    html = html.replace(/\*\*(.+?)\*\*/g, '<b>$1</b>');
+    html = html.replace(/_(.+?)_/g, '<i>$1</i>');
+    html = html.replace(/`(.+?)`/g, '<code>$1</code>');
+    html = html.replace(/^- (.*)$/gm, '<li>$1</li>');
+    html = html.replace(/(<li>.*<\/li>\n?)+/g, function(m) { return '<ul>' + m + '</ul>'; });
+    html = html.replace(/^---$/gm, '<hr>');
+    html = html.replace(/\n\n/g, '</p><p>');
+    return '<div class="entity-md"><p>' + html + '</p></div>';
   }
 
   // Tab switching

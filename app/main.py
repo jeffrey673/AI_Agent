@@ -52,9 +52,30 @@ def create_app() -> FastAPI:
 
     @asynccontextmanager
     async def lifespan(app: FastAPI):
+        # Expand default thread pool so asyncio.to_thread() can run more
+        # sync DB/LLM calls concurrently (default is min(32, os.cpu_count()+4)).
+        from concurrent.futures import ThreadPoolExecutor
+        loop = asyncio.get_running_loop()
+        loop.set_default_executor(ThreadPoolExecutor(max_workers=100, thread_name_prefix="skin1004"))
+        logger.info("thread_pool_configured", max_workers=100)
+
         # Ensure admin user exists in MariaDB
         _ensure_admin()
         _ensure_audit_table()
+        from app.db.mariadb import (
+            ensure_knowledge_wiki_table,
+            ensure_wiki_extraction_log_table,
+            ensure_wiki_entity_aliases_table,
+            ensure_wiki_graph_edges_table,
+            ensure_wiki_entity_pages_table,
+            ensure_wiki_communities_table,
+        )
+        ensure_knowledge_wiki_table()
+        ensure_wiki_extraction_log_table()
+        ensure_wiki_entity_aliases_table()
+        ensure_wiki_graph_edges_table()
+        ensure_wiki_entity_pages_table()
+        ensure_wiki_communities_table()
         logger.info("mariadb_initialized")
 
         logger.info(
@@ -69,14 +90,16 @@ def create_app() -> FastAPI:
         asyncio.create_task(_warmup_cs_db())
         asyncio.create_task(_warmup_team_resources())
         asyncio.create_task(_warmup_qdrant_cache())
+        asyncio.create_task(_warmup_llm_clients())
         # Safety: auto-detect table updates via __TABLES__ metadata polling
         asyncio.create_task(_start_maintenance_monitor())
-        # APScheduler: daily 01:00 team resources sync
+        # APScheduler: daily 01:00 team resources sync + hourly wiki extraction
         from apscheduler.schedulers.asyncio import AsyncIOScheduler
         _scheduler = AsyncIOScheduler()
         _scheduler.add_job(_sync_team_resources_job, "cron", hour=1, minute=0, id="team_sync_daily")
+        _scheduler.add_job(_extract_wiki_hourly, "cron", minute=15, id="wiki_extract_hourly")
         _scheduler.start()
-        logger.info("scheduler_started", jobs=["team_sync_daily_01:00"])
+        logger.info("scheduler_started", jobs=["team_sync_daily_01:00", "wiki_extract_hourly_:15"])
         yield
         logger.info("application_shutdown")
 
@@ -297,6 +320,39 @@ async def _warmup_qdrant_cache():
         logger.warning("qdrant_cache_warmup_failed", error=str(e))
 
 
+async def _warmup_llm_clients():
+    """Pre-establish TLS/HTTP connections to Gemini + Claude.
+
+    Without this, the first real chat request after worker startup pays
+    ~20-30s in SDK init + TLS handshake + connection pool setup, making
+    the unlucky first user experience terrible.
+    """
+    async def _warm_gemini():
+        try:
+            from app.core.llm import get_flash_client
+            client = get_flash_client()
+            await asyncio.to_thread(
+                client.generate, "hi", temperature=0.0, max_output_tokens=5
+            )
+            logger.info("gemini_warmup_done")
+        except Exception as e:
+            logger.warning("gemini_warmup_failed", error=str(e)[:200])
+
+    async def _warm_claude_opus():
+        # Opus is the primary chat model (resolve_model_type → MODEL_CLAUDE → Opus).
+        try:
+            from app.core.llm import get_llm_client, MODEL_CLAUDE
+            client = get_llm_client(MODEL_CLAUDE)
+            await asyncio.to_thread(
+                client.generate, "hi", temperature=0.0, max_output_tokens=5
+            )
+            logger.info("claude_opus_warmup_done")
+        except Exception as e:
+            logger.warning("claude_opus_warmup_failed", error=str(e)[:200])
+
+    await asyncio.gather(_warm_gemini(), _warm_claude_opus())
+
+
 async def _sync_team_resources_job():
     """Daily 01:00 cron job: Notion → MariaDB sync."""
     try:
@@ -308,6 +364,21 @@ async def _sync_team_resources_job():
         logger.info("team_resources_daily_sync_done", count=count)
     except Exception as e:
         logger.error("team_resources_daily_sync_failed", error=str(e))
+
+
+async def _extract_wiki_hourly():
+    """Hourly cron: mine new Q/A pairs from the last 75 minutes into knowledge_wiki.
+
+    75 min window gives a 15-minute safety overlap with the previous run so no
+    pair is missed if a batch runs long. The extractor already skips pairs
+    that already have wiki rows.
+    """
+    try:
+        from app.knowledge.wiki_extractor import extract_batch
+        result = await extract_batch(since_minutes=75, limit=200, max_concurrent=4)
+        logger.info("wiki_hourly_extract_done", **result)
+    except Exception as e:
+        logger.error("wiki_hourly_extract_failed", error=str(e))
 
 
 async def _start_maintenance_monitor():

@@ -1,7 +1,7 @@
-"""BigQuery client for query execution and vector search."""
+"""BigQuery client for query execution."""
 
+import threading
 import uuid
-from concurrent.futures import ThreadPoolExecutor
 from typing import Any, Dict, List, Optional
 
 import structlog
@@ -12,7 +12,9 @@ from app.config import get_settings
 
 logger = structlog.get_logger(__name__)
 
-_executor = ThreadPoolExecutor(max_workers=4)
+# Cap concurrent BigQuery query jobs. GCP default interactive quota is ~100,
+# but we want headroom for scheduled/warmup jobs and to keep p95 healthy.
+_BQ_SEM = threading.BoundedSemaphore(15)
 
 
 class BigQueryClient:
@@ -54,24 +56,25 @@ class BigQueryClient:
         job_config = QueryJobConfig()
         job_config.maximum_bytes_billed = 10 * 1024 * 1024 * 1024  # 10 GB limit
 
-        try:
-            query_job = self.client.query(sql, job_config=job_config)
-            results = query_job.result(timeout=timeout)
+        with _BQ_SEM:
+            try:
+                query_job = self.client.query(sql, job_config=job_config)
+                results = query_job.result(timeout=timeout)
 
-            rows = []
-            for i, row in enumerate(results):
-                if i >= max_rows:
-                    break
-                rows.append(dict(row))
+                rows = []
+                for i, row in enumerate(results):
+                    if i >= max_rows:
+                        break
+                    rows.append(dict(row))
 
-            logger.info("query_completed", row_count=len(rows))
-            cb.record_success()
-            return rows
+                logger.info("query_completed", row_count=len(rows))
+                cb.record_success()
+                return rows
 
-        except Exception as e:
-            logger.error("query_failed", error=str(e), sql=sql[:200])
-            cb.record_failure()
-            raise
+            except Exception as e:
+                logger.error("query_failed", error=str(e), sql=sql[:200])
+                cb.record_failure()
+                raise
 
     def get_table_schema(self, table_id: str) -> List[Dict[str, str]]:
         """Get schema information for a BigQuery table.
@@ -97,46 +100,6 @@ class BigQueryClient:
         except Exception as e:
             logger.error("schema_retrieval_failed", table=table_id, error=str(e))
             raise
-
-    def vector_search(
-        self,
-        query_embedding: List[float],
-        top_k: int = 5,
-        distance_type: str = "COSINE",
-    ) -> List[Dict[str, Any]]:
-        """Perform vector similarity search on the embeddings table.
-
-        Args:
-            query_embedding: The query embedding vector.
-            top_k: Number of results to return.
-            distance_type: Distance metric (COSINE, EUCLIDEAN, DOT_PRODUCT).
-
-        Returns:
-            List of matching documents with scores.
-        """
-        settings = self.settings
-        embedding_str = ", ".join(str(v) for v in query_embedding)
-
-        sql = f"""
-        SELECT
-            base.id,
-            base.content,
-            base.metadata,
-            base.source_type,
-            distance
-        FROM
-            VECTOR_SEARCH(
-                TABLE `{settings.embeddings_table_full_path}`,
-                'embedding',
-                (SELECT [{embedding_str}] AS embedding),
-                top_k => {top_k},
-                distance_type => '{distance_type}'
-            )
-        ORDER BY distance ASC
-        """
-
-        logger.info("vector_search", top_k=top_k, distance_type=distance_type)
-        return self.execute_query(sql, timeout=30.0, max_rows=top_k)
 
     def insert_embeddings(self, rows: List[Dict[str, Any]]) -> None:
         """Insert embedding rows into the embeddings table.

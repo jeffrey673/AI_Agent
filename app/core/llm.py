@@ -8,6 +8,7 @@ Claude side:  Opus 4.6 (complex reasoning) / Sonnet 4.6 (light tasks)
 """
 
 import re
+import threading
 import time
 from typing import Any, Dict, List, Optional, Protocol, Union
 
@@ -18,10 +19,18 @@ from app.config import get_settings
 logger = structlog.get_logger(__name__)
 
 
+# --- Concurrency Gates ---
+# Bound in-flight LLM requests across all threads so a burst of 400 users
+# doesn't blow past provider rate limits. Streaming calls also hold a slot
+# for their full duration.
+_GEMINI_SEM = threading.BoundedSemaphore(30)
+_CLAUDE_SEM = threading.BoundedSemaphore(20)
+
+
 # --- Retry Helper ---
 
-_MAX_RETRIES = 3
-_RETRY_DELAYS = [0.1, 0.3, 1.0]  # seconds (aggressive backoff, fastest recovery)
+_MAX_RETRIES = 4
+_RETRY_DELAYS = [0.5, 1.5, 4.0, 10.0]  # exponential backoff for 429s
 
 
 def _is_retryable(error: Exception) -> bool:
@@ -46,9 +55,6 @@ def _retry_call(func, *args, **kwargs):
     Retries up to _MAX_RETRIES times with exponential backoff
     for retryable errors (429, 500, 503, network, timeout).
     Client errors (400, 401, 403) are raised immediately.
-
-    Uses asyncio-safe sleep when running inside an event loop,
-    falls back to time.sleep() in pure sync contexts.
     """
     last_error = None
     for attempt in range(_MAX_RETRIES):
@@ -65,11 +71,22 @@ def _retry_call(func, *args, **kwargs):
                     delay=delay,
                     error=str(e)[:200],
                 )
-                # Avoid blocking event loop — use shorter delay in thread context
-                time.sleep(min(delay, 1))
+                time.sleep(delay)
             else:
                 raise
     raise last_error
+
+
+def _gemini_retry(func, *args, **kwargs):
+    """Retry wrapper that holds a Gemini concurrency slot."""
+    with _GEMINI_SEM:
+        return _retry_call(func, *args, **kwargs)
+
+
+def _claude_retry(func, *args, **kwargs):
+    """Retry wrapper that holds a Claude concurrency slot."""
+    with _CLAUDE_SEM:
+        return _retry_call(func, *args, **kwargs)
 
 
 # --- Common Interface ---
@@ -135,7 +152,7 @@ class GeminiClient:
             config.system_instruction = system_instruction
 
         try:
-            response = _retry_call(
+            response = _gemini_retry(
                 self.client.models.generate_content,
                 model=self.model,
                 contents=prompt,
@@ -165,17 +182,18 @@ class GeminiClient:
         if system_instruction:
             config.system_instruction = system_instruction
 
-        try:
-            for chunk in self.client.models.generate_content_stream(
-                model=self.model,
-                contents=prompt,
-                config=config,
-            ):
-                if chunk.text:
-                    yield chunk.text
-        except Exception as e:
-            logger.error("gemini_stream_failed", error=str(e))
-            raise
+        with _GEMINI_SEM:
+            try:
+                for chunk in self.client.models.generate_content_stream(
+                    model=self.model,
+                    contents=prompt,
+                    config=config,
+                ):
+                    if chunk.text:
+                        yield chunk.text
+            except Exception as e:
+                logger.error("gemini_stream_failed", error=str(e))
+                raise
 
     def generate_with_images(
         self,
@@ -208,7 +226,7 @@ class GeminiClient:
             config.system_instruction = system_instruction
 
         try:
-            response = _retry_call(
+            response = _gemini_retry(
                 self.client.models.generate_content,
                 model=self.model,
                 contents=types.Content(role="user", parts=parts),
@@ -256,7 +274,7 @@ class GeminiClient:
             config.system_instruction = system_instruction
 
         try:
-            response = _retry_call(
+            response = _gemini_retry(
                 self.client.models.generate_content,
                 model=self.model,
                 contents=contents,
@@ -285,7 +303,7 @@ class GeminiClient:
             config.system_instruction = system_instruction
 
         try:
-            response = _retry_call(
+            response = _gemini_retry(
                 self.client.models.generate_content,
                 model=self.model,
                 contents=prompt,
@@ -317,7 +335,7 @@ class GeminiClient:
             config.system_instruction = system_instruction
 
         try:
-            response = _retry_call(
+            response = _gemini_retry(
                 self.client.models.generate_content,
                 model=self.model,
                 contents=prompt,
@@ -390,7 +408,7 @@ class GeminiClient:
             config.system_instruction = system_instruction
 
         try:
-            response = _retry_call(
+            response = _gemini_retry(
                 self.client.models.generate_content,
                 model=self.model,
                 contents=contents,
@@ -454,7 +472,7 @@ class ClaudeClient:
             kwargs["system"] = system_instruction
 
         try:
-            response = _retry_call(self.client.messages.create, **kwargs)
+            response = _claude_retry(self.client.messages.create, **kwargs)
             text = response.content[0].text if response.content else ""
             logger.info("claude_response_generated", response_length=len(text))
             return text
@@ -502,7 +520,7 @@ class ClaudeClient:
             kwargs["system"] = system_instruction
 
         try:
-            response = _retry_call(self.client.messages.create, **kwargs)
+            response = _claude_retry(self.client.messages.create, **kwargs)
             result = response.content[0].text if response.content else ""
             logger.info("claude_vision_response_generated", response_length=len(result))
             return result
@@ -570,7 +588,7 @@ class ClaudeClient:
             kwargs["system"] = system_instruction
 
         try:
-            response = _retry_call(self.client.messages.create, **kwargs)
+            response = _claude_retry(self.client.messages.create, **kwargs)
             return response.content[0].text if response.content else ""
         except Exception as e:
             logger.error("claude_history_failed", error=str(e))
@@ -592,13 +610,14 @@ class ClaudeClient:
         }
         if system_instruction:
             kwargs["system"] = system_instruction
-        try:
-            with self.client.messages.stream(**kwargs) as stream:
-                for text in stream.text_stream:
-                    yield text
-        except Exception as e:
-            logger.error("claude_stream_failed", error=str(e))
-            raise
+        with _CLAUDE_SEM:
+            try:
+                with self.client.messages.stream(**kwargs) as stream:
+                    for text in stream.text_stream:
+                        yield text
+            except Exception as e:
+                logger.error("claude_stream_failed", error=str(e))
+                raise
 
     def generate_with_history_stream(
         self,
@@ -648,13 +667,14 @@ class ClaudeClient:
         }
         if system_instruction:
             kwargs["system"] = system_instruction
-        try:
-            with self.client.messages.stream(**kwargs) as stream:
-                for text in stream.text_stream:
-                    yield text
-        except Exception as e:
-            logger.error("claude_history_stream_failed", error=str(e))
-            raise
+        with _CLAUDE_SEM:
+            try:
+                with self.client.messages.stream(**kwargs) as stream:
+                    for text in stream.text_stream:
+                        yield text
+            except Exception as e:
+                logger.error("claude_history_stream_failed", error=str(e))
+                raise
 
     def generate_json(
         self,
@@ -674,7 +694,7 @@ class ClaudeClient:
         }
 
         try:
-            response = _retry_call(self.client.messages.create, **kwargs)
+            response = _claude_retry(self.client.messages.create, **kwargs)
             text = response.content[0].text if response.content else "{}"
             if "```" in text:
                 match = re.search(r'```(?:json)?\s*\n?(.*?)\n?\s*```', text, re.DOTALL)
@@ -738,7 +758,6 @@ class ClaudeClient:
 _gemini_client: Optional[GeminiClient] = None
 _gemini_flash_client: Optional[GeminiClient] = None
 _claude_opus_client: Optional[ClaudeClient] = None
-_claude_sonnet_client: Optional[ClaudeClient] = None
 
 # Model type constants
 MODEL_GEMINI = "gemini"
@@ -781,19 +800,6 @@ def get_flash_client() -> GeminiClient:
     return _gemini_flash_client
 
 
-def get_claude_sonnet_client() -> ClaudeClient:
-    """Get Claude Sonnet client for lighter Claude tasks.
-
-    Uses Sonnet for tasks that need Claude but don't require Opus-level reasoning.
-    """
-    global _claude_sonnet_client
-    if _claude_sonnet_client is None:
-        settings = get_settings()
-        _claude_sonnet_client = ClaudeClient(model=settings.anthropic_sonnet_model)
-        logger.info("claude_sonnet_client_initialized", model=_claude_sonnet_client.model)
-    return _claude_sonnet_client
-
-
 def resolve_model_type(model_id: str) -> str:
     """Resolve Open WebUI model ID to internal model type.
 
@@ -805,9 +811,3 @@ def resolve_model_type(model_id: str) -> str:
     """
     # All models now route to Claude (Gemini Search model removed)
     return MODEL_CLAUDE
-
-
-# Backward compatibility
-def get_gemini_client() -> GeminiClient:
-    """Get Gemini client (backward compatibility)."""
-    return get_llm_client(MODEL_GEMINI)

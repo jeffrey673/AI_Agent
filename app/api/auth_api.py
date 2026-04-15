@@ -5,6 +5,7 @@ Uses MariaDB for user storage with AD-linked department+name login.
 
 import asyncio
 import time
+from collections import OrderedDict
 from datetime import datetime, timedelta, timezone
 
 import bcrypt as _bcrypt
@@ -23,13 +24,20 @@ logger = structlog.get_logger(__name__)
 auth_api_router = APIRouter(prefix="/api/auth", tags=["auth"])
 
 _ALGORITHM = "HS256"
-_TOKEN_EXPIRE_DAYS = 7
+_TOKEN_EXPIRE_DAYS = 365
 _ALL_MODELS = "skin1004-Analysis"
 
 # ── AD user cache (avoid DB hit on every keystroke) ──
 _ad_cache: list[dict] = []
 _ad_cache_ts: float = 0
 _AD_CACHE_TTL = 300  # 5 minutes
+
+# ── /me sliding-refresh debounce ──
+# Avoid re-issuing a cookie (and re-querying brand_filter) on every /me call.
+# LRU cap prevents unbounded growth if many users hit /me over time.
+_me_last_refresh: "OrderedDict[int, float]" = OrderedDict()
+_ME_REFRESH_COOLDOWN = 300  # 5 minutes
+_ME_REFRESH_LRU_CAP = 1000
 
 
 # ── Async DB wrappers ──
@@ -302,8 +310,20 @@ async def signin(req: SigninRequest, response: Response):
 
 
 @auth_api_router.get("/me")
-async def me(user: User = Depends(get_current_user)):
-    """Get current authenticated user."""
+async def me(response: Response, user: User = Depends(get_current_user)):
+    """Get current authenticated user. Refreshes cookie (sliding session)."""
+    # Sliding refresh, debounced: only re-issue cookie if last refresh was > _ME_REFRESH_COOLDOWN ago.
+    now = time.time()
+    last = _me_last_refresh.get(user.id, 0)
+    if now - last > _ME_REFRESH_COOLDOWN:
+        bf = await asyncio.to_thread(_lookup_brand_filter, user.id)
+        fresh_token = _create_token(user.id, user.email or "", brand_filter=bf, role=user.role)
+        _set_cookie(response, fresh_token)
+        _me_last_refresh[user.id] = now
+        _me_last_refresh.move_to_end(user.id)
+        while len(_me_last_refresh) > _ME_REFRESH_LRU_CAP:
+            _me_last_refresh.popitem(last=False)
+
     # brand_filters = what the dropdown shows
     # Admin: all groups (can choose any filter), no personal filter
     # Non-admin: only their own groups (auto-enforced)

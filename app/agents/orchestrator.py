@@ -480,6 +480,19 @@ class OrchestratorAgent:
         images = images or []
         conversation_context = _build_conversation_context(messages)
 
+        # ═══ Knowledge wiki lookup (Week 2 + 3) ═══
+        # First try compiled entity pages (Karpathy-style "wiki page" —
+        # one coherent block per entity). Fall back to fact list for
+        # queries that don't match any entity cleanly.
+        wiki_context = ""
+        try:
+            from app.knowledge.wiki_search import search_with_pages
+            wiki_context = await search_with_pages(query, limit=4)
+            if wiki_context:
+                logger.info("wiki_context_injected", length=len(wiki_context))
+        except Exception as e:
+            logger.warning("wiki_lookup_failed", error=str(e)[:200])
+
         # ═══ @@ 데이터소스 직접 지정 (streaming) ═══
         db_entry, clean_query = self.parse_db_prefix(query)
 
@@ -657,6 +670,14 @@ class OrchestratorAgent:
                 search_context = await _loop_s.run_in_executor(None, self._gather_search_context, query)
                 if search_context:
                     final_system = system + f"\n\n## 참고할 최신 검색 정보 (Google 검색 결과)\n{search_context}"
+            if wiki_context:
+                final_system += (
+                    "\n\n## 참고: 지식 위키에 이미 저장된 관련 팩트\n"
+                    f"{wiki_context}\n"
+                    "위 팩트는 이전 대화에서 추출된 사내 기관 기억입니다. "
+                    "해당 팩트로 사용자 질문에 답변할 수 있다면 활용하고, "
+                    "관련 없거나 오래된 것 같으면 무시하세요."
+                )
 
             # Stream via thread + queue
             _q: asyncio.Queue = asyncio.Queue()
@@ -708,6 +729,7 @@ class OrchestratorAgent:
                         model_type=model_type,
                         brand_filter=brand_filter,
                         enabled_sources=enabled_sources,
+                        wiki_context=wiki_context,
                     ):
                         _loop.call_soon_threadsafe(_q.put_nowait, ("chunk", chunk))
                 except Exception as e:

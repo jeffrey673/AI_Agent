@@ -105,3 +105,488 @@ async def update_user_models(
 
     logger.info("admin_update_models", target=user["email"], models=req.allowed_models, by=admin.email)
     return {"ok": True, "email": user["email"], "allowed_models": req.allowed_models}
+
+
+@admin_router.get("/metrics")
+async def get_metrics(admin: User = Depends(_require_admin)) -> dict:
+    """Operational metrics: latency p50/p95, concurrency gates, DB pool, recent activity.
+
+    Driven by the audit_logs table and live semaphore/pool state. Admin only.
+    """
+    from app.db.mariadb import _get_pool
+    from app.core.llm import _GEMINI_SEM, _CLAUDE_SEM
+    from app.core.bigquery import _BQ_SEM
+
+    # Latency — last 1h and last 24h
+    latency_1h = await _db_fetch_all("""
+        SELECT route,
+               COUNT(*) AS cnt,
+               AVG(total_ms) AS avg_ms,
+               MAX(total_ms) AS max_ms
+        FROM audit_logs
+        WHERE created_at >= NOW() - INTERVAL 1 HOUR
+        GROUP BY route
+        ORDER BY cnt DESC
+    """)
+    latency_24h = await _db_fetch_all("""
+        SELECT COUNT(*) AS cnt,
+               AVG(total_ms) AS avg_ms,
+               MAX(total_ms) AS max_ms
+        FROM audit_logs
+        WHERE created_at >= NOW() - INTERVAL 24 HOUR
+    """)
+
+    # p95 — compute in Python (MariaDB 10.x lacks PERCENTILE_CONT)
+    p95_rows = await _db_fetch_all("""
+        SELECT total_ms FROM audit_logs
+        WHERE created_at >= NOW() - INTERVAL 1 HOUR AND total_ms IS NOT NULL
+        ORDER BY total_ms
+    """)
+    samples = [int(r["total_ms"]) for r in p95_rows if r["total_ms"] is not None]
+    if samples:
+        p50 = samples[len(samples) // 2]
+        p95 = samples[int(len(samples) * 0.95)]
+        p99 = samples[int(len(samples) * 0.99)]
+    else:
+        p50 = p95 = p99 = 0
+
+    # Top slow queries (last 1h)
+    slow = await _db_fetch_all("""
+        SELECT user_email, route, query, total_ms, created_at
+        FROM audit_logs
+        WHERE created_at >= NOW() - INTERVAL 1 HOUR
+        ORDER BY total_ms DESC
+        LIMIT 10
+    """)
+
+    # DB pool state (DBUtils PooledDB internal)
+    pool = _get_pool()
+    pool_state = {
+        "max_connections": getattr(pool, "_maxconnections", None),
+        "connections_in_use": getattr(pool, "_connections", None),
+        "idle_cached": len(getattr(pool, "_idle_cache", []) or []),
+    }
+
+    # Semaphore gates (available slots)
+    gates = {
+        "gemini_free": _GEMINI_SEM._value,
+        "gemini_max": 30,
+        "claude_free": _CLAUDE_SEM._value,
+        "claude_max": 20,
+        "bigquery_free": _BQ_SEM._value,
+        "bigquery_max": 15,
+    }
+
+    # Active users (last 15 min)
+    active_rows = await _db_fetch_all("""
+        SELECT COUNT(DISTINCT user_email) AS cnt
+        FROM audit_logs
+        WHERE created_at >= NOW() - INTERVAL 15 MINUTE
+    """)
+    active_users = int(active_rows[0]["cnt"]) if active_rows else 0
+
+    return {
+        "latency_1h_by_route": [
+            {
+                "route": r["route"],
+                "cnt": int(r["cnt"]),
+                "avg_ms": int(r["avg_ms"] or 0),
+                "max_ms": int(r["max_ms"] or 0),
+            }
+            for r in latency_1h
+        ],
+        "latency_24h": {
+            "cnt": int(latency_24h[0]["cnt"]) if latency_24h else 0,
+            "avg_ms": int(latency_24h[0]["avg_ms"] or 0) if latency_24h else 0,
+            "max_ms": int(latency_24h[0]["max_ms"] or 0) if latency_24h else 0,
+        },
+        "percentiles_1h": {"p50": p50, "p95": p95, "p99": p99, "sample_count": len(samples)},
+        "slow_queries": [
+            {
+                "user": r["user_email"],
+                "route": r["route"],
+                "query": (r["query"] or "")[:80],
+                "ms": int(r["total_ms"] or 0),
+                "at": r["created_at"].isoformat() if r["created_at"] else "",
+            }
+            for r in slow
+        ],
+        "db_pool": pool_state,
+        "concurrency_gates": gates,
+        "active_users_15m": active_users,
+    }
+
+
+@admin_router.get("/wiki")
+async def get_wiki_status(admin: User = Depends(_require_admin)) -> dict:
+    """Knowledge wiki adoption dashboard — counts, freshness, samples."""
+    totals = await _db_fetch_all(
+        "SELECT status, COUNT(*) AS cnt FROM knowledge_wiki GROUP BY status"
+    )
+    by_domain = await _db_fetch_all(
+        "SELECT domain, COUNT(*) AS cnt FROM knowledge_wiki "
+        "GROUP BY domain ORDER BY cnt DESC"
+    )
+    recent = await _db_fetch_all("""
+        SELECT id, domain, entity, period, metric, value, summary,
+               source_route, confidence, status, extracted_at
+        FROM knowledge_wiki
+        ORDER BY id DESC LIMIT 20
+    """)
+    latest_extract = await _db_fetch_all(
+        "SELECT MAX(extracted_at) AS last_at FROM knowledge_wiki"
+    )
+
+    return {
+        "counts_by_status": {r["status"]: int(r["cnt"]) for r in totals},
+        "counts_by_domain": [
+            {"domain": r["domain"], "cnt": int(r["cnt"])} for r in by_domain
+        ],
+        "last_extracted_at": (
+            latest_extract[0]["last_at"].isoformat()
+            if latest_extract and latest_extract[0]["last_at"] else None
+        ),
+        "recent": [
+            {
+                "id": r["id"],
+                "domain": r["domain"],
+                "entity": r["entity"],
+                "period": r["period"],
+                "metric": r["metric"],
+                "value": r["value"],
+                "summary": r["summary"],
+                "route": r["source_route"],
+                "confidence": float(r["confidence"] or 0),
+                "status": r["status"],
+                "at": r["extracted_at"].isoformat() if r["extracted_at"] else "",
+            }
+            for r in recent
+        ],
+    }
+
+
+class WikiFeedbackRequest(BaseModel):
+    vote: str  # "up" | "down" | "resolve" | "restore"
+
+
+@admin_router.post("/wiki/{wiki_id}/feedback")
+async def wiki_feedback(
+    wiki_id: int,
+    req: WikiFeedbackRequest,
+    admin: User = Depends(_require_admin),
+) -> dict:
+    """Adjust confidence, auto-archive on repeated downvotes, or resolve/restore."""
+    vote = req.vote
+    if vote not in ("up", "down", "resolve", "restore"):
+        raise HTTPException(status_code=400, detail="invalid vote")
+
+    if vote == "up":
+        await _db_execute(
+            "UPDATE knowledge_wiki "
+            "SET thumbs_up = thumbs_up + 1, "
+            "    confidence = LEAST(1.0, confidence + 0.1), "
+            "    status = CASE WHEN status = 'pending' THEN 'active' ELSE status END, "
+            "    validated_at = NOW() "
+            "WHERE id = %s",
+            (wiki_id,),
+        )
+    elif vote == "down":
+        await _db_execute(
+            "UPDATE knowledge_wiki "
+            "SET thumbs_down = thumbs_down + 1, "
+            "    confidence = GREATEST(0.0, confidence - 0.2), "
+            "    review_status = 'needs_review', "
+            "    status = CASE WHEN thumbs_down + 1 >= 2 THEN 'archived' ELSE status END, "
+            "    validated_at = NOW() "
+            "WHERE id = %s",
+            (wiki_id,),
+        )
+    elif vote == "resolve":
+        # Admin confirms the problem is fixed. Clear the downvote counter,
+        # lift the auto-archive if applied, and mark as resolved.
+        await _db_execute(
+            "UPDATE knowledge_wiki "
+            "SET thumbs_down = 0, "
+            "    review_status = 'resolved', "
+            "    status = CASE WHEN status = 'archived' THEN 'active' ELSE status END, "
+            "    confidence = GREATEST(0.5, confidence), "
+            "    validated_at = NOW() "
+            "WHERE id = %s",
+            (wiki_id,),
+        )
+    else:  # restore — undo the archive, keep review_status as-is
+        await _db_execute(
+            "UPDATE knowledge_wiki "
+            "SET status = 'active', validated_at = NOW() "
+            "WHERE id = %s",
+            (wiki_id,),
+        )
+
+    row = await _db_fetch_all(
+        "SELECT id, status, review_status, confidence, thumbs_up, thumbs_down "
+        "FROM knowledge_wiki WHERE id = %s",
+        (wiki_id,),
+    )
+    if not row:
+        raise HTTPException(status_code=404, detail="wiki row not found")
+    r = row[0]
+    return {
+        "ok": True,
+        "id": r["id"],
+        "status": r["status"],
+        "review_status": r["review_status"],
+        "confidence": float(r["confidence"] or 0),
+        "thumbs_up": int(r["thumbs_up"]),
+        "thumbs_down": int(r["thumbs_down"]),
+    }
+
+
+@admin_router.delete("/wiki/{wiki_id}")
+async def wiki_delete(
+    wiki_id: int,
+    admin: User = Depends(_require_admin),
+) -> dict:
+    """Permanently delete a wiki fact."""
+    rows = await _db_fetch_all(
+        "SELECT id FROM knowledge_wiki WHERE id = %s", (wiki_id,)
+    )
+    if not rows:
+        raise HTTPException(status_code=404, detail="wiki row not found")
+    await _db_execute("DELETE FROM wiki_graph_edges "
+                      "WHERE JSON_CONTAINS(source_wiki_ids, CAST(%s AS JSON))",
+                      (wiki_id,))
+    await _db_execute("DELETE FROM knowledge_wiki WHERE id = %s", (wiki_id,))
+    logger.info("wiki_deleted", id=wiki_id, by=admin.email)
+    return {"ok": True, "deleted_id": wiki_id}
+
+
+@admin_router.get("/wiki/reports")
+async def get_wiki_reports(admin: User = Depends(_require_admin)) -> dict:
+    """Flagged facts — split into needs-review and resolved buckets."""
+    needs = await _db_fetch_all("""
+        SELECT id, domain, entity, period, metric, value, summary,
+               confidence, thumbs_up, thumbs_down, status, review_status,
+               source_route, extracted_at, validated_at
+        FROM knowledge_wiki
+        WHERE review_status = 'needs_review'
+        ORDER BY thumbs_down DESC, validated_at DESC
+        LIMIT 200
+    """)
+    resolved = await _db_fetch_all("""
+        SELECT id, domain, entity, period, metric, value, summary,
+               confidence, thumbs_up, thumbs_down, status, review_status,
+               source_route, extracted_at, validated_at
+        FROM knowledge_wiki
+        WHERE review_status = 'resolved'
+           OR (status = 'archived' AND validated_at >= NOW() - INTERVAL 30 DAY)
+        ORDER BY validated_at DESC
+        LIMIT 200
+    """)
+
+    def _fmt(row: dict) -> dict:
+        return {
+            "id": row["id"],
+            "domain": row["domain"],
+            "entity": row["entity"],
+            "period": row["period"],
+            "metric": row["metric"],
+            "value": row["value"],
+            "summary": row["summary"],
+            "status": row["status"],
+            "review_status": row["review_status"],
+            "confidence": float(row["confidence"] or 0),
+            "thumbs_up": int(row["thumbs_up"]),
+            "thumbs_down": int(row["thumbs_down"]),
+            "route": row["source_route"],
+            "extracted_at": row["extracted_at"].isoformat() if row["extracted_at"] else "",
+            "validated_at": row["validated_at"].isoformat() if row["validated_at"] else "",
+        }
+
+    return {
+        "needs_review": [_fmt(r) for r in needs],
+        "resolved": [_fmt(r) for r in resolved],
+        "counts": {"needs_review": len(needs), "resolved": len(resolved)},
+    }
+
+
+@admin_router.get("/wiki/entity/{name}")
+async def get_wiki_entity(name: str, admin: User = Depends(_require_admin)) -> dict:
+    """Return the compiled entity page + raw fact list."""
+    from app.knowledge.entity_pages import get_entity_page
+
+    page = await asyncio.to_thread(get_entity_page, name)
+    facts = await _db_fetch_all(
+        """
+        SELECT id, domain, entity, period, metric, value, summary,
+               confidence, thumbs_up, thumbs_down, status, review_status,
+               source_route, extracted_at
+        FROM knowledge_wiki
+        WHERE (canonical_entity = %s OR entity = %s) AND status <> 'archived'
+        ORDER BY extracted_at DESC
+        """,
+        (name, name),
+    )
+    return {
+        "entity": name,
+        "page": {
+            "markdown": page["markdown"] if page else None,
+            "domain": page["domain"] if page else None,
+            "fact_count": page["fact_count"] if page else 0,
+            "period_span": page["period_span"] if page else None,
+            "community_label": page["community_label"] if page else None,
+            "compiled_at": page["compiled_at"].isoformat() if page and page["compiled_at"] else None,
+        } if page else None,
+        "facts": [
+            {
+                "id": r["id"], "domain": r["domain"], "period": r["period"],
+                "metric": r["metric"], "value": r["value"], "summary": r["summary"],
+                "confidence": float(r["confidence"] or 0),
+                "status": r["status"], "review_status": r["review_status"],
+                "thumbs_up": int(r["thumbs_up"]), "thumbs_down": int(r["thumbs_down"]),
+                "extracted_at": r["extracted_at"].isoformat() if r["extracted_at"] else "",
+            }
+            for r in facts
+        ],
+    }
+
+
+@admin_router.get("/wiki/insights")
+async def get_wiki_insights(admin: User = Depends(_require_admin)) -> dict:
+    from app.knowledge.wiki_insights import full_report
+
+    report = await asyncio.to_thread(full_report)
+    # Normalize datetimes/Decimals in SQL rows so JSON serializer is happy
+    def _norm(row):
+        out = dict(row)
+        for k, v in list(out.items()):
+            if hasattr(v, "isoformat"):
+                out[k] = v.isoformat()
+            elif hasattr(v, "__float__") and not isinstance(v, (int, float, bool)):
+                out[k] = float(v)
+        return out
+
+    return {
+        "god_nodes": [_norm(r) for r in report["god_nodes"]],
+        "orphans": [_norm(r) for r in report["orphans"]],
+        "surprising": [_norm(r) for r in report["surprising"]],
+        "stale": [_norm(r) for r in report["stale"]],
+        "contradictions": [_norm(r) for r in report["contradictions"]],
+        "communities": [_norm(r) for r in report["communities"]],
+        "suggested_queries": report["suggested_queries"],
+    }
+
+
+@admin_router.get("/wiki/graph")
+async def get_wiki_graph(
+    admin: User = Depends(_require_admin),
+    limit: int = 200,
+    full: bool = False,
+) -> dict:
+    """Return the top-N heaviest edges from the knowledge graph.
+
+    When ``full=true`` the response also includes community colouring data
+    for vis.js — each node gets a community_id and each edge gets an
+    edge_type + confidence.
+    """
+    try:
+        select = (
+            "SELECT src_entity, dst_entity, relation, weight, community_id, "
+            "edge_type, source_confidence, updated_at "
+            "FROM wiki_graph_edges "
+            "ORDER BY weight DESC LIMIT %s"
+        )
+        rows = await _db_fetch_all(select, (int(limit),))
+    except Exception:
+        return {"nodes": [], "edges": [], "total_edges": 0}
+
+    nodes_map: dict[str, dict] = {}
+    edges = []
+    for r in rows:
+        src = r["src_entity"]
+        dst = r["dst_entity"]
+        cid = r.get("community_id")
+        nodes_map.setdefault(src, {"id": src, "community_id": cid})
+        nodes_map.setdefault(dst, {"id": dst, "community_id": cid})
+        edges.append({
+            "src": src,
+            "dst": dst,
+            "relation": r["relation"],
+            "weight": float(r["weight"] or 0),
+            "edge_type": r.get("edge_type") or "inferred",
+            "confidence": float(r.get("source_confidence") or 0),
+            "community_id": cid,
+            "updated_at": r["updated_at"].isoformat() if r["updated_at"] else "",
+        })
+
+    payload = {
+        "nodes": sorted(list(nodes_map.keys())) if not full else list(nodes_map.values()),
+        "edges": edges,
+        "total_edges": len(edges),
+    }
+    if full:
+        communities = await _db_fetch_all(
+            "SELECT id, label, size FROM wiki_communities ORDER BY size DESC LIMIT 30"
+        )
+        payload["communities"] = [
+            {"id": c["id"], "label": c["label"], "size": int(c["size"] or 0)}
+            for c in communities
+        ]
+    return payload
+
+
+@admin_router.get("/wiki/map")
+async def get_wiki_map(admin: User = Depends(_require_admin)) -> dict:
+    """Hierarchical map of what the wiki knows.
+
+    Returned as: domain → entity → {periods, metrics, fact_count, last_seen}
+
+    This is the "지도" — the discovery surface the orchestrator will consult
+    before routing a question (Week 2). For now it's admin-only, read-only.
+    """
+    rows = await _db_fetch_all("""
+        SELECT domain, entity, period, metric, COUNT(*) AS cnt,
+               MAX(extracted_at) AS last_at
+        FROM knowledge_wiki
+        WHERE status IN ('pending', 'active')
+        GROUP BY domain, entity, period, metric
+        ORDER BY domain, entity, period
+    """)
+
+    tree: dict[str, dict] = {}
+    for r in rows:
+        d = r["domain"] or "기타"
+        e = r["entity"] or ""
+        dom = tree.setdefault(d, {"entity_count": 0, "entities": {}})
+        ent = dom["entities"].setdefault(
+            e, {"periods": set(), "metrics": set(), "fact_count": 0, "last_seen": None}
+        )
+        if r["period"]:
+            ent["periods"].add(r["period"])
+        if r["metric"]:
+            ent["metrics"].add(r["metric"])
+        ent["fact_count"] += int(r["cnt"])
+        if r["last_at"]:
+            iso = r["last_at"].isoformat()
+            if not ent["last_seen"] or iso > ent["last_seen"]:
+                ent["last_seen"] = iso
+
+    for d in tree.values():
+        d["entity_count"] = len(d["entities"])
+        d["entities"] = {
+            name: {
+                "periods": sorted(ent["periods"]),
+                "metrics": sorted(ent["metrics"]),
+                "fact_count": ent["fact_count"],
+                "last_seen": ent["last_seen"],
+            }
+            for name, ent in d["entities"].items()
+        }
+
+    return {
+        "total_domains": len(tree),
+        "total_entities": sum(d["entity_count"] for d in tree.values()),
+        "total_facts": sum(
+            ent["fact_count"] for d in tree.values() for ent in d["entities"].values()
+        ),
+        "tree": tree,
+    }

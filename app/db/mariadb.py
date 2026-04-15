@@ -1,13 +1,10 @@
 """DB layer — MariaDB backend for all environments.
 
-Both production (3000) and development (3002) use MariaDB.
+Both production (3000) and development (3001) use MariaDB.
 
 Interface: fetch_all, fetch_one, execute, execute_lastid.
 """
 import os
-import sqlite3
-import threading
-from pathlib import Path
 
 import pymysql
 from dbutils.pooled_db import PooledDB
@@ -17,20 +14,12 @@ from app.config import get_settings
 
 logger = structlog.get_logger(__name__)
 
-# ---------------------------------------------------------------------------
-# Always use MariaDB (prod=3000, dev=3002 share the same DB)
-# ---------------------------------------------------------------------------
 _PORT = int(os.environ.get("PORT", "0")) or get_settings().port
-_DEV_MODE = False  # Always MariaDB
-
-if _DEV_MODE:
-    logger.info("db_mode_sqlite", port=_PORT, path="data/dev.db")
-else:
-    logger.info("db_mode_mariadb", port=_PORT)
+logger.info("db_mode_mariadb", port=_PORT)
 
 
 # ===========================================================================
-# MariaDB backend (production)
+# MariaDB backend
 # ===========================================================================
 _pool = None
 
@@ -42,9 +31,9 @@ def _get_pool() -> PooledDB:
         s = get_settings()
         _pool = PooledDB(
             creator=pymysql,
-            maxconnections=25,
-            mincached=3,
-            maxcached=10,
+            maxconnections=40,
+            mincached=5,
+            maxcached=15,
             blocking=True,
             host=s.mariadb_host,
             port=int(s.mariadb_port),
@@ -55,7 +44,7 @@ def _get_pool() -> PooledDB:
             cursorclass=pymysql.cursors.DictCursor,
             autocommit=False,
         )
-        logger.info("mariadb_pool_initialized", max=25, cached=3)
+        logger.info("mariadb_pool_initialized", max=40, cached=5)
     return _pool
 
 
@@ -102,275 +91,17 @@ def _maria_execute_lastid(sql: str, params: tuple = ()) -> int:
 
 
 # ===========================================================================
-# SQLite backend (development)
-# ===========================================================================
-_SQLITE_PATH = Path(__file__).resolve().parent.parent.parent / "data" / "dev.db"
-_sqlite_lock = threading.Lock()
-_sqlite_initialized = False
-
-_SQLITE_SCHEMA = """
-CREATE TABLE IF NOT EXISTS users (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    email TEXT,
-    password_hash TEXT,
-    display_name TEXT,
-    role TEXT DEFAULT 'user',
-    allowed_models TEXT,
-    ad_user_id INTEGER,
-    is_active INTEGER DEFAULT 1,
-    last_login TEXT,
-    created_at TEXT DEFAULT (datetime('now')),
-    updated_at TEXT DEFAULT (datetime('now'))
-);
-CREATE TABLE IF NOT EXISTS ad_users (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    username TEXT UNIQUE,
-    display_name TEXT,
-    email TEXT UNIQUE,
-    department TEXT,
-    full_dn TEXT,
-    is_active INTEGER DEFAULT 1,
-    synced_at TEXT,
-    created_at TEXT DEFAULT (datetime('now')),
-    updated_at TEXT DEFAULT (datetime('now'))
-);
-CREATE TABLE IF NOT EXISTS conversations (
-    id TEXT PRIMARY KEY,
-    user_id INTEGER,
-    title TEXT,
-    model TEXT,
-    created_at TEXT DEFAULT (datetime('now')),
-    updated_at TEXT DEFAULT (datetime('now'))
-);
-CREATE TABLE IF NOT EXISTS messages (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    conversation_id TEXT,
-    role TEXT,
-    content TEXT,
-    model TEXT,
-    created_at TEXT DEFAULT (datetime('now'))
-);
-CREATE TABLE IF NOT EXISTS access_groups (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    name TEXT UNIQUE,
-    description TEXT,
-    brand_filter TEXT
-);
-CREATE TABLE IF NOT EXISTS user_groups (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    ad_user_id INTEGER,
-    group_id INTEGER,
-    UNIQUE(ad_user_id, group_id)
-);
-CREATE TABLE IF NOT EXISTS sql_cache (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    query_hash TEXT UNIQUE,
-    query_text TEXT,
-    generated_sql TEXT,
-    brand_filter TEXT,
-    hit_count INTEGER DEFAULT 1,
-    created_at TEXT DEFAULT (datetime('now')),
-    last_used_at TEXT DEFAULT (datetime('now'))
-);
-CREATE TABLE IF NOT EXISTS audit_logs (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    user_email TEXT,
-    route TEXT,
-    query TEXT,
-    first_token_ms INTEGER,
-    total_ms INTEGER,
-    model TEXT,
-    created_at TEXT DEFAULT (datetime('now'))
-);
-"""
-
-
-def _sqlite_conn() -> sqlite3.Connection:
-    """Get a SQLite connection with dict-like row factory."""
-    conn = sqlite3.connect(str(_SQLITE_PATH), timeout=10)
-    conn.row_factory = sqlite3.Row
-    conn.execute("PRAGMA journal_mode=WAL")
-    conn.execute("PRAGMA foreign_keys=ON")
-    return conn
-
-
-def _sqlite_init():
-    """Create tables and sync auth data from MariaDB (once)."""
-    global _sqlite_initialized
-    if _sqlite_initialized:
-        return
-
-    _SQLITE_PATH.parent.mkdir(parents=True, exist_ok=True)
-    conn = _sqlite_conn()
-    try:
-        conn.executescript(_SQLITE_SCHEMA)
-        conn.commit()
-
-        # Sync ad_users + users from MariaDB so login works on dev
-        cur = conn.execute("SELECT COUNT(*) AS cnt FROM ad_users")
-        if cur.fetchone()["cnt"] == 0:
-            _sync_auth_from_maria(conn)
-
-        _sqlite_initialized = True
-        logger.info("sqlite_dev_initialized", path=str(_SQLITE_PATH))
-    finally:
-        conn.close()
-
-
-def _sync_auth_from_maria(sqlite_conn: sqlite3.Connection):
-    """Copy ad_users and users from MariaDB into SQLite for dev login."""
-    try:
-        s = get_settings()
-        maria = pymysql.connect(
-            host=s.mariadb_host, port=int(s.mariadb_port),
-            user=s.mariadb_user, password=s.mariadb_password,
-            database=s.mariadb_database, charset="utf8mb4",
-            cursorclass=pymysql.cursors.DictCursor,
-        )
-        try:
-            with maria.cursor() as cur:
-                # ad_users
-                cur.execute("SELECT * FROM ad_users")
-                rows = cur.fetchall()
-                if rows:
-                    cols = list(rows[0].keys())
-                    placeholders = ",".join(["?"] * len(cols))
-                    col_names = ",".join(cols)
-                    for r in rows:
-                        vals = tuple(r[c] for c in cols)
-                        sqlite_conn.execute(
-                            f"INSERT OR IGNORE INTO ad_users ({col_names}) VALUES ({placeholders})",
-                            vals,
-                        )
-                    logger.info("sqlite_synced_ad_users", count=len(rows))
-
-                # users
-                cur.execute("SELECT * FROM users")
-                rows = cur.fetchall()
-                if rows:
-                    cols = list(rows[0].keys())
-                    placeholders = ",".join(["?"] * len(cols))
-                    col_names = ",".join(cols)
-                    for r in rows:
-                        vals = tuple(r[c] for c in cols)
-                        sqlite_conn.execute(
-                            f"INSERT OR IGNORE INTO users ({col_names}) VALUES ({placeholders})",
-                            vals,
-                        )
-                    logger.info("sqlite_synced_users", count=len(rows))
-
-                # access_groups
-                cur.execute("SELECT * FROM access_groups")
-                rows = cur.fetchall()
-                if rows:
-                    cols = list(rows[0].keys())
-                    placeholders = ",".join(["?"] * len(cols))
-                    col_names = ",".join(cols)
-                    for r in rows:
-                        vals = tuple(r[c] for c in cols)
-                        sqlite_conn.execute(
-                            f"INSERT OR IGNORE INTO access_groups ({col_names}) VALUES ({placeholders})",
-                            vals,
-                        )
-
-                # user_groups
-                cur.execute("SELECT * FROM user_groups")
-                rows = cur.fetchall()
-                if rows:
-                    cols = list(rows[0].keys())
-                    placeholders = ",".join(["?"] * len(cols))
-                    col_names = ",".join(cols)
-                    for r in rows:
-                        vals = tuple(r[c] for c in cols)
-                        sqlite_conn.execute(
-                            f"INSERT OR IGNORE INTO user_groups ({col_names}) VALUES ({placeholders})",
-                            vals,
-                        )
-
-            sqlite_conn.commit()
-        finally:
-            maria.close()
-    except Exception as e:
-        logger.warning("sqlite_maria_sync_failed", error=str(e))
-
-
-def _to_sqlite_sql(sql: str) -> str:
-    """Convert MySQL-style SQL to SQLite-compatible SQL."""
-    # %s → ? placeholder
-    return sql.replace("%s", "?")
-
-
-def _row_to_dict(row: sqlite3.Row | None) -> dict | None:
-    if row is None:
-        return None
-    return dict(row)
-
-
-def _sqlite_fetch_all(sql: str, params: tuple = ()) -> list[dict]:
-    _sqlite_init()
-    with _sqlite_lock:
-        conn = _sqlite_conn()
-        try:
-            cur = conn.execute(_to_sqlite_sql(sql), params)
-            return [dict(r) for r in cur.fetchall()]
-        finally:
-            conn.close()
-
-
-def _sqlite_fetch_one(sql: str, params: tuple = ()) -> dict | None:
-    _sqlite_init()
-    with _sqlite_lock:
-        conn = _sqlite_conn()
-        try:
-            cur = conn.execute(_to_sqlite_sql(sql), params)
-            return _row_to_dict(cur.fetchone())
-        finally:
-            conn.close()
-
-
-def _sqlite_execute(sql: str, params: tuple = ()) -> int:
-    _sqlite_init()
-    with _sqlite_lock:
-        conn = _sqlite_conn()
-        try:
-            cur = conn.execute(_to_sqlite_sql(sql), params)
-            conn.commit()
-            return cur.rowcount
-        finally:
-            conn.close()
-
-
-def _sqlite_execute_lastid(sql: str, params: tuple = ()) -> int:
-    _sqlite_init()
-    with _sqlite_lock:
-        conn = _sqlite_conn()
-        try:
-            cur = conn.execute(_to_sqlite_sql(sql), params)
-            conn.commit()
-            return cur.lastrowid
-        finally:
-            conn.close()
-
-
-# ===========================================================================
-# Public interface — routes to the right backend
+# Public interface
 # ===========================================================================
 
-if _DEV_MODE:
-    fetch_all = _sqlite_fetch_all
-    fetch_one = _sqlite_fetch_one
-    execute = _sqlite_execute
-    execute_lastid = _sqlite_execute_lastid
-else:
-    fetch_all = _maria_fetch_all
-    fetch_one = _maria_fetch_one
-    execute = _maria_execute
-    execute_lastid = _maria_execute_lastid
+fetch_all = _maria_fetch_all
+fetch_one = _maria_fetch_one
+execute = _maria_execute
+execute_lastid = _maria_execute_lastid
 
 
-# Backward compat: some code imports get_maria_conn directly
 def get_maria_conn():
-    """Get a pooled MariaDB connection (production only)."""
+    """Get a pooled MariaDB connection."""
     return _get_pool().connection()
 
 
@@ -405,3 +136,178 @@ def ensure_team_resources_table():
         execute(_TEAM_RESOURCES_DDL)
     except Exception as e:
         logger.warning("team_resources_table_error", error=str(e))
+
+
+# ===========================================================================
+# knowledge_wiki table DDL — persistent fact store
+# ===========================================================================
+_KNOWLEDGE_WIKI_DDL = """
+CREATE TABLE IF NOT EXISTS knowledge_wiki (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    domain VARCHAR(32) NOT NULL COMMENT '매출|마케팅|제품|팀|노션|기타',
+    entity VARCHAR(255) NOT NULL COMMENT '주체 (제품명, 팀명, 지표명 등)',
+    canonical_entity VARCHAR(255) DEFAULT NULL COMMENT 'normalized entity name',
+    period VARCHAR(64) DEFAULT NULL COMMENT '시점 (YYYY-MM, YYYY-Q#, permanent)',
+    metric VARCHAR(128) DEFAULT NULL COMMENT '측정 차원 (sales_usd, mom_growth, category_rank)',
+    value TEXT DEFAULT NULL COMMENT '값 (문자열 또는 JSON)',
+    summary TEXT NOT NULL COMMENT '자연어 한두 문장 요약',
+    embedding JSON DEFAULT NULL COMMENT 'Gemini embedding (768 floats) for semantic search',
+    review_status ENUM('none','needs_review','resolved') NOT NULL DEFAULT 'none',
+    source_conversation_id VARCHAR(36) DEFAULT NULL,
+    source_message_id INT DEFAULT NULL,
+    source_route VARCHAR(32) DEFAULT NULL,
+    confidence FLOAT NOT NULL DEFAULT 0.5,
+    thumbs_up INT NOT NULL DEFAULT 0,
+    thumbs_down INT NOT NULL DEFAULT 0,
+    status ENUM('pending','active','archived') NOT NULL DEFAULT 'pending',
+    extracted_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    validated_at DATETIME DEFAULT NULL,
+    INDEX idx_domain_entity (domain, entity),
+    INDEX idx_canonical (canonical_entity),
+    INDEX idx_entity (entity),
+    INDEX idx_period (period),
+    INDEX idx_status (status),
+    INDEX idx_review_status (review_status),
+    INDEX idx_extracted_at (extracted_at)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+"""
+
+
+def ensure_knowledge_wiki_table():
+    """Create knowledge_wiki table if not exists. Also adds optional columns
+    on existing tables (canonical_entity, embedding)."""
+    try:
+        execute(_KNOWLEDGE_WIKI_DDL)
+        # Add columns that may not exist on tables created by an older DDL
+        for alter in (
+            "ALTER TABLE knowledge_wiki ADD COLUMN canonical_entity VARCHAR(255) DEFAULT NULL",
+            "ALTER TABLE knowledge_wiki ADD COLUMN embedding JSON DEFAULT NULL",
+            "ALTER TABLE knowledge_wiki ADD COLUMN review_status ENUM('none','needs_review','resolved') NOT NULL DEFAULT 'none'",
+            "ALTER TABLE knowledge_wiki ADD COLUMN conflict_with_id BIGINT DEFAULT NULL",
+            "ALTER TABLE knowledge_wiki ADD COLUMN conflict_reason VARCHAR(255) DEFAULT NULL",
+            "ALTER TABLE knowledge_wiki ADD INDEX idx_canonical (canonical_entity)",
+            "ALTER TABLE knowledge_wiki ADD INDEX idx_review_status (review_status)",
+            "ALTER TABLE knowledge_wiki ADD INDEX idx_conflict (conflict_with_id)",
+        ):
+            try:
+                execute(alter)
+            except Exception:
+                pass  # column or index already exists
+    except Exception as e:
+        logger.warning("knowledge_wiki_table_error", error=str(e))
+
+
+_WIKI_EXTRACTION_LOG_DDL = """
+CREATE TABLE IF NOT EXISTS wiki_extraction_log (
+    message_id INT NOT NULL PRIMARY KEY COMMENT 'assistant messages.id',
+    extracted_count INT NOT NULL DEFAULT 0,
+    skipped_reason VARCHAR(64) DEFAULT NULL COMMENT 'route_filter|empty|llm_failed|parse_failed',
+    processed_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+"""
+
+
+def ensure_wiki_extraction_log_table():
+    """Create wiki_extraction_log table — prevents re-processing same pair."""
+    try:
+        execute(_WIKI_EXTRACTION_LOG_DDL)
+    except Exception as e:
+        logger.warning("wiki_extraction_log_table_error", error=str(e))
+
+
+_WIKI_ENTITY_ALIASES_DDL = """
+CREATE TABLE IF NOT EXISTS wiki_entity_aliases (
+    alias VARCHAR(255) NOT NULL PRIMARY KEY COMMENT 'normalized alias form',
+    canonical VARCHAR(255) NOT NULL COMMENT 'preferred canonical name',
+    source VARCHAR(32) NOT NULL DEFAULT 'manual' COMMENT 'manual|rule|llm',
+    created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    INDEX idx_canonical (canonical)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+"""
+
+
+def ensure_wiki_entity_aliases_table():
+    try:
+        execute(_WIKI_ENTITY_ALIASES_DDL)
+    except Exception as e:
+        logger.warning("wiki_entity_aliases_table_error", error=str(e))
+
+
+_WIKI_GRAPH_EDGES_DDL = """
+CREATE TABLE IF NOT EXISTS wiki_graph_edges (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    src_entity VARCHAR(255) NOT NULL,
+    dst_entity VARCHAR(255) NOT NULL,
+    relation VARCHAR(64) NOT NULL COMMENT 'owns|belongs_to|mentions|compares_to|sells_in|part_of|linked',
+    weight FLOAT NOT NULL DEFAULT 1.0,
+    source_wiki_ids TEXT DEFAULT NULL COMMENT 'JSON array of knowledge_wiki.id',
+    created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    UNIQUE KEY uk_edge (src_entity, dst_entity, relation),
+    INDEX idx_src (src_entity),
+    INDEX idx_dst (dst_entity)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+"""
+
+
+def ensure_wiki_graph_edges_table():
+    try:
+        execute(_WIKI_GRAPH_EDGES_DDL)
+        for alter in (
+            "ALTER TABLE wiki_graph_edges ADD COLUMN edge_type ENUM('extracted','inferred','ambiguous') NOT NULL DEFAULT 'inferred'",
+            "ALTER TABLE wiki_graph_edges ADD COLUMN source_confidence FLOAT NOT NULL DEFAULT 0.5",
+            "ALTER TABLE wiki_graph_edges ADD COLUMN community_id INT DEFAULT NULL",
+            "ALTER TABLE wiki_graph_edges ADD INDEX idx_edge_type (edge_type)",
+            "ALTER TABLE wiki_graph_edges ADD INDEX idx_community (community_id)",
+        ):
+            try:
+                execute(alter)
+            except Exception:
+                pass
+    except Exception as e:
+        logger.warning("wiki_graph_edges_table_error", error=str(e))
+
+
+_WIKI_ENTITY_PAGES_DDL = """
+CREATE TABLE IF NOT EXISTS wiki_entity_pages (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    canonical_entity VARCHAR(255) NOT NULL UNIQUE,
+    domain VARCHAR(32) NOT NULL,
+    markdown MEDIUMTEXT NOT NULL COMMENT 'compiled entity page body',
+    fact_count INT NOT NULL DEFAULT 0,
+    period_span VARCHAR(128) DEFAULT NULL COMMENT 'earliest~latest period',
+    community_id INT DEFAULT NULL,
+    community_label VARCHAR(128) DEFAULT NULL,
+    last_fact_at DATETIME DEFAULT NULL,
+    compiled_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    INDEX idx_domain (domain),
+    INDEX idx_community (community_id),
+    INDEX idx_compiled_at (compiled_at)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+"""
+
+
+def ensure_wiki_entity_pages_table():
+    try:
+        execute(_WIKI_ENTITY_PAGES_DDL)
+    except Exception as e:
+        logger.warning("wiki_entity_pages_table_error", error=str(e))
+
+
+_WIKI_COMMUNITIES_DDL = """
+CREATE TABLE IF NOT EXISTS wiki_communities (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    label VARCHAR(128) NOT NULL,
+    size INT NOT NULL DEFAULT 0,
+    density FLOAT DEFAULT NULL,
+    top_entities JSON DEFAULT NULL,
+    detected_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+"""
+
+
+def ensure_wiki_communities_table():
+    try:
+        execute(_WIKI_COMMUNITIES_DDL)
+    except Exception as e:
+        logger.warning("wiki_communities_table_error", error=str(e))

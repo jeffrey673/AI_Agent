@@ -1206,6 +1206,7 @@ def run_sql_agent_stream(
     model_type: str = MODEL_GEMINI,
     brand_filter: Optional[str] = None,
     enabled_sources: Optional[list] = None,
+    wiki_context: str = "",
 ):
     """Streaming version of run_sql_agent. Yields text chunks during format_answer.
 
@@ -1256,6 +1257,15 @@ def run_sql_agent_stream(
     today_kr = datetime.now().strftime("%Y년 %m월 %d일")
     table_source = _extract_table_sources(sql)
 
+    wiki_block = ""
+    if wiki_context:
+        wiki_block = (
+            "\n## 참고: 이전 대화에서 추출된 관련 팩트 (지식 위키)\n"
+            f"{wiki_context}\n"
+            "⚠️ 위 팩트는 참고용입니다. SQL 실행 결과가 최신 원본이므로 결과를 우선하되, "
+            "팩트가 결과를 보완하거나 맥락을 제공할 때만 인용하세요.\n"
+        )
+
     prompt = f"""## SQL 실행 결과
 사용자 질문: {query}
 실행된 SQL:
@@ -1264,7 +1274,7 @@ def run_sql_agent_stream(
 ```
 결과 ({len(results)}행):
 {result_preview}
-
+{wiki_block}
 ## 답변 형식
 ### 📊 [제목] → #### 요약 → #### 상세 데이터 (표) → #### 분석 및 인사이트
 ---
