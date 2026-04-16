@@ -5,13 +5,17 @@
 **Status**: Approved, ready for implementation plan
 **Related**: [Karpathy LLM Wiki](https://github.com/Astro-Han/karpathy-llm-wiki), [Graphify](https://github.com/safishamsi/graphify)
 
+## ⚠️ Naming note (2026-04-16 update)
+
+기존 `app/knowledge_map/` 패키지는 **런타임 대화 지식 시스템** (Flash → MariaDB `knowledge_wiki`/`wiki_graph_edges`)으로 이미 사용 중이며 orchestrator가 의존. 이 spec의 빌더는 충돌 회피를 위해 **`app/knowledge_map/`**, 출력 루트는 **`knowledge_map/`**로 배치한다. 두 시스템은 완전히 독립적이다 (런타임 vs 정적, DB vs 파일).
+
 ## 문제
 
 Claude Code 세션은 매 대화마다 기억이 없다. 같은 질문에 같은 grep·Read를 반복하고, `docs/` 60+개 + `app/**/*.py` 수백 파일을 탐색하느라 토큰을 태운다. 지식이 쌓이지 않는다. 자료가 많아질수록 느려진다.
 
 ## 해결책 요약
 
-카파시 LLM Wiki 개념(AI가 원본을 한 번 읽고 구조화된 위키로 정리 → 이후 원본 대신 위키를 읽음)을 Graphify 개념(자동 생성된 graph.json 한 페이지로 전체 지도 압축)과 결합한다. 단일 경량 Python 스크립트가 매일 03:00 자동 실행되어 `knowledge/` 디렉토리에 지도를 갱신한다. `CLAUDE.md` 한 줄이 모든 세션에 "먼저 `knowledge/GRAPH_REPORT.md`를 읽어라"를 강제한다.
+카파시 LLM Wiki 개념(AI가 원본을 한 번 읽고 구조화된 위키로 정리 → 이후 원본 대신 위키를 읽음)을 Graphify 개념(자동 생성된 graph.json 한 페이지로 전체 지도 압축)과 결합한다. 단일 경량 Python 스크립트가 매일 03:00 자동 실행되어 `knowledge_map/` 디렉토리에 지도를 갱신한다. `CLAUDE.md` 한 줄이 모든 세션에 "먼저 `knowledge_map/GRAPH_REPORT.md`를 읽어라"를 강제한다.
 
 기대 효과: 쿼리당 토큰 최대 71.5배 절감 (Graphify 벤치 기준, 본 프로젝트에서는 실측 필요), 자료가 쌓일수록 답변 품질 복리 성장, 유지비용 ≈ 0 (AI가 스스로 갱신).
 
@@ -41,7 +45,7 @@ Claude Code 세션은 매 대화마다 기억이 없다. 같은 질문에 같은
 
 ```
 AI_Agent/
-├── knowledge/                        ← 산출물 루트 (git 추적)
+├── knowledge_map/                        ← 산출물 루트 (git 추적)
 │   ├── graph.json                    ← 노드+엣지 (기계용, ~100KB 목표)
 │   ├── GRAPH_REPORT.md               ← 한 페이지 요약 (에이전트 첫 진입점)
 │   ├── wiki/
@@ -55,7 +59,7 @@ AI_Agent/
 │   └── .cache/                       ← .gitignore
 │       └── file_hashes.json          ← SHA256 + mtime, 증분 빌드용
 │
-├── app/knowledge/                    ← 빌더 모듈
+├── app/knowledge_map/                    ← 빌더 모듈
 │   ├── __init__.py
 │   ├── builder.py                    ← 메인 오케스트레이터 (~150줄)
 │   ├── ast_parser.py                 ← Python AST 추출 (~100줄)
@@ -91,7 +95,7 @@ AI_Agent/
 - `tests/`, `scripts/` (일회성 스크립트, tests는 실행 대상)
 - `prompts/` (지도 구성요소이지 인덱싱 대상 아님)
 
-제외 패턴은 `app/knowledge/builder.py`의 `EXCLUDE_PATTERNS` 상수로 중앙 관리.
+제외 패턴은 `app/knowledge_map/builder.py`의 `EXCLUDE_PATTERNS` 상수로 중앙 관리.
 
 ## graph.json 스키마
 
@@ -227,14 +231,14 @@ AI_Agent/
 
 **모든 작업 전에 다음 순서를 지켜라**:
 
-1. **먼저** `knowledge/GRAPH_REPORT.md`를 읽는다. 한 페이지에 프로젝트 전체 구조·중심 노드·최근 변경이 요약돼 있다.
-2. 필요하면 `knowledge/graph.json`을 읽어 관련 노드 2~3개만 골라낸다.
-3. 골라낸 노드의 `wiki_page` 경로(`knowledge/wiki/**.md`)만 Read한다.
+1. **먼저** `knowledge_map/GRAPH_REPORT.md`를 읽는다. 한 페이지에 프로젝트 전체 구조·중심 노드·최근 변경이 요약돼 있다.
+2. 필요하면 `knowledge_map/graph.json`을 읽어 관련 노드 2~3개만 골라낸다.
+3. 골라낸 노드의 `wiki_page` 경로(`knowledge_map/wiki/**.md`)만 Read한다.
 4. **그래도 부족할 때만** 원본 파일(`app/**`, `docs/**`)을 Read하거나 Grep한다.
 
 **금지 행동**:
 - GRAPH_REPORT.md를 건너뛰고 바로 Grep/Glob하지 마라. 토큰 낭비다.
-- `knowledge/` 디렉토리를 무시하지 마라. 매일 03:00 자동 업데이트되는 신뢰 가능한 소스다.
+- `knowledge_map/` 디렉토리를 무시하지 마라. 매일 03:00 자동 업데이트되는 신뢰 가능한 소스다.
 - 지도가 낡았다고 판단되면 `python scripts/build_knowledge_graph.py --force` 실행을 제안하라.
 
 **지도가 커버하지 못하는 영역**:
@@ -280,12 +284,12 @@ RunLevel:    Highest (user 로그인 시 백그라운드)
 ## git 정책
 
 **추적**:
-- `knowledge/graph.json`
-- `knowledge/GRAPH_REPORT.md`
-- `knowledge/wiki/**/*.md`
+- `knowledge_map/graph.json`
+- `knowledge_map/GRAPH_REPORT.md`
+- `knowledge_map/wiki/**/*.md`
 
 **무시** (`.gitignore`):
-- `knowledge/.cache/`
+- `knowledge_map/.cache/`
 
 커밋되는 graph.json은 diff가 클 수 있다. 완화책: exporters가 노드/엣지를 **id 기준으로 정렬**해서 쓰기 → diff 최소화 + 리뷰 가능성 확보.
 
@@ -324,7 +328,7 @@ python-louvain>=0.16
 
 ## 성공 기준
 
-- [ ] 첫 빌드 완료, `knowledge/GRAPH_REPORT.md` + `graph.json` + `wiki/` 생성
+- [ ] 첫 빌드 완료, `knowledge_map/GRAPH_REPORT.md` + `graph.json` + `wiki/` 생성
 - [ ] `scripts/validate_graph.py` 통과 (스키마 + 무결성)
 - [ ] 일일 Task Scheduler 등록 후 다음 날 03:00 자동 실행 확인
 - [ ] CLAUDE.md 트리거 섹션 반영, 새 세션에서 Claude가 GRAPH_REPORT를 먼저 읽는지 검증
