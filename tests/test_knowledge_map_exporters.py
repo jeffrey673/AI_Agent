@@ -53,3 +53,4 @@ def test_write_wiki_index_creates_toc(tmp_path: Path) -> None:
 def test_sort_key_for_diff_is_stable() -> None:
     assert sort_key_for_diff({"id": "z"}) == "z"
     assert sort_key_for_diff({"src": "a", "dst": "b", "type": "calls"}) == "a->b:calls"
+    assert sort_key_for_diff({"from": "x", "to": "y", "type": "imports"}) == "x->y:imports"

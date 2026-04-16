@@ -16,7 +16,7 @@ def sort_key_for_diff(obj: dict[str, Any]) -> str:
     """Stable sort key for nodes/edges so git diffs stay readable."""
     if "id" in obj:
         return str(obj["id"])
-    return f"{obj.get('src', '')}->{obj.get('dst', '')}:{obj.get('type', '')}"
+    return f"{obj.get('from', obj.get('src', ''))}->{obj.get('to', obj.get('dst', ''))}:{obj.get('type', '')}"
 
 
 def _node_to_dict(n: Node) -> dict[str, Any]:
