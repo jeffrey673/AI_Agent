@@ -126,3 +126,7 @@ custom_frontend/
 logo_datauri.txt
 관리자/
 .gstack/
+
+# Knowledge Map build cache (regenerable)
+knowledge_map/.cache/
+!knowledge_map/.cache/.gitkeep
