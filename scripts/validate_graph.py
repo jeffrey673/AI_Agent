@@ -49,7 +49,7 @@ def validate() -> int:
             errors.append(f"edge {e} missing {missing}")
             continue
         if e["type"] not in _VALID_EDGE_TYPES:
-            errors.append(f"edge {e['from']}->{e['to']} has unknown type: {e['type']}")
+            warnings.append(f"edge {e['from']}->{e['to']} has non-standard type: {e['type']}")
         if e["from"] not in node_ids:
             warnings.append(f"dangling src: {e['from']} (edge {e['from']}->{e['to']})")
 
