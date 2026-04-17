@@ -887,6 +887,24 @@ html.light .login-card .logo { mix-blend-mode: multiply; }
 
 /* Brand filter dropdown */
 /* GWS button in topbar (top-right) */
+.topbar-icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg-input);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: background-color var(--duration-normal) ease, color var(--duration-normal) ease, border-color var(--duration-normal) ease;
+}
+.topbar-icon-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--bg-hover);
+}
 .topbar-gws-btn {
   display: flex;
   align-items: center;

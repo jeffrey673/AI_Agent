@@ -15,16 +15,6 @@ echo ======================================== >> "%LOG%"
 echo [%date% %time%] Daily git push starting >> "%LOG%"
 echo ======================================== >> "%LOG%"
 
-REM Check for changes
-"%GIT%" status --porcelain > "%TEMP%\git_status_check.txt" 2>&1
-for /f %%A in ("%TEMP%\git_status_check.txt") do set size=%%~zA
-if "%size%"=="0" (
-    echo [%date% %time%] No changes to commit, skipping >> "%LOG%"
-    del "%TEMP%\git_status_check.txt" 2>nul
-    exit /b 0
-)
-del "%TEMP%\git_status_check.txt" 2>nul
-
 REM Stage all tracked + untracked changes (excluding .gitignore'd)
 "%GIT%" add -A >> "%LOG%" 2>&1
 
@@ -35,11 +25,10 @@ for /f "tokens=1-3 delims=-/. " %%a in ('echo %date%') do (
     set "DD=%%c"
 )
 
-REM Create commit with timestamp
+REM Create commit (may skip if nothing to commit — that's fine, still push)
 "%GIT%" commit -m "chore: daily auto-commit %YYYY%-%MM%-%DD%" >> "%LOG%" 2>&1
 if errorlevel 1 (
-    echo [%date% %time%] Commit failed or nothing to commit >> "%LOG%"
-    exit /b 0
+    echo [%date% %time%] Nothing new to commit, pushing existing commits >> "%LOG%"
 )
 
 REM Push to both remotes (origin + jaepilimited)

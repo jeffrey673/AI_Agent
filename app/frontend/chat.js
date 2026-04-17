@@ -908,6 +908,23 @@
 
     // GWS connect
     document.getElementById("btn-gws-connect").addEventListener("click", handleGwsConnect);
+
+    // Copy entire conversation
+    document.getElementById("btn-copy-all").addEventListener("click", function() {
+      var msgs = chatMessages.querySelectorAll(".message-user, .message-assistant");
+      if (!msgs.length) { showToast("복사할 대화가 없습니다", "info"); return; }
+      var lines = [];
+      msgs.forEach(function(m) {
+        var ce = m.querySelector(".message-content");
+        var raw = (ce && ce.dataset.raw) || (ce && ce.textContent) || "";
+        if (m.classList.contains("message-user")) {
+          lines.push("Q: " + raw.trim());
+        } else {
+          lines.push("A: " + raw.trim());
+        }
+      });
+      _copyText(lines.join("\n\n"), document.getElementById("btn-copy-all"));
+    });
   }
 
   function closeMobileSidebar() {
