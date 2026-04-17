@@ -116,8 +116,13 @@ _schema_cache_tables: Dict[str, str] = {}  # table_path -> schema text
 
 # Marketing / review / ad tables with keyword triggers for lazy loading
 MARKETING_TABLES = [
-    ("skin1004-319714.marketing_analysis.integrated_advertising_data", "통합 광고 데이터",
-     ["광고", "ad", "advertising", "클릭", "노출", "roas", "cpc", "cpm", "틱톡광고", "페이스북광고", "구글광고", "카카오", "네이버광고"]),
+    ("skin1004-319714.marketing_analysis.integrated_ad", "통합 광고 데이터",
+     ["광고", "ad", "advertising", "클릭", "노출", "roas", "cpc", "cpm", "ctr", "cvr", "전환",
+      "틱톡광고", "페이스북광고", "메타광고 비용", "메타 광고비", "구글광고", "카카오", "네이버광고",
+      "meta", "메타", "tiktok", "google", "amazon ads", "amazonads", "아마존광고",
+      "snapchat", "스냅챗", "tokopedia", "토코피디아", "rakuten", "라쿠텐",
+      "x광고", "twitter광고", "트위터광고", "dsp", "qoo10광고", "큐텐광고",
+      "계정별", "팀별 광고", "매체별", "account_name"]),
     ("skin1004-319714.marketing_analysis.Integrated_marketing_cost", "통합 마케팅 비용",
      ["마케팅", "마캐팅", "marketing", "비용", "roi", "매체", "팀별"]),
     ("skin1004-319714.marketing_analysis.shopify_analysis_sales", "Shopify 판매 데이터",
@@ -186,7 +191,7 @@ def generate_sql(state: AgentState) -> Dict[str, Any]:
     _SOURCE_TABLE_MAP = {
         "매출": [settings.sales_table_full_path],
         "제품": [f"{settings.gcp_project_id}.{settings.bq_dataset_sales}.Product"],
-        "광고": ["skin1004-319714.marketing_analysis.integrated_advertising_data"],
+        "광고": ["skin1004-319714.marketing_analysis.integrated_ad"],
         "마케팅": ["skin1004-319714.marketing_analysis.Integrated_marketing_cost"],
         "Shopify": ["skin1004-319714.marketing_analysis.shopify_analysis_sales"],
         "플랫폼": ["skin1004-319714.Platform_Data.raw_data"],
@@ -488,7 +493,7 @@ def execute_sql(state: AgentState) -> Dict[str, Any]:
 # Friendly display names for BigQuery tables
 _TABLE_DISPLAY_NAMES = {
     "SALES_ALL_Backup": "통합 매출 (SALES_ALL)",
-    "integrated_advertising_data": "통합 광고 데이터",
+    "integrated_ad": "통합 광고 데이터",
     "Integrated_marketing_cost": "통합 마케팅 비용",
     "shopify_analysis_sales": "Shopify 판매",
     "raw_data": "플랫폼 메트릭스",

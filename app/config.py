@@ -126,7 +126,7 @@ class Settings(BaseSettings):
             self.sales_table_full_path,
             self.product_table_full_path,
             # Marketing / Advertising
-            "skin1004-319714.marketing_analysis.integrated_advertising_data",
+            "skin1004-319714.marketing_analysis.integrated_ad",
             "skin1004-319714.marketing_analysis.Integrated_marketing_cost",
             "skin1004-319714.marketing_analysis.shopify_analysis_sales",
             "skin1004-319714.Platform_Data.raw_data",

@@ -23,7 +23,7 @@
 | **매출** (얼마, 매출액, 금액, revenue) | `SALES_ALL_Backup` |
 | **매출 + 수량** 동시 | `SALES_ALL_Backup` (Total_Qty 보유) |
 | **제품 리스트** (어떤 제품?) | `Product` |
-| **광고 데이터** (ROAS, CTR, 노출, 클릭, 전환) | `integrated_advertising_data` |
+| **광고 데이터** (ROAS, CTR, 노출, 클릭, 전환, 매체/팀/계정별) | `integrated_ad` |
 | **마케팅 비용** (퍼포먼스/인플루언서) | `Integrated_marketing_cost` (Field='광고'→퍼포먼스, '시딩'→인플루언서) |
 | **인플루언서 상세** (팔로워, 좋아요, CPV) | `influencer_input_ALL_TEAMS` |
 | **Shopify 자사몰** | `shopify_analysis_sales` |
@@ -443,43 +443,124 @@ GROUP BY `SET` ORDER BY total_revenue DESC LIMIT 10
 
 ---
 
-## 테이블 3: integrated_advertising_data (통합 광고)
+## 테이블 3: integrated_ad (통합 광고) ⭐ LONG 포맷
 
-테이블: `skin1004-319714.marketing_analysis.integrated_advertising_data`
+테이블: `skin1004-319714.marketing_analysis.integrated_ad`
 
-**특징**: TikTok, Facebook, Shopee, Google, Naver, KakaoMoments, SingleONE, AmazonAds 통합.
+**특징**: 플랫폼별 컬럼이 아닌 **롱(long) 포맷**. `media` 컬럼에 플랫폼 값이 들어감.
 ⛔ **Brand 컬럼 없음!** SALES_ALL의 Brand 사용 시 에러!
-⚠️ Date는 DATE 타입 (SALES_ALL의 DATETIME과 다름)
-⚠️ Country는 한국어
+⛔ **옛 컬럼 금지!** `TikTok_Cost`, `Facebook_Cost`, `Google_Cost`, `NaverSearch_Cost`, `Shopee_Expense_KRW`, `SingleONE_Cost_KRW`, `KakaoMoments_Cost`, `AmazonAds_Cost` 등은 **더 이상 존재하지 않음**.
+⚠️ date는 DATE 타입 소문자 (SALES_ALL의 DATETIME과 다름)
+⚠️ country는 한국어 (대만/말레이시아/미국/베트남/싱가포르/인도네시아/일본/필리핀/한국/호주)
 
-### 컬럼 스키마
+### 컬럼 스키마 (전부 소문자)
 
-기본: Date (DATE), Country (STRING)
+| 컬럼 | 타입 | 설명 |
+|------|------|------|
+| date | DATE | 광고 집행일 |
+| country | STRING | 국가 (한국어) |
+| team | STRING | 담당팀 — EAST1, EAST2, JBT, KBT, WEST, 기타 |
+| media | STRING | **매체 (플랫폼) ⭐** |
+| account_name | STRING | 광고 계정명 |
+| cost_krw | FLOAT | 광고비 (KRW) |
+| impressions | INTEGER | 노출 수 |
+| clicks | INTEGER | 클릭 수 |
+| conversions | INTEGER | 전환 수 |
+| conversion_value_krw | FLOAT | 전환 가치 (KRW) |
 
-| 플랫폼 | 광고비 | 노출 | 클릭 | 전환/구매 | 전환금액 |
-|--------|--------|------|------|----------|---------|
-| TikTok | TikTok_Cost | TikTok_Impressions | TikTok_Clicks | TikTok_Complete_payment_events | TikTok_Total_complete_payment_value |
-| Facebook | Facebook_Cost | Facebook_Impressions | Facebook_Link_clicks | Facebook_Website_purchases | Facebook_Website_purchases_conversion_value |
-| Shopee | Shopee_Expense_KRW | Shopee_Impressions | Shopee_Clicks | Shopee_Conversions | Shopee_GMV_KRW |
-| Google | Google_Cost | Google_Impressions | Google_Clicks | Google_Conversions | Google_Total_conversion_value |
-| NaverSearch | NaverSearch_Cost | NaverSearch_Impressions | NaverSearch_Clicks | NaverSearch_Conversions | NaverSearch_Conversion_value |
-| NaverGFA | NaverGFA_Cost | NaverGFA_Impressions | NaverGFA_Clicks | NaverGFA_Purchases | NaverGFA_Purchases_conversion_sales |
-| SingleONE | SingleONE_Cost_KRW | SingleONE_Impressions | SingleONE_Clicks | SingleONE_Conversions | SingleONE_Sales_KRW |
-| KakaoMoments | KakaoMoments_Cost | KakaoMoments_Impressions | KakaoMoments_Clicks | KakaoMoments_Purchases | KakaoMoments_Purchases_amount |
-| AmazonAds | AmazonAds_Cost | AmazonAds_Impressions | AmazonAds_Clicks | AmazonAds_Purchases | AmazonAds_Purchases_amount |
+### media 값 목록 (정확히 이 값만 사용!)
+`Amazon`, `AmazonDSP`, `Google`, `KakaoMoments`, `Meta`, `NaverGFA`, `NaverSearch`, `Qoo10`, `Rakuten`, `Shopee`, `SingleONE`, `Snapchat`, `TikTok`, `Tokopedia`, `X(Twitter)`
 
-각 플랫폼 Account/Shop/Advertiser name 컬럼 존재 ({Platform}_Account_name 등)
-Facebook 추가: Omni_purchase_conversion_value_shared_item, Omni_purchase_shared_item
+### ⚠️ 매체 매핑 규칙 (필수!)
+| 사용자 표현 | media 값 |
+|-----------|---------|
+| **메타, 페이스북, 인스타, 인스타그램** | `'Meta'` ⚠️ (Facebook 아님!) |
+| 틱톡 | `'TikTok'` |
+| 구글 | `'Google'` |
+| 아마존 광고, 아마존 애즈 | `'Amazon'` (또는 `IN ('Amazon','AmazonDSP')` — DSP 포함 여부는 문맥 판단) |
+| 카카오 모먼트, 카카오 | `'KakaoMoments'` |
+| 네이버 검색광고, 파워링크 | `'NaverSearch'` |
+| 네이버 GFA, 네이버 디스플레이 | `'NaverGFA'` |
+| 네이버 광고 (통합) | `IN ('NaverSearch','NaverGFA')` |
+| 쇼피 | `'Shopee'` |
+| 싱글원 | `'SingleONE'` |
+| 스냅챗 | `'Snapchat'` |
+| 큐텐 광고 | `'Qoo10'` |
+| 라쿠텐 | `'Rakuten'` |
+| 토코피디아 | `'Tokopedia'` |
+| X, 트위터 | `'X(Twitter)'` |
 
-- ROAS: `SAFE_DIVIDE(SUM(전환금액), SUM(광고비))` (플랫폼별 개별 계산)
-- "전체 광고비" = 각 플랫폼 Cost 합산
-- "메타/페이스북/인스타" → Facebook_ 접두사 컬럼 사용
+### 주요 지표 계산
+- **전체 광고비**: `SUM(cost_krw)` (GROUP BY 없이 또는 원하는 차원으로)
+- **ROAS**: `SAFE_DIVIDE(SUM(conversion_value_krw), SUM(cost_krw))`
+- **CTR**: `SAFE_DIVIDE(SUM(clicks), SUM(impressions))`
+- **CVR (전환율)**: `SAFE_DIVIDE(SUM(conversions), SUM(clicks))`
+- **CPC**: `SAFE_DIVIDE(SUM(cost_krw), SUM(clicks))`
+- **CPM**: `SAFE_DIVIDE(SUM(cost_krw) * 1000, SUM(impressions))`
 
 ### 예시 쿼리
 ```sql
--- A1. 월별 광고비: FORMAT_DATE('%Y-%m', Date) AS month, SUM(플랫폼_Cost) GROUP BY month
--- A2. ROAS: SAFE_DIVIDE(SUM(GMV/전환금액), SUM(Cost)) AS roas + GROUP BY Country
--- A3. 전체 광고비: SUM(TikTok_Cost)+SUM(Facebook_Cost)+SUM(Shopee_Expense_KRW)+...
+-- A1. 월별 전체 광고비
+SELECT FORMAT_DATE('%Y-%m', date) AS month, SUM(cost_krw) AS cost
+FROM `skin1004-319714.marketing_analysis.integrated_ad`
+WHERE date BETWEEN '2025-01-01' AND '2025-12-31'
+GROUP BY month ORDER BY month;
+
+-- A2. 매체별 ROAS TOP 5
+SELECT media,
+       SUM(cost_krw) AS cost,
+       SUM(conversion_value_krw) AS conv_value,
+       SAFE_DIVIDE(SUM(conversion_value_krw), SUM(cost_krw)) AS roas
+FROM `skin1004-319714.marketing_analysis.integrated_ad`
+WHERE date >= DATE_SUB(CURRENT_DATE(), INTERVAL 3 MONTH)
+GROUP BY media ORDER BY roas DESC LIMIT 5;
+
+-- A3. Meta 광고 CTR 월별 추이
+SELECT FORMAT_DATE('%Y-%m', date) AS month,
+       SAFE_DIVIDE(SUM(clicks), SUM(impressions)) AS ctr
+FROM `skin1004-319714.marketing_analysis.integrated_ad`
+WHERE media = 'Meta' AND date BETWEEN '2025-01-01' AND '2025-12-31'
+GROUP BY month ORDER BY month;
+
+-- A4. 팀별 광고비 (2025년)
+SELECT team, SUM(cost_krw) AS cost
+FROM `skin1004-319714.marketing_analysis.integrated_ad`
+WHERE date BETWEEN '2025-01-01' AND '2025-12-31'
+GROUP BY team ORDER BY cost DESC;
+
+-- A5. 국가별 전환수 (2026 Q1)
+SELECT country, SUM(conversions) AS conversions
+FROM `skin1004-319714.marketing_analysis.integrated_ad`
+WHERE date BETWEEN '2026-01-01' AND '2026-03-31' AND country IS NOT NULL
+GROUP BY country ORDER BY conversions DESC;
+
+-- A6. 계정별 광고비 TOP 10
+SELECT account_name, media, SUM(cost_krw) AS cost
+FROM `skin1004-319714.marketing_analysis.integrated_ad`
+WHERE date >= DATE_SUB(CURRENT_DATE(), INTERVAL 3 MONTH)
+GROUP BY account_name, media ORDER BY cost DESC LIMIT 10;
+
+-- A7. 매체 × 국가 ROAS 매트릭스
+SELECT media, country,
+       SAFE_DIVIDE(SUM(conversion_value_krw), SUM(cost_krw)) AS roas
+FROM `skin1004-319714.marketing_analysis.integrated_ad`
+WHERE date >= DATE_SUB(CURRENT_DATE(), INTERVAL 1 MONTH)
+      AND country IS NOT NULL
+GROUP BY media, country ORDER BY roas DESC;
+
+-- A8. YoY 광고비 성장률 (매체별)
+WITH cur AS (
+  SELECT media, SUM(cost_krw) AS cost
+  FROM `skin1004-319714.marketing_analysis.integrated_ad`
+  WHERE EXTRACT(YEAR FROM date) = 2026 GROUP BY media
+), prev AS (
+  SELECT media, SUM(cost_krw) AS cost
+  FROM `skin1004-319714.marketing_analysis.integrated_ad`
+  WHERE EXTRACT(YEAR FROM date) = 2025 GROUP BY media
+)
+SELECT cur.media, cur.cost AS cur_cost, prev.cost AS prev_cost,
+       SAFE_DIVIDE(cur.cost - prev.cost, prev.cost) AS yoy_growth
+FROM cur LEFT JOIN prev USING(media) ORDER BY yoy_growth DESC;
 ```
 
 ---
