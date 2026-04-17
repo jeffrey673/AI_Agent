@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>Eval Review · SKIN1004 AI</title>
+  <link rel="stylesheet" href="/static/style.css?v=211">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <style>
+    body { padding: 0; margin: 0; }
+    .eval-root { padding: 16px 20px; max-width: 1600px; margin: 0 auto; }
+    .eval-status {
+      position: sticky; top: 0; background: var(--bg, #fff);
+      padding: 10px 0; z-index: 10; border-bottom: 1px solid var(--border, #ddd);
+      display: flex; flex-wrap: wrap; gap: 10px; align-items: center;
+    }
+    .eval-status select, .eval-status input { padding: 4px 8px; font-size: 13px; }
+    .progress-pill {
+      display: inline-flex; gap: 10px; align-items: center;
+      padding: 4px 12px; border-radius: 999px;
+      background: var(--panel, #f3f3f3); font-size: 13px;
+    }
+    .progress-pill .good { color: #10a37f; font-weight: 600; }
+    .progress-pill .bad { color: #dc2626; font-weight: 600; }
+    .progress-pill .skip { color: #6b7280; }
+    .progress-pill .pending { color: #d97706; }
+
+    .eval-table { width: 100%; border-collapse: collapse; font-size: 13px; margin-top: 12px; }
+    .eval-table th, .eval-table td {
+      border: 1px solid var(--border, #e5e5e5);
+      padding: 8px; vertical-align: top; text-align: left;
+    }
+    .eval-table th { background: var(--panel, #f9f9f9); position: sticky; top: 56px; z-index: 5; }
+    .col-num { width: 48px; color: #888; text-align: center; }
+    .col-team { width: 160px; font-weight: 500; }
+    .col-q { width: 280px; white-space: pre-wrap; word-break: break-word; }
+    .col-a { min-width: 360px; }
+    .col-a p { margin: 4px 0; }
+    .col-a table { border-collapse: collapse; margin: 6px 0; }
+    .col-a th, .col-a td { border: 1px solid #ddd; padding: 4px 8px; font-size: 12px; }
+    .col-ms { width: 70px; text-align: right; }
+    .col-route { width: 80px; }
+    .col-src { width: 70px; }
+    .col-v { width: 180px; }
+
+    .verdict-btn {
+      padding: 4px 10px; margin-right: 3px; border: 1px solid var(--border, #ccc);
+      border-radius: 6px; background: var(--bg, #fff); cursor: pointer; font-size: 13px;
+    }
+    .verdict-btn:hover { background: var(--panel, #f3f3f3); }
+    .verdict-btn.active-good { background: #d1fae5; border-color: #10a37f; }
+    .verdict-btn.active-bad { background: #fecaca; border-color: #dc2626; }
+    .verdict-btn.active-skip { background: #e5e7eb; border-color: #6b7280; }
+
+    .row-good td { background: #f0fdf4; }
+    .row-bad td { background: #fef2f2; }
+    .row-skip td { background: #fafafa; opacity: 0.75; }
+
+    .spinner { display: inline-block; padding: 12px; color: #888; }
+  </style>
+</head>
+<body>
+<div class="eval-root">
+  <div class="eval-status">
+    <label>Run:
+      <select id="run-select"></select>
+    </label>
+    <label>Team:
+      <select id="team-filter"><option value="">all teams</option></select>
+    </label>
+    <label>Verdict:
+      <select id="verdict-filter">
+        <option value="">all</option>
+        <option value="pending" selected>pending</option>
+        <option value="good">good</option>
+        <option value="bad">bad</option>
+        <option value="skip">skip</option>
+      </select>
+    </label>
+    <span id="progress" class="progress-pill"></span>
+  </div>
+
+  <div id="body-wrap">
+    <div class="spinner" id="loading">loading...</div>
+    <table class="eval-table" id="qa-table" hidden>
+      <thead>
+        <tr>
+          <th class="col-num">#</th>
+          <th class="col-team">팀</th>
+          <th class="col-q">질문</th>
+          <th class="col-a">답변</th>
+          <th class="col-ms">ms</th>
+          <th class="col-route">route</th>
+          <th class="col-src">src</th>
+          <th class="col-v">판정</th>
+        </tr>
+      </thead>
+      <tbody id="qa-body"></tbody>
+    </table>
+  </div>
+</div>
+
+<script>
+(function () {
+  const runSel = document.getElementById("run-select");
+  const verdictSel = document.getElementById("verdict-filter");
+  const teamSel = document.getElementById("team-filter");
+  const body = document.getElementById("qa-body");
+  const progress = document.getElementById("progress");
+  const table = document.getElementById("qa-table");
+  const loading = document.getElementById("loading");
+
+  function esc(s) {
+    return String(s == null ? "" : s).replace(/[&<>]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
+  }
+
+  async function api(path, opts) {
+    const r = await fetch(path, opts);
+    if (!r.ok) throw new Error(path + " " + r.status);
+    return r.json();
+  }
+
+  async function loadRuns() {
+    const d = await api("/api/admin/eval/runs");
+    runSel.innerHTML = "";
+    (d.runs || []).forEach(r => {
+      const o = document.createElement("option");
+      o.value = r.id;
+      const done = r.done || 0, total = r.total || 0;
+      const ts = (r.started_at || "").replace("T", " ").slice(0, 16);
+      o.textContent = `#${r.id} · ${ts} · ${done}/${total}` + (r.finished_at ? " ✓" : " ⋯");
+      runSel.appendChild(o);
+    });
+  }
+
+  async function loadSummary() {
+    if (!runSel.value) return;
+    const s = await api(`/api/admin/eval/runs/${runSel.value}/summary`);
+    const c = s.counts || {};
+    const good = c.good || 0, bad = c.bad || 0, skip = c.skip || 0, pend = c.pending || 0;
+    const reviewed = good + bad + skip;
+    const total = reviewed + pend;
+    progress.innerHTML =
+      `<span>${reviewed}/${total}</span>` +
+      ` · <span class="good">good ${good}</span>` +
+      ` · <span class="bad">bad ${bad}</span>` +
+      ` · <span class="skip">skip ${skip}</span>` +
+      ` · <span class="pending">pending ${pend}</span>`;
+
+    // Populate team filter once (from by_team rollup)
+    if (teamSel.options.length === 1 && s.by_team) {
+      s.by_team.forEach(t => {
+        const o = document.createElement("option");
+        o.value = t.team; o.textContent = `${t.team} (${t.total})`;
+        teamSel.appendChild(o);
+      });
+    }
+  }
+
+  function renderVerdictCell(tr, qa) {
+    const v = qa.verdict || "pending";
+    tr.className = v === "good" ? "row-good" : v === "bad" ? "row-bad" : v === "skip" ? "row-skip" : "";
+    const container = tr.querySelector(".col-v");
+    container.innerHTML = "";
+    const opts = [
+      {v: "good", label: "👍 Good"},
+      {v: "bad", label: "👎 Bad"},
+      {v: "skip", label: "⏭ Skip"},
+    ];
+    opts.forEach(o => {
+      const b = document.createElement("button");
+      b.className = "verdict-btn" + (v === o.v ? " active-" + o.v : "");
+      b.textContent = o.label;
+      b.addEventListener("click", async () => {
+        await fetch(`/api/admin/eval/qa/${qa.id}/verdict`, {
+          method: "POST",
+          headers: {"Content-Type": "application/json"},
+          body: JSON.stringify({verdict: o.v}),
+        });
+        qa.verdict = o.v;
+        renderVerdictCell(tr, qa);
+        loadSummary();
+      });
+      container.appendChild(b);
+    });
+  }
+
+  async function loadRows() {
+    if (!runSel.value) return;
+    loading.hidden = false;
+    table.hidden = true;
+    const qs = new URLSearchParams({limit: 500});
+    if (verdictSel.value) qs.set("verdict", verdictSel.value);
+    if (teamSel.value) qs.set("team", teamSel.value);
+    const d = await api(`/api/admin/eval/runs/${runSel.value}/qa?${qs}`);
+    body.innerHTML = "";
+    (d.rows || []).forEach((qa, i) => {
+      const tr = document.createElement("tr");
+      tr.innerHTML = `
+        <td class="col-num">${i + 1}</td>
+        <td class="col-team">${esc(qa.team)}</td>
+        <td class="col-q">${esc(qa.question)}</td>
+        <td class="col-a">${marked.parse(qa.answer || "", {breaks: true, gfm: true})}</td>
+        <td class="col-ms">${qa.response_time_ms ?? ""}</td>
+        <td class="col-route">${esc(qa.route || "")}</td>
+        <td class="col-src">${esc(qa.source || "")}</td>
+        <td class="col-v"></td>`;
+      renderVerdictCell(tr, qa);
+      body.appendChild(tr);
+    });
+    loading.hidden = true;
+    table.hidden = false;
+  }
+
+  runSel.addEventListener("change", async () => {
+    await loadSummary();
+    await loadRows();
+  });
+  verdictSel.addEventListener("change", loadRows);
+  teamSel.addEventListener("change", loadRows);
+
+  (async () => {
+    try {
+      await loadRuns();
+      if (runSel.options.length) {
+        runSel.value = runSel.options[0].value;
+        await loadSummary();
+        await loadRows();
+      } else {
+        loading.textContent = "no runs yet — run tests/eval/playwright_runner.py first";
+      }
+    } catch (e) {
+      loading.textContent = "error: " + e.message + " (admin login required)";
+    }
+  })();
+})();
+</script>
+</body>
+</html>
