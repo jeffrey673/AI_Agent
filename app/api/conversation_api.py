@@ -9,6 +9,7 @@ from fastapi import APIRouter, Depends, HTTPException
 from pydantic import BaseModel
 
 from app.api.auth_middleware import get_current_user
+from app.core.anonymization import anon_id_for
 from app.db.mariadb import fetch_all, fetch_one, execute, execute_lastid
 from app.db.models import User
 
@@ -86,8 +87,8 @@ async def list_conversations(
     """List all conversations for the current user (newest first)."""
     convos = await _db_fetch_all(
         "SELECT id, title, model, updated_at FROM conversations "
-        "WHERE user_id = %s ORDER BY updated_at DESC",
-        (user.id,),
+        "WHERE anon_id = %s ORDER BY updated_at DESC",
+        (anon_id_for(user.id),),
     )
     return [
         ConversationListItem(
@@ -106,8 +107,10 @@ async def create_conversation(
     """Create a new conversation."""
     convo_id = str(uuid.uuid4())
     await _db_execute(
-        "INSERT INTO conversations (id, user_id, title, model) VALUES (%s, %s, %s, %s)",
-        (convo_id, user.id, req.title or "New Chat", req.model or "skin1004-ai"),
+        "INSERT INTO conversations (id, user_id, anon_id, title, model) "
+        "VALUES (%s, %s, %s, %s, %s)",
+        (convo_id, user.id, anon_id_for(user.id),
+         req.title or "New Chat", req.model or "skin1004-ai"),
     )
     convo = await _db_fetch_one(
         "SELECT id, title, model, updated_at FROM conversations WHERE id = %s",
@@ -126,8 +129,8 @@ async def get_conversation(
 ) -> ConversationDetail:
     """Get a conversation with all messages."""
     convo = await _db_fetch_one(
-        "SELECT id, title, model FROM conversations WHERE id = %s AND user_id = %s",
-        (convo_id, user.id),
+        "SELECT id, title, model FROM conversations WHERE id = %s AND anon_id = %s",
+        (convo_id, anon_id_for(user.id)),
     )
     if not convo:
         raise HTTPException(status_code=404, detail="Conversation not found")
@@ -156,8 +159,8 @@ async def update_conversation(
 ):
     """Update conversation title."""
     convo = await _db_fetch_one(
-        "SELECT id FROM conversations WHERE id = %s AND user_id = %s",
-        (convo_id, user.id),
+        "SELECT id FROM conversations WHERE id = %s AND anon_id = %s",
+        (convo_id, anon_id_for(user.id)),
     )
     if not convo:
         raise HTTPException(status_code=404, detail="Conversation not found")
@@ -177,8 +180,8 @@ async def delete_conversation(
 ):
     """Delete a conversation and all its messages."""
     convo = await _db_fetch_one(
-        "SELECT id FROM conversations WHERE id = %s AND user_id = %s",
-        (convo_id, user.id),
+        "SELECT id FROM conversations WHERE id = %s AND anon_id = %s",
+        (convo_id, anon_id_for(user.id)),
     )
     if not convo:
         raise HTTPException(status_code=404, detail="Conversation not found")
@@ -196,8 +199,8 @@ async def add_message(
 ):
     """Add a message to a conversation."""
     convo = await _db_fetch_one(
-        "SELECT id, title FROM conversations WHERE id = %s AND user_id = %s",
-        (convo_id, user.id),
+        "SELECT id, title FROM conversations WHERE id = %s AND anon_id = %s",
+        (convo_id, anon_id_for(user.id)),
     )
     if not convo:
         raise HTTPException(status_code=404, detail="Conversation not found")
@@ -243,8 +246,8 @@ async def submit_feedback(
         raise HTTPException(status_code=400, detail="rating must be 1 or -1")
 
     convo = await _db_fetch_one(
-        "SELECT id FROM conversations WHERE id = %s AND user_id = %s",
-        (convo_id, user.id),
+        "SELECT id FROM conversations WHERE id = %s AND anon_id = %s",
+        (convo_id, anon_id_for(user.id)),
     )
     if not convo:
         raise HTTPException(status_code=404, detail="Conversation not found")
@@ -257,12 +260,13 @@ async def submit_feedback(
         raise HTTPException(status_code=404, detail="Message not found")
 
     await _db_execute(
-        """INSERT INTO message_feedback (message_id, conversation_id, user_id, rating)
-           VALUES (%s, %s, %s, %s)
+        """INSERT INTO message_feedback (message_id, conversation_id, user_id, anon_id, rating)
+           VALUES (%s, %s, %s, %s, %s)
            ON DUPLICATE KEY UPDATE rating = VALUES(rating), created_at = NOW()""",
-        (req.message_id, convo_id, user.id, req.rating),
+        (req.message_id, convo_id, user.id, anon_id_for(user.id), req.rating),
     )
-    logger.info("feedback_submitted", message_id=req.message_id, rating=req.rating, user=user.display_name)
+    logger.info("feedback_submitted", message_id=req.message_id, rating=req.rating,
+                anon_id=anon_id_for(user.id))
     return {"ok": True, "rating": req.rating}
 
 
@@ -273,7 +277,7 @@ async def get_feedback(
 ):
     """Get all feedback for a conversation."""
     rows = await _db_fetch_all(
-        "SELECT message_id, rating FROM message_feedback WHERE conversation_id = %s AND user_id = %s",
-        (convo_id, user.id),
+        "SELECT message_id, rating FROM message_feedback WHERE conversation_id = %s AND anon_id = %s",
+        (convo_id, anon_id_for(user.id)),
     )
     return {str(r["message_id"]): r["rating"] for r in rows}
