@@ -322,6 +322,52 @@ _ANON_COLUMN_TARGETS = (
 )
 
 
+# ===========================================================================
+# Eval pipeline — per-question review table for Playwright batch runs
+# ===========================================================================
+_EVAL_RUNS_DDL = """
+CREATE TABLE IF NOT EXISTS eval_runs (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    started_at DATETIME NOT NULL,
+    finished_at DATETIME NULL,
+    total INT NOT NULL,
+    done INT NOT NULL DEFAULT 0,
+    notes TEXT
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+"""
+
+_EVAL_QA_DDL = """
+CREATE TABLE IF NOT EXISTS eval_qa (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    run_id INT NOT NULL,
+    team VARCHAR(100) NOT NULL,
+    question TEXT NOT NULL,
+    answer MEDIUMTEXT,
+    route VARCHAR(32),
+    response_time_ms INT,
+    conversation_id VARCHAR(36),
+    message_id INT,
+    source ENUM('real','synthetic') NOT NULL DEFAULT 'synthetic',
+    verdict ENUM('pending','good','bad','skip') NOT NULL DEFAULT 'pending',
+    reviewed_at DATETIME NULL,
+    reviewed_by_anon VARCHAR(32),
+    INDEX idx_eval_qa_run (run_id),
+    INDEX idx_eval_qa_verdict (verdict),
+    INDEX idx_eval_qa_team (team),
+    FOREIGN KEY (run_id) REFERENCES eval_runs(id) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+"""
+
+
+def ensure_eval_tables():
+    """Create eval_runs + eval_qa if not present."""
+    try:
+        execute(_EVAL_RUNS_DDL)
+        execute(_EVAL_QA_DDL)
+    except Exception as e:
+        logger.warning("eval_tables_error", error=str(e))
+
+
 def ensure_anon_columns():
     """Add anon_id columns + indexes to conversations and message_feedback.
 
