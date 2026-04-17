@@ -22,6 +22,7 @@ from app.api.harness_api import router as harness_router
 from app.api.middleware import setup_middleware
 from app.api.routes import router
 from app.config import get_settings
+from app.core.log_scrub import scrub_identity_processor
 from app.db.mariadb import fetch_one, execute
 
 # Configure structured logging
@@ -31,6 +32,7 @@ structlog.configure(
         structlog.stdlib.add_logger_name,
         structlog.stdlib.add_log_level,
         structlog.processors.TimeStamper(fmt="iso"),
+        scrub_identity_processor,
         structlog.processors.JSONRenderer(ensure_ascii=False),
     ],
     wrapper_class=structlog.stdlib.BoundLogger,
