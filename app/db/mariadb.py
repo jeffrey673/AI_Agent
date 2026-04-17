@@ -311,3 +311,42 @@ def ensure_wiki_communities_table():
         execute(_WIKI_COMMUNITIES_DDL)
     except Exception as e:
         logger.warning("wiki_communities_table_error", error=str(e))
+
+
+# ===========================================================================
+# Anonymization — pseudonymous ownership columns on conversations / feedback
+# ===========================================================================
+_ANON_COLUMN_TARGETS = (
+    ("conversations", "anon_id", "VARCHAR(32) NOT NULL DEFAULT ''"),
+    ("message_feedback", "anon_id", "VARCHAR(32) NOT NULL DEFAULT ''"),
+)
+
+
+def ensure_anon_columns():
+    """Add anon_id columns + indexes to conversations and message_feedback.
+
+    Idempotent: checks INFORMATION_SCHEMA before ALTERing so repeated startups
+    are no-ops. Follows the same pattern as ensure_knowledge_wiki_table().
+    """
+    for table, col, definition in _ANON_COLUMN_TARGETS:
+        try:
+            existing = fetch_one(
+                "SELECT 1 AS ok FROM INFORMATION_SCHEMA.COLUMNS "
+                "WHERE TABLE_SCHEMA = DATABASE() "
+                "AND TABLE_NAME = %s AND COLUMN_NAME = %s",
+                (table, col),
+            )
+            if not existing:
+                execute(f"ALTER TABLE {table} ADD COLUMN {col} {definition}")
+            # Index (separate try — index creation is also idempotent-ish but
+            # raises on duplicate name)
+            try:
+                execute(
+                    f"ALTER TABLE {table} ADD INDEX idx_{table}_{col} ({col})"
+                )
+            except Exception:
+                pass  # index already exists
+        except Exception as e:
+            logger.warning(
+                "anon_column_error", table=table, col=col, error=str(e)
+            )

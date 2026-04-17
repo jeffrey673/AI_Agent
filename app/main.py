@@ -69,6 +69,7 @@ def create_app() -> FastAPI:
             ensure_wiki_graph_edges_table,
             ensure_wiki_entity_pages_table,
             ensure_wiki_communities_table,
+            ensure_anon_columns,
         )
         ensure_knowledge_wiki_table()
         ensure_wiki_extraction_log_table()
@@ -76,6 +77,7 @@ def create_app() -> FastAPI:
         ensure_wiki_graph_edges_table()
         ensure_wiki_entity_pages_table()
         ensure_wiki_communities_table()
+        ensure_anon_columns()
         logger.info("mariadb_initialized")
 
         logger.info(
