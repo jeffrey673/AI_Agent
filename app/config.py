@@ -75,6 +75,12 @@ class Settings(BaseSettings):
     jwt_secret_key: str = "skin1004-ai-secret-change-me"
     sqlite_db_path: str = "C:/Users/DB_PC/.open-webui/data/skin1004_chat.db"
 
+    # Pseudonymization salt for anon_id derivation (hmac-sha256(salt, user_id)[:16]).
+    # Set via ANON_SALT env var. Empty default lets the server start in dev, but
+    # compute_anon_id() raises at call time if salt is missing, so production paths
+    # fail loudly rather than silently producing identical hashes for every user.
+    anon_salt: str = ""
+
     # MariaDB (AD user management)
     mariadb_host: str = "localhost"
     mariadb_port: str = "3306"
