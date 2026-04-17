@@ -65,20 +65,37 @@ def _signin(page_ctx, base_url: str, department: str, name: str, password: str) 
 
 
 def _wait_answer_done(page: Page, timeout_ms: int) -> str:
-    """Wait until the typing indicator is gone AND the last AI bubble has text."""
-    # First wait for ANY typing indicator to appear (send triggered)
+    """Wait until streaming finishes.
+
+    The chat frontend signals completion by REMOVING the `stop-mode` class
+    from `#btn-send` (see chat.js:_resetSendBtn). The `.typing-indicator`
+    is NOT a good proxy — it disappears on the first streamed token, not at
+    stream end, so waiting for its detach returns ~2s early with an empty
+    bubble.
+    """
+    # 1. Wait for send to enter stop mode (confirms a stream started)
     try:
-        page.wait_for_selector(".typing-indicator", state="attached", timeout=5000)
+        page.wait_for_function(
+            "() => document.getElementById('btn-send')?.classList.contains('stop-mode')",
+            timeout=10000,
+        )
     except PWTimeout:
-        pass  # Fast responses may skip the indicator entirely
+        # No stream started — maybe error or throttled; fall through and
+        # report whatever bubble text exists.
+        pass
 
-    # Wait for indicator to disappear
-    page.wait_for_selector(".typing-indicator", state="detached", timeout=timeout_ms)
+    # 2. Wait for stop-mode to clear (stream finished, success or error)
+    page.wait_for_function(
+        "() => !document.getElementById('btn-send')?.classList.contains('stop-mode')",
+        timeout=timeout_ms,
+    )
 
-    # Pull last AI bubble content via DOM
+    # 3. Small settle delay for contentEl.dataset.raw to be written
+    page.wait_for_timeout(200)
+
     raw = page.evaluate(
         """() => {
-            const els = document.querySelectorAll('.message-ai .message-content');
+            const els = document.querySelectorAll('.message-assistant .message-content');
             if (!els.length) return '';
             const last = els[els.length - 1];
             return last.getAttribute('data-raw') || last.innerText || '';
