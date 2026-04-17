@@ -130,3 +130,6 @@ logo_datauri.txt
 # Knowledge Map build cache (regenerable)
 knowledge_map/.cache/
 !knowledge_map/.cache/.gitkeep
+
+# Eval pipeline credentials
+.env.eval
