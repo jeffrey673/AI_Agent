@@ -18,6 +18,7 @@ from app.api.auth_api import auth_api_router
 from app.api.auth_middleware import get_optional_user
 from app.api.auth_routes import auth_router
 from app.api.conversation_api import conversation_router
+from app.api.eval_api import eval_router
 from app.api.harness_api import router as harness_router
 from app.api.middleware import setup_middleware
 from app.api.routes import router
@@ -129,6 +130,7 @@ def create_app() -> FastAPI:
     app.include_router(admin_router)         # /api/admin/*
     app.include_router(group_router)         # /api/admin/groups/*
     app.include_router(ad_router)            # /api/admin/ad/*
+    app.include_router(eval_router)          # /api/admin/eval/*
     app.include_router(harness_router)       # /harness, /api/harness/*
 
     # --- Frontend routes ---
