@@ -2027,40 +2027,27 @@
   }
 
   function _resendEditedMessage(msgEl, newText) {
-    // Remove all messages after this one (including AI responses)
+    // Find which user-message index msgEl is (before removal)
+    var domUserMsgs = chatMessages.querySelectorAll(".message-user");
+    var msgIndex = -1;
+    for (var k = 0; k < domUserMsgs.length; k++) {
+      if (domUserMsgs[k] === msgEl) { msgIndex = k; break; }
+    }
+
+    // Remove msgEl itself AND all messages after it.
+    // sendMessage() below will append a fresh user bubble for newText,
+    // so keeping msgEl would leave two identical user bubbles in the DOM.
     var siblings = Array.from(chatMessages.children);
     var idx = siblings.indexOf(msgEl);
     if (idx >= 0) {
-      for (var i = siblings.length - 1; i > idx; i--) {
+      for (var i = siblings.length - 1; i >= idx; i--) {
         siblings[i].remove();
       }
     }
 
-    // Update the message bubble with new text
-    var bubble = msgEl.querySelector(".message-content");
-    if (bubble) {
-      bubble.dataset.raw = newText;
-      bubble.textContent = "";
-      var textEl = document.createElement("div");
-      textEl.textContent = newText;
-      bubble.appendChild(textEl);
-    }
-
-    // Truncate in-memory messages to match
-    var userMsgCount = 0;
-    for (var j = 0; j < currentMessages.length; j++) {
-      if (currentMessages[j].role === "user") userMsgCount++;
-      if (userMsgCount > 0 && j >= idx) break;
-    }
-    // Find the index in currentMessages that corresponds to this user msg
-    var msgIndex = -1;
-    var uCount = 0;
-    var domUserMsgs = chatMessages.querySelectorAll(".message-user");
-    for (var k = 0; k < domUserMsgs.length; k++) {
-      if (domUserMsgs[k] === msgEl) { msgIndex = k; break; }
-    }
+    // Truncate currentMessages at the edited user message (inclusive).
+    // sendMessage() will re-push the new user turn, so we drop the old one here.
     if (msgIndex >= 0) {
-      // Map DOM user message index to currentMessages index
       var cmIdx = -1;
       var uIdx = 0;
       for (var m = 0; m < currentMessages.length; m++) {
@@ -2070,8 +2057,7 @@
         }
       }
       if (cmIdx >= 0) {
-        currentMessages[cmIdx].content = newText;
-        currentMessages.splice(cmIdx + 1);  // Remove everything after
+        currentMessages.splice(cmIdx);
       }
     }
 
