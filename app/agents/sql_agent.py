@@ -1048,18 +1048,6 @@ def _try_generate_chart(llm, query: str, sql: str, result_preview: str, results:
 # --- Routing Functions ---
 
 
-def enforce_partition_filter_node(state: AgentState) -> Dict[str, Any]:
-    """LangGraph node: apply _enforce_partition_filter after SQL validation.
-
-    Only runs when sql_valid=True (graph routes here before execute_sql).
-    Rewrites generated_sql if a large table has no date filter.
-    """
-    new_sql = _enforce_partition_filter(
-        state.get("generated_sql", ""), state.get("query", "")
-    )
-    return {"generated_sql": new_sql}
-
-
 def should_execute(state: AgentState) -> str:
     """Decide whether to execute SQL or return error.
 
@@ -1103,7 +1091,6 @@ def build_sql_agent_graph() -> StateGraph:
     # Add nodes
     workflow.add_node("generate_sql", generate_sql)
     workflow.add_node("validate_sql", validate_sql_node)
-    workflow.add_node("enforce_partition_filter", enforce_partition_filter_node)
     workflow.add_node("execute_sql", execute_sql)
     workflow.add_node("format_answer", format_answer)
 
@@ -1114,11 +1101,10 @@ def build_sql_agent_graph() -> StateGraph:
         "validate_sql",
         should_execute,
         {
-            "execute_sql": "enforce_partition_filter",
+            "execute_sql": "execute_sql",
             "format_answer": "format_answer",
         },
     )
-    workflow.add_edge("enforce_partition_filter", "execute_sql")
     workflow.add_edge("execute_sql", "format_answer")
     workflow.add_edge("format_answer", END)
 
@@ -1265,9 +1251,22 @@ async def run_sql_agent(
 
     import asyncio
     logger.info("sql_agent_started", query=query)
-    result = await asyncio.to_thread(sql_agent.invoke, initial_state)
-    logger.info("sql_agent_completed", answer_length=len(result.get("answer", "")))
-    return result["answer"]
+
+    def _run_sync() -> str:
+        state = dict(initial_state)
+        state.update(generate_sql(state))
+        state.update(validate_sql_node(state))
+        if state.get("sql_valid"):
+            state["generated_sql"] = _enforce_partition_filter(
+                state.get("generated_sql", ""), query
+            )
+            state.update(execute_sql(state))
+        state.update(format_answer(state))
+        return state.get("answer", "")
+
+    answer = await asyncio.to_thread(_run_sync)
+    logger.info("sql_agent_completed", answer_length=len(answer))
+    return answer
 
 
 def run_sql_agent_stream(
