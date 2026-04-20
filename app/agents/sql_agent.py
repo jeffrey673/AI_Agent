@@ -47,6 +47,57 @@ def _extract_tables_from_sql(sql: str) -> set:
     return set(re.findall(r'`(skin1004-319714\.[^`]+)`', sql))
 
 
+# Large tables that MUST have a date filter for acceptable scan performance.
+_LARGE_TABLES_REQUIRING_DATE_FILTER = [
+    "SALES_ALL_Backup",
+    "integrated_ad",
+    "Integrated_marketing_cost",
+]
+
+
+def _enforce_partition_filter(sql: str, query: str) -> str:
+    """If SQL targets a large table without any date filter, request Flash re-gen.
+
+    Returns the original sql unchanged when:
+    - No large table is targeted
+    - A date/Date filter is already present (case-insensitive)
+
+    Returns a re-generated sql when:
+    - A large table is targeted AND no date filter found
+    """
+    if not sql:
+        return sql
+
+    targets_large = any(t in sql for t in _LARGE_TABLES_REQUIRING_DATE_FILTER)
+    if not targets_large:
+        return sql
+
+    has_date_filter = bool(re.search(r'\bdate\b', sql, re.IGNORECASE) and
+                           re.search(r'\bwhere\b', sql, re.IGNORECASE))
+    if has_date_filter:
+        return sql
+
+    logger.info("partition_filter_missing_rewrite", sql=sql[:200])
+    llm = get_flash_client()
+    retry_prompt = (
+        _load_prompt("sql_generator.txt")
+        + f"\n\n## 사용자 질문\n{query}"
+        + "\n\n⚠️⚠️ 이전 SQL이 대형 테이블 전체를 스캔합니다 (매우 느림)!"
+        + "\n반드시 WHERE Date BETWEEN ... AND ... 날짜 조건을 추가하세요."
+        + "\n기간 미지정 시 기본값: DATE_SUB(CURRENT_DATE(), INTERVAL 90 DAY) ~ CURRENT_DATE()"
+        + "\nSELECT * 금지 — 필요한 컬럼만 선택하세요."
+    )
+    try:
+        new_sql = llm.generate(retry_prompt, temperature=0.0, max_output_tokens=10000)
+        new_sql = sanitize_sql(new_sql)
+        if new_sql and len(new_sql) > 10:
+            logger.info("partition_filter_rewritten", new_sql=new_sql[:200])
+            return new_sql
+    except Exception as e:
+        logger.warning("partition_filter_rewrite_failed", error=str(e))
+    return sql
+
+
 def _cache_lookup(query_hash: str, allowed_tables: Optional[set] = None) -> Optional[str]:
     """Check cache, then validate cached SQL only uses allowed tables."""
     sql = None
@@ -997,6 +1048,18 @@ def _try_generate_chart(llm, query: str, sql: str, result_preview: str, results:
 # --- Routing Functions ---
 
 
+def enforce_partition_filter_node(state: AgentState) -> Dict[str, Any]:
+    """LangGraph node: apply _enforce_partition_filter after SQL validation.
+
+    Only runs when sql_valid=True (graph routes here before execute_sql).
+    Rewrites generated_sql if a large table has no date filter.
+    """
+    new_sql = _enforce_partition_filter(
+        state.get("generated_sql", ""), state.get("query", "")
+    )
+    return {"generated_sql": new_sql}
+
+
 def should_execute(state: AgentState) -> str:
     """Decide whether to execute SQL or return error.
 
@@ -1040,6 +1103,7 @@ def build_sql_agent_graph() -> StateGraph:
     # Add nodes
     workflow.add_node("generate_sql", generate_sql)
     workflow.add_node("validate_sql", validate_sql_node)
+    workflow.add_node("enforce_partition_filter", enforce_partition_filter_node)
     workflow.add_node("execute_sql", execute_sql)
     workflow.add_node("format_answer", format_answer)
 
@@ -1050,10 +1114,11 @@ def build_sql_agent_graph() -> StateGraph:
         "validate_sql",
         should_execute,
         {
-            "execute_sql": "execute_sql",
+            "execute_sql": "enforce_partition_filter",
             "format_answer": "format_answer",
         },
     )
+    workflow.add_edge("enforce_partition_filter", "execute_sql")
     workflow.add_edge("execute_sql", "format_answer")
     workflow.add_edge("format_answer", END)
 
@@ -1239,6 +1304,9 @@ def run_sql_agent_stream(
     state.update(generate_sql(state))
     state.update(validate_sql_node(state))
     if state.get("sql_valid"):
+        state["generated_sql"] = _enforce_partition_filter(
+            state.get("generated_sql", ""), query
+        )
         state.update(execute_sql(state))
 
     sql = state.get("generated_sql", "")

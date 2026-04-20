@@ -90,3 +90,57 @@ class TestSQLSanitize:
         sql = "SELECT * FROM `skin1004-319714.Sales_Integration.SALES_ALL_Backup` LIMIT 50"
         result = sanitize_sql(sql)
         assert "LIMIT 50" in result
+
+
+class TestPartitionFilter:
+    """Tests for _enforce_partition_filter."""
+
+    def test_no_change_when_date_filter_present(self):
+        from app.agents.sql_agent import _enforce_partition_filter
+        sql = (
+            "SELECT Country, SUM(Revenue) AS total "
+            "FROM `skin1004-319714.Sales_Integration.SALES_ALL_Backup` "
+            "WHERE Date BETWEEN '2025-01-01' AND '2025-03-31' "
+            "GROUP BY Country"
+        )
+        result = _enforce_partition_filter(sql, "국가별 매출")
+        assert result == sql  # unchanged
+
+    def test_no_change_for_small_table(self):
+        from app.agents.sql_agent import _enforce_partition_filter
+        sql = (
+            "SELECT Name FROM `skin1004-319714.Sales_Integration.Product` LIMIT 10"
+        )
+        result = _enforce_partition_filter(sql, "제품 목록")
+        assert result == sql  # Product is not a large table
+
+    def test_no_change_when_date_filter_lowercase(self):
+        from app.agents.sql_agent import _enforce_partition_filter
+        sql = (
+            "SELECT Country, SUM(Revenue) "
+            "FROM `skin1004-319714.Sales_Integration.SALES_ALL_Backup` "
+            "WHERE date >= '2025-01-01' GROUP BY Country"
+        )
+        result = _enforce_partition_filter(sql, "매출")
+        assert result == sql  # has date filter (case-insensitive)
+
+    def test_detects_missing_filter_on_sales_table(self):
+        from app.agents.sql_agent import _enforce_partition_filter
+        sql = (
+            "SELECT Country, SUM(Revenue) AS total "
+            "FROM `skin1004-319714.Sales_Integration.SALES_ALL_Backup` "
+            "GROUP BY Country ORDER BY total DESC LIMIT 10"
+        )
+        import unittest.mock as mock
+        sentinel_sql = (
+            "SELECT Country, SUM(Revenue) AS total "
+            "FROM `skin1004-319714.Sales_Integration.SALES_ALL_Backup` "
+            "WHERE Date >= DATE_SUB(CURRENT_DATE(), INTERVAL 90 DAY) "
+            "GROUP BY Country ORDER BY total DESC LIMIT 10"
+        )
+        with mock.patch("app.agents.sql_agent.get_flash_client") as mock_flash:
+            mock_client = mock.MagicMock()
+            mock_client.generate.return_value = sentinel_sql
+            mock_flash.return_value = mock_client
+            result = _enforce_partition_filter(sql, "국가별 매출")
+        assert "DATE_SUB" in result or "INTERVAL" in result or "Date" in result
