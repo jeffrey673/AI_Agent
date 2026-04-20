@@ -55,15 +55,29 @@ _LARGE_TABLES_REQUIRING_DATE_FILTER = [
 ]
 
 
-def _enforce_partition_filter(sql: str, query: str) -> str:
+def _enforce_partition_filter(
+    sql: str,
+    query: str,
+    cache_key: Optional[str] = None,
+    brand_filter: Optional[str] = None,
+) -> str:
     """If SQL targets a large table without any date filter, request Flash re-gen.
 
     Returns the original sql unchanged when:
     - No large table is targeted
-    - A date/Date filter is already present (case-insensitive)
+    - A date filter is already present inside the WHERE clause (case-insensitive)
 
     Returns a re-generated sql when:
-    - A large table is targeted AND no date filter found
+    - A large table is targeted AND no date filter found in WHERE clause
+
+    Note: wiki_context is intentionally omitted from the re-gen prompt — the
+    sql_generator.txt already includes full schema context; adding wiki text
+    would add latency without improving filter correctness.
+
+    Args:
+        cache_key: If provided and rewrite succeeds, updates the SQL cache so
+                   subsequent identical queries get the corrected SQL (not the
+                   filterless one that would trigger enforcement every time).
     """
     if not sql:
         return sql
@@ -72,13 +86,14 @@ def _enforce_partition_filter(sql: str, query: str) -> str:
     if not targets_large:
         return sql
 
-    has_date_filter = bool(re.search(r'\bdate\b', sql, re.IGNORECASE) and
-                           re.search(r'\bwhere\b', sql, re.IGNORECASE))
+    where_match = re.search(r'\bWHERE\b(.*)', sql, re.IGNORECASE | re.DOTALL)
+    has_date_filter = bool(
+        where_match and re.search(r'\bdate\b', where_match.group(1), re.IGNORECASE)
+    )
     if has_date_filter:
         return sql
 
     logger.info("partition_filter_missing_rewrite", sql=sql[:200])
-    llm = get_flash_client()
     retry_prompt = (
         _load_prompt("sql_generator.txt")
         + f"\n\n## 사용자 질문\n{query}"
@@ -88,11 +103,16 @@ def _enforce_partition_filter(sql: str, query: str) -> str:
         + "\nSELECT * 금지 — 필요한 컬럼만 선택하세요."
     )
     try:
+        llm = get_flash_client()
         new_sql = llm.generate(retry_prompt, temperature=0.0, max_output_tokens=10000)
         new_sql = sanitize_sql(new_sql)
         if new_sql and len(new_sql) > 10:
-            logger.info("partition_filter_rewritten", new_sql=new_sql[:200])
-            return new_sql
+            is_valid, _ = validate_sql(new_sql)
+            if is_valid:
+                logger.info("partition_filter_rewritten", new_sql=new_sql[:200])
+                if cache_key:
+                    _cache_store(cache_key, query, new_sql, brand_filter)
+                return new_sql
     except Exception as e:
         logger.warning("partition_filter_rewrite_failed", error=str(e))
     return sql
@@ -1257,8 +1277,11 @@ async def run_sql_agent(
         state.update(generate_sql(state))
         state.update(validate_sql_node(state))
         if state.get("sql_valid"):
+            conv_ctx = state.get("conversation_context", "")
+            ck = _cache_key(query, brand_filter) if not conv_ctx else None
             state["generated_sql"] = _enforce_partition_filter(
-                state.get("generated_sql", ""), query
+                state.get("generated_sql", ""), query,
+                cache_key=ck, brand_filter=brand_filter,
             )
             state.update(execute_sql(state))
         state.update(format_answer(state))
@@ -1303,8 +1326,11 @@ def run_sql_agent_stream(
     state.update(generate_sql(state))
     state.update(validate_sql_node(state))
     if state.get("sql_valid"):
+        conv_ctx = state.get("conversation_context", "")
+        ck = _cache_key(query, brand_filter) if not conv_ctx else None
         state["generated_sql"] = _enforce_partition_filter(
-            state.get("generated_sql", ""), query
+            state.get("generated_sql", ""), query,
+            cache_key=ck, brand_filter=brand_filter,
         )
         state.update(execute_sql(state))
 

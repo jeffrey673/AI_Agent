@@ -143,4 +143,61 @@ class TestPartitionFilter:
             mock_client.generate.return_value = sentinel_sql
             mock_flash.return_value = mock_client
             result = _enforce_partition_filter(sql, "국가별 매출")
-        assert "DATE_SUB" in result or "INTERVAL" in result or "Date" in result
+        assert result == sentinel_sql
+
+    def test_flash_failure_returns_original_sql(self):
+        from app.agents.sql_agent import _enforce_partition_filter
+        import unittest.mock as mock
+        sql = (
+            "SELECT Country, SUM(Revenue) AS total "
+            "FROM `skin1004-319714.Sales_Integration.SALES_ALL_Backup` "
+            "GROUP BY Country LIMIT 10"
+        )
+        with mock.patch("app.agents.sql_agent.get_flash_client") as mock_flash:
+            mock_flash.side_effect = Exception("network timeout")
+            result = _enforce_partition_filter(sql, "매출")
+        assert result == sql
+
+    def test_detects_missing_filter_on_integrated_ad(self):
+        from app.agents.sql_agent import _enforce_partition_filter
+        import unittest.mock as mock
+        sql = (
+            "SELECT Media, SUM(Spend) AS total_spend "
+            "FROM `skin1004-319714.ad_data.integrated_ad` "
+            "GROUP BY Media ORDER BY total_spend DESC"
+        )
+        sentinel_sql = (
+            "SELECT Media, SUM(Spend) AS total_spend "
+            "FROM `skin1004-319714.ad_data.integrated_ad` "
+            "WHERE Date BETWEEN DATE_SUB(CURRENT_DATE(), INTERVAL 90 DAY) AND CURRENT_DATE() "
+            "GROUP BY Media ORDER BY total_spend DESC LIMIT 100"
+        )
+        with mock.patch("app.agents.sql_agent.get_flash_client") as mock_flash, \
+             mock.patch("app.agents.sql_agent.validate_sql", return_value=(True, "")):
+            mock_client = mock.MagicMock()
+            mock_client.generate.return_value = sentinel_sql
+            mock_flash.return_value = mock_client
+            result = _enforce_partition_filter(sql, "광고 매체별 지출")
+        assert result == sentinel_sql
+
+    def test_detects_missing_filter_on_integrated_marketing_cost(self):
+        from app.agents.sql_agent import _enforce_partition_filter
+        import unittest.mock as mock
+        sql = (
+            "SELECT Channel, SUM(Cost) AS total_cost "
+            "FROM `skin1004-319714.ad_data.Integrated_marketing_cost` "
+            "GROUP BY Channel"
+        )
+        sentinel_sql = (
+            "SELECT Channel, SUM(Cost) AS total_cost "
+            "FROM `skin1004-319714.ad_data.Integrated_marketing_cost` "
+            "WHERE Date >= DATE_SUB(CURRENT_DATE(), INTERVAL 90 DAY) "
+            "GROUP BY Channel LIMIT 100"
+        )
+        with mock.patch("app.agents.sql_agent.get_flash_client") as mock_flash, \
+             mock.patch("app.agents.sql_agent.validate_sql", return_value=(True, "")):
+            mock_client = mock.MagicMock()
+            mock_client.generate.return_value = sentinel_sql
+            mock_flash.return_value = mock_client
+            result = _enforce_partition_filter(sql, "마케팅 비용")
+        assert result == sentinel_sql
