@@ -138,7 +138,8 @@ class TestPartitionFilter:
             "WHERE Date >= DATE_SUB(CURRENT_DATE(), INTERVAL 90 DAY) "
             "GROUP BY Country ORDER BY total DESC LIMIT 10"
         )
-        with mock.patch("app.agents.sql_agent.get_flash_client") as mock_flash:
+        with mock.patch("app.agents.sql_agent.get_flash_client") as mock_flash, \
+             mock.patch("app.agents.sql_agent.validate_sql", return_value=(True, "")):
             mock_client = mock.MagicMock()
             mock_client.generate.return_value = sentinel_sql
             mock_flash.return_value = mock_client

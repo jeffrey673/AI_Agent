@@ -378,14 +378,14 @@ LIMIT 1000
 
 ## 예시 쿼리 (SALES_ALL_Backup)
 
-모든 쿼리 기본: `FROM `skin1004-319714.Sales_Integration.SALES_ALL_Backup` WHERE Date >= '2019-01-01'`
+⚠️ SALES_ALL_Backup 기본 규칙: `Date >= '2019-01-01'` 전체 범위 금지 — 위 파티션 최적화 규칙에 따라 구체적 기간 조건 필수
 
 ### 1. 단순 매출 (제품 분해 X!)
 ```sql
 -- "쇼피 인도네시아 이번 달 매출" → 제품 안 물어봄 = 총합만!
 SELECT SUM(Sales1_R) AS total_revenue, SUM(Total_Qty) AS total_quantity
 FROM `skin1004-319714.Sales_Integration.SALES_ALL_Backup`
-WHERE Date >= '2019-01-01' AND Country = '인도네시아' AND Mall_Classification LIKE '%Shopee%'
+WHERE Country = '인도네시아' AND Mall_Classification LIKE '%Shopee%'
   AND EXTRACT(YEAR FROM Date) = 2026 AND EXTRACT(MONTH FROM Date) = 3
 LIMIT 1000
 ```
@@ -403,8 +403,7 @@ GROUP BY quarter, Category ORDER BY quarter, total_revenue DESC LIMIT 1000
 ```sql
 SELECT `SET` AS product, SUM(Sales1_R) AS total_revenue
 FROM `skin1004-319714.Sales_Integration.SALES_ALL_Backup`
-WHERE Date >= '2019-01-01' AND Brand IN ('SK', 'CL') AND Country = '인도네시아'
-  AND EXTRACT(YEAR FROM Date) = 2024
+WHERE Date BETWEEN '2024-01-01' AND '2024-12-31' AND Brand IN ('SK', 'CL') AND Country = '인도네시아'
   AND `SET` IS NOT NULL AND `SET` != '' AND `SET` != 'Sachet' AND `SET` NOT LIKE '% + %'
 GROUP BY `SET` ORDER BY total_revenue DESC LIMIT 10
 ```

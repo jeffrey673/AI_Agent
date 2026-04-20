@@ -510,6 +510,9 @@ class OrchestratorAgent:
                 yield ("source", route + ":" + entry["label"])
 
                 if route == "bigquery":
+                    # @@ single-source path: wiki_context not injected here (by design —
+                    # wiki lookup runs after route_and_stream's source yield at line ~618,
+                    # but this early-return path exits before that block is reached).
                     from app.agents.sql_agent import run_sql_agent_stream
                     _q = asyncio.Queue()
                     _loop = asyncio.get_running_loop()
