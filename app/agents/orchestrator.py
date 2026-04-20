@@ -480,19 +480,6 @@ class OrchestratorAgent:
         images = images or []
         conversation_context = _build_conversation_context(messages)
 
-        # ═══ Knowledge wiki lookup (Week 2 + 3) ═══
-        # First try compiled entity pages (Karpathy-style "wiki page" —
-        # one coherent block per entity). Fall back to fact list for
-        # queries that don't match any entity cleanly.
-        wiki_context = ""
-        try:
-            from app.knowledge.wiki_search import search_with_pages
-            wiki_context = await search_with_pages(query, limit=4)
-            if wiki_context:
-                logger.info("wiki_context_injected", length=len(wiki_context))
-        except Exception as e:
-            logger.warning("wiki_lookup_failed", error=str(e)[:200])
-
         # ═══ @@ 데이터소스 직접 지정 (streaming) ═══
         db_entry, clean_query = self.parse_db_prefix(query)
 
@@ -626,6 +613,16 @@ class OrchestratorAgent:
 
         # Wave 1: Emit source hint IMMEDIATELY
         yield ("source", route)
+
+        # Wiki lookup runs AFTER source yield — loading indicator shows first.
+        wiki_context = ""
+        try:
+            from app.knowledge.wiki_search import search_with_pages
+            wiki_context = await search_with_pages(query, limit=4)
+            if wiki_context:
+                logger.info("wiki_context_injected", length=len(wiki_context))
+        except Exception as e:
+            logger.warning("wiki_lookup_failed", error=str(e)[:200])
 
         if not _single_route:
             # Re-classify short ambiguous queries with LLM (only if no strong direct signal)
