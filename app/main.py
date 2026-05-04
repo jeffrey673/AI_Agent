@@ -105,13 +105,15 @@ def create_app() -> FastAPI:
         _scheduler = AsyncIOScheduler()
         _scheduler.add_job(_sync_team_resources_job, "cron", hour=1, minute=0, id="team_sync_daily")
         _scheduler.add_job(_extract_wiki_hourly, "cron", minute=15, id="wiki_extract_hourly")
+        # AD sync is handled exclusively by Windows Task Scheduler (SKIN1004-AD-Sync-Daily at 22:00).
+        # Removed from APScheduler to prevent concurrent dual-trigger race condition.
         _scheduler.start()
         logger.info("scheduler_started", jobs=["team_sync_daily_01:00", "wiki_extract_hourly_:15"])
         yield
         logger.info("application_shutdown")
 
     app = FastAPI(
-        title="SKIN1004 Enterprise AI",
+        title="Craver Enterprise AI",
         description="Text-to-SQL + Agentic RAG Hybrid AI System",
         version="4.0.0",
         docs_url="/docs",
@@ -134,6 +136,16 @@ def create_app() -> FastAPI:
     app.include_router(harness_router)       # /harness, /api/harness/*
 
     # --- Frontend routes ---
+
+    # CRM 설정 페이지 리디렉트 (OAuth 콜백 후 track.skin1004.app/settings → CRM)
+    @app.get("/settings")
+    async def crm_settings_redirect(request: Request):
+        qs = request.url.query
+        target = "http://172.16.1.250:3100/settings"
+        if qs:
+            target += f"?{qs}"
+        return RedirectResponse(url=target, status_code=302)
+
     @app.get("/login")
     async def login_page():
         return FileResponse(str(_FRONTEND_DIR / "login.html"), media_type="text/html")

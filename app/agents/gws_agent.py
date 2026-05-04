@@ -12,10 +12,15 @@ import asyncio
 from typing import List
 
 import structlog
-from langchain_anthropic import ChatAnthropic
-from langchain_core.tools import tool
-from langgraph.errors import GraphRecursionError
-from langgraph.prebuilt import create_react_agent
+
+try:
+    from langchain_anthropic import ChatAnthropic
+    from langchain_core.tools import tool
+    from langgraph.errors import GraphRecursionError
+    from langgraph.prebuilt import create_react_agent
+    _LANGCHAIN_AVAILABLE = True
+except Exception:
+    _LANGCHAIN_AVAILABLE = False
 
 from app.config import get_settings
 from app.core.google_auth import GoogleAuthManager
@@ -96,7 +101,7 @@ class GWSAgent:
         try:
             agent = create_react_agent(self.llm, tools)
             system_msg = (
-                "당신은 SKIN1004의 Google Workspace 검색 AI입니다.\n"
+                "당신은 Craver의 Google Workspace 검색 AI입니다.\n"
                 "사용자의 Gmail, Google Drive, Google Calendar에서 정보를 검색합니다.\n\n"
                 "## 답변 형식 규칙\n"
                 "1. 항상 한국어로 답변하세요.\n"
@@ -136,7 +141,7 @@ class GWSAgent:
                 "Google Workspace 검색이 시간 초과되었습니다 (30초).\n\n"
                 "**해결 방법**:\n"
                 "- 더 구체적인 검색어를 사용해주세요 (예: 발신자, 제목, 날짜 범위)\n"
-                "- 검색 범위를 좁혀주세요 (예: '오늘 메일' 대신 '오늘 SKIN1004 메일')"
+                "- 검색 범위를 좁혀주세요 (예: '오늘 메일' 대신 '오늘 Craver 메일')"
             )
         except GraphRecursionError:
             logger.warning("gws_agent_recursion_limit", query=query[:100], user_email=user_email)

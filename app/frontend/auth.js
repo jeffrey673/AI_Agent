@@ -1,4 +1,4 @@
-/* SKIN1004 AI — auth.js
+/* Craver AI — auth.js
    Login / Signup: Name → Team → Password (AD-linked)
 */
 
@@ -213,6 +213,7 @@
       department: selectedUser.department,
       name: selectedUser.display_name,
       password: password,
+      id: selectedUser.id || null,
     };
 
     try {

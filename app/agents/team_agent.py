@@ -197,7 +197,7 @@ async def run(query: str, model_type: str = "gemini", allowed_resources: Optiona
     llm = get_flash_client()
     prompt = f"""{LANGUAGE_DETECTION_RULE}
 
-당신은 SKIN1004의 사내 자료 검색 도우미입니다.
+당신은 Craver의 사내 자료 검색 도우미입니다.
 아래는 사용자의 질문과 매칭된 팀별 자료 목록입니다.
 
 ## 사용자 질문

@@ -1,4 +1,4 @@
-/* SKIN1004 AI — chat.js
+/* Craver AI — chat.js
    Main chat SPA: SSE streaming, sidebar (date-grouped, search, collapse),
    follow-up suggestions, markdown, charts, theme
 */
@@ -439,9 +439,9 @@
     ],
     cs: [
       "센텔라 토너 사용법 알려줘",
-      "SKIN1004 반품 절차 알려줘",
+      "Craver 반품 절차 알려줘",
       "마다가스카르 센텔라 앰플 주요 성분 알려줘",
-      "지성 피부에 맞는 SKIN1004 루틴 추천해줘",
+      "지성 피부에 맞는 Craver 루틴 추천해줘",
       "교환/환불 정책 안내해줘",
       "민감성 피부용 크림 추천해줘",
     ],
@@ -3081,7 +3081,7 @@
 
   // ===== Model Access Control =====
   var MODEL_LABELS = {
-    "skin1004-Analysis": "SKIN1004 Analysis",
+    "skin1004-Analysis": "Craver Analysis",
   };
 
   function showAdminButton() {

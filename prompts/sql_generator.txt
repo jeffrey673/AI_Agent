@@ -60,8 +60,12 @@
 | Company_Name | STRING | 거래처/업체명 |
 | Sales_Type | STRING | 'B2B' / 'B2C' |
 
-- ⚠️ **ETC 브랜드 제외!** `WHERE Brand != 'ETC'` 또는 `Brand IN ('SK', 'CL')`
-- ⚠️ **크레이버코퍼레이션 = 전체 회사** → Brand 필터 넣지 마라 (시스템 자동 필터링)
+- ⛔ **ETC 브랜드는 항상 제외!** `Brand != 'ETC'` 필수
+- **브랜드 필터 규칙**:
+  - **전사/전체 매출 질문** (기간별 총합, 라마단, 메가와리 등) → `Brand != 'ETC'` (CBT, UM, DD 포함)
+  - **제품/라인/카테고리 질문** → `Brand IN ('SK', 'CL')` (CBT/UM/DD 미포함)
+- ⚠️ **크레이버코퍼레이션 = 전체 회사** → 전사 매출 질문 시 Brand 제한 없이 (ETC만 제외)
+- **Brand 값 목록**: SK=스킨1004(스킨천사), CL=커먼랩스, CBT=중국사업, UM=우마, DD=DD계열, ETC=무시(항상 제외)
 
 #### Mall_Classification 값 목록
 - SK_B2B_Domestic, SK_B2B_Overseas
@@ -289,8 +293,20 @@ LIMIT 1000
 | 토코피디아 | `Mall_Classification LIKE '%Tokopedia%'` |
 | 라쿠텐 | `Mall_Classification LIKE '%Rakuten%'` |
 | 큐텐, q10 | `Mall_Classification LIKE '%Q10%'` |
-| 티몰, tmall | `Mall_Classification LIKE '%Tmall%'` |
+| 일본 큐텐 (본사직영) | `Mall_Classification = 'SK_B2C_JP_Q10_Craver'` |
+| 큐텐 글로벌 (싱가포르/기타) | `Mall_Classification = 'SK_B2C_Q10'` |
+| 티몰, tmall | `Mall_Classification = 'CBT_B2C_Tmall'` |
+| 징동, JD.com, 징둥 | `Mall_Classification = 'CBT_B2C_Jingdong'` |
+| 샤오홍슈, 리틀레드북, 소홍서 | `Mall_Classification = 'CBT_B2C_Xiaohongshu'` |
+| 콰이쇼우, 콰이 | `Mall_Classification = 'CBT_B2C_Kwaishou'` |
+| 모구, 모구지에 | `Mall_Classification = 'CBT_B2C_Mogu'` |
+| 도우인 (중국 틱톡) | `Mall_Classification = 'CBT_B2C_Tiktok'` |
+| 면세점, duty free | `Mall_Classification = 'CBT_B2B_DutyFreeShop'` |
+| 잘로라, zalora | `Mall_Classification LIKE '%Zalora%'` |
+| 오존, ozon | `Mall_Classification LIKE '%Ozon%'` |
+| 좀비뷰티, zombie beauty | `Mall_Classification = 'SK_B2C_cafe24_zombiebeauty'` |
 | 사방넷 | `Mall_Classification LIKE '%sabangnet%'` |
+| 커먼랩스 외부몰, CL 제휴몰 | `Mall_Classification = 'CL_B2C_ExMall'` |
 | B2B / B2C | `Sales_Type = 'B2B'` / `'B2C'` |
 | 해외B2B | `Sales_Type = 'B2B' AND Mall_Classification LIKE '%Overseas%'` |
 | 국내B2B | `Sales_Type = 'B2B' AND Mall_Classification LIKE '%Domestic%'` |
@@ -359,6 +375,15 @@ LIMIT 1000
 ### 검색 조합 예시 (라인+유형 조합: `%{라인}%{유형}%`)
 센텔라 앰플→`'%Centella%Ampoule%'`, 센텔라 크림→`'%Centella%Cream%'`, 히알루시카 선세럼→`'%Hyalucica%Sun_Serum%'`, 커먼랩스 비타민C→`'CL_%Vitamin_C%'`, 앰플 100ml→`'%Ampoule_100ml%'`, 레티놀 앰플→`'%Retinol%Ampoule%'`
 기타 특수: `%Travel_Kit%`, `%Ramadan_Edition%`, `%Special_Edition%`
+
+### ⚠️ 히알루시카 워터핏 선세럼 — 정확한 SET 값 (반드시 이것만 사용!)
+| 제품 | 정확한 SET 값 | LIKE 필터 |
+|------|-------------|----------|
+| 워터핏 선세럼 50ml (일반) | `SK_Hyalucica_Waterfit_Sun_Serum_50ml` | `'%Waterfit_Sun_Serum_50ml'` |
+| 워터핏 선세럼 트윈팩 | `SK_Hyalucica_Waterfit_Sun_Serum_50ml_twin_pack` | `'%Waterfit_Sun_Serum_50ml_twin_pack'` |
+| 워터핏 선세럼 OTC / 유브이 OTC | `SK_Hyalucica_Waterfit_Sun_Serum_OTC_50ml` | `'%Waterfit_Sun_Serum_OTC_50ml'` |
+| 워터핏 선세럼 전체 (용량 무관) | — | `'%Hyalucica_Waterfit_Sun_Serum%'` |
+❌ 절대 금지: `SK_Centella_Hyalucica_Waterfit_Sun_Serum_UV_50ml_OTC`, `SK_Hyalucica_Waterfit_Sun_Serum_OTC` 등 존재하지 않는 SET 값 사용
 
 ---
 

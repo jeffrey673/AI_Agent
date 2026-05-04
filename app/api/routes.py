@@ -411,7 +411,7 @@ async def list_datasources():
 @router.get("/health")
 async def health_check():
     """Health check endpoint (liveness)."""
-    return {"status": "ok", "service": "SKIN1004 AI Agent"}
+    return {"status": "ok", "service": "Craver AI Agent"}
 
 
 @router.get("/health/ready")

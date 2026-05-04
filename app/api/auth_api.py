@@ -11,7 +11,8 @@ from datetime import datetime, timedelta, timezone
 import bcrypt as _bcrypt
 import jwt
 import structlog
-from fastapi import APIRouter, Depends, HTTPException, Query, Response
+from fastapi import APIRouter, Depends, HTTPException, Query, Request, Response
+from fastapi.responses import RedirectResponse
 from pydantic import BaseModel
 
 from app.api.auth_middleware import get_current_user
@@ -64,12 +65,14 @@ class SignupRequest(BaseModel):
     department: str
     name: str
     password: str
+    id: int | None = None  # ad_user_id from search result (preferred)
 
 
 class SigninRequest(BaseModel):
     department: str
     name: str
     password: str
+    id: int | None = None  # ad_user_id from search result (preferred)
 
 
 class UserResponse(BaseModel):
@@ -221,12 +224,18 @@ async def signup(req: SignupRequest, response: Response):
     if len(req.password) < 4:
         raise HTTPException(status_code=400, detail="비밀번호는 4자 이상이어야 합니다")
 
-    # Find AD user by department + name
-    ad_user = await _db_fetch_one(
-        "SELECT id, display_name, email, department FROM ad_users "
-        "WHERE is_active = 1 AND department = %s AND display_name = %s",
-        (req.department, req.name),
-    )
+    # Find AD user — prefer id to avoid display_name mismatch
+    if req.id:
+        ad_user = await _db_fetch_one(
+            "SELECT id, display_name, email, department FROM ad_users WHERE is_active = 1 AND id = %s",
+            (req.id,),
+        )
+    else:
+        ad_user = await _db_fetch_one(
+            "SELECT id, display_name, email, department FROM ad_users "
+            "WHERE is_active = 1 AND department = %s AND display_name = %s",
+            (req.department, req.name),
+        )
     if not ad_user:
         raise HTTPException(status_code=404, detail="해당 부서/이름의 AD 사용자를 찾을 수 없습니다")
 
@@ -268,12 +277,18 @@ async def signup(req: SignupRequest, response: Response):
 @auth_api_router.post("/signin")
 async def signin(req: SigninRequest, response: Response):
     """Sign in with department + name + password."""
-    # Find AD user
-    ad_user = await _db_fetch_one(
-        "SELECT id, display_name, email, department FROM ad_users "
-        "WHERE is_active = 1 AND department = %s AND display_name = %s",
-        (req.department, req.name),
-    )
+    # Find AD user — prefer id (avoids display_name mismatch when names differ between ad_users and users tables)
+    if req.id:
+        ad_user = await _db_fetch_one(
+            "SELECT id, display_name, email, department FROM ad_users WHERE is_active = 1 AND id = %s",
+            (req.id,),
+        )
+    else:
+        ad_user = await _db_fetch_one(
+            "SELECT id, display_name, email, department FROM ad_users "
+            "WHERE is_active = 1 AND department = %s AND display_name = %s",
+            (req.department, req.name),
+        )
     if not ad_user:
         raise HTTPException(status_code=401, detail="사용자를 찾을 수 없습니다")
 
@@ -395,4 +410,18 @@ async def logout(response: Response):
     """Clear auth cookie."""
     response.delete_cookie(key="token", path="/")
     return {"ok": True}
+
+
+# ── CRM OAuth 콜백 프록시 ────────────────────────────────────────
+# Google이 track.skin1004.app/api/auth/google/callback 으로 리디렉트하면
+# 이 서버(포트 3000)에서 받아 CRM(포트 3100)으로 전달한다.
+_CRM_BASE = "http://172.16.1.250:3100"
+
+@auth_api_router.get("/google/callback")
+async def crm_google_callback_proxy(request: Request):
+    qs = request.url.query
+    target = f"{_CRM_BASE}/api/auth/google/callback"
+    if qs:
+        target += f"?{qs}"
+    return RedirectResponse(url=target, status_code=302)
 

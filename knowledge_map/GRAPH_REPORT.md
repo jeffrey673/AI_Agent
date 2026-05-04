@@ -1,32 +1,32 @@
 # SKIN1004 AI Agent — Knowledge Map
-**Generated**: 2026-04-17T03:00:15.402852+09:00 · **Files**: 110 · **Nodes**: 480 · **Edges**: 927 · **Commit**: 9822afd
+**Generated**: 2026-05-04T03:00:03.033103+09:00 · **Files**: 123 · **Nodes**: 502 · **Edges**: 953 · **Commit**: 86b57df
 
 ## Clusters
 - **cluster_00** — 1 nodes
 - **cluster_01** — 1 nodes
-- **cluster_02** — 24 nodes
-- **cluster_03** — 71 nodes
-- **cluster_04** — 6 nodes
-- **cluster_05** — 41 nodes
-- **cluster_06** — 23 nodes
-- **cluster_07** — 39 nodes
-- **cluster_08** — 38 nodes
-- **cluster_09** — 26 nodes
-- **cluster_10** — 54 nodes
-- **cluster_11** — 1 nodes
-- **cluster_12** — 12 nodes
-- **cluster_13** — 30 nodes
-- **cluster_14** — 16 nodes
+- **cluster_02** — 20 nodes
+- **cluster_03** — 25 nodes
+- **cluster_04** — 43 nodes
+- **cluster_05** — 57 nodes
+- **cluster_06** — 47 nodes
+- **cluster_07** — 1 nodes
+- **cluster_08** — 15 nodes
+- **cluster_09** — 22 nodes
+- **cluster_10** — 1 nodes
+- **cluster_11** — 62 nodes
+- **cluster_12** — 34 nodes
+- **cluster_13** — 21 nodes
+- **cluster_14** — 30 nodes
 - **cluster_15** — 14 nodes
 - **cluster_16** — 1 nodes
 - **cluster_17** — 1 nodes
 - **cluster_18** — 1 nodes
-- **cluster_19** — 18 nodes
-- **cluster_20** — 1 nodes
+- **cluster_19** — 1 nodes
+- **cluster_20** — 20 nodes
 - **cluster_21** — 1 nodes
-- **cluster_22** — 17 nodes
-- **cluster_23** — 1 nodes
-- **cluster_24** — 1 nodes
+- **cluster_22** — 1 nodes
+- **cluster_23** — 17 nodes
+- **cluster_24** — 13 nodes
 - **cluster_25** — 1 nodes
 - **cluster_26** — 1 nodes
 - **cluster_27** — 1 nodes
@@ -68,6 +68,17 @@
 - **cluster_63** — 1 nodes
 - **cluster_64** — 1 nodes
 - **cluster_65** — 1 nodes
+- **cluster_66** — 1 nodes
+- **cluster_67** — 1 nodes
+- **cluster_68** — 1 nodes
+- **cluster_69** — 1 nodes
+- **cluster_70** — 1 nodes
+- **cluster_71** — 1 nodes
+- **cluster_72** — 1 nodes
+- **cluster_73** — 1 nodes
+- **cluster_74** — 1 nodes
+- **cluster_75** — 1 nodes
+- **cluster_76** — 1 nodes
 
 ## God Nodes
 - `C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/auth_api.py` (file) — Authentication endpoints: signup, signin, me, logout.

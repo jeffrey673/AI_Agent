@@ -1,4 +1,4 @@
-/* SKIN1004 AI — loader.js
+/* Craver AI — loader.js
    1) Theme default (dark on first visit)
    1b) Logo swap (splash.png / splash-dark-new.png per theme)
    2) Inject Craver "WHAT DO YOU CRAVE?" animation on login page
@@ -8,7 +8,7 @@
 */
 
 // ===== 0. Debug =====
-console.log("[SKIN1004 loader.js v20260224a] loaded at", new Date().toISOString());
+console.log("[Craver loader.js v20260224a] loaded at", new Date().toISOString());
 
 // ===== 1. Theme: respect user choice (no forced override) =====
 if (!localStorage.theme) {

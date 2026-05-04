@@ -164,7 +164,7 @@ def _ensure_source_footer(text: str, domain: str) -> str:
             break
 
     if domain == 'multi':
-        footer = f"*분석 기준: SKIN1004 내부 데이터 + Google 검색 · {today}*"
+        footer = f"*분석 기준: Craver 내부 데이터 + Google 검색 · {today}*"
     else:
         footer = f"*AI 생성 답변 · {today}*"
 

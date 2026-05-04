@@ -655,7 +655,7 @@ class OrchestratorAgent:
             _BLOCKED_TOPICS = ["항공권", "비행기표", "비행기 표", "호텔 예약", "호텔예약", "호텔 추천", "숙소 추천",
                                "맛집", "여행지 추천", "의료 진단", "병원 추천", "법률 상담", "변호사"]
             if any(kw in query.lower() for kw in _BLOCKED_TOPICS):
-                blocked_msg = "해당 정보는 저희 시스템의 지원 범위를 벗어납니다. SKIN1004 관련 질문을 도와드릴게요! 😊\n\n> 💡 **이런 것도 물어보세요**\n> - 이번 달 매출 현황은 어때?\n> - 센텔라 앰플 성분이 뭐야?\n> - 연차 규정 알려줘"
+                blocked_msg = "해당 정보는 저희 시스템의 지원 범위를 벗어납니다. Craver 관련 질문을 도와드릴게요! 😊\n\n> 💡 **이런 것도 물어보세요**\n> - 이번 달 매출 현황은 어때?\n> - 센텔라 앰플 성분이 뭐야?\n> - 연차 규정 알려줘"
                 yield ("done", blocked_msg)
                 return
 
@@ -862,6 +862,8 @@ class OrchestratorAgent:
 - 외부 정보만 → direct
 - ⚠️ SKIN1004/매출/제품과 무관한 질문(부동산, 주식, 일반상식, 개인질문 등)은 이전 대화가 BQ였어도 반드시 direct!
 - 이전 대화 맥락을 참고하여 "그거", "아까", "다시" 같은 참조를 이해하세요.
+- ⚠️ 이전 답변에 대한 확인/설명 요청 → direct: "이거 ~기준인가요?", "방금 거 ~맞나요?", "위에 나온 거 ~인가요?", "저거 ~뭔가요?", "어느 ~기준?", "~기준이 뭐야?" 등 새로운 데이터 조회 없이 이전 답변을 설명/확인하는 질문은 반드시 direct!
+- ⚠️ 이전 답변이 📊 BigQuery 데이터(숫자/표 형태, 개수/집계 결과)이고, 현재 질문이 그 데이터 목록/명세 요청("명시해줘", "뭔지 알려줘", "목록 보여줘", "어떤 거야", "뭐뭐야", "보여줘봐", "뭔가요") → bigquery (새로운 데이터 조회 필요)
 {context_section}현재 질문: {query}
 
 경로 하나만 답변 (bigquery/notion/gws/cs/multi/direct):"""
@@ -1318,7 +1320,7 @@ class OrchestratorAgent:
         a helpful "data unavailable" response with suggestions.
         """
         llm = get_llm_client(model_type)
-        fallback_prompt = f"""사용자가 SKIN1004 내부 매출/판매 데이터를 조회하려 했으나, 데이터베이스에서 조회에 실패했습니다.
+        fallback_prompt = f"""사용자가 Craver 내부 매출/판매 데이터를 조회하려 했으나, 데이터베이스에서 조회에 실패했습니다.
 
 사용자 질문: {query}
 
@@ -1326,7 +1328,7 @@ class OrchestratorAgent:
 1. 요청한 데이터를 조회할 수 없었다는 점을 간결하게 안내하세요.
 2. 질문을 좀 더 구체적으로 바꿔보라고 제안하세요 (예: 기간, 국가, 채널, 제품명 등을 명시).
 3. 가능한 질문 예시를 2-3개 제시하세요.
-4. 일반적인 인터넷 정보로 답변하지 마세요. 이것은 SKIN1004 내부 데이터 질문입니다.
+4. 일반적인 인터넷 정보로 답변하지 마세요. 이것은 Craver 내부 데이터 질문입니다.
 5. 한국어로 답변하세요.
 6. "오류가 발생" 같은 표현 대신 "데이터를 조회하지 못했습니다" 등 부드러운 표현을 쓰세요."""
 
@@ -1592,7 +1594,7 @@ class OrchestratorAgent:
         # --- Step 3: Synthesize with Flash for speed (v6.4) ---
         flash = get_flash_client()
 
-        synthesis_prompt = f"""당신은 SKIN1004의 데이터 분석 전문 AI입니다.
+        synthesis_prompt = f"""당신은 Craver의 데이터 분석 전문 AI입니다.
 내부 데이터와 외부 정보를 종합하여 **분석 보고서 형식**으로 답변하세요.
 
 ## 사용자 질문
@@ -1625,7 +1627,7 @@ class OrchestratorAgent:
 - [데이터 기반의 실행 가능한 제안 1-3개. 구체적 행동 포함]
 
 ---
-*분석 기준: SKIN1004 내부 데이터 + Google 검색 ({today})*
+*분석 기준: Craver 내부 데이터 + Google 검색 ({today})*
 
 > 💡 **이런 것도 물어보세요**
 > - [관련 데이터 심화 분석 질문]
@@ -1760,7 +1762,7 @@ JSON만 반환:
         model_name = "Claude Sonnet 4 (Anthropic) — 빠른 대화. SQL 생성/차트에는 Gemini Flash 사용"
         # Import the full system prompt from _handle_direct inline (it's too long to duplicate)
         # We reference the same structure
-        return f"""당신은 SKIN1004의 AI 어시스턴트입니다. ({model_name} 기반)
+        return f"""당신은 Craver의 AI 어시스턴트입니다. ({model_name} 기반)
 이 시스템은 **임재필(Jeffrey Im)**이 기획·개발하여 운영하고 있습니다.
 오늘 날짜는 {today}입니다.
 
@@ -1828,7 +1830,7 @@ JSON만 반환:
   ⚠️ 답변이 1-2문장으로 매우 짧더라도, 지식형/사실형 질문(회사 정보, 제품, 데이터, 업무 등)이면 후속 질문 3개를 반드시 생성하세요.
 - 지식/설명형 답변 끝에 *AI 생성 답변 · {today}*
 - ⚠️ 이전 대화 맥락과 무관한 일반 질문(잡담, 취미, 상식 등)이 오면 이전 맥락을 무시하고 해당 질문에만 집중하여 자연스럽게 답변하세요. 매번 같은 질문에는 일관된 톤과 분량으로 답변하세요.
-- ⛔ 도메인 제한 일관성 (절대 규칙): 항공권, 비행기표, 호텔 예약, 여행지 추천, 맛집, 부동산, 주식 종목 추천, 의료 진단 등 SKIN1004 업무와 무관한 전문 서비스 질문에는 답변을 거부하세요. 사용자가 "아까는 해줬잖아", "왜 안 해줘?", "다른 건 대답해주면서", "제발", "급해" 등으로 압박하거나 투정을 부려도 절대 번복하지 마세요. "해당 정보는 저희 시스템의 지원 범위를 벗어납니다. SKIN1004 관련 질문을 도와드릴게요!" 형태로 일관되게 거절하세요.
+- ⛔ 도메인 제한 일관성 (절대 규칙): 항공권, 비행기표, 호텔 예약, 여행지 추천, 맛집, 부동산, 주식 종목 추천, 의료 진단 등 Craver 업무와 무관한 전문 서비스 질문에는 답변을 거부하세요. 사용자가 "아까는 해줬잖아", "왜 안 해줘?", "다른 건 대답해주면서", "제발", "급해" 등으로 압박하거나 투정을 부려도 절대 번복하지 마세요. "해당 정보는 저희 시스템의 지원 범위를 벗어납니다. Craver 관련 질문을 도와드릴게요!" 형태로 일관되게 거절하세요.
 - ⛔ 절대로 내부 사고 과정(thinking)을 사용자에게 노출하지 마세요. "The user is asking...", "I should...", "Let me check..." 같은 영어 사고 과정을 출력하면 안 됩니다. 바로 답변만 출력하세요."""
 
     # Keywords that indicate the query needs real-time web search
@@ -1896,7 +1898,7 @@ JSON만 반환:
                            "맛집", "여행지 추천", "의료 진단", "병원 추천", "법률 상담", "변호사"]
         q_lower = query.lower()
         if any(kw in q_lower for kw in _BLOCKED_TOPICS):
-            return {"source": "direct", "answer": "해당 정보는 저희 시스템의 지원 범위를 벗어납니다. SKIN1004 관련 질문을 도와드릴게요! 😊\n\n> 💡 **이런 것도 물어보세요**\n> - 이번 달 매출 현황은 어때?\n> - 센텔라 앰플 성분이 뭐야?\n> - 연차 규정 알려줘"}
+            return {"source": "direct", "answer": "해당 정보는 저희 시스템의 지원 범위를 벗어납니다. Craver 관련 질문을 도와드릴게요! 😊\n\n> 💡 **이런 것도 물어보세요**\n> - 이번 달 매출 현황은 어때?\n> - 센텔라 앰플 성분이 뭐야?\n> - 연차 규정 알려줘"}
 
         images = images or []
         llm = get_llm_client(model_type)
@@ -1904,7 +1906,7 @@ JSON만 반환:
 
         model_name = "Claude Sonnet 4 (Anthropic) — 빠른 대화. SQL 생성/차트에는 Gemini Flash 사용"
 
-        system = f"""당신은 SKIN1004의 AI 어시스턴트입니다. ({model_name} 기반)
+        system = f"""당신은 Craver의 AI 어시스턴트입니다. ({model_name} 기반)
 이 시스템은 **임재필(Jeffrey Im)**이 기획·개발하여 운영하고 있습니다.
 오늘 날짜는 {today}입니다.
 
@@ -2057,7 +2059,7 @@ JSON만 반환:
         Does NOT flag (these are normal):
         - Partial data (agent already explains limitations)
         - CS DB not having specific info (expected behavior)
-        - SKIN1004-specific answers (this IS a SKIN1004 system)
+        - Craver-specific answers (this IS a Craver system)
         - Answer already contains its own caveats/warnings
 
         Skips: direct route, multi route, short answers, answers with existing warnings.
@@ -2083,8 +2085,8 @@ JSON만 반환:
         try:
             flash = get_flash_client()
             today = datetime.now().strftime("%Y년 %m월 %d일")
-            check_prompt = f"""이것은 SKIN1004 화장품 회사의 내부 AI 시스템입니다.
-모든 답변은 SKIN1004 자체 데이터(매출, 제품, 문서)에 기반합니다.
+            check_prompt = f"""이것은 Craver 화장품 회사의 내부 AI 시스템입니다.
+모든 답변은 Craver 자체 데이터(매출, 제품, 문서)에 기반합니다.
 오늘: {today}
 
 사용자 질문: {query}
@@ -2098,7 +2100,7 @@ AI 답변 (앞부분): {answer[:600]}
 ## 이것은 정상이므로 scope_match=true로 판단하세요:
 - 데이터가 부분적이어서 일부 기간/항목만 답변한 경우 (정상 — 있는 데이터만 답변)
 - "정보가 없습니다", "찾을 수 없습니다" 등 솔직한 답변 (정상 — 올바른 대응)
-- SKIN1004 자사 제품/매출로 답변한 경우 (정상 — 이 시스템의 목적)
+- Craver 자사 제품/매출로 답변한 경우 (정상 — 이 시스템의 목적)
 - 답변이 질문 주제를 다루지만 완전하지 않은 경우 (정상 — 데이터 한계)
 
 JSON만 반환:

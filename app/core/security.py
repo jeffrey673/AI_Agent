@@ -89,8 +89,10 @@ def _validate_tables(sql: str, allowed_tables: List[str]) -> Tuple[bool, str]:
         Tuple of (is_valid, error_message).
     """
     # Extract table references from FROM and JOIN clauses
-    # Matches backtick-quoted table names: `project.dataset.table`
-    table_pattern = r'`([^`]+\.[^`]+\.[^`]+)`'
+    # Matches backtick-quoted GCP table paths: `project.dataset.table`
+    # Uses [a-zA-Z0-9_\-]+ to avoid spanning across unrelated backtick pairs
+    # (e.g. `SET` column references followed by the actual table backtick)
+    table_pattern = r'`([a-zA-Z0-9_\-]+\.[a-zA-Z0-9_\-]+\.[a-zA-Z0-9_\-]+)`'
     referenced_tables = re.findall(table_pattern, sql)
 
     if not referenced_tables:

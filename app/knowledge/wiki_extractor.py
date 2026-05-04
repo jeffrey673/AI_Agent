@@ -89,6 +89,23 @@ class WikiFact:
         )
 
 
+def _canonicalize_entity_sync(entity: str) -> str:
+    """Return the existing canonical entity name (case-insensitive lookup).
+
+    If knowledge_wiki already has an entry whose name differs only in case,
+    reuse that stored form so we never create a new case-variant entity.
+    Falls back to the original string when no match exists.
+    """
+    try:
+        rows = fetch_all(
+            "SELECT entity FROM knowledge_wiki WHERE LOWER(entity) = LOWER(%s) LIMIT 1",
+            (entity,),
+        )
+        return rows[0]["entity"] if rows else entity
+    except Exception:
+        return entity
+
+
 # ------------------------------------------------------------------
 # Core LLM call
 # ------------------------------------------------------------------
@@ -207,18 +224,28 @@ def _insert_facts_sync(
     count = 0
     for f in facts:
         try:
+            canonical_entity = _canonicalize_entity_sync(f.entity)
+            # Skip exact duplicates (same entity+period+metric+value already stored).
+            if f.period and f.metric and f.value:
+                dup = fetch_all(
+                    "SELECT id FROM knowledge_wiki "
+                    "WHERE LOWER(entity) = LOWER(%s) AND period = %s "
+                    "  AND metric = %s AND value = %s AND status <> 'archived' LIMIT 1",
+                    (canonical_entity, f.period, f.metric, f.value),
+                )
+                if dup:
+                    continue
             new_id = execute_lastid(
                 insert_sql,
                 (
-                    f.domain, f.entity, f.period, f.metric, f.value, f.summary,
+                    f.domain, canonical_entity, f.period, f.metric, f.value, f.summary,
                     conversation_id, message_id, route,
                 ),
             )
             count += 1
-            # Best-effort conflict detection — only when all three keys
-            # are present. Matching on raw entity is close enough for v1.
+            # Best-effort conflict detection — only when all three keys are present.
             if new_id and f.entity and f.period and f.metric and f.value:
-                _flag_conflict_sync(new_id, f.entity, f.period, f.metric, f.value)
+                _flag_conflict_sync(new_id, canonical_entity, f.period, f.metric, f.value)
         except Exception as e:
             logger.warning("wiki_insert_failed", error=str(e)[:200], entity=f.entity)
     return count
@@ -230,7 +257,7 @@ def _flag_conflict_sync(new_id: int, entity: str, period: str, metric: str, valu
         siblings = fetch_all(
             """
             SELECT id, value FROM knowledge_wiki
-            WHERE entity = %s AND period = %s AND metric = %s
+            WHERE LOWER(entity) = LOWER(%s) AND period = %s AND metric = %s
               AND id <> %s AND status <> 'archived'
             LIMIT 5
             """,

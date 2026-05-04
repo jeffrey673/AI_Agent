@@ -7,14 +7,21 @@ is critical - wrong queries have high risk.
 
 import json
 
-from langchain_anthropic import ChatAnthropic
-
 from app.config import get_settings
 from app.models.agent_models import AgentModel
+
+try:
+    from langchain_anthropic import ChatAnthropic
+    _LANGCHAIN_AVAILABLE = True
+except Exception:
+    _LANGCHAIN_AVAILABLE = False
 
 
 class QueryVerifierAgent:
     def __init__(self):
+        if not _LANGCHAIN_AVAILABLE:
+            self.llm = None
+            return
         self.llm = ChatAnthropic(
             model=AgentModel.QUERY_VERIFIER.value,
             temperature=0,

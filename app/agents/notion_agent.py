@@ -488,7 +488,7 @@ class NotionAgent:
             f"{i+1}. [{e['type']}] {e['title']} — {e['description']}"
             for i, e in enumerate(accessible)
         )
-        prompt = f"""다음은 SKIN1004 회사의 Notion 페이지 목록입니다:
+        prompt = f"""다음은 Craver 회사의 Notion 페이지 목록입니다:
 {page_list}
 
 사용자 질문: "{query}"

@@ -34,6 +34,13 @@
 - 상태 확인: `pm2 status`
 - 로그: `pm2 logs skin1004-prod --lines 30 --nostream`
 
+## BigQuery 데이터 규칙 (SQL 로직 기준)
+
+- **매출** → `SALES_ALL_Backup.Sales1_R` (원화 환산, 항상 이 컬럼)
+- **판매수량** → `SALES_ALL_Backup.Total_Qty` (일반 집계)
+- **SKU 단위 수량** → `Product.Total_Qty` (개별 제품 단위 정밀 조회 시)
+- `Product` 테이블은 `SALES_ALL_Backup`의 세트 제품(SET에 `+` 연결)을 개별 SKU로 분해한 테이블
+
 ## 노션 데이터 규칙
 
 - 사용자가 **노션을 명시적으로 언급하지 않는 한** 노션 데이터를 답변에 포함하지 않음
@@ -52,3 +59,21 @@
 
 - CSS/JS 변경 시 `chat.html`의 `?v=` 번호 증가 필수
 - 현재: style.css?v=139, chat.js?v=202
+
+## AD 동기화 규칙
+
+- **스크립트**: `scripts/sync_ad_users.py`
+- **자동 실행**: 매일 22:00 (Task Scheduler `SKIN1004-AD-Sync-Daily`)
+- **2-step 파이프라인**:
+  1. STEP 1 — AD → MariaDB upsert (362명, `_NAME_OVERRIDES` 적용)
+  2. STEP 2 — 이름 자동 보정: `users.display_name`(한글)을 `ad_users.display_name`에 역반영
+- **이름 오버라이드**: AD displayName이 영문인 미등록 사용자는 `_NAME_OVERRIDES` 딕셔너리에 추가
+  - 이미 가입한 사람은 auto-heal이 자동 처리 — 오버라이드 추가 불필요
+- **절대 금지**: `ad_users.display_name` DB 직접 수정 — 다음 sync에 덮어씌워짐
+- **즉시 이름 반영**: `python scripts/sync_ad_users.py --heal-only`
+- **사용법**:
+  ```
+  python scripts/sync_ad_users.py             # 전체 sync (매일 자동)
+  python scripts/sync_ad_users.py --heal-only # 이름 보정만 즉시
+  python scripts/sync_ad_users.py --dry-run   # 미리보기
+  ```

@@ -143,7 +143,7 @@ async def run(query: str, team_key: Optional[str] = None, model_type: str = "gem
 
     prompt = f"""{LANGUAGE_DETECTION_RULE}
 
-당신은 SKIN1004의 사내 문서 검색 도우미입니다.
+당신은 Craver의 사내 문서 검색 도우미입니다.
 아래는 사용자의 질문과 벡터 검색으로 찾은 관련 문서입니다.
 
 ## 사용자 질문

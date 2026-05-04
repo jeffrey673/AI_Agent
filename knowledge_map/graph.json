@@ -1,15 +1,15 @@
 {
   "version": "1.0",
-  "generated_at": "2026-04-17T03:00:15.394326+09:00",
-  "source_commit": "9822afd",
+  "generated_at": "2026-05-04T03:00:03.013881+09:00",
+  "source_commit": "86b57df",
   "stats": {
-    "files": 110,
-    "nodes": 480,
-    "edges": 927,
-    "clusters": 66,
-    "flash_calls": 1,
-    "cache_hits": 109,
-    "build_duration_sec": 12.73
+    "files": 123,
+    "nodes": 502,
+    "edges": 953,
+    "clusters": 77,
+    "flash_calls": 0,
+    "cache_hits": 123,
+    "build_duration_sec": 0.75
   },
   "nodes": [
     {
@@ -219,7 +219,7 @@
       "type": "file",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/agents/gws_agent.py",
       "summary": "Google Workspace Sub Agent (v4.2 — per-user OAuth2 + timeout + recursion limit).\n\nReplaces MCP-based single-user approach with individual OAuth2 authentication.\nEach user authenticates with their own Google account to access Gmail/Drive/Calendar.\nUses Claude Sonnet as ReAct agent with bound API tools.\n\nv4.1: Added 120s timeout for ReAct agent to prevent 300s+ hangs on complex searches.\nv4.2: Added recursion_limit=10 to cap tool call iterations (~4-5 tool calls max).",
-      "cluster": "cluster_06",
+      "cluster": "cluster_05",
       "confidence": 1.0
     },
     {
@@ -227,11 +227,11 @@
       "type": "class",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/agents/gws_agent.py",
       "lines": [
-        37,
-        241
+        42,
+        246
       ],
       "summary": "Google Workspace agent with per-user OAuth2 authentication.",
-      "cluster": "cluster_06",
+      "cluster": "cluster_05",
       "confidence": 1.0
     },
     {
@@ -239,10 +239,10 @@
       "type": "function",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/agents/gws_agent.py",
       "lines": [
-        30,
-        34
+        35,
+        39
       ],
-      "cluster": "cluster_06",
+      "cluster": "cluster_05",
       "confidence": 1.0
     },
     {
@@ -250,7 +250,7 @@
       "type": "file",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/agents/notion_agent.py",
       "summary": "Notion Sub Agent (v6.2).\n\nAccesses Notion workspace via direct API calls (no MCP dependency).\nSearches ONLY allowlisted pages/databases, reads block content,\ngenerates answer using the user's selected LLM.\n\nv3.0: MCP + Claude Sonnet\nv4.0: Direct Notion API + user-selected LLM (Gemini/Claude)\nv5.0: Enhanced indexing (depth 6), content limits, improved search & prompt\nv6.0: Allowlist-based search — only 10 pre-defined pages/databases\nv6.1: Fix httpx client re-creation, sheet read timeout (30s), search punctuation cleanup\nv6.2: Parallel page reads (asyncio.gather), parallel sheet reads, parallel warmup",
-      "cluster": "cluster_07",
+      "cluster": "cluster_03",
       "confidence": 1.0
     },
     {
@@ -261,7 +261,7 @@
         80,
         1068
       ],
-      "cluster": "cluster_07",
+      "cluster": "cluster_03",
       "confidence": 1.0
     },
     {
@@ -273,7 +273,7 @@
         57
       ],
       "summary": "Format a 32-char hex string as a Notion-style UUID (8-4-4-4-12).",
-      "cluster": "cluster_07",
+      "cluster": "cluster_03",
       "confidence": 1.0
     },
     {
@@ -281,7 +281,7 @@
       "type": "file",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/agents/orchestrator.py",
       "summary": "Orchestrator Agent (v3.0 core).\n\nv2.0: Query Analyzer -> route_type -> single Agent call\nv3.0: Orchestrator -> specialized Sub Agent delegation\nv3.1: Conversation context continuity (messages passthrough)\nv3.2: Dual model support (Gemini 2.5 Pro / Sonnet 4.5)\nv3.3: Google Search grounding + multi-source analysis (internal + external)\nv3.4: CS DB route — customer service Q&A from Google Spreadsheet",
-      "cluster": "cluster_07",
+      "cluster": "cluster_03",
       "confidence": 1.0
     },
     {
@@ -290,10 +290,10 @@
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/agents/orchestrator.py",
       "lines": [
         81,
-        2141
+        2143
       ],
       "summary": "Orchestrator-Worker pattern conductor.\n\nAnalyzes query intent and delegates to appropriate Sub Agent.\nSupports both Gemini 2.5 Pro and Claude Sonnet 4.5 based on user selection.",
-      "cluster": "cluster_07",
+      "cluster": "cluster_03",
       "confidence": 1.0
     },
     {
@@ -305,7 +305,7 @@
         70
       ],
       "summary": "Build conversation context — keep last 5 turns, summarize older.",
-      "cluster": "cluster_07",
+      "cluster": "cluster_03",
       "confidence": 1.0
     },
     {
@@ -317,7 +317,7 @@
         43
       ],
       "summary": "Extract plain text from content (str or multimodal list).",
-      "cluster": "cluster_07",
+      "cluster": "cluster_03",
       "confidence": 1.0
     },
     {
@@ -325,7 +325,7 @@
       "type": "file",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/agents/qdrant_agent.py",
       "summary": "Notion 사내 문서 검색 — 로컬 벡터 검색.\n\nQdrant Craver에서 가져온 데이터를 Gemini embedding-001로 재임베딩하여 로컬 저장.\n검색: Gemini embedding → 로컬 코사인 유사도 → Gemini Flash 답변 생성.\n데이터 업데이트: Qdrant Craver에서 재다운로드 + 재임베딩.",
-      "cluster": "cluster_06",
+      "cluster": "cluster_03",
       "confidence": 1.0
     },
     {
@@ -336,7 +336,7 @@
         63,
         67
       ],
-      "cluster": "cluster_06",
+      "cluster": "cluster_03",
       "confidence": 1.0
     },
     {
@@ -347,7 +347,7 @@
         70,
         79
       ],
-      "cluster": "cluster_06",
+      "cluster": "cluster_03",
       "confidence": 1.0
     },
     {
@@ -358,7 +358,7 @@
         99,
         115
       ],
-      "cluster": "cluster_06",
+      "cluster": "cluster_03",
       "confidence": 1.0
     },
     {
@@ -369,7 +369,7 @@
         47,
         60
       ],
-      "cluster": "cluster_06",
+      "cluster": "cluster_03",
       "confidence": 1.0
     },
     {
@@ -380,7 +380,7 @@
         82,
         96
       ],
-      "cluster": "cluster_06",
+      "cluster": "cluster_03",
       "confidence": 1.0
     },
     {
@@ -391,7 +391,7 @@
         118,
         181
       ],
-      "cluster": "cluster_06",
+      "cluster": "cluster_03",
       "confidence": 1.0
     },
     {
@@ -399,7 +399,7 @@
       "type": "file",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/agents/query_verifier.py",
       "summary": "Query Verifier Agent (v3.0).\n\nAdditional LLM-based verification layer on top of existing\nsql_agent.py validate_sql(). Separate agent because SQL accuracy\nis critical - wrong queries have high risk.",
-      "cluster": "cluster_06",
+      "cluster": "cluster_05",
       "confidence": 1.0
     },
     {
@@ -407,10 +407,10 @@
       "type": "class",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/agents/query_verifier.py",
       "lines": [
-        16,
-        79
+        20,
+        86
       ],
-      "cluster": "cluster_06",
+      "cluster": "cluster_05",
       "confidence": 1.0
     },
     {
@@ -418,7 +418,7 @@
       "type": "file",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/agents/router.py",
       "summary": "Query Analyzer - Intent detection and routing.",
-      "cluster": "cluster_07",
+      "cluster": "cluster_03",
       "confidence": 1.0
     },
     {
@@ -430,7 +430,7 @@
         20
       ],
       "summary": "Load a prompt template from the prompts directory.",
-      "cluster": "cluster_07",
+      "cluster": "cluster_03",
       "confidence": 1.0
     },
     {
@@ -442,7 +442,7 @@
         75
       ],
       "summary": "Analyze user query and determine the routing path.\n\nArgs:\n    query: User's natural language question.\n\nReturns:\n    QueryAnalysis with route_type and reasoning.",
-      "cluster": "cluster_07",
+      "cluster": "cluster_03",
       "confidence": 1.0
     },
     {
@@ -454,7 +454,7 @@
         89
       ],
       "summary": "LangGraph node wrapper for query analysis.\n\nArgs:\n    state: Current agent state.\n\nReturns:\n    Updated state with route_type.",
-      "cluster": "cluster_07",
+      "cluster": "cluster_03",
       "confidence": 1.0
     },
     {
@@ -462,7 +462,7 @@
       "type": "file",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/agents/sql_agent.py",
       "summary": "Text-to-SQL Agent using LangGraph.\n\nWorkflow: generate_sql → validate_sql → execute_sql → format_answer",
-      "cluster": "cluster_07",
+      "cluster": "cluster_09",
       "confidence": 1.0
     },
     {
@@ -470,11 +470,11 @@
       "type": "function",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/agents/sql_agent.py",
       "lines": [
-        865,
-        941
+        941,
+        1017
       ],
       "summary": "Build a smart preview for large result sets (>100 rows).\n\nInstead of blindly sending the first 20 rows (which may be alphabetically\nbiased), this produces an aggregate summary + top-20-by-revenue sample\nso the LLM can write a meaningful answer.",
-      "cluster": "cluster_07",
+      "cluster": "cluster_09",
       "confidence": 1.0
     },
     {
@@ -486,7 +486,7 @@
         42
       ],
       "summary": "Normalize query and build cache key hash.",
-      "cluster": "cluster_07",
+      "cluster": "cluster_09",
       "confidence": 1.0
     },
     {
@@ -494,11 +494,11 @@
       "type": "function",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/agents/sql_agent.py",
       "lines": [
-        50,
-        85
+        121,
+        156
       ],
       "summary": "Check cache, then validate cached SQL only uses allowed tables.",
-      "cluster": "cluster_07",
+      "cluster": "cluster_09",
       "confidence": 1.0
     },
     {
@@ -506,11 +506,23 @@
       "type": "function",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/agents/sql_agent.py",
       "lines": [
-        88,
-        108
+        159,
+        179
       ],
       "summary": "Store in both in-memory and MariaDB.",
-      "cluster": "cluster_07",
+      "cluster": "cluster_09",
+      "confidence": 1.0
+    },
+    {
+      "id": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/agents/sql_agent.py::_enforce_partition_filter",
+      "type": "function",
+      "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/agents/sql_agent.py",
+      "lines": [
+        58,
+        118
+      ],
+      "summary": "If SQL targets a large table without any date filter, request Flash re-gen.\n\nReturns the original sql unchanged when:\n- No large table is targeted\n- A date filter is already present inside the WHERE clause (case-insensitive)\n\nReturns a re-generated sql when:\n- A large table is targeted AND no date filter found in WHERE clause\n\nNote: wiki_context is intentionally omitted from the re-gen prompt — the\nsql_generator.txt already includes full schema context; adding wiki text\nwould add latency without improving filter correctness.\n\nArgs:\n    cache_key: If provided and rewrite succeeds, updates the SQL cache so\n               subsequent identical queries get the corrected SQL (not the\n               filterless one that would trigger enforcement every time).",
+      "cluster": "cluster_09",
       "confidence": 1.0
     },
     {
@@ -518,11 +530,11 @@
       "type": "function",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/agents/sql_agent.py",
       "lines": [
-        1062,
-        1080
+        1138,
+        1156
       ],
       "summary": "Extract the last executed SQL from conversation context.\n\nLooks for SQL blocks in previous assistant messages.",
-      "cluster": "cluster_07",
+      "cluster": "cluster_09",
       "confidence": 1.0
     },
     {
@@ -530,11 +542,11 @@
       "type": "function",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/agents/sql_agent.py",
       "lines": [
-        506,
-        529
+        582,
+        605
       ],
       "summary": "Extract table names from SQL and return a friendly source string.",
-      "cluster": "cluster_07",
+      "cluster": "cluster_09",
       "confidence": 1.0
     },
     {
@@ -546,7 +558,7 @@
         47
       ],
       "summary": "Extract BigQuery table paths from SQL for cache validation.",
-      "cluster": "cluster_07",
+      "cluster": "cluster_09",
       "confidence": 1.0
     },
     {
@@ -554,11 +566,11 @@
       "type": "function",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/agents/sql_agent.py",
       "lines": [
-        151,
-        156
+        227,
+        232
       ],
       "summary": "Load a prompt template from the prompts directory (cached after first read).",
-      "cluster": "cluster_07",
+      "cluster": "cluster_09",
       "confidence": 1.0
     },
     {
@@ -566,11 +578,11 @@
       "type": "function",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/agents/sql_agent.py",
       "lines": [
-        944,
-        989
+        1020,
+        1065
       ],
       "summary": "Attempt to generate an interactive chart for the SQL results.\n\nReturns a ```chart-config``` markdown block with Chart.js JSON, or empty string.\nThe frontend renders this interactively with animations and tooltips.",
-      "cluster": "cluster_07",
+      "cluster": "cluster_09",
       "confidence": 1.0
     },
     {
@@ -578,11 +590,11 @@
       "type": "function",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/agents/sql_agent.py",
       "lines": [
-        787,
-        862
+        863,
+        938
       ],
       "summary": "Pivot grouped time-series data into a compact table for LLM.\n\nConverts long-format (month, mall, revenue) → pivot (mall rows × month columns).\nReturns markdown table string, or empty string if pivot fails.",
-      "cluster": "cluster_07",
+      "cluster": "cluster_09",
       "confidence": 1.0
     },
     {
@@ -590,11 +602,11 @@
       "type": "function",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/agents/sql_agent.py",
       "lines": [
-        1027,
-        1055
+        1103,
+        1131
       ],
       "summary": "Build the Text-to-SQL LangGraph workflow.\n\nReturns:\n    Compiled LangGraph StateGraph.",
-      "cluster": "cluster_07",
+      "cluster": "cluster_09",
       "confidence": 1.0
     },
     {
@@ -602,11 +614,11 @@
       "type": "function",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/agents/sql_agent.py",
       "lines": [
-        437,
-        485
+        513,
+        561
       ],
       "summary": "Execute validated SQL against BigQuery.\n\nArgs:\n    state: Current agent state with validated SQL.\n\nReturns:\n    Updated state with sql_result.",
-      "cluster": "cluster_07",
+      "cluster": "cluster_09",
       "confidence": 1.0
     },
     {
@@ -614,11 +626,11 @@
       "type": "function",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/agents/sql_agent.py",
       "lines": [
-        532,
-        784
+        608,
+        860
       ],
       "summary": "Format SQL results into a natural language answer with optional chart.\n\nArgs:\n    state: Current agent state with sql_result.\n\nReturns:\n    Updated state with answer (and chart if applicable).",
-      "cluster": "cluster_07",
+      "cluster": "cluster_09",
       "confidence": 1.0
     },
     {
@@ -626,11 +638,11 @@
       "type": "function",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/agents/sql_agent.py",
       "lines": [
-        162,
-        386
+        238,
+        462
       ],
       "summary": "Generate SQL from natural language query.\n\nArgs:\n    state: Current agent state with user query.\n\nReturns:\n    Updated state with generated_sql.",
-      "cluster": "cluster_07",
+      "cluster": "cluster_09",
       "confidence": 1.0
     },
     {
@@ -638,11 +650,11 @@
       "type": "function",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/agents/sql_agent.py",
       "lines": [
-        1157,
-        1200
+        1233,
+        1292
       ],
       "summary": "Run the Text-to-SQL agent on a query.\n\nArgs:\n    query: Natural language question about data.\n    conversation_context: Previous conversation context for reference resolution.\n    model_type: \"gemini\" or \"claude\" — which LLM to use.\n    brand_filter: Comma-separated brand codes (e.g. \"SK,CL,CBT\" or \"UM\").\n    enabled_sources: List of enabled source keys (e.g. [\"BigQuery 제품\"]) for table filtering.\n\nReturns:\n    Natural language answer based on SQL results.",
-      "cluster": "cluster_07",
+      "cluster": "cluster_09",
       "confidence": 1.0
     },
     {
@@ -650,11 +662,11 @@
       "type": "function",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/agents/sql_agent.py",
       "lines": [
-        1203,
-        1309
+        1295,
+        1407
       ],
       "summary": "Streaming version of run_sql_agent. Yields text chunks during format_answer.\n\nRuns SQL generation + validation + execution synchronously, then streams\nthe answer formatting via generate_stream.\n\nYields:\n    str: text chunks as the answer is generated.",
-      "cluster": "cluster_07",
+      "cluster": "cluster_09",
       "confidence": 1.0
     },
     {
@@ -662,11 +674,11 @@
       "type": "function",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/agents/sql_agent.py",
       "lines": [
-        1083,
-        1154
+        1159,
+        1230
       ],
       "summary": "Re-run a previous SQL query without the LIMIT restriction.\n\nUsed when user confirms they want full data after a 10000-row truncation warning.\n\nArgs:\n    previous_sql: The SQL from the previous query to re-run.\n    query: Original user query for context.\n    model_type: LLM model type.\n\nReturns:\n    Formatted answer with full data.",
-      "cluster": "cluster_07",
+      "cluster": "cluster_09",
       "confidence": 1.0
     },
     {
@@ -674,11 +686,11 @@
       "type": "function",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/agents/sql_agent.py",
       "lines": [
-        995,
-        1006
+        1071,
+        1082
       ],
       "summary": "Decide whether to execute SQL or return error.\n\nArgs:\n    state: Current agent state.\n\nReturns:\n    Next node name.",
-      "cluster": "cluster_07",
+      "cluster": "cluster_09",
       "confidence": 1.0
     },
     {
@@ -686,11 +698,11 @@
       "type": "function",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/agents/sql_agent.py",
       "lines": [
-        1009,
-        1021
+        1085,
+        1097
       ],
       "summary": "Decide whether to retry SQL generation.\n\nArgs:\n    state: Current agent state.\n\nReturns:\n    Next node name.",
-      "cluster": "cluster_07",
+      "cluster": "cluster_09",
       "confidence": 1.0
     },
     {
@@ -698,11 +710,11 @@
       "type": "function",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/agents/sql_agent.py",
       "lines": [
-        389,
-        434
+        465,
+        510
       ],
       "summary": "Validate generated SQL for safety.\n\nArgs:\n    state: Current agent state with generated_sql.\n\nReturns:\n    Updated state with sql_valid flag.",
-      "cluster": "cluster_07",
+      "cluster": "cluster_09",
       "confidence": 1.0
     },
     {
@@ -710,7 +722,7 @@
       "type": "file",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/agents/team_agent.py",
       "summary": "Team Resource Agent — 팀별 자료 검색 (CS Agent 패턴).\n\nDB HUB에서 동기화된 팀별 자료(Google Sheets, Notion 등)를\n키워드 매칭으로 검색하여 링크와 설명을 반환.",
-      "cluster": "cluster_07",
+      "cluster": "cluster_03",
       "confidence": 1.0
     },
     {
@@ -721,7 +733,7 @@
         169,
         187
       ],
-      "cluster": "cluster_07",
+      "cluster": "cluster_03",
       "confidence": 1.0
     },
     {
@@ -732,7 +744,7 @@
         56,
         57
       ],
-      "cluster": "cluster_07",
+      "cluster": "cluster_03",
       "confidence": 1.0
     },
     {
@@ -743,7 +755,7 @@
         60,
         67
       ],
-      "cluster": "cluster_07",
+      "cluster": "cluster_03",
       "confidence": 1.0
     },
     {
@@ -754,7 +766,7 @@
         190,
         230
       ],
-      "cluster": "cluster_07",
+      "cluster": "cluster_03",
       "confidence": 1.0
     },
     {
@@ -765,7 +777,7 @@
         99,
         166
       ],
-      "cluster": "cluster_07",
+      "cluster": "cluster_03",
       "confidence": 1.0
     },
     {
@@ -776,14 +788,14 @@
         23,
         53
       ],
-      "cluster": "cluster_07",
+      "cluster": "cluster_03",
       "confidence": 1.0
     },
     {
       "id": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/__init__.py",
       "type": "file",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/__init__.py",
-      "cluster": "cluster_11",
+      "cluster": "cluster_10",
       "confidence": 1.0
     },
     {
@@ -791,7 +803,7 @@
       "type": "file",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/admin_api.py",
       "summary": "Admin endpoints: user management, model access control (MariaDB).",
-      "cluster": "cluster_03",
+      "cluster": "cluster_11",
       "confidence": 1.0
     },
     {
@@ -802,7 +814,7 @@
         44,
         45
       ],
-      "cluster": "cluster_03",
+      "cluster": "cluster_11",
       "confidence": 1.0
     },
     {
@@ -813,7 +825,7 @@
         35,
         41
       ],
-      "cluster": "cluster_03",
+      "cluster": "cluster_11",
       "confidence": 1.0
     },
     {
@@ -824,7 +836,7 @@
         268,
         269
       ],
-      "cluster": "cluster_03",
+      "cluster": "cluster_11",
       "confidence": 1.0
     },
     {
@@ -835,7 +847,7 @@
         25,
         26
       ],
-      "cluster": "cluster_03",
+      "cluster": "cluster_11",
       "confidence": 1.0
     },
     {
@@ -846,7 +858,7 @@
         22,
         23
       ],
-      "cluster": "cluster_03",
+      "cluster": "cluster_11",
       "confidence": 1.0
     },
     {
@@ -857,7 +869,7 @@
         29,
         32
       ],
-      "cluster": "cluster_03",
+      "cluster": "cluster_11",
       "confidence": 1.0
     },
     {
@@ -869,7 +881,7 @@
         217
       ],
       "summary": "Operational metrics: latency p50/p95, concurrency gates, DB pool, recent activity.\n\nDriven by the audit_logs table and live semaphore/pool state. Admin only.",
-      "cluster": "cluster_03",
+      "cluster": "cluster_11",
       "confidence": 1.0
     },
     {
@@ -881,7 +893,7 @@
         450
       ],
       "summary": "Return the compiled entity page + raw fact list.",
-      "cluster": "cluster_03",
+      "cluster": "cluster_11",
       "confidence": 1.0
     },
     {
@@ -893,7 +905,7 @@
         534
       ],
       "summary": "Return the top-N heaviest edges from the knowledge graph.\n\nWhen ``full=true`` the response also includes community colouring data\nfor vis.js — each node gets a community_id and each edge gets an\nedge_type + confidence.",
-      "cluster": "cluster_03",
+      "cluster": "cluster_11",
       "confidence": 1.0
     },
     {
@@ -904,7 +916,7 @@
         454,
         476
       ],
-      "cluster": "cluster_03",
+      "cluster": "cluster_11",
       "confidence": 1.0
     },
     {
@@ -916,7 +928,7 @@
         592
       ],
       "summary": "Hierarchical map of what the wiki knows.\n\nReturned as: domain → entity → {periods, metrics, fact_count, last_seen}\n\nThis is the \"지도\" — the discovery surface the orchestrator will consult\nbefore routing a question (Week 2). For now it's admin-only, read-only.",
-      "cluster": "cluster_03",
+      "cluster": "cluster_11",
       "confidence": 1.0
     },
     {
@@ -928,7 +940,7 @@
         409
       ],
       "summary": "Flagged facts — split into needs-review and resolved buckets.",
-      "cluster": "cluster_03",
+      "cluster": "cluster_11",
       "confidence": 1.0
     },
     {
@@ -940,7 +952,7 @@
         265
       ],
       "summary": "Knowledge wiki adoption dashboard — counts, freshness, samples.",
-      "cluster": "cluster_03",
+      "cluster": "cluster_11",
       "confidence": 1.0
     },
     {
@@ -952,7 +964,7 @@
         77
       ],
       "summary": "List all users with their model permissions.",
-      "cluster": "cluster_03",
+      "cluster": "cluster_11",
       "confidence": 1.0
     },
     {
@@ -964,7 +976,7 @@
         107
       ],
       "summary": "Update allowed models for a user.",
-      "cluster": "cluster_03",
+      "cluster": "cluster_11",
       "confidence": 1.0
     },
     {
@@ -976,7 +988,7 @@
         360
       ],
       "summary": "Permanently delete a wiki fact.",
-      "cluster": "cluster_03",
+      "cluster": "cluster_11",
       "confidence": 1.0
     },
     {
@@ -988,7 +1000,7 @@
         341
       ],
       "summary": "Adjust confidence, auto-archive on repeated downvotes, or resolve/restore.",
-      "cluster": "cluster_03",
+      "cluster": "cluster_11",
       "confidence": 1.0
     },
     {
@@ -996,7 +1008,7 @@
       "type": "file",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/admin_group_api.py",
       "summary": "Admin endpoints: AD user & group management (MariaDB).",
-      "cluster": "cluster_03",
+      "cluster": "cluster_13",
       "confidence": 1.0
     },
     {
@@ -1007,7 +1019,7 @@
         57,
         60
       ],
-      "cluster": "cluster_03",
+      "cluster": "cluster_13",
       "confidence": 1.0
     },
     {
@@ -1018,7 +1030,7 @@
         45,
         48
       ],
-      "cluster": "cluster_03",
+      "cluster": "cluster_13",
       "confidence": 1.0
     },
     {
@@ -1029,7 +1041,7 @@
         51,
         54
       ],
-      "cluster": "cluster_03",
+      "cluster": "cluster_13",
       "confidence": 1.0
     },
     {
@@ -1040,7 +1052,7 @@
         63,
         64
       ],
-      "cluster": "cluster_03",
+      "cluster": "cluster_13",
       "confidence": 1.0
     },
     {
@@ -1051,7 +1063,7 @@
         36,
         37
       ],
-      "cluster": "cluster_03",
+      "cluster": "cluster_13",
       "confidence": 1.0
     },
     {
@@ -1062,7 +1074,7 @@
         39,
         40
       ],
-      "cluster": "cluster_03",
+      "cluster": "cluster_13",
       "confidence": 1.0
     },
     {
@@ -1073,7 +1085,7 @@
         30,
         31
       ],
-      "cluster": "cluster_03",
+      "cluster": "cluster_13",
       "confidence": 1.0
     },
     {
@@ -1084,7 +1096,7 @@
         33,
         34
       ],
-      "cluster": "cluster_03",
+      "cluster": "cluster_13",
       "confidence": 1.0
     },
     {
@@ -1095,7 +1107,7 @@
         22,
         25
       ],
-      "cluster": "cluster_03",
+      "cluster": "cluster_13",
       "confidence": 1.0
     },
     {
@@ -1107,7 +1119,7 @@
         321
       ],
       "summary": "Quick stats for admin dashboard (single query).",
-      "cluster": "cluster_03",
+      "cluster": "cluster_13",
       "confidence": 1.0
     },
     {
@@ -1119,7 +1131,7 @@
         203
       ],
       "summary": "Assign AD users to a group. Supports individual IDs or bulk by department.",
-      "cluster": "cluster_03",
+      "cluster": "cluster_13",
       "confidence": 1.0
     },
     {
@@ -1131,7 +1143,7 @@
         95
       ],
       "summary": "Create a new group.",
-      "cluster": "cluster_03",
+      "cluster": "cluster_13",
       "confidence": 1.0
     },
     {
@@ -1143,7 +1155,7 @@
         136
       ],
       "summary": "Delete a group (members are unassigned, not deleted).",
-      "cluster": "cluster_03",
+      "cluster": "cluster_13",
       "confidence": 1.0
     },
     {
@@ -1155,7 +1167,7 @@
         265
       ],
       "summary": "List AD users with optional filters.",
-      "cluster": "cluster_03",
+      "cluster": "cluster_13",
       "confidence": 1.0
     },
     {
@@ -1167,7 +1179,7 @@
         278
       ],
       "summary": "List all departments with user counts.",
-      "cluster": "cluster_03",
+      "cluster": "cluster_13",
       "confidence": 1.0
     },
     {
@@ -1179,7 +1191,7 @@
         151
       ],
       "summary": "List members of a group.",
-      "cluster": "cluster_03",
+      "cluster": "cluster_13",
       "confidence": 1.0
     },
     {
@@ -1191,7 +1203,7 @@
         80
       ],
       "summary": "List all groups with member counts.",
-      "cluster": "cluster_03",
+      "cluster": "cluster_13",
       "confidence": 1.0
     },
     {
@@ -1203,7 +1215,7 @@
         220
       ],
       "summary": "Remove AD users from a group.",
-      "cluster": "cluster_03",
+      "cluster": "cluster_13",
       "confidence": 1.0
     },
     {
@@ -1215,7 +1227,7 @@
         304
       ],
       "summary": "Trigger AD user sync (runs sync_ad_users.py).",
-      "cluster": "cluster_03",
+      "cluster": "cluster_13",
       "confidence": 1.0
     },
     {
@@ -1227,7 +1239,7 @@
         123
       ],
       "summary": "Update group name/description.",
-      "cluster": "cluster_03",
+      "cluster": "cluster_13",
       "confidence": 1.0
     },
     {
@@ -1235,7 +1247,7 @@
       "type": "file",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/auth_api.py",
       "summary": "Authentication endpoints: signup, signin, me, logout.\n\nUses MariaDB for user storage with AD-linked department+name login.",
-      "cluster": "cluster_08",
+      "cluster": "cluster_12",
       "confidence": 1.0
     },
     {
@@ -1243,10 +1255,10 @@
       "type": "class",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/auth_api.py",
       "lines": [
-        360,
-        362
+        375,
+        377
       ],
-      "cluster": "cluster_08",
+      "cluster": "cluster_12",
       "confidence": 1.0
     },
     {
@@ -1254,10 +1266,10 @@
       "type": "class",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/auth_api.py",
       "lines": [
-        69,
-        72
+        71,
+        75
       ],
-      "cluster": "cluster_08",
+      "cluster": "cluster_12",
       "confidence": 1.0
     },
     {
@@ -1265,10 +1277,10 @@
       "type": "class",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/auth_api.py",
       "lines": [
-        63,
-        66
+        64,
+        68
       ],
-      "cluster": "cluster_08",
+      "cluster": "cluster_12",
       "confidence": 1.0
     },
     {
@@ -1276,10 +1288,10 @@
       "type": "class",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/auth_api.py",
       "lines": [
-        75,
-        81
+        78,
+        84
       ],
-      "cluster": "cluster_08",
+      "cluster": "cluster_12",
       "confidence": 1.0
     },
     {
@@ -1287,10 +1299,10 @@
       "type": "function",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/auth_api.py",
       "lines": [
-        106,
-        115
+        109,
+        118
       ],
-      "cluster": "cluster_08",
+      "cluster": "cluster_12",
       "confidence": 1.0
     },
     {
@@ -1298,10 +1310,10 @@
       "type": "function",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/auth_api.py",
       "lines": [
-        53,
-        54
+        54,
+        55
       ],
-      "cluster": "cluster_08",
+      "cluster": "cluster_12",
       "confidence": 1.0
     },
     {
@@ -1309,10 +1321,10 @@
       "type": "function",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/auth_api.py",
       "lines": [
-        57,
-        58
+        58,
+        59
       ],
-      "cluster": "cluster_08",
+      "cluster": "cluster_12",
       "confidence": 1.0
     },
     {
@@ -1320,10 +1332,10 @@
       "type": "function",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/auth_api.py",
       "lines": [
-        45,
-        46
+        46,
+        47
       ],
-      "cluster": "cluster_08",
+      "cluster": "cluster_12",
       "confidence": 1.0
     },
     {
@@ -1331,10 +1343,10 @@
       "type": "function",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/auth_api.py",
       "lines": [
-        49,
-        50
+        50,
+        51
       ],
-      "cluster": "cluster_08",
+      "cluster": "cluster_12",
       "confidence": 1.0
     },
     {
@@ -1342,11 +1354,11 @@
       "type": "function",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/auth_api.py",
       "lines": [
-        173,
-        194
+        176,
+        197
       ],
       "summary": "Return cached AD user list, refresh if stale.",
-      "cluster": "cluster_08",
+      "cluster": "cluster_12",
       "confidence": 1.0
     },
     {
@@ -1354,11 +1366,11 @@
       "type": "function",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/auth_api.py",
       "lines": [
-        118,
-        127
+        121,
+        130
       ],
       "summary": "Look up brand_filter from user's group membership.",
-      "cluster": "cluster_08",
+      "cluster": "cluster_12",
       "confidence": 1.0
     },
     {
@@ -1366,10 +1378,10 @@
       "type": "function",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/auth_api.py",
       "lines": [
-        86,
-        91
+        89,
+        94
       ],
-      "cluster": "cluster_08",
+      "cluster": "cluster_12",
       "confidence": 1.0
     },
     {
@@ -1377,10 +1389,10 @@
       "type": "function",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/auth_api.py",
       "lines": [
-        130,
-        140
+        133,
+        143
       ],
-      "cluster": "cluster_08",
+      "cluster": "cluster_12",
       "confidence": 1.0
     },
     {
@@ -1388,11 +1400,11 @@
       "type": "function",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/auth_api.py",
       "lines": [
-        94,
-        103
+        97,
+        106
       ],
       "summary": "Build UserResponse dict from a joined users+ad_users row.",
-      "cluster": "cluster_08",
+      "cluster": "cluster_12",
       "confidence": 1.0
     },
     {
@@ -1400,11 +1412,22 @@
       "type": "function",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/auth_api.py",
       "lines": [
-        366,
-        390
+        381,
+        405
       ],
       "summary": "Change password for current user.",
-      "cluster": "cluster_08",
+      "cluster": "cluster_12",
+      "confidence": 1.0
+    },
+    {
+      "id": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/auth_api.py::crm_google_callback_proxy",
+      "type": "function",
+      "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/auth_api.py",
+      "lines": [
+        421,
+        426
+      ],
+      "cluster": "cluster_12",
       "confidence": 1.0
     },
     {
@@ -1412,11 +1435,11 @@
       "type": "function",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/auth_api.py",
       "lines": [
-        146,
-        154
+        149,
+        157
       ],
       "summary": "List all departments with user counts (from cache).",
-      "cluster": "cluster_08",
+      "cluster": "cluster_12",
       "confidence": 1.0
     },
     {
@@ -1424,11 +1447,11 @@
       "type": "function",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/auth_api.py",
       "lines": [
-        158,
-        170
+        161,
+        173
       ],
       "summary": "List AD users in a department (for login form name selector).",
-      "cluster": "cluster_08",
+      "cluster": "cluster_12",
       "confidence": 1.0
     },
     {
@@ -1436,11 +1459,11 @@
       "type": "function",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/auth_api.py",
       "lines": [
-        394,
-        397
+        409,
+        412
       ],
       "summary": "Clear auth cookie.",
-      "cluster": "cluster_08",
+      "cluster": "cluster_12",
       "confidence": 1.0
     },
     {
@@ -1448,11 +1471,11 @@
       "type": "function",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/auth_api.py",
       "lines": [
-        313,
-        357
+        328,
+        372
       ],
       "summary": "Get current authenticated user. Refreshes cookie (sliding session).",
-      "cluster": "cluster_08",
+      "cluster": "cluster_12",
       "confidence": 1.0
     },
     {
@@ -1460,11 +1483,11 @@
       "type": "function",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/auth_api.py",
       "lines": [
-        198,
-        213
+        201,
+        216
       ],
       "summary": "Find AD users by name (searches display_name, ad_name, username).",
-      "cluster": "cluster_08",
+      "cluster": "cluster_12",
       "confidence": 1.0
     },
     {
@@ -1472,11 +1495,11 @@
       "type": "function",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/auth_api.py",
       "lines": [
-        269,
-        309
+        278,
+        324
       ],
       "summary": "Sign in with department + name + password.",
-      "cluster": "cluster_08",
+      "cluster": "cluster_12",
       "confidence": 1.0
     },
     {
@@ -1484,11 +1507,11 @@
       "type": "function",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/auth_api.py",
       "lines": [
-        219,
-        265
+        222,
+        274
       ],
       "summary": "Create a new user account linked to an AD user.",
-      "cluster": "cluster_08",
+      "cluster": "cluster_12",
       "confidence": 1.0
     },
     {
@@ -1496,7 +1519,7 @@
       "type": "file",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/auth_middleware.py",
       "summary": "JWT cookie-based authentication dependency for FastAPI (MariaDB).",
-      "cluster": "cluster_03",
+      "cluster": "cluster_11",
       "confidence": 1.0
     },
     {
@@ -1508,7 +1531,7 @@
         38
       ],
       "summary": "Extract user_id from JWT cookie. Raises 401 on failure.",
-      "cluster": "cluster_03",
+      "cluster": "cluster_11",
       "confidence": 1.0
     },
     {
@@ -1520,7 +1543,7 @@
         69
       ],
       "summary": "Extract and validate JWT from httpOnly cookie, return User from MariaDB.",
-      "cluster": "cluster_03",
+      "cluster": "cluster_11",
       "confidence": 1.0
     },
     {
@@ -1532,7 +1555,7 @@
         77
       ],
       "summary": "Like get_current_user but returns None instead of 401.",
-      "cluster": "cluster_03",
+      "cluster": "cluster_11",
       "confidence": 1.0
     },
     {
@@ -1540,7 +1563,7 @@
       "type": "file",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/auth_routes.py",
       "summary": "OAuth2 authentication endpoints for Google Workspace.",
-      "cluster": "cluster_03",
+      "cluster": "cluster_12",
       "confidence": 1.0
     },
     {
@@ -1551,7 +1574,7 @@
         16,
         20
       ],
-      "cluster": "cluster_03",
+      "cluster": "cluster_12",
       "confidence": 1.0
     },
     {
@@ -1563,7 +1586,7 @@
         39
       ],
       "summary": "Build redirect URI dynamically from the request's Host header.\n\nGoogle rejects raw IP addresses as redirect URIs (except localhost).\nFor LAN IPs, we append .nip.io (wildcard DNS that resolves IP.nip.io → IP).\nThe resulting URI must be registered in Google Cloud Console.",
-      "cluster": "cluster_03",
+      "cluster": "cluster_12",
       "confidence": 1.0
     },
     {
@@ -1575,7 +1598,7 @@
         154
       ],
       "summary": "Check if user has valid Google OAuth credentials.\n\nReturns authenticated status and the connected Google account email.",
-      "cluster": "cluster_03",
+      "cluster": "cluster_12",
       "confidence": 1.0
     },
     {
@@ -1587,7 +1610,7 @@
         133
       ],
       "summary": "Handle Google OAuth callback, exchange code for tokens.\n\nArgs:\n    code: Authorization code from Google.\n    state: User email passed via state parameter.",
-      "cluster": "cluster_03",
+      "cluster": "cluster_12",
       "confidence": 1.0
     },
     {
@@ -1599,7 +1622,7 @@
         57
       ],
       "summary": "Redirect user to Google OAuth consent screen.\n\nArgs:\n    user_email: User's email address.",
-      "cluster": "cluster_03",
+      "cluster": "cluster_12",
       "confidence": 1.0
     },
     {
@@ -1611,7 +1634,7 @@
         172
       ],
       "summary": "Revoke (delete) stored Google OAuth credentials for a user.\n\nArgs:\n    user_email: User's email address.",
-      "cluster": "cluster_03",
+      "cluster": "cluster_12",
       "confidence": 1.0
     },
     {
@@ -1619,7 +1642,7 @@
       "type": "file",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/conversation_api.py",
       "summary": "Conversation CRUD API for chat history (MariaDB).",
-      "cluster": "cluster_03",
+      "cluster": "cluster_11",
       "confidence": 1.0
     },
     {
@@ -1627,10 +1650,10 @@
       "type": "class",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/conversation_api.py",
       "lines": [
-        67,
-        69
+        68,
+        70
       ],
-      "cluster": "cluster_03",
+      "cluster": "cluster_11",
       "confidence": 1.0
     },
     {
@@ -1638,10 +1661,10 @@
       "type": "class",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/conversation_api.py",
       "lines": [
-        51,
-        55
+        52,
+        56
       ],
-      "cluster": "cluster_03",
+      "cluster": "cluster_11",
       "confidence": 1.0
     },
     {
@@ -1649,10 +1672,10 @@
       "type": "class",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/conversation_api.py",
       "lines": [
-        44,
-        48
+        45,
+        49
       ],
-      "cluster": "cluster_03",
+      "cluster": "cluster_11",
       "confidence": 1.0
     },
     {
@@ -1660,10 +1683,10 @@
       "type": "class",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/conversation_api.py",
       "lines": [
-        58,
-        60
+        59,
+        61
       ],
-      "cluster": "cluster_03",
+      "cluster": "cluster_11",
       "confidence": 1.0
     },
     {
@@ -1671,10 +1694,10 @@
       "type": "class",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/conversation_api.py",
       "lines": [
-        230,
-        232
+        233,
+        235
       ],
-      "cluster": "cluster_03",
+      "cluster": "cluster_11",
       "confidence": 1.0
     },
     {
@@ -1682,10 +1705,10 @@
       "type": "class",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/conversation_api.py",
       "lines": [
-        37,
-        41
+        38,
+        42
       ],
-      "cluster": "cluster_03",
+      "cluster": "cluster_11",
       "confidence": 1.0
     },
     {
@@ -1693,10 +1716,10 @@
       "type": "class",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/conversation_api.py",
       "lines": [
-        63,
-        64
+        64,
+        65
       ],
-      "cluster": "cluster_03",
+      "cluster": "cluster_11",
       "confidence": 1.0
     },
     {
@@ -1704,10 +1727,10 @@
       "type": "function",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/conversation_api.py",
       "lines": [
-        28,
-        29
+        29,
+        30
       ],
-      "cluster": "cluster_03",
+      "cluster": "cluster_11",
       "confidence": 1.0
     },
     {
@@ -1715,10 +1738,10 @@
       "type": "function",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/conversation_api.py",
       "lines": [
-        31,
-        32
+        32,
+        33
       ],
-      "cluster": "cluster_03",
+      "cluster": "cluster_11",
       "confidence": 1.0
     },
     {
@@ -1726,10 +1749,10 @@
       "type": "function",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/conversation_api.py",
       "lines": [
-        22,
-        23
+        23,
+        24
       ],
-      "cluster": "cluster_03",
+      "cluster": "cluster_11",
       "confidence": 1.0
     },
     {
@@ -1737,10 +1760,10 @@
       "type": "function",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/conversation_api.py",
       "lines": [
-        25,
-        26
+        26,
+        27
       ],
-      "cluster": "cluster_03",
+      "cluster": "cluster_11",
       "confidence": 1.0
     },
     {
@@ -1748,10 +1771,10 @@
       "type": "function",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/conversation_api.py",
       "lines": [
-        74,
-        77
+        75,
+        78
       ],
-      "cluster": "cluster_03",
+      "cluster": "cluster_11",
       "confidence": 1.0
     },
     {
@@ -1759,11 +1782,11 @@
       "type": "function",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/conversation_api.py",
       "lines": [
-        192,
-        225
+        195,
+        228
       ],
       "summary": "Add a message to a conversation.",
-      "cluster": "cluster_03",
+      "cluster": "cluster_11",
       "confidence": 1.0
     },
     {
@@ -1771,11 +1794,11 @@
       "type": "function",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/conversation_api.py",
       "lines": [
-        102,
-        119
+        103,
+        122
       ],
       "summary": "Create a new conversation.",
-      "cluster": "cluster_03",
+      "cluster": "cluster_11",
       "confidence": 1.0
     },
     {
@@ -1783,11 +1806,11 @@
       "type": "function",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/conversation_api.py",
       "lines": [
-        174,
-        188
+        177,
+        191
       ],
       "summary": "Delete a conversation and all its messages.",
-      "cluster": "cluster_03",
+      "cluster": "cluster_11",
       "confidence": 1.0
     },
     {
@@ -1795,11 +1818,11 @@
       "type": "function",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/conversation_api.py",
       "lines": [
-        123,
-        148
+        126,
+        151
       ],
       "summary": "Get a conversation with all messages.",
-      "cluster": "cluster_03",
+      "cluster": "cluster_11",
       "confidence": 1.0
     },
     {
@@ -1807,11 +1830,11 @@
       "type": "function",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/conversation_api.py",
       "lines": [
-        270,
-        279
+        274,
+        283
       ],
       "summary": "Get all feedback for a conversation.",
-      "cluster": "cluster_03",
+      "cluster": "cluster_11",
       "confidence": 1.0
     },
     {
@@ -1819,11 +1842,11 @@
       "type": "function",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/conversation_api.py",
       "lines": [
-        83,
-        98
+        84,
+        99
       ],
       "summary": "List all conversations for the current user (newest first).",
-      "cluster": "cluster_03",
+      "cluster": "cluster_11",
       "confidence": 1.0
     },
     {
@@ -1831,11 +1854,11 @@
       "type": "function",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/conversation_api.py",
       "lines": [
-        236,
-        266
+        239,
+        270
       ],
       "summary": "Submit thumbs up/down feedback for a message.",
-      "cluster": "cluster_03",
+      "cluster": "cluster_11",
       "confidence": 1.0
     },
     {
@@ -1843,11 +1866,85 @@
       "type": "function",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/conversation_api.py",
       "lines": [
-        152,
-        170
+        155,
+        173
       ],
       "summary": "Update conversation title.",
-      "cluster": "cluster_03",
+      "cluster": "cluster_11",
+      "confidence": 1.0
+    },
+    {
+      "id": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/eval_api.py",
+      "type": "file",
+      "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/eval_api.py",
+      "summary": "Eval run review endpoints (admin only).\n\nServes the review UI (`/frontend/eval_review.html`):\n- list runs\n- page through a run's Q/A, filter by verdict/team\n- mark a row as good/bad/skip\n- show summary counts for a run",
+      "cluster": "cluster_11",
+      "confidence": 1.0
+    },
+    {
+      "id": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/eval_api.py::VerdictBody",
+      "type": "class",
+      "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/eval_api.py",
+      "lines": [
+        87,
+        88
+      ],
+      "cluster": "cluster_11",
+      "confidence": 1.0
+    },
+    {
+      "id": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/eval_api.py::_require_admin",
+      "type": "function",
+      "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/eval_api.py",
+      "lines": [
+        26,
+        29
+      ],
+      "cluster": "cluster_11",
+      "confidence": 1.0
+    },
+    {
+      "id": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/eval_api.py::list_qa",
+      "type": "function",
+      "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/eval_api.py",
+      "lines": [
+        48,
+        84
+      ],
+      "cluster": "cluster_11",
+      "confidence": 1.0
+    },
+    {
+      "id": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/eval_api.py::list_runs",
+      "type": "function",
+      "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/eval_api.py",
+      "lines": [
+        33,
+        44
+      ],
+      "cluster": "cluster_11",
+      "confidence": 1.0
+    },
+    {
+      "id": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/eval_api.py::run_summary",
+      "type": "function",
+      "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/eval_api.py",
+      "lines": [
+        108,
+        138
+      ],
+      "cluster": "cluster_11",
+      "confidence": 1.0
+    },
+    {
+      "id": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/eval_api.py::set_verdict",
+      "type": "function",
+      "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/eval_api.py",
+      "lines": [
+        92,
+        104
+      ],
+      "cluster": "cluster_11",
       "confidence": 1.0
     },
     {
@@ -1855,7 +1952,7 @@
       "type": "file",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/harness_api.py",
       "summary": "AI Knowledge Base Editor — CLAUDE.md + Memory 파일 시각화/편집 API.\n\nAI가 이 프로젝트를 이해하는 기반이 되는 MD 파일들을 읽고, 편집하고,\n섹션 간 연결 그래프를 생성합니다.",
-      "cluster": "cluster_12",
+      "cluster": "cluster_11",
       "confidence": 1.0
     },
     {
@@ -1866,7 +1963,7 @@
         136,
         140
       ],
-      "cluster": "cluster_12",
+      "cluster": "cluster_11",
       "confidence": 1.0
     },
     {
@@ -1877,7 +1974,7 @@
         120,
         122
       ],
-      "cluster": "cluster_12",
+      "cluster": "cluster_11",
       "confidence": 1.0
     },
     {
@@ -1889,7 +1986,7 @@
         38
       ],
       "summary": "Whitelist of MD files the user can edit.",
-      "cluster": "cluster_12",
+      "cluster": "cluster_11",
       "confidence": 1.0
     },
     {
@@ -1900,7 +1997,7 @@
         40,
         47
       ],
-      "cluster": "cluster_12",
+      "cluster": "cluster_11",
       "confidence": 1.0
     },
     {
@@ -1912,7 +2009,7 @@
         161
       ],
       "summary": "Create a new memory file.",
-      "cluster": "cluster_12",
+      "cluster": "cluster_11",
       "confidence": 1.0
     },
     {
@@ -1924,7 +2021,7 @@
         177
       ],
       "summary": "Delete a memory file (not CLAUDE.md or MEMORY.md).",
-      "cluster": "cluster_12",
+      "cluster": "cluster_11",
       "confidence": 1.0
     },
     {
@@ -1936,7 +2033,7 @@
         227
       ],
       "summary": "Build a graph from MD headings and cross-references.",
-      "cluster": "cluster_12",
+      "cluster": "cluster_11",
       "confidence": 1.0
     },
     {
@@ -1947,7 +2044,7 @@
         52,
         53
       ],
-      "cluster": "cluster_12",
+      "cluster": "cluster_11",
       "confidence": 1.0
     },
     {
@@ -1959,7 +2056,7 @@
         105
       ],
       "summary": "List all AI knowledge MD files with metadata.",
-      "cluster": "cluster_12",
+      "cluster": "cluster_11",
       "confidence": 1.0
     },
     {
@@ -1971,7 +2068,7 @@
         116
       ],
       "summary": "Read a specific MD file.",
-      "cluster": "cluster_12",
+      "cluster": "cluster_11",
       "confidence": 1.0
     },
     {
@@ -1983,7 +2080,7 @@
         132
       ],
       "summary": "Save changes to an MD file.",
-      "cluster": "cluster_12",
+      "cluster": "cluster_11",
       "confidence": 1.0
     },
     {
@@ -1991,7 +2088,7 @@
       "type": "file",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/middleware.py",
       "summary": "Middleware for CORS, authentication, and request logging.",
-      "cluster": "cluster_14",
+      "cluster": "cluster_12",
       "confidence": 1.0
     },
     {
@@ -2003,7 +2100,7 @@
         87
       ],
       "summary": "Middleware that logs request/response details and extracts user from JWT cookie.",
-      "cluster": "cluster_14",
+      "cluster": "cluster_12",
       "confidence": 1.0
     },
     {
@@ -2015,7 +2112,7 @@
         28
       ],
       "summary": "Configure all middleware for the FastAPI app.",
-      "cluster": "cluster_14",
+      "cluster": "cluster_12",
       "confidence": 1.0
     },
     {
@@ -2186,7 +2283,7 @@
       "type": "file",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/config.py",
       "summary": "SKIN1004 Enterprise AI - Configuration Management.",
-      "cluster": "cluster_09",
+      "cluster": "cluster_06",
       "confidence": 1.0
     },
     {
@@ -2195,10 +2292,10 @@
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/config.py",
       "lines": [
         10,
-        142
+        148
       ],
       "summary": "Application settings loaded from environment variables.",
-      "cluster": "cluster_09",
+      "cluster": "cluster_06",
       "confidence": 1.0
     },
     {
@@ -2206,18 +2303,50 @@
       "type": "function",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/config.py",
       "lines": [
-        146,
-        148
+        152,
+        154
       ],
       "summary": "Get cached application settings.",
-      "cluster": "cluster_09",
+      "cluster": "cluster_06",
       "confidence": 1.0
     },
     {
       "id": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/core/__init__.py",
       "type": "file",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/core/__init__.py",
-      "cluster": "cluster_16",
+      "cluster": "cluster_17",
+      "confidence": 1.0
+    },
+    {
+      "id": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/core/anonymization.py",
+      "type": "file",
+      "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/core/anonymization.py",
+      "summary": "Pseudonymization helper for conversation / feedback ownership.\n\n``anon_id = hmac_sha256(salt, str(user_id))[:16]`` — deterministic per-user so\nthe sidebar still groups a user's own conversations, yet irreversible without\nthe server-side salt.\n\nThe salt comes from ``Settings.anon_salt`` (env var ``ANON_SALT``). Minimum\n32 chars is enforced here, not at config load, so the server boots in dev\nwithout forcing a secret to be set — the guard fires the first time identity\nactually needs to be hashed.",
+      "cluster": "cluster_06",
+      "confidence": 1.0
+    },
+    {
+      "id": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/core/anonymization.py::anon_id_for",
+      "type": "function",
+      "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/core/anonymization.py",
+      "lines": [
+        43,
+        45
+      ],
+      "summary": "Cached variant keyed on user_id. Safe because the salt is process-stable.",
+      "cluster": "cluster_06",
+      "confidence": 1.0
+    },
+    {
+      "id": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/core/anonymization.py::compute_anon_id",
+      "type": "function",
+      "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/core/anonymization.py",
+      "lines": [
+        24,
+        39
+      ],
+      "summary": "Return a 16-char hex anon id for ``user_id``.\n\nRaises ValueError if ``salt`` (or ``Settings.anon_salt``) is shorter than\n32 chars — this is a hard stop, not a warning: a missing salt would\ncollapse every user to a predictable hash.",
+      "cluster": "cluster_06",
       "confidence": 1.0
     },
     {
@@ -2589,6 +2718,26 @@
       "confidence": 1.0
     },
     {
+      "id": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/core/log_scrub.py",
+      "type": "file",
+      "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/core/log_scrub.py",
+      "summary": "structlog processor that strips identity from log events.\n\nEvery emitted log event passes through ``scrub_identity_processor`` before it\nhits the renderer. The processor:\n\n- Replaces ``user_id`` with ``anon_id`` (via ``compute_anon_id``)\n- Drops ``email``, ``name``, ``display_name`` from the event dict\n- Leaves ``audit`` / ``security`` loggers untouched so incident response\n  still has real attribution\n\nIf ``user_id`` is not int-coercible, it's dropped silently rather than crashing\nthe log call.",
+      "cluster": "cluster_06",
+      "confidence": 1.0
+    },
+    {
+      "id": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/core/log_scrub.py::scrub_identity_processor",
+      "type": "function",
+      "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/core/log_scrub.py",
+      "lines": [
+        24,
+        53
+      ],
+      "summary": "Return the event dict with identity fields replaced by anon_id.\n\n``_logger_name`` is a test-only hook; in production the caller pulls it\nfrom the bound logger via ``event_dict.get(\"logger\")`` which structlog\ninjects via ``add_logger_name``.",
+      "cluster": "cluster_06",
+      "confidence": 1.0
+    },
+    {
       "id": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/core/notify.py",
       "type": "file",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/core/notify.py",
@@ -2625,7 +2774,7 @@
       "type": "file",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/core/prompt_fragments.py",
       "summary": "Shared prompt fragments used across multiple agents.\n\nEnterprise-grade formatting constants for consistent, professional output.",
-      "cluster": "cluster_17",
+      "cluster": "cluster_18",
       "confidence": 1.0
     },
     {
@@ -2633,7 +2782,7 @@
       "type": "file",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/core/response_formatter.py",
       "summary": "Response post-processor for consistent markdown formatting.\n\nEnsures all agent responses render well in the custom frontend.\nEnterprise-grade output quality: consistent spacing, visual hierarchy, source attribution.\nv2.0: Follow-up normalization + auto source footer.",
-      "cluster": "cluster_02",
+      "cluster": "cluster_04",
       "confidence": 1.0
     },
     {
@@ -2645,7 +2794,7 @@
         188
       ],
       "summary": "Add source attribution footer if not already present.\n\nFor direct/knowledge answers (5+ lines, no existing footer),\nadds a date-stamped attribution line.",
-      "cluster": "cluster_02",
+      "cluster": "cluster_04",
       "confidence": 1.0
     },
     {
@@ -2657,7 +2806,7 @@
         135
       ],
       "summary": "Ensure follow-up suggestion blocks are properly formatted.\n\nNormalizes different LLM variations into a single continuous blockquote.\nFixes the common issue where LLMs insert blank lines between > items,\ncausing each line to render as a separate blockquote.\n\nInput (broken):\n    > 💡 **이런 것도 물어보세요**\n    (blank)\n    > - question 1\n    (blank)\n    > - question 2\n\nOutput (fixed):\n    > 💡 **이런 것도 물어보세요**\n    > - question 1\n    > - question 2",
-      "cluster": "cluster_02",
+      "cluster": "cluster_04",
       "confidence": 1.0
     },
     {
@@ -2669,7 +2818,7 @@
         87
       ],
       "summary": "Post-process LLM answer for consistent markdown rendering.\n\nArgs:\n    answer: Raw LLM-generated answer text.\n    domain: Route domain (bigquery, notion, gws, cs, multi, direct).\n\nReturns:\n    Cleaned and normalized markdown text.",
-      "cluster": "cluster_02",
+      "cluster": "cluster_04",
       "confidence": 1.0
     },
     {
@@ -2677,7 +2826,7 @@
       "type": "file",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/core/safety.py",
       "summary": "Safety module: MaintenanceManager + CircuitBreaker.\n\nMaintenanceManager:\n  - Manual toggle: activate(reason) / deactivate()\n  - Auto-detect: 60s polling of __TABLES__ row_count metadata (free query)\n  - Baseline comparison: >50% drop -> ON, >90% recovery -> OFF\n\nCircuitBreaker (per-service):\n  - States: CLOSED -> OPEN -> HALF_OPEN -> CLOSED\n  - 3 consecutive failures -> OPEN (block calls for 60s)\n  - After cooldown, one trial call (HALF_OPEN)\n  - Success -> CLOSED, failure -> OPEN again",
-      "cluster": "cluster_13",
+      "cluster": "cluster_14",
       "confidence": 1.0
     },
     {
@@ -2688,7 +2837,7 @@
         88,
         91
       ],
-      "cluster": "cluster_13",
+      "cluster": "cluster_14",
       "confidence": 1.0
     },
     {
@@ -2700,7 +2849,7 @@
         144
       ],
       "summary": "Per-service circuit breaker with failure threshold and cooldown.",
-      "cluster": "cluster_13",
+      "cluster": "cluster_14",
       "confidence": 1.0
     },
     {
@@ -2712,7 +2861,7 @@
         81
       ],
       "summary": "Tracks BigQuery table update state and blocks queries during maintenance.",
-      "cluster": "cluster_13",
+      "cluster": "cluster_14",
       "confidence": 1.0
     },
     {
@@ -2724,7 +2873,7 @@
         373
       ],
       "summary": "Fetch SALES_ALL_Backup row_count + last_modified from __TABLES__.",
-      "cluster": "cluster_13",
+      "cluster": "cluster_14",
       "confidence": 1.0
     },
     {
@@ -2736,7 +2885,7 @@
         169
       ],
       "summary": "Get or create a CircuitBreaker for the given service name.",
-      "cluster": "cluster_13",
+      "cluster": "cluster_14",
       "confidence": 1.0
     },
     {
@@ -2748,7 +2897,7 @@
         162
       ],
       "summary": "Get or create the MaintenanceManager singleton.",
-      "cluster": "cluster_13",
+      "cluster": "cluster_14",
       "confidence": 1.0
     },
     {
@@ -2760,7 +2909,7 @@
         279
       ],
       "summary": "Build full safety status for the /safety/status endpoint.\n\nReturns service-level status combining maintenance state,\ncircuit breaker states, and subsystem health.",
-      "cluster": "cluster_13",
+      "cluster": "cluster_14",
       "confidence": 1.0
     },
     {
@@ -2772,7 +2921,7 @@
         350
       ],
       "summary": "Background coroutine: poll __TABLES__ every `interval` seconds.\n\nTwo detection methods (hybrid):\n1. last_modified_time: if table was modified within 10 min → updating\n2. row_count drop > 5% → updating (DELETE+INSERT pattern)",
-      "cluster": "cluster_13",
+      "cluster": "cluster_14",
       "confidence": 1.0
     },
     {
@@ -2789,7 +2938,7 @@
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/core/security.py",
       "lines": [
         81,
-        106
+        108
       ],
       "summary": "Validate that only allowed tables are referenced.\n\nArgs:\n    sql: The SQL query.\n    allowed_tables: List of allowed full table paths.\n\nReturns:\n    Tuple of (is_valid, error_message).",
       "cluster": "cluster_05",
@@ -2800,8 +2949,8 @@
       "type": "function",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/core/security.py",
       "lines": [
-        109,
-        216
+        111,
+        218
       ],
       "summary": "Clean up SQL query formatting and extract SQL from mixed responses.\n\nArgs:\n    sql: Raw SQL query (may contain markdown, JSON, or explanatory text).\n\nReturns:\n    Cleaned SQL query, or empty string if no valid SQL found.",
       "cluster": "cluster_05",
@@ -2824,7 +2973,7 @@
       "type": "file",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/db/__init__.py",
       "summary": "Database package for SKIN1004 AI custom frontend.",
-      "cluster": "cluster_18",
+      "cluster": "cluster_19",
       "confidence": 1.0
     },
     {
@@ -2832,7 +2981,7 @@
       "type": "file",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/db/mariadb.py",
       "summary": "DB layer — MariaDB backend for all environments.\n\nBoth production (3000) and development (3001) use MariaDB.\n\nInterface: fetch_all, fetch_one, execute, execute_lastid.",
-      "cluster": "cluster_19",
+      "cluster": "cluster_20",
       "confidence": 1.0
     },
     {
@@ -2844,7 +2993,7 @@
         48
       ],
       "summary": "Get or create MariaDB connection pool (singleton).",
-      "cluster": "cluster_19",
+      "cluster": "cluster_20",
       "confidence": 1.0
     },
     {
@@ -2855,7 +3004,7 @@
         71,
         79
       ],
-      "cluster": "cluster_19",
+      "cluster": "cluster_20",
       "confidence": 1.0
     },
     {
@@ -2866,7 +3015,7 @@
         82,
         90
       ],
-      "cluster": "cluster_19",
+      "cluster": "cluster_20",
       "confidence": 1.0
     },
     {
@@ -2877,7 +3026,7 @@
         51,
         58
       ],
-      "cluster": "cluster_19",
+      "cluster": "cluster_20",
       "confidence": 1.0
     },
     {
@@ -2888,7 +3037,31 @@
         61,
         68
       ],
-      "cluster": "cluster_19",
+      "cluster": "cluster_20",
+      "confidence": 1.0
+    },
+    {
+      "id": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/db/mariadb.py::ensure_anon_columns",
+      "type": "function",
+      "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/db/mariadb.py",
+      "lines": [
+        371,
+        398
+      ],
+      "summary": "Add anon_id columns + indexes to conversations and message_feedback.\n\nIdempotent: checks INFORMATION_SCHEMA before ALTERing so repeated startups\nare no-ops. Follows the same pattern as ensure_knowledge_wiki_table().",
+      "cluster": "cluster_20",
+      "confidence": 1.0
+    },
+    {
+      "id": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/db/mariadb.py::ensure_eval_tables",
+      "type": "function",
+      "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/db/mariadb.py",
+      "lines": [
+        362,
+        368
+      ],
+      "summary": "Create eval_runs + eval_qa if not present.",
+      "cluster": "cluster_20",
       "confidence": 1.0
     },
     {
@@ -2900,7 +3073,7 @@
         197
       ],
       "summary": "Create knowledge_wiki table if not exists. Also adds optional columns\non existing tables (canonical_entity, embedding).",
-      "cluster": "cluster_19",
+      "cluster": "cluster_20",
       "confidence": 1.0
     },
     {
@@ -2912,7 +3085,7 @@
         138
       ],
       "summary": "Create team_resources table if not exists.",
-      "cluster": "cluster_19",
+      "cluster": "cluster_20",
       "confidence": 1.0
     },
     {
@@ -2923,7 +3096,7 @@
         309,
         313
       ],
-      "cluster": "cluster_19",
+      "cluster": "cluster_20",
       "confidence": 1.0
     },
     {
@@ -2934,7 +3107,7 @@
         229,
         233
       ],
-      "cluster": "cluster_19",
+      "cluster": "cluster_20",
       "confidence": 1.0
     },
     {
@@ -2945,7 +3118,7 @@
         290,
         294
       ],
-      "cluster": "cluster_19",
+      "cluster": "cluster_20",
       "confidence": 1.0
     },
     {
@@ -2957,7 +3130,7 @@
         215
       ],
       "summary": "Create wiki_extraction_log table — prevents re-processing same pair.",
-      "cluster": "cluster_19",
+      "cluster": "cluster_20",
       "confidence": 1.0
     },
     {
@@ -2968,7 +3141,7 @@
         253,
         268
       ],
-      "cluster": "cluster_19",
+      "cluster": "cluster_20",
       "confidence": 1.0
     },
     {
@@ -2980,7 +3153,7 @@
         105
       ],
       "summary": "Get a pooled MariaDB connection.",
-      "cluster": "cluster_19",
+      "cluster": "cluster_20",
       "confidence": 1.0
     },
     {
@@ -2988,7 +3161,7 @@
       "type": "file",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/db/models.py",
       "summary": "Data models: User (simple dataclass, backed by MariaDB).",
-      "cluster": "cluster_09",
+      "cluster": "cluster_06",
       "confidence": 1.0
     },
     {
@@ -3000,7 +3173,7 @@
         17
       ],
       "summary": "User model populated from MariaDB users + ad_users tables.",
-      "cluster": "cluster_09",
+      "cluster": "cluster_06",
       "confidence": 1.0
     },
     {
@@ -3008,7 +3181,7 @@
       "type": "file",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/knowledge/__init__.py",
       "summary": "Knowledge layer — persistent fact extraction and retrieval.\n\nComponents:\n- wiki_extractor: Gemini Flash-based fact extraction from past conversations\n- wiki_store: MariaDB read/write for knowledge_wiki\n- wiki_map: hierarchical index (domain → entity → metric/period)",
-      "cluster": "cluster_20",
+      "cluster": "cluster_21",
       "confidence": 1.0
     },
     {
@@ -3016,7 +3189,7 @@
       "type": "file",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/knowledge/entity_pages.py",
       "summary": "Entity page compiler — Karpathy's \"LLM wiki\" applied to SKIN1004 facts.\n\nEach entity gets one compiled markdown \"page\" aggregating every fact we know\nabout it, grouped by period and metric. The compiled page replaces scattered\nfact rows as the primary retrieval unit for orchestrator context injection —\ninstead of pasting 10 disconnected lines, we paste one coherent summary.\n\nDesign:\n\n- Input: all ``knowledge_wiki`` rows for a given canonical entity (status !=\n  archived).\n- Output: a markdown body stored in ``wiki_entity_pages.markdown``, plus\n  metadata (fact_count, period_span, last_fact_at).\n- Idempotent: compiling the same entity twice produces the same page; we\n  overwrite on each compile.\n- Incremental: ``ensure_entity_pages`` only touches entities whose facts\n  were modified since the last compile.\n\nCompilation steps for one entity:\n\n1. Pull all facts. Split into ``permanent`` (period is NULL/\"permanent\")\n   and ``timeline`` (period has a value).\n2. Timeline: group by (year, metric) → bullet lines sorted chronologically.\n3. Permanent: bullet the summary verbatim.\n4. Prepend a 2-3 line TL;DR synthesized from the top-confidence facts.\n   TL;DR is keyword-based, not LLM-generated, so the hot path stays cheap.\n5. Append a source footer: total fact count, earliest/latest period, last\n   updated timestamp.",
-      "cluster": "cluster_10",
+      "cluster": "cluster_04",
       "confidence": 1.0
     },
     {
@@ -3027,7 +3200,7 @@
         52,
         53
       ],
-      "cluster": "cluster_10",
+      "cluster": "cluster_04",
       "confidence": 1.0
     },
     {
@@ -3038,7 +3211,7 @@
         87,
         190
       ],
-      "cluster": "cluster_10",
+      "cluster": "cluster_04",
       "confidence": 1.0
     },
     {
@@ -3049,7 +3222,7 @@
         72,
         80
       ],
-      "cluster": "cluster_10",
+      "cluster": "cluster_04",
       "confidence": 1.0
     },
     {
@@ -3061,7 +3234,7 @@
         69
       ],
       "summary": "Sort key that roughly chronologizes Korean period strings.",
-      "cluster": "cluster_10",
+      "cluster": "cluster_04",
       "confidence": 1.0
     },
     {
@@ -3072,7 +3245,7 @@
         56,
         60
       ],
-      "cluster": "cluster_10",
+      "cluster": "cluster_04",
       "confidence": 1.0
     },
     {
@@ -3084,7 +3257,7 @@
         242
       ],
       "summary": "Pull facts for one entity, compile markdown, upsert into wiki_entity_pages.",
-      "cluster": "cluster_10",
+      "cluster": "cluster_04",
       "confidence": 1.0
     },
     {
@@ -3096,7 +3269,7 @@
         291
       ],
       "summary": "Compile pages for entities whose facts were updated after the page.\n\nArgs:\n    limit: safety cap — number of entities to process per call.\n    only_stale: if True, skip entities whose page is fresher than any fact.",
-      "cluster": "cluster_10",
+      "cluster": "cluster_04",
       "confidence": 1.0
     },
     {
@@ -3107,7 +3280,7 @@
         294,
         304
       ],
-      "cluster": "cluster_10",
+      "cluster": "cluster_04",
       "confidence": 1.0
     },
     {
@@ -3119,7 +3292,7 @@
         328
       ],
       "summary": "Simple LIKE-based entity lookup. Used by wiki_search to find candidate\npages when the query mentions specific entity names.",
-      "cluster": "cluster_10",
+      "cluster": "cluster_04",
       "confidence": 1.0
     },
     {
@@ -3127,7 +3300,7 @@
       "type": "file",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/knowledge/wiki_communities.py",
       "summary": "Community detection for the wiki knowledge graph.\n\nBuilds a NetworkX graph from ``wiki_graph_edges`` and runs Louvain community\ndetection (the stable algorithm NetworkX ships with — no extra deps). Each\nentity lands in exactly one community; the community row captures size and\ntop entities. ``wiki_graph_edges.community_id`` is updated in place so the\nfrontend can colour nodes by community.",
-      "cluster": "cluster_10",
+      "cluster": "cluster_04",
       "confidence": 1.0
     },
     {
@@ -3138,7 +3311,7 @@
         23,
         39
       ],
-      "cluster": "cluster_10",
+      "cluster": "cluster_04",
       "confidence": 1.0
     },
     {
@@ -3150,7 +3323,7 @@
         118
       ],
       "summary": "Run Louvain on the wiki graph and write community assignments.\n\nReturns a dict of {entity: community_id}.",
-      "cluster": "cluster_10",
+      "cluster": "cluster_04",
       "confidence": 1.0
     },
     {
@@ -3161,7 +3334,7 @@
         121,
         125
       ],
-      "cluster": "cluster_10",
+      "cluster": "cluster_04",
       "confidence": 1.0
     },
     {
@@ -3169,7 +3342,7 @@
       "type": "file",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/knowledge/wiki_embed.py",
       "summary": "Gemini-based embedder for knowledge_wiki rows.\n\nUses ``text-embedding-004`` (768-dim) via google-genai — same vendor that\nproduces the Notion vector store, so we stay inside one model family. The\nvectors are small enough that we can load them all into a process-local\ncache on demand instead of standing up a separate vector database.\n\nPublic surface:\n\n- ``embed_text(text)``               → single-shot query embedding\n- ``ensure_wiki_embeddings(limit)``  → batch-fill missing rows\n- ``load_wiki_embeddings()``          → {row_id: vector} cache for search\n- ``cosine(a, b)``                    → similarity helper",
-      "cluster": "cluster_06",
+      "cluster": "cluster_05",
       "confidence": 1.0
     },
     {
@@ -3180,7 +3353,7 @@
         72,
         74
       ],
-      "cluster": "cluster_06",
+      "cluster": "cluster_05",
       "confidence": 1.0
     },
     {
@@ -3191,7 +3364,7 @@
         60,
         69
       ],
-      "cluster": "cluster_06",
+      "cluster": "cluster_05",
       "confidence": 1.0
     },
     {
@@ -3202,7 +3375,7 @@
         215,
         228
       ],
-      "cluster": "cluster_06",
+      "cluster": "cluster_05",
       "confidence": 1.0
     },
     {
@@ -3214,7 +3387,7 @@
         130
       ],
       "summary": "Embed several strings. Splits internally to respect the provider's\n100-request-per-call batch cap.",
-      "cluster": "cluster_06",
+      "cluster": "cluster_05",
       "confidence": 1.0
     },
     {
@@ -3226,7 +3399,7 @@
         269
       ],
       "summary": "Async wrapper for request-path embedding.\n\nFast path:\n1. Check the LRU cache keyed by the trimmed query.\n2. Run Gemini in a worker thread with a hard timeout so a slow or\n   unavailable API doesn't stall the orchestrator.",
-      "cluster": "cluster_06",
+      "cluster": "cluster_05",
       "confidence": 1.0
     },
     {
@@ -3238,7 +3411,7 @@
         96
       ],
       "summary": "Embed a single string. Raises on provider failure.",
-      "cluster": "cluster_06",
+      "cluster": "cluster_05",
       "confidence": 1.0
     },
     {
@@ -3250,7 +3423,7 @@
         177
       ],
       "summary": "Embed wiki rows that still have NULL embedding.\n\nReturns counts. Idempotent — safe to run repeatedly. Designed for an\noffline script or a low-frequency cron, not the request path.",
-      "cluster": "cluster_06",
+      "cluster": "cluster_05",
       "confidence": 1.0
     },
     {
@@ -3262,7 +3435,7 @@
         212
       ],
       "summary": "Load every active embedding into a process-local dict.\n\nRefreshes after ``_CACHE_TTL`` seconds or when ``force`` is True.",
-      "cluster": "cluster_06",
+      "cluster": "cluster_05",
       "confidence": 1.0
     },
     {
@@ -3270,7 +3443,7 @@
       "type": "file",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/knowledge/wiki_extractor.py",
       "summary": "Knowledge wiki extractor — turns past conversation answers into reusable facts.\n\nWeek 1 scope: shadow-mode extraction only. Reads user Q + assistant A from the\n`messages` table, asks Gemini Flash to pull structured atomic facts, writes to\n`knowledge_wiki`. No retrieval integration yet — that lands in Week 2.\n\nOnly conversations whose answers were rooted in hard data sources are mined,\nto avoid extracting opinions/chat from general-knowledge routes:\n    ALLOWED_ROUTES = {\"bigquery\", \"notion\", \"multi\"}\n\nThe extraction prompt demands strict JSON so we can round-trip without\npost-processing. On JSON failure the batch is logged and skipped.",
-      "cluster": "cluster_10",
+      "cluster": "cluster_04",
       "confidence": 1.0
     },
     {
@@ -3281,7 +3454,19 @@
         73,
         89
       ],
-      "cluster": "cluster_10",
+      "cluster": "cluster_04",
+      "confidence": 1.0
+    },
+    {
+      "id": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/knowledge/wiki_extractor.py::_canonicalize_entity_sync",
+      "type": "function",
+      "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/knowledge/wiki_extractor.py",
+      "lines": [
+        92,
+        106
+      ],
+      "summary": "Return the existing canonical entity name (case-insensitive lookup).\n\nIf knowledge_wiki already has an entry whose name differs only in case,\nreuse that stored form so we never create a new case-variant entity.\nFalls back to the original string when no match exists.",
+      "cluster": "cluster_04",
       "confidence": 1.0
     },
     {
@@ -3289,11 +3474,11 @@
       "type": "function",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/knowledge/wiki_extractor.py",
       "lines": [
-        96,
-        103
+        113,
+        120
       ],
       "summary": "Strip accidental markdown fences from LLM output.",
-      "cluster": "cluster_10",
+      "cluster": "cluster_04",
       "confidence": 1.0
     },
     {
@@ -3301,11 +3486,11 @@
       "type": "function",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/knowledge/wiki_extractor.py",
       "lines": [
-        130,
-        179
+        147,
+        196
       ],
       "summary": "Blocking LLM call. Use via asyncio.to_thread from async contexts.",
-      "cluster": "cluster_10",
+      "cluster": "cluster_04",
       "confidence": 1.0
     },
     {
@@ -3313,11 +3498,11 @@
       "type": "function",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/knowledge/wiki_extractor.py",
       "lines": [
-        310,
-        344
+        337,
+        371
       ],
       "summary": "Find user+assistant message pairs that haven't been wiki-extracted yet.\n\nA pair is \"processed\" when a row exists in wiki_extraction_log keyed by\nthe assistant message_id — regardless of whether facts were actually\nextracted. Tracking skipped pairs is essential; otherwise the backfill\nloops forever on the same direct/cs-route messages.",
-      "cluster": "cluster_10",
+      "cluster": "cluster_04",
       "confidence": 1.0
     },
     {
@@ -3325,11 +3510,11 @@
       "type": "function",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/knowledge/wiki_extractor.py",
       "lines": [
-        227,
-        269
+        254,
+        296
       ],
       "summary": "If a sibling row exists with different value, flag both.",
-      "cluster": "cluster_10",
+      "cluster": "cluster_04",
       "confidence": 1.0
     },
     {
@@ -3337,11 +3522,11 @@
       "type": "function",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/knowledge/wiki_extractor.py",
       "lines": [
-        415,
-        437
+        442,
+        464
       ],
       "summary": "Look up the route of the nearest audit_log entry for this message.\n\naudit_logs doesn't store message_id so we correlate by conversation and\ntimestamp proximity. Returns None when nothing is found, which makes the\ncaller fall through without filtering — safer than guessing wrong.",
-      "cluster": "cluster_10",
+      "cluster": "cluster_04",
       "confidence": 1.0
     },
     {
@@ -3349,11 +3534,11 @@
       "type": "function",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/knowledge/wiki_extractor.py",
       "lines": [
-        186,
-        224
+        203,
+        251
       ],
       "summary": "Write extracted facts to knowledge_wiki, flagging contradictions.\n\nContradiction rule: if a row already exists with the same\n(entity, period, metric) but a different ``value``, the new row and\nthe existing row both get ``review_status='needs_review'`` and a\n``conflict_reason`` note pointing at each other's id.",
-      "cluster": "cluster_10",
+      "cluster": "cluster_04",
       "confidence": 1.0
     },
     {
@@ -3361,11 +3546,11 @@
       "type": "function",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/knowledge/wiki_extractor.py",
       "lines": [
-        347,
-        358
+        374,
+        385
       ],
       "summary": "Record that we've looked at this message so we don't re-fetch it.",
-      "cluster": "cluster_10",
+      "cluster": "cluster_04",
       "confidence": 1.0
     },
     {
@@ -3373,11 +3558,11 @@
       "type": "function",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/knowledge/wiki_extractor.py",
       "lines": [
-        106,
-        127
+        123,
+        144
       ],
       "summary": "Best-effort recovery when Flash output is truncated mid-array.\n\nIf the JSON array got cut off while emitting an element, peel the\nbroken tail and close the array so we still capture the complete\nelements that came before.",
-      "cluster": "cluster_10",
+      "cluster": "cluster_04",
       "confidence": 1.0
     },
     {
@@ -3385,11 +3570,11 @@
       "type": "function",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/knowledge/wiki_extractor.py",
       "lines": [
-        361,
-        412
+        388,
+        439
       ],
       "summary": "Pull recent unprocessed Q/A pairs and extract facts from each.\n\nArgs:\n    since_minutes: time window (None = all history — used by backfill).\n    limit: safety cap on number of pairs per invocation.\n    max_concurrent: how many Flash calls to run in parallel.\n\nReturns:\n    Dict with counts: {pairs_seen, pairs_skipped, facts_written}",
-      "cluster": "cluster_10",
+      "cluster": "cluster_04",
       "confidence": 1.0
     },
     {
@@ -3397,11 +3582,11 @@
       "type": "function",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/knowledge/wiki_extractor.py",
       "lines": [
-        276,
-        303
+        303,
+        330
       ],
       "summary": "Extract facts from a single Q/A pair and persist them.\n\nReturns ``(inserted_count, skip_reason)``. ``skip_reason`` is ``None`` on\nsuccess. The caller is expected to record the outcome in\n``wiki_extraction_log`` regardless of result — the extractor only owns\nknowledge_wiki writes.",
-      "cluster": "cluster_10",
+      "cluster": "cluster_04",
       "confidence": 1.0
     },
     {
@@ -3409,7 +3594,7 @@
       "type": "file",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/knowledge/wiki_graph.py",
       "summary": "Knowledge graph — entity relationships mined from wiki facts.\n\nReads accumulated wiki rows, asks Gemini Flash to extract (src, relation, dst)\ntriples per domain, and upserts them into ``wiki_graph_edges``. Separate from\nlive request handling — this runs from a script or a low-frequency cron.\n\nRelation vocabulary is intentionally small so the graph stays navigable:\n\n- ``owns``         team/company owns a product, channel, or customer\n- ``belongs_to``   fact/entity belongs to a larger scope (product to line, etc.)\n- ``compares_to``  two entities share a comparison metric (rankings)\n- ``sells_in``     product is sold through a market/channel/region\n- ``linked``       generic co-occurrence when nothing stronger fits",
-      "cluster": "cluster_10",
+      "cluster": "cluster_04",
       "confidence": 1.0
     },
     {
@@ -3421,7 +3606,7 @@
         66
       ],
       "summary": "Peel markdown code fences, tolerant of truncated output missing the\nclosing ```. Also handles plain ```json...``` and bare ```...```.",
-      "cluster": "cluster_10",
+      "cluster": "cluster_04",
       "confidence": 1.0
     },
     {
@@ -3432,7 +3617,7 @@
         69,
         122
       ],
-      "cluster": "cluster_10",
+      "cluster": "cluster_04",
       "confidence": 1.0
     },
     {
@@ -3443,7 +3628,7 @@
         125,
         140
       ],
-      "cluster": "cluster_10",
+      "cluster": "cluster_04",
       "confidence": 1.0
     },
     {
@@ -3455,7 +3640,7 @@
         167
       ],
       "summary": "Walk recent wiki facts and upsert edges. Returns counts.",
-      "cluster": "cluster_10",
+      "cluster": "cluster_04",
       "confidence": 1.0
     },
     {
@@ -3463,7 +3648,7 @@
       "type": "file",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/knowledge/wiki_insights.py",
       "summary": "Insights layer — Graphify-style \"GRAPH_REPORT\" for the wiki graph.\n\nComputes:\n- God nodes: entities with the most connections (degree centrality).\n- Orphan entities: entities with very few facts, suggesting unused or\n  one-off mentions that may need cleanup.\n- Surprising connections: high-weight edges whose endpoints live in\n  different domains — often the most actionable cross-cutting insights.\n- Stale facts: time-sensitive rows (route=bigquery with a recent period)\n  that haven't been refreshed in a while.\n- Contradictions: facts currently flagged as conflicting.\n- Top communities: largest clusters detected by Louvain.\n\nAll numbers come from plain SQL — no LLM calls — so this runs fast and\ncheap on every drawer open.",
-      "cluster": "cluster_10",
+      "cluster": "cluster_06",
       "confidence": 1.0
     },
     {
@@ -3475,7 +3660,7 @@
         130
       ],
       "summary": "Currently flagged conflicting facts, paired with their sibling.",
-      "cluster": "cluster_10",
+      "cluster": "cluster_06",
       "confidence": 1.0
     },
     {
@@ -3487,7 +3672,7 @@
         173
       ],
       "summary": "Everything the insights tab needs in one payload.",
-      "cluster": "cluster_10",
+      "cluster": "cluster_06",
       "confidence": 1.0
     },
     {
@@ -3499,7 +3684,7 @@
         50
       ],
       "summary": "Top N entities by total incident edge weight.",
-      "cluster": "cluster_10",
+      "cluster": "cluster_06",
       "confidence": 1.0
     },
     {
@@ -3511,7 +3696,7 @@
         71
       ],
       "summary": "Entities that appear in only a handful of facts and no edges.",
-      "cluster": "cluster_10",
+      "cluster": "cluster_06",
       "confidence": 1.0
     },
     {
@@ -3523,7 +3708,7 @@
         111
       ],
       "summary": "Time-sensitive BQ facts whose extraction is older than the threshold.",
-      "cluster": "cluster_10",
+      "cluster": "cluster_06",
       "confidence": 1.0
     },
     {
@@ -3535,7 +3720,7 @@
         160
       ],
       "summary": "Synthesize a few exploratory questions from the god nodes.\n\nDeterministic — no LLM. Uses high-degree entities as seed targets.",
-      "cluster": "cluster_10",
+      "cluster": "cluster_06",
       "confidence": 1.0
     },
     {
@@ -3547,7 +3732,7 @@
         92
       ],
       "summary": "Edges where src and dst live in different primary domains.",
-      "cluster": "cluster_10",
+      "cluster": "cluster_06",
       "confidence": 1.0
     },
     {
@@ -3558,7 +3743,7 @@
         133,
         138
       ],
-      "cluster": "cluster_10",
+      "cluster": "cluster_06",
       "confidence": 1.0
     },
     {
@@ -3566,7 +3751,7 @@
       "type": "file",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/knowledge/wiki_normalize.py",
       "summary": "Entity normalization — map messy entity strings to canonical names.\n\nThree layers, cheapest first:\n\n1. **Trivial normalization**: lowercase / whitespace collapse / drop obvious\n   wrapper words like \"팀\", \"라인\", \"제품군\".\n2. **Alias table lookup** (``wiki_entity_aliases``): manual or LLM-seeded\n   mappings (e.g., \"마다가스카 센텔라 앰플\" ↔ \"Madagascar Centella Ampoule\").\n3. **Cluster merge pass** (script-driven): Gemini Flash clusters near-duplicate\n   entities and writes back to the alias table. Runs offline, not on each call.\n\nThe search layer should call :func:`canonicalize` before matching so a single\ncanonical form absorbs user/language variants.",
-      "cluster": "cluster_10",
+      "cluster": "cluster_04",
       "confidence": 1.0
     },
     {
@@ -3577,7 +3762,7 @@
         38,
         43
       ],
-      "cluster": "cluster_10",
+      "cluster": "cluster_04",
       "confidence": 1.0
     },
     {
@@ -3589,7 +3774,7 @@
         73
       ],
       "summary": "Trivial normalize → alias table lookup → canonical form.\n\nFalls back to the normalized input when no alias is registered.",
-      "cluster": "cluster_10",
+      "cluster": "cluster_04",
       "confidence": 1.0
     },
     {
@@ -3601,7 +3786,7 @@
         198
       ],
       "summary": "Pull the most-mentioned entities and let Flash cluster near-duplicates.\n\nReturns the number of new alias rows written. Designed to be invoked from\na dedicated script so we don't add LLM calls to the hot path.",
-      "cluster": "cluster_10",
+      "cluster": "cluster_04",
       "confidence": 1.0
     },
     {
@@ -3613,7 +3798,7 @@
         53
       ],
       "summary": "Trivial normalization — no DB. Safe to call anywhere.",
-      "cluster": "cluster_10",
+      "cluster": "cluster_04",
       "confidence": 1.0
     },
     {
@@ -3625,7 +3810,7 @@
         88
       ],
       "summary": "Insert (or overwrite) a single alias → canonical mapping.",
-      "cluster": "cluster_10",
+      "cluster": "cluster_04",
       "confidence": 1.0
     },
     {
@@ -3636,7 +3821,7 @@
         91,
         96
       ],
-      "cluster": "cluster_10",
+      "cluster": "cluster_04",
       "confidence": 1.0
     },
     {
@@ -3745,7 +3930,7 @@
       "type": "file",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/knowledge_map/__init__.py",
       "summary": "Knowledge Map — static code/docs knowledge graph for Claude Code sessions.\n\nSeparate from app.knowledge (runtime conversation fact mining). See\ndocs/superpowers/specs/2026-04-16-knowledge-map-design.md.",
-      "cluster": "cluster_21",
+      "cluster": "cluster_22",
       "confidence": 1.0
     },
     {
@@ -3753,7 +3938,7 @@
       "type": "file",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/knowledge_map/ast_parser.py",
       "summary": "Python AST parser — extracts classes, functions, imports (confidence 1.0).",
-      "cluster": "cluster_09",
+      "cluster": "cluster_06",
       "confidence": 1.0
     },
     {
@@ -3764,7 +3949,7 @@
         21,
         27
       ],
-      "cluster": "cluster_09",
+      "cluster": "cluster_06",
       "confidence": 1.0
     },
     {
@@ -3775,7 +3960,7 @@
         11,
         17
       ],
-      "cluster": "cluster_09",
+      "cluster": "cluster_06",
       "confidence": 1.0
     },
     {
@@ -3787,7 +3972,7 @@
         38
       ],
       "summary": "All AST-extracted facts for a single .py file.",
-      "cluster": "cluster_09",
+      "cluster": "cluster_06",
       "confidence": 1.0
     },
     {
@@ -3798,7 +3983,7 @@
         41,
         49
       ],
-      "cluster": "cluster_09",
+      "cluster": "cluster_06",
       "confidence": 1.0
     },
     {
@@ -3809,7 +3994,7 @@
         52,
         57
       ],
-      "cluster": "cluster_09",
+      "cluster": "cluster_06",
       "confidence": 1.0
     },
     {
@@ -3821,7 +4006,7 @@
         91
       ],
       "summary": "Parse a .py file and return structured AST facts. None on fatal error.",
-      "cluster": "cluster_09",
+      "cluster": "cluster_06",
       "confidence": 1.0
     },
     {
@@ -3829,7 +4014,7 @@
       "type": "file",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/knowledge_map/builder.py",
       "summary": "Knowledge Map build orchestrator — discover → cache → parse → flash → graph → export.",
-      "cluster": "cluster_22",
+      "cluster": "cluster_23",
       "confidence": 1.0
     },
     {
@@ -3840,7 +4025,7 @@
         61,
         65
       ],
-      "cluster": "cluster_22",
+      "cluster": "cluster_23",
       "confidence": 1.0
     },
     {
@@ -3851,7 +4036,7 @@
         39,
         41
       ],
-      "cluster": "cluster_22",
+      "cluster": "cluster_23",
       "confidence": 1.0
     },
     {
@@ -3862,7 +4047,7 @@
         107,
         122
       ],
-      "cluster": "cluster_22",
+      "cluster": "cluster_23",
       "confidence": 1.0
     },
     {
@@ -3873,7 +4058,7 @@
         125,
         147
       ],
-      "cluster": "cluster_22",
+      "cluster": "cluster_23",
       "confidence": 1.0
     },
     {
@@ -3885,7 +4070,7 @@
         104
       ],
       "summary": "Convert AST result → confidence-1.0 nodes and edges.",
-      "cluster": "cluster_22",
+      "cluster": "cluster_23",
       "confidence": 1.0
     },
     {
@@ -3897,7 +4082,7 @@
         254
       ],
       "summary": "Run the full build pipeline. Returns a stats dict.",
-      "cluster": "cluster_22",
+      "cluster": "cluster_23",
       "confidence": 1.0
     },
     {
@@ -3909,7 +4094,7 @@
         58
       ],
       "summary": "Walk SOURCE_ROOTS, filter by extension and exclude patterns.",
-      "cluster": "cluster_22",
+      "cluster": "cluster_23",
       "confidence": 1.0
     },
     {
@@ -3917,7 +4102,7 @@
       "type": "file",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/knowledge_map/cache.py",
       "summary": "SHA256 + mtime file fingerprint cache for incremental builds.",
-      "cluster": "cluster_10",
+      "cluster": "cluster_06",
       "confidence": 1.0
     },
     {
@@ -3929,7 +4114,7 @@
         55
       ],
       "summary": "Persistent cache of file fingerprints for incremental rebuilds.",
-      "cluster": "cluster_10",
+      "cluster": "cluster_06",
       "confidence": 1.0
     },
     {
@@ -3941,7 +4126,7 @@
         17
       ],
       "summary": "Return {sha256, mtime, size} for a file. Reads the whole file once.",
-      "cluster": "cluster_10",
+      "cluster": "cluster_06",
       "confidence": 1.0
     },
     {
@@ -3949,7 +4134,7 @@
       "type": "file",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/knowledge_map/config.py",
       "summary": "Paths, exclude patterns, and build constants for Knowledge Map.",
-      "cluster": "cluster_09",
+      "cluster": "cluster_06",
       "confidence": 1.0
     },
     {
@@ -3957,7 +4142,7 @@
       "type": "file",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/knowledge_map/exporters.py",
       "summary": "Output writers — graph.json, wiki/*.md, GRAPH_REPORT.md, wiki/index.md, wiki/log.md.",
-      "cluster": "cluster_22",
+      "cluster": "cluster_23",
       "confidence": 1.0
     },
     {
@@ -3968,7 +4153,7 @@
         27,
         28
       ],
-      "cluster": "cluster_22",
+      "cluster": "cluster_23",
       "confidence": 1.0
     },
     {
@@ -3979,7 +4164,7 @@
         22,
         24
       ],
-      "cluster": "cluster_22",
+      "cluster": "cluster_23",
       "confidence": 1.0
     },
     {
@@ -3990,7 +4175,7 @@
         78,
         83
       ],
-      "cluster": "cluster_22",
+      "cluster": "cluster_23",
       "confidence": 1.0
     },
     {
@@ -4002,7 +4187,7 @@
         19
       ],
       "summary": "Stable sort key for nodes/edges so git diffs stay readable.",
-      "cluster": "cluster_22",
+      "cluster": "cluster_23",
       "confidence": 1.0
     },
     {
@@ -4014,7 +4199,7 @@
         89
       ],
       "summary": "Body is the Flash-synthesized Markdown for a single cluster.",
-      "cluster": "cluster_22",
+      "cluster": "cluster_23",
       "confidence": 1.0
     },
     {
@@ -4025,7 +4210,7 @@
         31,
         58
       ],
-      "cluster": "cluster_22",
+      "cluster": "cluster_23",
       "confidence": 1.0
     },
     {
@@ -4037,7 +4222,7 @@
         95
       ],
       "summary": "Body is the Flash-synthesized GRAPH_REPORT.md content.",
-      "cluster": "cluster_22",
+      "cluster": "cluster_23",
       "confidence": 1.0
     },
     {
@@ -4048,7 +4233,7 @@
         61,
         75
       ],
-      "cluster": "cluster_22",
+      "cluster": "cluster_23",
       "confidence": 1.0
     },
     {
@@ -4056,7 +4241,7 @@
       "type": "file",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/knowledge_map/graph.py",
       "summary": "NetworkX graph wrapper + Louvain community detection for Knowledge Map.",
-      "cluster": "cluster_10",
+      "cluster": "cluster_06",
       "confidence": 1.0
     },
     {
@@ -4067,7 +4252,7 @@
         25,
         29
       ],
-      "cluster": "cluster_10",
+      "cluster": "cluster_06",
       "confidence": 1.0
     },
     {
@@ -4079,7 +4264,7 @@
         91
       ],
       "summary": "Thin wrapper over networkx.MultiDiGraph with Louvain clustering.",
-      "cluster": "cluster_10",
+      "cluster": "cluster_06",
       "confidence": 1.0
     },
     {
@@ -4090,7 +4275,7 @@
         11,
         21
       ],
-      "cluster": "cluster_10",
+      "cluster": "cluster_06",
       "confidence": 1.0
     },
     {
@@ -4098,7 +4283,7 @@
       "type": "file",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/knowledge_map/md_parser.py",
       "summary": "Markdown structural parser — H1-H6 headings, links, date from filename.",
-      "cluster": "cluster_09",
+      "cluster": "cluster_06",
       "confidence": 1.0
     },
     {
@@ -4109,7 +4294,7 @@
         16,
         19
       ],
-      "cluster": "cluster_09",
+      "cluster": "cluster_06",
       "confidence": 1.0
     },
     {
@@ -4120,7 +4305,7 @@
         23,
         25
       ],
-      "cluster": "cluster_09",
+      "cluster": "cluster_06",
       "confidence": 1.0
     },
     {
@@ -4131,7 +4316,7 @@
         29,
         35
       ],
-      "cluster": "cluster_09",
+      "cluster": "cluster_06",
       "confidence": 1.0
     },
     {
@@ -4143,7 +4328,7 @@
         66
       ],
       "summary": "Parse a .md file. Never raises — returns an empty node on error.",
-      "cluster": "cluster_09",
+      "cluster": "cluster_06",
       "confidence": 1.0
     },
     {
@@ -4151,7 +4336,7 @@
       "type": "file",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/knowledge_map/semantic.py",
       "summary": "Gemini Flash semantic pass — pulls concepts/relations/summary per file.",
-      "cluster": "cluster_09",
+      "cluster": "cluster_06",
       "confidence": 1.0
     },
     {
@@ -4162,7 +4347,7 @@
         23,
         28
       ],
-      "cluster": "cluster_09",
+      "cluster": "cluster_06",
       "confidence": 1.0
     },
     {
@@ -4173,7 +4358,7 @@
         35,
         44
       ],
-      "cluster": "cluster_09",
+      "cluster": "cluster_06",
       "confidence": 1.0
     },
     {
@@ -4185,7 +4370,7 @@
         51
       ],
       "summary": "Call Gemini Flash and return raw text. Isolated for test mocking.",
-      "cluster": "cluster_09",
+      "cluster": "cluster_06",
       "confidence": 1.0
     },
     {
@@ -4196,7 +4381,7 @@
         31,
         32
       ],
-      "cluster": "cluster_09",
+      "cluster": "cluster_06",
       "confidence": 1.0
     },
     {
@@ -4208,7 +4393,7 @@
         71
       ],
       "summary": "Tolerant JSON parse — strips code fences, returns error node on failure.",
-      "cluster": "cluster_09",
+      "cluster": "cluster_06",
       "confidence": 1.0
     },
     {
@@ -4220,7 +4405,7 @@
         95
       ],
       "summary": "Run the Flash semantic pass for a single file with retries.",
-      "cluster": "cluster_09",
+      "cluster": "cluster_06",
       "confidence": 1.0
     },
     {
@@ -4232,7 +4417,7 @@
         108
       ],
       "summary": "Parallel batch with FLASH_PARALLEL fanout via asyncio.Semaphore.",
-      "cluster": "cluster_09",
+      "cluster": "cluster_06",
       "confidence": 1.0
     },
     {
@@ -4240,7 +4425,7 @@
       "type": "file",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/main.py",
       "summary": "SKIN1004 Enterprise AI - FastAPI application entry point.\n\nSingle server on port 3000: AI backend + custom frontend.",
-      "cluster": "cluster_14",
+      "cluster": "cluster_24",
       "confidence": 1.0
     },
     {
@@ -4248,11 +4433,11 @@
       "type": "function",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/main.py",
       "lines": [
-        163,
-        191
+        183,
+        211
       ],
       "summary": "Ensure jeffrey@skin1004korea.com is admin with all models in MariaDB.",
-      "cluster": "cluster_14",
+      "cluster": "cluster_24",
       "confidence": 1.0
     },
     {
@@ -4260,11 +4445,11 @@
       "type": "function",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/main.py",
       "lines": [
-        194,
-        225
+        214,
+        245
       ],
       "summary": "Create audit_logs table if it doesn't exist (MariaDB or SQLite).",
-      "cluster": "cluster_14",
+      "cluster": "cluster_24",
       "confidence": 1.0
     },
     {
@@ -4272,11 +4457,11 @@
       "type": "function",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/main.py",
       "lines": [
-        369,
-        381
+        389,
+        401
       ],
       "summary": "Hourly cron: mine new Q/A pairs from the last 75 minutes into knowledge_wiki.\n\n75 min window gives a 15-minute safety overlap with the previous run so no\npair is missed if a batch runs long. The extractor already skips pairs\nthat already have wiki rows.",
-      "cluster": "cluster_14",
+      "cluster": "cluster_24",
       "confidence": 1.0
     },
     {
@@ -4284,11 +4469,11 @@
       "type": "function",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/main.py",
       "lines": [
-        384,
-        390
+        404,
+        410
       ],
       "summary": "Start the auto-detect maintenance loop (polls __TABLES__ every 60s).",
-      "cluster": "cluster_14",
+      "cluster": "cluster_24",
       "confidence": 1.0
     },
     {
@@ -4296,11 +4481,11 @@
       "type": "function",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/main.py",
       "lines": [
-        356,
-        366
+        376,
+        386
       ],
       "summary": "Daily 01:00 cron job: Notion → MariaDB sync.",
-      "cluster": "cluster_14",
+      "cluster": "cluster_24",
       "confidence": 1.0
     },
     {
@@ -4308,11 +4493,11 @@
       "type": "function",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/main.py",
       "lines": [
-        240,
-        285
+        260,
+        305
       ],
       "summary": "Pre-load BigQuery schemas (sales + all marketing tables) into per-table cache at startup.",
-      "cluster": "cluster_14",
+      "cluster": "cluster_24",
       "confidence": 1.0
     },
     {
@@ -4320,11 +4505,11 @@
       "type": "function",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/main.py",
       "lines": [
-        288,
-        299
+        308,
+        319
       ],
       "summary": "Pre-load CS Q&A data from Google Spreadsheet at startup.",
-      "cluster": "cluster_14",
+      "cluster": "cluster_24",
       "confidence": 1.0
     },
     {
@@ -4332,11 +4517,11 @@
       "type": "function",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/main.py",
       "lines": [
-        323,
-        353
+        343,
+        373
       ],
       "summary": "Pre-establish TLS/HTTP connections to Gemini + Claude.\n\nWithout this, the first real chat request after worker startup pays\n~20-30s in SDK init + TLS handshake + connection pool setup, making\nthe unlucky first user experience terrible.",
-      "cluster": "cluster_14",
+      "cluster": "cluster_24",
       "confidence": 1.0
     },
     {
@@ -4344,11 +4529,11 @@
       "type": "function",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/main.py",
       "lines": [
-        228,
-        237
+        248,
+        257
       ],
       "summary": "Pre-fetch Notion allowlist titles at startup so first query is fast.",
-      "cluster": "cluster_14",
+      "cluster": "cluster_24",
       "confidence": 1.0
     },
     {
@@ -4356,11 +4541,11 @@
       "type": "function",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/main.py",
       "lines": [
-        312,
-        320
+        332,
+        340
       ],
       "summary": "Pre-load Qdrant team chunk counts at startup.",
-      "cluster": "cluster_14",
+      "cluster": "cluster_24",
       "confidence": 1.0
     },
     {
@@ -4368,11 +4553,11 @@
       "type": "function",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/main.py",
       "lines": [
-        302,
-        309
+        322,
+        329
       ],
       "summary": "Pre-load team resources from MariaDB at startup.",
-      "cluster": "cluster_14",
+      "cluster": "cluster_24",
       "confidence": 1.0
     },
     {
@@ -4380,18 +4565,18 @@
       "type": "function",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/main.py",
       "lines": [
-        49,
-        160
+        52,
+        180
       ],
       "summary": "Create and configure the FastAPI application.",
-      "cluster": "cluster_14",
+      "cluster": "cluster_24",
       "confidence": 1.0
     },
     {
       "id": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/mcp/__init__.py",
       "type": "file",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/mcp/__init__.py",
-      "cluster": "cluster_23",
+      "cluster": "cluster_25",
       "confidence": 1.0
     },
     {
@@ -4399,7 +4584,7 @@
       "type": "file",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/mcp/bigquery_mcp.py",
       "summary": "BigQuery MCP Server connection.\n\nExisting sql_agent.py direct BigQuery calls are preserved.\nThis module adds MCP-based connection as a new alternative.",
-      "cluster": "cluster_19",
+      "cluster": "cluster_20",
       "confidence": 1.0
     },
     {
@@ -4411,7 +4596,7 @@
         27
       ],
       "summary": "Return BigQuery MCP tools.",
-      "cluster": "cluster_19",
+      "cluster": "cluster_20",
       "confidence": 1.0
     },
     {
@@ -4419,7 +4604,7 @@
       "type": "file",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/mcp/gws_mcp.py",
       "summary": "Google Workspace MCP Server connection.\n\nWARNING: Community version - review security before production use.",
-      "cluster": "cluster_19",
+      "cluster": "cluster_20",
       "confidence": 1.0
     },
     {
@@ -4431,7 +4616,7 @@
         25
       ],
       "summary": "Return Google Workspace MCP tools.",
-      "cluster": "cluster_19",
+      "cluster": "cluster_20",
       "confidence": 1.0
     },
     {
@@ -4439,7 +4624,7 @@
       "type": "file",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/mcp/notion_mcp.py",
       "summary": "Notion MCP Server connection.",
-      "cluster": "cluster_06",
+      "cluster": "cluster_05",
       "confidence": 1.0
     },
     {
@@ -4451,14 +4636,14 @@
         32
       ],
       "summary": "Return Notion MCP tools.",
-      "cluster": "cluster_06",
+      "cluster": "cluster_05",
       "confidence": 1.0
     },
     {
       "id": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/models/__init__.py",
       "type": "file",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/models/__init__.py",
-      "cluster": "cluster_24",
+      "cluster": "cluster_26",
       "confidence": 1.0
     },
     {
@@ -4466,7 +4651,7 @@
       "type": "file",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/models/agent_models.py",
       "summary": "v3.0 Multi-Model configuration.\n\nAll agents now use Claude Sonnet 4.5 via Anthropic SDK.",
-      "cluster": "cluster_13",
+      "cluster": "cluster_14",
       "confidence": 1.0
     },
     {
@@ -4477,7 +4662,7 @@
         9,
         15
       ],
-      "cluster": "cluster_13",
+      "cluster": "cluster_14",
       "confidence": 1.0
     },
     {
@@ -4485,7 +4670,7 @@
       "type": "file",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/models/schemas.py",
       "summary": "Pydantic request/response models for OpenAI-compatible API.",
-      "cluster": "cluster_13",
+      "cluster": "cluster_14",
       "confidence": 1.0
     },
     {
@@ -4497,7 +4682,7 @@
         106
       ],
       "summary": "A single completion choice.",
-      "cluster": "cluster_13",
+      "cluster": "cluster_14",
       "confidence": 1.0
     },
     {
@@ -4509,7 +4694,7 @@
         96
       ],
       "summary": "OpenAI-compatible chat completion request.",
-      "cluster": "cluster_13",
+      "cluster": "cluster_14",
       "confidence": 1.0
     },
     {
@@ -4521,7 +4706,7 @@
         125
       ],
       "summary": "OpenAI-compatible chat completion response.",
-      "cluster": "cluster_13",
+      "cluster": "cluster_14",
       "confidence": 1.0
     },
     {
@@ -4533,7 +4718,7 @@
         142
       ],
       "summary": "A single streaming choice.",
-      "cluster": "cluster_13",
+      "cluster": "cluster_14",
       "confidence": 1.0
     },
     {
@@ -4545,7 +4730,7 @@
         134
       ],
       "summary": "Delta content for streaming.",
-      "cluster": "cluster_13",
+      "cluster": "cluster_14",
       "confidence": 1.0
     },
     {
@@ -4557,7 +4742,7 @@
         152
       ],
       "summary": "OpenAI-compatible streaming response chunk.",
-      "cluster": "cluster_13",
+      "cluster": "cluster_14",
       "confidence": 1.0
     },
     {
@@ -4569,7 +4754,7 @@
         82
       ],
       "summary": "A single chat message (supports text or multimodal content).",
-      "cluster": "cluster_13",
+      "cluster": "cluster_14",
       "confidence": 1.0
     },
     {
@@ -4581,7 +4766,7 @@
         26
       ],
       "summary": "Image content part (data URI).",
-      "cluster": "cluster_13",
+      "cluster": "cluster_14",
       "confidence": 1.0
     },
     {
@@ -4593,7 +4778,7 @@
         21
       ],
       "summary": "Text content part.",
-      "cluster": "cluster_13",
+      "cluster": "cluster_14",
       "confidence": 1.0
     },
     {
@@ -4605,7 +4790,7 @@
         16
       ],
       "summary": "Image URL (data URI or HTTP URL).",
-      "cluster": "cluster_13",
+      "cluster": "cluster_14",
       "confidence": 1.0
     },
     {
@@ -4617,7 +4802,7 @@
         163
       ],
       "summary": "Model information.",
-      "cluster": "cluster_13",
+      "cluster": "cluster_14",
       "confidence": 1.0
     },
     {
@@ -4629,7 +4814,7 @@
         170
       ],
       "summary": "OpenAI-compatible model list response.",
-      "cluster": "cluster_13",
+      "cluster": "cluster_14",
       "confidence": 1.0
     },
     {
@@ -4641,7 +4826,7 @@
         180
       ],
       "summary": "Result of query intent analysis.",
-      "cluster": "cluster_13",
+      "cluster": "cluster_14",
       "confidence": 1.0
     },
     {
@@ -4653,7 +4838,7 @@
         199
       ],
       "summary": "A retrieved RAG document.",
-      "cluster": "cluster_13",
+      "cluster": "cluster_14",
       "confidence": 1.0
     },
     {
@@ -4665,7 +4850,7 @@
         189
       ],
       "summary": "Result of SQL execution.",
-      "cluster": "cluster_13",
+      "cluster": "cluster_14",
       "confidence": 1.0
     },
     {
@@ -4677,7 +4862,7 @@
         114
       ],
       "summary": "Token usage information.",
-      "cluster": "cluster_13",
+      "cluster": "cluster_14",
       "confidence": 1.0
     },
     {
@@ -4689,7 +4874,7 @@
         73
       ],
       "summary": "Extract images from multimodal content.\n\nReturns list of {\"data\": bytes, \"mime_type\": str} dicts.",
-      "cluster": "cluster_13",
+      "cluster": "cluster_14",
       "confidence": 1.0
     },
     {
@@ -4701,7 +4886,7 @@
         47
       ],
       "summary": "Extract plain text from a message content field.\n\nWorks for both plain string and multimodal list content.",
-      "cluster": "cluster_13",
+      "cluster": "cluster_14",
       "confidence": 1.0
     },
     {
@@ -4728,7 +4913,7 @@
       "id": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/rag/__init__.py",
       "type": "file",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/rag/__init__.py",
-      "cluster": "cluster_25",
+      "cluster": "cluster_27",
       "confidence": 1.0
     },
     {
@@ -4828,11 +5013,22 @@
       "confidence": 1.0
     },
     {
+      "id": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/docs/Craver_Security_Architecture_2026-04-22.md",
+      "type": "doc",
+      "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/docs/Craver_Security_Architecture_2026-04-22.md",
+      "summary": "Craver Enterprise AI — 보안 아키텍처 문서",
+      "tags": [
+        "2026-04-22"
+      ],
+      "cluster": "cluster_30",
+      "confidence": 1.0
+    },
+    {
       "id": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/docs/SKIN1004_AI_Technical_Architecture.md",
       "type": "doc",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/docs/SKIN1004_AI_Technical_Architecture.md",
       "summary": "SKIN1004 Enterprise AI — 기술 아키텍처 문서",
-      "cluster": "cluster_32",
+      "cluster": "cluster_35",
       "confidence": 1.0
     },
     {
@@ -4840,7 +5036,7 @@
       "type": "doc",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/docs/SKIN1004_AI_Update_History.md",
       "summary": "SKIN1004 Enterprise AI — 업데이트 내역 통합본",
-      "cluster": "cluster_33",
+      "cluster": "cluster_36",
       "confidence": 1.0
     },
     {
@@ -4848,7 +5044,7 @@
       "type": "doc",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/docs/SKIN1004_Enterprise_AI_PRD_v4.md",
       "summary": "SKIN1004 Enterprise AI System",
-      "cluster": "cluster_34",
+      "cluster": "cluster_37",
       "confidence": 1.0
     },
     {
@@ -4856,7 +5052,7 @@
       "type": "doc",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/docs/SKIN1004_Enterprise_AI_PRD_v5.md",
       "summary": "SKIN1004 Enterprise AI System",
-      "cluster": "cluster_35",
+      "cluster": "cluster_38",
       "confidence": 1.0
     },
     {
@@ -4864,7 +5060,7 @@
       "type": "doc",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/docs/SKIN1004_Enterprise_AI_PRD_v6.md",
       "summary": "SKIN1004 Enterprise AI System",
-      "cluster": "cluster_36",
+      "cluster": "cluster_39",
       "confidence": 1.0
     },
     {
@@ -4872,7 +5068,7 @@
       "type": "doc",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/docs/SKIN1004_Security_Architecture.md",
       "summary": "SKIN1004 AI System - Security & Authentication Architecture",
-      "cluster": "cluster_37",
+      "cluster": "cluster_40",
       "confidence": 1.0
     },
     {
@@ -4880,7 +5076,7 @@
       "type": "doc",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/docs/changelog/v1.1.0.md",
       "summary": "v1.1.0 — 2026.02.03",
-      "cluster": "cluster_26",
+      "cluster": "cluster_28",
       "confidence": 1.0
     },
     {
@@ -4888,7 +5084,7 @@
       "type": "doc",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/docs/changelog/v3.0.0.md",
       "summary": "v3.0.0 — 2026.02.05",
-      "cluster": "cluster_27",
+      "cluster": "cluster_29",
       "confidence": 1.0
     },
     {
@@ -4896,7 +5092,7 @@
       "type": "doc",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/docs/marketing_qa500_report.md",
       "summary": "SKIN1004 마케팅 데이터 QA 500 테스트 리포트",
-      "cluster": "cluster_28",
+      "cluster": "cluster_31",
       "confidence": 1.0
     },
     {
@@ -4907,7 +5103,7 @@
       "tags": [
         "2026-02-11"
       ],
-      "cluster": "cluster_29",
+      "cluster": "cluster_32",
       "confidence": 1.0
     },
     {
@@ -4915,7 +5111,7 @@
       "type": "doc",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/docs/presentation_prompt.md",
       "summary": "SKIN1004 Enterprise AI Agent — 리더미팅 발표 PPT 프롬프트",
-      "cluster": "cluster_30",
+      "cluster": "cluster_33",
       "confidence": 1.0
     },
     {
@@ -4923,7 +5119,7 @@
       "type": "doc",
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/docs/security_response_llm_detail.md",
       "summary": "LLM 데이터 처리 메커니즘 상세 — 보안팀 회신용",
-      "cluster": "cluster_31",
+      "cluster": "cluster_34",
       "confidence": 1.0
     },
     {
@@ -4934,7 +5130,7 @@
       "tags": [
         "2026-04-02"
       ],
-      "cluster": "cluster_38",
+      "cluster": "cluster_41",
       "confidence": 1.0
     },
     {
@@ -4945,7 +5141,29 @@
       "tags": [
         "2026-04-16"
       ],
-      "cluster": "cluster_39",
+      "cluster": "cluster_42",
+      "confidence": 1.0
+    },
+    {
+      "id": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/docs/superpowers/plans/2026-04-17-anonymization-and-eval.md",
+      "type": "doc",
+      "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/docs/superpowers/plans/2026-04-17-anonymization-and-eval.md",
+      "summary": "Anonymization + Eval Pipeline Implementation Plan",
+      "tags": [
+        "2026-04-17"
+      ],
+      "cluster": "cluster_43",
+      "confidence": 1.0
+    },
+    {
+      "id": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/docs/superpowers/plans/2026-04-20-bigquery-performance.md",
+      "type": "doc",
+      "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/docs/superpowers/plans/2026-04-20-bigquery-performance.md",
+      "summary": "BigQuery 응답 속도 개선 Implementation Plan",
+      "tags": [
+        "2026-04-20"
+      ],
+      "cluster": "cluster_44",
       "confidence": 1.0
     },
     {
@@ -4956,7 +5174,40 @@
       "tags": [
         "2026-04-16"
       ],
-      "cluster": "cluster_40",
+      "cluster": "cluster_45",
+      "confidence": 1.0
+    },
+    {
+      "id": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/docs/superpowers/specs/2026-04-17-anonymization-and-eval-design.md",
+      "type": "doc",
+      "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/docs/superpowers/specs/2026-04-17-anonymization-and-eval-design.md",
+      "summary": "Anonymization + Eval Pipeline Design",
+      "tags": [
+        "2026-04-17"
+      ],
+      "cluster": "cluster_46",
+      "confidence": 1.0
+    },
+    {
+      "id": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/docs/superpowers/specs/2026-04-17-integrated-ad-migration-design.md",
+      "type": "doc",
+      "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/docs/superpowers/specs/2026-04-17-integrated-ad-migration-design.md",
+      "summary": "통합 광고 데이터 테이블 마이그레이션 (Wide → Long)",
+      "tags": [
+        "2026-04-17"
+      ],
+      "cluster": "cluster_47",
+      "confidence": 1.0
+    },
+    {
+      "id": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/docs/superpowers/specs/2026-04-20-bigquery-performance-design.md",
+      "type": "doc",
+      "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/docs/superpowers/specs/2026-04-20-bigquery-performance-design.md",
+      "summary": "BigQuery 응답 속도 개선 설계",
+      "tags": [
+        "2026-04-20"
+      ],
+      "cluster": "cluster_48",
       "confidence": 1.0
     },
     {
@@ -4967,7 +5218,7 @@
       "tags": [
         "2026-02-10"
       ],
-      "cluster": "cluster_41",
+      "cluster": "cluster_49",
       "confidence": 1.0
     },
     {
@@ -4978,7 +5229,7 @@
       "tags": [
         "2026-02-11"
       ],
-      "cluster": "cluster_42",
+      "cluster": "cluster_50",
       "confidence": 1.0
     },
     {
@@ -4989,7 +5240,7 @@
       "tags": [
         "2026-02-12"
       ],
-      "cluster": "cluster_43",
+      "cluster": "cluster_51",
       "confidence": 1.0
     },
     {
@@ -5000,7 +5251,7 @@
       "tags": [
         "2026-02-06"
       ],
-      "cluster": "cluster_44",
+      "cluster": "cluster_52",
       "confidence": 1.0
     },
     {
@@ -5011,7 +5262,7 @@
       "tags": [
         "2026-02-20"
       ],
-      "cluster": "cluster_45",
+      "cluster": "cluster_53",
       "confidence": 1.0
     },
     {
@@ -5022,7 +5273,7 @@
       "tags": [
         "2026-02-23"
       ],
-      "cluster": "cluster_46",
+      "cluster": "cluster_54",
       "confidence": 1.0
     },
     {
@@ -5033,7 +5284,7 @@
       "tags": [
         "2026-02-23"
       ],
-      "cluster": "cluster_47",
+      "cluster": "cluster_55",
       "confidence": 1.0
     },
     {
@@ -5044,7 +5295,7 @@
       "tags": [
         "2026-02-24"
       ],
-      "cluster": "cluster_48",
+      "cluster": "cluster_56",
       "confidence": 1.0
     },
     {
@@ -5055,7 +5306,7 @@
       "tags": [
         "2026-02-25"
       ],
-      "cluster": "cluster_49",
+      "cluster": "cluster_57",
       "confidence": 1.0
     },
     {
@@ -5066,7 +5317,7 @@
       "tags": [
         "2026-02-26"
       ],
-      "cluster": "cluster_50",
+      "cluster": "cluster_58",
       "confidence": 1.0
     },
     {
@@ -5077,7 +5328,7 @@
       "tags": [
         "2026-03-04"
       ],
-      "cluster": "cluster_51",
+      "cluster": "cluster_59",
       "confidence": 1.0
     },
     {
@@ -5088,7 +5339,7 @@
       "tags": [
         "2026-03-12"
       ],
-      "cluster": "cluster_52",
+      "cluster": "cluster_60",
       "confidence": 1.0
     },
     {
@@ -5099,7 +5350,7 @@
       "tags": [
         "2026-03-16"
       ],
-      "cluster": "cluster_53",
+      "cluster": "cluster_61",
       "confidence": 1.0
     },
     {
@@ -5110,7 +5361,7 @@
       "tags": [
         "2026-03-17"
       ],
-      "cluster": "cluster_54",
+      "cluster": "cluster_62",
       "confidence": 1.0
     },
     {
@@ -5121,7 +5372,7 @@
       "tags": [
         "2026-03-18"
       ],
-      "cluster": "cluster_55",
+      "cluster": "cluster_63",
       "confidence": 1.0
     },
     {
@@ -5132,7 +5383,7 @@
       "tags": [
         "2026-03-19"
       ],
-      "cluster": "cluster_56",
+      "cluster": "cluster_64",
       "confidence": 1.0
     },
     {
@@ -5143,7 +5394,7 @@
       "tags": [
         "2026-03-23"
       ],
-      "cluster": "cluster_57",
+      "cluster": "cluster_65",
       "confidence": 1.0
     },
     {
@@ -5154,7 +5405,7 @@
       "tags": [
         "2026-03-24"
       ],
-      "cluster": "cluster_58",
+      "cluster": "cluster_66",
       "confidence": 1.0
     },
     {
@@ -5165,7 +5416,7 @@
       "tags": [
         "2026-03-25"
       ],
-      "cluster": "cluster_59",
+      "cluster": "cluster_67",
       "confidence": 1.0
     },
     {
@@ -5176,7 +5427,7 @@
       "tags": [
         "2026-03-30"
       ],
-      "cluster": "cluster_60",
+      "cluster": "cluster_68",
       "confidence": 1.0
     },
     {
@@ -5187,7 +5438,7 @@
       "tags": [
         "2026-03-30"
       ],
-      "cluster": "cluster_61",
+      "cluster": "cluster_69",
       "confidence": 1.0
     },
     {
@@ -5198,7 +5449,7 @@
       "tags": [
         "2026-03-31"
       ],
-      "cluster": "cluster_62",
+      "cluster": "cluster_70",
       "confidence": 1.0
     },
     {
@@ -5209,7 +5460,7 @@
       "tags": [
         "2026-04-03"
       ],
-      "cluster": "cluster_63",
+      "cluster": "cluster_71",
       "confidence": 1.0
     },
     {
@@ -5220,7 +5471,7 @@
       "tags": [
         "2026-04-08"
       ],
-      "cluster": "cluster_64",
+      "cluster": "cluster_72",
       "confidence": 1.0
     },
     {
@@ -5231,7 +5482,7 @@
       "tags": [
         "2026-04-09"
       ],
-      "cluster": "cluster_65",
+      "cluster": "cluster_73",
       "confidence": 1.0
     },
     {
@@ -5240,50 +5491,54 @@
       "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/docs/update_log_2026-04-16.md",
       "summary": "Update Log — 2026-04-16 (Knowledge Map v1.0)",
       "tags": [
-        "Knowledge Map",
-        "Graph Processing",
-        "2026-04-16",
-        "LLM Optimization",
-        "Documentation",
-        "Build Automation"
+        "2026-04-16"
       ],
-      "cluster": "cluster_04",
+      "cluster": "cluster_74",
       "confidence": 1.0
     },
     {
-      "id": "concept:Gemini Flash Semantic Extraction",
-      "type": "concept",
-      "summary": "Gemini Flash Semantic Extraction",
-      "cluster": "cluster_04",
-      "confidence": 0.8
+      "id": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/docs/update_log_2026-04-17.md",
+      "type": "doc",
+      "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/docs/update_log_2026-04-17.md",
+      "summary": "Update Log — 2026-04-17 (Anonymization v1.0 + Eval Pipeline v1.0)",
+      "tags": [
+        "2026-04-17"
+      ],
+      "cluster": "cluster_75",
+      "confidence": 1.0
     },
     {
-      "id": "concept:Knowledge Map Build Pipeline",
-      "type": "concept",
-      "summary": "Knowledge Map Build Pipeline",
-      "cluster": "cluster_04",
-      "confidence": 0.8
+      "id": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/docs/update_log_2026-04-20.md",
+      "type": "doc",
+      "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/docs/update_log_2026-04-20.md",
+      "summary": "Update Log — 2026-04-20 (BigQuery 파티션 필터 + AD 동기화 고도화 + Jandi 연동)",
+      "tags": [
+        "2026-04-20"
+      ],
+      "cluster": "cluster_76",
+      "confidence": 1.0
     },
     {
-      "id": "concept:Louvain Community Detection",
-      "type": "concept",
-      "summary": "Louvain Community Detection",
-      "cluster": "cluster_04",
-      "confidence": 0.8
+      "id": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/docs/update_log_2026-04-21.md",
+      "type": "doc",
+      "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/docs/update_log_2026-04-21.md",
+      "summary": "Update Log — 2026-04-21~22 (UI 리브랜딩 + 로그인 구조 개선 + AD Sync 시스템화)",
+      "tags": [
+        "2026-04-21"
+      ],
+      "cluster": "cluster_16",
+      "confidence": 1.0
     },
     {
-      "id": "concept:NetworkX Graph Processing",
-      "type": "concept",
-      "summary": "NetworkX Graph Processing",
-      "cluster": "cluster_04",
-      "confidence": 0.8
-    },
-    {
-      "id": "concept:Static Knowledge Map System",
-      "type": "concept",
-      "summary": "Static Knowledge Map System",
-      "cluster": "cluster_04",
-      "confidence": 0.8
+      "id": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/docs/weekly_report_2026-04-23.md",
+      "type": "doc",
+      "file": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/docs/weekly_report_2026-04-23.md",
+      "summary": "주간업무 보고 — 2026.04.17 ~ 04.23",
+      "tags": [
+        "2026-04-23"
+      ],
+      "cluster": "cluster_07",
+      "confidence": 1.0
     }
   ],
   "edges": [
@@ -5494,30 +5749,6 @@
     {
       "from": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/agents/gws_agent.py",
       "to": "asyncio",
-      "type": "imports",
-      "confidence": 1.0
-    },
-    {
-      "from": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/agents/gws_agent.py",
-      "to": "langchain_anthropic.ChatAnthropic",
-      "type": "imports",
-      "confidence": 1.0
-    },
-    {
-      "from": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/agents/gws_agent.py",
-      "to": "langchain_core.tools.tool",
-      "type": "imports",
-      "confidence": 1.0
-    },
-    {
-      "from": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/agents/gws_agent.py",
-      "to": "langgraph.errors.GraphRecursionError",
-      "type": "imports",
-      "confidence": 1.0
-    },
-    {
-      "from": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/agents/gws_agent.py",
-      "to": "langgraph.prebuilt.create_react_agent",
       "type": "imports",
       "confidence": 1.0
     },
@@ -5846,12 +6077,6 @@
       "confidence": 1.0
     },
     {
-      "from": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/agents/query_verifier.py",
-      "to": "langchain_anthropic.ChatAnthropic",
-      "type": "imports",
-      "confidence": 1.0
-    },
-    {
       "from": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/agents/router.py",
       "to": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/agents/router.py::_load_prompt",
       "type": "documented_in",
@@ -5938,6 +6163,12 @@
     {
       "from": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/agents/sql_agent.py",
       "to": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/agents/sql_agent.py::_cache_store",
+      "type": "documented_in",
+      "confidence": 1.0
+    },
+    {
+      "from": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/agents/sql_agent.py",
+      "to": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/agents/sql_agent.py::_enforce_partition_filter",
       "type": "documented_in",
       "confidence": 1.0
     },
@@ -6735,6 +6966,12 @@
     },
     {
       "from": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/auth_api.py",
+      "to": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/auth_api.py::crm_google_callback_proxy",
+      "type": "documented_in",
+      "confidence": 1.0
+    },
+    {
+      "from": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/auth_api.py",
       "to": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/auth_api.py::list_departments",
       "type": "documented_in",
       "confidence": 1.0
@@ -6879,7 +7116,19 @@
     },
     {
       "from": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/auth_api.py",
+      "to": "fastapi.Request",
+      "type": "imports",
+      "confidence": 1.0
+    },
+    {
+      "from": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/auth_api.py",
       "to": "fastapi.Response",
+      "type": "imports",
+      "confidence": 1.0
+    },
+    {
+      "from": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/auth_api.py",
+      "to": "fastapi.responses.RedirectResponse",
       "type": "imports",
       "confidence": 1.0
     },
@@ -7185,6 +7434,12 @@
     },
     {
       "from": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/conversation_api.py",
+      "to": "app.core.anonymization.anon_id_for",
+      "type": "imports",
+      "confidence": 1.0
+    },
+    {
+      "from": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/conversation_api.py",
       "to": "app.db.mariadb.execute",
       "type": "imports",
       "confidence": 1.0
@@ -7264,6 +7519,126 @@
     {
       "from": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/conversation_api.py",
       "to": "uuid",
+      "type": "imports",
+      "confidence": 1.0
+    },
+    {
+      "from": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/eval_api.py",
+      "to": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/eval_api.py::VerdictBody",
+      "type": "documented_in",
+      "confidence": 1.0
+    },
+    {
+      "from": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/eval_api.py",
+      "to": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/eval_api.py::_require_admin",
+      "type": "documented_in",
+      "confidence": 1.0
+    },
+    {
+      "from": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/eval_api.py",
+      "to": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/eval_api.py::list_qa",
+      "type": "documented_in",
+      "confidence": 1.0
+    },
+    {
+      "from": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/eval_api.py",
+      "to": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/eval_api.py::list_runs",
+      "type": "documented_in",
+      "confidence": 1.0
+    },
+    {
+      "from": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/eval_api.py",
+      "to": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/eval_api.py::run_summary",
+      "type": "documented_in",
+      "confidence": 1.0
+    },
+    {
+      "from": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/eval_api.py",
+      "to": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/eval_api.py::set_verdict",
+      "type": "documented_in",
+      "confidence": 1.0
+    },
+    {
+      "from": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/eval_api.py",
+      "to": "__future__.annotations",
+      "type": "imports",
+      "confidence": 1.0
+    },
+    {
+      "from": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/eval_api.py",
+      "to": "app.api.auth_middleware.get_current_user",
+      "type": "imports",
+      "confidence": 1.0
+    },
+    {
+      "from": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/eval_api.py",
+      "to": "app.core.anonymization.anon_id_for",
+      "type": "imports",
+      "confidence": 1.0
+    },
+    {
+      "from": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/eval_api.py",
+      "to": "app.db.mariadb.execute",
+      "type": "imports",
+      "confidence": 1.0
+    },
+    {
+      "from": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/eval_api.py",
+      "to": "app.db.mariadb.fetch_all",
+      "type": "imports",
+      "confidence": 1.0
+    },
+    {
+      "from": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/eval_api.py",
+      "to": "app.db.mariadb.fetch_one",
+      "type": "imports",
+      "confidence": 1.0
+    },
+    {
+      "from": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/eval_api.py",
+      "to": "app.db.models.User",
+      "type": "imports",
+      "confidence": 1.0
+    },
+    {
+      "from": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/eval_api.py",
+      "to": "asyncio",
+      "type": "imports",
+      "confidence": 1.0
+    },
+    {
+      "from": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/eval_api.py",
+      "to": "datetime.datetime",
+      "type": "imports",
+      "confidence": 1.0
+    },
+    {
+      "from": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/eval_api.py",
+      "to": "fastapi.APIRouter",
+      "type": "imports",
+      "confidence": 1.0
+    },
+    {
+      "from": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/eval_api.py",
+      "to": "fastapi.Depends",
+      "type": "imports",
+      "confidence": 1.0
+    },
+    {
+      "from": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/eval_api.py",
+      "to": "fastapi.HTTPException",
+      "type": "imports",
+      "confidence": 1.0
+    },
+    {
+      "from": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/eval_api.py",
+      "to": "pydantic.BaseModel",
+      "type": "imports",
+      "confidence": 1.0
+    },
+    {
+      "from": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/eval_api.py",
+      "to": "typing.Optional",
       "type": "imports",
       "confidence": 1.0
     },
@@ -7720,6 +8095,48 @@
     {
       "from": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/config.py",
       "to": "typing.List",
+      "type": "imports",
+      "confidence": 1.0
+    },
+    {
+      "from": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/core/anonymization.py",
+      "to": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/core/anonymization.py::anon_id_for",
+      "type": "documented_in",
+      "confidence": 1.0
+    },
+    {
+      "from": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/core/anonymization.py",
+      "to": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/core/anonymization.py::compute_anon_id",
+      "type": "documented_in",
+      "confidence": 1.0
+    },
+    {
+      "from": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/core/anonymization.py",
+      "to": "__future__.annotations",
+      "type": "imports",
+      "confidence": 1.0
+    },
+    {
+      "from": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/core/anonymization.py",
+      "to": "app.config.get_settings",
+      "type": "imports",
+      "confidence": 1.0
+    },
+    {
+      "from": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/core/anonymization.py",
+      "to": "functools.lru_cache",
+      "type": "imports",
+      "confidence": 1.0
+    },
+    {
+      "from": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/core/anonymization.py",
+      "to": "hashlib",
+      "type": "imports",
+      "confidence": 1.0
+    },
+    {
+      "from": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/core/anonymization.py",
+      "to": "hmac",
       "type": "imports",
       "confidence": 1.0
     },
@@ -8252,6 +8669,30 @@
       "confidence": 1.0
     },
     {
+      "from": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/core/log_scrub.py",
+      "to": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/core/log_scrub.py::scrub_identity_processor",
+      "type": "documented_in",
+      "confidence": 1.0
+    },
+    {
+      "from": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/core/log_scrub.py",
+      "to": "__future__.annotations",
+      "type": "imports",
+      "confidence": 1.0
+    },
+    {
+      "from": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/core/log_scrub.py",
+      "to": "app.core.anonymization.compute_anon_id",
+      "type": "imports",
+      "confidence": 1.0
+    },
+    {
+      "from": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/core/log_scrub.py",
+      "to": "typing.Any",
+      "type": "imports",
+      "confidence": 1.0
+    },
+    {
       "from": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/core/notify.py",
       "to": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/core/notify.py::_play_sound",
       "type": "documented_in",
@@ -8470,6 +8911,18 @@
     {
       "from": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/db/mariadb.py",
       "to": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/db/mariadb.py::_maria_fetch_one",
+      "type": "documented_in",
+      "confidence": 1.0
+    },
+    {
+      "from": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/db/mariadb.py",
+      "to": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/db/mariadb.py::ensure_anon_columns",
+      "type": "documented_in",
+      "confidence": 1.0
+    },
+    {
+      "from": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/db/mariadb.py",
+      "to": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/db/mariadb.py::ensure_eval_tables",
       "type": "documented_in",
       "confidence": 1.0
     },
@@ -8866,6 +9319,12 @@
     {
       "from": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/knowledge/wiki_extractor.py",
       "to": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/knowledge/wiki_extractor.py::WikiFact",
+      "type": "documented_in",
+      "confidence": 1.0
+    },
+    {
+      "from": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/knowledge/wiki_extractor.py",
+      "to": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/knowledge/wiki_extractor.py::_canonicalize_entity_sync",
       "type": "documented_in",
       "confidence": 1.0
     },
@@ -10113,6 +10572,12 @@
     },
     {
       "from": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/main.py",
+      "to": "app.api.eval_api.eval_router",
+      "type": "imports",
+      "confidence": 1.0
+    },
+    {
+      "from": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/main.py",
       "to": "app.api.harness_api.router",
       "type": "imports",
       "confidence": 1.0
@@ -10132,6 +10597,12 @@
     {
       "from": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/main.py",
       "to": "app.config.get_settings",
+      "type": "imports",
+      "confidence": 1.0
+    },
+    {
+      "from": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/main.py",
+      "to": "app.core.log_scrub.scrub_identity_processor",
       "type": "imports",
       "confidence": 1.0
     },
@@ -10788,66 +11259,6 @@
       "to": "../specs/design.md",
       "type": "references",
       "confidence": 0.7
-    },
-    {
-      "from": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/docs/update_log_2026-04-16.md",
-      "to": "CLAUDE.md",
-      "type": "references",
-      "confidence": 0.9
-    },
-    {
-      "from": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/docs/update_log_2026-04-16.md",
-      "to": "app.knowledge_map.builder",
-      "type": "implements",
-      "confidence": 0.9
-    },
-    {
-      "from": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/docs/update_log_2026-04-16.md",
-      "to": "concept:Gemini Flash Semantic Extraction",
-      "type": "implements",
-      "confidence": 0.8
-    },
-    {
-      "from": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/docs/update_log_2026-04-16.md",
-      "to": "concept:Knowledge Map Build Pipeline",
-      "type": "implements",
-      "confidence": 0.8
-    },
-    {
-      "from": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/docs/update_log_2026-04-16.md",
-      "to": "concept:Louvain Community Detection",
-      "type": "implements",
-      "confidence": 0.8
-    },
-    {
-      "from": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/docs/update_log_2026-04-16.md",
-      "to": "concept:NetworkX Graph Processing",
-      "type": "implements",
-      "confidence": 0.8
-    },
-    {
-      "from": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/docs/update_log_2026-04-16.md",
-      "to": "concept:Static Knowledge Map System",
-      "type": "implements",
-      "confidence": 0.8
-    },
-    {
-      "from": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/docs/update_log_2026-04-16.md",
-      "to": "docs/superpowers/specs/2026-04-16-knowledge-map-design.md",
-      "type": "documented_in",
-      "confidence": 0.9
-    },
-    {
-      "from": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/docs/update_log_2026-04-16.md",
-      "to": "requirements.txt",
-      "type": "references",
-      "confidence": 0.9
-    },
-    {
-      "from": "C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/docs/update_log_2026-04-16.md",
-      "to": "scripts.build_knowledge_graph",
-      "type": "calls",
-      "confidence": 0.9
     }
   ]
 }
