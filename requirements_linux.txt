@@ -145,6 +145,7 @@ parso
 passlib
 pillow
 platformdirs
+playwright
 plotly
 pluggy
 polars
@@ -164,6 +165,7 @@ pydantic-settings
 pydantic_core
 pydata-google-auth
 pydeck
+pyee
 Pygments
 PyJWT
 pymssql
