@@ -333,8 +333,8 @@ async def _warmup_qdrant_cache():
     """Pre-load Qdrant team chunk counts at startup."""
     try:
         import asyncio
-        from app.core.safety import get_system_status
-        await asyncio.to_thread(get_system_status)
+        from app.core.safety import get_safety_status
+        await asyncio.to_thread(get_safety_status)
         logger.info("qdrant_cache_warmup_done")
     except Exception as e:
         logger.warning("qdrant_cache_warmup_failed", error=str(e))

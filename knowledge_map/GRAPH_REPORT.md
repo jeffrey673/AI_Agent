@@ -1,24 +1,24 @@
 # SKIN1004 AI Agent — Knowledge Map
-**Generated**: 2026-05-04T03:00:03.033103+09:00 · **Files**: 123 · **Nodes**: 502 · **Edges**: 953 · **Commit**: 86b57df
+**Generated**: 2026-05-05T18:00:02.367437+00:00 · **Files**: 119 · **Nodes**: 498 · **Edges**: 953 · **Commit**: 58894dc
 
 ## Clusters
 - **cluster_00** — 1 nodes
 - **cluster_01** — 1 nodes
 - **cluster_02** — 20 nodes
-- **cluster_03** — 25 nodes
-- **cluster_04** — 43 nodes
-- **cluster_05** — 57 nodes
-- **cluster_06** — 47 nodes
-- **cluster_07** — 1 nodes
+- **cluster_03** — 23 nodes
+- **cluster_04** — 47 nodes
+- **cluster_05** — 37 nodes
+- **cluster_06** — 40 nodes
+- **cluster_07** — 38 nodes
 - **cluster_08** — 15 nodes
-- **cluster_09** — 22 nodes
+- **cluster_09** — 47 nodes
 - **cluster_10** — 1 nodes
-- **cluster_11** — 62 nodes
-- **cluster_12** — 34 nodes
-- **cluster_13** — 21 nodes
-- **cluster_14** — 30 nodes
-- **cluster_15** — 14 nodes
-- **cluster_16** — 1 nodes
+- **cluster_11** — 1 nodes
+- **cluster_12** — 30 nodes
+- **cluster_13** — 28 nodes
+- **cluster_14** — 21 nodes
+- **cluster_15** — 30 nodes
+- **cluster_16** — 14 nodes
 - **cluster_17** — 1 nodes
 - **cluster_18** — 1 nodes
 - **cluster_19** — 1 nodes
@@ -76,25 +76,22 @@
 - **cluster_71** — 1 nodes
 - **cluster_72** — 1 nodes
 - **cluster_73** — 1 nodes
-- **cluster_74** — 1 nodes
-- **cluster_75** — 1 nodes
-- **cluster_76** — 1 nodes
 
 ## God Nodes
-- `C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/auth_api.py` (file) — Authentication endpoints: signup, signin, me, logout.
+- `/home/skin1004/AI_Agent/app/api/auth_api.py` (file) — Authentication endpoints: signup, signin, me, logout.
 
 Uses MariaDB for user sto
-- `C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/agents/sql_agent.py` (file) — Text-to-SQL Agent using LangGraph.
+- `/home/skin1004/AI_Agent/app/agents/sql_agent.py` (file) — Text-to-SQL Agent using LangGraph.
 
 Workflow: generate_sql → validate_sql → exec
-- `C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/routes.py` (file) — OpenAI-compatible API endpoints for Open WebUI integration.
-- `C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/knowledge_map/builder.py` (file) — Knowledge Map build orchestrator — discover → cache → parse → flash → graph → ex
-- `C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/admin_group_api.py` (file) — Admin endpoints: AD user & group management (MariaDB).
-- `C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/api/conversation_api.py` (file) — Conversation CRUD API for chat history (MariaDB).
-- `C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/main.py` (file) — SKIN1004 Enterprise AI - FastAPI application entry point.
+- `/home/skin1004/AI_Agent/app/api/routes.py` (file) — OpenAI-compatible API endpoints for Open WebUI integration.
+- `/home/skin1004/AI_Agent/app/knowledge_map/builder.py` (file) — Knowledge Map build orchestrator — discover → cache → parse → flash → graph → ex
+- `/home/skin1004/AI_Agent/app/api/admin_group_api.py` (file) — Admin endpoints: AD user & group management (MariaDB).
+- `/home/skin1004/AI_Agent/app/api/conversation_api.py` (file) — Conversation CRUD API for chat history (MariaDB).
+- `/home/skin1004/AI_Agent/app/main.py` (file) — SKIN1004 Enterprise AI - FastAPI application entry point.
 
 Single server on port
-- `C:/Users/DB_PC/Desktop/python_bcj/AI_Agent/app/models/schemas.py` (file) — Pydantic request/response models for OpenAI-compatible API.
+- `/home/skin1004/AI_Agent/app/models/schemas.py` (file) — Pydantic request/response models for OpenAI-compatible API.
 
 ## How to navigate
 Read this file first, then open graph.json and follow wiki_page fields. Never Grep without consulting this map.

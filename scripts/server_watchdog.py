@@ -28,7 +28,7 @@ import urllib.error
 # ---------------------------------------------------------------------------
 CHECK_INTERVAL = 30        # 초
 HEALTH_TIMEOUT = 10        # 초
-PROJECT_DIR = r"C:\Users\DB_PC\Desktop\python_bcj\AI_Agent"
+PROJECT_DIR = "/home/skin1004/AI_Agent"
 LOG_FILE = os.path.join(PROJECT_DIR, "logs", "server_watchdog.log")
 MAX_CONSECUTIVE_FAILURES = 3
 COOLDOWN_AFTER_RESTART = 60  # 복구 후 대기 시간 (서버 부팅 대기)

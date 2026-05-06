@@ -302,9 +302,15 @@ class NotionAgent:
                         "type": page_type,
                     }
 
-            # Fetch all titles in parallel
+            # Fetch titles with bounded concurrency to avoid pool exhaustion
+            sem = asyncio.Semaphore(3)
+
+            async def _fetch_with_sem(entry: dict) -> None:
+                async with sem:
+                    await _fetch_one_title(entry)
+
             await asyncio.gather(
-                *[_fetch_one_title(entry) for entry in _ALLOWED_PAGES],
+                *[_fetch_with_sem(entry) for entry in _ALLOWED_PAGES],
                 return_exceptions=True,
             )
 
